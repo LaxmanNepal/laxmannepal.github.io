@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laxman Nepal – Portfolio</title>
+  <meta name="description" content="Laxman Nepal – Developer, Blogger, AI Tools Curator. Portfolio, GitHub repos, and blog feed." />
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/104687952" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #4f46e5;
+      --accent: #0ea5e9;
+      --dark: #1e293b;
+      --dark-light: #334155;
+      --light: #ffffff;
+      --light-gray: #f8fafc;
+      --gray: #64748b;
+      --border-radius: 12px;
+      --border-radius-sm: 8px;
+      --box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      --box-shadow-hover: 0 15px 35px rgba(0,0,0,0.1);
+      --transition: all 0.3s ease;
+    }
+
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: var(--light); 
+      color: var(--dark); 
+      line-height: 1.6;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background: var(--light);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+    }
+    
+    .logo {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+    
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--dark);
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 5rem 0;
+      background: var(--light-gray);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .hero-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid var(--light);
+      box-shadow: var(--box-shadow);
+      margin-bottom: 1.5rem;
+      object-fit: cover;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .btn {
+      padding: 0.8rem 1.8rem;
+      border-radius: var(--border-radius-sm);
+      font-weight: 500;
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .btn-primary {
+      background: var(--primary);
+      color: var(--light);
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    }
+    
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--dark);
+      border: 1px solid var(--dark-light);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--light-gray);
+      transform: translateY(-2px);
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--light);
+      color: var(--dark);
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      transform: translateY(-3px);
+      background: var(--primary);
+      color: var(--light);
+      box-shadow: var(--box-shadow-hover);
+    }
+    
+    /* Section Styling */
+    section {
+      padding: 5rem 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+    
+    .section-header p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Repositories Section */
+    .search-box {
+      max-width: 500px;
+      width: 100%;
+      margin: 2rem auto;
+      padding: 0.9rem 1.5rem;
+      font-size: 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 50px;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+      outline: none;
+    }
+    
+    .search-box:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+    
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    
+    .repo {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 1.8rem;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border: 1px solid #f1f5f9;
+    }
+    
+    .repo:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--box-shadow-hover);
+    }
+    
+    .repo h3 {
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+      font-size: 1.3rem;
+    }
+    
+    .repo p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--gray);
+      flex-grow: 1;
+      margin-bottom: 1.5rem;
+    }
+    
+    .repo-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+    
+    .repo-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    
+    .repo-buttons {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    
+    .repo-buttons a {
+      background: var(--primary);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--border-radius-sm);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .repo-buttons a:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    .repo-buttons a.secondary {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+    
+    .repo-buttons a.secondary:hover {
+      background: rgba(37, 99, 235, 0.1);
+    }
+    
+    /* Skills Section */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .skill-category {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--box-shadow);
+      border: 1px solid #f1f5f9;
+    }
+    
+    .skill-category h3 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+    
+    .skill-item {
+      margin-bottom: 1.5rem;
+    }
+    
+    .skill-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+    
+    .skill-bar {
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .skill-progress {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 4px;
+      position: relative;
+      width: 0;
+      transition: width 1s ease;
+    }
+    
+    /* Projects Section */
+    .projects-filter {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 2.5rem;
+    }
+    
+    .filter-btn {
+      padding: 0.6rem 1.5rem;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+    
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    
+    /* GitHub Contributions */
+    .github-chart {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--box-shadow);
+      border: 1px solid #f1f5f9;
+      margin-top: 3rem;
+    }
+    
+    /* Contact Section */
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(37, 99, 235, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+    
+    .contact-form {
+      background: white;
+      padding: 2.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      border: 1px solid #f1f5f9;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--dark);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--border-radius-sm);
+      font-size: 1rem;
+      transition: var(--transition);
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: var(--border-radius-sm);
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .submit-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .footer-about h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--light);
+    }
+    
+    .footer-about p {
+      color: #cbd5e1;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-links h4 {
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      color: var(--light);
+    }
+    
+    .footer-links ul {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      color: var(--light);
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid #334155;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: var(--box-shadow);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+      }
+      
+      .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .nav-links a {
+        padding: 1rem;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <i class="fas fa-code"></i>
+          <span>Laxman Nepal</span>
+        </div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#repositories">Repositories</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Full Stack Developer</span>
+        <img id="github-avatar" class="hero-image" src="" alt="Laxman Nepal">
+        <h1>Laxman Nepal</h1>
+        <p id="github-bio">Loading bio...</p>
+        
+        <div class="social-links">
+          <a href="https://github.com/laxmannepal" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-medium"></i></a>
+        </div>
+        
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get in Touch</a>
+          <a href="#repositories" class="btn btn-secondary"><i class="fas fa-code"></i> View Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="repositories">
+    <div class="container">
+      <div class="section-header">
+        <h2>My Repositories</h2>
+        <p>A collection of my latest projects and open-source contributions</p>
+      </div>
+      
+      <input class="search-box" type="text" id="repoSearch" oninput="filterRepos()" placeholder="Search repositories...">
+      
+      <div id="repoListPage" class="repo-grid">Loading repositories...</div>
+    </div>
+  </section>
+  
+  <section id="skills" style="background: var(--light-gray);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Skills & Expertise</h2>
+        <p>Technologies and tools I use to bring ideas to life</p>
+      </div>
+      
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Frontend Development</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>HTML/CSS</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="95%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>JavaScript</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>React</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Backend Development</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Node.js</span>
+              <span>88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="88%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Python</span>
+              <span>82%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="82%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>PHP</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="75%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Other Skills</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>UI/UX Design</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>DevOps</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="70%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>AI Tools</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="90%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>Some of my most notable work and contributions</p>
+      </div>
+      
+      <div class="projects-filter">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Web Development</button>
+        <button class="filter-btn">AI Tools</button>
+        <button class="filter-btn">Open Source</button>
+      </div>
+      
+      <div class="repo-grid">
+        <div class="repo">
+          <h3>AI Tools Hub</h3>
+          <p>A curated collection of artificial intelligence tools and resources for developers and designers.</p>
+          <div class="repo-meta">
+            <span><i class="fas fa-star"></i> 120</span>
+            <span><i class="fas fa-code-branch"></i> 45</span>
+            <span><i class="fas fa-circle"></i> JavaScript</span>
+          </div>
+          <div class="repo-buttons">
+            <a href="#"><i class="fas fa-code"></i> Code</a>
+            <a href="#" class="secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          </div>
+        </div>
+        
+        <div class="repo">
+          <h3>DevBlog Platform</h3>
+          <p>A blogging platform specifically designed for developers to share technical content and tutorials.</p>
+          <div class="repo-meta">
+            <span><i class="fas fa-star"></i> 89</span>
+            <span><i class="fas fa-code-branch"></i> 32</span>
+            <span><i class="fas fa-circle"></i> React</span>
+          </div>
+          <div class="repo-buttons">
+            <a href="#"><i class="fas fa-code"></i> Code</a>
+            <a href="#" class="secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          </div>
+        </div>
+        
+        <div class="repo">
+          <h3>Code Snippet Manager</h3>
+          <p>An organized way to save, categorize, and quickly access your frequently used code snippets.</p>
+          <div class="repo-meta">
+            <span><i class="fas fa-star"></i> 76</span>
+            <span><i class="fas fa-code-branch"></i> 28</span>
+            <span><i class="fas fa-circle"></i> Python</span>
+          </div>
+          <div class="repo-buttons">
+            <a href="#"><i class="fas fa-code"></i> Code</a>
+            <a href="#" class="secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <div class="container">
+      <div class="github-chart">
+        <div class="section-header">
+          <h2>GitHub Contributions</h2>
+          <p>My coding activity and contributions over the past year</p>
+        </div>
+        <iframe src="https://ghchart.rshah.org/2563eb/laxmannepal" title="GitHub contributions chart" style="width: 100%; height: 200px; border: none;"></iframe>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" style="background: var(--light-gray);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Have a project in mind or want to collaborate? Feel free to reach out</p>
+      </div>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h3>Location</h3>
+              <p>Kathmandu, Nepal</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <p>contact@laxmannepal.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h3>Phone</h3>
+              <p>+977 9841000000</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div>
+              <h3>Availability</h3>
+              <p>Mon - Fri: 9AM - 6PM</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" class="form-control" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>Laxman Nepal</h3>
+          <p>Developer, Blogger, and AI Tools Curator passionate about creating innovative solutions and sharing knowledge.</p>
+          <div class="social-links">
+            <a href="https://github.com/laxmannepal" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-medium"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#repositories">Repositories</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">UI/UX Design</a></li>
+            <li><a href="#">API Development</a></li>
+            <li><a href="#">Technical Writing</a></li>
+            <li><a href="#">Consultation</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2023 Laxman Nepal. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <script>
+    // Fetch GitHub profile data
+    fetch("https://api.github.com/users/laxmannepal")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("github-avatar").src = data.avatar_url;
+        document.getElementById("github-bio").textContent = data.bio || "No bio provided.";
+      });
+
+    // Repository filtering
+    let allRepos = [];
+    function filterRepos() {
+      const search = document.getElementById("repoSearch").value.toLowerCase();
+      const container = document.getElementById("repoListPage");
+      container.innerHTML = '';
+      
+      const filteredRepos = allRepos.filter(repo => 
+        repo.name.toLowerCase().includes(search) || 
+        (repo.description && repo.description.toLowerCase().includes(search))
+      );
+      
+      if (filteredRepos.length === 0) {
+        container.innerHTML = '<p class="no-results">No repositories found matching your search.</p>';
+        return;
+      }
+      
+      filteredRepos.forEach(repo => {
+        const card = `<div class="repo">
+          <h3>${repo.name}</h3>
+          <p>${repo.description || 'No description provided.'}</p>
+          <div class="repo-meta">
+            <span><i class="fas fa-star"></i> ${repo.stargazers_count}</span>
+            <span><i class="fas fa-code-branch"></i> ${repo.forks_count}</span>
+            <span><i class="fas fa-circle"></i> ${repo.language || 'Text'}</span>
+          </div>
+          <div class="repo-buttons">
+            <a href="${repo.html_url}" target="_blank"><i class="fas fa-code"></i> Code</a>
+            ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" class="secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
+          </div>
+        </div>`;
+        container.innerHTML += card;
+      });
+    }
+
+    // Fetch repositories
+    fetch("https://api.github.com/users/laxmannepal/repos?sort=updated")
+      .then(response => response.json())
+      .then(repos => {
+        allRepos = repos.filter(repo => !repo.fork);
+        filterRepos();
+      });
+
+    // Animate skill bars on scroll
+    function animateSkillBars() {
+      const skillBars = document.querySelectorAll('.skill-progress');
+      skillBars.forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        bar.style.width = width;
+      });
+    }
+
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+          }
+        }
+      });
+    });
+
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message! I will get back to you soon.');
+        this.reset();
+      });
+    }
+
+    // Initialize animations when page loads
+    window.addEventListener('load', () => {
+      animateSkillBars();
+    });
+  </script>
+</body>
+</html>
