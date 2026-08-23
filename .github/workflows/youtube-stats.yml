@@ -1,4 +1,5 @@
-name: Update YouTube Stats
+name: Update YouTube Analytics Dashboard
+
 on:
   workflow_dispatch:
   schedule:
@@ -15,28 +16,139 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch public YouTube channel statistics
+
+      - name: Install dependencies
+        run: python -m pip install --quiet google-api-python-client google-auth google-auth-oauthlib
+
+      - name: Build YouTube analytics dataset
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: |
-          python - <<'PY'
-          import json, os, urllib.parse, urllib.request
-          key=os.environ.get('YOUTUBE_API_KEY')
-          if not key:
-              raise SystemExit('Missing YOUTUBE_API_KEY repository secret')
-          params=urllib.parse.urlencode({'part':'snippet,statistics','forHandle':'@laxmannepalofficial','key':key})
-          url='https://www.googleapis.com/youtube/v3/channels?'+params
-          with urllib.request.urlopen(url, timeout=30) as r: data=json.load(r)
-          if not data.get('items'): raise SystemExit('YouTube channel not found')
-          s=data['items'][0]['statistics']
-          out={'subscriberCount':int(s.get('subscriberCount',0)),'viewCount':int(s.get('viewCount',0)),'videoCount':int(s.get('videoCount',0)),'updatedAt':__import__('datetime').datetime.utcnow().isoformat()+'Z','watchTimeText':None}
-          os.makedirs('data',exist_ok=True)
-          json.dump(out,open('data/youtube.json','w'),indent=2)
+          python <<'PY'
+          import json, os, datetime, urllib.parse, urllib.request
+          from google.oauth2.credentials import Credentials
+          from googleapiclient.discovery import build
+
+          required = ['YOUTUBE_API_KEY','YOUTUBE_CLIENT_ID','YOUTUBE_CLIENT_SECRET','YOUTUBE_REFRESH_TOKEN']
+          missing = [x for x in required if not os.environ.get(x)]
+          if missing:
+              raise SystemExit('Missing GitHub secrets: ' + ', '.join(missing))
+
+          scopes = ['https://www.googleapis.com/auth/yt-analytics.readonly']
+          creds = Credentials(
+              token=None,
+              refresh_token=os.environ['YOUTUBE_REFRESH_TOKEN'],
+              token_uri='https://oauth2.googleapis.com/token',
+              client_id=os.environ['YOUTUBE_CLIENT_ID'],
+              client_secret=os.environ['YOUTUBE_CLIENT_SECRET'],
+              scopes=scopes,
+          )
+
+          analytics = build('youtubeAnalytics', 'v2', credentials=creds)
+          today = datetime.date.today()
+          end = today - datetime.timedelta(days=2)
+          start = datetime.date(2008, 1, 1)
+          last30 = end - datetime.timedelta(days=29)
+
+          def query(start_date, end_date, metrics, dimensions=None, sort=None, max_results=None):
+              args = dict(ids='channel==MINE', startDate=start_date.isoformat(), endDate=end_date.isoformat(), metrics=metrics)
+              if dimensions: args['dimensions'] = dimensions
+              if sort: args['sort'] = sort
+              if max_results: args['maxResults'] = max_results
+              return analytics.reports().query(**args).execute()
+
+          lifetime = query(start, end, 'views,estimatedMinutesWatched,averageViewDuration,likes,comments,subscribersGained,subscribersLost')
+          recent = query(last30, end, 'views,estimatedMinutesWatched,averageViewDuration,likes,comments,subscribersGained,subscribersLost', 'day', 'day')
+          top = query(last30, end, 'views,estimatedMinutesWatched,averageViewDuration,likes,comments,subscribersGained', 'video', '-estimatedMinutesWatched', 10)
+
+          # Public totals from Data API.
+          params = urllib.parse.urlencode({'part':'snippet,statistics','forHandle':'@laxmannepalofficial','key':os.environ['YOUTUBE_API_KEY']})
+          with urllib.request.urlopen('https://www.googleapis.com/youtube/v3/channels?' + params, timeout=30) as r:
+              channel = json.load(r)
+          if not channel.get('items'):
+              raise SystemExit('YouTube channel @laxmannepalofficial not found')
+          stats = channel['items'][0]['statistics']
+
+          def row_values(report):
+              return report.get('rows', [])[0] if report.get('rows') else [0] * len(report.get('columnHeaders', []))
+
+          life = row_values(lifetime)
+          names = [h['name'] for h in lifetime.get('columnHeaders', [])]
+          life_map = dict(zip(names, life))
+
+          def num(v):
+              try: return float(v)
+              except: return 0
+
+          daily = []
+          headers = [h['name'] for h in recent.get('columnHeaders', [])]
+          for row in recent.get('rows', []):
+              item = dict(zip(headers, row))
+              daily.append(item)
+
+          top_headers = [h['name'] for h in top.get('columnHeaders', [])]
+          top_items = []
+          video_ids = []
+          for row in top.get('rows', []):
+              item = dict(zip(top_headers, row))
+              video_ids.append(item.get('video'))
+              top_items.append(item)
+
+          titles = {}
+          if video_ids:
+              p = urllib.parse.urlencode({'part':'snippet','id':','.join(video_ids),'key':os.environ['YOUTUBE_API_KEY']})
+              with urllib.request.urlopen('https://www.googleapis.com/youtube/v3/videos?' + p, timeout=30) as r:
+                  vids = json.load(r)
+              titles = {x['id']: x['snippet']['title'] for x in vids.get('items', [])}
+
+          for item in top_items:
+              item['title'] = titles.get(item.get('video'), 'Untitled video')
+              item['thumbnail'] = f"https://i.ytimg.com/vi/{item.get('video')}/hqdefault.jpg"
+              item['url'] = f"https://www.youtube.com/watch?v={item.get('video')}"
+
+          watch_minutes = num(life_map.get('estimatedMinutesWatched'))
+          avg_duration = num(life_map.get('averageViewDuration'))
+          lifetime_views = num(life_map.get('views'))
+
+          data = {
+              'updatedAt': datetime.datetime.utcnow().replace(microsecond=0).isoformat() + 'Z',
+              'channel': {
+                  'id': channel['items'][0]['id'],
+                  'title': channel['items'][0]['snippet']['title'],
+                  'subscriberCount': int(stats.get('subscriberCount', 0)),
+                  'viewCount': int(stats.get('viewCount', 0)),
+                  'videoCount': int(stats.get('videoCount', 0)),
+              },
+              'analytics': {
+                  'lifetimeViews': int(lifetime_views),
+                  'watchTimeMinutes': int(watch_minutes),
+                  'watchTimeHours': round(watch_minutes / 60, 2),
+                  'averageViewDurationSeconds': int(avg_duration),
+                  'likes': int(num(life_map.get('likes'))),
+                  'comments': int(num(life_map.get('comments'))),
+                  'subscribersGained': int(num(life_map.get('subscribersGained'))),
+                  'subscribersLost': int(num(life_map.get('subscribersLost'))),
+              },
+              'last30Days': {
+                  'start': last30.isoformat(),
+                  'end': end.isoformat(),
+                  'daily': daily,
+              },
+              'topVideos': top_items,
+          }
+          os.makedirs('data', exist_ok=True)
+          with open('data/youtube.json', 'w', encoding='utf-8') as f:
+              json.dump(data, f, indent=2, ensure_ascii=False)
+          print('YouTube analytics dataset updated:', data['updatedAt'])
           PY
-      - name: Commit updated stats
+
+      - name: Commit updated dashboard data
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/youtube.json
-          git diff --cached --quiet || git commit -m "chore: update YouTube statistics"
+          git diff --cached --quiet || git commit -m "chore: update YouTube analytics dashboard"
           git push
