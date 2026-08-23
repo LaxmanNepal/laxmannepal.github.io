@@ -3,5 +3,9 @@
   "viewCount": 0,
   "videoCount": 0,
   "watchTimeText": null,
-  "updatedAt": null
+  "updatedAt": null,
+  "channel": {},
+  "analytics": {},
+  "last30Days": {"start": null, "end": null, "daily": []},
+  "topVideos": []
 }
