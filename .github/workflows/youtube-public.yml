@@ -2,6 +2,10 @@ name: YouTube Public Data
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/youtube_public.py'
+      - '.github/workflows/youtube-public.yml'
   schedule:
     - cron: '7 */6 * * *'
 
