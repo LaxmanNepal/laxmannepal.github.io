@@ -1,102 +1,23 @@
 (() => {
   const DATA_URL = '/data/youtube.json';
   const $ = (s, root = document) => root.querySelector(s);
-  const fmt = (n) => {
-    const x = Number(n ?? 0);
-    return Number.isFinite(x) ? new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(x) : '—';
-  };
-  const dateFmt = (v) => {
-    if (!v) return '—';
-    const d = new Date(v);
-    return Number.isNaN(d.getTime()) ? '—' : new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' }).format(d);
-  };
-  const escapeHtml = (s) => String(s ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
-
-  function moveYoutubeBeforeApps() {
-    const youtube = document.getElementById('youtube');
-    const apps = document.getElementById('apps');
-    if (youtube && apps && youtube.parentNode === apps.parentNode) apps.parentNode.insertBefore(youtube, apps);
-    const links = $('#links');
-    if (links) {
-      const y = $('a[href="#youtube"]', links);
-      const a = $('a[href="#apps"]', links);
-      if (y && a) links.insertBefore(y, a);
-    }
+  const fmt = (n) => { const x = Number(n ?? 0); return Number.isFinite(x) ? new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1}).format(x) : '—'; };
+  const pct = (n) => `${Number(n || 0).toFixed(1)}%`;
+  const dateFmt = v => { if(!v) return '—'; const d=new Date(v); return Number.isNaN(d.getTime())?'—':new Intl.DateTimeFormat(undefined,{dateStyle:'medium'}).format(d); };
+  const escapeHtml = s => String(s ?? '').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  const videoArray=(d,names)=>{for(const n of names)if(Array.isArray(d[n])&&d[n].length)return d[n];return[];};
+  function moveYoutubeBeforeApps(){const y=document.getElementById('youtube'),a=document.getElementById('apps');if(y&&a&&y.parentNode===a.parentNode)a.parentNode.insertBefore(y,a);const l=$('#links');if(l){const yl=$('a[href="#youtube"]',l),al=$('a[href="#apps"]',l);if(yl&&al)l.insertBefore(yl,al);}}
+  function videoCard(v){const title=v.title||v.snippet?.title||'Untitled video',thumb=v.thumbnail||v.thumbnails?.high?.url||v.thumbnails?.medium?.url||v.snippet?.thumbnails?.high?.url||'',views=v.views??v.statistics?.viewCount??0,likes=v.likes??v.statistics?.likeCount??0,comments=v.comments??v.statistics?.commentCount??0,url=v.url||(v.id?`https://www.youtube.com/watch?v=${encodeURIComponent(v.id)}`:'#');return `<a class="ytVideo" href="${escapeHtml(url)}" target="_blank" rel="noopener"><div class="ytThumbWrap"><img class="ytThumb" loading="lazy" src="${escapeHtml(thumb)}" alt="${escapeHtml(title)}"><span class="ytPlay">▶</span></div><div class="ytVideoBody"><b>${escapeHtml(title)}</b><span>${fmt(views)} views · ${fmt(likes)} likes · ${fmt(comments)} comments</span></div></a>`;}
+  function spark(values){const a=values.map(Number).filter(Number.isFinite);if(a.length<2)return'';const max=Math.max(...a),min=Math.min(...a),w=320,h=90;const pts=a.map((v,i)=>`${(i/(a.length-1))*w},${h-((v-min)/(max-min||1))*h}`).join(' ');return `<svg class="ytSpark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;}
+  function renderYoutube(data){const s=document.getElementById('youtube');if(!s)return;const c=data.channel||{},st=c.statistics||data.statistics||{},a=data.analysis||{},popular=videoArray(data,['popularVideos','topVideos','videos']),recent=videoArray(data,['recentVideos','latestVideos','latestUploads','recentUploads']);const all=[...popular,...recent.filter(r=>!popular.some(p=>(p.id||p.videoId)===(r.id||r.videoId)))],top=popular.length?popular:all,channelTitle=c.title||data.channelTitle||'Laxman Nepal',channelUrl=c.url||'https://www.youtube.com/@laxmannepalofficial';const totals=[a.totalViewsFetched||0,a.totalLikesFetched||0,a.totalCommentsFetched||0];
+    s.innerHTML=`<div class="wrap"><div class="sectionHead reveal in"><div><div class="kicker">YouTube · @laxmannepalofficial</div><h2 class="title">Laxman Nepal on YouTube.</h2></div><div class="desc">A live-feeling visual snapshot built from your cached YouTube Data API v3 dataset.</div></div>
+    <div class="ytHero glass"><div class="ytIdentity"><img src="${escapeHtml(c.thumbnail||'')}" alt="${escapeHtml(channelTitle)}" class="ytAvatar"><div><h3>${escapeHtml(channelTitle)}</h3><p>@laxmannepalofficial</p></div><a class="btn" href="${escapeHtml(channelUrl)}" target="_blank" rel="noopener">Open channel ↗</a></div></div>
+    <div class="ytStats"><div class="ytStat glass"><span class="ytIcon ytRed">●</span><b>${fmt(st.subscriberCount)}</b><small>Subscribers</small></div><div class="ytStat glass"><span class="ytIcon ytBlue">◉</span><b>${fmt(st.viewCount)}</b><small>Total views</small></div><div class="ytStat glass"><span class="ytIcon ytPurple">▶</span><b>${fmt(st.videoCount)}</b><small>Total videos</small></div><div class="ytStat glass"><span class="ytIcon ytGreen">↗</span><b>${fmt(a.videosFetched)}</b><small>Videos analyzed</small></div></div>
+    <div class="ytGrid"><div class="ytChart glass"><div class="panelTitle"><strong>Channel activity</strong><span>Collected dataset</span></div>${spark(totals)}<div class="chartLabels"><span>${fmt(a.totalViewsFetched)} views</span><span>${fmt(a.totalLikesFetched)} likes</span><span>${fmt(a.totalCommentsFetched)} comments</span></div></div><div class="ytBreakdown glass"><div class="panelTitle"><strong>Content mix</strong><span>Videos analyzed</span></div><div class="mix"><div><b>${fmt(a.shortsCount)}</b><span>Shorts</span></div><div><b>${fmt(a.longFormCount)}</b><span>Long-form</span></div></div><div class="bar"><i style="width:${a.videosFetched?Math.min(100,(a.shortsCount/a.videosFetched)*100):0}%"></i></div></div></div>
+    <div class="metrics ytMetrics"><div class="metric glass"><b>${fmt(a.totalViewsFetched)}</b><span>Fetched video views</span><small>Avg ${fmt(a.averageViews)} / video</small></div><div class="metric glass"><b>${fmt(a.totalLikesFetched)}</b><span>Fetched likes</span><small>Avg ${fmt(a.averageLikes)} / video</small></div><div class="metric glass"><b>${fmt(a.totalCommentsFetched)}</b><span>Fetched comments</span><small>Avg ${fmt(a.averageComments)} / video</small></div><div class="metric glass"><b>${pct(a.averageEngagementRate)}</b><span>Average engagement</span><small>Across analyzed videos</small></div></div>
+    <div class="youtubeDataPanel glass"><div class="panelTitle"><strong>Popular videos</strong><span>Top ${Math.min(top.length,12)}</span></div><div class="topVideos ytVideos">${top.slice(0,12).map(videoCard).join('')||'<div class="empty">No video data available yet.</div>'}</div>${recent.length?`<div class="ytLatest"><div class="panelTitle"><strong>Latest uploads</strong><span>${recent.length} available</span></div><div class="topVideos ytVideos">${recent.slice(0,8).map(videoCard).join('')}</div></div>`:''}<div class="ytFoot">Last sync: ${dateFmt(data.lastUpdated||data.updatedAt)} · ${escapeHtml(data.dataSource||'YouTube Data API v3')}</div></div></div>`;
   }
-
-  function videoArray(data, names) {
-    for (const name of names) if (Array.isArray(data[name]) && data[name].length) return data[name];
-    return [];
-  }
-
-  function videoCard(v) {
-    const title = v.title || v.snippet?.title || 'Untitled video';
-    const thumb = v.thumbnail || v.thumbnails?.high?.url || v.thumbnails?.medium?.url || v.snippet?.thumbnails?.high?.url || v.snippet?.thumbnails?.medium?.url || '';
-    const views = v.views ?? v.statistics?.viewCount ?? 0;
-    const likes = v.likes ?? v.statistics?.likeCount ?? 0;
-    const comments = v.comments ?? v.statistics?.commentCount ?? 0;
-    const url = v.url || (v.id ? `https://www.youtube.com/watch?v=${encodeURIComponent(v.id)}` : '#');
-    return `<a class="topVideo" href="${escapeHtml(url)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${escapeHtml(thumb)}" alt="${escapeHtml(title)}"><div><b>${escapeHtml(title)}</b><span>${fmt(views)} views · ${fmt(likes)} likes · ${fmt(comments)} comments</span></div></a>`;
-  }
-
-  function renderYoutube(data) {
-    const section = document.getElementById('youtube');
-    if (!section || !data) return;
-    const channel = data.channel || {};
-    const stats = channel.statistics || data.statistics || {};
-    const popular = videoArray(data, ['popularVideos', 'topVideos', 'videos']);
-    const recent = videoArray(data, ['recentVideos', 'latestVideos', 'latestUploads', 'recentUploads']);
-    const combined = [...popular, ...recent.filter(r => !popular.some(p => (p.id || p.videoId) === (r.id || r.videoId)))];
-    const channelTitle = channel.title || data.channelTitle || 'Laxman Nepal';
-    const channelUrl = channel.url || 'https://www.youtube.com/@laxmannepalofficial';
-    const updated = data.lastUpdated || data.updatedAt;
-    const top = popular.length ? popular : combined;
-
-    section.innerHTML = `<div class="wrap">
-      <div class="sectionHead reveal in">
-        <div><div class="kicker">YouTube · @laxmannepalofficial</div><h2 class="title">Laxman Nepal on YouTube.</h2></div>
-        <div class="desc">Real public channel data collected by YouTube Data API v3 and cached in this site's JSON. Your API key is never sent to visitors.</div>
-      </div>
-      <div class="stats reveal in">
-        <div class="stat glass"><b>${fmt(stats.subscriberCount)}</b><span>Subscribers</span></div>
-        <div class="stat glass"><b>${fmt(stats.viewCount)}</b><span>Total views</span></div>
-        <div class="stat glass"><b>${fmt(stats.videoCount)}</b><span>Total videos</span></div>
-        <div class="stat glass"><b>${fmt(data.analysis?.videosFetched || combined.length)}</b><span>Videos analyzed</span></div>
-      </div>
-      <div class="youtubeDataPanel glass reveal in" style="margin-top:16px;padding:18px;border-radius:24px">
-        <div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:14px">
-          <div><strong style="font-family:Poppins">${escapeHtml(channelTitle)}</strong><div class="updated">Last sync: ${dateFmt(updated)} · ${escapeHtml(data.dataSource || 'YouTube Data API v3')}</div></div>
-          <a class="btn" href="${escapeHtml(channelUrl)}" target="_blank" rel="noopener">Open channel ↗</a>
-        </div>
-        <div class="metrics">
-          <div class="metric glass"><b>${fmt(data.analysis?.totalViewsFetched)}</b><span>Views in fetched videos</span><small>Average ${fmt(data.analysis?.averageViews)} views/video</small></div>
-          <div class="metric glass"><b>${fmt(data.analysis?.totalLikesFetched)}</b><span>Likes in fetched videos</span><small>Average ${fmt(data.analysis?.averageLikes)} likes/video</small></div>
-          <div class="metric glass"><b>${fmt(data.analysis?.totalCommentsFetched)}</b><span>Comments in fetched videos</span><small>Average ${fmt(data.analysis?.averageComments)} comments/video</small></div>
-          <div class="metric glass"><b>${fmt(data.analysis?.shortsCount)}</b><span>Shorts analyzed</span><small>${fmt(data.analysis?.longFormCount)} long-form videos</small></div>
-        </div>
-        <div style="margin-top:18px"><div class="panelTitle"><strong>Popular videos</strong><span class="range">Top ${Math.min(top.length, 12)}</span></div><div class="topVideos">${top.slice(0, 12).map(videoCard).join('') || '<div class="empty">No video data available yet.</div>'}</div></div>
-        ${recent.length ? `<div style="margin-top:22px"><div class="panelTitle"><strong>Latest uploads</strong><span class="range">${recent.length} available</span></div><div class="topVideos">${recent.slice(0, 8).map(videoCard).join('')}</div></div>` : ''}
-      </div>
-    </div>`;
-  }
-
-  async function loadYoutube() {
-    try {
-      const response = await fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const data = await response.json();
-      if (!data.channel?.statistics) throw new Error('youtube.json has no channel statistics');
-      renderYoutube(data);
-    } catch (error) {
-      console.error('[Laxman Nepal] YouTube renderer failed:', error);
-      const section = document.getElementById('youtube');
-      if (section) section.querySelector('.desc')?.insertAdjacentHTML('afterend', '<div class="empty" style="margin-top:16px">YouTube data could not be loaded. The backend JSON will retry on the next page load.</div>');
-    }
-  }
-
-  function init() {
-    moveYoutubeBeforeApps();
-    loadYoutube();
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true }); else init();
+  function addStyles(){if(document.getElementById('ytMotionStyles'))return;const st=document.createElement('style');st.id='ytMotionStyles';st.textContent=`.ytHero{margin-top:18px;padding:20px;border-radius:28px;overflow:hidden;position:relative}.ytHero:before{content:"";position:absolute;inset:-50%;background:conic-gradient(from 90deg,#ff0033,#7c3aed,#06b6d4,#22c55e,#ff0033);opacity:.12;animation:ytspin 14s linear infinite}.ytIdentity{position:relative;display:flex;align-items:center;gap:16px}.ytIdentity h3{margin:0;font-size:20px}.ytIdentity p{margin:3px 0;color:#64748b}.ytAvatar{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.8)}.ytIdentity .btn{margin-left:auto}.ytStats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}.ytStat{padding:18px;border-radius:22px;display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:center;transition:transform .35s,box-shadow .35s}.ytStat:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(15,23,42,.12)}.ytStat b{font-size:27px}.ytStat small{grid-column:2;color:#64748b}.ytIcon{grid-row:span 2;width:34px;height:34px;border-radius:12px;display:grid;place-items:center;font-weight:900}.ytRed{background:#fee2e2;color:#ef4444}.ytBlue{background:#dbeafe;color:#2563eb}.ytPurple{background:#ede9fe;color:#7c3aed}.ytGreen{background:#dcfce7;color:#16a34a}.ytGrid{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin-top:14px}.ytChart,.ytBreakdown{padding:18px;border-radius:24px;min-height:150px}.ytSpark{width:100%;height:90px;color:#ef4444;margin-top:18px;overflow:visible}.chartLabels{display:flex;justify-content:space-between;color:#64748b;font-size:12px}.mix{display:flex;gap:34px;margin:18px 0}.mix b{display:block;font-size:30px}.mix span{color:#64748b;font-size:13px}.bar{height:10px;border-radius:99px;background:#e2e8f0;overflow:hidden}.bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#ef4444,#7c3aed,#06b6d4);animation:ytbar 1.2s ease-out}.ytMetrics{margin-top:14px}.ytVideos{grid-template-columns:repeat(3,minmax(0,1fr))}.ytVideo{display:block;color:inherit;text-decoration:none;border-radius:20px;overflow:hidden;background:rgba(255,255,255,.72);border:1px solid rgba(148,163,184,.18);transition:transform .35s,box-shadow .35s}.ytVideo:hover{transform:translateY(-7px) scale(1.01);box-shadow:0 20px 55px rgba(15,23,42,.14)}.ytThumbWrap{position:relative;aspect-ratio:16/9;background:#e2e8f0;overflow:hidden}.ytThumb{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.ytVideo:hover .ytThumb{transform:scale(1.05)}.ytPlay{position:absolute;left:12px;bottom:12px;width:36px;height:36px;border-radius:12px;background:rgba(255,0,51,.92);color:white;display:grid;place-items:center;font-size:13px}.ytVideoBody{padding:12px}.ytVideoBody b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;line-height:1.4}.ytVideoBody span{display:block;margin-top:7px;color:#64748b;font-size:12px}.ytLatest{margin-top:28px}.ytFoot{margin-top:18px;padding-top:14px;border-top:1px solid rgba(148,163,184,.2);color:#64748b;font-size:12px}.youtubeDataPanel{margin-top:14px;padding:18px;border-radius:26px}.panelTitle{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.panelTitle span{font-size:12px;color:#64748b}@keyframes ytspin{to{transform:rotate(360deg)}}@keyframes ytbar{from{width:0}}@media(max-width:800px){.ytStats{grid-template-columns:repeat(2,1fr)}.ytGrid{grid-template-columns:1fr}.ytVideos{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.ytIdentity{align-items:flex-start;flex-wrap:wrap}.ytIdentity .btn{margin-left:0;width:100%;text-align:center}.ytStats{gap:9px}.ytStat{padding:14px;border-radius:18px}.ytStat b{font-size:22px}.ytIcon{width:30px;height:30px}.ytVideos{grid-template-columns:1fr}.ytHero,.youtubeDataPanel,.ytChart,.ytBreakdown{border-radius:20px;padding:14px}.ytAvatar{width:54px;height:54px}.chartLabels{font-size:10px}.ytVideoBody{padding:11px}}@media(prefers-reduced-motion:reduce){.ytHero:before,.bar i{animation:none}.ytStat,.ytVideo,.ytThumb{transition:none}}`;document.head.appendChild(st);}
+  async function loadYoutube(){try{const r=await fetch(`${DATA_URL}?v=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error(`HTTP ${r.status}`);const d=await r.json();if(!d.channel?.statistics)throw new Error('youtube.json has no channel statistics');addStyles();renderYoutube(d);}catch(e){console.error('[Laxman Nepal] YouTube renderer failed:',e);const s=document.getElementById('youtube');if(s)s.querySelector('.desc')?.insertAdjacentHTML('afterend','<div class="empty" style="margin-top:16px">YouTube data could not be loaded.</div>');}}
+  function init(){moveYoutubeBeforeApps();loadYoutube();} if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
