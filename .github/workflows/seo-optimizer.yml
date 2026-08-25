@@ -1,0 +1,58 @@
+name: SEO Optimizer
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  seo:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Improve homepage SEO
+        shell: python
+        run: |
+          from pathlib import Path
+          import json
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          canonical = 'https://apps.laxmannepal.com.np/'
+          if '<link rel="canonical"' not in s:
+              s = s.replace('</head>', '<link rel="canonical" href="'+canonical+'">\n</head>', 1)
+          s = s.replace('<meta name="description" content="Laxman Nepal — developer, creator and builder. Explore apps, YouTube analytics and projects.">', '<meta name="description" content="Laxman Nepal — technology creator, developer and app builder. Explore free web apps, Nepali tools, YouTube videos, AI tools, automation, NEPSE projects and digital products.">')
+          if 'name="robots"' not in s:
+              s = s.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">', 1)
+          if 'property="og:url"' not in s:
+              s = s.replace('</head>', '<meta property="og:url" content="'+canonical+'">\n<meta property="og:type" content="website">\n</head>', 1)
+          schema = {
+            '@context':'https://schema.org',
+            '@graph':[
+              {'@type':'Person','@id':canonical+'#person','name':'Laxman Nepal','url':canonical,'image':'https://avatars.githubusercontent.com/u/84069546?v=4','jobTitle':'Technology Creator and Web App Builder','sameAs':['https://github.com/LaxmanNepal','https://www.youtube.com/@laxmannepalofficial']},
+              {'@type':'WebSite','@id':canonical+'#website','url':canonical,'name':'Laxman Nepal','description':'Official profile, apps, projects and YouTube presence of Laxman Nepal.','publisher':{'@id':canonical+'#person'}},
+              {'@type':'CollectionPage','@id':canonical+'#apps','url':canonical+'apps/','name':'Laxman Nepal Apps','isPartOf':{'@id':canonical+'#website'}},
+              {'@type':'ProfilePage','@id':canonical+'#youtube','url':canonical+'youtube/','name':'Laxman Nepal YouTube','mainEntity':{'@id':canonical+'#person'}}
+            ]
+          }
+          marker = '<script id="ln-seo-schema" type="application/ld+json">'
+          block = marker + json.dumps(schema, ensure_ascii=False, separators=(',',':')) + '</script>'
+          if 'id="ln-seo-schema"' in s:
+              import re
+              s = re.sub(r'<script id="ln-seo-schema" type="application/ld\+json">.*?</script>', block, s, count=1, flags=re.S)
+          else:
+              s = s.replace('</head>', block+'\n</head>', 1)
+          p.write_text(s, encoding='utf-8')
+
+      - name: Commit SEO changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git diff --cached --quiet || git commit -m 'seo: optimize homepage metadata and structured data [skip ci]'
+          git push
