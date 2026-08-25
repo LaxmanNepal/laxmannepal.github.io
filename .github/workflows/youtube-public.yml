@@ -25,26 +25,30 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Fetch public YouTube data
+      - name: Fetch complete public YouTube data
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           YOUTUBE_HANDLE: '@laxmannepalofficial'
-          # Optional: set this repository variable once you know the channel ID.
-          # It avoids the 100-unit search.list fallback on every scheduled run.
           YOUTUBE_CHANNEL_ID: ${{ vars.YOUTUBE_CHANNEL_ID }}
+          YOUTUBE_MAX_UPLOADS: '250'
         run: python scripts/youtube_public.py
 
-      - name: Validate generated JSON
-        run: python -m json.tool data/youtube-public.json > /dev/null
+      - name: Validate JSON files
+        run: |
+          python -m json.tool data/youtube.json > /dev/null
+          python -m json.tool data/youtube-public.json > /dev/null
 
-      - name: Commit data
+      - name: Show collection summary
+        run: cat data/youtube.json | python -c "import json,sys; d=json.load(sys.stdin); print('Channel:',d['channel']['title']); print('Subscribers:',d['channel']['statistics']['subscriberCount']); print('Total views:',d['channel']['statistics']['viewCount']); print('Total videos:',d['channel']['statistics']['videoCount']); print('Videos fetched:',d['analysis']['videosFetched'])"
+
+      - name: Commit generated data
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/youtube-public.json
+          git add data/youtube.json data/youtube-public.json
           if git diff --cached --quiet; then
             echo 'No YouTube data changes to commit.'
             exit 0
           fi
-          git commit -m 'chore: update public YouTube data'
+          git commit -m 'chore: refresh complete YouTube data'
           git push
