@@ -1,0 +1,48 @@
+name: Install Homepage Enhancements
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  enhance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inject JSON homepage renderer
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          text = p.read_text(encoding='utf-8')
+          tag = '<script src="assets/site-enhancements.js" defer></script>'
+          if tag not in text:
+              marker = '</body>'
+              if marker not in text:
+                  raise SystemExit('index.html has no </body> marker')
+              text = text.replace(marker, tag + '\n' + marker, 1)
+              p.write_text(text, encoding='utf-8')
+              print('Injected homepage enhancement script.')
+          else:
+              print('Homepage enhancement script already installed.')
+          PY
+
+      - name: Commit and push
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          if git diff --cached --quiet; then
+            echo 'No homepage change required.'
+          else
+            git commit -m 'feat: connect homepage to YouTube JSON data'
+            git push
+          fi
