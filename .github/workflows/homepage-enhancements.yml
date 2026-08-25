@@ -1,14 +1,18 @@
-name: Install Homepage Enhancements
+name: Homepage Data Renderer
 
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - 'index.html'
   workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
 
 permissions:
   contents: write
+
+concurrency:
+  group: homepage-renderer
+  cancel-in-progress: true
 
 jobs:
   enhance:
@@ -17,32 +21,48 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Inject JSON homepage renderer
+      - name: Verify YouTube JSON
+        run: |
+          test -s data/youtube.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('data/youtube.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          channel = d.get('channel', {})
+          stats = channel.get('statistics', {})
+          if not channel.get('id') or not stats:
+              raise SystemExit('youtube.json exists but has no channel/statistics data')
+          print('YouTube JSON OK:', channel.get('title'), stats)
+          PY
+
+      - name: Install homepage renderer
         run: |
           python - <<'PY'
           from pathlib import Path
           p = Path('index.html')
           text = p.read_text(encoding='utf-8')
-          tag = '<script src="assets/site-enhancements.js" defer></script>'
-          if tag not in text:
+          tag = '<script src="assets/site-enhancements.js?v=3" defer></script>'
+          old = '<script src="assets/site-enhancements.js" defer></script>'
+          if old in text:
+              text = text.replace(old, tag)
+          elif tag not in text:
               marker = '</body>'
               if marker not in text:
                   raise SystemExit('index.html has no </body> marker')
               text = text.replace(marker, tag + '\n' + marker, 1)
-              p.write_text(text, encoding='utf-8')
-              print('Injected homepage enhancement script.')
-          else:
-              print('Homepage enhancement script already installed.')
+          p.write_text(text, encoding='utf-8')
+          print('Homepage renderer installed/verified.')
           PY
 
-      - name: Commit and push
+      - name: Commit renderer
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add index.html
           if git diff --cached --quiet; then
-            echo 'No homepage change required.'
+            echo 'Renderer already installed.'
           else
-            git commit -m 'feat: connect homepage to YouTube JSON data'
+            git commit -m 'fix: install live YouTube JSON renderer'
             git push
           fi
