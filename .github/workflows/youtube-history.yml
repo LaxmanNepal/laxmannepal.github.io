@@ -19,6 +19,8 @@ jobs:
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/youtube_analytics.py
+      - name: Calculate content intelligence
+        run: python scripts/youtube_content_intelligence.py
       - name: Save historical snapshot
         run: python scripts/youtube_history.py
       - name: Commit data
@@ -26,5 +28,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/youtube.json data/youtube-history.json
-          git diff --cached --quiet || git commit -m 'chore: update YouTube analytics history'
+          git diff --cached --quiet || git commit -m 'chore: update YouTube intelligence'
           git push
