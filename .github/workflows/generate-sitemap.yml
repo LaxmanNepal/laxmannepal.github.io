@@ -1,0 +1,35 @@
+name: Generate SEO Sitemap
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'data/youtube.json'
+      - 'scripts/generate_sitemap.py'
+      - '.github/workflows/generate-sitemap.yml'
+  schedule:
+    - cron: '17 */6 * * *'
+permissions:
+  contents: write
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Generate sitemap
+        run: python scripts/generate_sitemap.py
+      - name: Validate sitemap
+        run: python - <<'PY'
+import xml.etree.ElementTree as ET
+ET.parse('sitemap.xml')
+print('sitemap.xml valid')
+PY
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add sitemap.xml
+          git diff --cached --quiet || git commit -m 'chore: refresh SEO sitemap'
+          git push
