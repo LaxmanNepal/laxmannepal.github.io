@@ -54,4 +54,5 @@ async function loadApps(){let g=$('#appsGrid');try{let r=await fetch('https://ap
 function drawApps(){let q=$('#search').value.toLowerCase();let list=allApps.filter(x=>(activeFilter==='all'||x.language===activeFilter)&&(x.name+' '+(x.description||'')).toLowerCase().includes(q));$('#appsGrid').innerHTML=list.length?list.map(x=>'<a class="app glass" href="'+safe(x.homepage)+'" target="_blank" rel="noopener"><div class="appIcon">↗</div><h3>'+safe(x.name)+'</h3><p>'+safe(x.description||'Live deployed application.')+'</p><div class="appFoot"><span>'+safe(x.language||'Web App')+'</span><span class="open">Open App ↗</span></div></a>').join(''):'<div class="empty">No deployed app matches your search.</div>';$$('.app').forEach(c=>c.onmousemove=e=>{let r=c.getBoundingClientRect();c.style.setProperty('--px',((e.clientX-r.left)/r.width*100)+'%');c.style.setProperty('--py',((e.clientY-r.top)/r.height*100)+'%')})}
 $('#search').oninput=drawApps;loadYT();loadApps();reveal();
 </script><script src="assets/site-enhancements.js?v=3" defer></script>
+<script src="/assets/site-intelligence.js?v=1" defer></script>
 </body></html>
