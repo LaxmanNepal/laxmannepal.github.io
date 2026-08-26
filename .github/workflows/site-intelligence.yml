@@ -1,0 +1,41 @@
+name: Install Site Intelligence
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '20 */6 * * *'
+permissions:
+  contents: write
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install global search and video intelligence
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          tag='<script src="/assets/site-intelligence.js?v=1" defer></script>'
+          if '/assets/site-intelligence.js' not in s:
+              s=s.replace('</body>', tag+'\n</body>')
+              p.write_text(s,encoding='utf-8')
+          PY
+      - name: Validate files
+        run: |
+          test -s assets/site-intelligence.js
+          test -s youtube/video/index.html
+          python - <<'PY'
+          import json
+          with open('data/youtube.json',encoding='utf-8') as f: d=json.load(f)
+          assert isinstance(d,dict) and ('channel' in d or 'analysis' in d)
+          print('YouTube dataset OK')
+          PY
+      - name: Commit installation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          if git diff --cached --quiet; then echo 'Already installed'; else git commit -m 'chore: install global site intelligence'; git push; fi
