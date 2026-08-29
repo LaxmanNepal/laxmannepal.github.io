@@ -1,0 +1,39 @@
+name: Apps Registry Health
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 */6 * * *'
+  push:
+    paths:
+      - 'data/apps.json'
+      - 'scripts/check_apps.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apps-health
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Validate and check deployments
+        run: python scripts/check_apps.py
+      - name: Commit health status
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/apps.json
+          if git diff --cached --quiet; then
+            echo 'No app status changes.'
+          else
+            git commit -m 'chore: refresh app deployment health'
+            git push
+          fi
