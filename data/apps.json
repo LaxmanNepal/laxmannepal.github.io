@@ -1,13 +1,128 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-30T00:00:00Z",
+  "updatedAt": "2026-08-29T21:57:17.528236+00:00",
   "apps": [
-    {"id":"nisulka-tools","name":"Nisulka Tools","description":"Free browser-based tools for everyday productivity and creators.","category":"Tools","url":"https://apps.laxmannepal.com.np/Nisulka-Tools/","icon":"🛠️","featured":true,"keywords":["tools","productivity","creator"]},
-    {"id":"nepali-patro","name":"Nepali Patro","description":"Nepali calendar and useful Nepali date, festival and cultural information.","category":"Nepal","url":"https://apps.laxmannepal.com.np/Nepali-Patro/","icon":"📅","featured":true,"keywords":["nepali calendar","patro","date","festival"]},
-    {"id":"nepse","name":"NEPSE","description":"Nepal stock-market focused tools and company information.","category":"Finance","url":"https://apps.laxmannepal.com.np/Nepse/","icon":"📈","featured":true,"keywords":["nepse","shares","stocks","finance"]},
-    {"id":"live-tv","name":"Live TV","description":"A web interface for discovering available live television streams.","category":"Media","url":"https://apps.laxmannepal.com.np/Live-TV/","icon":"📺","featured":false,"keywords":["tv","live tv","television"]},
-    {"id":"nepali-movies","name":"Nepali Movies","description":"A Nepali cinema discovery project.","category":"Media","url":"https://apps.laxmannepal.com.np/Nepali-Movies/","icon":"🎬","featured":false,"keywords":["nepali movies","cinema","films"]},
-    {"id":"south-movies","name":"South Movies","description":"South Indian movie discovery and streaming information.","category":"Media","url":"https://apps.laxmannepal.com.np/South-Movies/","icon":"🎞️","featured":false,"keywords":["south movies","movies","cinema"]},
-    {"id":"hindu","name":"Hindu","description":"A searchable collection of Hindu scriptures, texts and related information.","category":"Culture","url":"https://apps.laxmannepal.com.np/Hindu/","icon":"🕉️","featured":false,"keywords":["hindu","grantha","scriptures","purana"]}
+    {
+      "id": "nisulka-tools",
+      "name": "Nisulka Tools",
+      "description": "Free browser-based tools for everyday productivity and creators.",
+      "category": "Tools",
+      "url": "https://apps.laxmannepal.com.np/Nisulka-Tools/",
+      "icon": "🛠️",
+      "featured": true,
+      "keywords": [
+        "tools",
+        "productivity",
+        "creator"
+      ],
+      "status": "online",
+      "httpStatus": 200,
+      "lastChecked": "2026-08-29T21:57:17.307394+00:00"
+    },
+    {
+      "id": "nepali-patro",
+      "name": "Nepali Patro",
+      "description": "Nepali calendar and useful Nepali date, festival and cultural information.",
+      "category": "Nepal",
+      "url": "https://apps.laxmannepal.com.np/Nepali-Patro/",
+      "icon": "📅",
+      "featured": true,
+      "keywords": [
+        "nepali calendar",
+        "patro",
+        "date",
+        "festival"
+      ],
+      "status": "online",
+      "httpStatus": 200,
+      "lastChecked": "2026-08-29T21:57:17.334462+00:00"
+    },
+    {
+      "id": "nepse",
+      "name": "NEPSE",
+      "description": "Nepal stock-market focused tools and company information.",
+      "category": "Finance",
+      "url": "https://apps.laxmannepal.com.np/Nepse/",
+      "icon": "📈",
+      "featured": true,
+      "keywords": [
+        "nepse",
+        "shares",
+        "stocks",
+        "finance"
+      ],
+      "status": "degraded",
+      "httpStatus": 404,
+      "lastChecked": "2026-08-29T21:57:17.359202+00:00"
+    },
+    {
+      "id": "live-tv",
+      "name": "Live TV",
+      "description": "A web interface for discovering available live television streams.",
+      "category": "Media",
+      "url": "https://apps.laxmannepal.com.np/Live-TV/",
+      "icon": "📺",
+      "featured": false,
+      "keywords": [
+        "tv",
+        "live tv",
+        "television"
+      ],
+      "status": "online",
+      "httpStatus": 200,
+      "lastChecked": "2026-08-29T21:57:17.388962+00:00"
+    },
+    {
+      "id": "nepali-movies",
+      "name": "Nepali Movies",
+      "description": "A Nepali cinema discovery project.",
+      "category": "Media",
+      "url": "https://apps.laxmannepal.com.np/Nepali-Movies/",
+      "icon": "🎬",
+      "featured": false,
+      "keywords": [
+        "nepali movies",
+        "cinema",
+        "films"
+      ],
+      "status": "online",
+      "httpStatus": 200,
+      "lastChecked": "2026-08-29T21:57:17.434738+00:00"
+    },
+    {
+      "id": "south-movies",
+      "name": "South Movies",
+      "description": "South Indian movie discovery and streaming information.",
+      "category": "Media",
+      "url": "https://apps.laxmannepal.com.np/South-Movies/",
+      "icon": "🎞️",
+      "featured": false,
+      "keywords": [
+        "south movies",
+        "movies",
+        "cinema"
+      ],
+      "status": "online",
+      "httpStatus": 200,
+      "lastChecked": "2026-08-29T21:57:17.484801+00:00"
+    },
+    {
+      "id": "hindu",
+      "name": "Hindu",
+      "description": "A searchable collection of Hindu scriptures, texts and related information.",
+      "category": "Culture",
+      "url": "https://apps.laxmannepal.com.np/Hindu/",
+      "icon": "🕉️",
+      "featured": false,
+      "keywords": [
+        "hindu",
+        "grantha",
+        "scriptures",
+        "purana"
+      ],
+      "status": "online",
+      "httpStatus": 200,
+      "lastChecked": "2026-08-29T21:57:17.528211+00:00"
+    }
   ]
 }
