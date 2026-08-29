@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updatedAt": "2026-08-29T00:00:00Z",
+  "version": 2,
+  "updatedAt": "2026-08-30T00:00:00Z",
   "apps": [
     {"id":"nisulka-tools","name":"Nisulka Tools","description":"Free browser-based tools for everyday productivity and creators.","category":"Tools","url":"https://apps.laxmannepal.com.np/Nisulka-Tools/","icon":"🛠️","featured":true,"keywords":["tools","productivity","creator"]},
     {"id":"nepali-patro","name":"Nepali Patro","description":"Nepali calendar and useful Nepali date, festival and cultural information.","category":"Nepal","url":"https://apps.laxmannepal.com.np/Nepali-Patro/","icon":"📅","featured":true,"keywords":["nepali calendar","patro","date","festival"]},
