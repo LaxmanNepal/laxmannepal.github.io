@@ -21,48 +21,47 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Verify YouTube JSON
+      - name: Verify generated data
         run: |
           test -s data/youtube.json
+          test -s data/apps.json
           python - <<'PY'
           import json
           from pathlib import Path
-          p = Path('data/youtube.json')
-          d = json.loads(p.read_text(encoding='utf-8'))
-          channel = d.get('channel', {})
-          stats = channel.get('statistics', {})
-          if not channel.get('id') or not stats:
-              raise SystemExit('youtube.json exists but has no channel/statistics data')
-          print('YouTube JSON OK:', channel.get('title'), stats)
+          yt=json.loads(Path('data/youtube.json').read_text(encoding='utf-8'))
+          apps=json.loads(Path('data/apps.json').read_text(encoding='utf-8'))
+          if not yt.get('channel',{}).get('statistics'): raise SystemExit('youtube.json missing channel statistics')
+          if not isinstance(apps.get('apps'),list): raise SystemExit('apps.json missing apps array')
+          required=('id','name','url')
+          for a in apps['apps']:
+              if any(not a.get(k) for k in required): raise SystemExit(f'invalid app: {a}')
+          print('YouTube and app data valid:', len(apps['apps']), 'apps')
           PY
 
-      - name: Install homepage renderer
+      - name: Install homepage renderers
         run: |
           python - <<'PY'
           from pathlib import Path
-          p = Path('index.html')
-          text = p.read_text(encoding='utf-8')
-          tag = '<script src="assets/site-enhancements.js?v=3" defer></script>'
-          old = '<script src="assets/site-enhancements.js" defer></script>'
-          if old in text:
-              text = text.replace(old, tag)
-          elif tag not in text:
-              marker = '</body>'
-              if marker not in text:
-                  raise SystemExit('index.html has no </body> marker')
-              text = text.replace(marker, tag + '\n' + marker, 1)
-          p.write_text(text, encoding='utf-8')
-          print('Homepage renderer installed/verified.')
+          p=Path('index.html'); text=p.read_text(encoding='utf-8')
+          tags=[
+            '<script src="assets/site-enhancements.js?v=4" defer></script>',
+            '<script src="assets/apps-renderer.js?v=1" defer></script>'
+          ]
+          for tag in tags:
+              base=tag.split('?')[0].replace('" defer></script>','')
+              # Remove old versions of the same renderer, then install exactly one current tag.
+              import re
+              name=re.escape(base)
+              text=re.sub(r'<script\s+src="'+name+r'(?:\?[^\"]*)?"\s+defer></script>\s*','',text)
+              if tag not in text:
+                  text=text.replace('</body>',tag+'\n</body>',1)
+          p.write_text(text,encoding='utf-8')
           PY
 
-      - name: Commit renderer
+      - name: Commit renderer installation
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add index.html
-          if git diff --cached --quiet; then
-            echo 'Renderer already installed.'
-          else
-            git commit -m 'fix: install live YouTube JSON renderer'
-            git push
-          fi
+          git diff --cached --quiet || git commit -m 'fix: install app and YouTube data renderers'
+          git push || true
