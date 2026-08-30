@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "lastUpdated": "2026-08-29T20:52:34.618555+00:00",
+  "lastUpdated": "2026-08-30T05:18:20.823533+00:00",
   "dataSource": "YouTube Data API v3",
   "apiMode": "public-channel-data",
   "channel": {
@@ -17,7 +17,7 @@
     "defaultLanguage": "ne",
     "statistics": {
       "subscriberCount": 658,
-      "viewCount": 46460,
+      "viewCount": 46582,
       "videoCount": 160,
       "commentCount": 0,
       "hiddenSubscriberCount": false
@@ -38,7 +38,7 @@
   },
   "analysis": {
     "videosFetched": 161,
-    "totalViewsFetched": 46536,
+    "totalViewsFetched": 46559,
     "totalLikesFetched": 649,
     "totalCommentsFetched": 264,
     "averageViews": 289,
@@ -186,11 +186,11 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/273psvPqnwU/maxresdefault.jpg",
-      "views": 7157,
+      "views": 7161,
       "likes": 45,
       "comments": 40,
-      "engagementRate": 1.188,
-      "likeRate": 0.629,
+      "engagementRate": 1.187,
+      "likeRate": 0.628,
       "commentRate": 0.559,
       "url": "https://www.youtube.com/watch?v=273psvPqnwU"
     },
@@ -241,7 +241,7 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/2LvVlDaNq7Y/maxresdefault.jpg",
-      "views": 3983,
+      "views": 3986,
       "likes": 41,
       "comments": 0,
       "engagementRate": 1.029,
@@ -270,12 +270,12 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/0NS2EkwWMl4/maxresdefault.jpg",
-      "views": 2056,
+      "views": 2067,
       "likes": 63,
       "comments": 127,
-      "engagementRate": 9.241,
-      "likeRate": 3.064,
-      "commentRate": 6.177,
+      "engagementRate": 9.192,
+      "likeRate": 3.048,
+      "commentRate": 6.144,
       "url": "https://www.youtube.com/watch?v=0NS2EkwWMl4"
     },
     {
@@ -720,11 +720,11 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/0pZDLwpCs5I/maxresdefault.jpg",
-      "views": 366,
+      "views": 368,
       "likes": 9,
       "comments": 0,
-      "engagementRate": 2.459,
-      "likeRate": 2.459,
+      "engagementRate": 2.446,
+      "likeRate": 2.446,
       "commentRate": 0.0,
       "url": "https://www.youtube.com/watch?v=0pZDLwpCs5I"
     },
@@ -820,11 +820,11 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/JFophle8PIQ/maxresdefault.jpg",
-      "views": 325,
+      "views": 327,
       "likes": 2,
       "comments": 0,
-      "engagementRate": 0.615,
-      "likeRate": 0.615,
+      "engagementRate": 0.612,
+      "likeRate": 0.612,
       "commentRate": 0.0,
       "url": "https://www.youtube.com/watch?v=JFophle8PIQ"
     },
@@ -4678,12 +4678,12 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/u-5gS1HGyE0/maxresdefault.jpg",
-      "views": 261,
+      "views": 262,
       "likes": 5,
       "comments": 1,
-      "engagementRate": 2.299,
-      "likeRate": 1.916,
-      "commentRate": 0.383,
+      "engagementRate": 2.29,
+      "likeRate": 1.908,
+      "commentRate": 0.382,
       "url": "https://www.youtube.com/watch?v=u-5gS1HGyE0"
     },
     {
@@ -5711,11 +5711,11 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/JFophle8PIQ/maxresdefault.jpg",
-      "views": 325,
+      "views": 327,
       "likes": 2,
       "comments": 0,
-      "engagementRate": 0.615,
-      "likeRate": 0.615,
+      "engagementRate": 0.612,
+      "likeRate": 0.612,
       "commentRate": 0.0,
       "url": "https://www.youtube.com/watch?v=JFophle8PIQ"
     },
@@ -5946,11 +5946,11 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/273psvPqnwU/maxresdefault.jpg",
-      "views": 7157,
+      "views": 7161,
       "likes": 45,
       "comments": 40,
-      "engagementRate": 1.188,
-      "likeRate": 0.629,
+      "engagementRate": 1.187,
+      "likeRate": 0.628,
       "commentRate": 0.559,
       "url": "https://www.youtube.com/watch?v=273psvPqnwU"
     },
@@ -6900,12 +6900,12 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/0NS2EkwWMl4/maxresdefault.jpg",
-      "views": 2056,
+      "views": 2067,
       "likes": 63,
       "comments": 127,
-      "engagementRate": 9.241,
-      "likeRate": 3.064,
-      "commentRate": 6.177,
+      "engagementRate": 9.192,
+      "likeRate": 3.048,
+      "commentRate": 6.144,
       "url": "https://www.youtube.com/watch?v=0NS2EkwWMl4"
     },
     {
@@ -7795,7 +7795,7 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/2LvVlDaNq7Y/maxresdefault.jpg",
-      "views": 3983,
+      "views": 3986,
       "likes": 41,
       "comments": 0,
       "engagementRate": 1.029,
@@ -8994,11 +8994,11 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/0pZDLwpCs5I/maxresdefault.jpg",
-      "views": 366,
+      "views": 368,
       "likes": 9,
       "comments": 0,
-      "engagementRate": 2.459,
-      "likeRate": 2.459,
+      "engagementRate": 2.446,
+      "likeRate": 2.446,
       "commentRate": 0.0,
       "url": "https://www.youtube.com/watch?v=0pZDLwpCs5I"
     }
@@ -9007,7 +9007,7 @@
     {
       "month": "2020-11",
       "videos": 1,
-      "views": 366,
+      "views": 368,
       "likes": 9,
       "comments": 0
     },
@@ -9119,7 +9119,7 @@
     {
       "month": "2024-05",
       "videos": 9,
-      "views": 4234,
+      "views": 4237,
       "likes": 42,
       "comments": 0
     },
@@ -9154,7 +9154,7 @@
     {
       "month": "2025-05",
       "videos": 7,
-      "views": 3448,
+      "views": 3459,
       "likes": 77,
       "comments": 127
     },
@@ -9189,14 +9189,14 @@
     {
       "month": "2025-10",
       "videos": 5,
-      "views": 7636,
+      "views": 7640,
       "likes": 52,
       "comments": 44
     },
     {
       "month": "2025-11",
       "videos": 4,
-      "views": 538,
+      "views": 540,
       "likes": 3,
       "comments": 0
     },
@@ -9217,7 +9217,7 @@
     {
       "month": "2026-02",
       "videos": 5,
-      "views": 1880,
+      "views": 1881,
       "likes": 53,
       "comments": 1
     },
