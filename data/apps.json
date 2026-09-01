@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-01T11:59:47.353761+00:00",
+  "updatedAt": "2026-09-01T16:53:59.210591+00:00",
   "apps": [
     {
       "id": "nisulka-tools",
@@ -17,7 +17,7 @@
       ],
       "status": "online",
       "httpStatus": 200,
-      "lastChecked": "2026-09-01T11:59:46.724494+00:00"
+      "lastChecked": "2026-09-01T16:53:58.398839+00:00"
     },
     {
       "id": "nepali-patro",
@@ -35,7 +35,7 @@
       ],
       "status": "online",
       "httpStatus": 200,
-      "lastChecked": "2026-09-01T11:59:46.807466+00:00"
+      "lastChecked": "2026-09-01T16:53:58.539494+00:00"
     },
     {
       "id": "nepse",
@@ -53,7 +53,7 @@
       ],
       "status": "degraded",
       "httpStatus": 404,
-      "lastChecked": "2026-09-01T11:59:46.919529+00:00"
+      "lastChecked": "2026-09-01T16:53:58.723547+00:00"
     },
     {
       "id": "live-tv",
@@ -70,7 +70,7 @@
       ],
       "status": "online",
       "httpStatus": 200,
-      "lastChecked": "2026-09-01T11:59:47.031458+00:00"
+      "lastChecked": "2026-09-01T16:53:58.833884+00:00"
     },
     {
       "id": "nepali-movies",
@@ -87,7 +87,7 @@
       ],
       "status": "online",
       "httpStatus": 200,
-      "lastChecked": "2026-09-01T11:59:47.130566+00:00"
+      "lastChecked": "2026-09-01T16:53:58.963056+00:00"
     },
     {
       "id": "south-movies",
@@ -104,7 +104,7 @@
       ],
       "status": "online",
       "httpStatus": 200,
-      "lastChecked": "2026-09-01T11:59:47.248533+00:00"
+      "lastChecked": "2026-09-01T16:53:59.088962+00:00"
     },
     {
       "id": "hindu",
@@ -122,7 +122,7 @@
       ],
       "status": "online",
       "httpStatus": 200,
-      "lastChecked": "2026-09-01T11:59:47.353741+00:00"
+      "lastChecked": "2026-09-01T16:53:59.210577+00:00"
     }
   ]
 }
