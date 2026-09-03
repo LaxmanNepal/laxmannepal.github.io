@@ -1,0 +1,50 @@
+name: App Directory Enhancements
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/index.html'
+      - 'assets/apps-directory-search.js'
+      - '.github/workflows/apps-directory-enhancements.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apps-directory-enhancements
+  cancel-in-progress: true
+
+jobs:
+  enhance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install app directory search
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          path = Path('apps/index.html')
+          html = path.read_text(encoding='utf-8')
+          html = re.sub(r'<script[^>]+src=["\'][^"\']*apps-directory-search\.js[^"\']*["\'][^>]*></script>', '', html, flags=re.I)
+          if '</body>' not in html:
+              raise SystemExit('apps/index.html has no closing body tag')
+          html = html.replace('</body>', '<script src="../assets/apps-directory-search.js?v=1"></script></body>')
+          path.write_text(html, encoding='utf-8')
+          PY
+
+      - name: Commit if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git diff --quiet -- apps/index.html; then
+            echo 'No app directory changes.'
+          else
+            git add apps/index.html
+            git commit -m 'chore: install app directory enhancements'
+            git push origin HEAD:main
+          fi
