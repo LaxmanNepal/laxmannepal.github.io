@@ -23,6 +23,21 @@ for name in ('apps', 'youtube'):
     except Exception as exc:
         errors.append(f'{name}.json is invalid: {exc}')
 
+# PWA manifest must be valid and its declared icon MIME type must match the SVG asset.
+try:
+    manifest = json.loads((ROOT / 'manifest.webmanifest').read_text(encoding='utf-8'))
+    icons = manifest.get('icons', [])
+    if not any(i.get('src') == '/assets/icon.svg' and i.get('type') == 'image/svg+xml' for i in icons):
+        errors.append('manifest does not correctly declare /assets/icon.svg as image/svg+xml')
+except Exception as exc:
+    errors.append(f'manifest.webmanifest is invalid: {exc}')
+if not (ROOT / 'sw.js').is_file():
+    errors.append('sw.js is missing')
+if 'rel="manifest"' not in html or '/manifest.webmanifest' not in html:
+    errors.append('homepage is missing manifest reference')
+if '/sw.js' not in html:
+    errors.append('homepage is missing service-worker registration')
+
 # Homepage must load each enhancement exactly once and never load the retired renderer.
 for script_name in ('site-enhancements.js', 'apps-homepage.js', 'site-intelligence.js'):
     pattern = r'<script\s+src=["\'][^"\']*' + re.escape(script_name) + r'(?:\?[^"\']*)?["\'][^>]*></script>'
@@ -31,6 +46,8 @@ for script_name in ('site-enhancements.js', 'apps-homepage.js', 'site-intelligen
         errors.append(f'{script_name} expected once, found {count}')
 if re.search(r'<script\s+src=["\'][^"\']*apps-renderer\.js', html, re.I):
     errors.append('retired apps-renderer.js is still loaded')
+if re.search(r'async\s+function\s+load(?:YT|Apps)\s*\(', html):
+    errors.append('legacy inline data renderer functions are still present')
 
 # Prevent accidental insecure third-party resources on the HTTPS site.
 for match in re.findall(r'(?:src|href)=["\'](http://[^"\']+)["\']', html, re.I):
@@ -55,13 +72,30 @@ else:
         if app.get('status') == 'online' and app.get('url') and app['url'] not in sitemap:
             errors.append(f'online app missing from sitemap: {app["url"]}')
 
+# The human-readable app directory must not drift from the machine-readable catalog.
+try:
+    directory = (ROOT / 'apps' / 'index.html').read_text(encoding='utf-8')
+    apps = json.loads((ROOT / 'data/apps.json').read_text(encoding='utf-8')).get('apps', [])
+    for app in apps:
+        if app.get('status') != 'online' or not app.get('url'):
+            continue
+        path = re.sub(r'^https?://[^/]+', '', app['url'])
+        relative = '../' + path.lstrip('/')
+        if relative not in directory:
+            errors.append(f'app directory missing online app link: {relative}')
+    if '../Nepse/' in directory:
+        errors.append('app directory contains retired /Nepse/ path')
+except Exception as exc:
+    errors.append(f'app directory check failed: {exc}')
+
 if errors:
     print('\n'.join(f'ERROR: {e}' for e in errors))
     sys.exit(1)
 
 print('Homepage QA passed.')
 print('✓ JSON datasets parse')
-print('✓ renderer scripts are unique')
+print('✓ PWA manifest and service worker are wired correctly')
+print('✓ renderer scripts are unique and legacy inline renderers are absent')
 print('✓ no retired renderer or insecure HTTP homepage resources')
 print('✓ JavaScript assets pass node --check')
-print('✓ sitemap is valid and synchronized with online apps')
+print('✓ sitemap and app directory are synchronized with online apps')
