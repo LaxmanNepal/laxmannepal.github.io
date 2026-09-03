@@ -49,7 +49,19 @@ if re.search(r'<script\s+src=["\'][^"\']*apps-renderer\.js', html, re.I):
 if re.search(r'async\s+function\s+load(?:YT|Apps)\s*\(', html):
     errors.append('legacy inline data renderer functions are still present')
 
-# Prevent accidental insecure third-party resources on the HTTPS site.
+# App directory must have exactly one enhancement script so /apps/?q=... works.
+directory_path = ROOT / 'apps' / 'index.html'
+if not directory_path.is_file():
+    errors.append('apps/index.html is missing')
+else:
+    directory = directory_path.read_text(encoding='utf-8')
+    count = len(re.findall(r'<script\s+src=["\'][^"\']*apps-directory-search\.js(?:\?[^"\']*)?["\'][^>]*></script>', directory, re.I))
+    if count != 1:
+        errors.append(f'apps-directory-search.js expected once in app directory, found {count}')
+    if '../Nepse/' in directory:
+        errors.append('app directory contains retired /Nepse/ path')
+
+# Prevent accidental insecure third-party resources on the HTTPS homepage.
 for match in re.findall(r'(?:src|href)=["\'](http://[^"\']+)["\']', html, re.I):
     if not match.startswith('http://localhost'):
         errors.append(f'insecure HTTP resource in homepage: {match}')
@@ -74,7 +86,7 @@ else:
 
 # The human-readable app directory must not drift from the machine-readable catalog.
 try:
-    directory = (ROOT / 'apps' / 'index.html').read_text(encoding='utf-8')
+    directory = directory_path.read_text(encoding='utf-8')
     apps = json.loads((ROOT / 'data/apps.json').read_text(encoding='utf-8')).get('apps', [])
     for app in apps:
         if app.get('status') != 'online' or not app.get('url'):
@@ -83,8 +95,6 @@ try:
         relative = '../' + path.lstrip('/')
         if relative not in directory:
             errors.append(f'app directory missing online app link: {relative}')
-    if '../Nepse/' in directory:
-        errors.append('app directory contains retired /Nepse/ path')
 except Exception as exc:
     errors.append(f'app directory check failed: {exc}')
 
@@ -96,6 +106,7 @@ print('Homepage QA passed.')
 print('✓ JSON datasets parse')
 print('✓ PWA manifest and service worker are wired correctly')
 print('✓ renderer scripts are unique and legacy inline renderers are absent')
+print('✓ app directory search enhancement is installed once')
 print('✓ no retired renderer or insecure HTTP homepage resources')
 print('✓ JavaScript assets pass node --check')
 print('✓ sitemap and app directory are synchronized with online apps')
