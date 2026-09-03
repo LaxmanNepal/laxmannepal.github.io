@@ -6,6 +6,16 @@ root = Path(__file__).resolve().parents[1]
 html = (root / 'index.html').read_text(encoding='utf-8')
 errors = []
 
+# Installability and basic accessibility assets.
+if not (root / 'manifest.webmanifest').is_file():
+    errors.append('missing manifest.webmanifest')
+if not (root / 'sw.js').is_file():
+    errors.append('missing sw.js')
+if 'href="/manifest.webmanifest"' not in html:
+    errors.append('homepage does not reference manifest.webmanifest')
+if 'Skip to content' not in html or 'id="main"' not in html:
+    errors.append('homepage is missing skip-to-content accessibility support')
+
 # Exactly one primary homepage renderer and one app-discovery enhancement.
 renderer_scripts = re.findall(r'<script\s+src=["\']([^"\']*site-enhancements\.js[^"\']*)["\'][^>]*></script>', html, re.I)
 app_scripts = re.findall(r'<script\s+src=["\']([^"\']*apps-homepage\.js[^"\']*)["\'][^>]*></script>', html, re.I)
@@ -58,4 +68,5 @@ print(f'Site intelligence renderer: {intel_scripts[0]}')
 print('Obsolete apps renderer: not loaded')
 print('Legacy inline data renderer: not present')
 print('Required data files: present')
+print('PWA and accessibility assets: present')
 print('Online app URLs: present in sitemap')
