@@ -54,4 +54,6 @@ async function loadApps(){let g=$('#appsGrid');g.innerHTML='<div class="empty">L
 function drawApps(){let q=($('#search').value||'').toLowerCase();let list=allApps.filter(x=>{let hay=[x.name,x.description,x.category,...(x.keywords||[])].join(' ').toLowerCase();return(activeFilter==='all'||x.category===activeFilter)&&hay.includes(q)});$('#appsGrid').innerHTML=list.length?list.map(x=>'<a class="app glass" href="'+safe(x.url)+'" target="_blank" rel="noopener"><div class="appIcon">'+safe(x.icon||'↗')+'</div><h3>'+safe(x.name)+'</h3><p>'+safe(x.description||'Live deployed application.')+'</p><div class="appFoot"><span>'+safe(x.category||'Web App')+'</span><span class="open">'+(x.status==='degraded'?'Check App ↗':'Open App ↗')+'</span></div></a>').join(''):'<div class="empty">No app matches your search.</div>';$$('.app').forEach(c=>c.onmousemove=e=>{let r=c.getBoundingClientRect();c.style.setProperty('--px',((e.clientX-r.left)/r.width*100)+'%');c.style.setProperty('--py',((e.clientY-r.top)/r.height*100)+'%')})}
 $('#search').oninput=drawApps;loadYT();loadApps();reveal();
 </script><script src="assets/site-enhancements.js?v=5" defer></script>
+<script src="assets/site-enhancements.js?v=4" defer></script>
+<script src="assets/apps-renderer.js?v=1" defer></script>
 </body></html>
