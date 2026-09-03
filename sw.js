@@ -1,6 +1,7 @@
-const CACHE='ln-home-v2';
-const CORE=['/','/index.html','/manifest.webmanifest','/assets/site-enhancements.js','/assets/apps-homepage.js'];
+const CACHE='ln-home-v3';
+const CORE=['/','/index.html','/manifest.webmanifest','/assets/site-enhancements.js','/assets/apps-homepage.js','/assets/site-intelligence.js'];
 const DATA_PREFIX='/data/';
+const CACHEABLE_DESTINATIONS=new Set(['style','script','font','image']);
 
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()));
@@ -20,14 +21,15 @@ self.addEventListener('fetch',event=>{
   if(url.origin!==self.location.origin) return;
 
   if(url.pathname.startsWith(DATA_PREFIX)){
+    const stableRequest=new Request(url.origin+url.pathname,{method:'GET'});
     event.respondWith(
       fetch(event.request).then(response=>{
         if(response.ok){
           const copy=response.clone();
-          caches.open(CACHE).then(cache=>cache.put(event.request,copy));
+          caches.open(CACHE).then(cache=>cache.put(stableRequest,copy));
         }
         return response;
-      }).catch(()=>caches.match(event.request))
+      }).catch(()=>caches.match(stableRequest))
     );
     return;
   }
@@ -47,7 +49,7 @@ self.addEventListener('fetch',event=>{
 
   event.respondWith(
     caches.match(event.request).then(cached=>cached||fetch(event.request).then(response=>{
-      if(response.ok && ['style','script','font','image'].includes(event.request.destination)){
+      if(response.ok && CACHEABLE_DESTINATIONS.has(event.request.destination)){
         const copy=response.clone();
         caches.open(CACHE).then(cache=>cache.put(event.request,copy));
       }
