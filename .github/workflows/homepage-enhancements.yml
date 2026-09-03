@@ -30,38 +30,44 @@ jobs:
           from pathlib import Path
           yt=json.loads(Path('data/youtube.json').read_text(encoding='utf-8'))
           apps=json.loads(Path('data/apps.json').read_text(encoding='utf-8'))
-          if not yt.get('channel',{}).get('statistics'): raise SystemExit('youtube.json missing channel statistics')
-          if not isinstance(apps.get('apps'),list): raise SystemExit('apps.json missing apps array')
+          if not yt.get('channel',{}).get('statistics'):
+              raise SystemExit('youtube.json missing channel statistics')
+          if not isinstance(apps.get('apps'),list):
+              raise SystemExit('apps.json missing apps array')
           required=('id','name','url')
           for a in apps['apps']:
-              if any(not a.get(k) for k in required): raise SystemExit(f'invalid app: {a}')
+              if any(not a.get(k) for k in required):
+                  raise SystemExit(f'invalid app: {a}')
           print('YouTube and app data valid:', len(apps['apps']), 'apps')
           PY
 
-      - name: Install homepage renderers
+      - name: Install homepage renderer
         run: |
           python - <<'PY'
           from pathlib import Path
-          p=Path('index.html'); text=p.read_text(encoding='utf-8')
-          tags=[
-            '<script src="assets/site-enhancements.js?v=4" defer></script>',
-            '<script src="assets/apps-renderer.js?v=1" defer></script>'
-          ]
-          for tag in tags:
-              base=tag.split('?')[0].replace('" defer></script>','')
-              # Remove old versions of the same renderer, then install exactly one current tag.
-              import re
-              name=re.escape(base)
-              text=re.sub(r'<script\s+src="'+name+r'(?:\?[^\"]*)?"\s+defer></script>\s*','',text)
-              if tag not in text:
-                  text=text.replace('</body>',tag+'\n</body>',1)
+          import re
+
+          p=Path('index.html')
+          text=p.read_text(encoding='utf-8')
+          tag='<script src="assets/site-enhancements.js?v=7" defer></script>'
+
+          # Remove every previous site-enhancements version and the obsolete renderer.
+          text=re.sub(r'<script\s+src=["\']assets/site-enhancements\.js(?:\?[^"\']*)?["\']\s+defer></script>\s*','',text,flags=re.I)
+          text=re.sub(r'<script\s+src=["\']assets/apps-renderer\.js(?:\?[^"\']*)?["\']\s+defer></script>\s*','',text,flags=re.I)
+
+          if '</body>' not in text:
+              raise SystemExit('index.html has no closing body tag')
+          text=text.replace('</body>',tag+'\n</body>',1)
           p.write_text(text,encoding='utf-8')
           PY
+
+      - name: Validate homepage renderer installation
+        run: python scripts/check-homepage-integrity.py
 
       - name: Commit renderer installation
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add index.html
-          git diff --cached --quiet || git commit -m 'fix: install app and YouTube data renderers'
-          git push || true
+          git diff --cached --quiet || git commit -m 'fix: normalize homepage renderer'
+          git push
