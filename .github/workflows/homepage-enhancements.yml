@@ -49,6 +49,25 @@ jobs:
 
           p=Path('index.html')
           text=p.read_text(encoding='utf-8')
+
+          # The original homepage contained an inline Apps/YouTube renderer.
+          # The maintained external renderer now owns that responsibility, so
+          # remove the legacy block to avoid duplicate fetches and race conditions.
+          legacy = re.compile(
+              r'\nasync function loadYT\(\)\{.*?\n\$\([\'\"]#search[\'\"]\)\.oninput=drawApps;loadYT\(\);loadApps\(\);loadApps\(\);reveal\(\);',
+              re.S,
+          )
+          # Handle the actual single-call form as well.
+          legacy_single = re.compile(
+              r'\nasync function loadYT\(\)\{.*?\n\$\([\'\"]#search[\'\"]\)\.oninput=drawApps;loadYT\(\);loadApps\(\);reveal\(\);',
+              re.S,
+          )
+          text, removed = legacy.subn('\nreveal();', text, count=1)
+          if removed == 0:
+              text, removed = legacy_single.subn('\nreveal();', text, count=1)
+          if removed > 1:
+              raise SystemExit(f'removed unexpected number of legacy renderer blocks: {removed}')
+
           tags='''<script src="assets/site-enhancements.js?v=7" defer></script>\n<script src="assets/apps-homepage.js?v=1" defer></script>'''
 
           # Remove previous renderer versions and any obsolete/duplicate app renderer.
