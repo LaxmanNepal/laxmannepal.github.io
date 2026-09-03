@@ -1,0 +1,37 @@
+name: Homepage QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'assets/**'
+      - 'data/**'
+      - 'scripts/**'
+      - 'sitemap.xml'
+      - '.github/workflows/homepage-qa.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '41 */12 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: homepage-qa
+  cancel-in-progress: true
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run homepage QA
+        run: python scripts/qa-homepage.py
