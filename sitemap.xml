@@ -6,7 +6,9 @@
   <url><loc>https://apps.laxmannepal.com.np/about/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://apps.laxmannepal.com.np/Nisulka-Tools/</loc><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://apps.laxmannepal.com.np/Nepali-Patro/</loc><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://apps.laxmannepal.com.np/Nepse/</loc><changefreq>daily</changefreq><priority>0.80</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/nepse/</loc><changefreq>daily</changefreq><priority>0.80</priority></url>
   <url><loc>https://apps.laxmannepal.com.np/Live-TV/</loc><changefreq>daily</changefreq><priority>0.70</priority></url>
   <url><loc>https://apps.laxmannepal.com.np/Nepali-Movies/</loc><changefreq>weekly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/South-Movies/</loc><changefreq>weekly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/Hindu/</loc><changefreq>weekly</changefreq><priority>0.70</priority></url>
 </urlset>
