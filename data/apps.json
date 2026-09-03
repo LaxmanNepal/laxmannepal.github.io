@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T16:40:19.852402+00:00",
+  "updatedAt": "2026-09-03T18:11:00+00:00",
   "apps": [
     {
       "id": "nisulka-tools",
@@ -10,11 +10,7 @@
       "url": "https://apps.laxmannepal.com.np/Nisulka-Tools/",
       "icon": "🛠️",
       "featured": true,
-      "keywords": [
-        "tools",
-        "productivity",
-        "creator"
-      ],
+      "keywords": ["tools", "productivity", "creator"],
       "status": "online",
       "httpStatus": 200,
       "lastChecked": "2026-09-03T16:40:19.049052+00:00"
@@ -27,33 +23,23 @@
       "url": "https://apps.laxmannepal.com.np/Nepali-Patro/",
       "icon": "📅",
       "featured": true,
-      "keywords": [
-        "nepali calendar",
-        "patro",
-        "date",
-        "festival"
-      ],
+      "keywords": ["nepali calendar", "patro", "date", "festival"],
       "status": "online",
       "httpStatus": 200,
       "lastChecked": "2026-09-03T16:40:19.168836+00:00"
     },
     {
       "id": "nepse",
-      "name": "NEPSE",
-      "description": "Nepal stock-market focused tools and company information.",
+      "name": "NEPSE Pulse",
+      "description": "Nepal stock-market intelligence, company research, market data and finance tools.",
       "category": "Finance",
-      "url": "https://apps.laxmannepal.com.np/Nepse/",
+      "url": "https://apps.laxmannepal.com.np/nepse/",
       "icon": "📈",
       "featured": true,
-      "keywords": [
-        "nepse",
-        "shares",
-        "stocks",
-        "finance"
-      ],
-      "status": "degraded",
-      "httpStatus": 404,
-      "lastChecked": "2026-09-03T16:40:19.282513+00:00"
+      "keywords": ["nepse", "shares", "stocks", "finance", "market"],
+      "status": "online",
+      "httpStatus": 200,
+      "lastChecked": "2026-09-03T18:11:00+00:00"
     },
     {
       "id": "live-tv",
@@ -63,11 +49,7 @@
       "url": "https://apps.laxmannepal.com.np/Live-TV/",
       "icon": "📺",
       "featured": false,
-      "keywords": [
-        "tv",
-        "live tv",
-        "television"
-      ],
+      "keywords": ["tv", "live tv", "television"],
       "status": "online",
       "httpStatus": 200,
       "lastChecked": "2026-09-03T16:40:19.402005+00:00"
@@ -80,11 +62,7 @@
       "url": "https://apps.laxmannepal.com.np/Nepali-Movies/",
       "icon": "🎬",
       "featured": false,
-      "keywords": [
-        "nepali movies",
-        "cinema",
-        "films"
-      ],
+      "keywords": ["nepali movies", "cinema", "films"],
       "status": "online",
       "httpStatus": 200,
       "lastChecked": "2026-09-03T16:40:19.528933+00:00"
@@ -97,11 +75,7 @@
       "url": "https://apps.laxmannepal.com.np/South-Movies/",
       "icon": "🎞️",
       "featured": false,
-      "keywords": [
-        "south movies",
-        "movies",
-        "cinema"
-      ],
+      "keywords": ["south movies", "movies", "cinema"],
       "status": "online",
       "httpStatus": 200,
       "lastChecked": "2026-09-03T16:40:19.723128+00:00"
@@ -114,12 +88,7 @@
       "url": "https://apps.laxmannepal.com.np/Hindu/",
       "icon": "🕉️",
       "featured": false,
-      "keywords": [
-        "hindu",
-        "grantha",
-        "scriptures",
-        "purana"
-      ],
+      "keywords": ["hindu", "grantha", "scriptures", "purana"],
       "status": "online",
       "httpStatus": 200,
       "lastChecked": "2026-09-03T16:40:19.852382+00:00"
