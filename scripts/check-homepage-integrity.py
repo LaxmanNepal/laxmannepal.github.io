@@ -9,14 +9,19 @@ errors = []
 # Exactly one primary homepage renderer and one app-discovery enhancement.
 renderer_scripts = re.findall(r'<script\s+src=["\']([^"\']*site-enhancements\.js[^"\']*)["\'][^>]*></script>', html, re.I)
 app_scripts = re.findall(r'<script\s+src=["\']([^"\']*apps-homepage\.js[^"\']*)["\'][^>]*></script>', html, re.I)
+intel_scripts = re.findall(r'<script\s+src=["\']([^"\']*site-intelligence\.js[^"\']*)["\'][^>]*></script>', html, re.I)
 if len(renderer_scripts) != 1:
     errors.append(f'expected exactly 1 site-enhancements.js script, found {len(renderer_scripts)}')
 if len(app_scripts) != 1:
     errors.append(f'expected exactly 1 apps-homepage.js script, found {len(app_scripts)}')
+if len(intel_scripts) != 1:
+    errors.append(f'expected exactly 1 site-intelligence.js script, found {len(intel_scripts)}')
 
-# Obsolete renderer must not be loaded.
+# Obsolete renderer and legacy inline data rendering must not return.
 if re.search(r'<script\s+src=["\'][^"\']*apps-renderer\.js[^"\']*["\']', html, re.I):
     errors.append('obsolete apps-renderer.js is still loaded')
+if re.search(r'\basync\s+function\s+(?:loadYT|loadApps)\s*\(', html):
+    errors.append('legacy inline YouTube/Apps renderer is still present')
 
 # Dynamic data sources must exist and remain available.
 for path in ('data/apps.json', 'data/youtube.json'):
@@ -49,6 +54,8 @@ if errors:
 print('Homepage integrity check passed.')
 print(f'Primary renderer: {renderer_scripts[0]}')
 print(f'App discovery renderer: {app_scripts[0]}')
+print(f'Site intelligence renderer: {intel_scripts[0]}')
 print('Obsolete apps renderer: not loaded')
+print('Legacy inline data renderer: not present')
 print('Required data files: present')
 print('Online app URLs: present in sitemap')
