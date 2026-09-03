@@ -49,6 +49,6 @@ $('#cmd').onclick=()=>{$('#palette').classList.add('open');$('#paletteInput').fo
 $('#share').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('Profile link copied')}catch{toast('Copy failed — share the page URL')}};
 reveal();
 </script><script src="/assets/site-intelligence.js?v=1" defer></script>
-<script src="assets/site-enhancements.js?v=7" defer></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));}</script><script src="assets/site-enhancements.js?v=7" defer></script>
 <script src="assets/apps-homepage.js?v=1" defer></script>
-<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));}</script></body></html>
+</body></html>
