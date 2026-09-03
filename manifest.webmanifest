@@ -1,0 +1,19 @@
+{
+  "name": "Laxman Nepal — Apps & Projects",
+  "short_name": "Laxman Nepal",
+  "description": "Explore apps, projects and technology content by Laxman Nepal.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#f5f7fb",
+  "icons": [
+    {
+      "src": "https://avatars.githubusercontent.com/u/84069546?v=4",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
