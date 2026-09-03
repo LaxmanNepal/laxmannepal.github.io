@@ -8,8 +8,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 errors = []
 
-html_path = ROOT / 'index.html'
-html = html_path.read_text(encoding='utf-8')
+html = (ROOT / 'index.html').read_text(encoding='utf-8')
 
 # JSON datasets must parse and contain the minimum runtime fields.
 for name in ('apps', 'youtube'):
@@ -26,10 +25,11 @@ for name in ('apps', 'youtube'):
 
 # Homepage must load each enhancement exactly once and never load the retired renderer.
 for script_name in ('site-enhancements.js', 'apps-homepage.js', 'site-intelligence.js'):
-    count = len(re.findall(r'<script\\s+src=["\'][^"\']*' + re.escape(script_name) + r'(?:\\?[^"\']*)?["\'][^>]*></script>', html, re.I))
+    pattern = r'<script\s+src=["\'][^"\']*' + re.escape(script_name) + r'(?:\?[^"\']*)?["\'][^>]*></script>'
+    count = len(re.findall(pattern, html, re.I))
     if count != 1:
         errors.append(f'{script_name} expected once, found {count}')
-if re.search(r'<script\\s+src=["\'][^"\']*apps-renderer\\.js', html, re.I):
+if re.search(r'<script\s+src=["\'][^"\']*apps-renderer\.js', html, re.I):
     errors.append('retired apps-renderer.js is still loaded')
 
 # Prevent accidental insecure third-party resources on the HTTPS site.
