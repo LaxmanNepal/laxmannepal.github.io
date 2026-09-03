@@ -1,9 +1,9 @@
 from pathlib import Path
+import json
 import re
 
 root = Path(__file__).resolve().parents[1]
 html = (root / 'index.html').read_text(encoding='utf-8')
-
 errors = []
 
 # Exactly one primary homepage renderer and one app-discovery enhancement.
@@ -23,13 +23,24 @@ for path in ('data/apps.json', 'data/youtube.json'):
     if not (root / path).is_file():
         errors.append(f'missing required data file: {path}')
 
-apps = root / 'data/apps.json'
-if apps.is_file() and apps.stat().st_size == 0:
+apps_path = root / 'data/apps.json'
+if apps_path.is_file() and apps_path.stat().st_size == 0:
     errors.append('data/apps.json is empty')
 
-yt = root / 'data/youtube.json'
-if yt.is_file() and yt.stat().st_size == 0:
+yt_path = root / 'data/youtube.json'
+if yt_path.is_file() and yt_path.stat().st_size == 0:
     errors.append('data/youtube.json is empty')
+
+# Keep the sitemap synchronized with every online app URL.
+if apps_path.is_file() and (root / 'sitemap.xml').is_file():
+    try:
+        data = json.loads(apps_path.read_text(encoding='utf-8'))
+        sitemap = (root / 'sitemap.xml').read_text(encoding='utf-8')
+        for app in data.get('apps', []):
+            if app.get('status') == 'online' and app.get('url') and app['url'] not in sitemap:
+                errors.append(f'online app missing from sitemap: {app["url"]}')
+    except Exception as exc:
+        errors.append(f'could not validate sitemap against apps.json: {exc}')
 
 if errors:
     print('\n'.join(f'ERROR: {e}' for e in errors))
@@ -40,3 +51,4 @@ print(f'Primary renderer: {renderer_scripts[0]}')
 print(f'App discovery renderer: {app_scripts[0]}')
 print('Obsolete apps renderer: not loaded')
 print('Required data files: present')
+print('Online app URLs: present in sitemap')
