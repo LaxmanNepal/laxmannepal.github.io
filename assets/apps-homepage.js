@@ -24,7 +24,7 @@
     const section=document.createElement('div'); section.className='lnHomeAppSection';
     section.innerHTML=`<div class="lnHomeAppHeading"><h3>${title}</h3><span>${subtitle}</span></div><div class="lnHomeAppGrid">${items.length ? items.map(card).join('') : '<div class="lnHomeAppEmpty">No recently opened apps yet. Open an app below and it will appear here.</div>'}</div>`;
     container.appendChild(section);
-    section.querySelectorAll('.lnHomeAppCard').forEach(a=>a.addEventListener('click',()=>{saveRecent(a.dataset.appId); if(title.includes('Recently')) setTimeout(()=>refresh(container,apps),50);}));
+    section.querySelectorAll('.lnHomeAppCard').forEach(a=>a.addEventListener('click',()=>saveRecent(a.dataset.appId)));
   }
 
   function refresh(container, apps) {
@@ -47,6 +47,11 @@
       const r=await fetch(`/data/apps.json?v=${Date.now()}`,{cache:'no-store'}); if(!r.ok) throw new Error(r.status);
       const data=await r.json(); const apps=Array.isArray(data.apps)?data.apps.filter(a=>a.status==='online'):[];
       refresh(marker,apps);
+      document.addEventListener('click',event=>{
+        const target=event.target.closest?.('.app,.lnAppCard');
+        const id=target?.dataset?.appId || target?.getAttribute?.('href') && apps.find(a=>a.url===target.getAttribute('href'))?.id;
+        if(id){saveRecent(id);setTimeout(()=>refresh(marker,apps),80);}
+      },{passive:true});
     }catch(e){console.warn('[Laxman Nepal] App highlights failed',e);}
   }
 
