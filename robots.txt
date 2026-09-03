@@ -3,5 +3,6 @@ Allow: /
 Disallow: /data/
 Disallow: /scripts/
 Disallow: /.github/
+Disallow: /sw.js
 
 Sitemap: https://apps.laxmannepal.com.np/sitemap.xml
