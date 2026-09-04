@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "lastUpdated": "2026-09-03T20:57:26.518646+00:00",
+  "lastUpdated": "2026-09-04T04:23:43.637712+00:00",
   "dataSource": "YouTube Data API v3",
   "apiMode": "public-channel-data",
   "channel": {
@@ -38,7 +38,7 @@
   },
   "analysis": {
     "videosFetched": 162,
-    "totalViewsFetched": 47811,
+    "totalViewsFetched": 47819,
     "totalLikesFetched": 660,
     "totalCommentsFetched": 273,
     "averageViews": 295,
@@ -186,10 +186,10 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/273psvPqnwU/maxresdefault.jpg",
-      "views": 7470,
+      "views": 7476,
       "likes": 45,
       "comments": 44,
-      "engagementRate": 1.191,
+      "engagementRate": 1.19,
       "likeRate": 0.602,
       "commentRate": 0.589,
       "url": "https://www.youtube.com/watch?v=273psvPqnwU"
@@ -241,7 +241,7 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/2LvVlDaNq7Y/maxresdefault.jpg",
-      "views": 4098,
+      "views": 4099,
       "likes": 42,
       "comments": 0,
       "engagementRate": 1.025,
@@ -270,12 +270,12 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/0NS2EkwWMl4/maxresdefault.jpg",
-      "views": 2173,
+      "views": 2174,
       "likes": 65,
       "comments": 131,
-      "engagementRate": 9.02,
-      "likeRate": 2.991,
-      "commentRate": 6.029,
+      "engagementRate": 9.016,
+      "likeRate": 2.99,
+      "commentRate": 6.026,
       "url": "https://www.youtube.com/watch?v=0NS2EkwWMl4"
     },
     {
@@ -5925,10 +5925,10 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/273psvPqnwU/maxresdefault.jpg",
-      "views": 7470,
+      "views": 7476,
       "likes": 45,
       "comments": 44,
-      "engagementRate": 1.191,
+      "engagementRate": 1.19,
       "likeRate": 0.602,
       "commentRate": 0.589,
       "url": "https://www.youtube.com/watch?v=273psvPqnwU"
@@ -6879,12 +6879,12 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/0NS2EkwWMl4/maxresdefault.jpg",
-      "views": 2173,
+      "views": 2174,
       "likes": 65,
       "comments": 131,
-      "engagementRate": 9.02,
-      "likeRate": 2.991,
-      "commentRate": 6.029,
+      "engagementRate": 9.016,
+      "likeRate": 2.99,
+      "commentRate": 6.026,
       "url": "https://www.youtube.com/watch?v=0NS2EkwWMl4"
     },
     {
@@ -7774,7 +7774,7 @@
       "madeForKids": false,
       "privacyStatus": "public",
       "thumbnail": "https://i.ytimg.com/vi/2LvVlDaNq7Y/maxresdefault.jpg",
-      "views": 4098,
+      "views": 4099,
       "likes": 42,
       "comments": 0,
       "engagementRate": 1.025,
@@ -9098,7 +9098,7 @@
     {
       "month": "2024-05",
       "videos": 9,
-      "views": 4349,
+      "views": 4350,
       "likes": 43,
       "comments": 0
     },
@@ -9133,7 +9133,7 @@
     {
       "month": "2025-05",
       "videos": 7,
-      "views": 3565,
+      "views": 3566,
       "likes": 79,
       "comments": 131
     },
@@ -9168,7 +9168,7 @@
     {
       "month": "2025-10",
       "videos": 5,
-      "views": 7981,
+      "views": 7987,
       "likes": 52,
       "comments": 48
     },
