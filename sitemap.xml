@@ -51,4 +51,14 @@
   <url><loc>https://apps.laxmannepal.com.np/youtube/video/?v=ALokxGbBKTg</loc><changefreq>monthly</changefreq><priority>0.65</priority></url>
   <url><loc>https://apps.laxmannepal.com.np/youtube/video/?v=qCMjHkDQRKo</loc><changefreq>monthly</changefreq><priority>0.65</priority></url>
   <url><loc>https://apps.laxmannepal.com.np/youtube/video/?v=T2rJ47vUbmo</loc><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/apps/nisulka-tools/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/apps/nepali-patro/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/apps/nepse-pulse/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/apps/live-tv/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/apps/nepali-movies/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/apps/south-movies/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/apps/hindu/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/apps/nepali-news/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/apps/text-to-handwriting/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://apps.laxmannepal.com.np/apps/progress-bar-year/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
 </urlset>
