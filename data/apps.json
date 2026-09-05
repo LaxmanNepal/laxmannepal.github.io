@@ -1,129 +1,16 @@
 {
-  "version": 2,
-  "updatedAt": "2026-09-04T21:01:14.675335+00:00",
+  "version": 3,
+  "updatedAt": "2026-09-05T00:00:00Z",
   "apps": [
-    {
-      "id": "nisulka-tools",
-      "name": "Nisulka Tools",
-      "description": "Free browser-based tools for everyday productivity and creators.",
-      "category": "Tools",
-      "url": "https://apps.laxmannepal.com.np/Nisulka-Tools/",
-      "icon": "🛠️",
-      "featured": true,
-      "keywords": [
-        "tools",
-        "productivity",
-        "creator"
-      ],
-      "status": "online",
-      "httpStatus": 200,
-      "lastChecked": "2026-09-04T21:01:14.037080+00:00"
-    },
-    {
-      "id": "nepali-patro",
-      "name": "Nepali Patro",
-      "description": "Nepali calendar and useful Nepali date, festival and cultural information.",
-      "category": "Nepal",
-      "url": "https://apps.laxmannepal.com.np/Nepali-Patro/",
-      "icon": "📅",
-      "featured": true,
-      "keywords": [
-        "nepali calendar",
-        "patro",
-        "date",
-        "festival"
-      ],
-      "status": "online",
-      "httpStatus": 200,
-      "lastChecked": "2026-09-04T21:01:14.119099+00:00"
-    },
-    {
-      "id": "nepse",
-      "name": "NEPSE Pulse",
-      "description": "Nepal stock-market intelligence, company research, market data and finance tools.",
-      "category": "Finance",
-      "url": "https://apps.laxmannepal.com.np/nepse/",
-      "icon": "📈",
-      "featured": true,
-      "keywords": [
-        "nepse",
-        "shares",
-        "stocks",
-        "finance",
-        "market"
-      ],
-      "status": "online",
-      "httpStatus": 200,
-      "lastChecked": "2026-09-04T21:01:14.238402+00:00"
-    },
-    {
-      "id": "live-tv",
-      "name": "Live TV",
-      "description": "A web interface for discovering available live television streams.",
-      "category": "Media",
-      "url": "https://apps.laxmannepal.com.np/Live-TV/",
-      "icon": "📺",
-      "featured": false,
-      "keywords": [
-        "tv",
-        "live tv",
-        "television"
-      ],
-      "status": "online",
-      "httpStatus": 200,
-      "lastChecked": "2026-09-04T21:01:14.333941+00:00"
-    },
-    {
-      "id": "nepali-movies",
-      "name": "Nepali Movies",
-      "description": "A Nepali cinema discovery project.",
-      "category": "Media",
-      "url": "https://apps.laxmannepal.com.np/Nepali-Movies/",
-      "icon": "🎬",
-      "featured": false,
-      "keywords": [
-        "nepali movies",
-        "cinema",
-        "films"
-      ],
-      "status": "online",
-      "httpStatus": 200,
-      "lastChecked": "2026-09-04T21:01:14.466758+00:00"
-    },
-    {
-      "id": "south-movies",
-      "name": "South Movies",
-      "description": "South Indian movie discovery and streaming information.",
-      "category": "Media",
-      "url": "https://apps.laxmannepal.com.np/South-Movies/",
-      "icon": "🎞️",
-      "featured": false,
-      "keywords": [
-        "south movies",
-        "movies",
-        "cinema"
-      ],
-      "status": "online",
-      "httpStatus": 200,
-      "lastChecked": "2026-09-04T21:01:14.566445+00:00"
-    },
-    {
-      "id": "hindu",
-      "name": "Hindu",
-      "description": "A searchable collection of Hindu scriptures, texts and related information.",
-      "category": "Culture",
-      "url": "https://apps.laxmannepal.com.np/Hindu/",
-      "icon": "🕉️",
-      "featured": false,
-      "keywords": [
-        "hindu",
-        "grantha",
-        "scriptures",
-        "purana"
-      ],
-      "status": "online",
-      "httpStatus": 200,
-      "lastChecked": "2026-09-04T21:01:14.675319+00:00"
-    }
+    {"id":"nisulka-tools","name":"Nisulka Tools","description":"Free browser-based tools for everyday productivity and creators.","category":"Tools","url":"https://apps.laxmannepal.com.np/Nisulka-Tools/","icon":"🛠️","featured":true,"keywords":["tools","productivity","creator"],"status":"online"},
+    {"id":"nepali-patro","name":"Nepali Patro","description":"Nepali calendar with date, festival and cultural information.","category":"Nepal","url":"https://apps.laxmannepal.com.np/Nepali-Patro/","icon":"📅","featured":true,"keywords":["nepali calendar","patro","date","festival"],"status":"online"},
+    {"id":"nepse-pulse","name":"NEPSE Pulse","description":"Nepal stock-market intelligence, company research and finance tools.","category":"Finance","url":"https://apps.laxmannepal.com.np/nepse/","icon":"📈","featured":true,"keywords":["nepse","shares","stocks","finance","market"],"status":"online"},
+    {"id":"live-tv","name":"Live TV","description":"A web interface for discovering available live television streams.","category":"Media","url":"https://apps.laxmannepal.com.np/Live-TV/","icon":"📺","featured":false,"keywords":["tv","live tv","television"],"status":"online"},
+    {"id":"nepali-movies","name":"Nepali Movies","description":"A Nepali cinema discovery project.","category":"Media","url":"https://apps.laxmannepal.com.np/Nepali-Movies/","icon":"🎬","featured":false,"keywords":["nepali movies","cinema","films"],"status":"online"},
+    {"id":"south-movies","name":"South Movies","description":"South Indian movie discovery and streaming information.","category":"Media","url":"https://apps.laxmannepal.com.np/South-Movies/","icon":"🎞️","featured":false,"keywords":["south movies","movies","cinema"],"status":"online"},
+    {"id":"hindu","name":"Hindu","description":"A searchable collection of Hindu scriptures and related information.","category":"Culture","url":"https://apps.laxmannepal.com.np/Hindu/","icon":"🕉️","featured":false,"keywords":["hindu","grantha","scriptures","purana"],"status":"online"},
+    {"id":"nepali-news","name":"Nepali News","description":"A Nepali news application and digital news experience.","category":"News","url":"https://apps.laxmannepal.com.np/apps/NepaliNews.html","icon":"📰","featured":false,"keywords":["nepal","news","nepali news"],"status":"online"},
+    {"id":"text-to-handwriting","name":"Text to Handwriting","description":"Convert typed text into handwriting-style output.","category":"Tools","url":"https://apps.laxmannepal.com.np/Text-To-Handwriting/","icon":"✍️","featured":true,"keywords":["text","handwriting","notes","converter"],"status":"unknown"},
+    {"id":"progress-bar-year","name":"Progress Bar of the Year","description":"Track how much of the current year has passed.","category":"Utility","url":"https://apps.laxmannepal.com.np/Progress-Bar-Of-The-Year/","icon":"⏳","featured":false,"keywords":["year","progress","time","utility"],"status":"unknown"}
   ]
 }
