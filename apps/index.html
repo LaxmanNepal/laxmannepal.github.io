@@ -10,69 +10,41 @@
 <meta property="og:description" content="Explore web apps, tools and digital projects built by Laxman Nepal.">
 <meta property="og:type" content="website">
 <style>
-:root{--bg:#f5f7fb;--card:#fff;--text:#101828;--muted:#667085;--line:#e4e7ec;--blue:#1677ff}
+:root{--bg:#f5f7fb;--card:#fff;--text:#101828;--muted:#667085;--line:#e4e7ec;--blue:#1677ff;--green:#12b76a;--red:#f04438}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}
-main{max-width:1180px;margin:auto;padding:32px 20px 70px}.back{color:var(--muted);text-decoration:none;font-weight:600}.hero{padding:45px 0 28px}
-h1{font-size:clamp(2.4rem,7vw,4.8rem);letter-spacing:-.055em;line-height:1;margin:0 0 16px}.hero p{max-width:700px;color:var(--muted);font-size:1.05rem;line-height:1.7}
+main{max-width:1180px;margin:auto;padding:28px 20px 70px}.back{color:var(--muted);text-decoration:none;font-weight:650}.hero{padding:48px 0 24px}h1{font-size:clamp(2.5rem,7vw,4.8rem);letter-spacing:-.055em;line-height:1;margin:0 0 16px}.hero p{max-width:720px;color:var(--muted);font-size:1.05rem;line-height:1.7}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0 30px}.stat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px}.stat b{display:block;font-size:1.6rem}.stat span{font-size:.82rem;color:var(--muted)}
-.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:25px 0 16px}.search{flex:1;min-width:240px;padding:15px 17px;border:1px solid var(--line);border-radius:15px;background:#fff;font:inherit;outline:none}.search:focus{border-color:var(--blue);box-shadow:0 0 0 4px #1677ff18}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.filter{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;font:inherit;cursor:pointer;color:var(--muted)}.filter.active{background:var(--text);color:#fff;border-color:var(--text)}
-.meta{display:flex;justify-content:space-between;gap:15px;align-items:center;margin:8px 0 18px;color:var(--muted);font-size:.9rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;display:flex;flex-direction:column;min-height:250px;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-3px);box-shadow:0 18px 45px #10182812}.icon{font-size:2rem;width:56px;height:56px;display:grid;place-items:center;background:#f2f6ff;border-radius:17px}.category{margin-top:18px;color:var(--blue);font-size:.75rem;font-weight:800;letter-spacing:.08em}.card h2{margin:7px 0;font-size:1.2rem}.card p{margin:0;color:var(--muted);line-height:1.55;flex:1}.open{margin-top:20px;text-decoration:none;color:#fff;background:var(--text);padding:11px 14px;border-radius:13px;text-align:center;font-weight:700}.empty{grid-column:1/-1;padding:45px;text-align:center;background:#fff;border:1px dashed var(--line);border-radius:20px;color:var(--muted)}.loading{padding:40px;color:var(--muted)}
-@media(max-width:600px){main{padding:22px 15px 50px}.hero{padding:35px 0 20px}.stats{grid-template-columns:repeat(3,1fr)}.stat{padding:14px}.stat b{font-size:1.25rem}.grid{grid-template-columns:1fr}.toolbar{margin-top:15px}}
+.featured{margin:30px 0 38px}.section-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:15px}.section-title h2{margin:0;font-size:1.35rem}.section-title span{color:var(--muted);font-size:.85rem}.featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}.featured-card{display:block;text-decoration:none;color:inherit;background:linear-gradient(145deg,#fff,#f7f9ff);border:1px solid var(--line);border-radius:24px;padding:20px;position:relative}.featured-card .icon{width:54px;height:54px}.featured-card h3{margin:14px 0 6px}.featured-card p{margin:0;color:var(--muted);line-height:1.5;font-size:.92rem}.featured-card .arrow{display:inline-block;margin-top:16px;font-weight:750;color:var(--blue)}
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:25px 0 14px}.search{flex:1;min-width:230px;padding:14px 16px;border:1px solid var(--line);border-radius:15px;background:#fff;font:inherit;outline:none}.search:focus,.sort:focus{border-color:var(--blue);box-shadow:0 0 0 4px #1677ff18}.sort{padding:14px 38px 14px 14px;border:1px solid var(--line);border-radius:15px;background:#fff;font:inherit;color:var(--text)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;font:inherit;cursor:pointer;color:var(--muted)}.filter.active{background:var(--text);color:#fff;border-color:var(--text)}
+.meta{display:flex;justify-content:space-between;gap:15px;align-items:center;margin:8px 0 18px;color:var(--muted);font-size:.88rem}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;display:flex;flex-direction:column;min-height:265px;transition:transform .18s,box-shadow .18s}.card:hover{transform:translateY(-3px);box-shadow:0 18px 45px #10182812}.icon{font-size:2rem;width:56px;height:56px;display:grid;place-items:center;background:#f2f6ff;border-radius:17px}.topline{display:flex;justify-content:space-between;align-items:center;gap:8px}.category{margin-top:17px;color:var(--blue);font-size:.72rem;font-weight:800;letter-spacing:.08em}.status{font-size:.72rem;font-weight:750;padding:5px 8px;border-radius:999px;background:#ecfdf3;color:#087443}.status.offline{background:#fef3f2;color:#b42318}.status.unknown{background:#f2f4f7;color:#475467}.card h2{margin:7px 0;font-size:1.2rem}.card p{margin:0;color:var(--muted);line-height:1.55;flex:1}.open{margin-top:20px;text-decoration:none;color:#fff;background:var(--text);padding:11px 14px;border-radius:13px;text-align:center;font-weight:700}.empty{grid-column:1/-1;padding:45px;text-align:center;background:#fff;border:1px dashed var(--line);border-radius:20px;color:var(--muted)}
+@media(max-width:600px){main{padding:22px 15px 50px}.hero{padding:35px 0 20px}.stats{grid-template-columns:repeat(3,1fr)}.stat{padding:14px}.stat b{font-size:1.25rem}.toolbar{align-items:stretch}.search,.sort{width:100%}.grid{grid-template-columns:1fr}.featured-grid{grid-template-columns:1fr}.meta{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
 <body>
 <main>
 <a class="back" href="../">← Back to Home</a>
-<section class="hero">
-<h1>All Apps</h1>
-<p>Explore every web app, tool and digital project built by Laxman Nepal — all in one place.</p>
-</section>
-<section class="stats">
-<div class="stat"><b id="totalApps">—</b><span>Total Apps</span></div>
-<div class="stat"><b id="totalCategories">—</b><span>Categories</span></div>
-<div class="stat"><b id="featuredApps">—</b><span>Featured</span></div>
-</section>
-<div class="toolbar">
-<label for="appSearch" style="position:absolute;left:-9999px">Search apps</label>
-<input id="appSearch" class="search" type="search" placeholder="Search apps, tools, finance, media…" autocomplete="off">
-</div>
-<div id="filters" class="filters" aria-label="App categories"></div>
-<div class="meta"><span id="resultCount">Loading apps…</span><span>Live directory</span></div>
-<section id="appsGrid" class="grid"><div class="loading">Loading all apps…</div></section>
+<section class="hero"><h1>All Apps</h1><p>Explore every web app, tool and digital project built by Laxman Nepal — searchable, filterable and kept up to date automatically.</p></section>
+<section class="stats" aria-label="Directory statistics"><div class="stat"><b id="totalApps">—</b><span>Total Apps</span></div><div class="stat"><b id="totalCategories">—</b><span>Categories</span></div><div class="stat"><b id="featuredApps">—</b><span>Featured</span></div></section>
+<section class="featured" id="featuredSection" hidden><div class="section-title"><h2>⭐ Featured Apps</h2><span>Recommended projects</span></div><div id="featuredGrid" class="featured-grid"></div></section>
+<section aria-labelledby="allAppsTitle"><div class="section-title"><h2 id="allAppsTitle">All Apps</h2><span id="resultCount">Loading…</span></div>
+<div class="toolbar"><label for="appSearch" style="position:absolute;left:-9999px">Search apps</label><input id="appSearch" class="search" type="search" placeholder="Search apps, tools, finance, media…" autocomplete="off"><label for="sortApps" style="position:absolute;left:-9999px">Sort apps</label><select id="sortApps" class="sort"><option value="featured">Featured first</option><option value="newest">Recently added</option><option value="az">Name A–Z</option><option value="za">Name Z–A</option><option value="category">Category</option></select></div>
+<div id="filters" class="filters" aria-label="App categories"></div><section id="appsGrid" class="grid"><div class="empty">Loading all apps…</div></section></section>
 </main>
-<script src="../assets/apps-loader.js?v=2"></script>
+<script src="../assets/apps-loader.js?v=3"></script>
 <script>
-(() => {
-'use strict';
-const grid=document.getElementById('appsGrid'),search=document.getElementById('appSearch'),filters=document.getElementById('filters'),count=document.getElementById('resultCount');
-let apps=[],active='All';
+(()=>{'use strict';
+const grid=document.getElementById('appsGrid'),featuredGrid=document.getElementById('featuredGrid'),featuredSection=document.getElementById('featuredSection'),search=document.getElementById('appSearch'),sort=document.getElementById('sortApps'),filters=document.getElementById('filters'),count=document.getElementById('resultCount');let apps=[],active='All';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function render(){
- const q=search.value.trim().toLowerCase();
- const visible=apps.filter(a=>{
-  const hay=[a.name,a.description,a.category,...(a.keywords||[])].join(' ').toLowerCase();
-  return (active==='All'||a.category===active)&&(!q||hay.includes(q));
- });
- count.textContent=visible.length+' app'+(visible.length===1?'':'s')+' found';
- grid.innerHTML=visible.length?visible.map(a=>'<article class="card"><div class="icon">'+esc(a.icon||'📱')+'</div><div class="category">'+esc(a.category||'APP')+'</div><h2>'+esc(a.name)+'</h2><p>'+esc(a.description||'')+'</p><a class="open" href="'+esc(a.url)+'">Open App →</a></article>').join(''):'<div class="empty">No apps found. Try another search or category.</div>';
-}
-function buildFilters(){
- const categories=['All',...new Set(apps.map(a=>a.category).filter(Boolean))];
- filters.innerHTML=categories.map(c=>'<button class="filter '+(c===active?'active':'')+'" data-category="'+esc(c)+'">'+esc(c)+'</button>').join('');
- filters.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{active=b.dataset.category;buildFilters();render()}));
-}
-async function init(){
- try{const data=await window.LaxmanApps.load();apps=Array.isArray(data.apps)?data.apps:[];apps.sort((a,b)=>Number(b.featured)-Number(a.featured)||a.name.localeCompare(b.name));}
- catch(e){apps=[]}
- document.getElementById('totalApps').textContent=apps.length;
- document.getElementById('totalCategories').textContent=new Set(apps.map(a=>a.category).filter(Boolean)).size;
- document.getElementById('featuredApps').textContent=apps.filter(a=>a.featured).length;
- buildFilters();render();
-}
-search.addEventListener('input',render);init();
+const status=a=>a.status==='online'?'<span class="status">● Online</span>':a.status==='offline'?'<span class="status offline">● Offline</span>':'<span class="status unknown">● Unknown</span>';
+const card=a=>'<article class="card"><div class="topline"><div class="icon">'+esc(a.icon||'📱')+'</div>'+status(a)+'</div><div class="category">'+esc(a.category||'APP')+'</div><h2>'+esc(a.name)+'</h2><p>'+esc(a.description||'')+'</p><a class="open" href="'+esc(a.url)+'">Open App →</a></article>';
+function renderFeatured(){const featured=apps.filter(a=>a.featured).slice(0,4);featuredSection.hidden=!featured.length;featuredGrid.innerHTML=featured.map(a=>'<a class="featured-card" href="'+esc(a.url)+'"><div class="icon">'+esc(a.icon||'📱')+'</div><h3>'+esc(a.name)+'</h3><p>'+esc(a.description||'')+'</p><span class="arrow">Open app →</span></a>').join('')}
+function render(){const q=search.value.trim().toLowerCase();let visible=apps.filter(a=>{const hay=[a.name,a.description,a.category,...(a.keywords||[])].join(' ').toLowerCase();return(active==='All'||a.category===active)&&(!q||hay.includes(q))});const mode=sort.value;visible.sort((a,b)=>mode==='az'?a.name.localeCompare(b.name):mode==='za'?b.name.localeCompare(a.name):mode==='category'?(a.category||'').localeCompare(b.category||'')||a.name.localeCompare(b.name):mode==='newest'?(new Date(b.addedAt||b.lastChecked||0)-new Date(a.addedAt||a.lastChecked||0)):Number(b.featured)-Number(a.featured)||a.name.localeCompare(b.name));count.textContent=visible.length+' app'+(visible.length===1?'':'s')+' found';grid.innerHTML=visible.length?visible.map(card).join(''):'<div class="empty">No apps found. Try another search or category.</div>';history.replaceState(null,'',buildUrl())}
+function buildUrl(){const p=new URLSearchParams();if(search.value.trim())p.set('q',search.value.trim());if(active!=='All')p.set('category',active);if(sort.value!=='featured')p.set('sort',sort.value);const s=p.toString();return location.pathname+(s?'?'+s:'')}
+function buildFilters(){const cats=['All',...new Set(apps.map(a=>a.category).filter(Boolean))];filters.innerHTML=cats.map(c=>'<button type="button" class="filter '+(c===active?'active':'')+'" data-category="'+esc(c)+'">'+esc(c)+'</button>').join('');filters.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{active=b.dataset.category;buildFilters();render()}))}
+function readUrl(){const p=new URLSearchParams(location.search);search.value=p.get('q')||'';sort.value=['featured','newest','az','za','category'].includes(p.get('sort'))?p.get('sort'):'featured';active=p.get('category')||'All'}
+async function init(){try{const data=await window.LaxmanApps.load();apps=Array.isArray(data.apps)?data.apps:[]}catch(e){apps=[]}document.getElementById('totalApps').textContent=apps.length;document.getElementById('totalCategories').textContent=new Set(apps.map(a=>a.category).filter(Boolean)).size;document.getElementById('featuredApps').textContent=apps.filter(a=>a.featured).length;readUrl();buildFilters();renderFeatured();render()}
+search.addEventListener('input',render);sort.addEventListener('change',render);init();
 })();
 </script>
-<script src="../assets/apps-directory-search.js?v=1"></script></body>
-</html>
+</body></html>
