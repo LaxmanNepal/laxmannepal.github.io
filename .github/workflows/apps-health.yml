@@ -8,6 +8,7 @@ on:
     paths:
       - 'data/apps.json'
       - 'scripts/check_apps.py'
+      - '.github/workflows/apps-health.yml'
 
 permissions:
   contents: write
@@ -24,8 +25,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - name: Validate and check deployments
+
+      - name: Validate registry and check deployments
         run: python scripts/check_apps.py
+
       - name: Commit health status
         run: |
           git config user.name 'github-actions[bot]'
@@ -34,6 +37,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No app status changes.'
           else
-            git commit -m 'chore: refresh app deployment health'
+            git commit -m 'chore: refresh app registry health'
             git push
           fi
