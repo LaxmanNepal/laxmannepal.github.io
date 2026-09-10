@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /old/
+Disallow: /scripts/
+
+Sitemap: https://apps.laxmannepal.com.np/sitemap.xml
