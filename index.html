@@ -18,6 +18,16 @@
 <link rel="stylesheet" href="/assets/css/light.css">
 <link rel="stylesheet" href="/assets/css/animations.css">
 <script defer src="/assets/js/app.js"></script>
+<style>
+.tool-filter-row{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.tool-filter{appearance:none;border:1px solid rgba(15,23,42,.08);background:rgba(255,255,255,.7);color:#667085;border-radius:999px;padding:8px 13px;font:600 11px system-ui,-apple-system,sans-serif;cursor:pointer;transition:.2s}
+.tool-filter:hover{background:#fff;color:#111827;border-color:rgba(91,124,250,.24)}
+.tool-filter.active{background:#111827;color:#fff;border-color:#111827;box-shadow:0 8px 20px rgba(15,23,42,.12)}
+.tool-card-category{display:block;margin-top:5px;color:#8a94a6;font-size:9px;font-weight:600;text-align:center}
+.tool-loading{grid-column:1/-1;padding:30px;text-align:center;color:#667085;font-size:13px}
+.tool-loading a{color:#111827;font-weight:700}
+@media(max-width:520px){.tool-filter-row{gap:6px;margin-bottom:14px}.tool-filter{padding:7px 10px;font-size:10px}}
+</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Laxman Nepal","url":"https://apps.laxmannepal.com.np/","description":"Practical tools, AI resources, Nepali utilities and digital guides by Laxman Nepal."}</script>
 </head>
 <body>
@@ -61,7 +71,7 @@
  const iconMap={Nepal:'fa-earth-asia',Finance:'fa-chart-line',Productivity:'fa-screwdriver-wrench','Creator Tools':'fa-pen-nib',Utilities:'fa-bolt'};
  function render(filter='all'){
   const list=tools.filter(t=>filter==='all'||(filter==='featured'&&t.featured)||t.category===filter);
-  grid.innerHTML=list.length?list.map(t=>`<a class="tool-card" href="${t.url}"><div class="icon-container icon-blue"><i class="fa-solid ${iconMap[t.category]||'fa-wand-magic-sparkles'}"></i></div><div class="tool-title">${escapeHtml(t.name)}</div><small class="tool-card-category">${escapeHtml(t.category)}</small></a>`).join(''):'<div class="tool-loading">No tools in this category yet.</div>';
+  grid.innerHTML=list.length?list.map(t=>`<a class="tool-card" href="${escapeHtml(t.url)}"><div class="icon-container icon-blue"><i class="fa-solid ${iconMap[t.category]||'fa-wand-magic-sparkles'}"></i></div><div class="tool-title">${escapeHtml(t.name)}</div><small class="tool-card-category">${escapeHtml(t.category)}</small></a>`).join(''):'<div class="tool-loading">No tools in this category yet.</div>';
  }
  function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
  fetch('/data/tools.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{tools=Array.isArray(d.tools)?d.tools:[];count.textContent=`${tools.length} tools`;render()}).catch(()=>{count.textContent='Tools';grid.innerHTML='<div class="tool-loading">Tools are temporarily unavailable. <a href="/tools/">Open the full directory →</a></div>'});
