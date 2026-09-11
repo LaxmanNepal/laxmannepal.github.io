@@ -3,66 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Laxman Nepal local Gemini watermark remover — process images directly in your browser.">
-<title>Gemini Watermark Remover — Laxman Nepal</title>
+<meta name="description" content="Laxman Nepal local Gemini watermark remover with automatic detection, brush selection and smart healing.">
+<title>Gemini Watermark Remover V2 — Laxman Nepal</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="gb-page">
-<header class="gb-header">
-  <div class="gb-container gb-header-main">
-    <a class="gb-logo" href="/"><span class="gb-logo-mark">LN</span><span>Laxman Nepal</span></a>
-    <nav class="gb-menu" aria-label="Primary navigation">
-      <a href="/#news">News</a><a href="/#reviews">Reviews</a><a href="/#guides">Buying Guides</a><a href="/#gadgets">Gadgets</a><a href="/tools/">Tools</a>
-    </nav>
-    <form class="gb-search" onsubmit="return false"><input id="gb-search-input" type="search" placeholder="Search technology..." aria-label="Search"><button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button></form>
-    <button class="gb-mobile" id="gb-mobile" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
-  </div>
-  <div class="gb-category"><div class="gb-container">
-    <a href="/#news">Smartphones</a><a href="/#gadgets">Laptops</a><a href="/#gadgets">Tablets</a><a href="/#reviews">Reviews</a><a href="/#guides">Buying Guides</a><a href="/#brands">Brands</a><a href="/tools/">Apps & Tools</a><a href="/#news">AI</a><a href="/#news">Nepal Tech</a>
-  </div></div>
-</header>
-<div class="gb-breaking"><div class="gb-container"><span class="gb-breaking-label">TOOL</span><div class="gb-breaking-track">Gemini watermark remover · Runs locally · Your image never leaves your device</div></div></div>
-<main class="tool-main">
-  <div class="gb-container">
-    <section class="tool-hero">
-      <span class="tool-kicker"><i class="fa-solid fa-wand-magic-sparkles"></i> Local image tool</span>
-      <h1>Remove Gemini watermarks<br><span>without uploading your image.</span></h1>
-      <p>Everything runs inside your browser. Select the visible Gemini logo/watermark area, apply a local healing patch, preview the result, and download it.</p>
-    </section>
-
-    <section class="workspace" aria-label="Watermark remover workspace">
-      <div class="dropzone" id="dropzone">
-        <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
-        <div class="drop-icon"><i class="fa-regular fa-image"></i></div>
-        <h2>Drop an image here</h2>
-        <p>PNG, JPG, WEBP or GIF · processed locally</p>
-        <button class="primary" id="chooseBtn"><i class="fa-solid fa-upload"></i> Choose image</button>
-      </div>
-
-      <div class="editor" id="editor" hidden>
-        <div class="editor-head">
-          <div><strong id="fileName">Image</strong><span id="imageInfo"></span></div>
-          <div class="editor-actions"><button id="undoBtn" class="secondary" disabled><i class="fa-solid fa-rotate-left"></i> Undo</button><button id="resetBtn" class="secondary"><i class="fa-solid fa-arrow-rotate-left"></i> Reset</button><button id="downloadBtn" class="primary"><i class="fa-solid fa-download"></i> Download</button></div>
-        </div>
-        <div class="canvas-wrap" id="canvasWrap">
-          <canvas id="canvas"></canvas>
-          <div id="selection" class="selection" hidden></div>
-        </div>
-        <div class="controls">
-          <div><label for="feather">Healing softness <output id="featherOut">18</output> px</label><input id="feather" type="range" min="0" max="60" value="18"></div>
-          <div><label for="patchSize">Patch expansion <output id="patchOut">1.35</output>×</label><input id="patchSize" type="range" min="1" max="2.5" step="0.05" value="1.35"></div>
-          <button id="removeBtn" class="primary big"><i class="fa-solid fa-eraser"></i> Remove selected logo</button>
-        </div>
-        <p class="hint"><i class="fa-solid fa-circle-info"></i> Drag a rectangle tightly around the Gemini logo/watermark, then click <b>Remove selected logo</b>. For best results, include a little surrounding background but not important details.</p>
-      </div>
-    </section>
-
-    <section class="how"><div class="section-head"><h2>How it works</h2><span>100% browser-side</span></div><div class="steps"><article><b>01</b><i class="fa-solid fa-image"></i><h3>Load</h3><p>Your image is decoded by the browser. No upload endpoint is used.</p></article><article><b>02</b><i class="fa-solid fa-vector-square"></i><h3>Select</h3><p>Drag over the visible Gemini logo or watermark region.</p></article><article><b>03</b><i class="fa-solid fa-wand-magic-sparkles"></i><h3>Heal</h3><p>The tool reconstructs the selected pixels from nearby image content with feathering.</p></article><article><b>04</b><i class="fa-solid fa-download"></i><h3>Save</h3><p>Download the edited image directly to your device.</p></article></div></section>
-    <section class="notice"><i class="fa-solid fa-shield-halved"></i><div><strong>Privacy by design</strong><p>No server, API, account, or cloud processing is required. Closing the page clears the working image from memory.</p></div></section>
-  </div>
-</main>
+<header class="gb-header"><div class="gb-container gb-header-main">
+<a class="gb-logo" href="/"><span class="gb-logo-mark">LN</span><span>Laxman Nepal</span></a>
+<nav class="gb-menu" aria-label="Primary navigation"><a href="/#news">News</a><a href="/#reviews">Reviews</a><a href="/#guides">Buying Guides</a><a href="/#gadgets">Gadgets</a><a href="/tools/">Tools</a></nav>
+<form class="gb-search" onsubmit="return false"><input id="gb-search-input" type="search" placeholder="Search technology..." aria-label="Search"><button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button></form>
+<button class="gb-mobile" id="gb-mobile" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+</div><div class="gb-category"><div class="gb-container"><a href="/#news">Smartphones</a><a href="/#gadgets">Laptops</a><a href="/#gadgets">Tablets</a><a href="/#reviews">Reviews</a><a href="/#guides">Buying Guides</a><a href="/#brands">Brands</a><a href="/tools/">Apps & Tools</a><a href="/#news">AI</a><a href="/#news">Nepal Tech</a></div></div></header>
+<div class="gb-breaking"><div class="gb-container"><span class="gb-breaking-label">TOOL V2</span><div class="gb-breaking-track">Auto detect · Brush / Eraser · Smart Patch · Before / After · 100% local</div></div></div>
+<main class="tool-main"><div class="gb-container">
+<section class="tool-hero"><span class="tool-kicker"><i class="fa-solid fa-wand-magic-sparkles"></i> Local image tool V2</span><h1>Remove Gemini watermarks<br><span>with smarter local healing.</span></h1><p>Detect likely Gemini-logo areas automatically or paint the exact region yourself. Nothing is uploaded: editing happens inside your browser.</p></section>
+<section class="workspace" aria-label="Watermark remover workspace">
+<div class="dropzone" id="dropzone"><input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp" hidden><div class="drop-icon"><i class="fa-regular fa-image"></i></div><h2>Drop an image here</h2><p>PNG, JPG or WEBP · processed locally</p><button class="primary" id="chooseBtn"><i class="fa-solid fa-upload"></i> Choose image</button></div>
+<div class="editor" id="editor" hidden>
+<div class="editor-head"><div><strong id="fileName">Image</strong><span id="imageInfo"></span></div><div class="editor-actions"><button id="undoBtn" class="secondary" disabled><i class="fa-solid fa-rotate-left"></i> Undo</button><button id="resetBtn" class="secondary"><i class="fa-solid fa-arrow-rotate-left"></i> Reset</button><button id="downloadBtn" class="primary"><i class="fa-solid fa-download"></i> Download</button></div></div>
+<div class="toolbar"><div class="tool-group"><button class="tool active" data-tool="brush" id="brushTool"><i class="fa-solid fa-paintbrush"></i> Brush</button><button class="tool" data-tool="eraser" id="eraserTool"><i class="fa-solid fa-eraser"></i> Eraser</button></div><button class="secondary" id="autoBtn"><i class="fa-solid fa-wand-magic-sparkles"></i> Auto-detect Gemini logo</button><button class="secondary" id="clearMaskBtn"><i class="fa-regular fa-trash-can"></i> Clear selection</button><label class="size-control">Brush <input id="brushSize" type="range" min="6" max="180" value="42"><output id="brushOut">42</output>px</label></div>
+<div class="canvas-wrap" id="canvasWrap"><canvas id="canvas"></canvas><canvas id="maskCanvas"></canvas><div id="cursor" class="brush-cursor" hidden></div></div>
+<div class="controls"><div><label for="algorithm">Healing algorithm</label><select id="algorithm"><option value="smart">Smart Patch — best overall</option><option value="edge">Edge Extend — text / lines</option><option value="mirror">Mirror Patch — faces / portraits</option><option value="texture">Texture Blend — textured backgrounds</option></select></div><div><label for="feather">Edge softness <output id="featherOut">16</output> px</label><input id="feather" type="range" min="0" max="60" value="16"></div><div><label for="strength">Blend strength <output id="strengthOut">90</output>%</label><input id="strength" type="range" min="30" max="100" value="90"></div><button id="removeBtn" class="primary big"><i class="fa-solid fa-wand-magic-sparkles"></i> Heal selected area</button></div>
+<p class="hint"><i class="fa-solid fa-circle-info"></i> Paint over the logo with Brush. Use Eraser to remove mask areas. Auto-detect is best-effort and highlights likely compact sparkle/logo regions; always review the selection before healing.</p>
+<div class="preview-panel"><div class="preview-head"><strong>Before / After</strong><span id="previewLabel">Drag the slider</span></div><div class="compare" id="compare"><canvas id="beforeCanvas"></canvas><canvas id="afterCanvas"></canvas><input id="compareRange" type="range" min="0" max="100" value="50" aria-label="Before and after comparison"><div class="compare-line"></div></div></div>
+</div></section>
+<section class="how"><div class="section-head"><h2>V2 toolkit</h2><span>Browser-side</span></div><div class="steps"><article><b>01</b><i class="fa-solid fa-crosshairs"></i><h3>Auto-detect</h3><p>Scans likely corner logo regions locally and creates a mask you can refine.</p></article><article><b>02</b><i class="fa-solid fa-paintbrush"></i><h3>Brush + Eraser</h3><p>Paint only the pixels you want to repair, then erase mistakes from the mask.</p></article><article><b>03</b><i class="fa-solid fa-layer-group"></i><h3>Smart healing</h3><p>Patch matching compares surrounding pixels to choose a more suitable source area.</p></article><article><b>04</b><i class="fa-solid fa-code-compare"></i><h3>Compare</h3><p>Use the before/after slider to inspect the result before downloading.</p></article></div></section>
+<section class="notice"><i class="fa-solid fa-shield-halved"></i><div><strong>Privacy by design</strong><p>No server, API, account, or cloud image processing is used. Your image stays in this browser tab.</p></div></section>
+</div></main>
 <footer class="gb-footer"><div class="gb-container"><div class="gb-footer-grid"><div><h3>Laxman Nepal</h3><p>A practical Nepali technology platform for news, reviews, buying guides, AI, apps and useful digital tools.</p></div><div><h3>Explore</h3><a href="/#news">News</a><a href="/#reviews">Reviews</a><a href="/#guides">Buying Guides</a><a href="/tools/">Tools</a></div><div><h3>Resources</h3><a href="/blog/">Blog</a><a href="/ai-tools/">AI Tools</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></div><div><h3>Follow</h3><a href="https://www.youtube.com/@laxmannepalofficial">YouTube</a><a href="https://www.instagram.com/laxmannepalsir/">Instagram</a><a href="https://github.com/LaxmanNepal">GitHub</a></div></div><div class="gb-footer-bottom"><span>© <span id="year"></span> Laxman Nepal. All rights reserved.</span><span>Built for Nepal · Built for usefulness.</span></div></div></footer>
-<script src="app.js"></script>
-</body>
-</html>
+<script src="app.js"></script></body></html>
