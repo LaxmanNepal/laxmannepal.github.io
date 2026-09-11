@@ -1,18 +1,1 @@
-(() => {
-  const year = document.querySelector('#year');
-  if (year) year.textContent = new Date().getFullYear();
-
-  const menu = document.querySelector('.menu-button');
-  const nav = document.querySelector('.nav');
-  if (menu && nav) {
-    menu.addEventListener('click', () => {
-      const open = menu.getAttribute('aria-expanded') === 'true';
-      menu.setAttribute('aria-expanded', String(!open));
-      nav.classList.toggle('nav-open', !open);
-    });
-    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      menu.setAttribute('aria-expanded', 'false');
-      nav.classList.remove('nav-open');
-    }));
-  }
-})();
+(()=>{const y=document.querySelector('#year');if(y)y.textContent=new Date().getFullYear();const menu=document.querySelector('.menu-button'),nav=document.querySelector('.nav');if(menu&&nav){menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));nav.classList.toggle('nav-open',!open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');nav.classList.remove('nav-open')}))}const time=document.querySelector('#phoneTime'),date=document.querySelector('#phoneDate');function tick(){if(!time)return;const d=new Date();time.textContent=d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',hour12:false});if(date)date.textContent=d.toLocaleDateString([], {weekday:'short',month:'short',day:'numeric'})+' · Laxman Apps'}tick();setInterval(tick,1000);const phone=document.querySelector('.iphone');if(phone&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const card=phone.closest('.hero-card');card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;phone.style.animationPlayState='paused';phone.style.transform=`rotate(${4+x*8}deg) translate(${x*8}px,${y*-8}px)`});card.addEventListener('pointerleave',()=>{phone.style.animationPlayState='running';phone.style.transform=''})}})();
