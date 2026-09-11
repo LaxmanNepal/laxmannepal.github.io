@@ -30,7 +30,9 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build SEO content
-        run: python3 scripts/build_site.py
+        run: |
+          python3 scripts/build_site.py
+          python3 scripts/build_portal.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
