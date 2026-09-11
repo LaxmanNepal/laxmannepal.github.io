@@ -33,6 +33,7 @@ jobs:
         run: |
           python3 scripts/build_site.py
           python3 scripts/build_portal.py
+          python3 scripts/generate_portal_pages.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
