@@ -34,6 +34,7 @@ jobs:
           python3 scripts/build_site.py
           python3 scripts/generate_portal_pages.py
           python3 scripts/portal_finish.py
+          python3 scripts/generate_price_pages.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
