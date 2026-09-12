@@ -1,0 +1,50 @@
+from pathlib import Path
+from html import escape
+import json, re
+
+ROOT=Path(__file__).resolve().parents[1]
+DATA=ROOT/'data/products.json'
+OUT=ROOT/'products'
+
+def esc(x): return escape(str(x if x is not None else ''))
+def slug(x): return re.sub(r'[^a-z0-9]+','-',str(x).lower()).strip('-') or 'product'
+def load():
+    try: return json.loads(DATA.read_text(encoding='utf-8')).get('products',[])
+    except Exception: return []
+def image(p, cls='product-hero-image'):
+    if p.get('image'): return f'<img class="{cls}" src="{esc(p["image"])}" alt="{esc(p["name"])}" loading="lazy">'
+    return '<div class="product-image-placeholder"><i class="fa-solid fa-box-open"></i><span>Image not listed</span></div>'
+def shell(title,desc,body,extra=''):
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>{esc(title)} | Laxman Nepal</title><link rel="stylesheet" href="/assets/css/gadgetbyte-home.css"><link rel="stylesheet" href="/assets/css/portal-pages.css"><link rel="stylesheet" href="/assets/css/product-pages.css"><link rel="stylesheet" href="/assets/css/catalog.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">{extra}</head><body class="gb-product-page"><header class="gb-header"><div class="gb-container gb-header-main"><a class="gb-logo" href="/"><span class="gb-logo-mark">LN</span><span>Laxman Nepal</span></a><nav class="gb-menu"><a href="/news/">News</a><a href="/reviews/">Reviews</a><a href="/mobile/">Mobile</a><a href="/laptop/">Laptops</a><a href="/guides/">Guides</a><a href="/gadgets/">Gadgets</a><a href="/products/">Products</a><a href="/brands/">Brands</a><a href="/search/">Search</a></nav><button class="gb-mobile" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button></div><div class="gb-categorybar"><div class="gb-container"><a href="/mobile/">Smartphones</a><a href="/laptop/">Laptops</a><a href="/gadgets/tablets/">Tablets</a><a href="/gadgets/audio/">Audio</a><a href="/gadgets/wearables/">Wearables</a><a href="/gadgets/cameras/">Cameras</a><a href="/mobile/price/">Prices</a></div></div></header>{body}<footer class="gb-footer"><div class="gb-container"><strong>Laxman Nepal</strong><span>Nepal-focused technology news, reviews, guides and product data.</span></div></footer><script>document.querySelector('.gb-mobile')?.addEventListener('click',()=>document.querySelector('.gb-menu')?.classList.toggle('open'));</script></body></html>'''
+def card(p):
+    return f'<a class="product-mini" href="/products/{esc(p["slug"])}/"><div class="product-mini-media">{image(p,"product-mini-image") if p.get("image") else "<i class=\"fa-solid fa-box-open\"></i>"}</div><strong>{esc(p["name"])}</strong><small>{esc(p.get("brand",""))} · {esc(p.get("category",""))}</small></a>'
+def schema(p):
+    d={'@context':'https://schema.org','@type':'Product','name':p['name']}
+    if p.get('brand'): d['brand']={'@type':'Brand','name':p['brand']}
+    if p.get('image'): d['image']=[p['image']]
+    if p.get('summary'): d['description']=p['summary']
+    price=p.get('price')
+    if isinstance(price,(int,float)): d['offers']={'@type':'Offer','price':price,'priceCurrency':p.get('price_currency','NPR'),'availability':'https://schema.org/InStock' if str(p.get('availability','')).lower()=='in stock' else 'https://schema.org/PreOrder'}
+    return '<script type="application/ld+json">'+json.dumps(d,ensure_ascii=False)+'</script>'
+def detail(p,products):
+    rel_ids=set(p.get('related_slugs',[])); rel=[x for x in products if x['slug'] in rel_ids and x['slug']!=p['slug']]
+    if not rel: rel=[x for x in products if x['slug']!=p['slug'] and (x.get('brand')==p.get('brand') or x.get('category')==p.get('category'))][:4]
+    specs=''.join(f'<div class="spec-row"><span>{esc(k)}</span><strong>{esc(v)}</strong></div>' for k,v in p.get('specifications',{}).items()) or '<div class="empty-note">No verified specifications added.</div>'
+    variants=''.join(f'<tr><td>{esc(v.get("name",v.get("variant","Variant")))}</td><td>{esc(v.get("ram","—"))}</td><td>{esc(v.get("storage","—"))}</td><td>{esc(v.get("price","Not listed"))}</td><td>{esc(v.get("availability","Not listed"))}</td></tr>' for v in p.get('variants',[])) or '<tr><td colspan="5">No verified variants added.</td></tr>'
+    retailers=''.join(f'<tr><td><strong>{esc(r.get("name","Retailer"))}</strong></td><td>{esc(r.get("price","Not listed"))}</td><td>{esc(r.get("availability","Not listed"))}</td><td>{("<a href=\""+esc(r["url"])+"\" target=\"_blank\" rel=\"nofollow noopener\">Visit</a>") if r.get("url") else "—"}</td></tr>' for r in p.get('retailers',[])) or '<tr><td colspan="4">No verified retailer offers added.</td></tr>'
+    history=''.join(f'<tr><td>{esc(h.get("date",""))}</td><td><strong>{esc(h.get("price",""))}</strong></td><td>{esc(h.get("source",""))}</td></tr>' for h in p.get('price_history',[])) or '<tr><td colspan="3">Add dated verified prices to build history.</td></tr>'
+    pros=''.join(f'<li>{esc(x)}</li>' for x in p.get('pros',[])) or '<li>Not added yet</li>'; cons=''.join(f'<li>{esc(x)}</li>' for x in p.get('cons',[])) or '<li>Not added yet</li>'
+    body=f'''<main class="gb-main"><div class="gb-container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/products/">Products</a><span>/</span><strong>{esc(p['name'])}</strong></div><section class="product-hero"><div class="product-visual">{image(p)}</div><div class="product-intro"><span class="eyebrow">{esc(p.get('brand',''))} · {esc(p.get('category','Gadgets'))}</span><h1>{esc(p['name'])}</h1><p>{esc(p.get('summary','Product specifications, pricing and buying information.'))}</p><div class="product-price"><small>Best listed price</small><strong>{esc(p.get('price','Price not listed'))}</strong><span class="catalog-availability">{esc(p.get('availability','Availability not listed'))}</span></div><div class="product-actions"><a class="btn-primary" href="/compare/?p={esc(p['slug'])}"><i class="fa-solid fa-code-compare"></i> Compare</a><button class="btn-secondary" onclick="navigator.share?.({{title:document.title,url:location.href}})"><i class="fa-solid fa-share-nodes"></i> Share</button></div></div></section><section class="product-layout"><div><section class="product-section"><div class="section-heading"><span>01</span><h2>Key specifications</h2></div><div class="spec-grid">{specs}</div></section><section class="product-section"><div class="section-heading"><span>02</span><h2>Variants</h2></div><div class="price-table-wrap"><table><thead><tr><th>Variant</th><th>RAM</th><th>Storage</th><th>Price</th><th>Availability</th></tr></thead><tbody>{variants}</tbody></table></div></section><section class="product-section"><div class="section-heading"><span>03</span><h2>Retailers &amp; availability</h2></div><div class="price-table-wrap"><table><thead><tr><th>Retailer</th><th>Price</th><th>Availability</th><th>Link</th></tr></thead><tbody>{retailers}</tbody></table></div></section><section class="product-section"><div class="section-heading"><span>04</span><h2>Price history</h2></div><div class="price-table-wrap"><table><thead><tr><th>Date</th><th>Price</th><th>Source</th></tr></thead><tbody>{history}</tbody></table></div></section><section class="product-section"><div class="section-heading"><span>05</span><h2>Pros &amp; cons</h2></div><div class="pros-cons"><div><h3>✓ Pros</h3><ul>{pros}</ul></div><div><h3>× Cons</h3><ul>{cons}</ul></div></div></section></div><aside class="product-sidebar"><div class="score-card"><span>Review score</span><div class="rating">{esc(p.get('rating','Not rated'))}{' / 10' if p.get('rating') not in (None,'') else ''}</div><small>{esc(p.get('rating_note','Only verified ratings should be added.'))}</small></div><div class="info-card"><strong>Best for</strong><p>{esc(p.get('best_for','Not specified'))}</p></div></aside></section><section class="product-section"><div class="section-heading"><span>06</span><h2>Related products</h2></div><div class="product-mini-grid">{''.join(card(x) for x in rel) or '<div class="empty-note">Related products will appear as the catalog grows.</div>'}</div></section></div></main>'''
+    return shell(p['name'],p.get('summary',p['name']),body,schema(p))
+def catalog(products):
+    body='''<main class="gb-main"><div class="gb-container"><section class="portal-heading price-hero"><span>PRODUCT DATABASE</span><h1>Gadgets, phones &amp; laptops</h1><p>Search verified products, filter by brand or category, inspect detailed data and compare up to four products.</p><div class="catalog-toolbar"><input id="product-search" type="search" placeholder="Search products, brands or categories..."><select id="product-brand"><option>All brands</option></select><select id="product-category"><option>All categories</option></select></div><div class="catalog-meta"><span id="product-count">Loading catalog…</span><span>Compare up to 4</span></div></section><section id="product-grid" class="product-grid-catalog"><div class="catalog-empty">Loading product database…</div></section><div id="catalog-compare"></div></div></main><script src="/assets/js/product-catalog.js"></script>'''
+    return shell('Product Database','Search and compare verified technology products in the Laxman Nepal catalog.',body)
+def main():
+    products=load()
+    for p in products: p.setdefault('slug',slug(p.get('name','product')))
+    OUT.mkdir(exist_ok=True)
+    (OUT/'index.html').write_text(catalog(products),encoding='utf-8')
+    for p in products:
+        d=OUT/p['slug']; d.mkdir(parents=True,exist_ok=True); (d/'index.html').write_text(detail(p,products),encoding='utf-8')
+    print(f'V7 product catalog generated: {len(products)} products')
+if __name__=='__main__': main()
