@@ -36,6 +36,7 @@ jobs:
           python3 scripts/product_catalog_v7.py
           python3 scripts/product_intelligence_v8.py
           python3 scripts/product_deals_v9.py
+          python3 scripts/product_pro_v10.py
           python3 scripts/generate_price_pages.py
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
