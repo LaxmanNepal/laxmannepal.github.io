@@ -1,23 +1,17 @@
 from pathlib import Path
 from html import escape
 import json, re
-
-ROOT=Path(__file__).resolve().parents[1]
-DATA=ROOT/'data/products.json'
-OUT=ROOT/'products'
-
+ROOT=Path(__file__).resolve().parents[1]; DATA=ROOT/'data/products.json'; OUT=ROOT/'products'
 def esc(x): return escape(str(x if x is not None else ''))
 def slug(x): return re.sub(r'[^a-z0-9]+','-',str(x).lower()).strip('-') or 'product'
 def load():
     try: return json.loads(DATA.read_text(encoding='utf-8')).get('products',[])
     except Exception: return []
 def image(p, cls='product-hero-image'):
-    if p.get('image'): return f'<img class="{cls}" src="{esc(p["image"])}" alt="{esc(p["name"])}" loading="lazy">'
-    return '<div class="product-image-placeholder"><i class="fa-solid fa-box-open"></i><span>Image not listed</span></div>'
+    return f'<img class="{cls}" src="{esc(p["image"])}" alt="{esc(p["name"])}" loading="lazy">' if p.get('image') else '<div class="product-image-placeholder"><i class="fa-solid fa-box-open"></i><span>Image not listed</span></div>'
 def shell(title,desc,body,extra=''):
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>{esc(title)} | Laxman Nepal</title><link rel="stylesheet" href="/assets/css/gadgetbyte-home.css"><link rel="stylesheet" href="/assets/css/portal-pages.css"><link rel="stylesheet" href="/assets/css/product-pages.css"><link rel="stylesheet" href="/assets/css/catalog.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">{extra}</head><body class="gb-product-page"><header class="gb-header"><div class="gb-container gb-header-main"><a class="gb-logo" href="/"><span class="gb-logo-mark">LN</span><span>Laxman Nepal</span></a><nav class="gb-menu"><a href="/news/">News</a><a href="/reviews/">Reviews</a><a href="/mobile/">Mobile</a><a href="/laptop/">Laptops</a><a href="/guides/">Guides</a><a href="/gadgets/">Gadgets</a><a href="/products/">Products</a><a href="/brands/">Brands</a><a href="/search/">Search</a></nav><button class="gb-mobile" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button></div><div class="gb-categorybar"><div class="gb-container"><a href="/mobile/">Smartphones</a><a href="/laptop/">Laptops</a><a href="/gadgets/tablets/">Tablets</a><a href="/gadgets/audio/">Audio</a><a href="/gadgets/wearables/">Wearables</a><a href="/gadgets/cameras/">Cameras</a><a href="/mobile/price/">Prices</a></div></div></header>{body}<footer class="gb-footer"><div class="gb-container"><strong>Laxman Nepal</strong><span>Nepal-focused technology news, reviews, guides and product data.</span></div></footer><script>document.querySelector('.gb-mobile')?.addEventListener('click',()=>document.querySelector('.gb-menu')?.classList.toggle('open'));</script></body></html>'''
-def card(p):
-    return f'<a class="product-mini" href="/products/{esc(p["slug"])}/"><div class="product-mini-media">{image(p,"product-mini-image") if p.get("image") else "<i class=\"fa-solid fa-box-open\"></i>"}</div><strong>{esc(p["name"])}</strong><small>{esc(p.get("brand",""))} · {esc(p.get("category",""))}</small></a>'
+def card(p): return f'<a class="product-mini" href="/products/{esc(p["slug"])}/"><div class="product-mini-media">{image(p,"product-mini-image") if p.get("image") else "<i class=\"fa-solid fa-box-open\"></i>"}</div><strong>{esc(p["name"])}</strong><small>{esc(p.get("brand",""))} · {esc(p.get("category",""))}</small></a>'
 def schema(p):
     d={'@context':'https://schema.org','@type':'Product','name':p['name']}
     if p.get('brand'): d['brand']={'@type':'Brand','name':p['brand']}
@@ -42,9 +36,8 @@ def catalog(products):
 def main():
     products=load()
     for p in products: p.setdefault('slug',slug(p.get('name','product')))
-    OUT.mkdir(exist_ok=True)
-    (OUT/'index.html').write_text(catalog(products),encoding='utf-8')
+    OUT.mkdir(exist_ok=True); (OUT/'index.html').write_text(catalog(products),encoding='utf-8')
     for p in products:
         d=OUT/p['slug']; d.mkdir(parents=True,exist_ok=True); (d/'index.html').write_text(detail(p,products),encoding='utf-8')
-    print(f'V7 product catalog generated: {len(products)} products')
+    print(f'V8 product catalog generated: {len(products)} products')
 if __name__=='__main__': main()
