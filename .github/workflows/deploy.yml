@@ -25,23 +25,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
       - name: Build SEO content and portal
         run: |
           python3 scripts/build_site.py
           python3 scripts/generate_portal_pages.py
           python3 scripts/portal_finish.py
           python3 scripts/generate_product_pages.py
+          python3 scripts/product_catalog_v7.py
+          python3 scripts/product_intelligence_v8.py
           python3 scripts/generate_price_pages.py
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: .
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
