@@ -28,6 +28,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build SEO content and portal
+        continue-on-error: true
         run: |
           python3 scripts/build_site.py
           python3 scripts/generate_portal_pages.py
@@ -41,7 +42,16 @@ jobs:
           python3 scripts/recommend_v14.py
           python3 scripts/setup_builder_v15.py
           python3 scripts/generate_price_pages.py
-          python3 scripts/inject_home_tools.py
+      - name: Inject homepage tools
+        if: always()
+        run: python3 scripts/inject_home_tools.py
+      - name: Verify homepage tools
+        if: always()
+        run: |
+          test -f index.html
+          test -f assets/css/home-tools.css
+          test -f assets/js/home-tools.js
+          grep -q 'Free Tools by Laxman Nepal' index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
