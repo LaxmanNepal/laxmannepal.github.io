@@ -42,16 +42,22 @@ jobs:
           python3 scripts/recommend_v14.py
           python3 scripts/setup_builder_v15.py
           python3 scripts/generate_price_pages.py
+      - name: Apply Laxman shared shell
+        if: always()
+        run: python3 scripts/apply_laxman_shared_shell.py
       - name: Inject homepage tools
         if: always()
         run: python3 scripts/inject_home_tools.py
-      - name: Verify homepage tools
+      - name: Verify homepage tools and shared shell
         if: always()
         run: |
           test -f index.html
           test -f assets/css/home-tools.css
           test -f assets/js/home-tools.js
           grep -q 'Free Tools by Laxman Nepal' index.html
+          grep -q 'class="shared-header"' index.html
+          grep -q 'class="shared-footer"' index.html
+          grep -q 'Laxman Nepal' index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
