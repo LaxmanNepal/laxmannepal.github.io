@@ -9,6 +9,10 @@ on:
       - 'scripts/scrape_mobile.py'
       - 'mobile/**'
 
+concurrency:
+  group: mobile-catalog-sync
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -23,7 +27,7 @@ jobs:
           python-version: '3.12'
       - name: Install parser
         run: pip install --disable-pip-version-check requests beautifulsoup4
-      - name: Scrape catalog and product details
+      - name: Scrape complete mobile price catalog
         run: python scripts/scrape_mobile.py
       - name: Commit refreshed data
         run: |
