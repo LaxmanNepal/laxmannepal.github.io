@@ -9,6 +9,7 @@ HEADERS={'User-Agent':'Mozilla/5.0 (compatible; LaxmanMobileCatalog/1.0)'}
 ALIASES={'iPhone':'Apple','Poco':'POCO','Ai+':'AI+'}
 S=requests.Session();S.headers.update(HEADERS)
 
+# Category-table sync: no product links are emitted to the public catalog.
 def clean(s):return re.sub(r'\s+',' ',s or '').strip()
 def price_line(line):
     line=clean(line).replace('NPR','').strip();m=re.search(r'\(([^()]*)\)\s*$',line);variant=clean(m.group(1)) if m else '';prefix=line[:m.start()].strip() if m else line;nums=re.findall(r'\d[\d,]*',prefix)
