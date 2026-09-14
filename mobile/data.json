@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-14T18:05:53.011351+00:00",
-  "count": 135,
+  "updated_at": "2026-09-14T21:52:35.933512+00:00",
+  "count": 133,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -207,19 +207,16 @@
       "name": "Honor Play 10",
       "brand": "Honor",
       "variants": [
-        "3GB+64GB",
-        "4GB+128GB"
+        "3GB+64GB"
       ],
       "price": 17499,
-      "max_price": 19999,
+      "max_price": 17499,
       "original_price": null,
       "rams": [
-        "3GB",
-        "4GB"
+        "3GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -295,18 +292,16 @@
       "name": "Honor X6C 4G",
       "brand": "Honor",
       "variants": [
-        "6GB+128GB",
-        "6GB+256GB"
+        "6GB+128GB"
       ],
       "price": 23499,
-      "max_price": 25499,
+      "max_price": 23499,
       "original_price": null,
       "rams": [
         "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -365,18 +360,16 @@
       "name": "Honor X8d",
       "brand": "Honor",
       "variants": [
-        "8GB+128GB",
-        "8GB+256GB"
+        "8GB+128GB"
       ],
       "price": 39999,
-      "max_price": 43999,
+      "max_price": 39999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -384,15 +377,13 @@
       "name": "Honor X9d",
       "brand": "Honor",
       "variants": [
-        "8GB+256GB",
-        "12GB+256GB"
+        "8GB+256GB"
       ],
       "price": 54999,
-      "max_price": 59999,
+      "max_price": 54999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
         "256GB"
@@ -566,23 +557,6 @@
       ]
     },
     {
-      "id": "motorola-moto-g06-power",
-      "name": "Motorola Moto G06 Power",
-      "brand": "Motorola",
-      "variants": [
-        "4GB + 64GB"
-      ],
-      "price": 24999,
-      "max_price": 24999,
-      "original_price": null,
-      "rams": [
-        "4GB"
-      ],
-      "storages": [
-        "64GB"
-      ]
-    },
-    {
       "id": "motorola-moto-g35-5g",
       "name": "Motorola Moto G35 5G",
       "brand": "Motorola",
@@ -694,18 +668,16 @@
       "name": "OPPO A6c",
       "brand": "OPPO",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 24999,
-      "max_price": 30999,
+      "max_price": 24999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -730,20 +702,16 @@
       "name": "OPPO A6x",
       "brand": "OPPO",
       "variants": [
-        "6GB + 128GB",
-        "6GB + 256GB",
-        "4GB + 128GB"
+        "6GB + 128GB"
       ],
-      "price": 27999,
-      "max_price": 34999,
+      "price": 32499,
+      "max_price": 32499,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1056,23 +1024,6 @@
       ]
     },
     {
-      "id": "realme-c85-pro",
-      "name": "Realme C85 Pro",
-      "brand": "Realme",
-      "variants": [
-        "8GB + 128GB"
-      ],
-      "price": 36999,
-      "max_price": 36999,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "128GB"
-      ]
-    },
-    {
       "id": "realme-gt-8-pro",
       "name": "Realme GT 8 Pro",
       "brand": "Realme",
@@ -1094,20 +1045,16 @@
       "name": "Realme Note 60x",
       "brand": "Realme",
       "variants": [
-        "3GB+64GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "3GB+64GB"
       ],
       "price": 15999,
-      "max_price": 21999,
+      "max_price": 15999,
       "original_price": null,
       "rams": [
-        "3GB",
-        "4GB"
+        "3GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1115,19 +1062,15 @@
       "name": "Realme Note 70",
       "brand": "Realme",
       "variants": [
-        "6GB+128GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "6GB+128GB"
       ],
-      "price": 16999,
+      "price": 23999,
       "max_price": 23999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
-        "64GB",
         "128GB"
       ]
     },
@@ -1878,14 +1821,12 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB",
-        "4GB + 128GB"
+        "6GB + 128GB"
       ],
-      "price": 29999,
+      "price": 32999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
@@ -1914,18 +1855,16 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+64GB",
-        "4GB+128GB"
+        "4GB+64GB"
       ],
       "price": 21999,
-      "max_price": 25999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -2007,15 +1946,13 @@
       "name": "Vivo V70 FE",
       "brand": "Vivo",
       "variants": [
-        "8GB + 256GB",
-        "12GB + 256GB"
+        "8GB + 256GB"
       ],
       "price": 62999,
-      "max_price": 72999,
+      "max_price": 62999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
         "256GB"
@@ -2062,18 +1999,16 @@
       "name": "Vivo Y05",
       "brand": "Vivo",
       "variants": [
-        "4GB+64GB",
-        "4GB+128GB"
+        "4GB+64GB"
       ],
       "price": 21999,
-      "max_price": 24999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -2098,15 +2033,13 @@
       "name": "Vivo Y11d",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB",
-        "6GB + 128GB"
+        "4GB + 128GB"
       ],
       "price": 27999,
-      "max_price": 33999,
+      "max_price": 27999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
         "128GB"
@@ -2134,22 +2067,16 @@
       "name": "Vivo Y31d",
       "brand": "Vivo",
       "variants": [
-        "6GB+128GB",
-        "8GB+128GB",
-        "8GB+256GB",
-        "4GB+128GB"
+        "6GB+128GB"
       ],
-      "price": 32999,
-      "max_price": 51999,
+      "price": 37999,
+      "max_price": 37999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2157,18 +2084,16 @@
       "name": "Vivo Y500",
       "brand": "Vivo",
       "variants": [
-        "8GB + 128GB",
-        "8GB + 256GB"
+        "8GB + 128GB"
       ],
       "price": 54999,
-      "max_price": 61999,
+      "max_price": 54999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2244,18 +2169,16 @@
       "name": "ZTE Nubia A57",
       "brand": "ZTE",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 22999,
-      "max_price": 24999,
+      "max_price": 22999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
