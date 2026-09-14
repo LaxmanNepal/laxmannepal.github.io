@@ -1,1625 +1,2701 @@
 {
-  "updated_at": "2026-09-14T08:21:28.218607+00:00",
+  "updated_at": "2026-09-14T08:22:25.433256+00:00",
   "count": 135,
   "products": [
-    {
-      "id": "iphone-17-pro-max",
-      "name": "iPhone 17 Pro Max",
-      "brand": "Apple",
-      "variants": [],
-      "price": 242499,
-      "max_price": 257999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "iphone-17-pro",
-      "name": "iPhone 17 Pro",
-      "brand": "Apple",
-      "variants": [],
-      "price": 305699,
-      "max_price": 321299,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "iphone-air",
-      "name": "iPhone Air",
-      "brand": "Apple",
-      "variants": [],
-      "price": 190699,
-      "max_price": 190699,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "iphone-17",
-      "name": "iPhone 17",
-      "brand": "Apple",
-      "variants": [],
-      "price": 173499,
-      "max_price": 173499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "iphone-16",
-      "name": "iPhone 16",
-      "brand": "Apple",
-      "variants": [],
-      "price": 146599,
-      "max_price": 146599,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "iphone-17e",
-      "name": "iPhone 17e",
-      "brand": "Apple",
-      "variants": [],
-      "price": 175099,
-      "max_price": 175099,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "iphone-15",
-      "name": "iPhone 15",
-      "brand": "Apple",
-      "variants": [],
-      "price": 127499,
-      "max_price": 127499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "vivo-x300-pro",
-      "name": "Vivo X300 Pro",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 199999,
-      "max_price": 199999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "vivo-v70",
-      "name": "Vivo V70",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 84999,
-      "max_price": 84999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "vivo-v60",
-      "name": "Vivo V60",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 74999,
-      "max_price": 74999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "vivo-v80-lite",
-      "name": "Vivo V80 Lite",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 63999,
-      "max_price": 63999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "vivo-v70-fe",
-      "name": "Vivo V70 FE",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 62999,
-      "max_price": 62999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "vivo-y500",
-      "name": "Vivo Y500",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 54999,
-      "max_price": 54999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "vivo-v60-lite-5g",
-      "name": "Vivo V60 Lite 5G",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 51999,
-      "max_price": 51999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": true
-    },
-    {
-      "id": "vivo-v60-lite-4g",
-      "name": "Vivo V60 Lite 4G",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 43499,
-      "max_price": 43499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "vivo-y21-5g",
-      "name": "Vivo Y21 5G",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 40999,
-      "max_price": 40999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": true
-    },
-    {
-      "id": "vivo-y31d",
-      "name": "Vivo Y31d",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 37999,
-      "max_price": 37999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "vivo-y11d",
-      "name": "Vivo Y11d",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 27999,
-      "max_price": 27999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "vivo-y05",
-      "name": "Vivo Y05",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 21999,
-      "max_price": 21999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "vivo-y05e",
-      "name": "Vivo Y05e",
-      "brand": "Vivo",
-      "variants": [],
-      "price": 19999,
-      "max_price": 19999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
     {
       "id": "samsung-galaxy-z-fold-8-ultra",
       "name": "Samsung Galaxy Z Fold 8 Ultra",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "12GB+256GB"
+      ],
       "price": 299999,
       "max_price": 299999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "samsung-galaxy-z-fold-7",
       "name": "Samsung Galaxy Z Fold 7",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "12GB+256GB"
+      ],
       "price": 259999,
-      "max_price": 279999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
+      "max_price": 259999,
+      "original_price": 279999,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "samsung-galaxy-z-fold-8",
       "name": "Samsung Galaxy Z Fold 8",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "12GB+256GB"
+      ],
       "price": 274999,
       "max_price": 274999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "samsung-galaxy-s26-ultra",
       "name": "Samsung Galaxy S26 Ultra",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "16GB+1TB"
+      ],
       "price": 293999,
       "max_price": 293999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "16GB"
+      ],
+      "storages": [
+        "16GB",
+        "1TB"
+      ],
       "is_5g": false
     },
     {
       "id": "samsung-galaxy-s25-ultra",
       "name": "Samsung Galaxy S25 Ultra",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "12GB+256GB"
+      ],
       "price": 184999,
-      "max_price": 199999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
+      "max_price": 184999,
+      "original_price": 199999,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "samsung-galaxy-z-flip-8",
       "name": "Samsung Galaxy Z Flip 8",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "12GB+256GB"
+      ],
       "price": 194999,
       "max_price": 194999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "samsung-galaxy-s26",
       "name": "Samsung Galaxy S26+",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "12GB+256GB"
+      ],
       "price": 123999,
-      "max_price": 182999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
+      "max_price": 159999,
+      "original_price": 182999,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "samsung-galaxy-z-flip7",
       "name": "Samsung Galaxy Z Flip7",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "12GB+256GB"
+      ],
       "price": 154999,
       "max_price": 154999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "samsung-galaxy-s26-fe",
       "name": "Samsung Galaxy S26 FE",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "8GB+256GB"
+      ],
       "price": 119999,
       "max_price": 119999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "samsung-galaxy-s25-fe",
       "name": "Samsung Galaxy S25 FE",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "8GB+256GB"
+      ],
       "price": 107999,
       "max_price": 107999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "samsung-galaxy-a57-5g",
       "name": "Samsung Galaxy A57 5G",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "8GB+256GB"
+      ],
       "price": 84999,
       "max_price": 84999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": true
     },
     {
       "id": "samsung-galaxy-a37-5g",
       "name": "Samsung Galaxy A37 5G",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "8GB+256GB"
+      ],
       "price": 72999,
       "max_price": 72999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": true
     },
     {
       "id": "samsung-galaxy-a27-5g",
       "name": "Samsung Galaxy A27 5G",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "6GB + 128GB"
+      ],
       "price": 51999,
-      "max_price": 55999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
+      "max_price": 51999,
+      "original_price": 55999,
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
       "is_5g": true
     },
     {
       "id": "samsung-galaxy-a17-5g",
       "name": "Samsung Galaxy A17 5G",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "6GB+128GB"
+      ],
       "price": 44999,
       "max_price": 44999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
       "is_5g": true
     },
     {
       "id": "samsung-galaxy-m17-5g",
       "name": "Samsung Galaxy M17 5G",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "6GB+128GB"
+      ],
       "price": 43999,
       "max_price": 43999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
       "is_5g": true
     },
     {
       "id": "samsung-galaxy-a07s",
       "name": "Samsung Galaxy A07s",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "4GB + 64GB"
+      ],
       "price": 30499,
       "max_price": 30499,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
       "is_5g": false
     },
     {
       "id": "samsung-galaxy-a07",
       "name": "Samsung Galaxy A07",
       "brand": "Samsung",
-      "variants": [],
+      "variants": [
+        "4GB+64GB"
+      ],
       "price": 25499,
       "max_price": 25499,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "infinix-gt-30-pro",
-      "name": "Infinix GT 30 Pro",
-      "brand": "Infinix",
-      "variants": [],
-      "price": 69999,
-      "max_price": 69999,
+      "id": "iphone-17-pro-max",
+      "name": "iPhone 17 Pro Max",
+      "brand": "Apple",
+      "variants": [
+        "12GB+256GB"
+      ],
+      "price": 242499,
+      "max_price": 242499,
+      "original_price": 257999,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "iphone-17-pro",
+      "name": "iPhone 17 Pro",
+      "brand": "Apple",
+      "variants": [
+        "12GB+1TB"
+      ],
+      "price": 305699,
+      "max_price": 305699,
+      "original_price": 321299,
+      "rams": [
+        "12GB"
+      ],
+      "storages": [
+        "12GB",
+        "1TB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "iphone-air",
+      "name": "iPhone Air",
+      "brand": "Apple",
+      "variants": [
+        "12GB+256GB"
+      ],
+      "price": 190699,
+      "max_price": 190699,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "infinix-note-60-pro",
-      "name": "Infinix Note 60 Pro",
-      "brand": "Infinix",
-      "variants": [],
-      "price": 59999,
-      "max_price": 59999,
+      "id": "iphone-17",
+      "name": "iPhone 17",
+      "brand": "Apple",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 173499,
+      "max_price": 173499,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "infinix-gt-30",
-      "name": "Infinix GT 30",
-      "brand": "Infinix",
-      "variants": [],
-      "price": 46999,
-      "max_price": 46999,
+      "id": "iphone-16",
+      "name": "iPhone 16",
+      "brand": "Apple",
+      "variants": [
+        "8GB+128GB"
+      ],
+      "price": 146599,
+      "max_price": 146599,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "infinix-note-60",
-      "name": "Infinix Note 60",
-      "brand": "Infinix",
-      "variants": [],
-      "price": 45999,
-      "max_price": 45999,
+      "id": "iphone-17e",
+      "name": "iPhone 17e",
+      "brand": "Apple",
+      "variants": [
+        "8GB+512GB"
+      ],
+      "price": 175099,
+      "max_price": 175099,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "512GB"
+      ],
+      "storages": [
+        "8GB",
+        "512GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "infinix-note-edge",
-      "name": "Infinix Note Edge",
-      "brand": "Infinix",
-      "variants": [],
-      "price": 41999,
-      "max_price": 41999,
+      "id": "iphone-15",
+      "name": "iPhone 15",
+      "brand": "Apple",
+      "variants": [
+        "128GB"
+      ],
+      "price": 127499,
+      "max_price": 127499,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "128GB"
+      ],
+      "storages": [
+        "128GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "infinix-hot-70",
-      "name": "Infinix Hot 70",
-      "brand": "Infinix",
-      "variants": [],
-      "price": 31999,
-      "max_price": 31999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "infinix-smart-20",
-      "name": "Infinix Smart 20",
-      "brand": "Infinix",
-      "variants": [],
-      "price": 19999,
-      "max_price": 19999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-magic-v5",
-      "name": "Honor Magic V5",
-      "brand": "Honor",
-      "variants": [],
-      "price": 266999,
-      "max_price": 266999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-magic-8-pro",
-      "name": "Honor Magic 8 Pro",
-      "brand": "Honor",
-      "variants": [],
-      "price": 179999,
+      "id": "vivo-x300-pro",
+      "name": "Vivo X300 Pro",
+      "brand": "Vivo",
+      "variants": [
+        "Vivo X300 Pro - 16GB - 512GB"
+      ],
+      "price": 199999,
       "max_price": 199999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "16GB",
+        "512GB"
+      ],
+      "storages": [
+        "16GB",
+        "512GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "honor-600-pro",
-      "name": "Honor 600 Pro",
-      "brand": "Honor",
-      "variants": [],
-      "price": 129999,
-      "max_price": 129999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-600",
-      "name": "Honor 600",
-      "brand": "Honor",
-      "variants": [],
+      "id": "vivo-v70",
+      "name": "Vivo V70",
+      "brand": "Vivo",
+      "variants": [
+        "8GB+256GB"
+      ],
       "price": 84999,
       "max_price": 84999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "honor-600-lite",
-      "name": "Honor 600 Lite",
-      "brand": "Honor",
-      "variants": [],
-      "price": 54999,
-      "max_price": 59999,
+      "id": "vivo-v60",
+      "name": "Vivo V60",
+      "brand": "Vivo",
+      "variants": [
+        "12GB+256GB"
+      ],
+      "price": 74999,
+      "max_price": 74999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "honor-x9d",
-      "name": "Honor X9d",
-      "brand": "Honor",
-      "variants": [],
-      "price": 54999,
-      "max_price": 54999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-x8d",
-      "name": "Honor X8d",
-      "brand": "Honor",
-      "variants": [],
-      "price": 39999,
-      "max_price": 39999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-x7e",
-      "name": "Honor X7e",
-      "brand": "Honor",
-      "variants": [],
-      "price": 39999,
-      "max_price": 39999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-x7d",
-      "name": "Honor X7d",
-      "brand": "Honor",
-      "variants": [],
-      "price": 33999,
-      "max_price": 33999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-x6d",
-      "name": "Honor X6d",
-      "brand": "Honor",
-      "variants": [],
-      "price": 29999,
-      "max_price": 29999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-x5d-plus",
-      "name": "Honor X5d Plus",
-      "brand": "Honor",
-      "variants": [],
-      "price": 28999,
-      "max_price": 28999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-x5d",
-      "name": "Honor X5d",
-      "brand": "Honor",
-      "variants": [],
-      "price": 25499,
-      "max_price": 25499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-x6c-4g",
-      "name": "Honor X6C 4G",
-      "brand": "Honor",
-      "variants": [],
-      "price": 23499,
-      "max_price": 23499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-x5c-plus",
-      "name": "Honor X5c Plus",
-      "brand": "Honor",
-      "variants": [],
-      "price": 22499,
-      "max_price": 22499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-x5c",
-      "name": "Honor X5c",
-      "brand": "Honor",
-      "variants": [],
-      "price": 20499,
-      "max_price": 20499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "honor-play-10",
-      "name": "Honor Play 10",
-      "brand": "Honor",
-      "variants": [],
-      "price": 17499,
-      "max_price": 17499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "motorola-edge-70-fusion",
-      "name": "Motorola Edge 70 Fusion",
-      "brand": "Motorola",
-      "variants": [],
-      "price": 69999,
-      "max_price": 69999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "motorola-edge-50-fusion",
-      "name": "Motorola Edge 50 Fusion",
-      "brand": "Motorola",
-      "variants": [],
-      "price": 46499,
-      "max_price": 46499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "motorola-moto-g96-5g",
-      "name": "Motorola Moto G96 5G",
-      "brand": "Motorola",
-      "variants": [],
-      "price": 44999,
-      "max_price": 44999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": true
-    },
-    {
-      "id": "motorola-moto-g57-power",
-      "name": "Motorola Moto G57 Power",
-      "brand": "Motorola",
-      "variants": [],
-      "price": 37499,
-      "max_price": 37499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "motorola-moto-g35-5g",
-      "name": "Motorola Moto G35 5G",
-      "brand": "Motorola",
-      "variants": [],
-      "price": 30699,
-      "max_price": 30699,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": true
-    },
-    {
-      "id": "motorola-moto-g64",
-      "name": "Motorola Moto G64",
-      "brand": "Motorola",
-      "variants": [],
-      "price": 29999,
-      "max_price": 29999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "motorola-moto-g06-power",
-      "name": "Motorola Moto G06 Power",
-      "brand": "Motorola",
-      "variants": [],
-      "price": 24999,
-      "max_price": 24999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "oneplus-15",
-      "name": "OnePlus 15",
-      "brand": "OnePlus",
-      "variants": [],
-      "price": 169999,
-      "max_price": 169999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "oneplus-15r",
-      "name": "OnePlus 15R",
-      "brand": "OnePlus",
-      "variants": [],
-      "price": 98499,
-      "max_price": 98499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "oneplus-nord-6",
-      "name": "OnePlus Nord 6",
-      "brand": "OnePlus",
-      "variants": [],
-      "price": 89999,
-      "max_price": 89999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "oneplus-nord-ce5",
-      "name": "OnePlus Nord CE5",
-      "brand": "OnePlus",
-      "variants": [],
-      "price": 53999,
-      "max_price": 53999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-gt-8-pro",
-      "name": "Realme GT 8 Pro",
-      "brand": "Realme",
-      "variants": [],
-      "price": 149999,
-      "max_price": 149999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-15-pro",
-      "name": "Realme 15 Pro",
-      "brand": "Realme",
-      "variants": [],
-      "price": 66999,
-      "max_price": 66999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-p3-ultra",
-      "name": "Realme P3 Ultra",
-      "brand": "Realme",
-      "variants": [],
-      "price": 65999,
-      "max_price": 65999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-p3",
-      "name": "Realme P3",
-      "brand": "Realme",
-      "variants": [],
-      "price": 44999,
-      "max_price": 44999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-c85-5g",
-      "name": "Realme C85 5G",
-      "brand": "Realme",
-      "variants": [],
-      "price": 39999,
-      "max_price": 39999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": true
-    },
-    {
-      "id": "realme-c85",
-      "name": "Realme C85",
-      "brand": "Realme",
-      "variants": [],
-      "price": 39999,
-      "max_price": 39999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-c85-pro",
-      "name": "Realme C85 Pro",
-      "brand": "Realme",
-      "variants": [],
-      "price": 36999,
-      "max_price": 36999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-c100x",
-      "name": "Realme C100x",
-      "brand": "Realme",
-      "variants": [],
-      "price": 35999,
-      "max_price": 35999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-c100i",
-      "name": "Realme C100i",
-      "brand": "Realme",
-      "variants": [],
-      "price": 28999,
-      "max_price": 28999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-c71",
-      "name": "Realme C71",
-      "brand": "Realme",
-      "variants": [],
-      "price": 25999,
-      "max_price": 25999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-note-80",
-      "name": "Realme Note 80",
-      "brand": "Realme",
-      "variants": [],
-      "price": 21999,
-      "max_price": 22499,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-note-70",
-      "name": "Realme Note 70",
-      "brand": "Realme",
-      "variants": [],
-      "price": 23999,
-      "max_price": 23999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "realme-note-60x",
-      "name": "Realme Note 60x",
-      "brand": "Realme",
-      "variants": [],
-      "price": 15999,
-      "max_price": 15999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "oppo-reno-15",
-      "name": "OPPO Reno 15",
-      "brand": "OPPO",
-      "variants": [],
-      "price": 89999,
-      "max_price": 89999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "oppo-reno-15f",
-      "name": "OPPO Reno 15F",
-      "brand": "OPPO",
-      "variants": [],
+      "id": "vivo-v80-lite",
+      "name": "Vivo V80 Lite",
+      "brand": "Vivo",
+      "variants": [
+        "8GB + 128GB"
+      ],
       "price": 63999,
       "max_price": 63999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "oppo-a6s-pro",
-      "name": "OPPO A6s Pro",
-      "brand": "OPPO",
-      "variants": [],
-      "price": 56999,
-      "max_price": 56999,
+      "id": "vivo-v70-fe",
+      "name": "Vivo V70 FE",
+      "brand": "Vivo",
+      "variants": [
+        "8GB + 256GB"
+      ],
+      "price": 62999,
+      "max_price": 62999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "oppo-a6-pro-4g",
-      "name": "OPPO A6 Pro 4G",
-      "brand": "OPPO",
-      "variants": [],
+      "id": "vivo-y500",
+      "name": "Vivo Y500",
+      "brand": "Vivo",
+      "variants": [
+        "8GB + 128GB"
+      ],
+      "price": 54999,
+      "max_price": 54999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "vivo-v60-lite-5g",
+      "name": "Vivo V60 Lite 5G",
+      "brand": "Vivo",
+      "variants": [
+        "12GB+256GB"
+      ],
       "price": 51999,
       "max_price": 51999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
+      "is_5g": true
+    },
+    {
+      "id": "vivo-v60-lite-4g",
+      "name": "Vivo V60 Lite 4G",
+      "brand": "Vivo",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 43499,
+      "max_price": 43499,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "oppo-a6",
-      "name": "OPPO A6",
-      "brand": "OPPO",
-      "variants": [],
-      "price": 46999,
-      "max_price": 46999,
+      "id": "vivo-y21-5g",
+      "name": "Vivo Y21 5G",
+      "brand": "Vivo",
+      "variants": [
+        "6GB + 128GB"
+      ],
+      "price": 40999,
+      "max_price": 40999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
+      "is_5g": true
+    },
+    {
+      "id": "vivo-y31d",
+      "name": "Vivo Y31d",
+      "brand": "Vivo",
+      "variants": [
+        "6GB+128GB"
+      ],
+      "price": 37999,
+      "max_price": 37999,
+      "original_price": null,
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "oppo-a6x",
-      "name": "OPPO A6x",
-      "brand": "OPPO",
-      "variants": [],
-      "price": 32499,
-      "max_price": 32499,
+      "id": "vivo-y11d",
+      "name": "Vivo Y11d",
+      "brand": "Vivo",
+      "variants": [
+        "4GB + 128GB"
+      ],
+      "price": 27999,
+      "max_price": 27999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "128GB"
+      ],
+      "storages": [
+        "4GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "oppo-a6c",
-      "name": "OPPO A6c",
-      "brand": "OPPO",
-      "variants": [],
-      "price": 24999,
-      "max_price": 24999,
+      "id": "vivo-y05",
+      "name": "Vivo Y05",
+      "brand": "Vivo",
+      "variants": [
+        "4GB+64GB"
+      ],
+      "price": 21999,
+      "max_price": 21999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "vivo-y05e",
+      "name": "Vivo Y05e",
+      "brand": "Vivo",
+      "variants": [
+        "4GB+64GB"
+      ],
+      "price": 19999,
+      "max_price": 19999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
       "is_5g": false
     },
     {
       "id": "xiaomi-17-ultra",
       "name": "Xiaomi 17 Ultra",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "16GB+512GB"
+      ],
       "price": 199999,
       "max_price": 199999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "16GB",
+        "512GB"
+      ],
+      "storages": [
+        "16GB",
+        "512GB"
+      ],
       "is_5g": false
     },
     {
       "id": "xiaomi-17t",
       "name": "Xiaomi 17T",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "12GB - 512GB"
+      ],
       "price": 99999,
       "max_price": 99999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "12GB",
+        "512GB"
+      ],
+      "storages": [
+        "12GB",
+        "512GB"
+      ],
       "is_5g": false
     },
     {
       "id": "redmi-note-17-pro-max",
       "name": "Redmi Note 17 Pro Max",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "8GB + 256GB"
+      ],
       "price": 69999,
       "max_price": 69999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "redmi-note-15-pro-plus-5g",
       "name": "Redmi Note 15 Pro Plus 5G",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "8GB+256GB"
+      ],
       "price": 63999,
       "max_price": 63999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": true
     },
     {
       "id": "redmi-note-17-pro",
       "name": "Redmi Note 17 Pro",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "Redmi Note 17 Pro - 8GB - 256GB"
+      ],
       "price": 57999,
       "max_price": 57999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "redmi-note-15-pro-5g",
       "name": "Redmi Note 15 Pro 5G",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "8GB+256GB"
+      ],
       "price": 53999,
       "max_price": 53999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": true
     },
     {
       "id": "redmi-note-17-5g",
       "name": "Redmi Note 17 5G",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "6GB + 128GB"
+      ],
       "price": 47999,
       "max_price": 47999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
       "is_5g": true
     },
     {
       "id": "redmi-note-15-5g",
       "name": "Redmi Note 15 5G",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "8GB+256GB"
+      ],
       "price": 43999,
       "max_price": 43999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": true
     },
     {
       "id": "redmi-note-17-4g",
       "name": "Redmi Note 17 4G",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "6GB + 128GB"
+      ],
       "price": 42999,
       "max_price": 42999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
       "id": "redmi-17-5g",
       "name": "Redmi 17 5G",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "4GB + 128GB"
+      ],
       "price": 33999,
       "max_price": 33999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "128GB"
+      ],
+      "storages": [
+        "4GB",
+        "128GB"
+      ],
       "is_5g": true
     },
     {
       "id": "redmi-note-15-4g",
       "name": "Redmi Note 15 4G",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "6GB+128GB"
+      ],
       "price": 33999,
       "max_price": 33999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
       "id": "redmi-15-4g",
       "name": "Redmi 15 4G",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "6GB+128GB"
+      ],
       "price": 27999,
       "max_price": 27999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
       "id": "redmi-17-4g",
       "name": "Redmi 17 4G",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "4GB + 128GB"
+      ],
       "price": 27999,
       "max_price": 27999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "128GB"
+      ],
+      "storages": [
+        "4GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
       "id": "redmi-15c",
       "name": "Redmi 15C",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "4GB+128GB"
+      ],
       "price": 21999,
       "max_price": 21999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "128GB"
+      ],
+      "storages": [
+        "4GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
       "id": "redmi-a7-pro-4g",
       "name": "Redmi A7 Pro 4G",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "4GB + 64GB"
+      ],
       "price": 21499,
       "max_price": 21499,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
       "is_5g": false
     },
     {
       "id": "redmi-a7-4g",
       "name": "Redmi A7 4G",
       "brand": "Xiaomi",
-      "variants": [],
+      "variants": [
+        "3GB+64GB"
+      ],
       "price": 20499,
       "max_price": 20499,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "3GB",
+        "64GB"
+      ],
+      "storages": [
+        "3GB",
+        "64GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "poco-f8-pro",
-      "name": "Poco F8 Pro",
-      "brand": "POCO",
-      "variants": [],
-      "price": 104999,
-      "max_price": 104999,
+      "id": "honor-magic-v5",
+      "name": "Honor Magic V5",
+      "brand": "Honor",
+      "variants": [
+        "16GB+512GB"
+      ],
+      "price": 266999,
+      "max_price": 266999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "16GB",
+        "512GB"
+      ],
+      "storages": [
+        "16GB",
+        "512GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "poco-x8-pro-max",
-      "name": "Poco X8 Pro Max",
-      "brand": "POCO",
-      "variants": [],
-      "price": 83999,
-      "max_price": 83999,
+      "id": "honor-magic-8-pro",
+      "name": "Honor Magic 8 Pro",
+      "brand": "Honor",
+      "variants": [
+        "12GB+512GB"
+      ],
+      "price": 179999,
+      "max_price": 179999,
+      "original_price": 199999,
+      "rams": [
+        "12GB",
+        "512GB"
+      ],
+      "storages": [
+        "12GB",
+        "512GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "honor-600-pro",
+      "name": "Honor 600 Pro",
+      "brand": "Honor",
+      "variants": [
+        "12GB + 256GB"
+      ],
+      "price": 129999,
+      "max_price": 129999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "poco-x8-pro",
-      "name": "Poco X8 Pro",
-      "brand": "POCO",
-      "variants": [],
-      "price": 65999,
-      "max_price": 65999,
+      "id": "honor-600",
+      "name": "Honor 600",
+      "brand": "Honor",
+      "variants": [
+        "8GB - 256GB"
+      ],
+      "price": 84999,
+      "max_price": 84999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "poco-m8-pro",
-      "name": "POCO M8 Pro",
-      "brand": "POCO",
-      "variants": [],
-      "price": 58999,
-      "max_price": 58999,
+      "id": "honor-600-lite",
+      "name": "Honor 600 Lite",
+      "brand": "Honor",
+      "variants": [
+        "8GB + 256GB"
+      ],
+      "price": 54999,
+      "max_price": 54999,
+      "original_price": 59999,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "honor-x9d",
+      "name": "Honor X9d",
+      "brand": "Honor",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 54999,
+      "max_price": 54999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "poco-m8s",
-      "name": "POCO M8s",
-      "brand": "POCO",
-      "variants": [],
+      "id": "honor-x8d",
+      "name": "Honor X8d",
+      "brand": "Honor",
+      "variants": [
+        "8GB+128GB"
+      ],
       "price": 39999,
       "max_price": 39999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "ai-nova-2-5g",
-      "name": "Ai+ Nova 2 5G",
-      "brand": "AI+",
-      "variants": [],
-      "price": 22999,
-      "max_price": 22999,
+      "id": "honor-x7e",
+      "name": "Honor X7e",
+      "brand": "Honor",
+      "variants": [
+        "6GB + 128GB"
+      ],
+      "price": 39999,
+      "max_price": 39999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": true
-    },
-    {
-      "id": "ai-pulse-2",
-      "name": "Ai+ Pulse 2",
-      "brand": "AI+",
-      "variants": [],
-      "price": 19999,
-      "max_price": 19999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "tecno-camon-slim",
-      "name": "Tecno Camon Slim",
-      "brand": "Tecno",
-      "variants": [],
-      "price": 65999,
-      "max_price": 65999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "tecno-pova-8",
-      "name": "Tecno Pova 8",
-      "brand": "Tecno",
-      "variants": [],
-      "price": 59999,
-      "max_price": 59999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "tecno-pova-curve-2",
-      "name": "Tecno Pova Curve 2",
-      "brand": "Tecno",
-      "variants": [],
-      "price": 52999,
-      "max_price": 52999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "tecno-spark-50-pro",
-      "name": "Tecno Spark 50 Pro",
-      "brand": "Tecno",
-      "variants": [],
-      "price": 47999,
-      "max_price": 47999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "tecno-pova-6",
-      "name": "Tecno Pova 6",
-      "brand": "Tecno",
-      "variants": [],
-      "price": 44990,
-      "max_price": 44990,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "tecno-spark-40-pro",
-      "name": "Tecno Spark 40 Pro",
-      "brand": "Tecno",
-      "variants": [],
+      "id": "honor-x7d",
+      "name": "Honor X7d",
+      "brand": "Honor",
+      "variants": [
+        "8GB+256GB"
+      ],
       "price": 33999,
       "max_price": 33999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "tecno-spark-50-4g",
-      "name": "Tecno Spark 50 4G",
-      "brand": "Tecno",
-      "variants": [],
-      "price": 32999,
-      "max_price": 32999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
-      "is_5g": false
-    },
-    {
-      "id": "tecno-spark-30",
-      "name": "Tecno Spark 30",
-      "brand": "Tecno",
-      "variants": [],
+      "id": "honor-x6d",
+      "name": "Honor X6d",
+      "brand": "Honor",
+      "variants": [
+        "4GB + 128GB"
+      ],
       "price": 29999,
       "max_price": 29999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "128GB"
+      ],
+      "storages": [
+        "4GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "tecno-spark-go-3",
-      "name": "Tecno Spark Go 3",
-      "brand": "Tecno",
-      "variants": [],
+      "id": "honor-x5d-plus",
+      "name": "Honor X5d Plus",
+      "brand": "Honor",
+      "variants": [
+        "4GB+128GB"
+      ],
+      "price": 28999,
+      "max_price": 28999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "128GB"
+      ],
+      "storages": [
+        "4GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "honor-x5d",
+      "name": "Honor X5d",
+      "brand": "Honor",
+      "variants": [
+        "4GB+64GB"
+      ],
+      "price": 25499,
+      "max_price": 25499,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "honor-x6c-4g",
+      "name": "Honor X6C 4G",
+      "brand": "Honor",
+      "variants": [
+        "6GB+128GB"
+      ],
+      "price": 23499,
+      "max_price": 23499,
+      "original_price": null,
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "honor-x5c-plus",
+      "name": "Honor X5c Plus",
+      "brand": "Honor",
+      "variants": [
+        "4GB+128GB"
+      ],
+      "price": 22499,
+      "max_price": 22499,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "128GB"
+      ],
+      "storages": [
+        "4GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "honor-x5c",
+      "name": "Honor X5c",
+      "brand": "Honor",
+      "variants": [
+        "4GB+64GB"
+      ],
+      "price": 20499,
+      "max_price": 20499,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "honor-play-10",
+      "name": "Honor Play 10",
+      "brand": "Honor",
+      "variants": [
+        "3GB+64GB"
+      ],
+      "price": 17499,
+      "max_price": 17499,
+      "original_price": null,
+      "rams": [
+        "3GB",
+        "64GB"
+      ],
+      "storages": [
+        "3GB",
+        "64GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "motorola-edge-70-fusion",
+      "name": "Motorola Edge 70 Fusion",
+      "brand": "Motorola",
+      "variants": [
+        "12GB + 256GB"
+      ],
+      "price": 69999,
+      "max_price": 69999,
+      "original_price": null,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "motorola-edge-50-fusion",
+      "name": "Motorola Edge 50 Fusion",
+      "brand": "Motorola",
+      "variants": [
+        "12GB+256GB"
+      ],
+      "price": 46499,
+      "max_price": 46499,
+      "original_price": null,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "motorola-moto-g96-5g",
+      "name": "Motorola Moto G96 5G",
+      "brand": "Motorola",
+      "variants": [
+        "8GB / 256GB"
+      ],
+      "price": 44999,
+      "max_price": 44999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": true
+    },
+    {
+      "id": "motorola-moto-g57-power",
+      "name": "Motorola Moto G57 Power",
+      "brand": "Motorola",
+      "variants": [
+        "8GB + 128GB"
+      ],
+      "price": 37499,
+      "max_price": 37499,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "motorola-moto-g35-5g",
+      "name": "Motorola Moto G35 5G",
+      "brand": "Motorola",
+      "variants": [
+        "8GB - 128GB"
+      ],
+      "price": 30699,
+      "max_price": 30699,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
+      "is_5g": true
+    },
+    {
+      "id": "motorola-moto-g64",
+      "name": "Motorola Moto G64",
+      "brand": "Motorola",
+      "variants": [
+        "8GB+128GB"
+      ],
+      "price": 29999,
+      "max_price": 29999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "motorola-moto-g06-power",
+      "name": "Motorola Moto G06 Power",
+      "brand": "Motorola",
+      "variants": [
+        "4GB + 64GB"
+      ],
+      "price": 24999,
+      "max_price": 24999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "infinix-gt-30-pro",
+      "name": "Infinix GT 30 Pro",
+      "brand": "Infinix",
+      "variants": [
+        "12GB+256GB+Gaming Kit"
+      ],
+      "price": 69999,
+      "max_price": 69999,
+      "original_price": null,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "infinix-note-60-pro",
+      "name": "Infinix Note 60 Pro",
+      "brand": "Infinix",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 59999,
+      "max_price": 59999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "infinix-gt-30",
+      "name": "Infinix GT 30",
+      "brand": "Infinix",
+      "variants": [
+        "8GB +256GB"
+      ],
+      "price": 46999,
+      "max_price": 46999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "infinix-note-60",
+      "name": "Infinix Note 60",
+      "brand": "Infinix",
+      "variants": [
+        "8GB+128GB"
+      ],
+      "price": 45999,
+      "max_price": 45999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "infinix-note-edge",
+      "name": "Infinix Note Edge",
+      "brand": "Infinix",
+      "variants": [
+        "8GB+128GB"
+      ],
+      "price": 41999,
+      "max_price": 41999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "infinix-hot-70",
+      "name": "Infinix Hot 70",
+      "brand": "Infinix",
+      "variants": [
+        "6GB + 128GB"
+      ],
+      "price": 31999,
+      "max_price": 31999,
+      "original_price": null,
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "infinix-smart-20",
+      "name": "Infinix Smart 20",
+      "brand": "Infinix",
+      "variants": [
+        "4GB + 64GB"
+      ],
+      "price": 19999,
+      "max_price": 19999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "oneplus-15",
+      "name": "OnePlus 15",
+      "brand": "OnePlus",
+      "variants": [
+        "16GB+512GB"
+      ],
+      "price": 169999,
+      "max_price": 169999,
+      "original_price": null,
+      "rams": [
+        "16GB",
+        "512GB"
+      ],
+      "storages": [
+        "16GB",
+        "512GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "oneplus-15r",
+      "name": "OnePlus 15R",
+      "brand": "OnePlus",
+      "variants": [
+        "12GB+256GB"
+      ],
+      "price": 98499,
+      "max_price": 98499,
+      "original_price": null,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "oneplus-nord-6",
+      "name": "OnePlus Nord 6",
+      "brand": "OnePlus",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 89999,
+      "max_price": 89999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "oneplus-nord-ce5",
+      "name": "OnePlus Nord CE5",
+      "brand": "OnePlus",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 53999,
+      "max_price": 53999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "realme-gt-8-pro",
+      "name": "Realme GT 8 Pro",
+      "brand": "Realme",
+      "variants": [
+        "16GB+512GB"
+      ],
+      "price": 149999,
+      "max_price": 149999,
+      "original_price": null,
+      "rams": [
+        "16GB",
+        "512GB"
+      ],
+      "storages": [
+        "16GB",
+        "512GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "realme-15-pro",
+      "name": "Realme 15 Pro",
+      "brand": "Realme",
+      "variants": [
+        "12GB+256GB"
+      ],
+      "price": 66999,
+      "max_price": 66999,
+      "original_price": null,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "realme-p3-ultra",
+      "name": "Realme P3 Ultra",
+      "brand": "Realme",
+      "variants": [
+        "12GB + 256GB"
+      ],
+      "price": 65999,
+      "max_price": 65999,
+      "original_price": null,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "realme-p3",
+      "name": "Realme P3",
+      "brand": "Realme",
+      "variants": [
+        "8GB + 256GB"
+      ],
+      "price": 44999,
+      "max_price": 44999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "realme-c85-5g",
+      "name": "Realme C85 5G",
+      "brand": "Realme",
+      "variants": [
+        "Realme C85 5G - 8GB - 128GB"
+      ],
+      "price": 39999,
+      "max_price": 39999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
+      "is_5g": true
+    },
+    {
+      "id": "realme-c85",
+      "name": "Realme C85",
+      "brand": "Realme",
+      "variants": [
+        "8GB + 256GB"
+      ],
+      "price": 39999,
+      "max_price": 39999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "realme-c85-pro",
+      "name": "Realme C85 Pro",
+      "brand": "Realme",
+      "variants": [
+        "8GB + 128GB"
+      ],
+      "price": 36999,
+      "max_price": 36999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "realme-c100x",
+      "name": "Realme C100x",
+      "brand": "Realme",
+      "variants": [
+        "4GB + 256GB"
+      ],
+      "price": 35999,
+      "max_price": 35999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "256GB"
+      ],
+      "storages": [
+        "4GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "realme-c100i",
+      "name": "Realme C100i",
+      "brand": "Realme",
+      "variants": [
+        "4GB + 128GB"
+      ],
+      "price": 28999,
+      "max_price": 28999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "128GB"
+      ],
+      "storages": [
+        "4GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "realme-c71",
+      "name": "Realme C71",
+      "brand": "Realme",
+      "variants": [
+        "6GB+128GB"
+      ],
+      "price": 25999,
+      "max_price": 25999,
+      "original_price": null,
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "realme-note-80",
+      "name": "Realme Note 80",
+      "brand": "Realme",
+      "variants": [
+        "4GB+64GB"
+      ],
       "price": 21999,
       "max_price": 21999,
-      "original_price": null,
-      "rams": [],
-      "storages": [],
+      "original_price": 22499,
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "blackview-fort-1",
-      "name": "Blackview Fort 1",
-      "brand": "Blackview",
-      "variants": [],
-      "price": 21999,
-      "max_price": 21999,
+      "id": "realme-note-70",
+      "name": "Realme Note 70",
+      "brand": "Realme",
+      "variants": [
+        "6GB+128GB"
+      ],
+      "price": 23999,
+      "max_price": 23999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "blackview-wave-7c",
-      "name": "Blackview Wave 7C",
-      "brand": "Blackview",
-      "variants": [],
-      "price": 16999,
-      "max_price": 16999,
+      "id": "realme-note-60x",
+      "name": "Realme Note 60x",
+      "brand": "Realme",
+      "variants": [
+        "3GB+64GB"
+      ],
+      "price": 15999,
+      "max_price": 15999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "3GB",
+        "64GB"
+      ],
+      "storages": [
+        "3GB",
+        "64GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "blackview-wave-10c",
-      "name": "Blackview Wave 10C",
-      "brand": "Blackview",
-      "variants": [],
-      "price": 13999,
-      "max_price": 13999,
+      "id": "oppo-reno-15",
+      "name": "OPPO Reno 15",
+      "brand": "OPPO",
+      "variants": [
+        "12GB+512GB"
+      ],
+      "price": 89999,
+      "max_price": 89999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "12GB",
+        "512GB"
+      ],
+      "storages": [
+        "12GB",
+        "512GB"
+      ],
       "is_5g": false
     },
     {
-      "id": "blackview-wave-2c",
-      "name": "Blackview Wave 2C",
-      "brand": "Blackview",
-      "variants": [],
-      "price": 9999,
-      "max_price": 9999,
+      "id": "oppo-reno-15f",
+      "name": "OPPO Reno 15F",
+      "brand": "OPPO",
+      "variants": [
+        "8GB + 256GB"
+      ],
+      "price": 63999,
+      "max_price": 63999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "oppo-a6s-pro",
+      "name": "OPPO A6s Pro",
+      "brand": "OPPO",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 56999,
+      "max_price": 56999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "oppo-a6-pro-4g",
+      "name": "OPPO A6 Pro 4G",
+      "brand": "OPPO",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 51999,
+      "max_price": 51999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "oppo-a6",
+      "name": "OPPO A6",
+      "brand": "OPPO",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 46999,
+      "max_price": 46999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "oppo-a6x",
+      "name": "OPPO A6x",
+      "brand": "OPPO",
+      "variants": [
+        "6GB + 128GB"
+      ],
+      "price": 32499,
+      "max_price": 32499,
+      "original_price": null,
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "oppo-a6c",
+      "name": "OPPO A6c",
+      "brand": "OPPO",
+      "variants": [
+        "4GB + 64GB"
+      ],
+      "price": 24999,
+      "max_price": 24999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
       "is_5g": false
     },
     {
       "id": "zte-nubia-neo-5-gt",
       "name": "ZTE Nubia Neo 5 GT",
       "brand": "ZTE",
-      "variants": [],
+      "variants": [
+        "12GB + 256GB"
+      ],
       "price": 77999,
       "max_price": 77999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
       "is_5g": false
     },
     {
       "id": "zte-nubia-neo-5-5g",
       "name": "ZTE Nubia Neo 5 5G",
       "brand": "ZTE",
-      "variants": [],
+      "variants": [
+        "8GB - 256GB"
+      ],
       "price": 55999,
       "max_price": 55999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
       "is_5g": true
     },
     {
       "id": "zte-nubia-v80-design",
       "name": "ZTE Nubia V80 Design",
       "brand": "ZTE",
-      "variants": [],
+      "variants": [
+        "8GB+128GB"
+      ],
       "price": 29999,
       "max_price": 29999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
       "id": "zte-nubia-v80-max",
       "name": "ZTE Nubia V80 Max",
       "brand": "ZTE",
-      "variants": [],
+      "variants": [
+        "8GB+128GB"
+      ],
       "price": 29499,
       "max_price": 29499,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
       "id": "zte-nubia-a77",
       "name": "ZTE Nubia A77",
       "brand": "ZTE",
-      "variants": [],
+      "variants": [
+        "4GB + 128GB"
+      ],
       "price": 25999,
       "max_price": 25999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "128GB"
+      ],
+      "storages": [
+        "4GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
       "id": "zte-nubia-a57",
       "name": "ZTE Nubia A57",
       "brand": "ZTE",
-      "variants": [],
+      "variants": [
+        "4GB + 64GB"
+      ],
       "price": 22999,
       "max_price": 22999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
       "is_5g": false
     },
     {
       "id": "zte-nubia-a56",
       "name": "ZTE Nubia A56",
       "brand": "ZTE",
-      "variants": [],
+      "variants": [
+        "4GB+128GB"
+      ],
       "price": 16999,
       "max_price": 16999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "128GB"
+      ],
+      "storages": [
+        "4GB",
+        "128GB"
+      ],
       "is_5g": false
     },
     {
       "id": "zte-nubia-a36",
       "name": "ZTE Nubia A36",
       "brand": "ZTE",
-      "variants": [],
+      "variants": [
+        "4GB+64GB"
+      ],
       "price": 15999,
       "max_price": 15999,
       "original_price": null,
-      "rams": [],
-      "storages": [],
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "poco-f8-pro",
+      "name": "Poco F8 Pro",
+      "brand": "POCO",
+      "variants": [
+        "12GB+512GB"
+      ],
+      "price": 104999,
+      "max_price": 104999,
+      "original_price": null,
+      "rams": [
+        "12GB",
+        "512GB"
+      ],
+      "storages": [
+        "12GB",
+        "512GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "poco-x8-pro-max",
+      "name": "Poco X8 Pro Max",
+      "brand": "POCO",
+      "variants": [
+        "12GB + 256GB"
+      ],
+      "price": 83999,
+      "max_price": 83999,
+      "original_price": null,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "poco-x8-pro",
+      "name": "Poco X8 Pro",
+      "brand": "POCO",
+      "variants": [
+        "8GB + 256GB"
+      ],
+      "price": 65999,
+      "max_price": 65999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "poco-m8-pro",
+      "name": "POCO M8 Pro",
+      "brand": "POCO",
+      "variants": [
+        "8GB + 256GB"
+      ],
+      "price": 58999,
+      "max_price": 58999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "poco-m8s",
+      "name": "POCO M8s",
+      "brand": "POCO",
+      "variants": [
+        "6GB + 128GB"
+      ],
+      "price": 39999,
+      "max_price": 39999,
+      "original_price": null,
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "ai-nova-2-5g",
+      "name": "Ai+ Nova 2 5G",
+      "brand": "AI+",
+      "variants": [
+        "Ai+ Nova 2 5G - 4GB - 64GB"
+      ],
+      "price": 22999,
+      "max_price": 22999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
+      "is_5g": true
+    },
+    {
+      "id": "ai-pulse-2",
+      "name": "Ai+ Pulse 2",
+      "brand": "AI+",
+      "variants": [
+        "4GB + 64GB"
+      ],
+      "price": 19999,
+      "max_price": 19999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "blackview-fort-1",
+      "name": "Blackview Fort 1",
+      "brand": "Blackview",
+      "variants": [
+        "4GB + 128GB"
+      ],
+      "price": 21999,
+      "max_price": 21999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "128GB"
+      ],
+      "storages": [
+        "4GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "blackview-wave-7c",
+      "name": "Blackview Wave 7C",
+      "brand": "Blackview",
+      "variants": [
+        "4GB + 64GB"
+      ],
+      "price": 16999,
+      "max_price": 16999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "blackview-wave-10c",
+      "name": "Blackview Wave 10C",
+      "brand": "Blackview",
+      "variants": [
+        "4GB + 32GB"
+      ],
+      "price": 13999,
+      "max_price": 13999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "32GB"
+      ],
+      "storages": [
+        "4GB",
+        "32GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "blackview-wave-2c",
+      "name": "Blackview Wave 2C",
+      "brand": "Blackview",
+      "variants": [
+        "3GB + 32GB"
+      ],
+      "price": 9999,
+      "max_price": 9999,
+      "original_price": null,
+      "rams": [
+        "3GB",
+        "32GB"
+      ],
+      "storages": [
+        "3GB",
+        "32GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "tecno-camon-slim",
+      "name": "Tecno Camon Slim",
+      "brand": "Tecno",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 65999,
+      "max_price": 65999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "tecno-pova-8",
+      "name": "Tecno Pova 8",
+      "brand": "Tecno",
+      "variants": [
+        "Tecno Pova 8 - 8GB - 128GB"
+      ],
+      "price": 59999,
+      "max_price": 59999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "128GB"
+      ],
+      "storages": [
+        "8GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "tecno-pova-curve-2",
+      "name": "Tecno Pova Curve 2",
+      "brand": "Tecno",
+      "variants": [
+        "8GB + 256GB"
+      ],
+      "price": 52999,
+      "max_price": 52999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "tecno-spark-50-pro",
+      "name": "Tecno Spark 50 Pro",
+      "brand": "Tecno",
+      "variants": [
+        "Tecno Spark 50 Pro - 6GB - 128GB"
+      ],
+      "price": 47999,
+      "max_price": 47999,
+      "original_price": null,
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "tecno-pova-6",
+      "name": "Tecno Pova 6",
+      "brand": "Tecno",
+      "variants": [
+        "12GB+256GB"
+      ],
+      "price": 44990,
+      "max_price": 44990,
+      "original_price": null,
+      "rams": [
+        "12GB",
+        "256GB"
+      ],
+      "storages": [
+        "12GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "tecno-spark-40-pro",
+      "name": "Tecno Spark 40 Pro",
+      "brand": "Tecno",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 33999,
+      "max_price": 33999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "tecno-spark-50-4g",
+      "name": "Tecno Spark 50 4G",
+      "brand": "Tecno",
+      "variants": [
+        "6GB + 128GB"
+      ],
+      "price": 32999,
+      "max_price": 32999,
+      "original_price": null,
+      "rams": [
+        "6GB",
+        "128GB"
+      ],
+      "storages": [
+        "6GB",
+        "128GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "tecno-spark-30",
+      "name": "Tecno Spark 30",
+      "brand": "Tecno",
+      "variants": [
+        "8GB+256GB"
+      ],
+      "price": 29999,
+      "max_price": 29999,
+      "original_price": null,
+      "rams": [
+        "8GB",
+        "256GB"
+      ],
+      "storages": [
+        "8GB",
+        "256GB"
+      ],
+      "is_5g": false
+    },
+    {
+      "id": "tecno-spark-go-3",
+      "name": "Tecno Spark Go 3",
+      "brand": "Tecno",
+      "variants": [
+        "4GB+64GB"
+      ],
+      "price": 21999,
+      "max_price": 21999,
+      "original_price": null,
+      "rams": [
+        "4GB",
+        "64GB"
+      ],
+      "storages": [
+        "4GB",
+        "64GB"
+      ],
       "is_5g": false
     }
   ]
