@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEPSE Smart Stock Analyzer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Blogger/Embed Compatibility Reset */
+        :root { --primary-green: #10b981; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8fafc; 
+            color: #1e293b; 
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+        
+        /* Prevent Blogger CSS from breaking layouts */
+        .analyzer-container * { box-sizing: border-box; }
+        
+        .card { 
+            background: white; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 1rem; 
+            transition: transform 0.2s ease;
+        }
+        
+        .input-field { 
+            background: #ffffff !important; 
+            border: 1px solid #cbd5e1 !important; 
+            color: #1e293b !important; 
+            appearance: none;
+            outline: none;
+        }
+        .input-field:focus { 
+            border-color: var(--primary-green) !important; 
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1); 
+        }
+
+        .buy-gradient { background: linear-gradient(135deg, #22c55e, #16a34a); }
+        .hold-gradient { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+        .sell-gradient { background: linear-gradient(135deg, #f97316, #ea580c); }
+        .avoid-gradient { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        
+        /* Modal Style - Improved for Mobile */
+        .modal { 
+            display: none; 
+            position: fixed; 
+            z-index: 9999; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(15, 23, 42, 0.6); 
+            backdrop-filter: blur(4px); 
+        }
+        .modal-content { 
+            background: white; 
+            margin: 10% auto; 
+            padding: 1.5rem; 
+            width: 90%; 
+            max-width: 450px; 
+            border-radius: 1.25rem;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive adjustments for narrow Blogger sidebars or posts */
+        @media (max-width: 640px) {
+            .card { padding: 1.25rem !important; }
+            h1 { font-size: 1.5rem !important; }
+            .confidence-box { transform: scale(0.9); }
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-12 analyzer-container">
+
+    <!-- Guide Modal -->
+    <div id="guideModal" class="modal">
+        <div class="modal-content relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="flex items-center gap-2 mb-3">
+                <div class="p-2 bg-emerald-100 rounded-lg">
+                    <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg>
+                </div>
+                <h3 id="modalTitle" class="text-lg font-bold text-slate-800">Guide</h3>
+            </div>
+            <p id="modalBody" class="text-slate-600 text-sm leading-relaxed mb-4"></p>
+            <div class="p-3 bg-slate-50 border border-slate-100 rounded-lg text-[11px] text-slate-500 italic">
+                Sources: NepseAlpha, SSPro, or ShareSansar.
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="py-8 px-4 text-center bg-white border-b border-slate-100 mb-6">
+        <h1 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">NEPSE <span class="text-emerald-600">Smart Analyzer</span></h1>
+        <p class="text-slate-400 mt-1 text-[10px] font-bold uppercase tracking-[0.2em]">laxmannepal.com.np Tool</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <!-- LEFT SIDE: INPUT FORM -->
+            <section class="lg:col-span-5">
+                <div class="card p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-md font-bold text-slate-800 flex items-center gap-2">
+                            Technical Parameters
+                        </h2>
+                        <span class="text-[9px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full uppercase">Ready</span>
+                    </div>
+
+                    <form id="analyzerForm" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wide">
+                                    Symbol
+                                    <button type="button" onclick="showGuide('symbol')" class="text-emerald-500 hover:scale-110 transition-transform"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg></button>
+                                </label>
+                                <input type="text" id="symbol" placeholder="e.g. NABIL" class="input-field w-full p-2 rounded-lg text-xs font-semibold" required>
+                            </div>
+                            <div>
+                                <label class="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wide">
+                                    Sector
+                                    <button type="button" onclick="showGuide('sector')" class="text-emerald-500 hover:scale-110"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg></button>
+                                </label>
+                                <select id="sector" class="input-field w-full p-2 rounded-lg text-xs font-semibold">
+                                    <option value="Commercial Bank">Banking</option>
+                                    <option value="Hydropower">Hydropower</option>
+                                    <option value="Microfinance">Microfinance</option>
+                                    <option value="Life Insurance">Insurance</option>
+                                    <option value="Development Bank">Dev Bank</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wide">
+                                    Price (LTP)
+                                    <button type="button" onclick="showGuide('price')" class="text-emerald-500 hover:scale-110"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg></button>
+                                </label>
+                                <input type="number" id="price" placeholder="Current Price" class="input-field w-full p-2 rounded-lg text-xs font-semibold" required>
+                            </div>
+                            <div>
+                                <label class="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wide">
+                                    RSI Value
+                                    <button type="button" onclick="showGuide('rsi')" class="text-emerald-500 hover:scale-110"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg></button>
+                                </label>
+                                <input type="number" id="rsi" min="0" max="100" placeholder="0 - 100" class="input-field w-full p-2 rounded-lg text-xs font-semibold" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wide">
+                                MACD Signal
+                                <button type="button" onclick="showGuide('macd')" class="text-emerald-500 hover:scale-110"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg></button>
+                            </label>
+                            <select id="macd" class="input-field w-full p-2 rounded-lg text-xs font-semibold">
+                                <option value="bullish">Bullish Crossover (Golden)</option>
+                                <option value="bearish">Bearish Crossover (Deadly)</option>
+                                <option value="neutral" selected>Neutral / No Signal</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wide">
+                                    50 Day MA
+                                    <button type="button" onclick="showGuide('ma')" class="text-emerald-500 hover:scale-110"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg></button>
+                                </label>
+                                <input type="number" id="ma50" class="input-field w-full p-2 rounded-lg text-xs font-semibold" required>
+                            </div>
+                            <div>
+                                <label class="flex items-center text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wide">
+                                    200 Day MA
+                                </label>
+                                <input type="number" id="ma200" class="input-field w-full p-2 rounded-lg text-xs font-semibold" required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wide">
+                                    Volume
+                                    <button type="button" onclick="showGuide('volume')" class="text-emerald-500 hover:scale-110"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg></button>
+                                </label>
+                                <select id="volume" class="input-field w-full p-2 rounded-lg text-xs font-semibold">
+                                    <option value="increasing">High / Increasing</option>
+                                    <option value="stable" selected>Normal / Stable</option>
+                                    <option value="decreasing">Low / Decreasing</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wide">
+                                    Sector Trend
+                                    <button type="button" onclick="showGuide('sectorStrength')" class="text-emerald-500 hover:scale-110"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg></button>
+                                </label>
+                                <select id="sectorStrength" class="input-field w-full p-2 rounded-lg text-xs font-semibold">
+                                    <option value="strong">Bullish Sector</option>
+                                    <option value="neutral" selected>Sideways</option>
+                                    <option value="weak">Bearish Sector</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-wide">
+                                    Support
+                                    <button type="button" onclick="showGuide('sr')" class="text-emerald-500 hover:scale-110"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg></button>
+                                </label>
+                                <input type="number" id="support" placeholder="S1" class="input-field w-full p-2 rounded-lg text-xs font-semibold" required>
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 mb-1.5 block uppercase tracking-wide">Resistance</label>
+                                <input type="number" id="resistance" placeholder="R1" class="input-field w-full p-2 rounded-lg text-xs font-semibold" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg transition-all shadow-md active:scale-95 text-sm uppercase tracking-wider mt-2">
+                            Run Full Analysis
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- RIGHT SIDE: RESULTS -->
+            <section class="lg:col-span-7">
+                <div id="resultPlaceholder" class="card h-full flex flex-col items-center justify-center p-8 text-center bg-white border-dashed border-2 border-slate-200">
+                    <div class="mb-4 opacity-20">
+                        <svg class="w-16 h-16 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-slate-500 font-bold mb-1">Awaiting Data</h3>
+                    <p class="text-[11px] text-slate-400 max-w-[200px]">Input technical markers to generate your smart stock report.</p>
+                </div>
+
+                <div id="analysisDashboard" class="hidden space-y-4">
+                    <!-- Main Result Card -->
+                    <div class="card p-6 bg-white border-t-4 border-emerald-500" id="mainResultCard">
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                            <div class="text-center md:text-left">
+                                <span id="displaySector" class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">SECTOR</span>
+                                <h3 id="displaySymbol" class="text-3xl font-black text-slate-900 leading-none mb-2 mt-1 uppercase">SYMBOL</h3>
+                                <div id="decisionBadge" class="px-4 py-1.5 rounded text-[10px] font-black text-white uppercase tracking-widest shadow-sm">
+                                    SIGNAL
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-6">
+                                <!-- Gauge -->
+                                <div class="w-32 text-center">
+                                    <canvas id="gaugeChart"></canvas>
+                                    <p class="text-[8px] font-black text-slate-400 mt-1 uppercase tracking-tighter">Market Sentiment</p>
+                                </div>
+                                <!-- Confidence -->
+                                <div class="text-center confidence-box">
+                                    <div class="relative w-20 h-20 flex items-center justify-center mx-auto">
+                                        <svg class="w-full h-full transform -rotate-90">
+                                            <circle cx="40" cy="40" r="36" stroke="#f1f5f9" stroke-width="4" fill="transparent" />
+                                            <circle id="confidenceCircle" cx="40" cy="40" r="36" stroke="#10b981" stroke-width="6" fill="transparent" stroke-dasharray="226.2" stroke-dashoffset="226.2" class="transition-all duration-700" />
+                                        </svg>
+                                        <span id="confidenceValue" class="absolute text-sm font-black text-slate-800">0%</span>
+                                    </div>
+                                    <p class="text-[8px] font-black text-slate-400 mt-2 uppercase tracking-tighter">Confidence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Data Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="card p-4">
+                            <h4 class="text-[10px] font-black text-slate-400 mb-4 uppercase tracking-widest">Strength Matrix</h4>
+                            <div class="h-48">
+                                <canvas id="radarChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="card p-4 overflow-hidden">
+                            <h4 class="text-[10px] font-black text-slate-400 mb-4 uppercase tracking-widest">Signal Checklist</h4>
+                            <div class="space-y-2" id="breakdownList"></div>
+                        </div>
+                    </div>
+
+                    <!-- Rationale Card -->
+                    <div class="card p-6 bg-slate-50 border-none">
+                        <h4 class="text-slate-900 font-bold text-sm mb-4 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" /></svg>
+                            Key Observations
+                        </h4>
+                        <ul id="reasoningList" class="space-y-3 text-[12px] text-slate-600 font-medium"></ul>
+                        <div class="mt-6 pt-4 border-t border-slate-200">
+                            <p id="conclusionText" class="text-[12px] leading-relaxed italic text-slate-500"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        let gaugeChart = null;
+        let radarChart = null;
+
+        const guides = {
+            symbol: "Stock Ticker. e.g., NABIL, PCBL, UPPER. Use the standard NEPSE symbol.",
+            sector: "The group this stock belongs to. Banks act differently than Hydros or Microfinances.",
+            price: "LTP (Last Traded Price). Check the live market on your broker TMS or NepseAlpha.",
+            rsi: "Momentum indicator. RSI below 30 is 'Oversold' (Potential Buy), above 70 is 'Overbought' (Potential Sell).",
+            macd: "MACD lines crossing. Bullish: Blue line crosses above Red. Bearish: Blue line crosses below Red.",
+            ma: "Moving Averages. Price above 200MA usually indicates a long-term bull trend.",
+            volume: "Confirm movements with volume. Price rise on high volume is much more significant.",
+            sectorStrength: "Is the overall sector index (e.g., Banking Index) currently strong or weak?",
+            sr: "Support is where buyers step in. Resistance is where sellers usually appear. Use chart patterns to find these numbers."
+        };
+
+        function showGuide(key) {
+            document.getElementById('modalTitle').innerText = key.toUpperCase() + " Guide";
+            document.getElementById('modalBody').innerText = guides[key];
+            document.getElementById('guideModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('guideModal').style.display = 'none';
+        }
+
+        window.onclick = (event) => {
+            if (event.target == document.getElementById('guideModal')) closeModal();
+        };
+
+        document.getElementById('analyzerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const symbol = document.getElementById('symbol').value;
+            const sector = document.getElementById('sector').value;
+            const price = parseFloat(document.getElementById('price').value);
+            const rsi = parseFloat(document.getElementById('rsi').value);
+            const macd = document.getElementById('macd').value;
+            const ma50 = parseFloat(document.getElementById('ma50').value);
+            const ma200 = parseFloat(document.getElementById('ma200').value);
+            const volume = document.getElementById('volume').value;
+            const sectorStr = document.getElementById('sectorStrength').value;
+
+            let score = 0;
+            let breakdown = [];
+            let reasons = [];
+
+            // RSI logic
+            if (rsi < 35) { score += 3; breakdown.push({n:'RSI', s:'Oversold', c:'text-emerald-600'}); reasons.push("RSI suggests the stock is currently oversold. Potential bottom fishing zone."); }
+            else if (rsi > 65) { score -= 3; breakdown.push({n:'RSI', s:'Overbought', c:'text-red-500'}); reasons.push("RSI is in the danger zone (>65). Risk of short-term profit booking."); }
+            else { breakdown.push({n:'RSI', s:'Neutral', c:'text-slate-400'}); }
+
+            // MACD
+            if (macd === 'bullish') { score += 2; breakdown.push({n:'MACD', s:'Bullish Cross', c:'text-emerald-600'}); reasons.push("MACD golden crossover detected. Upside momentum is accelerating."); }
+            else if (macd === 'bearish') { score -= 2; breakdown.push({n:'MACD', s:'Bearish Cross', c:'text-red-500'}); reasons.push("MACD death cross detected. Downward pressure is increasing."); }
+
+            // MA
+            if (price > ma200) { score += 2; breakdown.push({n:'Trend', s:'Long-term Bull', c:'text-emerald-600'}); reasons.push("Stock is trading above its 200-day average, confirming a healthy uptrend."); }
+            else { score -= 2; breakdown.push({n:'Trend', s:'Bear Market', c:'text-red-500'}); reasons.push("Trading below 200-day average. The long-term outlook remains bearish."); }
+
+            // Sector & Volume
+            if (sectorStr === 'strong') score += 1;
+            if (volume === 'increasing') { score += 2; reasons.push("Volume is rising alongside price movements, validating the trend."); }
+
+            // Final Decision Logic
+            let finalSignal = "NEUTRAL";
+            let signalColor = "hold-gradient";
+            let borderColor = "#94a3b8";
+
+            if (score >= 5) { finalSignal = "STRONG BUY"; signalColor = "buy-gradient"; borderColor = "#10b981"; }
+            else if (score >= 2) { finalSignal = "BUY"; signalColor = "buy-gradient"; borderColor = "#22c55e"; }
+            else if (score <= -4) { finalSignal = "AVOID"; signalColor = "avoid-gradient"; borderColor = "#ef4444"; }
+            else if (score < 0) { finalSignal = "SELL / REDUCE"; signalColor = "sell-gradient"; borderColor = "#f59e0b"; }
+
+            // Update UI
+            document.getElementById('resultPlaceholder').classList.add('hidden');
+            document.getElementById('analysisDashboard').classList.remove('hidden');
+            document.getElementById('mainResultCard').style.borderColor = borderColor;
+            
+            document.getElementById('displaySymbol').innerText = symbol;
+            document.getElementById('displaySector').innerText = sector;
+            
+            const badge = document.getElementById('decisionBadge');
+            badge.innerText = finalSignal;
+            badge.className = `px-4 py-1.5 rounded text-[10px] font-black text-white uppercase tracking-widest shadow-sm ${signalColor}`;
+
+            // Confidence
+            const confidence = Math.max(10, Math.min(98, Math.round(((score + 8) / 16) * 100)));
+            document.getElementById('confidenceValue').innerText = confidence + "%";
+            const circumference = 226.2;
+            document.getElementById('confidenceCircle').style.strokeDashoffset = circumference - (confidence / 100) * circumference;
+
+            // List Breakdown
+            const bList = document.getElementById('breakdownList');
+            bList.innerHTML = "";
+            breakdown.forEach(item => {
+                bList.innerHTML += `
+                    <div class="flex justify-between items-center p-2 bg-slate-50 rounded">
+                        <span class="text-[9px] font-bold text-slate-500">${item.n}</span>
+                        <span class="text-[10px] font-black ${item.c} uppercase">${item.s}</span>
+                    </div>
+                `;
+            });
+
+            // Reasoning
+            const rList = document.getElementById('reasoningList');
+            rList.innerHTML = reasons.map(r => `<li class="flex gap-2"><span>•</span> ${r}</li>`).join("");
+
+            document.getElementById('conclusionText').innerText = score > 0 
+                ? "Summary: Technical structure is improving. Monitor volume closely for continuation."
+                : "Summary: Risks outweigh rewards at current levels. Wait for a clearer reversal signal.";
+
+            updateCharts(score, rsi, volume, sectorStr, macd);
+        });
+
+        function updateCharts(score, rsi, volume, sectorStr, macd) {
+            const gaugeValue = ((score + 8) / 16) * 100;
+            if (gaugeChart) gaugeChart.destroy();
+            gaugeChart = new Chart(document.getElementById('gaugeChart'), {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [gaugeValue, 100 - gaugeValue],
+                        backgroundColor: [score >= 0 ? '#10b981' : '#f43f5e', '#f1f5f9'],
+                        borderWidth: 0, circumference: 180, rotation: 270
+                    }]
+                },
+                options: { cutout: '80%', plugins: { legend: { display: false } } }
+            });
+
+            if (radarChart) radarChart.destroy();
+            radarChart = new Chart(document.getElementById('radarChart'), {
+                type: 'radar',
+                data: {
+                    labels: ['Trend', 'RSI', 'Volume', 'Sector', 'MACD'],
+                    datasets: [{
+                        data: [
+                            score > 0 ? 80 : 40,
+                            rsi < 40 ? 90 : (rsi > 60 ? 30 : 60),
+                            volume === 'increasing' ? 85 : 50,
+                            sectorStr === 'strong' ? 80 : 30,
+                            macd === 'bullish' ? 90 : 20
+                        ],
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        borderColor: '#10b981',
+                        borderWidth: 1,
+                        pointRadius: 2
+                    }]
+                },
+                options: {
+                    scales: { r: { min: 0, max: 100, ticks: { display: false }, grid: { color: '#f1f5f9' }, pointLabels: { font: { size: 9, weight: '700' } } } },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+    </script>
+</body>
+</html><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

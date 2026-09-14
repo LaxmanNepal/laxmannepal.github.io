@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Generator · laxmannepal</title>
+  <style>
+    /* ===== Gaya sesuai blog modern (laxmannepal.com.np) ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --primary: #1e73be;
+      --primary-light: #eef4fc;
+      --text-dark: #333;
+      --text-soft: #555;
+      --border-light: #eaeef2;
+      --card-bg: #ffffff;
+      --bg-light: #f5f7fa;
+      --shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,20,40,0.05);
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+    .generator-card {
+      max-width: 1100px;
+      width: 100%;
+      background: var(--card-bg);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 2.2rem 2rem;
+      border: 1px solid var(--border-light);
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      letter-spacing: -0.02em;
+      color: #222;
+    }
+    .subhead {
+      color: var(--text-soft);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      border-bottom: 1px dashed var(--border-light);
+      padding-bottom: 1rem;
+    }
+    /* Layar unggah pertama */
+    .upload-first {
+      text-align: center;
+      padding: 3.5rem 1.5rem;
+      border: 2px dashed #cbd5e0;
+      border-radius: 32px;
+      background-color: #f9fcff;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-bottom: 0.5rem;
+    }
+    .upload-first:hover {
+      background-color: #f1f7fe;
+      border-color: var(--primary);
+    }
+    .upload-first svg {
+      width: 56px;
+      height: 56px;
+      fill: var(--primary);
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+    .upload-first p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #1a2b3c;
+    }
+    .upload-first small {
+      color: #6b7a88;
+      font-size: 0.9rem;
+    }
+    #fileInputElem {
+      display: none;
+    }
+    /* Panel editor */
+    .editor-panel {
+      display: none;
+    }
+    /* area preview */
+    .preview-section {
+      margin-bottom: 2.5rem;
+    }
+    .preview-wrapper {
+      background: #f2f5f8;
+      border-radius: 20px;
+      padding: 1.5rem;
+      border: 1px solid var(--border-light);
+    }
+    .ratio-keeper {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      transition: padding-bottom 0.2s;
+      background-color: #d9e2ec;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .image_container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: none;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #cfddee;
+    }
+    .image_logo {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      font-size: clamp(1.2rem, 5vw, 2.5rem);
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      max-width: 50%;
+      z-index: 5;
+    }
+    .image_logo img {
+      max-height: 70px;
+      width: auto;
+      display: block;
+      max-width: 100%;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+    }
+    .image_headline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 5% 6%;
+      background: linear-gradient(0deg, #0b2a4a 10%, rgba(0,0,0,0) 100%);
+      color: white;
+      z-index: 5;
+    }
+    .image_subheadline_text {
+      display: inline-block;
+      background: #d43f3f;
+      padding: 0.3rem 1.4rem;
+      font-weight: 600;
+      font-size: clamp(0.9rem, 3vw, 1.2rem);
+      border-radius: 40px;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .image_headline_text {
+      font-weight: 700;
+      line-height: 1.35;
+      margin-top: 0.6rem;
+      word-break: break-word;
+      font-size: clamp(1.3rem, 5vw, 2.4rem);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .image_headline_footer_text {
+      text-align: right;
+      margin-top: 1.2rem;
+      font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+      font-weight: 500;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+    .image_headline_footer_text span {
+      display: block;
+    }
+    .image_headline_footer_text span:last-child {
+      font-weight: 700;
+      font-size: 1.1em;
+    }
+    .download_button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .elementskit_button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      height: 52px;
+      padding: 0 2.8rem;
+      background-color: var(--primary);
+      color: white;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      box-shadow: 0 6px 14px rgba(30,115,190,0.25);
+    }
+    .elementskit_button:hover {
+      background-color: #155a9c;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(30,115,190,0.3);
+    }
+    .elementskit_button svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+    .hidden {
+      display: none !important;
+    }
+    .control-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem 1.8rem;
+      margin-top: 2rem;
+    }
+    .control-group {
+      background: #fafcfd;
+      border-radius: 18px;
+      padding: 1.2rem 1.4rem;
+      border: 1px solid var(--border-light);
+    }
+    .control-group h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1.1rem;
+      color: #1f3a5f;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      border-left: 4px solid var(--primary);
+      padding-left: 0.7rem;
+    }
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+      color: #2c3e50;
+    }
+    .input-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .custom_input,
+    .custom_select {
+      background: white;
+      border: 1px solid #d1dce8;
+      border-radius: 14px;
+      padding: 0.7rem 1rem;
+      font-size: 0.95rem;
+      width: 100%;
+      transition: 0.15s;
+      color: #1e2a3a;
+    }
+    .custom_input:focus,
+    .custom_select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(30,115,190,0.15);
+    }
+    input[type="file"] {
+      padding: 0.5rem 0.8rem;
+      background: #f4f8ff;
+    }
+    input[type="color"] {
+      height: 48px;
+      cursor: pointer;
+      padding: 4px 6px;
+    }
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--primary);
+    }
+    .radio-group {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      background: #f2f6fb;
+      padding: 0.6rem 1rem;
+      border-radius: 40px;
+    }
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-weight: 500;
+      color: #1e3b5c;
+      font-size: 0.9rem;
+    }
+    .form-group span {
+      color: var(--primary);
+      font-weight: 600;
+      margin-left: 4px;
+    }
+    /* Notifikasi error */
+    .error-toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #d43f3f;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 500;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      z-index: 9999;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="generator-card">
+    <h1>🖼️ Image Generator</h1>
+    <div class="subhead">Start by uploading a background image — style inspired by laxmannepal.com.np</div>
+
+    <!-- LAYAR AWAL: UPLOAD -->
+    <div id="uploadFirst" class="upload-first">
+      <svg viewBox="0 0 24 24"><path d="M19,10H17V7H14V5H17V2H19V5H22V7H19V10M14,7H9V14H14V7M7,5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V13.5L14.5,9L10,13.5L7,10.5L5,12.5V5H7Z"/></svg>
+      <p>Click to upload a background image</p>
+      <small>JPG, PNG or WebP</small>
+      <input type="file" id="fileInputElem" accept="image/*">
+    </div>
+
+    <!-- PANEL EDITOR (tersembunyi sampai upload) -->
+    <div id="editorPanel" class="editor-panel">
+      <!-- Preview (tetap pakai div untuk tampilan) -->
+      <div class="preview-section">
+        <div class="preview-wrapper">
+          <div class="ratio-keeper" id="ratioKeeper" style="padding-bottom: 100%;">
+            <div class="image_container" id="previewContainer">
+              <div class="image_logo" id="logoContainer">
+                <span id="logoFallback">LOGO</span>
+                <img id="logoImage" class="hidden" src="https://raw.githubusercontent.com/spaceback99/Image-Generator-BARBEQUE-/refs/heads/main/Logo%20Gila%20Temax%20614x128.png" alt="logo">
+              </div>
+              <div class="image_headline" id="headlineContainer">
+                <div class="image_subheadline_text" id="subheadlineDisplay">Breaking News !</div>
+                <div class="image_headline_text" id="headlineDisplay">WE'RE EXCITED TO TELL YOU YOUR TITLE WILL BE HERE</div>
+                <div class="image_headline_footer_text" id="footerDisplay">
+                  <span id="footerLine">YOUR NAME</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="download_button">
+          <button class="elementskit_button" id="downloadBtn">
+            <svg viewBox="0 0 24 24"><path d="M15,9H5V5H15M12,19A3,3 0 0,1 9,16A3,3 0 0,1 12,13A3,3 0 0,1 15,16A3,3 0 0,1 12,19M17,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7L17,3Z"></path></svg>
+            Download Image
+          </button>
+        </div>
+      </div>
+
+      <!-- Kontrol dalam grid -->
+      <div class="control-grid">
+        <!-- Gambar -->
+        <div class="control-group">
+          <h3>Images</h3>
+          <div class="form-group">
+            <label>Change Background</label>
+            <input class="custom_input" type="file" id="bgChangeUpload" accept="image/*">
+          </div>
+          <div class="form-group">
+            <label>Logo (optional)</label>
+            <input class="custom_input" type="file" id="logoUpload" accept="image/*">
+          </div>
+        </div>
+
+        <!-- Teks -->
+        <div class="control-group">
+          <h3>Text</h3>
+          <div class="form-group">
+            <label>Headline</label>
+            <input class="custom_input" type="text" id="headlineInput" value="WE'RE EXCITED TO TELL YOU YOUR TITLE WILL BE HERE">
+          </div>
+          <div class="form-group">
+            <label>Subheadline</label>
+            <input class="custom_input" type="text" id="subheadlineInput" value="Breaking News !">
+          </div>
+          <div class="form-group">
+            <label>Footer</label>
+            <input class="custom_input" type="text" id="footerInput" value="YOUR NAME">
+          </div>
+        </div>
+
+        <!-- Ukuran Font -->
+        <div class="control-group">
+          <h3>Font Size</h3>
+          <div class="form-group">
+            <label>Headline <span id="headlineSizeVal">36</span>px</label>
+            <input type="range" id="headlineSize" min="16" max="64" value="36" step="1">
+          </div>
+          <div class="form-group">
+            <label>Subheadline <span id="subSizeVal">20</span>px</label>
+            <input type="range" id="subheadlineSize" min="12" max="48" value="20" step="1">
+          </div>
+          <div class="form-group">
+            <label>Footer <span id="footerSizeVal">18</span>px</label>
+            <input type="range" id="footerSize" min="10" max="36" value="18" step="1">
+          </div>
+        </div>
+
+        <!-- Warna -->
+        <div class="control-group">
+          <h3>Colors</h3>
+          <div class="form-group">
+            <label>Headline Text</label>
+            <input class="custom_input" type="color" id="headlineColor" value="#ffffff">
+          </div>
+          <div class="form-group">
+            <label>Subheadline BG</label>
+            <input class="custom_input" type="color" id="bgColor2" value="#d43f3f">
+          </div>
+          <div class="form-group">
+            <label>Bottom Gradient</label>
+            <input class="custom_input" type="color" id="bgColor1" value="#0b2a4a">
+          </div>
+        </div>
+
+        <!-- Rasio & Crop -->
+        <div class="control-group">
+          <h3>Canvas & Crop</h3>
+          <div class="form-group">
+            <label>Aspect Ratio</label>
+            <select class="custom_select" id="aspectRatio">
+              <option value="1">1:1 (square)</option>
+              <option value="1.7777777778">16:9 (landscape)</option>
+              <option value="1.5">3:2</option>
+              <option value="1.3333333333">4:3</option>
+              <option value="0.5625">9:16 (portrait)</option>
+              <option value="0.75">2:3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Background Fit</label>
+            <div class="radio-group">
+              <label><input type="radio" name="bgSize" value="cover" checked> Cover</label>
+              <label><input type="radio" name="bgSize" value="contain"> Contain</label>
+              <label><input type="radio" name="bgSize" value="100% 100%"> Stretch</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Position</label>
+            <select class="custom_select" id="bgPosition">
+              <option value="center">Center</option>
+              <option value="top">Top</option>
+              <option value="bottom">Bottom</option>
+              <option value="left">Left</option>
+              <option value="right">Right</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast error -->
+  <div id="errorToast" class="error-toast">⚠️ Download failed. Please try again or check console.</div>
+
+  <script>
+    (function() {
+      // Elemen UI
+      const uploadFirst = document.getElementById('uploadFirst');
+      const editorPanel = document.getElementById('editorPanel');
+      const fileInputElem = document.getElementById('fileInputElem');
+      const previewContainer = document.getElementById('previewContainer');
+      const ratioKeeper = document.getElementById('ratioKeeper');
+      const errorToast = document.getElementById('errorToast');
+
+      // Input ganti background di editor
+      const bgChangeUpload = document.getElementById('bgChangeUpload');
+      // Logo
+      const logoUpload = document.getElementById('logoUpload');
+      const logoFallback = document.getElementById('logoFallback');
+      const logoImage = document.getElementById('logoImage');
+
+      // Input teks
+      const headlineInput = document.getElementById('headlineInput');
+      const subheadlineInput = document.getElementById('subheadlineInput');
+      const footerInput = document.getElementById('footerInput');
+
+      // Warna
+      const bgColor1 = document.getElementById('bgColor1');
+      const bgColor2 = document.getElementById('bgColor2');
+      const headlineColor = document.getElementById('headlineColor');
+
+      // Slider ukuran
+      const headlineSize = document.getElementById('headlineSize');
+      const subheadlineSize = document.getElementById('subheadlineSize');
+      const footerSize = document.getElementById('footerSize');
+      const headlineSizeVal = document.getElementById('headlineSizeVal');
+      const subSizeVal = document.getElementById('subSizeVal');
+      const footerSizeVal = document.getElementById('footerSizeVal');
+
+      // Aspect ratio & crop
+      const aspectRatio = document.getElementById('aspectRatio');
+      const bgSizeRadios = document.getElementsByName('bgSize');
+      const bgPosition = document.getElementById('bgPosition');
+
+      // Elemen tampilan
+      const headlineDisplay = document.getElementById('headlineDisplay');
+      const subheadlineDisplay = document.getElementById('subheadlineDisplay');
+      const footerLine = document.getElementById('footerLine');
+
+      // Variabel untuk menyimpan dataURL gambar
+      let backgroundDataURL = null;
+      let logoDataURL = null;
+
+      // Helper: set background image dari file (simpan dataURL)
+      function setBackgroundImage(file) {
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(ev) {
+            backgroundDataURL = ev.target.result;
+            previewContainer.style.backgroundImage = `url('${backgroundDataURL}')`;
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+
+      // Upload awal: tampilkan editor & set bg
+      fileInputElem.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          setBackgroundImage(file);
+          uploadFirst.style.display = 'none';
+          editorPanel.style.display = 'block';
+        }
+      });
+
+      uploadFirst.addEventListener('click', function() {
+        fileInputElem.click();
+      });
+
+      // Ganti background di dalam editor
+      bgChangeUpload.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) setBackgroundImage(file);
+      });
+
+      // Logo
+      logoUpload.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(ev) {
+            logoDataURL = ev.target.result;
+            logoImage.src = logoDataURL;
+            logoImage.classList.remove('hidden');
+            logoFallback.classList.add('hidden');
+          };
+          reader.readAsDataURL(file);
+        } else {
+          logoDataURL = null;
+          logoImage.classList.add('hidden');
+          logoFallback.classList.remove('hidden');
+        }
+      });
+
+      // Update teks
+      function updateTexts() {
+        headlineDisplay.textContent = headlineInput.value.trim() || "WE'RE EXCITED TO TELL YOU YOUR TITLE WILL BE HERE";
+        subheadlineDisplay.textContent = subheadlineInput.value.trim() || "Breaking News !";
+        footerLine.textContent = footerInput.value.trim() || "YOUR NAME";
+      }
+      headlineInput.addEventListener('input', updateTexts);
+      subheadlineInput.addEventListener('input', updateTexts);
+      footerInput.addEventListener('input', updateTexts);
+
+      // Gradient bawah
+      function updateHeadlineBackground() {
+        const color = bgColor1.value;
+        document.querySelector('.image_headline').style.background = `linear-gradient(0deg, ${color} 10%, rgba(0,0,0,0) 100%)`;
+      }
+      bgColor1.addEventListener('input', updateHeadlineBackground);
+      updateHeadlineBackground();
+
+      // Subheadline background
+      function updateSubheadlineColor() {
+        subheadlineDisplay.style.backgroundColor = bgColor2.value;
+      }
+      bgColor2.addEventListener('input', updateSubheadlineColor);
+      updateSubheadlineColor();
+
+      // Headline text color
+      function updateHeadlineTextColor() {
+        headlineDisplay.style.color = headlineColor.value;
+      }
+      headlineColor.addEventListener('input', updateHeadlineTextColor);
+      updateHeadlineTextColor();
+
+      // Ukuran font
+      function updateHeadlineFontSize() {
+        const val = headlineSize.value;
+        headlineSizeVal.textContent = val;
+        headlineDisplay.style.fontSize = val + 'px';
+      }
+      headlineSize.addEventListener('input', updateHeadlineFontSize);
+      updateHeadlineFontSize();
+
+      function updateSubheadlineFontSize() {
+        const val = subheadlineSize.value;
+        subSizeVal.textContent = val;
+        subheadlineDisplay.style.fontSize = val + 'px';
+      }
+      subheadlineSize.addEventListener('input', updateSubheadlineFontSize);
+      updateSubheadlineFontSize();
+
+      function updateFooterFontSize() {
+        const val = footerSize.value;
+        footerSizeVal.textContent = val;
+        footerLine.style.fontSize = val + 'px';
+      }
+      footerSize.addEventListener('input', updateFooterFontSize);
+      updateFooterFontSize();
+
+      // Rasio aspek
+      function updateAspectRatio() {
+        const ratio = parseFloat(aspectRatio.value);
+        const paddingBottom = (1 / ratio) * 100;
+        ratioKeeper.style.paddingBottom = paddingBottom + '%';
+      }
+      aspectRatio.addEventListener('change', updateAspectRatio);
+      updateAspectRatio();
+
+      // Background size & position (untuk preview)
+      function updateBgSettings() {
+        let sizeValue = 'cover';
+        for (let radio of bgSizeRadios) {
+          if (radio.checked) {
+            sizeValue = radio.value;
+            break;
+          }
+        }
+        previewContainer.style.backgroundSize = sizeValue;
+        previewContainer.style.backgroundPosition = bgPosition.value;
+      }
+      for (let radio of bgSizeRadios) {
+        radio.addEventListener('change', updateBgSettings);
+      }
+      bgPosition.addEventListener('change', updateBgSettings);
+      updateBgSettings();
+
+      // Fungsi download dengan canvas manual
+      async function downloadImage() {
+        // Ambil nilai terkini
+        const ratio = parseFloat(aspectRatio.value);
+        const width = 1000; // base width
+        const height = Math.round(width / ratio);
+
+        // Buat canvas
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+
+        // 1. Gambar background
+        if (backgroundDataURL) {
+          const bgImg = new Image();
+          bgImg.crossOrigin = 'anonymous';
+          bgImg.src = backgroundDataURL;
+          await new Promise((resolve, reject) => {
+            bgImg.onload = () => {
+              // Tentukan ukuran dan posisi sesuai fit/cover
+              const fit = getSizeAndPosition(bgImg.width, bgImg.height, width, height);
+              ctx.drawImage(bgImg, fit.sx, fit.sy, fit.sw, fit.sh, fit.dx, fit.dy, fit.dw, fit.dh);
+              resolve();
+            };
+            bgImg.onerror = reject;
+          });
+        } else {
+          // Fallback warna abu-abu
+          ctx.fillStyle = '#cfddee';
+          ctx.fillRect(0, 0, width, height);
+        }
+
+        // 2. Gambar logo
+        if (logoDataURL) {
+          const logoImg = new Image();
+          logoImg.crossOrigin = 'anonymous';
+          logoImg.src = logoDataURL;
+          await new Promise((resolve, reject) => {
+            logoImg.onload = () => {
+              const logoMaxWidth = width * 0.3; // maks 30% lebar
+              const logoMaxHeight = height * 0.15; // maks 15% tinggi
+              let logoW = logoImg.width;
+              let logoH = logoImg.height;
+              if (logoW > logoMaxWidth) {
+                logoH = (logoMaxWidth / logoW) * logoH;
+                logoW = logoMaxWidth;
+              }
+              if (logoH > logoMaxHeight) {
+                logoW = (logoMaxHeight / logoH) * logoW;
+                logoH = logoMaxHeight;
+              }
+              ctx.drawImage(logoImg, width * 0.05, height * 0.05, logoW, logoH);
+              resolve();
+            };
+            logoImg.onerror = resolve; // skip jika gagal
+          });
+        }
+
+        // 3. Gradient bottom
+        const gradient = ctx.createLinearGradient(0, height * 0.7, 0, height);
+        gradient.addColorStop(0, 'rgba(0,0,0,0)');
+        gradient.addColorStop(1, bgColor1.value);
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, height * 0.7, width, height * 0.3);
+
+        // 4. Subheadline background
+        const subText = subheadlineInput.value.trim() || "Breaking News !";
+        ctx.font = `600 ${Math.round(height * 0.03)}px 'Inter', sans-serif`;
+        const subMetrics = ctx.measureText(subText);
+        const subPadding = height * 0.02;
+        const subX = width * 0.06;
+        const subY = height * 0.8;
+        ctx.fillStyle = bgColor2.value;
+        ctx.beginPath();
+        ctx.roundRect(subX - subPadding, subY - height * 0.04, subMetrics.width + subPadding * 2, height * 0.05, height * 0.025);
+        ctx.fill();
+
+        // 5. Subheadline teks
+        ctx.fillStyle = '#ffffff';
+        ctx.fillText(subText, subX, subY);
+
+        // 6. Headline
+        const headlineText = headlineInput.value.trim() || "WE'RE EXCITED TO TELL YOU YOUR TITLE WILL BE HERE";
+        const headlineFontSize = parseInt(headlineSize.value);
+        ctx.font = `700 ${Math.round(height * headlineFontSize / 700)}px 'Inter', sans-serif`;
+        ctx.fillStyle = headlineColor.value;
+        const headlineX = width * 0.06;
+        const headlineY = height * 0.87;
+        wrapText(ctx, headlineText, headlineX, headlineY, width * 0.88, height * 0.06);
+
+        // 7. Footer
+        const footerText = footerInput.value.trim() || "YOUR NAME";
+        const footerFontSize = parseInt(footerSize.value);
+        ctx.font = `500 ${Math.round(height * footerFontSize / 700)}px 'Inter', sans-serif`;
+        ctx.fillStyle = '#ffffff';
+        ctx.textAlign = 'right';
+        ctx.fillText(footerText, width * 0.94, height * 0.96);
+        ctx.textAlign = 'left'; // reset
+
+        // Trigger download
+        canvas.toBlob((blob) => {
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.download = `image-${Date.now()}.png`;
+          link.href = url;
+          link.click();
+          URL.revokeObjectURL(url);
+        }, 'image/png');
+      }
+
+      // Helper untuk menghitung posisi background
+      function getSizeAndPosition(imgW, imgH, canvasW, canvasH) {
+        let sizeMode = 'cover';
+        for (let radio of bgSizeRadios) {
+          if (radio.checked) {
+            sizeMode = radio.value;
+            break;
+          }
+        }
+        const pos = bgPosition.value;
+        let sx = 0, sy = 0, sw = imgW, sh = imgH, dx = 0, dy = 0, dw = canvasW, dh = canvasH;
+
+        if (sizeMode === 'cover') {
+          const scale = Math.max(canvasW / imgW, canvasH / imgH);
+          sw = imgW;
+          sh = imgH;
+          dw = imgW * scale;
+          dh = imgH * scale;
+          dx = (canvasW - dw) / 2;
+          dy = (canvasH - dh) / 2;
+        } else if (sizeMode === 'contain') {
+          const scale = Math.min(canvasW / imgW, canvasH / imgH);
+          sw = imgW;
+          sh = imgH;
+          dw = imgW * scale;
+          dh = imgH * scale;
+          dx = (canvasW - dw) / 2;
+          dy = (canvasH - dh) / 2;
+        } else if (sizeMode === '100% 100%') {
+          dw = canvasW;
+          dh = canvasH;
+          dx = 0;
+          dy = 0;
+        }
+
+        // Terapkan posisi
+        if (pos === 'top') dy = 0;
+        else if (pos === 'bottom') dy = canvasH - dh;
+        else if (pos === 'left') dx = 0;
+        else if (pos === 'right') dx = canvasW - dw;
+
+        return { sx, sy, sw, sh, dx, dy, dw, dh };
+      }
+
+      // Helper untuk wrap teks
+      function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+        const words = text.split(' ');
+        let line = '';
+        for (let n = 0; n < words.length; n++) {
+          const testLine = line + words[n] + ' ';
+          const metrics = ctx.measureText(testLine);
+          const testWidth = metrics.width;
+          if (testWidth > maxWidth && n > 0) {
+            ctx.fillText(line, x, y);
+            line = words[n] + ' ';
+            y += lineHeight;
+          } else {
+            line = testLine;
+          }
+        }
+        ctx.fillText(line, x, y);
+      }
+
+      // Event download
+      document.getElementById('downloadBtn').addEventListener('click', downloadImage);
+
+      // Inisialisasi teks
+      updateTexts();
+
+      // Tambahkan method roundRect
+      CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+        if (w < 2 * r) r = w / 2;
+        if (h < 2 * r) r = h / 2;
+        this.moveTo(x + r, y);
+        this.lineTo(x + w - r, y);
+        this.quadraticCurveTo(x + w, y, x + w, y + r);
+        this.lineTo(x + w, y + h - r);
+        this.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+        this.lineTo(x + r, y + h);
+        this.quadraticCurveTo(x, y + h, x, y + h - r);
+        this.lineTo(x, y + r);
+        this.quadraticCurveTo(x, y, x + r, y);
+        this.closePath();
+        return this;
+      };
+    })();
+  </script>
+
+  <!-- Google Fonts Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700&display=swap" rel="stylesheet">
+</body>
+</html><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

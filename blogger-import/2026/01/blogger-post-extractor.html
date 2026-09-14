@@ -1,0 +1,171 @@
+<style>
+  
+
+  
+  
+
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    outline: none;
+    background: #1a1a1a;
+    color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  input:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  }
+
+  button {
+    background: linear-gradient(90deg, #00d4ff, #0073e6);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  button:hover {
+    background: linear-gradient(90deg, #00b8d4, #005bb5);
+    transform: scale(1.03);
+  }
+
+  #resultContainer {
+    display: none;
+    margin-top: 20px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    resize: none;
+    outline: none;
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+
+  textarea:focus {
+    border-color: #00d4ff;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .alert {
+    color: #ff5555;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .how-to-use {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .how-to-use h2 {
+    color: #00ffcc;
+    margin-bottom: 10px;
+  }
+
+  .how-to-use ol {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.6;
+  }
+
+  .how-to-use li {
+    margin-bottom: 8px;
+  }
+</style>
+
+  <div class="container">
+    
+    <input id="blogUrl" placeholder="Enter Blogger Post URL https://" />
+    <button id="generateBtn">Extract Post</button>
+
+    <!--Result Section-->
+    <div id="resultContainer">
+      <textarea id="html-code" readonly=""></textarea>
+      <button id="copy-code">Copy Code</button>
+      <button id="hide-result">Close</button>
+    </div>
+    <p class="alert hidden" id="errorMessage">Error extracting the post. Please check the URL and try again.</p>
+
+ 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const generateBtn = document.getElementById('generateBtn');
+    const copyCodeBtn = document.getElementById('copy-code');
+    const hideResultBtn = document.getElementById('hide-result');
+    const errorMessage = document.getElementById('errorMessage');
+    const resultContainer = document.getElementById('resultContainer');
+    const htmlCode = document.getElementById('html-code');
+    const blogUrlInput = document.getElementById('blogUrl');
+
+    generateBtn.addEventListener('click', function () {
+      const postUrl = blogUrlInput.value.trim();
+
+      if (!postUrl) {
+        alert('Please enter a valid Blogger post URL.');
+        return;
+      }
+
+      const apiKey = 'AIzaSyDddIhZZzHxb0VY7qdG0pUis9NezhLjFM8';
+
+      fetch(`https://www.googleapis.com/blogger/v3/blogs/byurl?url=${encodeURIComponent(postUrl)}&key=${apiKey}`)
+        .then(response => response.json())
+        .then(data => {
+          if (!data.id) {
+            throw new Error('Blog not found.');
+          }
+          const blogId = data.id;
+          const path = new URL(postUrl).pathname;
+
+          return fetch(`https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts/bypath?path=${encodeURIComponent(path)}&key=${apiKey}`);
+        })
+        .then(response => response.json())
+        .then(post => {
+          if (post && post.title && post.content) {
+            htmlCode.value = `<div class="post"><h2>${post.title}</h2><div>${post.content}</div></div>`;
+            resultContainer.style.display = 'block';
+            errorMessage.classList.add('hidden');
+          } else {
+            errorMessage.textContent = 'Failed to retrieve post content. Please check the URL and try again.';
+            errorMessage.classList.remove('hidden');
+          }
+        })
+        .catch(() => {
+          errorMessage.textContent = 'Error extracting the post. Please check the URL and try again.';
+          errorMessage.classList.remove('hidden');
+        });
+    });
+
+    copyCodeBtn.addEventListener('click', function () {
+      htmlCode.select();
+      document.execCommand('copy');
+      alert('Code copied to clipboard');
+    });
+
+    hideResultBtn.addEventListener('click', function () {
+      resultContainer.style.display = 'none';
+    });
+  });
+</script>
+
+<div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

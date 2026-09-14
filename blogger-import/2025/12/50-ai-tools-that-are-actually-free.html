@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Directory</title>
+    <style>
+        /* Simple Blogger-Friendly CSS */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .ai-directory {
+            width: 100%;
+        }
+        
+        .ai-header {
+            text-align: center;
+            margin: 0 0 25px 0;
+            padding: 0;
+        }
+        
+        .ai-title {
+            color: #2c3e50;
+            font-size: 24px;
+            margin: 0 0 10px 0;
+            padding: 0;
+        }
+        
+        .ai-subtitle {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .ai-category {
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+        
+        .category-title {
+            color: #2980b9;
+            font-size: 18px;
+            margin: 0 0 15px 0;
+            padding: 0 0 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .tool-box {
+            background: #f8f9fa;
+            margin: 0 0 10px 0;
+            padding: 12px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .tool-box:hover {
+            background: #e8f4fc;
+            cursor: pointer;
+        }
+        
+        .tool-name {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 15px;
+            margin: 0 0 5px 0;
+            padding: 0;
+        }
+        
+        .tool-desc {
+            color: #666;
+            font-size: 13px;
+            margin: 0 0 8px 0;
+            padding: 0;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #e8f4fc;
+            color: #2980b9;
+            padding: 2px 6px;
+            margin: 0 5px 5px 0;
+            font-size: 11px;
+            border-radius: 2px;
+        }
+        
+        .click-text {
+            color: #3498db;
+            font-size: 11px;
+            float: right;
+        }
+        
+        .ai-footer {
+            text-align: center;
+            margin: 30px 0 0 0;
+            padding: 20px 0 0 0;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 12px;
+        }
+        
+        /* Mobile fix */
+        @media (max-width: 480px) {
+            .tool-name {
+                font-size: 14px;
+            }
+            
+            .tool-desc {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ai-directory">
+        <div class="ai-header">
+            <div class="ai-title">AI Tools Directory</div>
+            <div class="ai-subtitle">Click on any tool to visit its website</div>
+        </div>
+        
+        <!-- AI Chatbots -->
+        <div class="ai-category">
+            <div class="category-title">🤖 AI Chatbots</div>
+            
+            <div class="tool-box" data-link="https://aistudio.google.com/app/prompts/new_chat">
+                <div class="tool-name">AI Studio <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Gemini 3 Pro • 100 daily uses • Sign-up required</div>
+                <div><span class="tag">Free</span></div>
+            </div>
+            
+            <div class="tool-box" data-link="https://copilot.microsoft.com">
+                <div class="tool-name">Microsoft Copilot <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">GPT-5.1 • Unlimited use</div>
+                <div><span class="tag">Top</span> <span class="tag">Unlimited</span></div>
+            </div>
+            
+            <div class="tool-box" data-link="https://www.kimi.com/">
+                <div class="tool-name">Kimi <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Kimi K2 (Thinking) • Slides • Sign-up required</div>
+                <div><span class="tag">New</span></div>
+            </div>
+            
+            <div class="tool-box" data-link="https://chat.qwen.ai/">
+                <div class="tool-name">Qwen <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Qwen3-Max • Unlimited</div>
+                <div><span class="tag">Unlimited</span></div>
+            </div>
+            
+            <div class="tool-box" data-link="https://grok.com/">
+                <div class="tool-name">Grok <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Grok 4 + Grok 3 Fast • 96 daily uses</div>
+            </div>
+        </div>
+        
+        <!-- Image Generation -->
+        <div class="ai-category">
+            <div class="category-title">🎨 Image Generation</div>
+            
+            <div class="tool-box" data-link="https://gemini.google.com/">
+                <div class="tool-name">Gemini Image <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Nano Banana • 100 per day • Sign-up required</div>
+                <div><span class="tag">Free</span></div>
+            </div>
+            
+            <div class="tool-box" data-link="https://www.bing.com/images/create">
+                <div class="tool-name">Bing Create <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">GPT-4o • MAI-Image-1 • Editing</div>
+                <div><span class="tag">Unlimited</span></div>
+            </div>
+            
+            <div class="tool-box" data-link="https://dreamina.capcut.com/ai-tool/home">
+                <div class="tool-name">Dreamina <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">15 prompts daily • Seedream 4.0</div>
+            </div>
+            
+            <div class="tool-box" data-link="https://pigenai.art/">
+                <div class="tool-name">PigenAI <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Imagen 4 • Qwen • Nano Banana</div>
+                <div><span class="tag">Unlimited</span></div>
+            </div>
+        </div>
+        
+        <!-- Video Generation -->
+        <div class="ai-category">
+            <div class="category-title">🎬 Video Generation</div>
+            
+            <div class="tool-box" data-link="https://grok.com/imagine">
+                <div class="tool-name">Grok Imagine <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">100 daily • Imagine 0.9</div>
+            </div>
+            
+            <div class="tool-box" data-link="https://openai.com/index/sora/">
+                <div class="tool-name">Sora <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">6 daily • Sign-up required</div>
+            </div>
+            
+            <div class="tool-box" data-link="https://geminigen.ai/">
+                <div class="tool-name">GeminiGen AI <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Sora 2 • Veo 3.1 • Nano Banana Pro</div>
+                <div><span class="tag">Unlimited</span></div>
+            </div>
+        </div>
+        
+        <!-- Coding AIs -->
+        <div class="ai-category">
+            <div class="category-title">💻 Coding AIs</div>
+            
+            <div class="tool-box" data-link="https://github.com/features/copilot">
+                <div class="tool-name">GitHub Copilot <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">AI-powered code completion</div>
+            </div>
+            
+            <div class="tool-box" data-link="https://antigravity.google/">
+                <div class="tool-name">Google Antigravity <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Gemini 3 • Opus 4.5 • Weekly limits</div>
+            </div>
+            
+            <div class="tool-box" data-link="https://codeweb.chat/">
+                <div class="tool-name">Code Web Chat <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Coding AI • No sign-up required</div>
+                <div><span class="tag">No Sign-Up</span></div>
+            </div>
+        </div>
+        
+        <!-- Audio Generation -->
+        <div class="ai-category">
+            <div class="category-title">🎵 Audio Generation</div>
+            
+            <div class="tool-box" data-link="https://suno.com/">
+                <div class="tool-name">Suno <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">10 daily music generation</div>
+            </div>
+            
+            <div class="tool-box" data-link="https://labs.google/fx/tools/music-fx">
+                <div class="tool-name">MusicFX <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Google's AI music generator</div>
+            </div>
+            
+            <div class="tool-box" data-link="https://elevenlabs.io/">
+                <div class="tool-name">ElevenLabs <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Text to speech • No sign-up required</div>
+                <div><span class="tag">No Sign-Up</span></div>
+            </div>
+        </div>
+        
+        <!-- Self-Hosting -->
+        <div class="ai-category">
+            <div class="category-title">🖥️ Self-Hosting Tools</div>
+            
+            <div class="tool-box" data-link="https://jan.ai/">
+                <div class="tool-name">Jan <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Self-hosted AI platform</div>
+            </div>
+            
+            <div class="tool-box" data-link="https://lmstudio.ai/">
+                <div class="tool-name">LM Studio <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Local model management</div>
+            </div>
+            
+            <div class="tool-box" data-link="https://github.com/ggerganov/llama.cpp">
+                <div class="tool-name">llama.cpp <span class="click-text">Click to open</span></div>
+                <div class="tool-desc">Self-hosted transformer LLMs</div>
+            </div>
+        </div>
+        
+        <div class="ai-footer">
+            <div>All tools open in new tabs when clicked</div>
+            <div>Directory updated regularly</div>
+        </div>
+    </div>
+
+    <script>
+        // Simple click functionality
+        document.querySelectorAll('.tool-box').forEach(box => {
+            box.addEventListener('click', function() {
+                const link = this.getAttribute('data-link');
+                if (link) {
+                    // Visual feedback
+                    this.style.background = '#d4edda';
+                    setTimeout(() => {
+                        this.style.background = '';
+                    }, 200);
+                    
+                    // Open link
+                    window.open(link, '_blank');
+                }
+            });
+            
+            // Keyboard support
+            box.setAttribute('tabindex', '0');
+            box.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    const link = this.getAttribute('data-link');
+                    if (link) {
+                        window.open(link, '_blank');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

@@ -1,0 +1,387 @@
+<!-- IBAN Master Ultra - Expanded Global Forensics (Blogger Compatible) -->
+<div id="iban-master-root">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap');
+        
+        #iban-master-root {
+            --emerald-600: #059669;
+            --emerald-500: #10b981;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1e293b;
+            line-height: 1.5;
+            margin: 20px 0;
+            background: #f8fafc;
+            border-radius: 2rem;
+            padding: 1rem;
+        }
+
+        #iban-master-root .glass-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            border-radius: 1.5rem;
+        }
+
+        #iban-master-root .monospace { font-family: 'JetBrains Mono', monospace; }
+
+        #iban-master-root input::placeholder { color: #cbd5e1; }
+
+        @media (max-width: 640px) {
+            #iban-master-root .iban-text-responsive {
+                font-size: 1.1rem !important;
+                padding: 1rem !important;
+            }
+            #iban-master-root .header-title { font-size: 1.5rem !important; }
+        }
+
+        #iban-master-root .detail-pill {
+            background: #f1f5f9;
+            border-radius: 0.75rem;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+        }
+        
+        #iban-master-root .collapsible-trigger {
+            all: unset;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #iban-master-root .tool-btn {
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        #iban-master-root .tool-btn:hover {
+            transform: translateY(-1px);
+            filter: brightness(0.95);
+        }
+    </style>
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-6">
+            <div class="inline-flex p-3 bg-emerald-500/10 rounded-2xl mb-3 border border-emerald-500/20">
+                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"></path>
+                </svg>
+            </div>
+            <h2 class="header-title text-3xl font-extrabold text-slate-900 m-0">
+                IBAN<span class="text-emerald-500">MASTER</span>
+            </h2>
+            <p class="text-slate-400 mt-1 text-[10px] font-black uppercase tracking-[0.3em]">Full ISO-13616 Global Forensics</p>
+        </header>
+
+        <!-- Main Input -->
+        <div class="glass-card p-5 md:p-8 mb-4">
+            <div class="space-y-4">
+                <div class="flex justify-between items-center px-1">
+                    <label class="text-[9px] font-black uppercase tracking-widest text-emerald-600">Secure Forensic Input</label>
+                    <div class="flex gap-3">
+                        <button onclick="document.getElementById('iban-input').value = ''; document.getElementById('forensic-zone').classList.add('hidden');" class="text-[9px] font-bold text-slate-400 hover:text-rose-500 transition-colors uppercase">Clear</button>
+                        <span id="char-count" class="text-[9px] font-bold text-slate-400 monospace">READY</span>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="iban-input"
+                        autocomplete="off"
+                        spellcheck="false"
+                        placeholder="PASTE IBAN HERE..."
+                        class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-5 md:py-6 text-lg md:text-2xl font-bold monospace uppercase text-slate-800 outline-none focus:border-emerald-500 focus:bg-white transition-all iban-text-responsive shadow-inner"
+                    >
+                    <div id="quick-status" class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 scale-125 transition-all"></div>
+                </div>
+
+                <!-- Quick Action Tools -->
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <button id="format-btn" class="tool-btn flex-1 bg-slate-100 text-slate-600 py-2 px-3 rounded-lg text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-width="2.5"/></svg>
+                        Format (4x4)
+                    </button>
+                    <button id="copy-btn" class="tool-btn flex-1 bg-emerald-500 text-white py-2 px-3 rounded-lg text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2" stroke-width="2.5"/></svg>
+                        Copy Clean
+                    </button>
+                    <button onclick="document.getElementById('bulk-modal').classList.toggle('hidden')" class="tool-btn flex-1 bg-slate-800 text-white py-2 px-3 rounded-lg text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-width="2.5"/></svg>
+                        Bulk Mode
+                    </button>
+                </div>
+            </div>
+
+            <!-- Forensic Results -->
+            <div id="forensic-zone" class="mt-8 hidden animate-in fade-in slide-in-from-top-4">
+                <div id="main-badge" class="text-center py-3 px-4 rounded-xl text-[10px] font-black uppercase tracking-widest mb-6 border shadow-sm"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Left: Basic Identifiers -->
+                    <div class="space-y-3">
+                        <div class="detail-pill">
+                            <p class="text-[8px] font-black text-slate-400 uppercase mb-1">Region & Currency</p>
+                            <p id="res-country" class="text-sm font-extrabold text-slate-800">--</p>
+                        </div>
+                        <div class="detail-pill">
+                            <p class="text-[8px] font-black text-slate-400 uppercase mb-1">Institution Name</p>
+                            <p id="res-bank" class="text-sm font-extrabold text-slate-800">--</p>
+                        </div>
+                        <div class="detail-pill">
+                            <p class="text-[8px] font-black text-slate-400 uppercase mb-1">Branch/Sort Code Detail</p>
+                            <p id="res-branch" class="text-sm font-extrabold text-slate-800">--</p>
+                        </div>
+                        <div class="detail-pill border-emerald-100 bg-emerald-50/30">
+                            <p class="text-[8px] font-black text-emerald-600 uppercase mb-1">Electronic Checksum</p>
+                            <p id="res-math" class="monospace text-[10px] font-bold text-slate-600">--</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Structural Details -->
+                    <div class="space-y-3">
+                        <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+                            <h3 class="text-[8px] font-black text-slate-400 uppercase mb-3">Extracted Account Data</h3>
+                            <div id="detail-grid" class="grid grid-cols-1 gap-2">
+                                <!-- Dynamic Fields -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DNA Visualizer -->
+                <div class="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
+                    <p class="text-[8px] font-black text-slate-400 uppercase mb-3">Structural DNA Mapping</p>
+                    <div id="dna-visual" class="flex flex-wrap gap-1.5"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bulk Scanner Modal (Hidden by default) -->
+        <div id="bulk-modal" class="hidden glass-card p-6 mb-4 border-emerald-200 bg-emerald-50/20">
+            <h3 class="text-xs font-black uppercase tracking-widest mb-4">Bulk Batch Scanner</h3>
+            <textarea id="bulk-input" rows="4" placeholder="Enter multiple IBANs (one per line)..." class="w-full p-4 bg-white border border-emerald-100 rounded-xl monospace text-xs outline-none focus:border-emerald-500"></textarea>
+            <div id="bulk-results" class="mt-4 space-y-2"></div>
+        </div>
+
+        <!-- Registry Footer -->
+        <div class="glass-card overflow-hidden border-none opacity-80">
+            <button onclick="document.getElementById('coverage-list').classList.toggle('hidden')" class="collapsible-trigger px-6 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest hover:bg-slate-50">
+                <span>Show Covered Jurisdictions</span>
+                <svg id="arrow-icon" class="w-3 h-3 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-width="3"/></svg>
+            </button>
+            <div id="coverage-list" class="hidden px-6 pb-6 grid grid-cols-2 sm:grid-cols-4 gap-2 text-[9px] text-slate-400 border-t border-slate-50 pt-4"></div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        const REGISTRY = {
+            AD: { n: "Andorra", l: 24, c: "EUR", f: [2,2,4,4,12], lab: ["CC","CK","Bank","Branch","Account"] },
+            AE: { n: "United Arab Emirates", l: 23, c: "AED", f: [2,2,3,16], lab: ["CC","CK","Bank","Account"] },
+            AL: { n: "Albania", l: 28, c: "ALL", f: [2,2,3,4,1,16], lab: ["CC","CK","Bank","Branch","Check","Account"] },
+            AT: { n: "Austria", l: 20, c: "EUR", f: [2,2,5,11], lab: ["CC","CK","Bank/Branch","Account"] },
+            AZ: { n: "Azerbaijan", l: 28, c: "AZN", f: [2,2,4,20], lab: ["CC","CK","Bank","Account"] },
+            BA: { n: "Bosnia & Herz.", l: 20, c: "BAM", f: [2,2,3,3,8,2], lab: ["CC","CK","Bank","Branch","Account","Check"] },
+            BE: { n: "Belgium", l: 16, c: "EUR", f: [2,2,3,7,2], lab: ["CC","CK","Bank","Account","Check"] },
+            BG: { n: "Bulgaria", l: 22, c: "BGN", f: [2,2,4,4,2,8], lab: ["CC","CK","Bank","Branch","Type","Account"] },
+            BH: { n: "Bahrain", l: 22, c: "BHD", f: [2,2,4,14], lab: ["CC","CK","Bank","Account"] },
+            BR: { n: "Brazil", l: 29, c: "BRL", f: [2,2,8,5,10,1,1], lab: ["CC","CK","Bank","Branch","Account","Type","Check"] },
+            CH: { n: "Switzerland", l: 21, c: "CHF", f: [2,2,5,12], lab: ["CC","CK","Bank","Account"] },
+            CY: { n: "Cyprus", l: 28, c: "EUR", f: [2,2,3,5,16], lab: ["CC","CK","Bank","Branch","Account"] },
+            CZ: { n: "Czech Republic", l: 24, c: "CZK", f: [2,2,4,6,10], lab: ["CC","CK","Bank","Prefix","Account"] },
+            DE: { n: "Germany", l: 22, c: "EUR", f: [2,2,8,10], lab: ["CC","CK","Bank (BLZ)","Account"] },
+            DK: { n: "Denmark", l: 18, c: "DKK", f: [2,2,4,10], lab: ["CC","CK","Bank","Account"] },
+            DO: { n: "Dominican Rep.", l: 28, c: "DOP", f: [2,2,4,20], lab: ["CC","CK","Bank","Account"] },
+            EE: { n: "Estonia", l: 20, c: "EUR", f: [2,2,2,2,11,1], lab: ["CC","CK","Bank","Branch","Account","Check"] },
+            ES: { n: "Spain", l: 24, c: "EUR", f: [2,2,4,4,2,10], lab: ["CC","CK","Bank","Branch","Check","Account"] },
+            FI: { n: "Finland", l: 18, c: "EUR", f: [2,2,6,7,1], lab: ["CC","CK","Bank/Branch","Account","Check"] },
+            FR: { n: "France", l: 27, c: "EUR", f: [2,2,5,5,11,2], lab: ["CC","CK","Bank","Branch","Account","Check"] },
+            GB: { n: "United Kingdom", l: 22, c: "GBP", f: [2,2,4,6,8], lab: ["CC","CK","Bank Code","Sort Code","Account"] },
+            GE: { n: "Georgia", l: 22, c: "GEL", f: [2,2,2,16], lab: ["CC","CK","Bank","Account"] },
+            GR: { n: "Greece", l: 27, c: "EUR", f: [2,2,3,4,16], lab: ["CC","CK","Bank","Branch","Account"] },
+            GT: { n: "Guatemala", l: 28, c: "GTQ", f: [2,2,4,20], lab: ["CC","CK","Bank","Account"] },
+            HU: { n: "Hungary", l: 28, c: "HUF", f: [2,2,3,4,1,15,1], lab: ["CC","CK","Bank","Branch","Check","Account","Check"] },
+            IE: { n: "Ireland", l: 22, c: "EUR", f: [2,2,4,6,8], lab: ["CC","CK","Bank","Branch","Account"] },
+            IL: { n: "Israel", l: 23, c: "ILS", f: [2,2,3,3,13], lab: ["CC","CK","Bank","Branch","Account"] },
+            IS: { n: "Iceland", l: 26, c: "ISK", f: [2,2,4,2,6,10], lab: ["CC","CK","Bank","Branch","Account","ID"] },
+            IT: { n: "Italy", l: 27, c: "EUR", f: [2,2,1,5,5,12], lab: ["CC","CK","Check","ABI","CAB","Account"] },
+            KW: { n: "Kuwait", l: 30, c: "KWD", f: [2,2,4,22], lab: ["CC","CK","Bank","Account"] },
+            LB: { n: "Lebanon", l: 28, c: "LBP", f: [2,2,4,20], lab: ["CC","CK","Bank","Account"] },
+            LT: { n: "Lithuania", l: 20, c: "EUR", f: [2,2,5,11], lab: ["CC","CK","Bank","Account"] },
+            LU: { n: "Luxembourg", l: 20, c: "EUR", f: [2,2,3,13], lab: ["CC","CK","Bank","Account"] },
+            LV: { n: "Latvia", l: 21, c: "EUR", f: [2,2,4,13], lab: ["CC","CK","Bank","Account"] },
+            MC: { n: "Monaco", l: 27, c: "EUR", f: [2,2,5,5,11,2], lab: ["CC","CK","Bank","Branch","Account","Check"] },
+            MD: { n: "Moldova", l: 24, c: "MDL", f: [2,2,2,18], lab: ["CC","CK","Bank","Account"] },
+            MT: { n: "Malta", l: 31, c: "EUR", f: [2,2,4,5,18], lab: ["CC","CK","Bank","Branch","Account"] },
+            NL: { n: "Netherlands", l: 18, c: "EUR", f: [2,2,4,10], lab: ["CC","CK","Bank","Account"] },
+            NO: { n: "Norway", l: 15, c: "NOK", f: [2,2,4,6,1], lab: ["CC","CK","Bank","Account","Check"] },
+            PK: { n: "Pakistan", l: 24, c: "PKR", f: [2,2,4,16], lab: ["CC","CK","Bank","Account"] },
+            PL: { n: "Poland", l: 28, c: "PLN", f: [2,2,8,16], lab: ["CC","CK","Bank/Branch","Account"] },
+            PT: { n: "Portugal", l: 25, c: "EUR", f: [2,2,4,4,11,2], lab: ["CC","CK","Bank","Branch","Account","Check"] },
+            QA: { n: "Qatar", l: 29, c: "QAR", f: [2,2,4,21], lab: ["CC","CK","Bank","Account"] },
+            RO: { n: "Romania", l: 24, c: "RON", f: [2,2,4,16], lab: ["CC","CK","Bank","Account"] },
+            SA: { n: "Saudi Arabia", l: 24, c: "SAR", f: [2,2,2,18], lab: ["CC","CK","Bank","Account"] },
+            SE: { n: "Sweden", l: 24, c: "SEK", f: [2,2,3,17], lab: ["CC","CK","Bank","Account"] },
+            SI: { n: "Slovenia", l: 19, c: "EUR", f: [2,2,5,8,2], lab: ["CC","CK","Bank","Account","Check"] },
+            SK: { n: "Slovakia", l: 24, c: "EUR", f: [2,2,4,6,10], lab: ["CC","CK","Bank","Prefix","Account"] },
+            TR: { n: "Turkey", l: 26, c: "TRY", f: [2,2,5,1,16], lab: ["CC","CK","Bank","Check","Account"] },
+            VG: { n: "Virgin Islands (UK)", l: 24, c: "USD", f: [2,2,4,16], lab: ["CC","CK","Bank","Account"] }
+        };
+
+        const BANKS = {
+            "GB": { "RBOS": "Royal Bank of Scotland", "BARC": "Barclays Bank PLC", "LOYD": "Lloyds Bank", "MIDL": "HSBC UK", "NWAD": "NatWest", "SANT": "Santander UK" },
+            "DE": { "3704": "Commerzbank", "1002": "Bundesbank", "1007": "Deutsche Bank", "5005": "Sparkasse", "2002": "HypoVereinsbank" },
+            "NL": { "ABNA": "ABN AMRO", "INGB": "ING Bank", "RABO": "Rabobank" }
+        };
+
+        const BRANCHES = {
+            "GB": { "204545": "Barclays Central London", "400527": "HSBC Canary Wharf", "160015": "RBS Edinburgh Head Office" }
+        };
+
+        const root = document.getElementById('iban-master-root');
+        const input = root.querySelector('#iban-input');
+        const zone = root.querySelector('#forensic-zone');
+
+        // Logic functions
+        function getCleanValue(val) {
+            return val.toUpperCase().replace(/[^A-Z0-9]/g, '');
+        }
+
+        function calculateChecksum(iban) {
+            const rearranged = iban.substring(4) + iban.substring(0, 4);
+            const numeric = Array.from(rearranged).map(c => {
+                const code = c.charCodeAt(0);
+                return (code >= 65 && code <= 90) ? (code - 55).toString() : c;
+            }).join('');
+            return { numeric, mod: BigInt(numeric) % 97n };
+        }
+
+        function validate(iban) {
+            const cc = iban.substring(0, 2);
+            const data = REGISTRY[cc];
+            if (!data) return { valid: false, msg: 'FAIL: UNKNOWN COUNTRY PREFIX' };
+            if (iban.length !== data.l) return { valid: false, msg: `FAIL: LENGTH MISMATCH (EXPECTED ${data.l})` };
+            const { mod } = calculateChecksum(iban);
+            if (mod !== 1n) return { valid: false, msg: 'FAIL: CHECKSUM INVALID (ISO 7064)' };
+            return { valid: true, msg: 'PASS: AUTHENTIC SIGNATURE', data };
+        }
+
+        // Action Handlers
+        root.querySelector('#format-btn').onclick = () => {
+            const clean = getCleanValue(input.value);
+            input.value = clean.match(/.{1,4}/g)?.join(' ') || clean;
+        };
+
+        root.querySelector('#copy-btn').onclick = (e) => {
+            const clean = getCleanValue(input.value);
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = clean;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            e.target.textContent = "COPIED!";
+            setTimeout(() => e.target.textContent = "Copy Clean", 1500);
+        };
+
+        root.querySelector('#bulk-input').oninput = (e) => {
+            const lines = e.target.value.split('\n');
+            const resDiv = root.querySelector('#bulk-results');
+            resDiv.innerHTML = '';
+            lines.filter(l => l.trim()).forEach(l => {
+                const clean = getCleanValue(l);
+                const status = validate(clean);
+                const el = document.createElement('div');
+                el.className = `p-2 rounded text-[9px] monospace border flex justify-between ${status.valid ? 'bg-emerald-50 border-emerald-100' : 'bg-rose-50 border-rose-100'}`;
+                el.innerHTML = `<span>${clean}</span> <b>${status.valid ? 'VALID' : 'INVALID'}</b>`;
+                resDiv.appendChild(el);
+            });
+        };
+
+        input.addEventListener('input', (e) => {
+            let val = getCleanValue(e.target.value);
+            root.querySelector('#char-count').textContent = `${val.length} CHARS`;
+            if (val.length < 4) {
+                zone.classList.add('hidden');
+                root.querySelector('#quick-status').style.opacity = '0';
+                return;
+            }
+            const res = validate(val);
+            render(val, res, res.data);
+        });
+
+        function render(iban, res, data) {
+            zone.classList.remove('hidden');
+            const qs = root.querySelector('#quick-status');
+            qs.style.opacity = '1';
+            qs.innerHTML = res.valid ? '✅' : '❌';
+
+            const badge = root.querySelector('#main-badge');
+            badge.textContent = res.msg;
+            badge.className = `text-center py-3 px-4 rounded-xl text-[10px] font-black uppercase tracking-widest mb-6 border shadow-sm ${res.valid ? 'bg-emerald-50 text-emerald-600 border-emerald-100' : 'bg-rose-50 text-rose-600 border-rose-100'}`;
+
+            root.querySelector('#res-country').textContent = data ? `${data.n} (${data.c})` : 'N/A';
+            
+            let bankName = "Unknown/Private Institution";
+            let branchName = "Detecting...";
+            
+            if (data) {
+                const cc = iban.substring(0,2);
+                const bankCodeLen = data.f[2];
+                const bankCode = iban.substring(4, 4 + bankCodeLen);
+                bankName = BANKS[cc]?.[bankCode] || `Bank ID: ${bankCode}`;
+
+                if (data.lab.includes("Branch") || data.lab.includes("Sort Code") || data.lab.includes("CAB")) {
+                    const branchIdx = data.lab.findIndex(l => ["Branch", "Sort Code", "CAB"].includes(l));
+                    let offset = 0;
+                    for(let i=0; i<branchIdx; i++) offset += data.f[i];
+                    const bCode = iban.substring(offset, offset + data.f[branchIdx]);
+                    branchName = BRANCHES[cc]?.[bCode] || `Branch ID: ${bCode}`;
+                } else {
+                    branchName = "Integrated/Main Branch";
+                }
+                
+                const { numeric, mod } = calculateChecksum(iban);
+                root.querySelector('#res-math').textContent = `MOD97 Check: ${numeric.substring(0,8)}... % 97 = ${mod}`;
+            }
+            
+            root.querySelector('#res-bank').textContent = bankName;
+            root.querySelector('#res-branch').textContent = branchName;
+
+            const detailGrid = root.querySelector('#detail-grid');
+            const dnaVisual = root.querySelector('#dna-visual');
+            detailGrid.innerHTML = '';
+            dnaVisual.innerHTML = '';
+
+            if (data) {
+                let offset = 0;
+                data.f.forEach((len, i) => {
+                    const chunk = iban.substring(offset, offset + len);
+                    offset += len;
+                    if (!chunk) return;
+                    const row = document.createElement('div');
+                    row.className = "flex justify-between items-center text-[10px] border-b border-slate-50 py-1";
+                    row.innerHTML = `<span class="text-slate-400 font-bold uppercase">${data.lab[i] || 'Data'}</span> <span class="monospace font-black">${chunk}</span>`;
+                    detailGrid.appendChild(row);
+                    const dna = document.createElement('span');
+                    dna.className = "px-2 py-1 bg-white border border-slate-200 rounded text-[9px] monospace font-bold shadow-sm";
+                    dna.textContent = chunk;
+                    dnaVisual.appendChild(dna);
+                });
+            }
+        }
+
+        // Init Registry display
+        const clist = root.querySelector('#coverage-list');
+        Object.keys(REGISTRY).sort().forEach(cc => {
+            const el = document.createElement('div');
+            el.className = "flex justify-between border-b border-slate-50 pb-1";
+            el.innerHTML = `<span class="font-black text-emerald-600">${cc}</span> <span>${REGISTRY[cc].n}</span>`;
+            clist.appendChild(el);
+        });
+    })();
+    </script>
+</div><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

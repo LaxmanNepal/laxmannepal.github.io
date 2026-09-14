@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialPoster - Custom Gradients & Text Range</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tool-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #canvas-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 550px;
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        #post-canvas {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            transform-origin: center center;
+            transition: transform 0.2s ease;
+        }
+
+        .post-inner {
+            background: #ffffff;
+            color: #1e293b;
+            width: 85%; 
+            height: 85%;
+            border-radius: 24px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .glass-mode {
+            background: rgba(255, 255, 255, 0.2) !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2) !important;
+        }
+
+        .glass-mode #display-text, 
+        .glass-mode #display-name {
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .glass-mode #display-handle,
+        .glass-mode #footer-name {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+
+        .glass-mode .border-t {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .profile-img-container {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #e2e8f0;
+            border: 2px solid rgba(0,0,0,0.05);
+            flex-shrink: 0;
+        }
+
+        .content-area {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #display-text {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            white-space: pre-wrap;
+            line-height: 1.3;
+            font-weight: 700;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .name-container {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .blue-tick {
+            display: inline-flex;
+            vertical-align: middle;
+            background-color: #1d9bf0;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .blue-tick svg {
+            width: 11px;
+            height: 11px;
+            fill: white;
+            display: block;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #cbd5e1;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px; width: 18px;
+            left: 3px; bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider { background-color: #3b82f6; }
+        input:checked + .slider:before { transform: translateX(20px); }
+
+        input[type="range"] {
+            accent-color: #2563eb;
+        }
+
+        /* Preset Styles */
+        .preset-gradient {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .preset-gradient:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 640px) {
+            #post-canvas { transform: scale(0.65); margin: -80px 0; }
+            #canvas-wrapper { min-height: 380px; padding: 10px; }
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+
+    <div class="tool-container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        
+        <!-- Controls -->
+        <div class="space-y-8 order-2 lg:order-1 pb-12">
+            <header>
+                <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">
+                    SocialPoster <span class="text-blue-600">Pro</span>
+                </h1>
+                <p class="text-slate-500 mt-2 font-medium">Design professional social graphics instantly.</p>
+            </header>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                <!-- Toggles -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center justify-between p-4 bg-blue-50 rounded-2xl">
+                        <p class="text-sm font-bold text-slate-900">Verified Badge</p>
+                        <label class="switch">
+                            <input type="checkbox" id="verify-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-purple-50 rounded-2xl">
+                        <p class="text-sm font-bold text-slate-900">Glassmorphism</p>
+                        <label class="switch">
+                            <input type="checkbox" id="glass-toggle">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Custom Styling Sliders -->
+                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                    <div class="flex justify-between items-center mb-2">
+                        <div class="flex flex-col">
+                            <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Text Size (4px - 64px)</label>
+                            <span class="text-[10px] text-slate-400">Set to 0 for Auto-Size</span>
+                        </div>
+                        <span id="font-val" class="text-xs font-bold text-blue-600">15px</span>
+                    </div>
+                    <input type="range" id="font-slider" min="0" max="64" value="15" step="1" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Profile Pic & Inner Tint -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Profile Picture</label>
+                        <input type="file" id="profile-upload" accept="image/*" class="block w-full text-sm text-slate-500
+                            file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0
+                            file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Inner Card Tint</label>
+                        <div class="flex items-center gap-3 bg-slate-50 p-2 rounded-xl border border-slate-200">
+                            <input type="color" id="mockup-color" value="#ffffff" class="w-8 h-8 rounded-full border-none cursor-pointer p-0 overflow-hidden">
+                            <span class="text-xs font-bold text-slate-500">Manual Tint</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Name & Username -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
+                        <input type="text" id="input-name" value="Laxman Nepal" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Username</label>
+                        <input type="text" id="input-handle" value="@laxmannepal" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">Post Content</label>
+                    <textarea id="input-content" rows="3" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none resize-none">You Are Awesome !</textarea>
+                </div>
+
+                <!-- Background Presets & Custom Background Color -->
+                <div>
+                    <div class="flex flex-col gap-4 mb-3">
+                        <div class="flex justify-between items-center">
+                            <label class="text-sm font-semibold text-slate-700">Background Design</label>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase">Custom Gradient</span>
+                        </div>
+                        
+                        <!-- Custom Gradient Picker Row -->
+                        <div class="flex items-center gap-4 bg-slate-50 p-3 rounded-2xl border border-slate-200">
+                            <div class="flex items-center gap-2">
+                                <input type="color" id="bg-color-1" value="#6366f1" class="w-8 h-8 rounded-lg border-none cursor-pointer p-0">
+                                <span class="text-[10px] font-bold text-slate-500">Start</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <input type="color" id="bg-color-2" value="#a855f7" class="w-8 h-8 rounded-lg border-none cursor-pointer p-0">
+                                <span class="text-[10px] font-bold text-slate-500">End</span>
+                            </div>
+                            <div class="flex-grow flex justify-end">
+                                <div id="gradient-preview" class="w-12 h-6 rounded-md border border-slate-300" style="background: linear-gradient(135deg, #6366f1, #a855f7)"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Updated Presets (Including your 5 custom ones) -->
+                    <div class="flex flex-wrap gap-3">
+                        <div onclick="applyPreset('#6366f1', '#a855f7')" class="preset-gradient" style="background: linear-gradient(135deg, #6366f1, #a855f7)"></div>
+                        <div onclick="applyPreset('#00c6ff', '#0072ff')" class="preset-gradient" style="background: linear-gradient(135deg, #00c6ff, #0072ff)"></div>
+                        <div onclick="applyPreset('#f9d423', '#ff4e50')" class="preset-gradient" style="background: linear-gradient(135deg, #f9d423, #ff4e50)"></div>
+                        <div onclick="applyPreset('#11998e', '#38ef7d')" class="preset-gradient" style="background: linear-gradient(135deg, #11998e, #38ef7d)"></div>
+                        <div onclick="applyPreset('#8e2de2', '#4a00e0')" class="preset-gradient" style="background: linear-gradient(135deg, #8e2de2, #4a00e0)"></div>
+                        <div onclick="applyPreset('#ee9ca7', '#ffdde1')" class="preset-gradient" style="background: linear-gradient(135deg, #ee9ca7, #ffdde1)"></div>
+                    </div>
+                </div>
+
+                <button id="btn-download" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold shadow-lg transition-all flex items-center justify-center gap-2 text-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Download HD Image
+                </button>
+            </div>
+        </div>
+
+        <!-- Preview -->
+        <div class="sticky top-8 flex flex-col items-center order-1 lg:order-2 overflow-hidden">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Live Preview</h2>
+            <div id="canvas-wrapper">
+                <div id="post-canvas">
+                    <div id="inner-card" class="post-inner">
+                        <div class="flex items-center gap-4">
+                            <div class="profile-img-container">
+                                <img id="display-pfp" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGHaSO1wWf8K8GPmA-JDZXvu2HBTYFGamQLlYogAvtVt3ZZScH3EoFi0en9SD85HREgsCrMrJWUfIm3x05xyREDab8BOEcU6kYIZfj00zYURGxpsXUrXlEVj0FPVnwGQlQBI-NqycN3kIqfxHv64EXOxS7NSlUPtj7BdHrx0at3kqdMYJO8zCvB2SIfGQD/s1600/picofme%20%282%29.png" crossorigin="anonymous" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="name-container">
+                                    <span id="display-name" class="font-bold text-lg leading-none">Laxman Nepal</span>
+                                    <div id="blue-tick-box" class="blue-tick">
+                                        <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+                                    </div>
+                                </div>
+                                <span id="display-handle" class="text-slate-500 text-sm mt-1">@laxmannepal</span>
+                            </div>
+                        </div>
+                        <div class="content-area">
+                            <p id="display-text">You Are Awesome !</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between opacity-50">
+                            <span class="text-[10px] font-bold tracking-widest uppercase" id="footer-name">Laxman Nepal</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const pfpUpload = document.getElementById('profile-upload');
+        const inputName = document.getElementById('input-name');
+        const inputHandle = document.getElementById('input-handle');
+        const inputContent = document.getElementById('input-content');
+        const verifyToggle = document.getElementById('verify-toggle');
+        const glassToggle = document.getElementById('glass-toggle');
+        const fontSlider = document.getElementById('font-slider');
+        const fontValText = document.getElementById('font-val');
+        
+        const bgColor1 = document.getElementById('bg-color-1');
+        const bgColor2 = document.getElementById('bg-color-2');
+        const gradPreview = document.getElementById('gradient-preview');
+        
+        const mockupColorPicker = document.getElementById('mockup-color');
+        
+        const canvas = document.getElementById('post-canvas');
+        const innerCard = document.getElementById('inner-card');
+        const footerName = document.getElementById('footer-name');
+        const displayName = document.getElementById('display-name');
+        const displayHandle = document.getElementById('display-handle');
+        const displayText = document.getElementById('display-text');
+        const displayPfp = document.getElementById('display-pfp');
+        const blueTickBox = document.getElementById('blue-tick-box');
+        const btnDownload = document.getElementById('btn-download');
+
+        function applyPreset(c1, c2) {
+            bgColor1.value = c1;
+            bgColor2.value = c2;
+            updateGradient();
+        }
+
+        function updateGradient() {
+            const grad = `linear-gradient(135deg, ${bgColor1.value} 0%, ${bgColor2.value} 100%)`;
+            canvas.style.background = grad;
+            gradPreview.style.background = grad;
+        }
+
+        bgColor1.addEventListener('input', updateGradient);
+        bgColor2.addEventListener('input', updateGradient);
+
+        function updatePreview() {
+            displayName.innerText = inputName.value || "Your Name";
+            displayHandle.innerText = inputHandle.value || "@username";
+            displayText.innerText = inputContent.value || "Content here...";
+            footerName.innerText = inputName.value || "Your Name";
+            blueTickBox.style.display = verifyToggle.checked ? 'inline-flex' : 'none';
+
+            if (glassToggle.checked) {
+                innerCard.classList.add('glass-mode');
+                innerCard.style.backgroundColor = ''; 
+            } else {
+                innerCard.classList.remove('glass-mode');
+                innerCard.style.backgroundColor = mockupColorPicker.value;
+            }
+
+            const sliderVal = parseInt(fontSlider.value);
+            if (sliderVal === 0) {
+                const length = displayText.innerText.length;
+                let autoSize = 42;
+                if (length > 150) autoSize = 18;
+                else if (length > 80) autoSize = 24;
+                else if (length > 40) autoSize = 32;
+                displayText.style.fontSize = autoSize + "px";
+                fontValText.innerText = "Auto";
+            } else {
+                displayText.style.fontSize = sliderVal + "px";
+                fontValText.innerText = sliderVal + "px";
+            }
+        }
+
+        pfpUpload.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (event) => { displayPfp.src = event.target.result; };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        [inputName, inputHandle, inputContent, verifyToggle, glassToggle, fontSlider, mockupColorPicker].forEach(el => {
+            el.addEventListener('input', updatePreview);
+        });
+
+        btnDownload.addEventListener('click', () => {
+            btnDownload.innerText = "Processing...";
+            btnDownload.disabled = true;
+            const originalTransform = canvas.style.transform;
+            canvas.style.transform = 'none';
+
+            setTimeout(() => {
+                html2canvas(canvas, {
+                    useCORS: true,
+                    scale: 3,
+                    backgroundColor: null,
+                    width: 500,
+                    height: 500
+                }).then(result => {
+                    const link = document.createElement('a');
+                    link.download = `SocialPost_${Date.now()}.png`;
+                    link.href = result.toDataURL('image/png', 1.0);
+                    link.click();
+                    canvas.style.transform = originalTransform;
+                    btnDownload.innerText = "Download HD Image";
+                    btnDownload.disabled = false;
+                });
+            }, 100);
+        });
+
+        updateGradient();
+        updatePreview();
+    </script>
+</body>
+</html><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

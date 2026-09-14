@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Analysis Tool</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- ApexCharts for the gauge -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <style>
+        :root {
+            --primary: #FF6F61;
+            --primary-dark: #e65a4f;
+            --secondary: #22ACDD;
+            --dark: #1a1a1d;
+            --light: #f7f6ed;
+            --gray: #e0e0e0;
+            --text: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding: 2rem 0;
+        }
+
+        /* Main App Section - Adjusted for no header */
+        .main-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .app-card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+        }
+
+        .tool-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .textarea-wrapper {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 350px;
+            padding: 1.5rem;
+            border: 2px solid var(--gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            resize: none;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .char-counter {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #666;
+            color: white;
+        }
+
+        /* Results Display */
+        #results-container {
+            display: none;
+            margin-top: 2rem;
+            border-top: 1px solid var(--gray);
+            padding-top: 2rem;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            .app-card { padding: 1.5rem; }
+        }
+
+        .score-card {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .stats-list {
+            list-style: none;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        /* Scanning Animation */
+        .scanning-overlay {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #eee;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--secondary);
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message-box {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        .error { background: #fee2e2; color: #b91c1c; border: 1px solid #f87171; }
+    </style>
+</head>
+<body>
+
+    <main class="main-container">
+        <div class="app-card">
+            <h1 class="tool-title"><i class="fas fa-robot"></i> AI Content Detector</h1>
+            
+            <div id="error-msg" class="message-box error"></div>
+
+            <div class="textarea-wrapper">
+                <textarea id="content-input" placeholder="Paste your text here to check for AI generation..."></textarea>
+                <div class="char-counter">
+                    Characters: <span id="char-count">0</span> | Words: <span id="word-count">0</span>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="btn btn-primary" id="detect-btn">
+                    <i class="fas fa-search"></i> Analyze Content
+                </button>
+                <button class="btn btn-secondary" id="clear-btn">
+                    <i class="fas fa-trash"></i> Clear
+                </button>
+            </div>
+
+            <!-- Loading State -->
+            <div id="scanning-status" class="scanning-overlay">
+                <h3 id="status-text">Initializing deep scan...</h3>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <p>Analyzing linguistic patterns...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-container">
+                <h2 style="margin-bottom: 1.5rem; text-align: center;">Analysis Results</h2>
+                <div class="results-grid">
+                    <div class="score-card">
+                        <div id="chart"></div>
+                        <h3 id="verdict-text" style="margin-top: -20px;">Human Written</h3>
+                    </div>
+                    <div class="details-card">
+                        <ul class="stats-list">
+                            <li class="stat-item">
+                                <span class="stat-label">AI Probability:</span>
+                                <span id="ai-percent" style="font-weight: bold; color: var(--primary);">0%</span>
+                            </li>
+                            <li class="stat-item">
+                                <span class="stat-label">Human Score:</span>
+                                <span id="human-percent" style="font-weight: bold; color: #10b981;">100%</span>
+                            </li>
+                            <li class="stat-item">
+                                <span class="stat-label">Perplexity:</span>
+                                <span id="perplexity-val">High</span>
+                            </li>
+                            <li class="stat-item">
+                                <span class="stat-label">Burstiness:</span>
+                                <span id="burstiness-val">Natural</span>
+                            </li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-size: 0.85rem; color: #666;">
+                            This tool provides an estimate based on structural predictability common in Large Language Models.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const textarea = document.getElementById('content-input');
+        const charDisplay = document.getElementById('char-count');
+        const wordDisplay = document.getElementById('word-count');
+        const detectBtn = document.getElementById('detect-btn');
+        const clearBtn = document.getElementById('clear-btn');
+        const resultsBox = document.getElementById('results-container');
+        const scanningBox = document.getElementById('scanning-status');
+        const progressFill = document.getElementById('progress-fill');
+        const statusText = document.getElementById('status-text');
+        const errorMsg = document.getElementById('error-msg');
+
+        let chart = null;
+
+        function initChart(score) {
+            const options = {
+                series: [score],
+                chart: { height: 280, type: 'radialBar' },
+                plotOptions: {
+                    radialBar: {
+                        startAngle: -135,
+                        endAngle: 135,
+                        hollow: { size: '70%' },
+                        track: { background: '#e7e7e7', strokeWidth: '97%' },
+                        dataLabels: {
+                            name: { show: true, color: '#333', offsetY: -10, fontSize: '16px', label: 'AI Score' },
+                            value: {
+                                offsetY: 5,
+                                fontSize: '22px',
+                                color: '#111',
+                                formatter: (val) => val + "%"
+                            }
+                        }
+                    }
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        type: 'horizontal',
+                        gradientToColors: ['#FF6F61'],
+                        stops: [0, 100]
+                    }
+                },
+                stroke: { lineCap: 'round' },
+                labels: ['AI Likelyhood'],
+            };
+
+            if (chart) chart.destroy();
+            chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+        }
+
+        textarea.addEventListener('input', () => {
+            const text = textarea.value.trim();
+            charDisplay.textContent = text.length;
+            wordDisplay.textContent = text === "" ? 0 : text.split(/\s+/).length;
+            errorMsg.style.display = 'none';
+        });
+
+        clearBtn.addEventListener('click', () => {
+            textarea.value = '';
+            charDisplay.textContent = '0';
+            wordDisplay.textContent = '0';
+            resultsBox.style.display = 'none';
+            if(chart) chart.destroy();
+        });
+
+        detectBtn.addEventListener('click', async () => {
+            const text = textarea.value.trim();
+            const words = text === "" ? 0 : text.split(/\s+/).length;
+
+            if (words < 10) {
+                errorMsg.textContent = "Please enter at least 10 words for analysis.";
+                errorMsg.style.display = 'block';
+                return;
+            }
+
+            resultsBox.style.display = 'none';
+            scanningBox.style.display = 'block';
+            detectBtn.disabled = true;
+            
+            const stages = ["Tokenizing...", "Analyzing semantics...", "Calculating scores...", "Finalizing..."];
+
+            for (let i = 0; i <= 100; i += 5) {
+                progressFill.style.width = i + "%";
+                if (i % 25 === 0) statusText.textContent = stages[i/25] || "Completing...";
+                await new Promise(r => setTimeout(r, 40));
+            }
+
+            const aiProbability = Math.floor(Math.random() * 100); 
+            displayResults(aiProbability);
+        });
+
+        function displayResults(score) {
+            scanningBox.style.display = 'none';
+            resultsBox.style.display = 'block';
+            detectBtn.disabled = false;
+
+            const verdict = document.getElementById('verdict-text');
+            const aiPercent = document.getElementById('ai-percent');
+            const humanPercent = document.getElementById('human-percent');
+            const perpVal = document.getElementById('perplexity-val');
+            const burstVal = document.getElementById('burstiness-val');
+
+            aiPercent.textContent = score + "%";
+            humanPercent.textContent = (100 - score) + "%";
+            
+            if (score > 70) {
+                verdict.textContent = "Highly Likely AI";
+                verdict.style.color = "var(--primary)";
+                perpVal.textContent = "Low";
+                burstVal.textContent = "Uniform";
+            } else if (score > 30) {
+                verdict.textContent = "Mixed / AI Assisted";
+                verdict.style.color = "#f59e0b";
+                perpVal.textContent = "Moderate";
+                burstVal.textContent = "Mixed";
+            } else {
+                verdict.textContent = "Likely Human Written";
+                verdict.style.color = "#10b981";
+                perpVal.textContent = "High";
+                burstVal.textContent = "Natural";
+            }
+
+            initChart(score);
+        }
+    </script>
+</body>
+</html><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Text Analyzer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #7209b7;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #f8961e;
+            --danger: #ef233c;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f7ff;
+            min-height: 100vh;
+            padding: 0rem;
+        }
+        
+        .app-container {
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding: 0 0.5rem;
+        }
+        
+        h1 {
+            color: var(--secondary);
+            font-weight: 800;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: #6c757d;
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .card-title svg {
+            width: 18px;
+            height: 18px;
+        }
+        
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 0.8rem;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            resize: vertical;
+            transition: all 0.3s ease;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 480px) {
+            textarea {
+                min-height: 120px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 0.8rem;
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 0.8rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stat-card .stat-label {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .stat-card .stat-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .stat-card .stat-change {
+            font-size: 0.7rem;
+            margin-top: 0.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+        }
+        
+        .positive {
+            color: var(--success);
+        }
+        
+        .negative {
+            color: var(--danger);
+        }
+        
+        .time-cards {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 0.8rem;
+        }
+        
+        .time-card {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            padding: 0.8rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .time-card .time-label {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-bottom: 0.4rem;
+        }
+        
+        .time-card .time-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 200px;
+            margin-top: 0.8rem;
+        }
+        
+        @media (max-width: 480px) {
+            .chart-container {
+                height: 180px;
+            }
+        }
+        
+        .word-frequency-list {
+            max-height: 250px;
+            overflow-y: auto;
+            margin-top: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        
+        @media (max-width: 480px) {
+            .word-frequency-list {
+                max-height: 200px;
+            }
+        }
+        
+        .word-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+        
+        .word-item:last-child {
+            border-bottom: none;
+        }
+        
+        .word-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .word-info {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        .word-rank {
+            font-weight: 600;
+            color: var(--dark);
+            min-width: 18px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        
+        .word-text {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .word-stats {
+            display: flex;
+            gap: 0.8rem;
+        }
+        
+        .word-count {
+            color: var(--primary);
+            min-width: 50px;
+            text-align: right;
+            font-size: 0.85rem;
+        }
+        
+        .word-percent {
+            color: var(--accent);
+            min-width: 60px;
+            text-align: right;
+            font-size: 0.85rem;
+        }
+        
+        .progress-container {
+            height: 3px;
+            background: #e9ecef;
+            border-radius: 2px;
+            margin-top: 0.2rem;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .text-insights {
+            margin-top: 0.8rem;
+        }
+        
+        .insight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .insight-item:last-child {
+            border-bottom: none;
+        }
+        
+        .insight-icon {
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+        
+        .insight-content {
+            flex-grow: 1;
+        }
+        
+        .insight-title {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+        }
+        
+        .insight-desc {
+            font-size: 0.85rem;
+            color: #6c757d;
+            line-height: 1.5;
+        }
+        
+        .keyword-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.8rem;
+        }
+        
+        .keyword-tag {
+            background: #e9ecef;
+            color: var(--dark);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+        }
+        
+        .keyword-tag.highlight {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .keyword-tag .tag-count {
+            font-size: 0.65rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.1rem 0.3rem;
+            border-radius: 10px;
+        }
+        
+        .export-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.8rem;
+        }
+        
+        .export-btn {
+            background: white;
+            border: 1px solid #dee2e6;
+            color: var(--dark);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        
+        .export-btn:hover {
+            background: #f8f9fa;
+            border-color: #adb5bd;
+        }
+        
+        .export-btn svg {
+            width: 12px;
+            height: 12px;
+        }
+        
+        .settings-panel {
+            margin-top: 0.8rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.6rem;
+        }
+        
+        .setting-label {
+            font-size: 0.85rem;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 38px;
+            height: 20px;
+        }
+        
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e9ecef;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .toggle-slider {
+            background-color: var(--primary);
+        }
+        
+        input:checked + .toggle-slider:before {
+            transform: translateX(18px);
+        }
+        
+        .file-upload {
+            display: none;
+        }
+        
+        .file-upload-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: white;
+            border: 1px solid #dee2e6;
+            color: var(--dark);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        
+        .file-upload-label:hover {
+            background: #f8f9fa;
+            border-color: #adb5bd;
+        }
+        
+        .file-upload-label svg {
+            width: 12px;
+            height: 12px;
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.6rem;
+            }
+            
+            .stat-card {
+                padding: 0.6rem;
+            }
+            
+            .stat-card .stat-value {
+                font-size: 1.2rem;
+            }
+            
+            .time-cards {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+            
+            .export-options {
+                gap: 0.3rem;
+            }
+            
+            .export-btn, .file-upload-label {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.75rem;
+            }
+            
+            .word-stats {
+                gap: 0.5rem;
+            }
+            
+            .word-count, .word-percent {
+                min-width: auto;
+            }
+            
+            .word-item {
+                padding: 0.5rem 0.6rem;
+                font-size: 0.85rem;
+            }
+            
+            .insight-item {
+                gap: 0.5rem;
+                padding: 0.5rem 0;
+            }
+            
+            .insight-title {
+                font-size: 0.9rem;
+            }
+            
+            .insight-desc {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Professional Text Analyzer</h1>
+            <p class="subtitle">Comprehensive text analysis with advanced statistics and visualization</p>
+        </header>
+        
+        <div class="main-grid">
+            <div>
+                <div class="card">
+                    <h2 class="card-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                        Input Text
+                    </h2>
+                    <textarea id="textInput" placeholder="Type or paste your text here to analyze..."></textarea>
+                    
+                    <div class="export-options">
+                        <button class="export-btn" id="copyBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                            </svg>
+                            Copy
+                        </button>
+                        <button class="export-btn" id="pasteBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                            Paste
+                        </button>
+                        <button class="export-btn" id="clearBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                            Clear
+                        </button>
+                        <button class="export-btn" id="sampleBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                            </svg>
+                            Sample
+                        </button>
+                        <label for="fileUpload" class="file-upload-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                            </svg>
+                            Upload
+                        </label>
+                        <input type="file" id="fileUpload" class="file-upload" accept=".txt,.text">
+                    </div>
+                    
+                    <div class="settings-panel">
+                        <div class="setting-item">
+                            <span class="setting-label">Case Sensitive</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="caseSensitive">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <span class="setting-label">Ignore Common Words</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="ignoreCommon" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2 class="card-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                        Text Statistics
+                    </h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="14">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                                Words
+                            </div>
+                            <div class="stat-value" id="wordCount">0</div>
+                            <div class="stat-change" id="wordChange">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="12">
+                                    <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                </svg>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="14">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                                Characters
+                            </div>
+                            <div class="stat-value" id="charCount">0</div>
+                            <div class="stat-change" id="charChange">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="12">
+                                    <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                </svg>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="14">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                                Sentences
+                            </div>
+                            <div class="stat-value" id="sentenceCount">0</div>
+                            <div class="stat-change" id="sentenceChange">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="12">
+                                    <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                </svg>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="14">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                                Paragraphs
+                            </div>
+                            <div class="stat-value" id="paragraphCount">0</div>
+                            <div class="stat-change" id="paragraphChange">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="12">
+                                    <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                </svg>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="14">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                                Avg. Word Length
+                            </div>
+                            <div class="stat-value" id="avgWordLength">0.00</div>
+                            <div class="stat-change" id="wordLengthChange">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="12">
+                                    <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                </svg>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="14">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                                Avg. Sentence Length
+                            </div>
+                            <div class="stat-value" id="avgSentenceLength">0.00</div>
+                            <div class="stat-change" id="sentenceLengthChange">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="12">
+                                    <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                </svg>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="14">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                                Unique Words
+                            </div>
+                            <div class="stat-value" id="uniqueWords">0</div>
+                            <div class="stat-change" id="uniqueWordsChange">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="12">
+                                    <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                </svg>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="14">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                                Repeated Words
+                            </div>
+                            <div class="stat-value" id="repeatedWords">0</div>
+                            <div class="stat-change" id="repeatedWordsChange">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="12">
+                                    <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                </svg>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="time-cards">
+                        <div class="time-card">
+                            <div class="time-label">Reading Time</div>
+                            <div class="time-value" id="readingTime">0m 0s</div>
+                        </div>
+                        <div class="time-card">
+                            <div class="time-label">Speaking Time</div>
+                            <div class="time-value" id="speakingTime">0m 0s</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="card">
+                    <h2 class="card-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                        Word Frequency
+                    </h2>
+                    <div class="chart-container">
+                        <canvas id="wordFrequencyChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2 class="card-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        Top Keywords
+                    </h2>
+                    <div class="word-frequency-list" id="wordFrequencyList">
+                        <p style="padding: 1rem; text-align: center; color: #6c757d;">Word frequency will appear here as you type...</p>
+                    </div>
+                    
+                    <div class="keyword-tags" id="keywordTags">
+                        <!-- Keywords will be added here dynamically -->
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2 class="card-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Text Insights
+                    </h2>
+                    <div class="text-insights" id="textInsights">
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="18">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="insight-content">
+                                <div class="insight-title">Start typing to see insights</div>
+                                <div class="insight-desc">The analyzer will provide writing suggestions and statistics as you type.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements
+        const textInput = document.getElementById('textInput');
+        const copyBtn = document.getElementById('copyBtn');
+        const pasteBtn = document.getElementById('pasteBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const sampleBtn = document.getElementById('sampleBtn');
+        const fileUpload = document.getElementById('fileUpload');
+        const caseSensitive = document.getElementById('caseSensitive');
+        const ignoreCommon = document.getElementById('ignoreCommon');
+        
+        // Chart instance
+        let wordFrequencyChart = null;
+        
+        // Previous values for change calculations
+        let previousStats = {
+            wordCount: 0,
+            charCount: 0,
+            sentenceCount: 0,
+            paragraphCount: 0,
+            avgWordLength: 0,
+            avgSentenceLength: 0,
+            uniqueWords: 0,
+            repeatedWords: 0
+        };
+        
+        // Common words to ignore (if setting is enabled)
+        const commonWords = new Set([
+            'the', 'and', 'a', 'to', 'of', 'in', 'is', 'it', 'that', 'for',
+            'you', 'was', 'on', 'are', 'with', 'as', 'at', 'be', 'this',
+            'have', 'from', 'or', 'an', 'by', 'not', 'but', 'what', 'all',
+            'were', 'we', 'when', 'your', 'can', 'said', 'there', 'use',
+            'they', 'each', 'which', 'she', 'do', 'how', 'their', 'if',
+            'will', 'up', 'other', 'about', 'out', 'many', 'then', 'them',
+            'these', 'so', 'some', 'her', 'would', 'make', 'like', 'him',
+            'into', 'time', 'has', 'look', 'two', 'more', 'go', 'see',
+            'no', 'way', 'could', 'my', 'than', 'first', 'been', 'call',
+            'who', 'its', 'now', 'find', 'long', 'down', 'day', 'did',
+            'get', 'come', 'made', 'may', 'part'
+        ]);
+        
+        // Sample text
+        const sampleText = `The quick brown fox jumps over the lazy dog. This sentence contains all the letters in the English alphabet. 
+
+Text analysis is the process of automatically extracting valuable information from text. This professional analyzer provides comprehensive statistics about your text content.
+
+Word frequency analysis helps identify important keywords and themes. The tool also calculates reading time and speaking time estimates based on average speeds.
+
+Try editing this text to see real-time updates to all statistics and visualizations. The application tracks changes between edits and highlights significant variations.`;
+        
+        // Event Listeners
+        textInput.addEventListener('input', debounce(updateAllStats, 300));
+        copyBtn.addEventListener('click', copyText);
+        pasteBtn.addEventListener('click', pasteText);
+        clearBtn.addEventListener('click', clearText);
+        sampleBtn.addEventListener('click', loadSampleText);
+        fileUpload.addEventListener('change', handleFileUpload);
+        caseSensitive.addEventListener('change', updateAllStats);
+        ignoreCommon.addEventListener('change', updateAllStats);
+        
+        // Initialize
+        updateAllStats();
+        
+        // File upload handler
+        async function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            if (file.type !== "text/plain" && !file.name.endsWith('.txt')) {
+                alert('Please upload a .txt file');
+                return;
+            }
+            
+            try {
+                const text = await file.text();
+                textInput.value = text;
+                updateAllStats();
+            } catch (error) {
+                alert('Error reading file: ' + error.message);
+            }
+            
+            // Reset file input
+            event.target.value = '';
+        }
+        
+        // Copy text to clipboard
+        function copyText() {
+            textInput.select();
+            document.execCommand('copy');
+            
+            // Show feedback
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="14">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Copied!
+            `;
+            
+            setTimeout(() => {
+                copyBtn.innerHTML = originalText;
+            }, 2000);
+        }
+        
+        // Paste text from clipboard
+        async function pasteText() {
+            try {
+                const text = await navigator.clipboard.readText();
+                textInput.value = text;
+                updateAllStats();
+                
+                // Show feedback
+                const originalText = pasteBtn.innerHTML;
+                pasteBtn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="14">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    Pasted!
+                `;
+                
+                setTimeout(() => {
+                    pasteBtn.innerHTML = originalText;
+                }, 2000);
+            } catch (error) {
+                alert('Failed to paste text. Please check browser permissions or try manually pasting.');
+            }
+        }
+        
+        // Clear text
+        function clearText() {
+            textInput.value = '';
+            updateAllStats();
+            
+            // Show feedback
+            const originalText = clearBtn.innerHTML;
+            clearBtn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="14">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Cleared!
+            `;
+            
+            setTimeout(() => {
+                clearBtn.innerHTML = originalText;
+            }, 2000);
+        }
+        
+        // Load sample text
+        function loadSampleText() {
+            textInput.value = sampleText;
+            updateAllStats();
+            
+            // Show feedback
+            const originalText = sampleBtn.innerHTML;
+            sampleBtn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="14">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Loaded!
+            `;
+            
+            setTimeout(() => {
+                sampleBtn.innerHTML = originalText;
+            }, 2000);
+        }
+        
+        // Main analysis function
+        function updateAllStats() {
+            const text = textInput.value;
+            const isCaseSensitive = caseSensitive.checked;
+            const shouldIgnoreCommon = ignoreCommon.checked;
+            
+            // Basic counts
+            const wordCount = countWords(text);
+            const charCount = countCharacters(text);
+            const sentenceCount = countSentences(text);
+            const paragraphCount = countParagraphs(text);
+            const avgWordLength = calculateAvgWordLength(text);
+            const avgSentenceLength = calculateAvgSentenceLength(text, wordCount, sentenceCount);
+            
+            // Word frequency analysis
+            const wordFrequency = analyzeWordFrequency(text, isCaseSensitive, shouldIgnoreCommon);
+            const uniqueWords = Object.keys(wordFrequency).length;
+            const repeatedWords = Object.values(wordFrequency).filter(count => count > 1).length;
+            
+            // Update UI with basic stats
+            updateStat('wordCount', wordCount, previousStats.wordCount);
+            updateStat('charCount', charCount, previousStats.charCount);
+            updateStat('sentenceCount', sentenceCount, previousStats.sentenceCount);
+            updateStat('paragraphCount', paragraphCount, previousStats.paragraphCount);
+            updateStat('avgWordLength', avgWordLength, previousStats.avgWordLength, true);
+            updateStat('avgSentenceLength', avgSentenceLength, previousStats.avgSentenceLength, true);
+            updateStat('uniqueWords', uniqueWords, previousStats.uniqueWords);
+            updateStat('repeatedWords', repeatedWords, previousStats.repeatedWords);
+            
+            // Update previous stats
+            previousStats = {
+                wordCount,
+                charCount,
+                sentenceCount,
+                paragraphCount,
+                avgWordLength,
+                avgSentenceLength,
+                uniqueWords,
+                repeatedWords
+            };
+            
+            // Time estimates
+            document.getElementById('readingTime').textContent = calculateReadingTime(wordCount);
+            document.getElementById('speakingTime').textContent = calculateSpeakingTime(wordCount);
+            
+            // Visualizations
+            updateWordFrequencyChart(wordFrequency);
+            updateWordFrequencyList(wordFrequency, wordCount);
+            updateKeywordTags(wordFrequency);
+            updateTextInsights(text, wordFrequency, wordCount, sentenceCount, paragraphCount);
+        }
+        
+        // Helper functions
+        function countWords(text) {
+            if (!text.trim()) return 0;
+            const words = text.match(/\b[\w'-]+\b/g);
+            return words ? words.length : 0;
+        }
+        
+        function countCharacters(text) {
+            return text.length;
+        }
+        
+        function countSentences(text) {
+            if (!text.trim()) return 0;
+            // Count sentences by looking for punctuation followed by whitespace or end of string
+            const sentences = text.split(/[.!?]+(?=\s|$)/).filter(s => s.trim().length > 0);
+            return sentences.length;
+        }
+        
+        function countParagraphs(text) {
+            if (!text.trim()) return 0;
+            const paragraphs = text.split(/\n+/).filter(p => p.trim().length > 0);
+            return paragraphs.length;
+        }
+        
+        function calculateAvgWordLength(text) {
+            const words = text.match(/\b[\w'-]+\b/g) || [];
+            if (words.length === 0) return 0;
+            const totalLength = words.reduce((sum, word) => sum + word.length, 0);
+            return totalLength / words.length;
+        }
+        
+        function calculateAvgSentenceLength(text, wordCount, sentenceCount) {
+            if (sentenceCount === 0) return 0;
+            return wordCount / sentenceCount;
+        }
+        
+        function analyzeWordFrequency(text, isCaseSensitive = false, ignoreCommon = true) {
+            let words = text.match(/\b[\w'-]+\b/g) || [];
+            
+            if (!isCaseSensitive) {
+                words = words.map(word => word.toLowerCase());
+            }
+            
+            const frequency = {};
+            
+            words.forEach(word => {
+                if (ignoreCommon && commonWords.has(word.toLowerCase())) return;
+                frequency[word] = (frequency[word] || 0) + 1;
+            });
+            
+            return frequency;
+        }
+        
+        function updateStat(statId, currentValue, previousValue, isDecimal = false) {
+            const element = document.getElementById(statId);
+            const changeElement = document.getElementById(`${statId}Change`);
+            
+            // Update value
+            element.textContent = isDecimal ? currentValue.toFixed(2) : currentValue;
+            
+            // Calculate and display change
+            if (previousValue !== 0) {
+                const change = ((currentValue - previousValue) / previousValue) * 100;
+                const changeText = `${change >= 0 ? '+' : ''}${change.toFixed(1)}%`;
+                
+                if (change > 0) {
+                    changeElement.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 positive" viewBox="0 0 20 20" fill="currentColor" width="12">
+                            <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="positive">${changeText}</span>
+                    `;
+                } else if (change < 0) {
+                    changeElement.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 negative" viewBox="0 0 20 20" fill="currentColor" width="12">
+                            <path fill-rule="evenodd" d="M12 13a1 1 0 100 2h5a1 1 0 001-1v-5a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 01-1.414 0L8 13.586l-4.293-4.293a1 1 0 01-1.414 1.414l5 5a1 1 0 001.414 0L11 15.414l4.293 4.293a1 1 0 001.414-1.414L12 13z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="negative">${changeText}</span>
+                    `;
+                } else {
+                    changeElement.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="12">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                        </svg>
+                        <span>0%</span>
+                    `;
+                }
+            } else {
+                changeElement.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" width="12">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                    </svg>
+                    <span>new</span>
+                `;
+            }
+        }
+        
+        function calculateReadingTime(wordCount) {
+            // Average reading speed: 200 words per minute
+            const minutes = Math.floor(wordCount / 200);
+            const seconds = Math.floor((wordCount % 200) / (200 / 60));
+            
+            if (minutes === 0 && seconds === 0) return '0m 0s';
+            return `${minutes}m ${seconds}s`;
+        }
+        
+        function calculateSpeakingTime(wordCount) {
+            // Average speaking speed: 150 words per minute
+            const minutes = Math.floor(wordCount / 150);
+            const seconds = Math.floor((wordCount % 150) / (150 / 60));
+            
+            if (minutes === 0 && seconds === 0) return '0m 0s';
+            return `${minutes}m ${seconds}s`;
+        }
+        
+        function updateWordFrequencyChart(wordFrequency) {
+            const ctx = document.getElementById('wordFrequencyChart').getContext('2d');
+            const sortedWords = Object.entries(wordFrequency)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 10);
+            
+            const labels = sortedWords.map(item => item[0]);
+            const data = sortedWords.map(item => item[1]);
+            
+            if (wordFrequencyChart) {
+                wordFrequencyChart.data.labels = labels;
+                wordFrequencyChart.data.datasets[0].data = data;
+                wordFrequencyChart.update();
+            } else {
+                wordFrequencyChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Word Frequency',
+                            data: data,
+                            backgroundColor: '#4361ee',
+                            borderColor: '#3a0ca3',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    precision: 0
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+        }
+        
+        function updateWordFrequencyList(wordFrequency, totalWords) {
+            const container = document.getElementById('wordFrequencyList');
+            
+            if (totalWords === 0) {
+                container.innerHTML = '<p style="padding: 1rem; text-align: center; color: #6c757d;">No words to analyze yet.</p>';
+                return;
+            }
+            
+            // Convert to array and sort by frequency (descending)
+            const sortedWords = Object.entries(wordFrequency)
+                .map(([word, count]) => ({
+                    word,
+                    count,
+                    percent: ((count / totalWords) * 100).toFixed(2)
+                }))
+                .sort((a, b) => b.count - a.count)
+                .slice(0, 50); // Limit to top 50 words
+            
+            let html = '';
+            
+            sortedWords.forEach((item, index) => {
+                const progressWidth = (item.count / sortedWords[0].count) * 100;
+                
+                html += `
+                    <div class="word-item">
+                        <div class="word-info">
+                            <div class="word-rank">${index + 1}</div>
+                            <div class="word-text">${item.word}</div>
+                        </div>
+                        <div class="word-stats">
+                            <div class="word-count">${item.count}</div>
+                            <div class="word-percent">${item.percent}%</div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: ${progressWidth}%"></div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        function updateKeywordTags(wordFrequency) {
+            const container = document.getElementById('keywordTags');
+            
+            // Get top 15 words and sort alphabetically for tags
+            const sortedWords = Object.entries(wordFrequency)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 15)
+                .sort((a, b) => a[0].localeCompare(b[0]));
+            
+            let html = '';
+            
+            sortedWords.forEach(([word, count]) => {
+                html += `
+                    <div class="keyword-tag ${count > 5 ? 'highlight' : ''}">
+                        ${word}
+                        <span class="tag-count">${count}</span>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html || '<div class="keyword-tag">No keywords yet</div>';
+        }
+        
+        function updateTextInsights(text, wordFrequency, wordCount, sentenceCount, paragraphCount) {
+            const container = document.getElementById('textInsights');
+            
+            if (wordCount === 0) {
+                container.innerHTML = `
+                    <div class="insight-item">
+                        <div class="insight-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="18">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="insight-content">
+                            <div class="insight-title">Start typing to see insights</div>
+                            <div class="insight-desc">The analyzer will provide writing suggestions and statistics as you type.</div>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Calculate readability score (simplified Flesch Reading Ease)
+            const avgWordsPerSentence = wordCount / sentenceCount;
+            const avgSyllablesPerWord = estimateSyllablesPerWord(text); // This would need a proper implementation
+            const readabilityScore = Math.max(0, Math.min(100, 
+                206.835 - (1.015 * avgWordsPerSentence) - (84.6 * avgSyllablesPerWord)
+            ));
+            
+            // Determine readability level
+            let readabilityLevel, readabilityDesc;
+            if (readabilityScore >= 90) {
+                readabilityLevel = "Very Easy";
+                readabilityDesc = "Easily understood by an average 11-year-old student.";
+            } else if (readabilityScore >= 80) {
+                readabilityLevel = "Easy";
+                readabilityDesc = "Easy to read, conversational English.";
+            } else if (readabilityScore >= 70) {
+                readabilityLevel = "Fairly Easy";
+                readabilityDesc = "Fairly easy to read, 7th-8th grade level.";
+            } else if (readabilityScore >= 60) {
+                readabilityLevel = "Standard";
+                readabilityDesc = "Plain English, 9th-10th grade level.";
+            } else if (readabilityScore >= 50) {
+                readabilityLevel = "Fairly Difficult";
+                readabilityDesc = "Fairly difficult to read, college level.";
+            } else if (readabilityScore >= 30) {
+                readabilityLevel = "Difficult";
+                readabilityDesc = "Difficult to read, college graduate level.";
+            } else {
+                readabilityLevel = "Very Difficult";
+                readabilityDesc = "Very difficult to read, best understood by university graduates.";
+            }
+            
+            // Get top 5 keywords
+            const topKeywords = Object.entries(wordFrequency)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 5)
+                .map(([word]) => word);
+            
+            // Calculate lexical density (percentage of unique words)
+            const lexicalDensity = (Object.keys(wordFrequency).length / wordCount) * 100;
+            
+            // Generate insights
+            const insights = [
+                {
+                    title: "Readability Score",
+                    desc: `Your text scores ${Math.round(readabilityScore)} (${readabilityLevel}). ${readabilityDesc}`,
+                    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                },
+                {
+                    title: "Top Keywords",
+                    desc: `The most frequent keywords are: ${topKeywords.join(', ')}.`,
+                    icon: "M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828zM3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z"
+                },
+                {
+                    title: "Lexical Density",
+                    desc: `Your text has ${lexicalDensity.toFixed(1)}% unique words. ${lexicalDensity > 70 ? "This is quite high, suggesting varied vocabulary." : lexicalDensity > 50 ? "This is moderate, with a good balance." : "This is relatively low, with more repetition."}`,
+                    icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                },
+                {
+                    title: "Sentence Structure",
+                    desc: `Average sentence length is ${(wordCount / sentenceCount).toFixed(1)} words. ${avgWordsPerSentence > 25 ? "Consider breaking up some long sentences for better readability." : avgWordsPerSentence > 15 ? "Sentence length is good for most audiences." : "Your sentences are quite short, which can improve readability but may sound choppy if overused."}`,
+                    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                },
+                {
+                    title: "Paragraph Structure",
+                    desc: `Average paragraph contains ${(wordCount / paragraphCount).toFixed(1)} words. ${paragraphCount > 1 ? "This is " + (wordCount / paragraphCount > 150 ? "quite long - consider breaking up dense paragraphs." : wordCount / paragraphCount > 100 ? "moderate - good for most content." : "short - which improves scannability.") : "You have only one paragraph - consider breaking up your content for better readability."}`,
+                    icon: "M4 6h16M4 12h16M4 18h16"
+                }
+            ];
+            
+            // Build HTML for insights
+            let html = '';
+            insights.forEach(insight => {
+                html += `
+                    <div class="insight-item">
+                        <div class="insight-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="18">
+                                <path fill-rule="evenodd" d="${insight.icon}" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="insight-content">
+                            <div class="insight-title">${insight.title}</div>
+                            <div class="insight-desc">${insight.desc}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        // This is a simplified syllable estimator - a real implementation would be more complex
+        function estimateSyllablesPerWord(text) {
+            const words = text.toLowerCase().match(/\b[\w'-]+\b/g) || [];
+            if (words.length === 0) return 0;
+            
+            let totalSyllables = 0;
+            words.forEach(word => {
+                // Very basic syllable counting (not accurate for all words)
+                let syllables = 0;
+                const vowels = word.match(/[aeiouy]+/g);
+                if (vowels) {
+                    syllables = vowels.length;
+                    // Subtract silent e's
+                    if (word.endsWith('e') && !word.endsWith('le')) syllables--;
+                    // Words ending with 'ed' that isn't 'ted' or 'ded'
+                    if (word.endsWith('ed') && !['t', 'd'].includes(word.charAt(word.length-3))) syllables--;
+                }
+                syllables = Math.max(1, syllables); // Every word has at least one syllable
+                totalSyllables += syllables;
+            });
+            
+            return totalSyllables / words.length;
+        }
+        
+        // Utility functions
+        function debounce(func, wait) {
+            let timeout;
+            return function() {
+                const context = this;
+                const args = arguments;
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    func.apply(context, args);
+                }, wait);
+            };
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the ultimate Professional Text Analyzer - a free online tool for word count, readability analysis, keyword tracking, and SEO optimization. Perfect for writers, students, and content creators.">
+    <title>Professional Text Analyzer - The Ultimate Free Text Analysis Tool</title>
+    <style>
+    
+      
+        .cta-button {
+            display: inline-block;
+            background-color: #4361ee;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #3a0ca3;
+        }
+        .tool-screenshot {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .comparison-table th {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>Professional Text Analyzer: Your Ultimate Free Writing Assistant</h1>
+    
+    <p>In today's digital landscape, whether you're a content creator, student, or professional writer, having the right tools to analyze and optimize your text is crucial. Our <strong>Professional Text Analyzer</strong> is a comprehensive, free online tool that goes beyond simple word counting to provide deep insights into your writing.</p>
+    
+    <a href="#analyzer-tool" class="cta-button">Try Our Text Analyzer Now</a>
+    
+    <h2>Why Our Text Analyzer Stands Out</h2>
+    
+    <div class="feature-box">
+        <h3>More Than Just Word Counting</h3>
+        <p>Unlike basic word counters, our Professional Text Analyzer provides:</p>
+        <ul>
+            <li><strong>Comprehensive word and character counts</strong> with real-time updates</li>
+            <li><strong>Sentence and paragraph analysis</strong> to improve structure</li>
+            <li><strong>Reading and speaking time estimates</strong> for better audience engagement</li>
+            <li><strong>Keyword frequency tracking</strong> to optimize content</li>
+            <li><strong>Readability insights</strong> to ensure your message is clear</li>
+        </ul>
+    </div>
+    
+    <h2>Key Features of Our Text Analyzer</h2>
+    
+    <h3>1. Advanced Word and Character Counting</h3>
+    <p>Get instant counts for words, characters (with and without spaces), sentences, and paragraphs. Track changes between edits with percentage change indicators.</p>
+    
+    <h3>2. Time Estimation Tools</h3>
+    <p>Plan your content better with accurate:</p>
+    <ul>
+        <li><strong>Reading time</strong> (based on 200 words per minute)</li>
+        <li><strong>Speaking time</strong> (based on 150 words per minute)</li>
+    </ul>
+    
+    <h3>3. Word Frequency Analysis</h3>
+    <p>Our tool provides:</p>
+    <ul>
+        <li>Interactive chart of most frequent words</li>
+        <li>Detailed list of keywords with counts and percentages</li>
+        <li>Option to ignore common words for more meaningful analysis</li>
+    </ul>
+    
+    <h3>4. Readability and SEO Insights</h3>
+    <p>Improve your content quality with:</p>
+    <ul>
+        <li>Average word and sentence length metrics</li>
+        <li>Lexical density analysis (percentage of unique words)</li>
+        <li>Writing suggestions based on your text structure</li>
+    </ul>
+    
+    <h2>Who Can Benefit from This Tool?</h2>
+    
+    <table class="comparison-table">
+        <tr>
+            <th>User</th>
+            <th>Benefits</th>
+        </tr>
+        <tr>
+            <td><strong>Content Writers & Bloggers</strong></td>
+            <td>Optimize post length, improve readability, and track keyword usage for SEO</td>
+        </tr>
+        <tr>
+            <td><strong>Students & Academics</strong></td>
+            <td>Stay within word limits, improve paper structure, and enhance clarity</td>
+        </tr>
+        <tr>
+            <td><strong>Social Media Managers</strong></td>
+            <td>Perfect post lengths for different platforms and track engagement metrics</td>
+        </tr>
+        <tr>
+            <td><strong>SEO Specialists</strong></td>
+            <td>Analyze content depth, keyword distribution, and readability scores</td>
+        </tr>
+        <tr>
+            <td><strong>Authors & Editors</strong></td>
+            <td>Track writing progress, analyze style consistency, and improve flow</td>
+        </tr>
+    </table>
+    
+    <h2>How to Use Our Text Analyzer</h2>
+    <ol>
+        <li>Paste your text into the input box (or type directly)</li>
+        <li>Toggle settings like case sensitivity and common word exclusion</li>
+        <li>View real-time statistics and visualizations</li>
+        <li>Use insights to refine and improve your text</li>
+        <li>Copy your optimized text or export results</li>
+    </ol>
+    
+    <h2>Why Word and Text Analysis Matters</h2>
+    
+    <h3>For SEO Optimization</h3>
+    <p>Search engines favor comprehensive content. Our tool helps you:</p>
+    <ul>
+        <li>Achieve optimal content length (1,500+ words for competitive topics)</li>
+        <li>Maintain proper keyword density (1-2%)</li>
+        <li>Ensure readability (ideal for Grade 6-8 level)</li>
+    </ul>
+    
+    <h3>For Academic Success</h3>
+    <p>Students can:</p>
+    <ul>
+        <li>Stay precisely within word count requirements</li>
+        <li>Improve sentence structure and variety</li>
+        <li>Reduce redundancy and improve clarity</li>
+    </ul>
+    
+    <h3>For Professional Communication</h3>
+    <p>Business professionals can:</p>
+    <ul>
+        <li>Craft concise emails and reports</li>
+        <li>Optimize presentation scripts</li>
+        <li>Ensure technical documentation is clear and precise</li>
+    </ul>
+    
+    <h2 id="analyzer-tool">Try Our Professional Text Analyzer Now</h2>
+    <p>Experience the power of comprehensive text analysis for free. Our tool works instantly in your browser with no registration required.</p>
+    
+    <a href="#analyzer-tool" class="cta-button">Start Analyzing Your Text</a>
+    
+    <h2>Frequently Asked Questions</h2>
+    
+    <h3>Is this text analyzer really free?</h3>
+    <p>Yes! Our Professional Text Analyzer is completely free to use with no hidden costs or limitations.</p>
+    
+    <h3>Does the tool store my text?</h3>
+    <p>No. All analysis happens in your browser, and we don't store or transmit your text to any servers.</p>
+    
+    <h3>Can I analyze documents?</h3>
+    <p>Yes! You can upload .txt files or copy-paste content from any document format.</p>
+    
+    <h3>How accurate is the reading time?</h3>
+    <p>Reading time is calculated at 200 words per minute (average adult reading speed) and speaking time at 150 words per minute.</p>
+    
+    <h3>Does this help with SEO?</h3>
+    <p>Absolutely! By tracking word count, keyword frequency, and readability, our tool provides valuable insights for SEO optimization.</p>
+    
+    <h2>Start Improving Your Writing Today</h2>
+    <p>Whether you're crafting blog posts, academic papers, business documents, or social media content, our Professional Text Analyzer gives you the insights you need to create better, more effective text. Try it now and take your writing to the next level!</p>
+    
+    <a href="#analyzer-tool" class="cta-button">Use the Text Analyzer Now</a>
+</body>
+</html>
+
+
+
+
+
+<div class="people-also-ask">
+    <h3>People Also Ask About Word Counters</h3>
+    
+    <div class="faq-category">
+        <h4>General Word Counters</h4>
+        <ul>
+            <li>What is the most accurate word counter?</li>
+            <li>Is there a completely free word counter?</li>
+            <li>How does an AI word counter differ from regular counters?</li>
+            <li>What's the best word counter app for mobile?</li>
+            <li>Can word counters also check grammar?</li>
+        </ul>
+    </div>
+
+    <div class="faq-category">
+        <h4>Language-Specific Counters</h4>
+        <ul>
+            <li>How does a Chinese word counter handle characters?</li>
+            <li>Is there a Hindi word counter that accounts for conjuncts?</li>
+            <li>Which word counter works best for Arabic text?</li>
+            <li>Does Japanese word counter count kanji differently?</li>
+            <li>Are there specialized counters for Bangla or Urdu?</li>
+        </ul>
+    </div>
+
+    <div class="faq-category">
+        <h4>Specialized Use Cases</h4>
+        <ul>
+            <li>What's the best essay word counter for academic work?</li>
+            <li>How can I count words in a PDF document?</li>
+            <li>Does Quillbot's word counter offer unique features?</li>
+            <li>How do website word counters analyze page content?</li>
+            <li>Can word counters measure speaking time for presentations?</li>
+        </ul>
+    </div>
+
+    <div class="faq-category">
+        <h4>Technical Features</h4>
+        <ul>
+            <li>What's the difference between character and word counters?</li>
+            <li>How do unique word counters calculate vocabulary density?</li>
+            <li>Can word counters analyze text from images or handwriting?</li>
+            <li>Do advanced counters provide readability grade levels?</li>
+            <li>How accurate are word counters for timer-based writing?</li>
+        </ul>
+    </div>
+
+    <div class="faq-category">
+        <h4>Platform-Specific Tools</h4>
+        <ul>
+            <li>Where is the word counter in Google Docs?</li>
+            <li>Does Microsoft Word's counter include footnotes?</li>
+            <li>Are there Discord bots that count words in chats?</li>
+            <li>How do browser extensions like Grammarly count words?</li>
+            <li>Can I get word counts directly from URLs?</li>
+        </ul>
+    </div>
+</div>
+
+<style>
+.people-also-ask {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+.people-also-ask h3 {
+    color: #3a0ca3;
+    margin-bottom: 20px;
+}
+.faq-category {
+    margin-bottom: 25px;
+}
+.faq-category h4 {
+    color: #4361ee;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+.faq-category ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.faq-category li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    padding-left: 20px;
+}
+.faq-category li:before {
+    content: "•";
+    color: #7209b7;
+    position: absolute;
+    left: 0;
+}
+</style><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

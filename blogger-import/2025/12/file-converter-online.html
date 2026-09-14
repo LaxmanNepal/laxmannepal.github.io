@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Extension Changer - Blogger Tool</title>
+    <style>
+        /* Reset and isolation for laxmannepal.com.np compatibility */
+        #file-tool-container {
+            all: initial;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: block;
+            box-sizing: border-box;
+        }
+        
+        #file-tool-container *,
+        #file-tool-container *::before,
+        #file-tool-container *::after {
+            box-sizing: border-box;
+        }
+        
+        /* Main Tool Styles */
+        #file-tool {
+            max-width: 500px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* Header */
+        #file-tool .tool-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        #file-tool .tool-title {
+            color: #1e293b;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        #file-tool .tool-subtitle {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        
+        /* Upload Card */
+        #file-tool .upload-card {
+            background: #ffffff;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 40px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #file-tool .upload-card:hover {
+            border-color: #3b82f6;
+            background: #f8fafc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+        }
+        
+        #file-tool .upload-card.dragover {
+            border-color: #3b82f6;
+            background: #eff6ff;
+        }
+        
+        #file-tool .upload-icon {
+            width: 64px;
+            height: 64px;
+            background: #eff6ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: #3b82f6;
+            font-size: 28px;
+        }
+        
+        #file-tool .upload-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+        
+        #file-tool .upload-hint {
+            font-size: 13px;
+            color: #64748b;
+        }
+        
+        /* File Info */
+        #file-tool .file-preview {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            display: none;
+            animation: slideIn 0.4s ease-out;
+        }
+        
+        #file-tool .file-preview.show {
+            display: block;
+        }
+        
+        #file-tool .file-icon {
+            width: 48px;
+            height: 48px;
+            background: #3b82f6;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        
+        #file-tool .file-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1e293b;
+            word-break: break-all;
+            margin-bottom: 8px;
+        }
+        
+        #file-tool .file-details {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 13px;
+            color: #64748b;
+        }
+        
+        #file-tool .file-size {
+            background: #e2e8f0;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+        
+        /* Extensions Section */
+        #file-tool .extensions-section {
+            margin-bottom: 24px;
+        }
+        
+        #file-tool .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        #file-tool .extensions-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        
+        #file-tool .ext-btn {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 14px 8px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            color: #475569;
+            transition: all 0.2s ease;
+        }
+        
+        #file-tool .ext-btn:hover {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            transform: translateY(-1px);
+        }
+        
+        #file-tool .ext-btn.active {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+        
+        #file-tool .custom-ext {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        #file-tool .custom-ext input {
+            flex: 1;
+            padding: 14px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        #file-tool .custom-ext input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        #file-tool .custom-ext-btn {
+            background: #64748b;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 0 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        #file-tool .custom-ext-btn:hover {
+            background: #475569;
+        }
+        
+        /* Action Buttons */
+        #file-tool .action-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+        
+        #file-tool .action-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        #file-tool .action-btn:disabled {
+            background: #cbd5e1;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        /* Loader */
+        #file-tool .loader-container {
+            display: none;
+            text-align: center;
+            padding: 24px;
+            margin: 16px 0;
+            background: #f8fafc;
+            border-radius: 12px;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        #file-tool .loader-container.show {
+            display: block;
+        }
+        
+        #file-tool .loader {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 16px;
+            position: relative;
+        }
+        
+        #file-tool .loader-circle {
+            width: 100%;
+            height: 100%;
+            border: 3px solid #e2e8f0;
+            border-top-color: #3b82f6;
+            border-radius: 50%;
+            animation: tool-spin 1s linear infinite;
+        }
+        
+        #file-tool .loader-text {
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 500;
+        }
+        
+        /* Result Section */
+        #file-tool .result-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 20px;
+            display: none;
+            animation: slideUp 0.5s ease-out;
+            border: 1px solid #bae6fd;
+        }
+        
+        #file-tool .result-card.show {
+            display: block;
+        }
+        
+        #file-tool .result-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        
+        #file-tool .result-icon {
+            width: 40px;
+            height: 40px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+        
+        #file-tool .result-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #166534;
+        }
+        
+        #file-tool .new-filename {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace, monospace;
+            font-size: 14px;
+            color: #1e293b;
+            word-break: break-all;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* Download Button */
+        #file-tool .download-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+        }
+        
+        #file-tool .download-btn.show {
+            display: flex;
+        }
+        
+        #file-tool .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.3);
+        }
+        
+        /* Animations */
+        @keyframes tool-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes slideIn {
+            from { 
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            #file-tool {
+                padding: 24px;
+                margin: 12px;
+            }
+            
+            #file-tool .extensions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            #file-tool .tool-title {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            #file-tool .extensions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            #file-tool .custom-ext {
+                flex-direction: column;
+            }
+            
+            #file-tool .custom-ext-btn {
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Self-contained tool container -->
+    <div id="file-tool-container">
+        <div id="file-tool">
+            <!-- Header -->
+            <div class="tool-header">
+                <div class="tool-title">
+                    <span>📁</span>
+                    File Extension Changer
+                </div>
+                <div class="tool-subtitle">
+                    Upload any file and change its extension in one click
+                </div>
+            </div>
+            
+            <!-- Upload Area -->
+            <div class="upload-card" id="uploadCard">
+                <div class="upload-icon">
+                    📤
+                </div>
+                <div class="upload-text">
+                    Drag & drop your file here
+                </div>
+                <div class="upload-hint">
+                    or click to browse files
+                </div>
+                <input type="file" id="fileInput" style="display: none;">
+            </div>
+            
+            <!-- File Preview -->
+            <div class="file-preview" id="filePreview">
+                <div class="file-icon">
+                    📄
+                </div>
+                <div class="file-name" id="fileName">
+                    File name will appear here
+                </div>
+                <div class="file-details">
+                    <div class="file-size" id="fileSize">0 KB</div>
+                    <div>Extension: <span id="currentExt" style="font-weight: 600; color: #3b82f6;">.ext</span></div>
+                </div>
+            </div>
+            
+            <!-- Extensions -->
+            <div class="extensions-section">
+                <div class="section-title">
+                    <span>🔄</span>
+                    Select New Extension
+                </div>
+                <div class="extensions-grid">
+                    <button class="ext-btn" data-ext=".pdf">PDF</button>
+                    <button class="ext-btn" data-ext=".jpg">JPG</button>
+                    <button class="ext-btn" data-ext=".png">PNG</button>
+                    <button class="ext-btn" data-ext=".zip">ZIP</button>
+                    <button class="ext-btn" data-ext=".docx">DOCX</button>
+                    <button class="ext-btn" data-ext=".mp4">MP4</button>
+                    <button class="ext-btn" data-ext=".txt">TXT</button>
+                    <button class="ext-btn" data-ext=".html">HTML</button>
+                </div>
+            </div>
+            
+            <!-- Custom Extension -->
+            <div class="custom-ext">
+                <input type="text" id="customExt" placeholder="Or type custom extension (.bak, .old)">
+                <button class="custom-ext-btn" id="applyCustom">Apply</button>
+            </div>
+            
+            <!-- Action Button -->
+            <button class="action-btn" id="changeBtn">
+                <span>🔄</span>
+                Change Extension
+            </button>
+            
+            <!-- Loader -->
+            <div class="loader-container" id="loader">
+                <div class="loader">
+                    <div class="loader-circle"></div>
+                </div>
+                <div class="loader-text">
+                    Processing your file...
+                </div>
+            </div>
+            
+            <!-- Result Card -->
+            <div class="result-card" id="resultCard">
+                <div class="result-header">
+                    <div class="result-icon">
+                        ✓
+                    </div>
+                    <div class="result-title">
+                        Extension Changed Successfully!
+                    </div>
+                </div>
+                <div class="new-filename" id="newFileName">
+                    New file name will appear here
+                </div>
+            </div>
+            
+            <!-- Download Button -->
+            <button class="download-btn" id="downloadBtn">
+                <span>⬇️</span>
+                Download File
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Self-contained JavaScript
+        (function() {
+            // Elements
+            const uploadCard = document.getElementById('uploadCard');
+            const fileInput = document.getElementById('fileInput');
+            const filePreview = document.getElementById('filePreview');
+            const fileName = document.getElementById('fileName');
+            const fileSize = document.getElementById('fileSize');
+            const currentExt = document.getElementById('currentExt');
+            const extBtns = document.querySelectorAll('#file-tool .ext-btn[data-ext]');
+            const customExtInput = document.getElementById('customExt');
+            const applyCustomBtn = document.getElementById('applyCustom');
+            const changeBtn = document.getElementById('changeBtn');
+            const loader = document.getElementById('loader');
+            const resultCard = document.getElementById('resultCard');
+            const newFileName = document.getElementById('newFileName');
+            const downloadBtn = document.getElementById('downloadBtn');
+            
+            // Variables
+            let selectedFile = null;
+            let selectedExtension = '.pdf';
+            let modifiedFile = null;
+            
+            // Initialize
+            function init() {
+                // Set first extension as active
+                extBtns[0].classList.add('active');
+                customExtInput.value = '.pdf';
+                
+                // Add event listeners
+                setupEventListeners();
+            }
+            
+            function setupEventListeners() {
+                // Upload card click
+                uploadCard.addEventListener('click', () => fileInput.click());
+                
+                // File input change
+                fileInput.addEventListener('change', handleFileSelect);
+                
+                // Drag and drop
+                uploadCard.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    uploadCard.classList.add('dragover');
+                });
+                
+                uploadCard.addEventListener('dragleave', () => {
+                    uploadCard.classList.remove('dragover');
+                });
+                
+                uploadCard.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    uploadCard.classList.remove('dragover');
+                    
+                    if (e.dataTransfer.files.length) {
+                        fileInput.files = e.dataTransfer.files;
+                        handleFileSelect();
+                    }
+                });
+                
+                // Extension buttons
+                extBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        extBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        selectedExtension = this.getAttribute('data-ext');
+                        customExtInput.value = selectedExtension;
+                    });
+                });
+                
+                // Custom extension
+                applyCustomBtn.addEventListener('click', applyCustomExtension);
+                customExtInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') applyCustomExtension();
+                });
+                
+                // Change extension button
+                changeBtn.addEventListener('click', processExtensionChange);
+                
+                // Download button
+                downloadBtn.addEventListener('click', handleDownload);
+            }
+            
+            function handleFileSelect() {
+                if (!fileInput.files.length) return;
+                
+                selectedFile = fileInput.files[0];
+                const size = formatFileSize(selectedFile.size);
+                const ext = getFileExtension(selectedFile.name);
+                
+                // Update UI
+                fileName.textContent = selectedFile.name;
+                fileSize.textContent = size;
+                currentExt.textContent = ext;
+                filePreview.classList.add('show');
+                
+                // Set extension
+                const matchedBtn = Array.from(extBtns).find(btn => 
+                    btn.getAttribute('data-ext') === ext
+                );
+                
+                if (matchedBtn) {
+                    extBtns.forEach(b => b.classList.remove('active'));
+                    matchedBtn.classList.add('active');
+                    selectedExtension = ext;
+                } else {
+                    extBtns[0].classList.add('active');
+                    selectedExtension = '.pdf';
+                }
+                
+                customExtInput.value = selectedExtension;
+                
+                // Reset results
+                resetResults();
+            }
+            
+            function applyCustomExtension() {
+                let ext = customExtInput.value.trim();
+                if (ext) {
+                    if (!ext.startsWith('.')) {
+                        ext = '.' + ext;
+                    }
+                    selectedExtension = ext;
+                    
+                    // Remove active from all buttons
+                    extBtns.forEach(b => b.classList.remove('active'));
+                    customExtInput.value = selectedExtension;
+                }
+            }
+            
+            function processExtensionChange() {
+                if (!selectedFile) {
+                    alert('Please upload a file first');
+                    return;
+                }
+                
+                // Show loader
+                changeBtn.disabled = true;
+                changeBtn.innerHTML = '<span>⏳</span> Processing...';
+                loader.classList.add('show');
+                
+                // Simulate processing
+                setTimeout(() => {
+                    // Create new filename
+                    const originalName = selectedFile.name;
+                    const nameWithoutExt = originalName.substring(0, originalName.lastIndexOf('.'));
+                    const newName = nameWithoutExt + selectedExtension;
+                    
+                    // Create new File object
+                    modifiedFile = new File([selectedFile], newName, {
+                        type: selectedFile.type,
+                        lastModified: Date.now()
+                    });
+                    
+                    // Hide loader
+                    loader.classList.remove('show');
+                    
+                    // Show results
+                    newFileName.textContent = newName;
+                    resultCard.classList.add('show');
+                    downloadBtn.classList.add('show');
+                    
+                    // Reset button
+                    changeBtn.disabled = false;
+                    changeBtn.innerHTML = '<span>🔄</span> Change Extension';
+                    
+                    // Scroll to results
+                    resultCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 1500);
+            }
+            
+            function handleDownload() {
+                if (!modifiedFile) return;
+                
+                // Create download link
+                const url = URL.createObjectURL(modifiedFile);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = modifiedFile.name;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                
+                // Clean up
+                setTimeout(() => URL.revokeObjectURL(url), 100);
+                
+                // Show success feedback
+                const originalText = downloadBtn.innerHTML;
+                downloadBtn.innerHTML = '<span>✓</span> Downloaded!';
+                downloadBtn.style.background = 'linear-gradient(135deg, #16a34a 0%, #15803d 100%)';
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    downloadBtn.innerHTML = originalText;
+                    downloadBtn.style.background = 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)';
+                }, 2000);
+            }
+            
+            function resetResults() {
+                resultCard.classList.remove('show');
+                downloadBtn.classList.remove('show');
+            }
+            
+            function getFileExtension(filename) {
+                return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 1);
+            }
+            
+            function formatFileSize(bytes) {
+                if (bytes === 0) return '0 Bytes';
+                const k = 1024;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            }
+            
+            // Initialize the tool
+            init();
+        })();
+    </script>
+</body>
+</html><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

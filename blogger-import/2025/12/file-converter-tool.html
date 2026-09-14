@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogger Universal Text Converter</title>
+    <!-- Dependencies: FileSaver for downloads, html2pdf for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Designed to look good inside a Blogger post or sidebar */
+        .bt-tool-container {
+            max-width: 100%;
+            margin: 10px auto;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .bt-header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .bt-header h2 { margin: 0; font-size: 22px; }
+        .bt-header p { margin: 5px 0 0; font-size: 14px; opacity: 0.9; }
+
+        .bt-content { padding: 15px; }
+
+        /* File Upload Area */
+        .bt-upload-box {
+            border: 2px dashed #4CAF50;
+            border-radius: 6px;
+            padding: 20px;
+            text-align: center;
+            background: #f9fff9;
+            cursor: pointer;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+
+        .bt-upload-box:hover { background: #f0fff0; border-color: #388E3C; }
+        .bt-upload-box i { font-size: 30px; color: #4CAF50; }
+
+        /* Text Area & Stats */
+        .bt-editor-wrap { position: relative; }
+        .bt-textarea {
+            width: 100%;
+            height: 200px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+            resize: vertical;
+            outline: none;
+            box-sizing: border-box;
+        }
+        .bt-textarea:focus { border-color: #4CAF50; box-shadow: 0 0 5px rgba(76,175,80,0.2); }
+
+        .bt-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #777;
+            margin-top: 5px;
+            padding: 0 5px;
+        }
+
+        /* Toolbar */
+        .bt-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        .bt-tool-btn {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .bt-tool-btn:hover { background: #e0e0e0; }
+
+        /* Format Selection Grid */
+        .bt-format-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .bt-format-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+            background: #fff;
+        }
+        .bt-format-item.active {
+            border-color: #4CAF50;
+            background: #e8f5e9;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        .bt-format-item i { display: block; font-size: 18px; margin-bottom: 5px; }
+
+        /* Main Button */
+        .bt-convert-btn {
+            width: 100%;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .bt-convert-btn:hover { background: #388E3C; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+
+        /* Toast notifications */
+        .bt-toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            z-index: 9999;
+            display: none;
+        }
+
+        #pdf-export-content { display: none; padding: 40px; }
+    </style>
+</head>
+<body>
+
+<div class="bt-tool-container">
+    <div class="bt-header">
+        <h2>Text Converter Pro</h2>
+        <p>Convert and Clean Text for Your Blog</p>
+    </div>
+
+    <div class="bt-content">
+        <!-- Step 1: Input -->
+        <div class="bt-upload-box" onclick="document.getElementById('btFileInput').click()">
+            <i class="fas fa-file-import"></i>
+            <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">Upload Text File</div>
+            <div style="font-size: 12px; color: #666;">Drag & drop or click to browse</div>
+            <input type="file" id="btFileInput" style="display:none">
+        </div>
+
+        <div class="bt-editor-wrap">
+            <textarea id="btTextarea" class="bt-textarea" placeholder="Paste your blog draft or text here..."></textarea>
+            <div class="bt-stats">
+                <span id="btWordCount">Words: 0</span>
+                <span id="btCharCount">Chars: 0</span>
+            </div>
+        </div>
+
+        <!-- Step 2: Tools -->
+        <div class="bt-toolbar">
+            <button class="bt-tool-btn" onclick="btCopy()"><i class="fas fa-copy"></i> Copy</button>
+            <button class="bt-tool-btn" onclick="btClean()"><i class="fas fa-broom"></i> Clean HTML Tags</button>
+            <button class="bt-tool-btn" onclick="btLower()"><i class="fas fa-font"></i> lowercase</button>
+            <button class="bt-tool-btn" onclick="btClear()"><i class="fas fa-eraser"></i> Reset</button>
+        </div>
+
+        <!-- Step 3: Formats -->
+        <div style="font-weight: bold; font-size: 14px; margin-bottom: 10px;">Select Export Format:</div>
+        <div class="bt-format-grid" id="btFormatGrid">
+            <div class="bt-format-item active" data-fmt="txt"><i class="fas fa-file-alt"></i>.TXT</div>
+            <div class="bt-format-item" data-fmt="html"><i class="fab fa-html5"></i>.HTML</div>
+            <div class="bt-format-item" data-fmt="pdf"><i class="fas fa-file-pdf"></i>.PDF</div>
+            <div class="bt-format-item" data-fmt="json"><i class="fas fa-code"></i>.JSON</div>
+            <div class="bt-format-item" data-fmt="md"><i class="fab fa-markdown"></i>.MD</div>
+            <div class="bt-format-item" data-fmt="csv"><i class="fas fa-table"></i>.CSV</div>
+        </div>
+
+        <button class="bt-convert-btn" onclick="btProcess()">
+            <i class="fas fa-download"></i> CONVERT & DOWNLOAD
+        </button>
+    </div>
+</div>
+
+<!-- Hidden container for PDF generation -->
+<div id="pdf-export-content"></div>
+
+<!-- Custom Toast -->
+<div id="btToast" class="bt-toast"></div>
+
+<script>
+    const btTextarea = document.getElementById('btTextarea');
+    const btToast = document.getElementById('btToast');
+    let btSelectedFormat = 'txt';
+
+    // Update Stats
+    btTextarea.addEventListener('input', () => {
+        const text = btTextarea.value.trim();
+        document.getElementById('btWordCount').innerText = 'Words: ' + (text ? text.split(/\s+/).length : 0);
+        document.getElementById('btCharCount').innerText = 'Chars: ' + text.length;
+    });
+
+    // Handle Format Selection
+    document.querySelectorAll('.bt-format-item').forEach(item => {
+        item.addEventListener('click', function() {
+            document.querySelectorAll('.bt-format-item').forEach(i => i.classList.remove('active'));
+            this.classList.add('active');
+            btSelectedFormat = this.getAttribute('data-fmt');
+        });
+    });
+
+    // File Upload
+    document.getElementById('btFileInput').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            btTextarea.value = e.target.result;
+            btTextarea.dispatchEvent(new Event('input'));
+            btShowToast("File loaded successfully!");
+        };
+        reader.readAsText(file);
+    });
+
+    // Tools
+    function btShowToast(msg) {
+        btToast.innerText = msg;
+        btToast.style.display = 'block';
+        setTimeout(() => { btToast.style.display = 'none'; }, 2500);
+    }
+
+    function btCopy() {
+        btTextarea.select();
+        document.execCommand('copy');
+        btShowToast("Copied to clipboard!");
+    }
+
+    function btClear() {
+        btTextarea.value = '';
+        btTextarea.dispatchEvent(new Event('input'));
+        btShowToast("Cleared!");
+    }
+
+    function btLower() {
+        btTextarea.value = btTextarea.value.toLowerCase();
+        btShowToast("Converted to lowercase");
+    }
+
+    function btClean() {
+        // Specifically for bloggers: Removes HTML tags but leaves content
+        btTextarea.value = btTextarea.value.replace(/<[^>]*>?/gm, '');
+        btShowToast("HTML tags stripped");
+    }
+
+    // Process Download
+    async function btProcess() {
+        const content = btTextarea.value;
+        if (!content) { btShowToast("Please enter some text!"); return; }
+
+        const filename = `converted_text_${new Date().getTime()}`;
+
+        try {
+            switch(btSelectedFormat) {
+                case 'txt':
+                    saveAs(new Blob([content], {type: "text/plain"}), filename + ".txt");
+                    break;
+                case 'html':
+                    // Convert line breaks to <p> tags for Blogger
+                    const blogHtml = content.split('\n').filter(l => l.trim() !== '').map(l => `<p>${l}</p>`).join('\n');
+                    saveAs(new Blob([blogHtml], {type: "text/html"}), filename + ".html");
+                    break;
+                case 'json':
+                    const json = JSON.stringify({ title: "Blogger Export", date: new Date(), body: content }, null, 4);
+                    saveAs(new Blob([json], {type: "application/json"}), filename + ".json");
+                    break;
+                case 'csv':
+                    const csv = "Line Content\n" + content.split('\n').map(l => `"${l.replace(/"/g, '""')}"`).join('\n');
+                    saveAs(new Blob([csv], {type: "text/csv"}), filename + ".csv");
+                    break;
+                case 'md':
+                    const md = "# Blog Draft\n\n" + content;
+                    saveAs(new Blob([md], {type: "text/markdown"}), filename + ".md");
+                    break;
+                case 'pdf':
+                    const pdfElement = document.getElementById('pdf-export-content');
+                    pdfElement.innerHTML = `<h2 style="color:#4CAF50">Blog Post Export</h2><div style="white-space: pre-wrap;">${content}</div>`;
+                    pdfElement.style.display = 'block';
+                    await html2pdf().from(pdfElement).set({
+                        margin: 1,
+                        filename: filename + '.pdf',
+                        jsPDF: { format: 'a4', orientation: 'portrait' }
+                    }).save();
+                    pdfElement.style.display = 'none';
+                    break;
+            }
+            btShowToast("Download Started!");
+        } catch (err) {
+            btShowToast("Error during conversion.");
+        }
+    }
+</script>
+
+</body>
+</html><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

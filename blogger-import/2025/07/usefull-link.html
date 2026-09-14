@@ -1,0 +1,2408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Resource Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #dc143c;
+            --secondary: #003893;
+            --accent: #ffcc00;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            color: white;
+            position: relative;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            margin-right: 15px;
+            color: var(--accent);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            color: #f0f0f0;
+        }
+        
+        .search-container {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+        
+        #search {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+        }
+        
+        .category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .category-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .stats {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            gap: 10px;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        
+        .card-description {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .card-link {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .card-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .card-footer {
+            padding: 15px 20px;
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #777;
+        }
+        
+        .card-category {
+            background: #e0f7fa;
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-transform: capitalize;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: white;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-link:hover {
+            color: #4ecdc4;
+            text-decoration: underline;
+        }
+        
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .category-section {
+            margin-bottom: 40px;
+        }
+        
+        .category-title {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+            }
+            
+            .category-filter {
+                justify-content: center;
+            }
+            
+            .stats {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <div>
+                    <h1>Nepal Resource Hub</h1>
+                    <p class="subtitle">A comprehensive collection of essential Nepali government sites, data portals, and resources</p>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search" placeholder="Search 200+ resources...">
+            </div>
+        </header>
+        
+        <div class="controls">
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all"><i class="fas fa-globe-asia"></i> All</button>
+                <button class="category-btn" data-category="government"><i class="fas fa-landmark"></i> Government</button>
+                <button class="category-btn" data-category="education"><i class="fas fa-graduation-cap"></i> Education</button>
+                <button class="category-btn" data-category="agriculture"><i class="fas fa-tractor"></i> Agriculture</button>
+                <button class="category-btn" data-category="health"><i class="fas fa-hospital"></i> Health</button>
+                <button class="category-btn" data-category="energy"><i class="fas fa-bolt"></i> Energy</button>
+                <button class="category-btn" data-category="infrastructure"><i class="fas fa-road"></i> Infrastructure</button>
+                <button class="category-btn" data-category="statistics"><i class="fas fa-chart-bar"></i> Statistics</button>
+                <button class="category-btn" data-category="other"><i class="fas fa-ellipsis-h"></i> Other</button>
+            </div>
+            
+            <div class="stats">
+                <i class="fas fa-database"></i>
+                <span>214 Resources</span>
+            </div>
+        </div>
+        
+        <div class="cards-container" id="cardsContainer">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+        
+        <footer>
+            <p>Curated with ❤️ for Nepal</p>
+            <div class="footer-links">
+                <a href="https://start.me/u/MEzJzk/nib1nt" class="footer-link" target="_blank"><i class="fas fa-bookmark"></i> Start.me Dashboard</a>
+                <a href="https://twitter.com/nib1nt" class="footer-link" target="_blank"><i class="fab fa-twitter"></i> @nib1nt</a>
+                <a href="#" class="footer-link"><i class="fas fa-download"></i> Export as PDF</a>
+                <a href="#" class="footer-link"><i class="fas fa-share-alt"></i> Share</a>
+            </div>
+            <p>© 2023 Nepal Resource Hub | All resources belong to their respective organizations</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Resource data with all links
+        const resources = [
+            {
+                title: "Start.me Dashboard",
+                description: "Personal dashboard for useful resources",
+                link: "https://start.me/u/MEzJzk/nib1nt",
+                icon: "fas fa-home",
+                category: "other"
+            },
+            {
+                title: "Twitter Profile",
+                description: "Follow for updates and resources",
+                link: "https://twitter.com/nib1nt",
+                icon: "fab fa-twitter",
+                category: "other"
+            },
+            {
+                title: "Nepal In Figures, 2022",
+                description: "Official statistical publication from Central Bureau of Statistics",
+                link: "https://cbs.gov.np/wp-content/upLoads/2022/08/Neapl-In-Figures-2022.pdf",
+                icon: "fas fa-chart-bar",
+                category: "statistics"
+            },
+            {
+                title: "Municipality Map",
+                description: "GIS maps for local administrative units",
+                link: "https://sthaniya.gov.np/gis/",
+                icon: "fas fa-map",
+                category: "government"
+            },
+            {
+                title: "Municipality Contact",
+                description: "Contact information for all local administrative units",
+                link: "https://mofaga.gov.np/local-contact",
+                icon: "fas fa-address-book",
+                category: "government"
+            },
+            {
+                title: "Federal Government Gazette",
+                description: "Official publication of Nepal government",
+                link: "http://rajpatra.dop.gov.np/",
+                icon: "fas fa-newspaper",
+                category: "government"
+            },
+            {
+                title: "Province 1 Gazette",
+                description: "Official publication of Province 1 government",
+                link: "http://moial.p1.gov.np/en/page/rajpatra",
+                icon: "fas fa-book",
+                category: "government"
+            },
+            {
+                title: "Madhesh Gazette",
+                description: "Official publication of Madhesh Province",
+                link: "https://rajpatra.madhesh.gov.np/",
+                icon: "fas fa-book",
+                category: "government"
+            },
+            {
+                title: "Bagmati Gazette",
+                description: "Official publication of Bagmati Province",
+                link: "https://www.moial.bagamati.gov.np/rajpatra",
+                icon: "fas fa-book",
+                category: "government"
+            },
+            {
+                title: "Gandaki Gazette",
+                description: "Official publication of Gandaki Province",
+                link: "https://molcpa.gandaki.gov.np/rajpatra",
+                icon: "fas fa-book",
+                category: "government"
+            },
+            {
+                title: "Lumbini Gazette",
+                description: "Official publication of Lumbini Province",
+                link: "https://moial.lumbini.gov.np/publications",
+                icon: "fas fa-book",
+                category: "government"
+            },
+            {
+                title: "Karnali Gazette",
+                description: "Official publication of Karnali Province",
+                link: "https://moial.karnali.gov.np/np/page/pradesh-rajpatra",
+                icon: "fas fa-book",
+                category: "government"
+            },
+            {
+                title: "Sudurpashchim Gazette",
+                description: "Official publication of Sudurpashchim Province",
+                link: "http://moial.sudurpashchim.gov.np/rajpatra",
+                icon: "fas fa-book",
+                category: "government"
+            },
+            {
+                title: "Federal Cabinet",
+                description: "Information about Nepal's federal cabinet",
+                link: "https://mocit.gov.np/cabinet",
+                icon: "fas fa-users",
+                category: "government"
+            },
+            {
+                title: "Province 1 Cabinet",
+                description: "Cabinet decisions for Province 1",
+                link: "https://ocmcm.p1.gov.np/category/cabinet-decesions",
+                icon: "fas fa-users",
+                category: "government"
+            },
+            {
+                title: "Madhesh Cabinet",
+                description: "Council of Ministers decisions for Madhesh",
+                link: "https://ocmcm.madhesh.gov.np/council-of-ministers-decisions",
+                icon: "fas fa-users",
+                category: "government"
+            },
+            {
+                title: "Bagmati Cabinet",
+                description: "Council of Ministers decisions for Bagmati",
+                link: "https://ocmcm.bagamati.gov.np/councilofministersdecisions",
+                icon: "fas fa-users",
+                category: "government"
+            },
+            {
+                title: "Gandaki Cabinet",
+                description: "Cabinet decisions for Gandaki",
+                link: "https://ocmcm.gandaki.gov.np/decision/cabinate_decisions",
+                icon: "fas fa-users",
+                category: "government"
+            },
+            {
+                title: "Lumbini Cabinet",
+                description: "Cabinet decisions for Lumbini",
+                link: "https://ocmcm.lumbini.gov.np/list/%E0%A4%AE%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D%E0%A4%95%E0%A5%8B%20%E0%A4%AC%E0%A5%88%E0%A4%A0%E0%A4%95%E0%A4%95%E0%A5%8B%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%AF",
+                icon: "fas fa-users",
+                category: "government"
+            },
+            {
+                title: "Karnali Cabinet",
+                description: "Cabinet meetings and decisions for Karnali",
+                link: "https://ocmcm.karnali.gov.np/#cmmeeting",
+                icon: "fas fa-users",
+                category: "government"
+            },
+            {
+                title: "Sudurpashchim Cabinet",
+                description: "Council of Ministers decisions for Sudurpashchim",
+                link: "http://ocmcm.sudurpashchim.gov.np/ne/decisions-council-of-ministers",
+                icon: "fas fa-users",
+                category: "government"
+            },
+            {
+                title: "Education Flash Reports",
+                description: "Municipality-level education data",
+                link: "https://cehrd.gov.np/infocenter/17",
+                icon: "fas fa-school",
+                category: "education"
+            },
+            {
+                title: "Higher Education Statistics",
+                description: "Summary statistics on higher education",
+                link: "http://ugc.nitc.gov.np:81/PublicReport",
+                icon: "fas fa-university",
+                category: "education"
+            },
+            {
+                title: "College Data (UGC EMIS)",
+                description: "Information on colleges in Nepal",
+                link: "https://www.ugcnepal.edu.np/publications/1/14",
+                icon: "fas fa-graduation-cap",
+                category: "education"
+            },
+            {
+                title: "UGC Grants",
+                description: "Grants provided by University Grants Commission",
+                link: "https://www.ugcnepal.edu.np/notices/1?title=&office=2",
+                icon: "fas fa-money-bill-wave",
+                category: "education"
+            },
+            {
+                title: "CTEVT Institutions Map",
+                description: "Map of all CTEVT training institutions",
+                link: "http://ctevt.org.np/ctevtmapping/",
+                icon: "fas fa-map-marker-alt",
+                category: "education"
+            },
+            {
+                title: "CTEVT Training Calendar",
+                description: "Training programs schedule",
+                link: "http://ctevt.org.np/trainingportal/public/",
+                icon: "fas fa-calendar-alt",
+                category: "education"
+            },
+            {
+                title: "ECAN",
+                description: "Educational Consultancy Association of Nepal",
+                link: "https://www.ecan.org.np/",
+                icon: "fas fa-handshake",
+                category: "education"
+            },
+            {
+                title: "MoEST Budget 2079/80",
+                description: "Ministry of Education program and budget book",
+                link: "https://moest.gov.np/upload_file/files/post/1659510311_1909028146_%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%20%E0%A4%A4%E0%A4%A5%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BF%20%E0%A4%AE%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B2%E0%A4%AF%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%AE%20%E0%A4%A4%E0%A4%A5%E0%A4%BE%20%E0%A4%AC%E0%A4%9C%E0%A5%87%E0%A4%9F%20%E0%A4%AA%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%95%E0%A4%BE%20%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AF%E0%A5%A4%E0%A5%AE%E0%A5%A6.pdf",
+                icon: "fas fa-file-invoice-dollar",
+                category: "education"
+            },
+            {
+                title: "Monthly Labor Statistics",
+                description: "Labor market statistics from Department of Labor",
+                link: "https://dol.gov.np/en/report?type=monthly",
+                icon: "fas fa-briefcase",
+                category: "statistics"
+            },
+            {
+                title: "Work Permits for Foreigners",
+                description: "Information on work permits for foreigners",
+                link: "https://dol.gov.np/en/site/workpermit?type=all",
+                icon: "fas fa-passport",
+                category: "government"
+            },
+            {
+                title: "PM Employment Program",
+                description: "Reports on Prime Minister Employment Program",
+                link: "http://www.pmep.gov.np/publication/prativedan",
+                icon: "fas fa-user-tie",
+                category: "government"
+            },
+            {
+                title: "SSF Daily Report",
+                description: "Social Security Fund daily summary report",
+                link: "https://ssf.gov.np/summary-report",
+                icon: "fas fa-shield-alt",
+                category: "government"
+            },
+            {
+                title: "SSF Employers",
+                description: "List of employers registered with SSF",
+                link: "https://ssf.gov.np/employers",
+                icon: "fas fa-building",
+                category: "government"
+            },
+            {
+                title: "Labor Court",
+                description: "Official site of Nepal Labor Court",
+                link: "https://labourcourt.gov.np/",
+                icon: "fas fa-gavel",
+                category: "government"
+            },
+            {
+                title: "Recruiting Agencies",
+                description: "List of recruiting agencies with operation status",
+                link: "https://dofe.gov.np/Recruting-Agences.aspx",
+                icon: "fas fa-plane-departure",
+                category: "government"
+            },
+            {
+                title: "Orientation Centers",
+                description: "List of orientation centers for foreign employment",
+                link: "https://dofe.gov.np/Orientation-Center.aspx",
+                icon: "fas fa-chalkboard-teacher",
+                category: "government"
+            },
+            {
+                title: "JITCO Information",
+                description: "Detailed information about JITCO",
+                link: "https://dofe.gov.np/JITCO.aspx",
+                icon: "fas fa-info-circle",
+                category: "government"
+            },
+            {
+                title: "Old Complaints",
+                description: "Archive of old complaints in foreign employment",
+                link: "https://dofe.gov.np/Modules/DocumentDownload/DownloadHandler.ashx?action=download&path=uploads/document/Document_2019080112580.pdf",
+                icon: "fas fa-archive",
+                category: "government"
+            },
+            {
+                title: "DOFE Monthly Statistics",
+                description: "Monthly statistics from Department of Foreign Employment",
+                link: "https://dofe.gov.np/monthly.aspx",
+                icon: "fas fa-chart-line",
+                category: "statistics"
+            },
+            {
+                title: "EPS Korea",
+                description: "Official site for EPS Korea program",
+                link: "http://epsnepal.gov.np/",
+                icon: "fas fa-globe-asia",
+                category: "government"
+            },
+            {
+                title: "Foreign Employment Tribunal",
+                description: "Foreign Employment Tribunal Nepal",
+                link: "https://fet.gov.np/",
+                icon: "fas fa-balance-scale",
+                category: "government"
+            },
+            {
+                title: "Rural Enterprises Project",
+                description: "Rural Enterprises and Remittances Project",
+                link: "https://rerp.moics.gov.np/en",
+                icon: "fas fa-project-diagram",
+                category: "government"
+            },
+            {
+                title: "Blacklisted Companies",
+                description: "List of blacklisted labor companies",
+                link: "http://feo.gov.np/cancel.aspx",
+                icon: "fas fa-ban",
+                category: "government"
+            },
+            {
+                title: "Recognized Destinations",
+                description: "Countries open for foreign employment",
+                link: "https://dofe.gov.np/recognized.aspx",
+                icon: "fas fa-map-marked-alt",
+                category: "government"
+            },
+            {
+                title: "List of NGOs",
+                description: "NGOs registered with Social Welfare Council",
+                link: "https://swc.org.np/pages/391",
+                icon: "fas fa-hands-helping",
+                category: "government"
+            },
+            {
+                title: "List of INGOs",
+                description: "INGOs registered with Social Welfare Council",
+                link: "https://swc.org.np/pages/389",
+                icon: "fas fa-globe",
+                category: "government"
+            },
+            {
+                title: "SWC Approved NGOs",
+                description: "NGOs approved with donor information",
+                link: "https://swc.org.np/pages/393",
+                icon: "fas fa-check-circle",
+                category: "government"
+            },
+            {
+                title: "Aid Management System",
+                description: "Information system for aid management",
+                link: "https://amis.mof.gov.np/",
+                icon: "fas fa-donate",
+                category: "government"
+            },
+            {
+                title: "AIN",
+                description: "Association of International NGOs in Nepal",
+                link: "https://www.ain.org.np/",
+                icon: "fas fa-users",
+                category: "other"
+            },
+            {
+                title: "NGO Federation",
+                description: "NGO Federation of Nepal",
+                link: "https://www.ngofederation.org/",
+                icon: "fas fa-network-wired",
+                category: "other"
+            },
+            {
+                title: "IATI Datastore",
+                description: "Advanced search for development data",
+                link: "https://datastore.iatistandard.org/advanced",
+                icon: "fas fa-search-plus",
+                category: "other"
+            },
+            {
+                title: "Seed Banks",
+                description: "Details of community seed banks",
+                link: "https://doacrop.gov.np/pages/u-b-2021-08-20-073150",
+                icon: "fas fa-seedling",
+                category: "agriculture"
+            },
+            {
+                title: "Fertilizer Importers",
+                description: "Registered chemical fertilizer importers",
+                link: "https://moald.gov.np/%e0%a4%b0%e0%a4%be%e0%a4%b8%e0%a4%be%e0%a4%af%e0%a4%a8%e0%a4%bf%e0%a4%95-%e0%a4%ae%e0%a4%b2-%e0%a4%86%e0%a4%af%e0%a4%be%e0%a4%a4%e0%a4%95%e0%a4%b0%e0%a5%8d%e0%a4%a4%e0%a4%be%e0%a4%95%e0%a5%8b-3/",
+                icon: "fas fa-truck-loading",
+                category: "agriculture"
+            },
+            {
+                title: "Subsidized Fertilizer Sellers",
+                description: "List of subsidized fertilizer seller cooperatives",
+                link: "https://www.kscl.gov.np/files/Extra/List-2078-05-15.pdf",
+                icon: "fas fa-tags",
+                category: "agriculture"
+            },
+            {
+                title: "Crop Varieties",
+                description: "Notified crop varieties (2078/04/32)",
+                link: "https://doacrop.gov.np/public/uploads/categoryfile/Notified_and_Denotified_Varieties_till_2078-04-32-76242.pdf",
+                icon: "fas fa-leaf",
+                category: "agriculture"
+            },
+            {
+                title: "Agriculture Diary",
+                description: "Information on crops, diseases, and markets",
+                link: "https://aitc.gov.np/downloadsdetail/2/2019/19794382/",
+                icon: "fas fa-book",
+                category: "agriculture"
+            },
+            {
+                title: "Agriculture Statistics",
+                description: "Various agricultural statistics",
+                link: "https://moald.gov.np/publication-types/agriculture-statistics/",
+                icon: "fas fa-chart-pie",
+                category: "agriculture"
+            },
+            {
+                title: "Fertilizer Procurement",
+                description: "Records of fertilizer purchases",
+                link: "https://www.kscl.gov.np/home/Purchase_Record.php",
+                icon: "fas fa-shopping-cart",
+                category: "agriculture"
+            },
+            {
+                title: "Seed Information System",
+                description: "Information system for seeds",
+                link: "https://seed.sqcc.gov.np/ne/",
+                icon: "fas fa-info-circle",
+                category: "agriculture"
+            },
+            {
+                title: "Seed Subsidy Program",
+                description: "Program details for seed subsidies",
+                link: "https://subsidy.sqcc.gov.np/ne/",
+                icon: "fas fa-hand-holding-usd",
+                category: "agriculture"
+            },
+            {
+                title: "Farmer Information System",
+                description: "System for farmer-related information",
+                link: "https://farmer.moald.gov.np/graph/userFilterBasedDistrict/onUserType/28",
+                icon: "fas fa-user-farmer",
+                category: "agriculture"
+            },
+            {
+                title: "Agriculture Market Prices",
+                description: "System for agricultural market prices",
+                link: "http://ampis.gov.np/",
+                icon: "fas fa-coins",
+                category: "agriculture"
+            },
+            {
+                title: "Nepal Agriculture Atlas",
+                description: "Agriculture maps of Nepal",
+                link: "http://nepal.spatialapps.net/agricultureatlas/",
+                icon: "fas fa-atlas",
+                category: "agriculture"
+            },
+            {
+                title: "Kalimati Market",
+                description: "Kalimati Fruits and Vegetable Market Development Committee",
+                link: "https://kalimatimarket.gov.np/",
+                icon: "fas fa-apple-alt",
+                category: "agriculture"
+            },
+            {
+                title: "Kalimati Pesticide Analysis",
+                description: "Pesticide residue analysis results",
+                link: "https://kalimatimarket.gov.np/notices/pest",
+                icon: "fas fa-flask",
+                category: "agriculture"
+            },
+            {
+                title: "Agriculture Machinery MRP",
+                description: "Maximum retail prices for agricultural machinery",
+                link: "http://caidmp.gov.np/noticefile/MRP%20Agri%20Machineries_1618569531.pdf",
+                icon: "fas fa-tractor",
+                category: "agriculture"
+            },
+            {
+                title: "Urban Agriculture",
+                description: "Information on urban agriculture practices",
+                link: "https://aitc.gov.np/downloadfile/sahari_1624203338.pdf",
+                icon: "fas fa-city",
+                category: "agriculture"
+            },
+            {
+                title: "Agriculture Journal",
+                description: "Nepal agriculture journal",
+                link: "https://aitc.gov.np/downloadsdetail/1/2019/92083162/",
+                icon: "fas fa-book-open",
+                category: "agriculture"
+            },
+            {
+                title: "Agriculture Calendar 2079",
+                description: "Agricultural activities calendar",
+                link: "https://aitc.gov.np/downloadfile/calender%202079_1649776165.pdf",
+                icon: "fas fa-calendar",
+                category: "agriculture"
+            },
+            {
+                title: "PMAMP MIS Notices",
+                description: "Notices from Agriculture Result MIS",
+                link: "https://armis.pmamp.gov.np/notices",
+                icon: "fas fa-bullhorn",
+                category: "agriculture"
+            },
+            {
+                title: "Machinery Operation Methods",
+                description: "Guidelines for operating agricultural machinery",
+                link: "https://pmamp.gov.np/sites/default/files/2022-08/%E0%A4%AE%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%A8%E0%A4%B0%E0%A5%80%20%E0%A4%94%E0%A4%9C%E0%A4%BE%E0%A4%B0%E0%A4%B9%E0%A4%B0%E0%A5%81%E0%A4%95%E0%A5%8B%20%E0%A4%B8%E0%A4%9E%E0%A5%8D%E2%80%8D%E0%A4%9A%E0%A4%BE%E0%A4%B2%E0%A4%A8%E0%A4%95%E0%A4%BE%20%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BF.pdf",
+                icon: "fas fa-cogs",
+                category: "agriculture"
+            },
+            {
+                title: "Agriculture Development Strategy",
+                description: "ADS (2015 - 2035)",
+                link: "http://doanepal.gov.np/downloadfile/ADS_-FINAL_1542883806.pdf",
+                icon: "fas fa-file-contract",
+                category: "agriculture"
+            },
+            {
+                title: "National Soil Science Research Center",
+                description: "NSSRC official site",
+                link: "https://soil.narc.gov.np/",
+                icon: "fas fa-mountain",
+                category: "agriculture"
+            },
+            {
+                title: "National Fruit Development Center",
+                description: "NCFD official site",
+                link: "https://ncfd.gov.np/welcome",
+                icon: "fas fa-apple-alt",
+                category: "agriculture"
+            },
+            {
+                title: "National Maize Research Program",
+                description: "NMRP official site",
+                link: "https://nmrp.gov.np/",
+                icon: "fas fa-seedling",
+                category: "agriculture"
+            },
+            {
+                title: "Nepal Agricultural Research Council",
+                description: "NARC official site",
+                link: "https://narc.gov.np/",
+                icon: "fas fa-flask",
+                category: "agriculture"
+            },
+            {
+                title: "PM Agriculture Modernization Project",
+                description: "PMAMP official site",
+                link: "https://pmamp.gov.np/",
+                icon: "fas fa-tractor",
+                category: "agriculture"
+            },
+            {
+                title: "Disappearance Commission",
+                description: "Commission for Investigation of Enforced Disappeared Persons",
+                link: "https://ciedp.gov.np/",
+                icon: "fas fa-search",
+                category: "government"
+            },
+            {
+                title: "Truth and Reconciliation Commission",
+                description: "TRC official site",
+                link: "http://trc.gov.np/",
+                icon: "fas fa-handshake",
+                category: "government"
+            },
+            {
+                title: "Details of Disappeared Persons",
+                description: "Fifth report on disappeared persons",
+                link: "https://ciedp.gov.np/wp-content/uploads/2022/07/fifth.pdf",
+                icon: "fas fa-user-friends",
+                category: "government"
+            },
+            {
+                title: "NHRC Recommendations",
+                description: "Implementation status of NHRC recommendations",
+                link: "https://www.nhrcnepal.org/uploads/publication/Inner_20_Years_Book_2077_Final_CTP_NHRC.pdf",
+                icon: "fas fa-file-alt",
+                category: "government"
+            },
+            {
+                title: "Retired Soldiers",
+                description: "Book on retired soldiers by Prem Singh Basnyat",
+                link: "https://www.premsinghbasnyat.com.np/pdf/BirgatiPraptaSainikharu.pdf",
+                icon: "fas fa-medal",
+                category: "other"
+            },
+            {
+                title: "Conflict Victims",
+                description: "Database of conflict victims by INSEC",
+                link: "http://www.insec.org.np/victim/",
+                icon: "fas fa-users-slash",
+                category: "other"
+            },
+            {
+                title: "Incident Reports",
+                description: "ACLED conflict data for Nepal",
+                link: "https://www.acleddata.com/wp-content/uploads/2011/documents/Nepal.xls",
+                icon: "fas fa-file-excel",
+                category: "statistics"
+            },
+            {
+                title: "Registered Publications",
+                description: "List of registered publications as of Magh 2079",
+                link: "https://api.giwms.gov.np/storage/23/posts/1677559433_71.pdf",
+                icon: "fas fa-newspaper",
+                category: "other"
+            },
+            {
+                title: "Online Renewal Information",
+                description: "Details about online renewals",
+                link: "https://api.giwms.gov.np/storage/23/posts/1676027525_18.pdf",
+                icon: "fas fa-sync-alt",
+                category: "other"
+            },
+            {
+                title: "Registered Online Media",
+                description: "List of registered online news sites",
+                link: "https://www.presscouncilnepal.gov.np/np/wp-content/uploads/2022/12/Enlisted-online-media-till-2079-08-29.pdf",
+                icon: "fas fa-globe",
+                category: "other"
+            },
+            {
+                title: "Newspaper Classification",
+                description: "Classification of publications by Press Council",
+                link: "https://www.presscouncilnepal.gov.np/np/category/result/",
+                icon: "fas fa-sort",
+                category: "other"
+            },
+            {
+                title: "Press Releases",
+                description: "Official press releases from Press Council",
+                link: "https://www.presscouncilnepal.gov.np/np/category/press-release/",
+                icon: "fas fa-bullhorn",
+                category: "other"
+            },
+            {
+                title: "Press Freedom Violations",
+                description: "Incidents of press freedom violations",
+                link: "http://pressfreedom.fnjnepal.org/",
+                icon: "fas fa-microphone-slash",
+                category: "other"
+            },
+            {
+                title: "Press Pass Renewal",
+                description: "Details of press pass renewals as of Magh 18, 2079",
+                link: "https://api.giwms.gov.np/storage/23/posts/1675840283_49.pdf",
+                icon: "fas fa-id-card",
+                category: "other"
+            },
+            {
+                title: "Health Fact Sheets",
+                description: "Municipality-level health indicators",
+                link: "https://dohs.gov.np/data-fact-sheet/",
+                icon: "fas fa-file-medical",
+                category: "health"
+            },
+            {
+                title: "Health Facility Registry",
+                description: "National registry of health facilities",
+                link: "https://nhfr.mohp.gov.np/",
+                icon: "fas fa-clinic-medical",
+                category: "health"
+            },
+            {
+                title: "Medicine Treatment Committee",
+                description: "Decisions of the committee for impoverished citizens",
+                link: "https://nssd.dohs.gov.np/bipanna_nirnayaharu.html",
+                icon: "fas fa-pills",
+                category: "health"
+            },
+            {
+                title: "Province Program Guidelines",
+                description: "Program implementation guidelines for provinces",
+                link: "http://dohs.gov.np/wp-content/uploads/2022/07/All_PIG_Province_2079-80-Latest.pdf",
+                icon: "fas fa-book-medical",
+                category: "health"
+            },
+            {
+                title: "Local Level Program Guidelines",
+                description: "Program implementation guidelines for local levels",
+                link: "http://dohs.gov.np/wp-content/uploads/2022/07/All_PIG_Local_Level_2079-80.pdf",
+                icon: "fas fa-book-medical",
+                category: "health"
+            },
+            {
+                title: "Nursing and Social Security",
+                description: "Directorate of Nursing and Social Security",
+                link: "https://nssd.dohs.gov.np/",
+                icon: "fas fa-user-nurse",
+                category: "health"
+            },
+            {
+                title: "Nepal Health Research Council",
+                description: "NHRC official site",
+                link: "https://nhrc.gov.np/",
+                icon: "fas fa-heartbeat",
+                category: "health"
+            },
+            {
+                title: "Epidemiology Division",
+                description: "EDCD official site",
+                link: "https://www.edcd.gov.np/",
+                icon: "fas fa-virus",
+                category: "health"
+            },
+            {
+                title: "National Public Health Lab",
+                description: "NPHL official site",
+                link: "https://nphl.gov.np/",
+                icon: "fas fa-microscope",
+                category: "health"
+            },
+            {
+                title: "SSF Hospital Rates",
+                description: "SSF hospital treatment rates",
+                link: "https://ssf.gov.np/pages/hospital-rate-list",
+                icon: "fas fa-file-invoice-dollar",
+                category: "health"
+            },
+            {
+                title: "Data Quality Assessment",
+                description: "Routine data quality assessment system",
+                link: "https://rdqa.mohp.gov.np/",
+                icon: "fas fa-chart-line",
+                category: "health"
+            },
+            {
+                title: "Health Sector Support Program",
+                description: "NHSSP III official site",
+                link: "https://www.nhssp.org.np/nhsp3.html",
+                icon: "fas fa-hands-helping",
+                category: "health"
+            },
+            {
+                title: "Water Supply Projects",
+                description: "Information on water supply projects",
+                link: "https://nwash2.softwel.com.np/",
+                icon: "fas fa-faucet",
+                category: "infrastructure"
+            },
+            {
+                title: "Local Level Budget",
+                description: "Annual program budget for local levels",
+                link: "https://mows.gov.np/wp-content/uploads/2022/07/%E0%A4%B0%E0%A4%BE%E0%A4%A4%E0%A5%8B-%E0%A4%95%E0%A4%BF%E0%A4%A4%E0%A4%BE%E0%A4%B5-%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A5%87%E0%A4%AA%E0%A4%BE%E0%A4%A8%E0%A5%80-%E0%A4%AE%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B2%E0%A4%AF-%E0%A4%86.%E0%A4%B5.-%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AF-%E0%A5%AE%E0%A5%A6-1.pdf",
+                icon: "fas fa-file-invoice",
+                category: "government"
+            },
+            {
+                title: "Climate Resilience Project",
+                description: "BCRWME official site",
+                link: "http://bcrwme.softavi.com/",
+                icon: "fas fa-tree",
+                category: "infrastructure"
+            },
+            {
+                title: "Sewer Asset Management",
+                description: "Sewer asset management system",
+                link: "http://sams.softavi.com/",
+                icon: "fas fa-water",
+                category: "infrastructure"
+            },
+            {
+                title: "Urban Water Project Documents",
+                description: "UWSSP project documents",
+                link: "http://www.uwssp.gov.np/downloadsdetail/13/2019/53353787/",
+                icon: "fas fa-file-download",
+                category: "infrastructure"
+            },
+            {
+                title: "RWSSP-WN II",
+                description: "Rural Water Supply and Sanitation Project in Western Nepal",
+                link: "https://www.rwsspwn.org.np/",
+                icon: "fas fa-hand-holding-water",
+                category: "infrastructure"
+            },
+            {
+                title: "RVWRMP",
+                description: "Rural Village Water Resources Management Project",
+                link: "https://www.rvwrmp.org.np/",
+                icon: "fas fa-hand-holding-water",
+                category: "infrastructure"
+            },
+            {
+                title: "KUKL Water Quality",
+                description: "Water quality reports from KUKL",
+                link: "https://kathmanduwater.org/index.php/water-quality-reports/",
+                icon: "fas fa-vial",
+                category: "infrastructure"
+            },
+            {
+                title: "Water Quality Standards",
+                description: "Drinking water quality standards 2079",
+                link: "https://kathmanduwater.org/wp-content/uploads/2022/07/Water_quality_parameters.pdf",
+                icon: "fas fa-ruler-combined",
+                category: "infrastructure"
+            },
+            {
+                title: "STWSSSP Documents",
+                description: "Documents for Small Town Water Supply and Sanitation",
+                link: "https://www.stwsssp.gov.np/downloads.php",
+                icon: "fas fa-file-pdf",
+                category: "infrastructure"
+            },
+            {
+                title: "ODF Nepal 2019",
+                description: "Open Defecation Free status in Nepal",
+                link: "https://sites.google.com/view/odfnepal2019/",
+                icon: "fas fa-toilet",
+                category: "health"
+            },
+            {
+                title: "Disaster Risk Reduction",
+                description: "DRR Portal Nepal",
+                link: "http://drrportal.gov.np/",
+                icon: "fas fa-house-damage",
+                category: "infrastructure"
+            },
+            {
+                title: "BIPAD Portal",
+                description: "Building Information Platform Against Disaster",
+                link: "https://bipadportal.gov.np/",
+                icon: "fas fa-info-circle",
+                category: "infrastructure"
+            },
+            {
+                title: "Flood Forecasting",
+                description: "Hydrology and flood forecasting",
+                link: "https://hydrology.gov.np/",
+                icon: "fas fa-water",
+                category: "infrastructure"
+            },
+            {
+                title: "Mechanical Equipment Operation",
+                description: "Operation during monsoon 2079",
+                link: "https://dor.gov.np/home/latest-news/85",
+                icon: "fas fa-cogs",
+                category: "infrastructure"
+            },
+            {
+                title: "Highway Obstructions",
+                description: "Details of highway blockades",
+                link: "https://www.appsheet.com/start/4ccd151d-e90d-45ed-99ee-85ef4cf6f82b",
+                icon: "fas fa-road",
+                category: "infrastructure"
+            },
+            {
+                title: "National Earthquake Center",
+                description: "Earthquake monitoring and research",
+                link: "http://www.seismonepal.gov.np/",
+                icon: "fas fa-mountain",
+                category: "infrastructure"
+            },
+            {
+                title: "Weather Forecasting",
+                description: "Meteorological forecasting service",
+                link: "http://www.mfd.gov.np/",
+                icon: "fas fa-cloud-sun",
+                category: "infrastructure"
+            },
+            {
+                title: "Forest Fire Detection",
+                description: "Forest fire detection and monitoring system",
+                link: "http://110.44.114.238/NepalForestFire/",
+                icon: "fas fa-fire",
+                category: "infrastructure"
+            },
+            {
+                title: "Landslide Hazard Model",
+                description: "Landslide hazard assessment model",
+                link: "https://wrradc.users.earthengine.app/view/lhamnepal",
+                icon: "fas fa-mountain",
+                category: "infrastructure"
+            },
+            {
+                title: "DPNet",
+                description: "Disaster Preparedness Network Nepal",
+                link: "https://www.dpnet.org.np/",
+                icon: "fas fa-network-wired",
+                category: "infrastructure"
+            },
+            {
+                title: "Water Research Letters",
+                description: "Research letters from WRRDC",
+                link: "https://www.wrrdc.gov.np/pages/research-letter",
+                icon: "fas fa-file-alt",
+                category: "infrastructure"
+            },
+            {
+                title: "Project License List",
+                description: "List of project licenses from DoED",
+                link: "https://doed.gov.np/license/66",
+                icon: "fas fa-file-contract",
+                category: "energy"
+            },
+            {
+                title: "Royalty Information System",
+                description: "Royalty management system for DoED",
+                link: "https://www.rmsdoed.gov.np/Core/Home",
+                icon: "fas fa-money-bill-wave",
+                category: "energy"
+            },
+            {
+                title: "Penalised Promoters",
+                description: "List of penalized hydropower promoters",
+                link: "https://doed.gov.np/pages/penalised-promoter",
+                icon: "fas fa-user-slash",
+                category: "energy"
+            },
+            {
+                title: "Local Level Budget",
+                description: "Annual program budget for local levels",
+                link: "https://moewri.gov.np/pages/budget-and-program",
+                icon: "fas fa-file-invoice",
+                category: "government"
+            },
+            {
+                title: "Load Shedding Schedule",
+                description: "Maintenance shutdown schedule from NEA",
+                link: "https://nea.org.np/dailyUpdates",
+                icon: "fas fa-plug",
+                category: "energy"
+            },
+            {
+                title: "Award of Contracts",
+                description: "Contracts awarded by NEA",
+                link: "https://www.nea.org.np/award_of_contract",
+                icon: "fas fa-file-signature",
+                category: "energy"
+            },
+            {
+                title: "Transmission Network Map",
+                description: "High-resolution transmission network map",
+                link: "https://rpgcl.com/storage/listies/November2021/nepal-tranmission-network-map-revised1.pdf",
+                icon: "fas fa-map",
+                category: "energy"
+            },
+            {
+                title: "Hydropower EIA Reports",
+                description: "Environmental impact assessment reports",
+                link: "https://drive.google.com/drive/folders/1sjMsHm6EXyp1OJ4LqkbqbG9s5m1s_6pM",
+                icon: "fas fa-file-alt",
+                category: "energy"
+            },
+            {
+                title: "IPPAN News Clips",
+                description: "Energy news clips from IPPAN",
+                link: "http://www.ippan.org.np/energy-clips",
+                icon: "fas fa-newspaper",
+                category: "energy"
+            },
+            {
+                title: "WECS News Clips",
+                description: "Energy news clips from WECS",
+                link: "http://www.wecslibrary.org/catalog/opac_css/index.php",
+                icon: "fas fa-newspaper",
+                category: "energy"
+            },
+            {
+                title: "Alternative Energy Center",
+                description: "AEPC official site",
+                link: "https://www.aepc.gov.np/",
+                icon: "fas fa-solar-panel",
+                category: "energy"
+            },
+            {
+                title: "SolarCity Simulator",
+                description: "Simulator for Simara-Birgunj Industrial Corridor",
+                link: "https://www.aepc.gov.np/the-irena-solarcity-simulator",
+                icon: "fas fa-sun",
+                category: "energy"
+            },
+            {
+                title: "Renewable Energy Knowledge",
+                description: "Renewable energy knowledge platform",
+                link: "https://kms.aepc.gov.np/",
+                icon: "fas fa-book",
+                category: "energy"
+            },
+            {
+                title: "Renewable Energy for Rural Livelihood",
+                description: "RERL project site",
+                link: "https://www.aepc.gov.np/rerl/public/",
+                icon: "fas fa-plug",
+                category: "energy"
+            },
+            {
+                title: "Consumer Information",
+                description: "Consumer information board from NEA",
+                link: "https://cip.nea.org.np/",
+                icon: "fas fa-info-circle",
+                category: "energy"
+            },
+            {
+                title: "Electricity Demand Forecast",
+                description: "Report on electricity demand (2014-2040)",
+                link: "https://moewri.gov.np/storage/listies/May2020/electricity-demand-forecast-report-2014-2040.pdf",
+                icon: "fas fa-chart-line",
+                category: "energy"
+            },
+            {
+                title: "HIDCL",
+                description: "Hydroelectricity Investment and Development Company",
+                link: "https://www.hidcl.org.np/",
+                icon: "fas fa-hand-holding-usd",
+                category: "energy"
+            },
+            {
+                title: "VUCL",
+                description: "Vidhyut Utpadan Company Limited",
+                link: "https://vucl.org/",
+                icon: "fas fa-bolt",
+                category: "energy"
+            },
+            {
+                title: "Energy Consumption Report",
+                description: "Energy consumption and supply situation",
+                link: "https://www.wecs.gov.np/pages/notices?lan=en&id=107",
+                icon: "fas fa-file-contract",
+                category: "energy"
+            },
+            {
+                title: "Food and Nutrition Security Book",
+                description: "Food and nutrition security handbook, 2077",
+                link: "https://moald.gov.np/wp-content/uploads/2022/04/%E0%A4%96%E0%A4%BE%E0%A4%A6%E0%A5%8D%E0%A4%AF-%E0%A4%A4%E0%A4%A5%E0%A4%BE-%E0%A4%AA%E0%A5%8B%E0%A4%B7%E0%A4%A3-%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE-%E0%A4%AA%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%95%E0%A4%BE-%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AD.pdf",
+                icon: "fas fa-utensils",
+                category: "other"
+            },
+            {
+                title: "Food Management & Trading",
+                description: "Official site of FMTC",
+                link: "http://fmtc.org.np/food-report",
+                icon: "fas fa-truck",
+                category: "other"
+            },
+            {
+                title: "FANSEP",
+                description: "Food and Nutrition Security Enhancement Project",
+                link: "https://fansep.moald.gov.np/",
+                icon: "fas fa-apple-alt",
+                category: "other"
+            },
+            {
+                title: "NeKSAP",
+                description: "Nepal Food Security Monitoring System",
+                link: "https://neksap.org.np/allpublications",
+                icon: "fas fa-shield-alt",
+                category: "other"
+            },
+            {
+                title: "WFP mVAM",
+                description: "Mobile Vulnerability Analysis and Mapping",
+                link: "https://www.wfp.org/publications?text=mvam&f%5B0%5D=country%3A2043",
+                icon: "fas fa-mobile-alt",
+                category: "other"
+            },
+            {
+                title: "Nepali Food Composition",
+                description: "Food composition table (2017)",
+                link: "http://www.dftqc.gov.np/downloadfile/Food%20Composition%20Table%202017_1572781821_1590383994.pdf",
+                icon: "fas fa-utensils",
+                category: "other"
+            },
+            {
+                title: "Nutrition Garden",
+                description: "Information sheet on nutrition gardens",
+                link: "https://www.asdp.gov.np/site/np/images/publication/69Nutrition%20Garden%202078%20(ASDP%20Bulletin).pdf",
+                icon: "fas fa-seedling",
+                category: "other"
+            },
+            {
+                title: "Weekly Food Schedule",
+                description: "Example weekly food schedule",
+                link: "https://www.asdp.gov.np/site/np/images/publication/66Food%20Diversity%20(Brochure).pdf",
+                icon: "fas fa-calendar-week",
+                category: "other"
+            },
+            {
+                title: "Indigenous Food Recipes",
+                description: "Recipes using indigenous crops",
+                link: "https://www.asdp.gov.np/site/np/images/publication/67NUG%20Food%20Preparation%20(Booklet).pdf",
+                icon: "fas fa-book",
+                category: "other"
+            },
+            {
+                title: "Zero Hunger Action Plan",
+                description: "National Action Plan (2016-2025)",
+                link: "https://www.npc.gov.np/images/category/ZHC_NAP_(2016_-_2025).pdf",
+                icon: "fas fa-utensils",
+                category: "other"
+            },
+            {
+                title: "Multisector Nutrition Plan",
+                description: "MSNP II (2018-2022)",
+                link: "https://www.npc.gov.np/images/category/Multisector_Nutrition_Plan-_Final_Version1.pdf",
+                icon: "fas fa-apple-alt",
+                category: "other"
+            },
+            {
+                title: "National Landcover Monitoring",
+                description: "Landcover monitoring system",
+                link: "http://nepal.spatialapps.net/nlcms",
+                icon: "fas fa-satellite",
+                category: "other"
+            },
+            {
+                title: "Inventory of Lakes",
+                description: "Report on Nepal's lakes inventory",
+                link: "https://www.mofe.gov.np/uploads/documents/final-inventory-of-lakes-report-annexespdf-1156-802-1658828398.pdf",
+                icon: "fas fa-water",
+                category: "other"
+            },
+            {
+                title: "Vegetation Types of Nepal",
+                description: "Book on Nepal's vegetation types",
+                link: "https://frtc.gov.np/uploads/files/Vegetation%20Types%20of%20Nepal%20Book%20web.pdf",
+                icon: "fas fa-tree",
+                category: "other"
+            },
+            {
+                title: "Forest Resource Assessment",
+                description: "Assessment reports on forest resources",
+                link: "https://frtc.gov.np/downloadsdetail/25/2020/58136989/",
+                icon: "fas fa-tree",
+                category: "other"
+            },
+            {
+                title: "CITES Export Permits",
+                description: "Record of CITES export permits",
+                link: "https://dofsc.gov.np/page/cites/en",
+                icon: "fas fa-file-export",
+                category: "other"
+            },
+            {
+                title: "Air Quality Monitoring",
+                description: "National air quality monitoring portal",
+                link: "https://pollution.gov.np/portal",
+                icon: "fas fa-wind",
+                category: "other"
+            },
+            {
+                title: "Air Quality Watch",
+                description: "Air pollution monitoring",
+                link: "https://smog.spatialapps.net/apps/airqualitynp/",
+                icon: "fas fa-smog",
+                category: "other"
+            },
+            {
+                title: "Plantation Toolkit",
+                description: "Guide to effective plantation",
+                link: "https://dreamcities.org/plantation-toolkit/",
+                icon: "fas fa-book",
+                category: "other"
+            },
+            {
+                title: "CITES Plant Status",
+                description: "Population status of traded CITES plants",
+                link: "https://dpr.gov.np/wp-content/uploads/2022/02/REPORT_FINAL_Population-Status-of-Taxus-spp.pdf",
+                icon: "fas fa-leaf",
+                category: "other"
+            },
+            {
+                title: "Botanical Gardens",
+                description: "Information on botanical gardens",
+                link: "https://dpr.gov.np/wp-content/uploads/2021/04/DPR-Brochure-.pdf",
+                icon: "fas fa-seedling",
+                category: "other"
+            },
+            {
+                title: "List of Flowers",
+                description: "Catalog of flowers in Nepal",
+                link: "https://dpr.gov.np/wp-content/uploads/2019/09/Bagwani-ka-adharbhut-tathyaharu.pdf",
+                icon: "fas fa-flower",
+                category: "other"
+            },
+            {
+                title: "National Parks Department",
+                description: "DNPWC official site",
+                link: "https://dnpwc.gov.np/en/",
+                icon: "fas fa-tree",
+                category: "other"
+            },
+            {
+                title: "National Trust for Nature",
+                description: "NTNC official site",
+                link: "https://www.ntnc.org.np/",
+                icon: "fas fa-leaf",
+                category: "other"
+            },
+            {
+                title: "Leased Forest Land",
+                description: "Details of leased forest land (Page 77/90)",
+                link: "https://www.dofsc.gov.np//public/uploads/files/1593881065Hamro%20ban%20Report-20751.pdf",
+                icon: "fas fa-tree",
+                category: "other"
+            },
+            {
+                title: "Net-Zero Emission Strategy",
+                description: "Nepal's long-term strategy for net-zero",
+                link: "https://www.mofe.gov.np/uploads/documents/nepal-lts-document-uploaded-in-unfccc1653986846pdf-0523-253-1657876086.pdf",
+                icon: "fas fa-globe",
+                category: "other"
+            },
+            {
+                title: "Climate Change Gender Strategy",
+                description: "Gender and social inclusion strategy",
+                link: "https://www.mofe.gov.np/uploads/documents/gesiclimate-chng-repnepali1625885588pdf-9628-989-1657876169.pdf",
+                icon: "fas fa-venus-mars",
+                category: "other"
+            },
+            {
+                title: "Climate Finance Allocation",
+                description: "Assessment of climate financing",
+                link: "https://www.mofe.gov.np/uploads/documents/climate-finance-alloca1657169427pdf-1096-058-1658826869.pdf",
+                icon: "fas fa-money-bill-wave",
+                category: "other"
+            },
+            {
+                title: "Loss and Damage Framework",
+                description: "National framework on climate-induced loss",
+                link: "https://www.mofe.gov.np/uploads/documents/national-framework-on-loss-and-damage-approved-document-20211653988842pdf-0805-652-1658826902.pdf",
+                icon: "fas fa-exclamation-triangle",
+                category: "other"
+            },
+            {
+                title: "Vulnerability Assessment",
+                description: "Vulnerability and risk assessment",
+                link: "https://www.mofe.gov.np/resources/study-reports-3115",
+                icon: "fas fa-chart-line",
+                category: "other"
+            },
+            {
+                title: "Climate Investment Platform",
+                description: "Data platform for climate investment",
+                link: "http://nepal.spatialapps.net/gcfpsnepal/",
+                icon: "fas fa-chart-line",
+                category: "other"
+            },
+            {
+                title: "Climate Change and Health",
+                description: "Impact of climate change on health",
+                link: "https://climate.mohp.gov.np/",
+                icon: "fas fa-heartbeat",
+                category: "other"
+            },
+            {
+                title: "Climate Change Portal",
+                description: "Nepal Climate Change & Development Portal",
+                link: "https://www.climatenepal.org.np/",
+                icon: "fas fa-globe",
+                category: "other"
+            },
+            {
+                title: "Climate Change Indicators",
+                description: "Climate change related indicators",
+                link: "https://cbs.gov.np/wp-content/upLoads/2022/09/CLIMATE-CHANGE-RELATED-INDICATORS-OF-NEPAL.pdf",
+                icon: "fas fa-chart-bar",
+                category: "other"
+            },
+            {
+                title: "NATTA",
+                description: "Nepal Association of Tour and Travel Agents",
+                link: "https://natta.org.np/",
+                icon: "fas fa-hiking",
+                category: "other"
+            },
+            {
+                title: "TAAN",
+                description: "Trekking Agencies' Association of Nepal",
+                link: "https://www.taan.org.np/",
+                icon: "fas fa-mountain",
+                category: "other"
+            },
+            {
+                title: "NMA",
+                description: "Nepal Mountaineering Association",
+                link: "https://www.nepalmountaineering.org/",
+                icon: "fas fa-mountain",
+                category: "other"
+            },
+            {
+                title: "NNMGA",
+                description: "Nepal National Mountain Guide Association",
+                link: "https://www.nnmga.org/",
+                icon: "fas fa-user-alt",
+                category: "other"
+            },
+            {
+                title: "Nepal Airsports",
+                description: "Nepal Airsports Association",
+                link: "https://www.facebook.com/nepalairsportsassociation/",
+                icon: "fab fa-facebook",
+                category: "other"
+            },
+            {
+                title: "AOAN",
+                description: "Airlines Operators Association of Nepal",
+                link: "https://www.aoan.org.np/",
+                icon: "fas fa-plane",
+                category: "other"
+            },
+            {
+                title: "HAN",
+                description: "Hotel Association Nepal",
+                link: "https://www.hotelassociationnepal.org.np/",
+                icon: "fas fa-hotel",
+                category: "other"
+            },
+            {
+                title: "NADA",
+                description: "Automobiles Association of Nepal",
+                link: "https://nada.org.np/",
+                icon: "fas fa-car",
+                category: "other"
+            },
+            {
+                title: "PABSON",
+                description: "Private And Boarding Schools' Organization",
+                link: "https://pabson.org.np/",
+                icon: "fas fa-school",
+                category: "education"
+            },
+            {
+                title: "NEPHA",
+                description: "Nepal Public Health Association",
+                link: "https://nepha.org.np/",
+                icon: "fas fa-user-md",
+                category: "health"
+            },
+            {
+                title: "FNCCI",
+                description: "Federation of Nepalese Chambers of Commerce",
+                link: "https://www.fncci.org/",
+                icon: "fas fa-building",
+                category: "other"
+            },
+            {
+                title: "NCC",
+                description: "Nepal Chamber Of Commerce",
+                link: "https://ncc.org.np/",
+                icon: "fas fa-building",
+                category: "other"
+            },
+            {
+                title: "FHAN",
+                description: "Federation of Handicraft Associations",
+                link: "http://fhan.org.np/",
+                icon: "fas fa-hands",
+                category: "other"
+            },
+            {
+                title: "FCAN",
+                description: "Federation of Contractors' Associations",
+                link: "https://fcan.org.np/",
+                icon: "fas fa-hard-hat",
+                category: "other"
+            },
+            {
+                title: "IPPAN",
+                description: "Independent Power Producers' Association",
+                link: "http://www.ippan.org.np/",
+                icon: "fas fa-bolt",
+                category: "energy"
+            },
+            {
+                title: "FNJ",
+                description: "Federation of Nepali Journalists",
+                link: "http://www.fnjnepal.org/np",
+                icon: "fas fa-newspaper",
+                category: "other"
+            },
+            {
+                title: "Supreme Court",
+                description: "Official site with case search",
+                link: "https://supremecourt.gov.np/web/",
+                icon: "fas fa-gavel",
+                category: "government"
+            },
+            {
+                title: "Court Decisions Search",
+                description: "Search full text of court decisions",
+                link: "https://supremecourt.gov.np/cp/",
+                icon: "fas fa-search",
+                category: "government"
+            },
+            {
+                title: "Attorney General's Office",
+                description: "Case list from Attorney General's office",
+                link: "http://cts.ag.gov.np/",
+                icon: "fas fa-balance-scale",
+                category: "government"
+            },
+            {
+                title: "Complaints",
+                description: "Complaints from Attorney General's office",
+                link: "https://ag.gov.np/abhiyog",
+                icon: "fas fa-file-alt",
+                category: "government"
+            },
+            {
+                title: "CWIN Helpline Reports",
+                description: "Reports from Child Helpline 1098",
+                link: "https://cwinnepal-my.sharepoint.com/:x:/g/personal/amritshakya_cwinnepal_onmicrosoft_com/EbbOs3xToOlOuZHCLVk16iQBe8EOndR7VYWV18W-hmiK9w?e=j4ruLM",
+                icon: "fas fa-phone-alt",
+                category: "other"
+            },
+            {
+                title: "NWC Helpline Reports",
+                description: "Reports from National Women Commission Helpline 1145",
+                link: "https://nwc.gov.np/en/resources/publication/",
+                icon: "fas fa-phone-alt",
+                category: "other"
+            },
+            {
+                title: "Nepal Law Journal",
+                description: "Nepal Kanoon Patrika",
+                link: "https://nkp.gov.np/",
+                icon: "fas fa-book",
+                category: "other"
+            },
+            {
+                title: "Nepal Police News",
+                description: "Latest news from Nepal Police",
+                link: "https://www.nepalpolice.gov.np/news/latest-news/",
+                icon: "fas fa-newspaper",
+                category: "other"
+            },
+            {
+                title: "APF News",
+                description: "Latest news from Armed Police Force",
+                link: "https://www.apf.gov.np/Pages/AllNews",
+                icon: "fas fa-newspaper",
+                category: "other"
+            },
+            {
+                title: "NHRC Reports",
+                description: "Reports from National Human Rights Commission",
+                link: "https://www.nhrcnepal.org/publication/reports",
+                icon: "fas fa-file-alt",
+                category: "other"
+            },
+            {
+                title: "Gender Violence Services",
+                description: "Services related to gender-based violence",
+                link: "https://nwchelpline.gov.np/service-mapping",
+                icon: "fas fa-female",
+                category: "other"
+            },
+            {
+                title: "Nepal Arbitration Council",
+                description: "Nepal Council of Arbitration",
+                link: "https://www.nepca.org.np/",
+                icon: "fas fa-handshake",
+                category: "other"
+            },
+            {
+                title: "Budget Red Books",
+                description: "Detailed expenditure estimates",
+                link: "https://mof.gov.np/site/publication-category/28",
+                icon: "fas fa-file-invoice-dollar",
+                category: "government"
+            },
+            {
+                title: "Macroeconomics Dashboard",
+                description: "Economic data dashboard",
+                link: "https://data.mof.gov.np/",
+                icon: "fas fa-chart-line",
+                category: "government"
+            },
+            {
+                title: "Consolidated Financial Statement",
+                description: "2020-2021 financial statement",
+                link: "https://www.fcgo.gov.np/storage/uploads/publications/20220708131151_20220708131026_20220706140441_20220704110442_20220701101828_CFS_Annexs_202021%20(1)%20(1)%20(1).xlsx",
+                icon: "fas fa-file-excel",
+                category: "government"
+            },
+            {
+                title: "FCGO Reports",
+                description: "Reports from Financial Comptroller General Office",
+                link: "https://www.fcgo.gov.np/reporttypes",
+                icon: "fas fa-file-alt",
+                category: "government"
+            },
+            {
+                title: "OAG Local Level Reports",
+                description: "Auditor General's reports for local levels",
+                link: "https://oag.gov.np/local-level/report/ne",
+                icon: "fas fa-file-alt",
+                category: "government"
+            },
+            {
+                title: "Government Dues",
+                description: "Information on government dues",
+                link: "https://kumarichowk.gov.np/sarkari-baki.html",
+                icon: "fas fa-money-check",
+                category: "government"
+            },
+            {
+                title: "Concessional Loans",
+                description: "Details of borrowers with concessional loans",
+                link: "https://www.nrb.org.np/category/concessional-loan/",
+                icon: "fas fa-hand-holding-usd",
+                category: "government"
+            },
+            {
+                title: "Macroeconomic Situation",
+                description: "Current macroeconomic and financial situation",
+                link: "https://www.nrb.org.np/category/current-macroeconomic-situation/?department=red",
+                icon: "fas fa-chart-line",
+                category: "government"
+            },
+            {
+                title: "BFIs Monthly Statistics",
+                description: "Monthly statistics for banks and financial institutions",
+                link: "https://www.nrb.org.np/category/monthly-statistics/",
+                icon: "fas fa-chart-bar",
+                category: "government"
+            },
+            {
+                title: "Nepal Economy Database",
+                description: "Database on the Nepali economy",
+                link: "https://www.nrb.org.np/database-on-nepalese-economy/",
+                icon: "fas fa-database",
+                category: "government"
+            },
+            {
+                title: "Financial Inclusion Dashboard",
+                description: "Dashboard for financial inclusion",
+                link: "https://emap.nrb.org.np/",
+                icon: "fas fa-chart-pie",
+                category: "government"
+            },
+            {
+                title: "Debt Recovery Tribunal",
+                description: "Daily case list for debt recovery",
+                link: "https://drtribunal.gov.np/app/daily",
+                icon: "fas fa-balance-scale",
+                category: "government"
+            },
+            {
+                title: "PAN Search",
+                description: "Search for Permanent Account Number",
+                link: "https://ird.gov.np/pan-search",
+                icon: "fas fa-search",
+                category: "government"
+            },
+            {
+                title: "Revenue Tribunal",
+                description: "Case list for revenue tribunal",
+                link: "https://supremecourt.gov.np/rajashow/index.php",
+                icon: "fas fa-gavel",
+                category: "government"
+            },
+            {
+                title: "Top Taxpayers",
+                description: "List of top taxpayers honored",
+                link: "https://ird.gov.np/public/pdf/967225000.pdf",
+                icon: "fas fa-award",
+                category: "government"
+            },
+            {
+                title: "Income Tax Rates",
+                description: "Tax rates for individuals in 2079/80",
+                link: "https://ird.gov.np/public/pdf/993625051.pdf",
+                icon: "fas fa-percent",
+                category: "government"
+            },
+            {
+                title: "Business Deductions",
+                description: "Business discounts and facilities",
+                link: "https://ird.gov.np/public/pdf/874140263.pdf",
+                icon: "fas fa-calculator",
+                category: "government"
+            },
+            {
+                title: "Corporate Tax Rates",
+                description: "Tax rates for entities in 2079/80",
+                link: "https://ird.gov.np/public/pdf/1985746201.pdf",
+                icon: "fas fa-percent",
+                category: "government"
+            },
+            {
+                title: "Economic Bill Discounts",
+                description: "Discounts and facilities from economic bill",
+                link: "https://ird.gov.np/public/pdf/1466823759.pdf",
+                icon: "fas fa-file-invoice",
+                category: "government"
+            },
+            {
+                title: "Electronic Billing Software",
+                description: "Software for electronic billing",
+                link: "https://ird.gov.np/public/pdf/789215176.pdf",
+                icon: "fas fa-laptop-code",
+                category: "government"
+            },
+            {
+                title: "Taxpayer Education",
+                description: "Educational resources for taxpayers",
+                link: "https://ird.gov.np/list/taxpayereducation",
+                icon: "fas fa-graduation-cap",
+                category: "government"
+            },
+            {
+                title: "Mining License Search",
+                description: "Search for mining licenses",
+                link: "http://gis.dmgnepal.gov.np/",
+                icon: "fas fa-search",
+                category: "other"
+            },
+            {
+                title: "Cement Industry Study",
+                description: "Detail study of cement manufacturing industry",
+                link: "https://doind.gov.np/uploads/notices/Notices-20210601134312486.pdf",
+                icon: "fas fa-industry",
+                category: "other"
+            },
+            {
+                title: "TMT Bar Industry Study",
+                description: "Detail study of TMT bar manufacturing industry",
+                link: "https://doind.gov.np/uploads/notices/Notices-20220502202105331.pdf",
+                icon: "fas fa-industry",
+                category: "other"
+            },
+            {
+                title: "Pharmaceutical Industry Study",
+                description: "Detail study of pharmaceutical industry",
+                link: "https://doind.gov.np/uploads/notices/Notices-20210705105527298.pdf",
+                icon: "fas fa-pills",
+                category: "other"
+            },
+            {
+                title: "Self-Reliant Goods Study",
+                description: "Detail study of self-reliant industrial goods",
+                link: "https://doind.gov.np/uploads/notices/Notices-20210704150618373.pdf",
+                icon: "fas fa-boxes",
+                category: "other"
+            },
+            {
+                title: "Industrial Statistics",
+                description: "Industrial statistics archive",
+                link: "https://doind.gov.np/archiving?cat_id=12",
+                icon: "fas fa-chart-bar",
+                category: "other"
+            },
+            {
+                title: "Small Industries Statistics",
+                description: "Statistics on micro, cottage and small industries",
+                link: "https://doind.gov.np/uploads/notices/Notices-20211126105219969.pdf",
+                icon: "fas fa-industry",
+                category: "other"
+            },
+            {
+                title: "Industrial Properties",
+                description: "Industrial property bulletin",
+                link: "https://www.doind.gov.np/industrial-property-bulletin",
+                icon: "fas fa-building",
+                category: "other"
+            },
+            {
+                title: "Homestay Directory",
+                description: "Directory of homestays in Nepal",
+                link: "https://www.tourism.gov.np/files/statistics/23.pdf",
+                icon: "fas fa-home",
+                category: "other"
+            },
+            {
+                title: "Tourism Statistics",
+                description: "Tourism statistics for Nepal",
+                link: "https://www.tourism.gov.np/statistic",
+                icon: "fas fa-chart-bar",
+                category: "other"
+            },
+            {
+                title: "Monthly Arrivals",
+                description: "Monthly tourist arrival statistics",
+                link: "https://www.nrb.org.np/database-on-nepalese-economy/real-sector/",
+                icon: "fas fa-plane-arrival",
+                category: "other"
+            },
+            {
+                title: "Homestay Impact Evaluation",
+                description: "Evaluation of homestay impact in Nepal",
+                link: "https://www.tourism.gov.np//files/publication_files/312.pdf",
+                icon: "fas fa-file-alt",
+                category: "other"
+            },
+            {
+                title: "Hotel Standards 2077",
+                description: "Standards for hotels in Nepal",
+                link: "https://www.tourism.gov.np/files/publication_files/315.pdf",
+                icon: "fas fa-hotel",
+                category: "other"
+            },
+            {
+                title: "Tourism Destinations",
+                description: "Tourism destinations in Nepal",
+                link: "https://www.tourismnpl.gov.np/",
+                icon: "fas fa-map-marked-alt",
+                category: "other"
+            },
+            {
+                title: "Peak Profile",
+                description: "Profiles of Nepal's peaks",
+                link: "https://nepalhimalpeakprofile.org/",
+                icon: "fas fa-mountain",
+                category: "other"
+            },
+            {
+                title: "Resorts and Hotels (1-4 stars)",
+                description: "List of 1-4 star hotels",
+                link: "https://www.tourismdepartment.gov.np/pages/notices/33/274",
+                icon: "fas fa-hotel",
+                category: "other"
+            },
+            {
+                title: "5-star Hotels",
+                description: "List of 5-star hotels",
+                link: "https://www.tourismdepartment.gov.np/pages/notices/33/271",
+                icon: "fas fa-hotel",
+                category: "other"
+            },
+            {
+                title: "Casinos",
+                description: "List of casinos in Nepal",
+                link: "https://www.tourismdepartment.gov.np/pages/notices/33/260",
+                icon: "fas fa-dice",
+                category: "other"
+            },
+            {
+                title: "Summiteers and Expeditions",
+                description: "Records of summiteers and expeditions",
+                link: "https://www.tourism.gov.np/files/publication_files/310.pdf",
+                icon: "fas fa-mountain",
+                category: "other"
+            },
+            {
+                title: "National Tourism Strategy",
+                description: "National tourism strategic plan (2016-2025)",
+                link: "https://nma.gov.np/storage/listies/October2021/national-tourism-strategy-plan.pdf",
+                icon: "fas fa-file-contract",
+                category: "other"
+            },
+            {
+                title: "NTB Tenders",
+                description: "Tenders from Nepal Tourism Board",
+                link: "https://tenders.ntb.gov.np/",
+                icon: "fas fa-file-contract",
+                category: "other"
+            },
+            {
+                title: "Bridge Information System",
+                description: "Information system for bridges",
+                link: "http://bms.softavi.com/",
+                icon: "fas fa-bridge",
+                category: "infrastructure"
+            },
+            {
+                title: "Trail Bridge Information",
+                description: "Information system for trail bridges",
+                link: "http://dbr.helvetas.org.np/frame.php",
+                icon: "fas fa-bridge",
+                category: "infrastructure"
+            },
+            {
+                title: "Trail Bridge Monitoring",
+                description: "Monitoring system for trail bridges",
+                link: "http://pmis.helvetas.org.np/",
+                icon: "fas fa-bridge",
+                category: "infrastructure"
+            },
+            {
+                title: "Local Roads Bridge Info",
+                description: "Information system for local roads bridges",
+                link: "http://bims.lrbpnepal.org/",
+                icon: "fas fa-bridge",
+                category: "infrastructure"
+            },
+            {
+                title: "National Project Bank",
+                description: "Repository of development projects",
+                link: "https://npbmis.npc.gov.np/",
+                icon: "fas fa-piggy-bank",
+                category: "government"
+            },
+            {
+                title: "Medium Term Expenditure",
+                description: "Framework and annual development program",
+                link: "https://npc.gov.np/images/category/220606043109MTEF%202079%20for%20web.pdf",
+                icon: "fas fa-file-invoice",
+                category: "government"
+            },
+            {
+                title: "15th Five-Year Plan",
+                description: "Nepal's 15th five-year plan",
+                link: "https://npc.gov.np/images/category/15th_Plan.pdf",
+                icon: "fas fa-file-contract",
+                category: "government"
+            },
+            {
+                title: "Airport Profiles",
+                description: "Profiles of domestic airports",
+                link: "https://caanepal.gov.np/aerodromes/domestic-airports",
+                icon: "fas fa-plane-departure",
+                category: "infrastructure"
+            },
+            {
+                title: "Aeronautical Information",
+                description: "Aeronautical Information Services",
+                link: "https://e-aip.caanepal.gov.np/",
+                icon: "fas fa-info-circle",
+                category: "infrastructure"
+            },
+            {
+                title: "Aviation Safety Plan",
+                description: "National Aviation Safety Plan (2018-2022)",
+                link: "https://caanepal.gov.np/storage/app/media/notices/national-aviation-safety-plan-nepal-2018-to-2022.pdf",
+                icon: "fas fa-shield-alt",
+                category: "infrastructure"
+            },
+            {
+                title: "Flight Safety Exemptions",
+                description: "Record of exemptions in flight safety",
+                link: "https://flightsafety.caanepal.gov.np/airworthiness/extensionconcessionexemption",
+                icon: "fas fa-plane",
+                category: "infrastructure"
+            },
+            {
+                title: "Drone Registration",
+                description: "Drone registration portal",
+                link: "http://202.166.215.184/login",
+                icon: "fas fa-drone",
+                category: "infrastructure"
+            },
+            {
+                title: "Domestic Flight Permissions",
+                description: "Schedule and fare for domestic flights",
+                link: "https://caanepal.gov.np/air-transport/flight-permission/domestic-schedule",
+                icon: "fas fa-plane",
+                category: "infrastructure"
+            },
+            {
+                title: "International Flight Permissions",
+                description: "Schedule for international flights",
+                link: "https://caanepal.gov.np/air-transport/flight-permission/international-schedule",
+                icon: "fas fa-plane",
+                category: "infrastructure"
+            },
+            {
+                title: "TIA Flight Schedule",
+                description: "Flight schedule for Tribhuvan International Airport",
+                link: "https://www.tiairport.com.np/all-flights",
+                icon: "fas fa-plane",
+                category: "infrastructure"
+            },
+            {
+                title: "Construction Business Details",
+                description: "Details of construction businesses (May 26, 2019)",
+                link: "http://www.mopit.gov.np/noticefile/nirman_byabasayiko_bibaran_1558853426.pdf",
+                icon: "fas fa-hard-hat",
+                category: "other"
+            },
+            {
+                title: "Traffic Count",
+                description: "Traffic count data",
+                link: "https://ssrn.dor.gov.np/traffic_controller",
+                icon: "fas fa-car",
+                category: "infrastructure"
+            },
+            {
+                title: "Road Network Information",
+                description: "Information on road networks",
+                link: "https://ssrn.dor.gov.np/road_network/getNationCategoryAndPavement",
+                icon: "fas fa-road",
+                category: "infrastructure"
+            },
+            {
+                title: "Distance Calculator",
+                description: "Tool to calculate distances between locations",
+                link: "https://dor.gov.np/home/getdistancecalc",
+                icon: "fas fa-calculator",
+                category: "infrastructure"
+            },
+            {
+                title: "Traffic Updates",
+                description: "Today's traffic updates",
+                link: "https://traffic.nepalpolice.gov.np/news/105/",
+                icon: "fas fa-car-crash",
+                category: "infrastructure"
+            },
+            {
+                title: "Kathmandu Valley Routes",
+                description: "Vehicle routes in Kathmandu Valley",
+                link: "https://traffic.nepalpolice.gov.np/notices/35/",
+                icon: "fas fa-map-marked",
+                category: "infrastructure"
+            },
+            {
+                title: "Passenger and Cargo Fare",
+                description: "Fare rates for passenger and cargo vehicles",
+                link: "https://dotm.gov.np/MainData/NewFare",
+                icon: "fas fa-truck",
+                category: "infrastructure"
+            },
+            {
+                title: "Kathmandu Valley Workshops",
+                description: "List of workshops in Kathmandu Valley",
+                link: "https://traffic.nepalpolice.gov.np/notices/34/",
+                icon: "fas fa-tools",
+                category: "infrastructure"
+            },
+            {
+                title: "DOR Newsletters",
+                description: "Newsletters from Department of Roads",
+                link: "https://dor.gov.np/home/publication/dor-news-letters",
+                icon: "fas fa-newspaper",
+                category: "infrastructure"
+            },
+            {
+                title: "Road Safety Action Plan",
+                description: "Draft Nepal Road Safety Action Plan (2021-2030)",
+                link: "http://www.mopit.gov.np/actfile/NRSAP%202021-30%20Draft%20Final%2014Apr22_1661334417.docx",
+                icon: "fas fa-car",
+                category: "infrastructure"
+            },
+            {
+                title: "Kathmandu Traffic Management",
+                description: "Work plan for Kathmandu Valley traffic management",
+                link: "https://dor.gov.np/kvrip/law/force/kathmandu-valley-traffic-management-work-plan-2078",
+                icon: "fas fa-traffic-light",
+                category: "infrastructure"
+            },
+            {
+                title: "Dog Census",
+                description: "Data on dog census (~40,000 dogs)",
+                link: "https://dogdata.uk/dog-census/",
+                icon: "fas fa-dog",
+                category: "other"
+            }
+        ];
+
+        // Function to render cards
+        function renderCards(filteredResources = resources) {
+            const container = document.getElementById('cardsContainer');
+            container.innerHTML = '';
+            
+            if (filteredResources.length === 0) {
+                container.innerHTML = '<div class="no-results">No resources found matching your search. Try a different term.</div>';
+                return;
+            }
+            
+            // Group resources by category
+            const categories = {};
+            filteredResources.forEach(resource => {
+                if (!categories[resource.category]) {
+                    categories[resource.category] = [];
+                }
+                categories[resource.category].push(resource);
+            });
+            
+            // Render each category section
+            for (const category in categories) {
+                const section = document.createElement('div');
+                section.className = 'category-section';
+                
+                const categoryTitle = document.createElement('h2');
+                categoryTitle.className = 'category-title';
+                categoryTitle.innerHTML = `<i class="${categories[category][0].icon}"></i> ${category.charAt(0).toUpperCase() + category.slice(1)} (${categories[category].length})`;
+                
+                section.appendChild(categoryTitle);
+                
+                const categoryCards = document.createElement('div');
+                categoryCards.className = 'cards-container';
+                
+                categories[category].forEach(resource => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.dataset.category = resource.category;
+                    
+                    card.innerHTML = `
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="${resource.icon}"></i>
+                            </div>
+                            <h3 class="card-title">${resource.title}</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">${resource.description}</p>
+                            <a href="${resource.link}" class="card-link" target="_blank">Visit Resource</a>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-category">${resource.category}</div>
+                        </div>
+                    `;
+                    
+                    categoryCards.appendChild(card);
+                });
+                
+                section.appendChild(categoryCards);
+                container.appendChild(section);
+            }
+        }
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCards();
+            
+            // Search functionality
+            const searchInput = document.getElementById('search');
+            searchInput.addEventListener('input', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                const filtered = resources.filter(resource => 
+                    resource.title.toLowerCase().includes(searchTerm) || 
+                    resource.description.toLowerCase().includes(searchTerm) ||
+                    resource.category.toLowerCase().includes(searchTerm)
+                );
+                renderCards(filtered);
+            });
+            
+            // Category filtering
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const category = button.dataset.category;
+                    if (category === 'all') {
+                        renderCards();
+                    } else {
+                        const filtered = resources.filter(resource => resource.category === category);
+                        renderCards(filtered);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

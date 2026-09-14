@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Remittance Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #ffffff;
+            color: #333333;
+            line-height: 1.4;
+        }
+        
+        .remittance-tracker {
+            width: 100%;
+            background: #ffffff;
+            border-radius: 0;
+            box-shadow: none;
+            border: 1px solid #e0e0e0;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .tracker-header {
+            background: linear-gradient(to right, #4f46e5, #7c3aed);
+            color: white;
+            padding: 12px 10px;
+            text-align: center;
+        }
+        
+        .tracker-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 3px 0;
+        }
+        
+        .tracker-header p {
+            font-size: 12px;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        .tracker-controls {
+            padding: 12px 10px;
+            background: #f9fafb;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .search-box {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .search-input {
+            flex: 1;
+            border: 1px solid #d1d5db;
+            border-right: none;
+            border-radius: 6px 0 0 6px;
+            padding: 8px 10px;
+            font-size: 14px;
+            outline: none;
+            min-width: 0;
+        }
+        
+        .search-button {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 0 6px 6px 0;
+            padding: 0 12px;
+            cursor: pointer;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 6px;
+            padding-bottom: 4px;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .filter-buttons::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .filter-button {
+            background: white;
+            border: 1px solid #d1d5db;
+            border-radius: 16px;
+            padding: 5px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        
+        .filter-button:hover {
+            border-color: #4f46e5;
+        }
+        
+        .filter-button.active {
+            background: #4f46e5;
+            color: white;
+            border-color: #4f46e5;
+        }
+        
+        .banks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 12px 10px;
+        }
+        
+        .bank-card {
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: 1px solid #f3f4f6;
+        }
+        
+        .bank-card:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-color: #e0e7ff;
+        }
+        
+        .bank-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+            height: 28px;
+        }
+        
+        .bank-name {
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 5px;
+            color: #111827;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .bank-country {
+            color: #6b7280;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            margin-bottom: 10px;
+        }
+        
+        .track-button {
+            background: #f9fafb;
+            color: #4f46e5;
+            border: 1px solid #e5e7eb;
+            border-radius: 5px;
+            padding: 5px 8px;
+            font-size: 11px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        
+        .track-button:active {
+            background: #4f46e5;
+            color: white;
+        }
+        
+        .tracker-footer {
+            padding: 10px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 11px;
+            border-top: 1px solid #f3f4f6;
+            background: #f9fafb;
+        }
+        
+        /* Mobile-first responsive adjustments */
+        @media (max-width: 360px) {
+            .banks-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+            
+            .bank-card {
+                padding: 10px;
+            }
+            
+            .bank-name {
+                font-size: 12px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .banks-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 12px;
+                padding: 15px;
+            }
+            
+            .tracker-header {
+                padding: 15px;
+            }
+            
+            .tracker-controls {
+                padding: 15px;
+            }
+            
+            .tracker-header h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="remittance-tracker">
+        <div class="tracker-header">
+            <h3>Global Remittance Tracker</h3>
+            <p>Select your bank to track transfers</p>
+        </div>
+        
+        <div class="tracker-controls">
+            <div class="search-box">
+                <input type="text" class="search-input" id="search-input" placeholder="Search banks...">
+                <button class="search-button" id="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <div class="filter-buttons" id="filter-container">
+                <!-- Filter buttons will be generated here -->
+            </div>
+        </div>
+        
+        <div class="banks-grid" id="grid-container">
+            <!-- Bank cards will be generated here -->
+        </div>
+        
+        <div class="tracker-footer">
+            <p>Direct links to official tracking pages • No data stored</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const banks = [
+                { name: 'National Bank of Egypt', url: 'https://www.nbe.com.eg/RemTracker/RemitanceEnquiry.aspx?lang=EN', country: 'Egypt', isoCode: 'EG' },
+                { name: 'Bank of Dhaka', url: 'https://www.bdc.com.eg/bdcwebsite/personal/self-services/remittance-tracking.html', country: 'Bangladesh', isoCode: 'BD' },
+                { name: 'Dutch-Bangla Bank', url: 'https://app.dutchbanglabank.com/remittance_online//checkstatus?', country: 'Bangladesh', isoCode: 'BD' },
+                { name: 'Combank', url: 'https://www.combankapps.lk/RemittanceTracker/system/search.xhtml', country: 'Sri Lanka', isoCode: 'LK' },
+                { name: 'HNB Cash Express', url: 'https://cashxpress.hnb.lk/CashExpress/indexRemit.jsp', country: 'Sri Lanka', isoCode: 'LK' },
+                { name: 'AUB', url: 'https://www.aubgintonghatid.com/tracking/remitter/index.cfm?l_m=1', country: 'Philippines', isoCode: 'PH' },
+                { name: 'RCBC Telemoney', url: 'https://rcbctelemoney.rcbc.com.ph/Reminqry/RemittanceInquiry.aspx', country: 'Philippines', isoCode: 'PH' },
+                { name: 'PNB', url: 'https://remittanceservices.pnb.com.ph/RTracker', country: 'Philippines', isoCode: 'PH' },
+                { name: 'ICICI Bank', url: 'https://money2india.icicibank.co.in/nrisr/TrackTransfer.do?method=trackTransferOnload', country: 'India', isoCode: 'IN' },
+                { name: 'MoneyGram', url: 'https://secure.moneygram.com/embed/track?embed=true&locale=en_SA', country: 'Global', isoCode: 'GLOB' },
+                { name: 'BDO', url: 'https://www.bdo.ph/personal/remittance/remit-status-inquiry', country: 'Philippines', isoCode: 'PH' },
+                { name: 'Federal Bank', url: 'https://fedfast.federalbank.co.in/RemittanceEnquiry/', country: 'India', isoCode: 'IN' },
+                { name: 'Western Union', url: 'https://www.westernunion.com/us/en/track-transfer.html', country: 'Global', isoCode: 'GLOB' },
+                { name: 'WorldRemit', url: 'https://www.worldremit.com/en/track', country: 'Global', isoCode: 'GLOB' },
+                { name: 'Xoom (by PayPal)', url: 'https://www.xoom.com/track', country: 'Global', isoCode: 'GLOB' },
+                { name: 'Remitly', url: 'https://www.remitly.com/us/en/track-a-transfer', country: 'Global', isoCode: 'GLOB' },
+            ];
+            
+            const gridContainer = document.getElementById('grid-container');
+            const filterContainer = document.getElementById('filter-container');
+            const searchInput = document.getElementById('search-input');
+            const searchButton = document.getElementById('search-button');
+            
+            // Function to convert ISO code to emoji flag
+            const isoToEmoji = (code) => {
+                if (code === 'GLOB') return '🌎';
+                if (!code || code.length !== 2) return '🏦';
+                const codePoints = code
+                    .toUpperCase()
+                    .split('')
+                    .map(char => 127397 + char.charCodeAt(0));
+                return String.fromCodePoint(...codePoints);
+            };
+            
+            // Function to create a bank card
+            const createBankCard = (bank) => {
+                const card = document.createElement('div');
+                card.className = 'bank-card';
+                card.onclick = () => window.open(bank.url, '_blank');
+                
+                const icon = document.createElement('div');
+                icon.className = 'bank-icon';
+                icon.innerText = isoToEmoji(bank.isoCode);
+                
+                const name = document.createElement('div');
+                name.className = 'bank-name';
+                name.innerText = bank.name;
+                
+                const country = document.createElement('div');
+                country.className = 'bank-country';
+                country.innerHTML = `<i class="fas fa-globe"></i> ${bank.country}`;
+                
+                const button = document.createElement('button');
+                button.className = 'track-button';
+                button.innerHTML = 'Track <i class="fas fa-external-link-alt" style="font-size:9px"></i>';
+                
+                card.appendChild(icon);
+                card.appendChild(name);
+                card.appendChild(country);
+                card.appendChild(button);
+                
+                return card;
+            };
+            
+            // Function to render banks based on filter
+            const renderBanks = (filteredBanks) => {
+                gridContainer.innerHTML = '';
+                filteredBanks.forEach(bank => {
+                    gridContainer.appendChild(createBankCard(bank));
+                });
+            };
+            
+            // Function to create and populate the country filter buttons
+            const populateCountryFilters = () => {
+                const countries = [...new Set(banks.map(bank => bank.country))].sort();
+                
+                // Add "All" button
+                const allButton = document.createElement('button');
+                allButton.className = 'filter-button active';
+                allButton.textContent = 'All';
+                allButton.dataset.country = 'All';
+                filterContainer.appendChild(allButton);
+                
+                // Add country buttons
+                countries.forEach(country => {
+                    const button = document.createElement('button');
+                    button.className = 'filter-button';
+                    button.textContent = country;
+                    button.dataset.country = country;
+                    filterContainer.appendChild(button);
+                });
+            };
+            
+            // Function to handle filter button clicks
+            const handleFilterClick = (event) => {
+                const target = event.target;
+                if (target.classList.contains('filter-button')) {
+                    // Update active state
+                    document.querySelectorAll('.filter-button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    target.classList.add('active');
+                    
+                    const selectedCountry = target.dataset.country;
+                    if (selectedCountry === 'All') {
+                        renderBanks(banks);
+                    } else {
+                        const filteredBanks = banks.filter(bank => bank.country === selectedCountry);
+                        renderBanks(filteredBanks);
+                    }
+                }
+            };
+            
+            // Function to handle search
+            const handleSearch = () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                if (searchTerm.trim() === '') {
+                    // If search is empty, respect the current filter
+                    const activeFilter = document.querySelector('.filter-button.active').dataset.country;
+                    if (activeFilter === 'All') {
+                        renderBanks(banks);
+                    } else {
+                        const filteredBanks = banks.filter(bank => bank.country === activeFilter);
+                        renderBanks(filteredBanks);
+                    }
+                    return;
+                }
+                
+                const filteredBanks = banks.filter(bank => 
+                    bank.name.toLowerCase().includes(searchTerm) || 
+                    bank.country.toLowerCase().includes(searchTerm)
+                );
+                
+                renderBanks(filteredBanks);
+                
+                // Update filter buttons to reflect search
+                document.querySelectorAll('.filter-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Activate "All" button during search
+                document.querySelector('.filter-button[data-country="All"]').classList.add('active');
+            };
+            
+            // Add event listeners
+            filterContainer.addEventListener('click', handleFilterClick);
+            searchInput.addEventListener('input', handleSearch);
+            searchButton.addEventListener('click', handleSearch);
+            
+            // Make filter buttons scrollable on touch devices
+            let isScrolling;
+            filterContainer.addEventListener('touchstart', function() {
+                isScrolling = false;
+            });
+            
+            filterContainer.addEventListener('touchmove', function() {
+                isScrolling = true;
+            });
+            
+            filterContainer.addEventListener('touchend', function(e) {
+                if (!isScrolling) {
+                    handleFilterClick(e);
+                }
+            }, true);
+            
+            // Initial render
+            populateCountryFilters();
+            renderBanks(banks);
+        });
+    </script>
+</body>
+</html><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

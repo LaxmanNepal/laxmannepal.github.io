@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepali-English Date Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 0px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: var(--secondary);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: var(--primary);
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        .converter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .converter-box {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            flex: 1;
+            min-width: 300px;
+            transition: transform 0.3s ease;
+        }
+        
+        .converter-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .converter-title {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .converter-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        select {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            background: white;
+            transition: border 0.3s;
+            cursor: pointer;
+        }
+        
+        select:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+        
+        .label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .result-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            text-align: center;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .result-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .result-date {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .converter-container {
+                flex-direction: column;
+            }
+            
+            .converter-box {
+                width: 100%;
+            }
+        }
+
+        .current-date {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nepali-English Date Converter</h1>
+            <p class="subtitle">Convert dates between Nepali (Bikram Sambat) and English (Gregorian) calendars</p>
+        </header>
+        
+        <div class="current-date" id="currentDate">
+            Today is: Loading...
+        </div>
+        
+        <div class="converter-container">
+            <div class="converter-box">
+                <h2 class="converter-title">English (AD) to Nepali (BS)</h2>
+                <form id="engFormatDate">
+                    <div class="input-group">
+                        <div style="flex: 1;">
+                            <label class="label">Date</label>
+                            <select name="date" id="date" onchange="convertToNepali('engFormatDate')">
+                                <!-- Filled by JavaScript -->
+                            </select>
+                        </div>
+                        
+                        <div style="flex: 1;">
+                            <label class="label">Month</label>
+                            <select name="month" id="month" onchange="convertToNepali('engFormatDate')">
+                                <!-- Filled by JavaScript -->
+                            </select>
+                        </div>
+                        
+                        <div style="flex: 1;">
+                            <label class="label">Year</label>
+                            <select name="year" id="year" onchange="convertToNepali('engFormatDate')">
+                                <!-- Filled by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="converter-box">
+                <h2 class="converter-title">Nepali (BS) to English (AD)</h2>
+                <form id="nepaliFormatDate">
+                    <div class="input-group">
+                        <div style="flex: 1;">
+                            <label class="label">Year</label>
+                            <select name="nepYear" id="nepYear" onchange="convertToEnglish('nepaliFormatDate')">
+                                <!-- Filled by JavaScript -->
+                            </select>
+                        </div>
+                        
+                        <div style="flex: 1;">
+                            <label class="label">Month</label>
+                            <select name="nepMonth" id="nepMonth" onchange="convertToEnglish('nepaliFormatDate')">
+                                <!-- Filled by JavaScript -->
+                            </select>
+                        </div>
+                        
+                        <div style="flex: 1;">
+                            <label class="label">Date</label>
+                            <select name="nepDate" id="nepDate" onchange="convertToEnglish('nepaliFormatDate')">
+                                <!-- Filled by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="result-container">
+            <div id="resultDateDiv">
+                <div class="result-title">Converted Date</div>
+                <div class="result-date" id="convertedDate">Select a date to convert</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Nepali calendar data (days in each month from 2000 BS to 2090 BS)
+        const nepaliCalendarData = {
+            "2000": [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+            "2001": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2002": [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2003": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2004": [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+            "2005": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2006": [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2007": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2008": [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 29, 31],
+            "2009": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2010": [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2011": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2012": [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 30, 30],
+            "2013": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2014": [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2015": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2016": [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 30, 30],
+            "2017": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2018": [31, 32, 31, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2019": [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+            "2020": [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2021": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2022": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
+            "2023": [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+            "2024": [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2025": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2026": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2027": [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+            "2028": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2029": [31, 31, 32, 31, 32, 30, 30, 29, 30, 29, 30, 30],
+            "2030": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2031": [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+            "2032": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2033": [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2034": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2035": [30, 32, 31, 32, 31, 31, 29, 30, 30, 29, 29, 31],
+            "2036": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2037": [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2038": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2039": [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 30, 30],
+            "2040": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2041": [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2042": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2043": [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 30, 30],
+            "2044": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2045": [31, 32, 31, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2046": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2047": [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2048": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2049": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
+            "2050": [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+            "2051": [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2052": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2053": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
+            "2054": [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+            "2055": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2056": [31, 31, 32, 31, 32, 30, 30, 29, 30, 29, 30, 30],
+            "2057": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2058": [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+            "2059": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2060": [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2061": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2062": [30, 32, 31, 32, 31, 31, 29, 30, 29, 30, 29, 31],
+            "2063": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2064": [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2065": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2066": [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 29, 31],
+            "2067": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2068": [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2069": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2070": [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 30, 30],
+            "2071": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2072": [31, 32, 31, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            "2073": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+            "2074": [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2075": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2076": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
+            "2077": [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+            "2078": [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2079": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            "2080": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
+            "2081": [31, 31, 32, 32, 31, 30, 30, 30, 29, 30, 30, 30],
+            "2082": [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
+            "2083": [31, 31, 32, 31, 31, 30, 30, 30, 29, 30, 30, 30],
+            "2084": [31, 31, 32, 31, 31, 30, 30, 30, 29, 30, 30, 30],
+            "2085": [31, 32, 31, 32, 30, 31, 30, 30, 29, 30, 30, 30],
+            "2086": [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
+            "2087": [31, 31, 32, 31, 31, 31, 30, 30, 29, 30, 30, 30],
+            "2088": [30, 31, 32, 32, 30, 31, 30, 30, 29, 30, 30, 30],
+            "2089": [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
+            "2090": [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30]
+        };
+
+        // Nepali month names
+        const nepaliMonths = [
+            "Baishakh", "Jestha", "Ashadh", "Shrawan", "Bhadra", "Ashwin",
+            "Kartik", "Mangsir", "Poush", "Magh", "Falgun", "Chaitra"
+        ];
+
+        // English month names
+        const englishMonths = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        // Check if a year is leap year
+        function isLeapYear(year) {
+            return (year % 400 === 0) || (year % 100 !== 0 && year % 4 === 0);
+        }
+
+        // Get days in month for English calendar
+        function getEnglishDaysInMonth(month, year) {
+            if (month === 2) {
+                return isLeapYear(year) ? 29 : 28;
+            } else if ([4, 6, 9, 11].includes(month)) {
+                return 30;
+            } else {
+                return 31;
+            }
+        }
+
+        // Convert English date to Nepali date
+        function convertToNepali(formId) {
+            const form = document.getElementById(formId);
+            const day = parseInt(form.date.value);
+            const month = parseInt(form.month.value);
+            const year = parseInt(form.year.value);
+            
+            // Reference date: 2000-01-01 AD = 2056-09-17 BS
+            const refEnglishDate = new Date(2000, 0, 1);
+            const refNepaliDate = { year: 2056, month: 9, day: 17 };
+            
+            const currentDate = new Date(year, month - 1, day);
+            const diffTime = Math.abs(currentDate - refEnglishDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            
+            let nepaliDate = { ...refNepaliDate };
+            
+            // Add days to the reference Nepali date
+            for (let i = 0; i < diffDays; i++) {
+                nepaliDate.day++;
+                
+                const daysInMonth = nepaliCalendarData[nepaliDate.year][nepaliDate.month - 1];
+                if (nepaliDate.day > daysInMonth) {
+                    nepaliDate.day = 1;
+                    nepaliDate.month++;
+                    
+                    if (nepaliDate.month > 12) {
+                        nepaliDate.month = 1;
+                        nepaliDate.year++;
+                    }
+                }
+            }
+            
+            const nepaliMonthName = nepaliMonths[nepaliDate.month - 1];
+            const result = `${nepaliDate.year}-${nepaliDate.month}-${nepaliDate.day} (${nepaliMonthName} ${nepaliDate.day}, ${nepaliDate.year} BS)`;
+            
+            document.getElementById('convertedDate').textContent = result;
+        }
+
+        // Convert Nepali date to English date
+        function convertToEnglish(formId) {
+            const form = document.getElementById(formId);
+            const day = parseInt(form.nepDate.value);
+            const month = parseInt(form.nepMonth.value);
+            const year = parseInt(form.nepYear.value);
+            
+            // Reference date: 2056-09-17 BS = 2000-01-01 AD
+            const refNepaliDate = { year: 2056, month: 9, day: 17 };
+            const refEnglishDate = new Date(2000, 0, 1);
+            
+            let currentNepaliDate = { year: year, month: month, day: day };
+            
+            // Calculate days difference between current Nepali date and reference date
+            let totalDays = 0;
+            
+            // Add days from reference Nepali date to current Nepali date
+            let tempDate = { ...refNepaliDate };
+            while (tempDate.year < currentNepaliDate.year || 
+                   tempDate.month < currentNepaliDate.month || 
+                   tempDate.day < currentNepaliDate.day) {
+                tempDate.day++;
+                totalDays++;
+                
+                const daysInMonth = nepaliCalendarData[tempDate.year][tempDate.month - 1];
+                if (tempDate.day > daysInMonth) {
+                    tempDate.day = 1;
+                    tempDate.month++;
+                    
+                    if (tempDate.month > 12) {
+                        tempDate.month = 1;
+                        tempDate.year++;
+                    }
+                }
+            }
+            
+            // Subtract days if current date is before reference date
+            tempDate = { ...refNepaliDate };
+            while (tempDate.year > currentNepaliDate.year || 
+                   tempDate.month > currentNepaliDate.month || 
+                   tempDate.day > currentNepaliDate.day) {
+                tempDate.day--;
+                totalDays--;
+                
+                if (tempDate.day < 1) {
+                    tempDate.month--;
+                    
+                    if (tempDate.month < 1) {
+                        tempDate.month = 12;
+                        tempDate.year--;
+                    }
+                    
+                    tempDate.day = nepaliCalendarData[tempDate.year][tempDate.month - 1];
+                }
+            }
+            
+            // Calculate English date
+            const englishDate = new Date(refEnglishDate);
+            englishDate.setDate(englishDate.getDate() + totalDays);
+            
+            const englishMonthName = englishMonths[englishDate.getMonth()];
+            const result = `${englishDate.getFullYear()}-${englishDate.getMonth() + 1}-${englishDate.getDate()} (${englishMonthName} ${englishDate.getDate()}, ${englishDate.getFullYear()} AD)`;
+            
+            document.getElementById('convertedDate').textContent = result;
+        }
+
+        // Initialize date selectors
+        document.addEventListener('DOMContentLoaded', function() {
+            // English date selectors
+            const dateSelect = document.getElementById('date');
+            const monthSelect = document.getElementById('month');
+            const yearSelect = document.getElementById('year');
+            
+            // Nepali date selectors
+            const nepDateSelect = document.getElementById('nepDate');
+            const nepMonthSelect = document.getElementById('nepMonth');
+            const nepYearSelect = document.getElementById('nepYear');
+            
+            // Populate English dates (1-31)
+            for (let i = 1; i <= 31; i++) {
+                dateSelect.innerHTML += `<option value="${i}">${i}</option>`;
+            }
+            
+            // Populate English months
+            englishMonths.forEach((month, index) => {
+                monthSelect.innerHTML += `<option value="${index + 1}">${month}</option>`;
+            });
+            
+            // Populate English years (1944-2033)
+            for (let i = 1944; i <= 2033; i++) {
+                yearSelect.innerHTML += `<option value="${i}">${i}</option>`;
+            }
+            
+            // Populate Nepali years (2000-2090)
+            for (let i = 2000; i <= 2090; i++) {
+                nepYearSelect.innerHTML += `<option value="${i}">${i}</option>`;
+            }
+            
+            // Populate Nepali months
+            nepaliMonths.forEach((month, index) => {
+                nepMonthSelect.innerHTML += `<option value="${index + 1}">${month}</option>`;
+            });
+            
+            // Function to update Nepali dates based on selected year and month
+            function updateNepaliDates() {
+                const year = nepYearSelect.value;
+                const month = nepMonthSelect.value;
+                const daysInMonth = nepaliCalendarData[year][month - 1];
+                
+                nepDateSelect.innerHTML = '';
+                for (let i = 1; i <= daysInMonth; i++) {
+                    nepDateSelect.innerHTML += `<option value="${i}">${i}</option>`;
+                }
+            }
+            
+            // Update Nepali dates when year or month changes
+            nepYearSelect.addEventListener('change', updateNepaliDates);
+            nepMonthSelect.addEventListener('change', updateNepaliDates);
+            
+            // Function to update English dates based on selected year and month
+            function updateEnglishDates() {
+                const year = parseInt(yearSelect.value);
+                const month = parseInt(monthSelect.value);
+                const daysInMonth = getEnglishDaysInMonth(month, year);
+                
+                dateSelect.innerHTML = '';
+                for (let i = 1; i <= daysInMonth; i++) {
+                    dateSelect.innerHTML += `<option value="${i}">${i}</option>`;
+                }
+            }
+            
+            // Update English dates when year or month changes
+            yearSelect.addEventListener('change', updateEnglishDates);
+            monthSelect.addEventListener('change', updateEnglishDates);
+            
+            // Set current date
+            const today = new Date();
+            const currentDay = today.getDate();
+            const currentMonth = today.getMonth() + 1; // Months are 0-indexed
+            const currentYear = today.getFullYear();
+            
+            // Set default values to current date
+            dateSelect.value = currentDay;
+            monthSelect.value = currentMonth;
+            yearSelect.value = currentYear;
+            
+            // Set default Nepali date (approximate)
+            nepYearSelect.value = 2080;
+            nepMonthSelect.value = 1;
+            updateNepaliDates();
+            nepDateSelect.value = 1;
+            
+            // Display current date
+            document.getElementById('currentDate').textContent = 
+                `Today is: ${englishMonths[currentMonth - 1]} ${currentDay}, ${currentYear} (Gregorian)`;
+            
+            // Perform initial conversion
+            convertToNepali('engFormatDate');
+        });
+    </script>
+</body>
+</html><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

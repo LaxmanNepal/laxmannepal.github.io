@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Poster Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Blogger Compatibility: Removing 100vh constraints to allow the post to scroll naturally */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-y: auto; /* Enable natural scrolling for Blogger posts */
+        }
+
+        /* Top Preview Area */
+        main {
+            width: 100%;
+            min-height: 400px; /* Minimum height for visibility */
+            height: 60vh; /* Responsive height relative to view */
+            background: #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+            padding: 20px;
+        }
+
+        /* Bottom Controls Area - Changed to natural height for Blogger */
+        aside {
+            width: 100%;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            padding: 24px 20px;
+            z-index: 20;
+            height: auto; /* Allow content to dictate height */
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 1024px) {
+            aside {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+            .aside-header { grid-column: span 3; }
+        }
+
+        .canvas-container {
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: move;
+            user-select: none;
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+
+        #bg-image {
+            position: absolute;
+            pointer-events: none;
+            transform-origin: center center;
+            will-change: transform;
+            max-width: none;
+        }
+
+        .vignette-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .logo-element {
+            position: absolute;
+            max-width: 15%;
+            max-height: 15%;
+            object-fit: contain;
+            margin: 20px;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        .text-content-wrapper {
+            position: absolute;
+            bottom: 12%;
+            left: 5%;
+            right: 5%;
+            text-align: center;
+            z-index: 30;
+        }
+
+        #display-text {
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.8);
+            line-height: 1.1;
+            word-wrap: break-word;
+        }
+
+        .copyright-tag {
+            position: absolute;
+            bottom: 15px;
+            z-index: 40;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* UI Styling */
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-input-wrapper input[type=file] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-label-custom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px;
+            background: white;
+            border: 2px dashed #e2e8f0;
+            border-radius: 10px;
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .file-input-wrapper:hover .file-label-custom {
+            border-color: #4f46e5;
+            color: #4f46e5;
+            background: #f8fafc;
+        }
+
+        input[type="range"] {
+            height: 4px;
+            border-radius: 5px;
+            background: #e2e8f0;
+            appearance: none;
+            width: 100%;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #4f46e5;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top: Preview Area -->
+    <main id="preview-container">
+        <div id="canvas-wrapper" class="canvas-container">
+            <img id="bg-image" src="" alt="" style="display: none;">
+            <img id="logo-img" class="logo-element hidden" src="" alt="logo">
+            <div id="vignette" class="vignette-overlay" style="height: 35%;"></div>
+            <span id="copyright-display" class="copyright-tag" style="left: 20px; color: #ffffff; font-size: 10px;">© BRAND NAME</span>
+            <div class="text-content-wrapper">
+                <p id="display-text" class="font-bold tracking-tight uppercase" style="color: white; font-size: 32px;">ENTER YOUR HEADLINE</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom: Controls -->
+    <aside>
+        <div class="aside-header mb-4 flex flex-wrap justify-between items-end gap-3">
+            <div>
+                <h1 class="text-lg font-bold text-slate-900 tracking-tight">Poster Studio</h1>
+                <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Custom Export Dimensions</p>
+            </div>
+            
+            <div class="flex flex-wrap items-center gap-2 bg-slate-100 p-2 rounded-xl">
+                <div class="flex flex-col">
+                    <label class="text-[8px] font-bold text-slate-400 uppercase ml-1">Quality / Width (px)</label>
+                    <div class="flex items-center gap-1">
+                        <select id="export-mode" onchange="toggleQualityMode()" class="bg-white text-[10px] font-bold text-slate-600 outline-none px-2 py-1.5 rounded-lg border border-slate-200">
+                            <option value="scale">Multiplier</option>
+                            <option value="pixels">Custom PX</option>
+                        </select>
+                        <select id="export-quality" class="bg-white text-[10px] font-bold text-slate-600 outline-none px-2 py-1.5 rounded-lg border border-slate-200">
+                            <option value="1">1x</option>
+                            <option value="2" selected>2x</option>
+                            <option value="4">4x</option>
+                        </select>
+                        <input type="number" id="custom-px-width" value="1920" class="hidden w-20 bg-white text-[10px] font-bold text-slate-600 outline-none px-2 py-1.5 rounded-lg border border-slate-200">
+                    </div>
+                </div>
+                <button id="download-btn" onclick="downloadPoster()" class="px-5 py-2.5 bg-indigo-600 text-white text-xs font-bold rounded-lg hover:bg-indigo-700 shadow-md transition-all flex items-center gap-2 whitespace-nowrap self-end">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Export
+                </button>
+            </div>
+        </div>
+
+        <!-- Column 1: Layout & Background -->
+        <div class="space-y-4 mb-6 lg:mb-0">
+            <div>
+                <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">1. Format</label>
+                <div class="grid grid-cols-3 gap-2">
+                    <button onclick="setRatio('1:1')" class="ratio-btn px-2 py-2 border rounded-lg text-xs font-semibold" id="btn-ratio-1-1">1:1</button>
+                    <button onclick="setRatio('16:9')" class="ratio-btn px-2 py-2 border rounded-lg text-xs font-semibold" id="btn-ratio-16-9">16:9</button>
+                    <button onclick="setRatio('9:16')" class="ratio-btn px-2 py-2 border rounded-lg text-xs font-semibold" id="btn-ratio-9-16">9:16</button>
+                </div>
+            </div>
+
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">2. Background</label>
+                <div class="file-input-wrapper mb-3">
+                    <div class="file-label-custom">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                        <span>Change Photo</span>
+                    </div>
+                    <input type="file" id="bg-upload" accept="image/*">
+                </div>
+                <div class="flex items-center justify-between mb-1 px-1">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase">Scale</span>
+                    <span id="zoom-val" class="text-[10px] font-mono text-indigo-600">100%</span>
+                </div>
+                <input type="range" id="zoom-slider" min="10" max="400" value="100" class="accent-indigo-600">
+            </div>
+        </div>
+
+        <!-- Column 2: Typography -->
+        <div class="space-y-4 mb-6 lg:mb-0">
+            <div class="p-4 bg-slate-900 rounded-xl text-white shadow-xl">
+                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-2">3. Typography</label>
+                <textarea id="post-text" class="w-full p-3 bg-white/5 border border-white/20 rounded-lg text-sm text-white mb-3 h-16 focus:border-indigo-400 outline-none resize-none">ENTER YOUR HEADLINE</textarea>
+                
+                <div class="flex items-center gap-4">
+                    <div class="flex-1">
+                        <div class="flex justify-between mb-1">
+                            <label class="text-[9px] font-bold text-slate-500 uppercase">Size</label>
+                        </div>
+                        <input type="range" id="font-size-slider" min="12" max="150" value="32" class="accent-indigo-400">
+                    </div>
+                    <div>
+                        <label class="text-[9px] font-bold text-slate-500 mb-1 block">COLOR</label>
+                        <input type="color" id="text-color" value="#ffffff" class="w-10 h-8 bg-transparent border-0 cursor-pointer">
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                <div class="flex justify-between items-center mb-2">
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">4. Vignette / Shadow</label>
+                    <input type="color" id="vignette-color" value="#000000" class="w-6 h-6 bg-transparent border-0 cursor-pointer">
+                </div>
+                <div class="space-y-3">
+                    <div>
+                        <label class="text-[9px] font-bold text-slate-500 uppercase mb-1 block">Coverage (Height)</label>
+                        <input type="range" id="vignette-slider" min="0" max="100" value="35" class="accent-indigo-400">
+                    </div>
+                    <div>
+                        <label class="text-[9px] font-bold text-slate-500 uppercase mb-1 block">Density (Opacity)</label>
+                        <input type="range" id="vignette-density" min="0" max="100" value="95" class="accent-indigo-400">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 3: Branding -->
+        <div class="space-y-4">
+            <div class="p-4 bg-white rounded-xl border border-slate-100">
+                <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">5. Identity</label>
+                <div class="flex gap-2 mb-4">
+                    <div class="file-input-wrapper flex-1">
+                        <div class="file-label-custom py-2">
+                            <span class="text-[10px]">Logo</span>
+                        </div>
+                        <input type="file" id="logo-upload" accept="image/*">
+                    </div>
+                    <div class="flex bg-slate-100 rounded-lg p-1">
+                        <button onclick="setLogoPos('top-left')" class="px-2 py-1 hover:bg-white rounded text-[10px] font-bold">L</button>
+                        <button onclick="setLogoPos('top-center')" class="px-2 py-1 hover:bg-white rounded text-[10px] font-bold">C</button>
+                        <button onclick="setLogoPos('top-right')" class="px-2 py-1 hover:bg-white rounded text-[10px] font-bold">R</button>
+                    </div>
+                </div>
+                
+                <input type="text" id="brand-input" placeholder="© Copyright Text" class="w-full p-2 border rounded-lg text-xs mb-3 focus:ring-2 focus:ring-indigo-500 outline-none">
+                
+                <div class="flex items-center gap-2">
+                    <button onclick="setBrandAlign('left')" class="flex-1 py-2 border text-[10px] font-bold rounded-lg hover:bg-indigo-50 transition-colors">LEFT</button>
+                    <button onclick="setBrandAlign('center')" class="flex-1 py-2 border text-[10px] font-bold rounded-lg hover:bg-indigo-50 transition-colors">MID</button>
+                    <button onclick="setBrandAlign('right')" class="flex-1 py-2 border text-[10px] font-bold rounded-lg hover:bg-indigo-50 transition-colors">RIGHT</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <script>
+        let isDragging = false;
+        let startX, startY;
+        let posX = 0, posY = 0;
+        let zoom = 1;
+        let currentRatio = '1:1';
+
+        const canvasWrapper = document.getElementById('canvas-wrapper');
+        const previewContainer = document.getElementById('preview-container');
+        const bgImg = document.getElementById('bg-image');
+        const bgUpload = document.getElementById('bg-upload');
+        const logoImg = document.getElementById('logo-img');
+        const logoUpload = document.getElementById('logo-upload');
+        const brandInput = document.getElementById('brand-input');
+        const copyrightDisplay = document.getElementById('copyright-display');
+        const vignette = document.getElementById('vignette');
+        const vSlider = document.getElementById('vignette-slider');
+        const vDensity = document.getElementById('vignette-density');
+        const vColor = document.getElementById('vignette-color');
+        const postText = document.getElementById('post-text');
+        const displayText = document.getElementById('display-text');
+        const textColor = document.getElementById('text-color');
+        const fontSizeSlider = document.getElementById('font-size-slider');
+        const zoomSlider = document.getElementById('zoom-slider');
+        const zoomValDisp = document.getElementById('zoom-val');
+        const exportMode = document.getElementById('export-mode');
+        const exportQuality = document.getElementById('export-quality');
+        const customPxWidth = document.getElementById('custom-px-width');
+
+        function toggleQualityMode() {
+            if (exportMode.value === 'scale') {
+                exportQuality.classList.remove('hidden');
+                customPxWidth.classList.add('hidden');
+            } else {
+                exportQuality.classList.add('hidden');
+                customPxWidth.classList.remove('hidden');
+            }
+        }
+
+        function setRatio(ratioLabel) {
+            currentRatio = ratioLabel;
+            updateCanvasSize();
+            
+            document.querySelectorAll('.ratio-btn').forEach(btn => {
+                btn.classList.remove('bg-indigo-600', 'text-white', 'border-indigo-600');
+                btn.classList.add('border-slate-200', 'text-slate-600', 'bg-white');
+            });
+            
+            const slug = ratioLabel.replace(':', '-');
+            const activeBtn = document.getElementById(`btn-ratio-${slug}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-slate-200', 'text-slate-600', 'bg-white');
+                activeBtn.classList.add('bg-indigo-600', 'text-white', 'border-indigo-600');
+            }
+        }
+
+        function updateCanvasSize() {
+            const padding = 40;
+            const maxWidth = previewContainer.clientWidth - padding;
+            const maxHeight = previewContainer.clientHeight - padding;
+            
+            let [rW, rH] = currentRatio.split(':').map(Number);
+            let targetW, targetH;
+
+            if ((maxWidth / rW) * rH <= maxHeight) {
+                targetW = maxWidth;
+                targetH = (maxWidth / rW) * rH;
+            } else {
+                targetH = maxHeight;
+                targetW = (maxHeight / rH) * rW;
+            }
+
+            canvasWrapper.style.width = `${targetW}px`;
+            canvasWrapper.style.height = `${targetH}px`;
+            updateTransform();
+        }
+
+        window.addEventListener('resize', updateCanvasSize);
+
+        bgUpload.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (f) => {
+                    bgImg.src = f.target.result;
+                    bgImg.style.display = 'block';
+                    posX = 0; posY = 0; zoom = 1; zoomSlider.value = 100;
+                    zoomValDisp.textContent = '100%';
+                    updateTransform();
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        zoomSlider.addEventListener('input', (e) => {
+            zoom = e.target.value / 100;
+            zoomValDisp.textContent = `${e.target.value}%`;
+            updateTransform();
+        });
+
+        const startMove = (e) => {
+            if (e.target !== canvasWrapper && !canvasWrapper.contains(e.target)) return;
+            isDragging = true;
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            startX = clientX - posX;
+            startY = clientY - posY;
+        };
+
+        const onMove = (e) => {
+            if (!isDragging) return;
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            posX = clientX - startX;
+            posY = clientY - startY;
+            updateTransform();
+        };
+
+        window.addEventListener('mousedown', startMove);
+        window.addEventListener('mousemove', onMove);
+        window.addEventListener('mouseup', () => isDragging = false);
+        window.addEventListener('touchstart', startMove, {passive: false});
+        window.addEventListener('touchmove', onMove, {passive: false});
+        window.addEventListener('touchend', () => isDragging = false);
+
+        function updateTransform() {
+            bgImg.style.transform = `translate(${posX}px, ${posY}px) scale(${zoom})`;
+        }
+
+        logoUpload.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (f) => {
+                    logoImg.src = f.target.result;
+                    logoImg.classList.remove('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function setLogoPos(pos) {
+            logoImg.style.top = 'auto'; logoImg.style.bottom = 'auto';
+            logoImg.style.left = 'auto'; logoImg.style.right = 'auto';
+            logoImg.style.transform = 'none';
+            switch(pos) {
+                case 'top-left': logoImg.style.top = '0'; logoImg.style.left = '0'; break;
+                case 'top-center': logoImg.style.top = '0'; logoImg.style.left = '50%'; logoImg.style.transform = 'translateX(-50%)'; break;
+                case 'top-right': logoImg.style.top = '0'; logoImg.style.right = '0'; break;
+            }
+        }
+
+        brandInput.addEventListener('input', (e) => {
+            copyrightDisplay.textContent = e.target.value.toUpperCase() || '© BRAND NAME';
+        });
+
+        function setBrandAlign(align) {
+            copyrightDisplay.style.left = 'auto';
+            copyrightDisplay.style.right = 'auto';
+            copyrightDisplay.style.transform = 'none';
+            if (align === 'left') copyrightDisplay.style.left = '20px';
+            else if (align === 'right') copyrightDisplay.style.right = '20px';
+            else {
+                copyrightDisplay.style.left = '50%';
+                copyrightDisplay.style.transform = 'translateX(-50%)';
+            }
+        }
+
+        function hexToRgb(hex) {
+            var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : '0, 0, 0';
+        }
+
+        function updateVignette() {
+            const height = vSlider.value;
+            const density = vDensity.value / 100;
+            const rgb = hexToRgb(vColor.value);
+            vignette.style.height = `${height}%`;
+            vignette.style.background = `linear-gradient(to top, rgba(${rgb}, ${density}) 0%, rgba(${rgb}, ${density * 0.4}) 50%, rgba(${rgb}, 0) 100%)`;
+        }
+
+        vSlider.addEventListener('input', updateVignette);
+        vDensity.addEventListener('input', updateVignette);
+        vColor.addEventListener('input', updateVignette);
+        postText.addEventListener('input', (e) => displayText.textContent = e.target.value);
+        textColor.addEventListener('input', (e) => displayText.style.color = e.target.value);
+        fontSizeSlider.addEventListener('input', (e) => displayText.style.fontSize = `${e.target.value}px`);
+
+        async function downloadPoster() {
+            const btn = document.getElementById('download-btn');
+            const originalText = btn.innerHTML;
+            
+            let scaleVal;
+            if (exportMode.value === 'scale') {
+                scaleVal = parseInt(exportQuality.value);
+            } else {
+                const desiredWidth = parseInt(customPxWidth.value) || 1920;
+                const currentWidth = parseFloat(canvasWrapper.style.width);
+                scaleVal = desiredWidth / currentWidth;
+            }
+            
+            btn.innerHTML = `<span class="animate-spin inline-block w-3 h-3 border-2 border-white border-t-transparent rounded-full mr-2"></span> Processing...`;
+            btn.disabled = true;
+            
+            try {
+                const canvas = await html2canvas(canvasWrapper, {
+                    useCORS: true,
+                    scale: scaleVal, 
+                    backgroundColor: "#000000",
+                    logging: false
+                });
+                
+                const link = document.createElement('a');
+                link.download = `poster-${Date.now()}.png`;
+                link.href = canvas.toDataURL('image/png', 1.0);
+                link.click();
+            } catch (err) {
+                console.error('Export failed:', err);
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+        
+        window.onload = () => {
+            setRatio('1:1');
+            updateVignette();
+        };
+    </script>
+</body>
+</html><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>

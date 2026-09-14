@@ -1,0 +1,509 @@
+<div class="blogger-image-gallery">
+  <!-- Lightbox Popup with Quality Options -->
+  <div class="lightbox">
+    <div class="wrapper">
+      <div class="preview-img">
+        <img src="" alt="preview-img">
+      </div>
+      <div class="actions">
+        <div class="quality-options">
+          <span>Download Quality:</span>
+          <select class="quality-select">
+            <option value="original">Original (Full Resolution)</option>
+            <option value="large2x">Large 2x (≈5000px)</option>
+            <option value="large">Large (≈1920px)</option>
+            <option value="medium">Medium (≈1280px)</option>
+            <option value="small">Small (≈640px)</option>
+            <option value="tiny">Tiny (≈200px)</option>
+            <option value="portrait">Portrait (≈800px tall)</option>
+            <option value="landscape">Landscape (≈1200px wide)</option>
+            <option value="square">Square (≈1000x1000px)</option>
+          </select>
+        </div>
+        <button class="download-btn" title="Download">
+          <i class="uil uil-import"></i> Download
+        </button>
+        <button class="close-btn" title="Close">
+          <i class="uil uil-times"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Search Section -->
+  <section class="search-hero">
+    <div class="search-container">
+      <div class="search-box">
+        <i class="uil uil-search"></i>
+        <input type="text" placeholder="Search for free high-resolution photos...">
+        <button class="search-btn">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <ul class="images"></ul>
+    <button class="load-more">Load More</button>
+  </section>
+</div>
+
+<style>
+  /* Import Google font - Poppins */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+  
+  .blogger-image-gallery {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Hero Search Section */
+  .blogger-image-gallery .search-hero {
+    padding: 80px 20px;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .blogger-image-gallery .search-container {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .blogger-image-gallery .search-box {
+    display: flex;
+    background: white;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    height: 60px;
+  }
+  
+  .blogger-image-gallery .search-box i {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8D8D8D;
+    font-size: 1.4rem;
+  }
+  
+  .blogger-image-gallery .search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .blogger-image-gallery .search-box input::placeholder {
+    color: #aaa;
+  }
+  
+  .blogger-image-gallery .search-box .search-btn {
+    background: #8A6CFF;
+    color: white;
+    border: none;
+    padding: 0 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .blogger-image-gallery .search-box .search-btn:hover {
+    background: #704dff;
+  }
+  
+  /* Gallery Styles */
+  .blogger-image-gallery .gallery {
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .blogger-image-gallery .gallery .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .blogger-image-gallery .gallery .images .card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .blogger-image-gallery .gallery .images .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .blogger-image-gallery .gallery .images img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    display: block;
+  }
+  
+  .blogger-image-gallery .load-more {
+    display: block;
+    margin: 40px auto;
+    background: #8A6CFF;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .blogger-image-gallery .load-more:hover {
+    background: #704dff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 108, 255, 0.3);
+  }
+  
+  .blogger-image-gallery .load-more.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+  /* Lightbox Popup Styles */
+  .blogger-image-gallery .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+  
+  .blogger-image-gallery .lightbox.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .blogger-image-gallery .lightbox .wrapper {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .blogger-image-gallery .lightbox img {
+    max-width: 100%;
+    max-height: 70vh;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .blogger-image-gallery .lightbox .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .blogger-image-gallery .lightbox .quality-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 15px;
+  }
+  
+  .blogger-image-gallery .lightbox .quality-options span {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .blogger-image-gallery .lightbox .quality-select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    min-width: 200px;
+  }
+  
+  .blogger-image-gallery .lightbox .download-btn {
+    background: #8A6CFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+  }
+  
+  .blogger-image-gallery .lightbox .download-btn:hover {
+    background: #704dff;
+  }
+  
+  .blogger-image-gallery .lightbox .close-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: #6C757D;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  
+  .blogger-image-gallery .lightbox .close-btn:hover {
+    background: #5f666d;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .blogger-image-gallery .search-hero {
+      padding: 60px 15px;
+    }
+    
+    .blogger-image-gallery .search-box {
+      height: 50px;
+    }
+    
+    .blogger-image-gallery .search-box i {
+      width: 50px;
+      font-size: 1.2rem;
+    }
+    
+    .blogger-image-gallery .search-box .search-btn {
+      padding: 0 20px;
+    }
+    
+    .blogger-image-gallery .gallery .images {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .blogger-image-gallery .lightbox .actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .blogger-image-gallery .lightbox .quality-options {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+      justify-content: space-between;
+    }
+    
+    .blogger-image-gallery .lightbox .quality-select {
+      min-width: 150px;
+      flex-grow: 1;
+    }
+    
+    .blogger-image-gallery .lightbox img {
+      max-height: 60vh;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const imageWrapper = document.querySelector(".blogger-image-gallery .images");
+  const searchInput = document.querySelector(".blogger-image-gallery .search-box input");
+  const searchBtn = document.querySelector(".blogger-image-gallery .search-btn");
+  const loadMoreBtn = document.querySelector(".blogger-image-gallery .load-more");
+  const lightbox = document.querySelector(".blogger-image-gallery .lightbox");
+  const lightboxImg = lightbox.querySelector("img");
+  const downloadBtn = lightbox.querySelector(".download-btn");
+  const closeBtn = lightbox.querySelector(".close-btn");
+  const qualitySelect = lightbox.querySelector(".quality-select");
+
+  // API key and pagination
+  const apiKey = "yZqw0r6e1fOuOL0pTK6DP4rtq7KlPUWwMQBIYtOU72CTfUNpVNx2cvDE";
+  const perPage = 15;
+  let currentPage = 1;
+  let searchTerm = null;
+  let currentImageData = null;
+
+  // Download image function with selected quality
+  const downloadImg = () => {
+    if (!currentImageData) return;
+    
+    const quality = qualitySelect.value;
+    let imgUrl, qualityName;
+    
+    switch(quality) {
+      case 'original':
+        imgUrl = currentImageData.src.original;
+        qualityName = 'original';
+        break;
+      case 'large2x':
+        imgUrl = currentImageData.src.large2x;
+        qualityName = 'large2x';
+        break;
+      case 'large':
+        imgUrl = currentImageData.src.large;
+        qualityName = 'large';
+        break;
+      case 'medium':
+        imgUrl = currentImageData.src.medium;
+        qualityName = 'medium';
+        break;
+      case 'small':
+        imgUrl = currentImageData.src.small;
+        qualityName = 'small';
+        break;
+      case 'tiny':
+        imgUrl = currentImageData.src.tiny;
+        qualityName = 'tiny';
+        break;
+      case 'portrait':
+        imgUrl = currentImageData.src.portrait;
+        qualityName = 'portrait';
+        break;
+      case 'landscape':
+        imgUrl = currentImageData.src.landscape;
+        qualityName = 'landscape';
+        break;
+      case 'square':
+        imgUrl = currentImageData.src.square;
+        qualityName = 'square';
+        break;
+      default:
+        imgUrl = currentImageData.src.medium;
+        qualityName = 'medium';
+    }
+    
+    fetch(imgUrl)
+      .then(res => res.blob())
+      .then(blob => {
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = `image-${new Date().getTime()}-${qualityName}.jpg`;
+        a.click();
+      })
+      .catch(() => alert("Failed to download image!"));
+  };
+
+  // Show lightbox with clicked image
+  const showLightbox = (imgData) => {
+    currentImageData = imgData;
+    lightboxImg.src = imgData.src.large2x;
+    lightbox.classList.add("show");
+    document.body.style.overflow = "hidden";
+  };
+
+  // Hide lightbox
+  const hideLightbox = () => {
+    lightbox.classList.remove("show");
+    document.body.style.overflow = "auto";
+  };
+
+  // Generate HTML for images
+  const generateHTML = (images) => {
+    images.forEach(img => {
+      const card = document.createElement("li");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${img.src.medium}" 
+             alt="${img.alt || 'Beautiful image'}"
+             data-photographer="${img.photographer}">
+      `;
+      imageWrapper.appendChild(card);
+      
+      // Add click event to each image
+      card.querySelector('img').addEventListener('click', () => {
+        showLightbox(img);
+      });
+    });
+  };
+
+  // Fetch images from API
+  const getImages = (apiURL) => {
+    loadMoreBtn.innerText = "Loading...";
+    loadMoreBtn.classList.add("disabled");
+    
+    fetch(apiURL, { headers: { Authorization: apiKey } })
+      .then(res => res.json())
+      .then(data => {
+        if(data.photos && data.photos.length > 0) {
+          generateHTML(data.photos);
+        } else {
+          alert("No images found. Try a different search term.");
+        }
+        loadMoreBtn.innerText = "Load More";
+        loadMoreBtn.classList.remove("disabled");
+      })
+      .catch(() => {
+        alert("Failed to load images!");
+        loadMoreBtn.innerText = "Load More";
+        loadMoreBtn.classList.remove("disabled");
+      });
+  };
+
+  // Load more images
+  const loadMoreImages = () => {
+    currentPage++;
+    let apiUrl = searchTerm 
+      ? `https://api.pexels.com/v1/search?query=${searchTerm}&page=${currentPage}&per_page=${perPage}`
+      : `https://api.pexels.com/v1/curated?page=${currentPage}&per_page=${perPage}`;
+    getImages(apiUrl);
+  };
+
+  // Perform search
+  const performSearch = () => {
+    currentPage = 1;
+    searchTerm = searchInput.value.trim();
+    imageWrapper.innerHTML = "";
+    
+    const apiUrl = searchTerm 
+      ? `https://api.pexels.com/v1/search?query=${searchTerm}&page=1&per_page=${perPage}`
+      : `https://api.pexels.com/v1/curated?page=1&per_page=${perPage}`;
+    
+    getImages(apiUrl);
+  };
+
+  // Event listeners
+  searchBtn.addEventListener("click", performSearch);
+  searchInput.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") performSearch();
+  });
+  loadMoreBtn.addEventListener("click", loadMoreImages);
+  downloadBtn.addEventListener("click", downloadImg);
+  closeBtn.addEventListener("click", hideLightbox);
+
+  // Close lightbox when clicking outside image
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) hideLightbox();
+  });
+
+  // Initialize with curated photos
+  getImages(`https://api.pexels.com/v1/curated?page=1&per_page=${perPage}`);
+});
+</script>
+
+<!-- Load Icon Library -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"><div class="blogger-post-footer">https://www.laxmannepal.com.np/sitemap.xml</div>
