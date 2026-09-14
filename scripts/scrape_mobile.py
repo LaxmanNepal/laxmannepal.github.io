@@ -11,12 +11,14 @@ ALIASES={'iPhone':'Apple','Poco':'POCO','Ai+':'AI+'}
 
 def clean(s):return re.sub(r'\s+',' ',s or '').strip()
 def price_line(line):
-    line=clean(line).replace('NPR','').strip();nums=re.findall(r'\d[\d,]*',line)
-    if not nums:return None
+    line=clean(line).replace('NPR','').strip()
     m=re.search(r'\(([^()]*)\)\s*$',line);variant=clean(m.group(1)) if m else ''
+    prefix=line[:m.start()].strip() if m else line
+    nums=re.findall(r'\d[\d,]*',prefix)
+    if not nums:return None
     vals=[int(x.replace(',','')) for x in nums]
     d={'price':vals[-1],'variant':variant}
-    if len(vals)>=2 and variant:d['original_price']=vals[-2]
+    if len(vals)>=2:d['original_price']=vals[-2]
     return d
 
 def price_lines(cell):
@@ -44,15 +46,15 @@ def parse_catalog(html):
             if not brand:
                 brand={'iPhone':'Apple','Redmi':'Xiaomi','POCO':'POCO','Poco':'POCO','OPPO':'OPPO','ZTE':'ZTE','Ai+':'AI+'}.get(name.split()[0],name.split()[0])
             pid=re.sub(r'[^a-z0-9]+','-',name.lower()).strip('-')
-            p=out.get(pid,{'id':pid,'name':name,'brand':brand,'variants':[],'prices':[]})
-            p['variants']+= [x['variant'] for x in entries if x.get('variant')]
+            p=out.get(pid,{'id':pid,'name':name,'brand':brand,'variants':[],'prices':[],'original_prices':[]})
+            p['variants'] += [x['variant'] for x in entries if x.get('variant')]
             p['prices'] += [x['price'] for x in entries]
-            p['original_prices'] += [x['original_price'] for x in entries if x.get('original_price')] if 'original_prices' in p else [x['original_price'] for x in entries if x.get('original_price')]
+            p['original_prices'] += [x['original_price'] for x in entries if x.get('original_price')]
             p['source_url']=urljoin(SOURCE,a.get('href',''))
             out[pid]=p
     products=[]
     for p in out.values():
-        p['variants']=list(dict.fromkeys(p['variants']));p['prices']=sorted(set(p['prices']));p['price']=min(p['prices']);p['max_price']=max(p['prices']);p['original_price']=max(p.get('original_prices',[]) or [0]) or None
+        p['variants']=list(dict.fromkeys(p['variants']));p['prices']=sorted(set(p['prices']));p['price']=min(p['prices']);p['max_price']=max(p['prices']);p['original_price']=max(p['original_prices'] or [0]) or None
         p.pop('prices',None);p.pop('original_prices',None);products.append(p)
     return products
 
