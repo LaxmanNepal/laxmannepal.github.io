@@ -1,63 +1,53 @@
 import json,re
 from datetime import datetime,timezone
+from io import StringIO
 import requests
-from bs4 import BeautifulSoup
+import pandas as pd
 
 SOURCE='https://www.gadgetbytenepal.com/cat/mobiles/'
 HEADERS={'User-Agent':'Mozilla/5.0 (compatible; LaxmanMobileCatalog/1.0)'}
-ALIASES={'iPhone':'Apple','Poco':'POCO','Ai+':'AI+'}
 S=requests.Session();S.headers.update(HEADERS)
+BRANDS={'iPhone':'Apple','Samsung':'Samsung','Vivo':'Vivo','Honor':'Honor','Motorola':'Motorola','Xiaomi':'Xiaomi','Redmi':'Xiaomi','Infinix':'Infinix','Realme':'Realme','OnePlus':'OnePlus','Poco':'POCO','POCO':'POCO','OPPO':'OPPO','Tecno':'Tecno','ZTE':'ZTE','Ai+':'AI+'}
 
-def clean(s):return re.sub(r'\s+',' ',s or '').strip()
-
-def entries_from_cell(cell):
-    text=clean(cell.get_text(' ',strip=True));pattern=r'(?:NPR|Rs\.?)[ \t]*([\d,]+)(?:[ \t]+([\d,]+))?[ \t]*\(([^)]*)\)';entries=[]
+def clean(s):return re.sub(r'\s+',' ',str(s or '')).strip()
+def entries(text):
+    text=clean(text);out=[]
+    pattern=r'(?:NPR|Rs\.?)[ \t]*([\d,]+)(?:[ \t]+([\d,]+))?[ \t]*\(([^)]*)\)'
     for m in re.finditer(pattern,text,re.I):
         vals=[int(x.replace(',','')) for x in m.groups()[:2] if x]
         if vals:
             d={'price':vals[-1],'variant':clean(m.group(3))}
             if len(vals)>1:d['original_price']=vals[-2]
-            entries.append(d)
-    if not entries:
+            out.append(d)
+    if not out:
         for raw in re.findall(r'(?:NPR|Rs\.?)[ \t]*[\d,]+(?:[ \t]+[\d,]+)?',text,re.I):
             vals=[int(x.replace(',','')) for x in re.findall(r'[\d,]+',raw)]
             if vals:
                 d={'price':vals[-1],'variant':''}
                 if len(vals)>1:d['original_price']=vals[-2]
-                entries.append(d)
-    return entries
-
-def table_brand(table):
-    h=table.find_previous(['h2','h3','h4'])
-    if h:
-        m=re.match(r'(.+?)\s+Mobile Price List',clean(h.get_text(' ',strip=True)),re.I)
-        if m:return ALIASES.get(clean(m.group(1)),clean(m.group(1)))
-    return ''
+                out.append(d)
+    return out
 
 def parse_catalog(html):
-    soup=BeautifulSoup(html,'html.parser');out={}
-    for table in soup.find_all('table'):
-        brand=table_brand(table);current=None
-        for row in table.find_all('tr'):
-            cells=row.find_all(['td','th'])
-            if len(cells)<2:continue
-            a=cells[0].find('a');name=clean(a.get_text(' ',strip=True)) if a else ''
-            entries=entries_from_cell(cells[1])
-            if name and name.lower()!='product name':
-                if not brand:brand={'iPhone':'Apple','Redmi':'Xiaomi','POCO':'POCO','Poco':'POCO','OPPO':'OPPO','ZTE':'ZTE','Ai+':'AI+'}.get(name.split()[0],name.split()[0])
-                pid=re.sub(r'[^a-z0-9]+','-',name.lower()).strip('-')
-                current=out.get(pid,{'id':pid,'name':name,'brand':brand,'variants':[],'prices':[],'original_prices':[]});out[pid]=current
-            if current and entries:
-                current['variants'] += [x['variant'] for x in entries if x.get('variant')]
-                current['prices'] += [x['price'] for x in entries]
-                current['original_prices'] += [x['original_price'] for x in entries if x.get('original_price')]
+    tables=pd.read_html(StringIO(html));out={}
+    for df in tables:
+        if len(df.columns)<2:continue
+        current=None
+        for _,row in df.iterrows():
+            raw_name=row.iloc[0] if len(row)>0 else None;raw_price=row.iloc[1] if len(row)>1 else ''
+            if pd.notna(raw_name) and clean(raw_name).lower()!='product name':current=clean(raw_name)
+            if not current:continue
+            es=entries(raw_price)
+            if not es:continue
+            first=current.split()[0];brand=BRANDS.get(first,first);pid=re.sub(r'[^a-z0-9]+','-',current.lower()).strip('-')
+            p=out.get(pid,{'id':pid,'name':current,'brand':brand,'variants':[],'prices':[],'original_prices':[]})
+            p['variants'] += [x['variant'] for x in es if x.get('variant')];p['prices'] += [x['price'] for x in es];p['original_prices'] += [x['original_price'] for x in es if x.get('original_price')];out[pid]=p
     products=[]
     for p in out.values():
         p['variants']=list(dict.fromkeys(p['variants']));p['prices']=sorted(set(p['prices']));p['price']=min(p['prices']);p['max_price']=max(p['prices']);p['original_price']=max(p['original_prices'] or [0]) or None
         ram=set();storage=set()
         for v in p['variants']:
-            tokens=re.findall(r'\d+(?:GB|TB)',v,re.I)
-            for token in tokens:
+            for token in re.findall(r'\d+(?:GB|TB)',v,re.I):
                 n=int(re.search(r'\d+',token).group())
                 if n<=32 and token.upper().endswith('GB'):ram.add(token.upper())
                 elif n>=64 or token.upper().endswith('TB'):storage.add(token.upper())
