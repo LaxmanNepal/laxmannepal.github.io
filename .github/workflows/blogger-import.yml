@@ -1,0 +1,47 @@
+name: Sync Blogger posts
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 2 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Import Blogger Atom feed
+        run: |
+          python3 scripts/import_blogger.py --clean
+
+      - name: Verify Blogger import
+        run: |
+          test -f blogger-import/manifest.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('blogger-import/manifest.json').read_text())
+          count = data['imported_posts']
+          print(f'Imported Blogger posts: {count}')
+          if count < 1:
+              raise SystemExit('No Blogger posts imported')
+          if count != 177:
+              print(f'WARNING: expected 177 posts from the current Blogger feed, got {count}')
+          PY
+
+      - name: Commit imported posts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add blogger-import scripts/import_blogger.py
+          if git diff --cached --quiet; then
+            echo 'No Blogger changes to commit.'
+          else
+            git commit -m 'Sync Blogger posts into safe migration staging'
+            git push
+          fi
