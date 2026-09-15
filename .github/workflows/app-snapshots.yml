@@ -1,0 +1,46 @@
+name: Refresh app snapshots
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'assets/app-snapshots/**'
+  schedule:
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright
+        run: |
+          npm init -y
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+
+      - name: Capture app homepages
+        run: node scripts/generate-app-snapshots.mjs
+
+      - name: Commit refreshed snapshots
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/app-snapshots
+          if git diff --cached --quiet; then
+            echo 'No snapshot changes.'
+          else
+            git commit -m 'chore: refresh app homepage snapshots'
+            git push
+          fi
