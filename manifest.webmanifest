@@ -1,0 +1,12 @@
+{
+  "name":"Laxman Nepal Apps & Tools",
+  "short_name":"Laxman Apps",
+  "description":"Laxman Nepal's web apps and digital tools.",
+  "id":"/apps/",
+  "start_url":"/apps/",
+  "scope":"/",
+  "display":"standalone",
+  "background_color":"#f5f6f8",
+  "theme_color":"#111827",
+  "icons":[{"src":"/assets/app-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
