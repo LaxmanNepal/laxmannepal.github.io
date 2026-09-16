@@ -1,0 +1,94 @@
+/* Apps launcher — mobile parity layer
+   Keeps desktop features intact while making the full launcher comfortable on phones. */
+
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+.apps-page{-webkit-text-size-adjust:100%;padding-bottom:env(safe-area-inset-bottom)}
+#site-header{top:0;position:sticky}
+
+/* Mobile navigation: never lose the desktop navigation features on small screens. */
+@media (max-width:760px){
+  #site-header .gb-header-main{min-height:58px;padding-left:12px;padding-right:12px;gap:8px}
+  #site-header .gb-logo{min-width:0;max-width:calc(100vw - 70px);font-size:14px}
+  #site-header .gb-logo>span:last-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #site-header .gb-search{display:none}
+  #site-header .gb-mobile{display:grid;place-items:center;width:42px;height:42px;min-width:42px;border:0;border-radius:12px;cursor:pointer}
+  #site-header .gb-menu{display:none;position:absolute;left:10px;right:10px;top:calc(100% + 8px);z-index:10001;flex-direction:column;gap:2px;padding:8px;border-radius:16px;background:var(--panel,#fff);box-shadow:0 18px 45px rgba(0,0,0,.18);border:1px solid rgba(127,127,127,.18)}
+  #site-header .gb-menu.open{display:flex}
+  #site-header .gb-menu a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:10px}
+  #site-header .gb-category{overflow:hidden}
+  #site-header .gb-category .gb-container{display:flex;overflow-x:auto;gap:8px;padding-left:12px;padding-right:12px;scrollbar-width:none}
+  #site-header .gb-category .gb-container::-webkit-scrollbar{display:none}
+  #site-header .gb-category a{flex:0 0 auto;white-space:nowrap}
+
+  .apps-main{width:100%;padding:20px 10px calc(58px + env(safe-area-inset-bottom));}
+  .apps-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:16px}
+  .apps-title{font-size:clamp(34px,11vw,46px);line-height:.94;max-width:75vw;overflow-wrap:anywhere}
+  .apps-subtitle{font-size:13px;line-height:1.45;max-width:92vw}
+  .apps-actions{gap:6px}
+  .icon-btn{width:40px;height:40px;min-width:40px;border-radius:12px}
+
+  .apps-toolbar{gap:8px;margin-bottom:10px}
+  .apps-search,.sort-select{height:46px;font-size:16px;/* prevents iOS auto-zoom */}
+  .category-bar{margin-right:-10px;padding-right:10px;padding-bottom:12px}
+  .category-btn{min-height:38px;padding:9px 13px;font-size:11px}
+  .launcher-tools{min-height:36px;margin-bottom:10px}
+  .view-toggle button{width:40px;height:36px;min-width:40px}
+
+  /* Grid mode retains every card, preview, favicon and favorite control. */
+  .apps-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .app-card{width:100%;aspect-ratio:1/1;border-radius:15px;-webkit-tap-highlight-color:transparent}
+  .app-card:hover{transform:none;box-shadow:var(--shadow)}
+  .app-preview{min-height:0}
+  .app-snapshot{object-position:top center}
+  .app-info{padding:8px;gap:7px;min-width:0}
+  .app-icon{width:34px;height:34px;min-width:34px;border-radius:9px}
+  .app-icon img{width:22px;height:22px}
+  .app-name{font-size:10.5px;line-height:1.15}
+  .app-open{font-size:7px;gap:3px;white-space:nowrap}
+  .fav-btn{right:7px;top:7px;width:31px;height:31px;min-width:31px;border-radius:10px}
+
+  /* List mode must also work on narrow phones instead of keeping desktop widths. */
+  html[data-view=list] .apps-grid{grid-template-columns:1fr;gap:9px}
+  html[data-view=list] .app-card{display:grid;grid-template-columns:minmax(110px,38%) minmax(0,1fr);grid-template-rows:1fr;min-height:112px;aspect-ratio:auto}
+  html[data-view=list] .app-preview{grid-column:1;grid-row:1}
+  html[data-view=list] .app-info{grid-column:2;grid-row:1;height:100%;padding:11px;gap:9px}
+  html[data-view=list] .app-icon{width:38px;height:38px;min-width:38px}
+  html[data-view=list] .app-name{font-size:12px}
+  html[data-view=list] .app-open{font-size:8px}
+
+  /* Featured cards stay fully accessible and become a compact horizontal rail. */
+  #featured-section{margin-bottom:16px}
+  .section-label{margin:7px 0 9px}
+  .section-label h2{font-size:15px}
+  .featured-grid{display:flex;overflow-x:auto;gap:8px;margin:0 -10px;padding:0 10px 4px;scroll-snap-type:x proximity;scrollbar-width:none}
+  .featured-grid::-webkit-scrollbar{display:none}
+  .featured-card{flex:0 0 min(76vw,260px);min-height:62px;padding:10px;scroll-snap-align:start}
+  .featured-logo{width:38px;height:38px;min-width:38px}
+  .featured-name{font-size:11px}
+  .featured-meta{font-size:8px}
+
+  .apps-footnote{font-size:10px;line-height:1.45;padding-bottom:8px}
+}
+
+@media (max-width:390px){
+  .apps-grid{gap:7px}
+  .app-card{border-radius:13px}
+  .app-info{padding:7px;gap:6px}
+  .app-icon{width:31px;height:31px;min-width:31px}
+  .app-icon img{width:20px;height:20px}
+  .app-name{font-size:9.5px}
+  .app-open{font-size:6.4px}
+  .fav-btn{width:29px;height:29px;min-width:29px}
+  html[data-view=list] .app-card{grid-template-columns:36% minmax(0,1fr);min-height:104px}
+  html[data-view=list] .app-info{padding:9px}
+}
+
+/* Landscape phones/tablets get more useful density without changing functionality. */
+@media (min-width:761px) and (max-width:1050px){
+  .apps-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* Respect reduced-motion preferences on touch devices. */
+@media (prefers-reduced-motion:reduce){
+  .apps-page *,#site-header *{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
