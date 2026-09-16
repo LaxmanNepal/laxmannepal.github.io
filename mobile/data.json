@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-16T11:43:06.430217+00:00",
-  "count": 135,
+  "updated_at": "2026-09-16T17:04:33.737985+00:00",
+  "count": 137,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -563,6 +563,23 @@
       "storages": [
         "256GB",
         "512GB"
+      ]
+    },
+    {
+      "id": "motorola-moto-g06-power",
+      "name": "Motorola Moto G06 Power",
+      "brand": "Motorola",
+      "variants": [
+        "4GB + 64GB"
+      ],
+      "price": 24999,
+      "max_price": 24999,
+      "original_price": null,
+      "rams": [
+        "4GB"
+      ],
+      "storages": [
+        "64GB"
       ]
     },
     {
@@ -2398,6 +2415,25 @@
       ]
     },
     {
+      "id": "iphone-17",
+      "name": "iPhone 17",
+      "brand": "Apple",
+      "variants": [
+        "8GB+256GB",
+        "8GB+512GB"
+      ],
+      "price": 173499,
+      "max_price": 215699,
+      "original_price": null,
+      "rams": [
+        "8GB"
+      ],
+      "storages": [
+        "256GB",
+        "512GB"
+      ]
+    },
+    {
       "id": "iphone-17-pro",
       "name": "iPhone 17 Pro",
       "brand": "Apple",
@@ -2446,15 +2482,17 @@
       "name": "iPhone 17e",
       "brand": "Apple",
       "variants": [
-        "8GB+512GB"
+        "8GB+512GB",
+        "8GB+256GB"
       ],
-      "price": 175099,
+      "price": 132499,
       "max_price": 175099,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
+        "256GB",
         "512GB"
       ]
     },
