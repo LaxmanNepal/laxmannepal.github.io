@@ -1,5 +1,5 @@
-const CACHE='laxman-apps-v10';
-const CORE=['/apps/','/apps/mobile-parity.css','/apps/interactive-clean.js','/apps/launcher-enhancements.js','/apps/launcher-next.js','/apps/launcher-cards.js','/apps/launcher-identity.js','/apps/launcher-metadata.js','/apps/launcher-details.js','/manifest.webmanifest','/assets/app-icon.svg','/assets/css/style.css','/assets/css/light.css','/assets/css/gadgetbyte-home.css'];
+const CACHE='laxman-apps-v11';
+const CORE=['/apps/','/apps/mobile-parity.css','/apps/interactive-clean.js','/apps/quick-look.js','/apps/launcher-enhancements.js','/apps/launcher-next.js','/apps/launcher-cards.js','/apps/launcher-identity.js','/apps/launcher-metadata.js','/apps/launcher-details.js','/manifest.webmanifest','/assets/app-icon.svg','/assets/css/style.css','/assets/css/light.css','/assets/css/gadgetbyte-home.css'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('laxman-apps-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 async function inject(response){
@@ -7,9 +7,9 @@ async function inject(response){
  try{
   const type=response.headers.get('content-type')||'';if(!type.includes('text/html'))return response;
   const text=await response.text();let injected=text;
-  const styles=['mobile-parity.css?v=10'];
+  const styles=['mobile-parity.css?v=11'];
   styles.forEach(href=>{const path='/apps/'+href.split('?')[0];if(!injected.includes(path))injected=injected.replace('</head>','<link rel="stylesheet" href="/apps/'+href+'"></head>')});
-  const scripts=['launcher-enhancements.js?v=10','launcher-next.js?v=10','launcher-cards.js?v=10','launcher-identity.js?v=10','launcher-metadata.js?v=10','launcher-details.js?v=10','interactive-clean.js?v=10'];
+  const scripts=['launcher-enhancements.js?v=11','launcher-next.js?v=11','launcher-cards.js?v=11','launcher-identity.js?v=11','launcher-metadata.js?v=11','launcher-details.js?v=11','interactive-clean.js?v=11','quick-look.js?v=11'];
   scripts.forEach(src=>{const path='/apps/'+src.split('?')[0];if(!injected.includes(path))injected=injected.replace('</body>','<script src="/apps/'+src+'" defer></script></body>')});
   const headers=new Headers(response.headers);headers.delete('content-length');
   return new Response(injected,{status:response.status,statusText:response.statusText,headers});
