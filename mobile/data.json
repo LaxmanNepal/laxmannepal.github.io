@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-15T21:25:26.759941+00:00",
-  "count": 137,
+  "updated_at": "2026-09-16T04:54:39.189176+00:00",
+  "count": 135,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -654,25 +654,6 @@
       ]
     },
     {
-      "id": "oppo-a6",
-      "name": "OPPO A6",
-      "brand": "OPPO",
-      "variants": [
-        "8GB+256GB",
-        "8GB+128GB"
-      ],
-      "price": 40999,
-      "max_price": 46999,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "128GB",
-        "256GB"
-      ]
-    },
-    {
       "id": "oppo-a6-pro-4g",
       "name": "OPPO A6 Pro 4G",
       "brand": "OPPO",
@@ -694,18 +675,16 @@
       "name": "OPPO A6c",
       "brand": "OPPO",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 24999,
-      "max_price": 30999,
+      "max_price": 24999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -730,20 +709,16 @@
       "name": "OPPO A6x",
       "brand": "OPPO",
       "variants": [
-        "6GB + 128GB",
-        "6GB + 256GB",
-        "4GB + 128GB"
+        "6GB + 128GB"
       ],
-      "price": 27999,
-      "max_price": 34999,
+      "price": 32499,
+      "max_price": 32499,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1091,23 +1066,6 @@
       ]
     },
     {
-      "id": "realme-c85-pro",
-      "name": "Realme C85 Pro",
-      "brand": "Realme",
-      "variants": [
-        "8GB + 128GB"
-      ],
-      "price": 36999,
-      "max_price": 36999,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "128GB"
-      ]
-    },
-    {
       "id": "realme-gt-8-pro",
       "name": "Realme GT 8 Pro",
       "brand": "Realme",
@@ -1129,20 +1087,16 @@
       "name": "Realme Note 60x",
       "brand": "Realme",
       "variants": [
-        "3GB+64GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "3GB+64GB"
       ],
       "price": 15999,
-      "max_price": 21999,
+      "max_price": 15999,
       "original_price": null,
       "rams": [
-        "3GB",
-        "4GB"
+        "3GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1150,19 +1104,15 @@
       "name": "Realme Note 70",
       "brand": "Realme",
       "variants": [
-        "6GB+128GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "6GB+128GB"
       ],
-      "price": 16999,
+      "price": 23999,
       "max_price": 23999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
-        "64GB",
         "128GB"
       ]
     },
@@ -1913,14 +1863,12 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB",
-        "4GB + 128GB"
+        "6GB + 128GB"
       ],
-      "price": 29999,
+      "price": 32999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
@@ -1949,18 +1897,16 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+64GB",
-        "4GB+128GB"
+        "4GB+64GB"
       ],
       "price": 21999,
-      "max_price": 25999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -2279,18 +2225,16 @@
       "name": "ZTE Nubia A57",
       "brand": "ZTE",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 22999,
-      "max_price": 24999,
+      "max_price": 22999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
