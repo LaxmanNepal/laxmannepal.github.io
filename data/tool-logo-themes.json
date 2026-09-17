@@ -1,0 +1,146 @@
+{
+  "version": "1.0.0",
+  "name": "Laxman Nepal Tool Logo Theme Plate",
+  "description": "Reusable visual identity rules for generating animated tool icons from a tool name and category.",
+  "design_language": {
+    "style": "Apple-inspired Liquid Glass + Bento",
+    "shape": "rounded-square app icon",
+    "depth": "soft layered depth with restrained glass highlights",
+    "motion": "smooth iPhone-like spring motion",
+    "background": "category-aware gradient or translucent glass field",
+    "icon_rule": "one clear primary symbol, minimal detail, recognizable at 24px",
+    "text_rule": "never place the full tool name inside the icon unless explicitly requested",
+    "accessibility": "high contrast symbol, distinguishable silhouette, reduced-motion fallback"
+  },
+  "categories": {
+    "image-tools": {
+      "label": "Image Tools",
+      "keywords": ["image", "photo", "picture", "crop", "resize", "compress", "convert", "background"],
+      "symbol_family": ["image", "mountain", "sparkle", "crop", "frame"],
+      "motion": "gentle image-frame reveal with subtle sparkle sweep"
+    },
+    "video-tools": {
+      "label": "Video Tools",
+      "keywords": ["video", "movie", "clip", "editor", "subtitle", "cut", "merge", "convert"],
+      "symbol_family": ["play", "film", "clapperboard", "scissors", "timeline"],
+      "motion": "soft play-button pulse followed by a short timeline sweep"
+    },
+    "ai-tools": {
+      "label": "AI Tools",
+      "keywords": ["ai", "artificial intelligence", "prompt", "model", "assistant", "generate", "chat"],
+      "symbol_family": ["sparkle", "neural nodes", "orbit", "brain", "magic wand"],
+      "motion": "small orbital sparkle motion with a soft intelligent glow"
+    },
+    "youtube-tools": {
+      "label": "YouTube Tools",
+      "keywords": ["youtube", "channel", "video", "thumbnail", "creator", "analytics", "seo"],
+      "symbol_family": ["play", "screen", "creator", "chart", "broadcast"],
+      "motion": "play symbol scales in gently with a compact broadcast ripple"
+    },
+    "download-tools": {
+      "label": "Download Tools",
+      "keywords": ["download", "save", "fetch", "file", "export", "media"],
+      "symbol_family": ["arrow-down", "tray", "cloud", "file"],
+      "motion": "arrow descends into a tray with a short spring-back"
+    },
+    "nepali-tools": {
+      "label": "Nepali Tools",
+      "keywords": ["nepal", "nepali", "patro", "date", "currency", "unicode", "font", "local"],
+      "symbol_family": ["Nepal-inspired geometry", "calendar", "Devanagari", "mountain", "sun"],
+      "motion": "subtle sunrise or calendar-page movement; avoid cliché flag-heavy treatment"
+    },
+    "text-tools": {
+      "label": "Text Tools",
+      "keywords": ["text", "word", "writing", "case", "format", "extract", "count"],
+      "symbol_family": ["T", "text lines", "cursor", "document"],
+      "motion": "text-line reveal or cursor blink with restrained spring"
+    },
+    "pdf-tools": {
+      "label": "PDF Tools",
+      "keywords": ["pdf", "document", "merge", "split", "compress", "convert", "sign"],
+      "symbol_family": ["document", "pdf page", "merge", "split", "download"],
+      "motion": "page folds or slides into a clean document stack"
+    },
+    "audio-tools": {
+      "label": "Audio Tools",
+      "keywords": ["audio", "sound", "voice", "mp3", "wav", "record", "music"],
+      "symbol_family": ["waveform", "microphone", "speaker", "music note"],
+      "motion": "waveform gently oscillates around a stable central symbol"
+    },
+    "creator-tools": {
+      "label": "Creator Tools",
+      "keywords": ["creator", "content", "thumbnail", "caption", "social", "publish"],
+      "symbol_family": ["sparkle", "camera", "palette", "wand", "frame"],
+      "motion": "creative sparkle orbit with a subtle camera/frame lift"
+    },
+    "productivity-tools": {
+      "label": "Productivity Tools",
+      "keywords": ["productivity", "task", "timer", "notes", "organize", "workflow"],
+      "symbol_family": ["check", "grid", "clock", "list", "focus"],
+      "motion": "checkmark or task tile snaps gently into place"
+    },
+    "finance-tools": {
+      "label": "Finance Tools",
+      "keywords": ["finance", "nepse", "stock", "money", "calculator", "market", "investment"],
+      "symbol_family": ["chart", "rupee", "wallet", "trend", "calculator"],
+      "motion": "small chart line rises with a controlled, non-gambling visual treatment"
+    },
+    "developer-tools": {
+      "label": "Developer Tools",
+      "keywords": ["developer", "code", "json", "api", "html", "css", "javascript", "debug"],
+      "symbol_family": ["code brackets", "terminal", "nodes", "cursor", "gear"],
+      "motion": "code brackets assemble or terminal cursor slides into position"
+    },
+    "web-tools": {
+      "label": "Web Tools",
+      "keywords": ["website", "url", "web", "browser", "link", "domain"],
+      "symbol_family": ["globe", "browser", "link", "cursor"],
+      "motion": "globe/link rotates a few degrees with a soft glass reflection"
+    },
+    "utility-tools": {
+      "label": "Utility Tools",
+      "keywords": ["utility", "calculator", "converter", "timer", "generator", "quick tool"],
+      "symbol_family": ["toolbox", "sliders", "gear", "sparkle", "grid"],
+      "motion": "compact tool glyph pops in with a subtle spring"
+    },
+    "calendar-tools": {
+      "label": "Calendar Tools",
+      "keywords": ["calendar", "date", "day", "month", "year", "schedule"],
+      "symbol_family": ["calendar", "clock", "date page"],
+      "motion": "calendar page flips one step and settles"
+    },
+    "security-tools": {
+      "label": "Security Tools",
+      "keywords": ["security", "password", "privacy", "encrypt", "hash", "protect"],
+      "symbol_family": ["shield", "lock", "key", "fingerprint"],
+      "motion": "lock closes or shield settles with a restrained protective pulse"
+    },
+    "education-tools": {
+      "label": "Education Tools",
+      "keywords": ["education", "study", "learning", "student", "quiz", "notes"],
+      "symbol_family": ["book", "graduation", "lightbulb", "pencil"],
+      "motion": "book opens slightly with a soft learning sparkle"
+    },
+    "social-tools": {
+      "label": "Social Tools",
+      "keywords": ["social", "instagram", "facebook", "post", "caption", "hashtag"],
+      "symbol_family": ["share", "chat", "heart", "network"],
+      "motion": "small connected nodes expand and settle"
+    },
+    "time-tools": {
+      "label": "Time Tools",
+      "keywords": ["time", "timer", "countdown", "clock", "stopwatch"],
+      "symbol_family": ["clock", "hourglass", "timer"],
+      "motion": "clock hand makes a short smooth movement"
+    }
+  },
+  "generation_rules": {
+    "input": ["tool_name", "category"],
+    "category_resolution": "Use the closest category theme. If no exact match exists, infer a new visual family from the tool purpose without copying another category literally.",
+    "icon_priority": ["tool purpose", "category meaning", "recognizable silhouette", "brand consistency", "animation clarity"],
+    "avoid": ["generic emoji", "overly detailed illustrations", "tiny unreadable text", "random gradients", "heavy 3D", "excessive glow", "different animation language per icon", "copyrighted brand logos unless explicitly requested"],
+    "export_targets": ["SVG", "PNG", "CSS-friendly inline SVG"],
+    "recommended_sizes": [24, 32, 48, 64, 96, 128, 256, 512],
+    "reduced_motion": "Return a static version with all decorative animation disabled when prefers-reduced-motion is enabled."
+  }
+}
