@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-16T21:22:02.310060+00:00",
-  "count": 135,
+  "updated_at": "2026-09-17T04:57:43.387447+00:00",
+  "count": 130,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -435,25 +435,6 @@
       ]
     },
     {
-      "id": "infinix-hot-70",
-      "name": "Infinix Hot 70",
-      "brand": "Infinix",
-      "variants": [
-        "6GB + 128GB",
-        "8GB + 128GB"
-      ],
-      "price": 31999,
-      "max_price": 34999,
-      "original_price": null,
-      "rams": [
-        "6GB",
-        "8GB"
-      ],
-      "storages": [
-        "128GB"
-      ]
-    },
-    {
       "id": "infinix-note-60",
       "name": "Infinix Note 60",
       "brand": "Infinix",
@@ -515,18 +496,16 @@
       "name": "Infinix Smart 20",
       "brand": "Infinix",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 19999,
-      "max_price": 21999,
+      "max_price": 19999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -563,23 +542,6 @@
       "storages": [
         "256GB",
         "512GB"
-      ]
-    },
-    {
-      "id": "motorola-moto-g06-power",
-      "name": "Motorola Moto G06 Power",
-      "brand": "Motorola",
-      "variants": [
-        "4GB + 64GB"
-      ],
-      "price": 24999,
-      "max_price": 24999,
-      "original_price": null,
-      "rams": [
-        "4GB"
-      ],
-      "storages": [
-        "64GB"
       ]
     },
     {
@@ -1172,19 +1134,16 @@
       "name": "Redmi 15 4G",
       "brand": "Xiaomi",
       "variants": [
-        "6GB+128GB",
-        "8GB+256GB"
+        "6GB+128GB"
       ],
       "price": 27999,
-      "max_price": 29999,
+      "max_price": 27999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1192,21 +1151,16 @@
       "name": "Redmi 15C",
       "brand": "Xiaomi",
       "variants": [
-        "4GB+128GB",
-        "6GB+128GB",
-        "8GB+256GB"
+        "4GB+128GB"
       ],
       "price": 21999,
-      "max_price": 27999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB",
-        "8GB"
+        "4GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1214,15 +1168,13 @@
       "name": "Redmi 17 4G",
       "brand": "Xiaomi",
       "variants": [
-        "4GB + 128GB",
-        "6GB + 128GB"
+        "4GB + 128GB"
       ],
       "price": 27999,
-      "max_price": 33999,
+      "max_price": 27999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
         "128GB"
@@ -1233,20 +1185,16 @@
       "name": "Redmi 17 5G",
       "brand": "Xiaomi",
       "variants": [
-        "4GB + 128GB",
-        "4GB + 256GB",
-        "6GB + 256GB"
+        "4GB + 128GB"
       ],
       "price": 33999,
-      "max_price": 41999,
+      "max_price": 33999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1271,18 +1219,16 @@
       "name": "Redmi A7 Pro 4G",
       "brand": "Xiaomi",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 21499,
-      "max_price": 23999,
+      "max_price": 21499,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1290,19 +1236,16 @@
       "name": "Redmi Note 15 4G",
       "brand": "Xiaomi",
       "variants": [
-        "6GB+128GB",
-        "8GB+256GB"
+        "6GB+128GB"
       ],
       "price": 33999,
-      "max_price": 39999,
+      "max_price": 33999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1310,39 +1253,16 @@
       "name": "Redmi Note 15 5G",
       "brand": "Xiaomi",
       "variants": [
-        "8GB+256GB",
-        "12GB+512GB"
+        "8GB+256GB"
       ],
       "price": 43999,
-      "max_price": 49999,
+      "max_price": 43999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
-        "256GB",
-        "512GB"
-      ]
-    },
-    {
-      "id": "redmi-note-15-pro-5g",
-      "name": "Redmi Note 15 Pro 5G",
-      "brand": "Xiaomi",
-      "variants": [
-        "8GB+256GB",
-        "12GB+512GB"
-      ],
-      "price": 53999,
-      "max_price": 59999,
-      "original_price": null,
-      "rams": [
-        "8GB",
-        "12GB"
-      ],
-      "storages": [
-        "256GB",
-        "512GB"
+        "256GB"
       ]
     },
     {
@@ -1370,19 +1290,16 @@
       "name": "Redmi Note 17 4G",
       "brand": "Xiaomi",
       "variants": [
-        "6GB + 128GB",
-        "8GB + 256GB"
+        "6GB + 128GB"
       ],
       "price": 42999,
-      "max_price": 47999,
+      "max_price": 42999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1390,19 +1307,16 @@
       "name": "Redmi Note 17 5G",
       "brand": "Xiaomi",
       "variants": [
-        "6GB + 128GB",
-        "8GB - 256GB"
+        "6GB + 128GB"
       ],
       "price": 47999,
-      "max_price": 52999,
+      "max_price": 47999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1448,20 +1362,16 @@
       "name": "Samsung Galaxy A07",
       "brand": "Samsung",
       "variants": [
-        "4GB+64GB",
-        "4GB+128GB",
-        "6GB+128GB"
+        "4GB+64GB"
       ],
       "price": 25499,
-      "max_price": 33499,
+      "max_price": 25499,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1486,20 +1396,16 @@
       "name": "Samsung Galaxy A17 5G",
       "brand": "Samsung",
       "variants": [
-        "6GB+128GB",
-        "8GB+128GB",
-        "8GB+256GB"
+        "6GB+128GB"
       ],
       "price": 44999,
-      "max_price": 56999,
+      "max_price": 44999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1507,19 +1413,16 @@
       "name": "Samsung Galaxy A27 5G",
       "brand": "Samsung",
       "variants": [
-        "6GB + 128GB",
-        "8GB + 256GB"
+        "6GB + 128GB"
       ],
       "price": 51999,
-      "max_price": 65999,
-      "original_price": 69999,
+      "max_price": 51999,
+      "original_price": 55999,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1527,19 +1430,15 @@
       "name": "Samsung Galaxy A37 5G",
       "brand": "Samsung",
       "variants": [
-        "8GB+256GB",
-        "12GB+256GB",
-        "8GB+128GB"
+        "8GB+256GB"
       ],
-      "price": 64999,
-      "max_price": 79999,
+      "price": 72999,
+      "max_price": 72999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
-        "128GB",
         "256GB"
       ]
     },
@@ -1548,15 +1447,13 @@
       "name": "Samsung Galaxy A57 5G",
       "brand": "Samsung",
       "variants": [
-        "8GB+256GB",
-        "12GB+256GB"
+        "8GB+256GB"
       ],
       "price": 84999,
-      "max_price": 89999,
+      "max_price": 84999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
         "256GB"
@@ -1662,23 +1559,6 @@
       "price": 123999,
       "max_price": 159999,
       "original_price": 182999,
-      "rams": [
-        "12GB"
-      ],
-      "storages": [
-        "256GB"
-      ]
-    },
-    {
-      "id": "samsung-galaxy-z-flip-8",
-      "name": "Samsung Galaxy Z Flip 8",
-      "brand": "Samsung",
-      "variants": [
-        "12GB+256GB"
-      ],
-      "price": 194999,
-      "max_price": 194999,
-      "original_price": null,
       "rams": [
         "12GB"
       ],
@@ -2359,25 +2239,6 @@
       ]
     },
     {
-      "id": "iphone-17",
-      "name": "iPhone 17",
-      "brand": "Apple",
-      "variants": [
-        "8GB+256GB",
-        "8GB+512GB"
-      ],
-      "price": 173499,
-      "max_price": 215699,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "256GB",
-        "512GB"
-      ]
-    },
-    {
       "id": "iphone-17-pro",
       "name": "iPhone 17 Pro",
       "brand": "Apple",
@@ -2426,17 +2287,15 @@
       "name": "iPhone 17e",
       "brand": "Apple",
       "variants": [
-        "8GB+512GB",
-        "8GB+256GB"
+        "8GB+512GB"
       ],
-      "price": 132499,
+      "price": 175099,
       "max_price": 175099,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "256GB",
         "512GB"
       ]
     },
