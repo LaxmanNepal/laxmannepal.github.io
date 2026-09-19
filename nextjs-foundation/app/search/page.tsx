@@ -1,1 +1,6 @@
-export default function Page(){return <main className="container page"><p className="eyebrow">SEARCH</p><h1>Search Laxman Nepal</h1><p className="muted">Global search will connect to the API.</p></main>}
+import { loadBloggerPosts } from "@/lib/content";
+import SearchClient from "./search-client";
+
+export default function Page() {
+  return <SearchClient posts={loadBloggerPosts()} />;
+}
