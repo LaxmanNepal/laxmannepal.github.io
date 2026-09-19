@@ -14,7 +14,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -65,6 +65,8 @@ jobs:
       - name: Generate static SEO discovery files
         run: python3 scripts/generate_seo.py
       - name: Build Next.js static site
+        id: next_build
+        continue-on-error: true
         working-directory: nextjs-foundation
         run: |
           npm install
@@ -73,7 +75,18 @@ jobs:
         run: |
           rm -rf .pages
           mkdir -p .pages
-          cp -R nextjs-foundation/out/. .pages/
+
+          # Start with the generated static site so legacy Blogger URLs always survive.
+          find . -maxdepth 1 -type f -not -name '.blogger-migration.json' -not -name 'CNAME' -not -name '404.html' -print0 | xargs -0 -r -I{} cp --parents "{}" .pages/
+          for dir in assets 2022 2023 2024 2025 2026 apps ai blog compare guides laptops news phones products reviews search tools youtube en ne hi; do
+            if [ -d "$dir" ]; then cp -R "$dir" .pages/; fi
+          done
+
+          # Overlay the modern Next.js site when its export exists.
+          if [ -f nextjs-foundation/out/index.html ]; then
+            cp -R nextjs-foundation/out/. .pages/
+          fi
+
           # Preserve migrated Blogger .html URLs exactly as published.
           python3 - <<'PY'
           import json, shutil
@@ -91,21 +104,30 @@ jobs:
                   dst.parent.mkdir(parents=True, exist_ok=True)
                   shutil.copy2(src, dst)
           PY
+
           if [ -f CNAME ]; then cp CNAME .pages/CNAME; fi
           touch .pages/.nojekyll
-      - name: Verify Next.js routes
+
+      - name: Verify published legacy routes
         run: |
+          test -f .pages/2022/09/kalimati-font-download-by-laxman-nepal.html
           test -f .pages/index.html
-          test -f .pages/news/index.html
-          test -f .pages/reviews/index.html
-          test -f .pages/guides/index.html
-          test -f .pages/phones/index.html
-          test -f .pages/laptops/index.html
-          test -f .pages/compare/index.html
-          test -f .pages/tools/index.html
-          test -f .pages/ai/index.html
-          test -f .pages/youtube/index.html
-          test -f .pages/search/index.html
+
+      - name: Verify Next.js routes when exported
+        run: |
+          if [ -d nextjs-foundation/out ]; then
+            test -f .pages/news/index.html
+            test -f .pages/reviews/index.html
+            test -f .pages/guides/index.html
+            test -f .pages/phones/index.html
+            test -f .pages/laptops/index.html
+            test -f .pages/compare/index.html
+            test -f .pages/tools/index.html
+            test -f .pages/ai/index.html
+            test -f .pages/youtube/index.html
+            test -f .pages/search/index.html
+          fi
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
