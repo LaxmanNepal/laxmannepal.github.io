@@ -60,6 +60,8 @@ jobs:
           grep -q 'TECH DATABASE' index.html
           grep -q 'FREE TOOLS + AI' index.html
           grep -q 'YOUTUBE INTELLIGENCE' index.html
+      - name: Apply modern Blogger article template
+        run: python3 scripts/modernize_blogger_articles.py
       - name: Generate static SEO discovery files
         run: python3 scripts/generate_seo.py
       - name: Build Next.js static site
