@@ -1,0 +1,1 @@
+export default function Page(){return <main className="container page"><p className="eyebrow">REVIEWS</p><h1>Technology reviews</h1><p className="muted">Product reviews will be powered by structured content.</p></main>}
