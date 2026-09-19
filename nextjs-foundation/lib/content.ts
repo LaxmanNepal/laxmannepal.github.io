@@ -47,6 +47,13 @@ export function getContentByPath(contentPath:string) {
   return getAllContent().find(item=>item.path===contentPath);
 }
 
+export function getRelatedContent(currentPath: string, limit = 4) {
+  const current = getContentByPath(currentPath);
+  return getAllContent()
+    .filter(item => item.path !== currentPath && (!current || item.type === current.type))
+    .slice(0, limit);
+}
+
 export function localePath(locale: Locale, pathname="/") {
   const clean=pathname.startsWith("/")?pathname:`/${pathname}`;
   return locale===defaultLocale?clean:`/${locale}${clean==="/"?"":clean}`;
