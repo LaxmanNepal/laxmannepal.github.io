@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import LanguageSwitcher from "@/components/language-switcher";
+import SiteNav from "@/components/site-nav";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://laxmannepal.com.np"),
@@ -9,16 +9,10 @@ export const metadata: Metadata = {
   openGraph: { title: "Laxman Nepal — Technology, Tools & AI", description: "Technology, product research, free tools, AI and creator intelligence.", url: "https://laxmannepal.com.np", siteName: "Laxman Nepal", type: "website" },
 };
 
-const nav = [["News","/news/"],["Reviews","/reviews/"],["Guides","/guides/"],["Products","/products/"],["Compare","/compare/"],["Tools","/tools/"],["YouTube","/youtube/"]];
-
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body>
-    <header className="site-header"><div className="container nav">
-      <a className="brand" href="/">LAXMAN<span>NEPAL</span></a>
-      <nav aria-label="Primary">{nav.map(([label,href])=><a key={href} href={href}>{label}</a>)}</nav>
-      <div className="nav-actions"><a className="search-pill" href="/search/">⌕ <span>Search</span></a><LanguageSwitcher /></div>
-    </div></header>
+    <SiteNav />
     {children}
     <footer><div className="container footer-grid">
       <div><a className="brand" href="/">LAXMAN<span>NEPAL</span></a><p>Technology · Tools · AI · Creator Intelligence</p></div>
