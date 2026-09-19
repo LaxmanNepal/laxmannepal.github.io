@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { locales } from "@/lib/content";
+import LanguageSwitcher from "@/components/language-switcher";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://laxmannepal.com.np"),
@@ -11,14 +11,6 @@ export const metadata: Metadata = {
 
 const nav = [["News","/news/"],["Reviews","/reviews/"],["Guides","/guides/"],["Products","/products/"],["Compare","/compare/"],["Tools","/tools/"],["YouTube","/youtube/"]];
 
-function LanguageSwitcher() {
-  return <details className="language-switcher">
-    <summary aria-label="Choose language">🌐 EN</summary>
-    <div className="language-menu">
-      {Object.entries(locales).map(([code, locale]) => <a href={locale.href} key={code}><strong>{locale.nativeLabel}</strong><small>{locale.label}</small></a>)}
-    </div>
-  </details>;
-}
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body>
