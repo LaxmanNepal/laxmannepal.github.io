@@ -1,0 +1,1 @@
+export default function Page(){return <main className="container page"><p className="eyebrow">TOOLS</p><h1>Free tools</h1><p className="muted">Useful browser tools, creator utilities and AI workflows.</p></main>}
