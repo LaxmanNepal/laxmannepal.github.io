@@ -48,16 +48,18 @@ jobs:
       - name: Inject homepage tools
         if: always()
         run: python3 scripts/inject_home_tools.py
-      - name: Verify homepage tools and shared shell
+      - name: Build unified main homepage
+        if: always()
+        run: python3 scripts/build_main_platform_home.py
+      - name: Verify unified homepage
         if: always()
         run: |
           test -f index.html
-          test -f assets/css/home-tools.css
-          test -f assets/js/home-tools.js
-          grep -q 'Free Tools by Laxman Nepal' index.html
-          grep -q 'class="shared-header"' index.html
-          grep -q 'class="shared-footer"' index.html
-          grep -q 'Laxman Nepal' index.html
+          test -f assets/css/main-platform.css
+          grep -q 'Technology that helps you' index.html
+          grep -q 'TECH DATABASE' index.html
+          grep -q 'FREE TOOLS + AI' index.html
+          grep -q 'YOUTUBE INTELLIGENCE' index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
