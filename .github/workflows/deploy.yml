@@ -60,10 +60,35 @@ jobs:
           grep -q 'TECH DATABASE' index.html
           grep -q 'FREE TOOLS + AI' index.html
           grep -q 'YOUTUBE INTELLIGENCE' index.html
+      - name: Build Next.js static site
+        working-directory: nextjs-foundation
+        run: |
+          npm install
+          npm run build
+      - name: Assemble Pages artifact
+        run: |
+          rm -rf .pages
+          mkdir -p .pages
+          cp -R nextjs-foundation/out/. .pages/
+          if [ -f CNAME ]; then cp CNAME .pages/CNAME; fi
+          touch .pages/.nojekyll
+      - name: Verify Next.js routes
+        run: |
+          test -f .pages/index.html
+          test -f .pages/news/index.html
+          test -f .pages/reviews/index.html
+          test -f .pages/guides/index.html
+          test -f .pages/phones/index.html
+          test -f .pages/laptops/index.html
+          test -f .pages/compare/index.html
+          test -f .pages/tools/index.html
+          test -f .pages/ai/index.html
+          test -f .pages/youtube/index.html
+          test -f .pages/search/index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: .pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
