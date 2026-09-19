@@ -1,0 +1,1 @@
+export { default, metadata } from "../mobile-prices-in-nepal/page";
