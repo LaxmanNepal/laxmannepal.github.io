@@ -1,20 +1,4 @@
-import fs from "node:fs";
-import path from "node:path";
-
-type BloggerPost={title?:string;published?:string;updated?:string;path:string;original_url?:string};
-
-function loadBloggerPosts(): BloggerPost[] {
-  const manifestPath=path.join(process.cwd(),"..",".blogger-migration.json");
-  try {
-    const manifest=JSON.parse(fs.readFileSync(manifestPath,"utf8"));
-    return Array.isArray(manifest.posts)
-      ? manifest.posts.filter((post: BloggerPost)=>post?.path).sort((a: BloggerPost,b: BloggerPost)=>
-          new Date(b.published||b.updated||0).getTime()-new Date(a.published||a.updated||0).getTime())
-      : [];
-  } catch {
-    return [];
-  }
-}
+import { loadBloggerPosts } from "@/lib/content";
 
 function postDescription(title:string){
   const t=title.toLowerCase();
