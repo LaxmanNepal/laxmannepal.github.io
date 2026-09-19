@@ -112,6 +112,23 @@ jobs:
         run: |
           test -f .pages/2022/09/kalimati-font-download-by-laxman-nepal.html
           test -f .pages/index.html
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path(".pages")
+          manifest = json.loads(Path(".blogger-migration.json").read_text(encoding="utf-8"))
+          posts = manifest.get("posts", [])
+          missing = []
+          for post in posts:
+              rel = str(post.get("path", "")).lstrip("/")
+              if rel and not (root / rel).is_file():
+                  missing.append(rel)
+          if missing:
+              print("Missing migrated Blogger routes:")
+              print("\n".join(missing))
+              raise SystemExit(1)
+          print(f"Verified {len(posts)} migrated Blogger routes in Pages artifact.")
+          PY
 
       - name: Verify Next.js routes when exported
         run: |
