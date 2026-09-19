@@ -1,0 +1,1 @@
+export default function Page(){return <main className="container page"><p className="eyebrow">LAPTOPS</p><h1>Laptop database</h1><p className="muted">Specifications, variants, prices and comparisons.</p></main>}

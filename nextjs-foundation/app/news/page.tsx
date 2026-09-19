@@ -1,0 +1,1 @@
+export default function Page(){return <main className="container page"><p className="eyebrow">NEWS</p><h1>Latest technology news</h1><p className="muted">This section is ready for the editorial API and database.</p></main>}

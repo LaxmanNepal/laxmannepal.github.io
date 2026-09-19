@@ -1,0 +1,1 @@
+export default function Page(){return <main className="container page"><p className="eyebrow">GUIDES</p><h1>Practical technology guides</h1><p className="muted">Tutorials, explainers and how-to content.</p></main>}

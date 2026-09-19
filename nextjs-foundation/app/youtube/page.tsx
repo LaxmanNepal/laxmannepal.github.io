@@ -1,0 +1,1 @@
+export default function Page(){return <main className="container page"><p className="eyebrow">YOUTUBE</p><h1>Channel intelligence</h1><p className="muted">Your channels, competitors, viral videos and topic research.</p></main>}

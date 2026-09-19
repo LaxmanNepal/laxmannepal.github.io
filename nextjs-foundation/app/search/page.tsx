@@ -1,0 +1,1 @@
+export default function Page(){return <main className="container page"><p className="eyebrow">SEARCH</p><h1>Search Laxman Nepal</h1><p className="muted">Global search will connect to the API.</p></main>}
