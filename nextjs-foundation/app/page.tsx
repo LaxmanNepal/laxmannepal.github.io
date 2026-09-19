@@ -106,12 +106,12 @@ export default function HomePage() {
 
       <section className="container home-section">
         <div className="section-head">
-          <div><p className="eyebrow">FROM THE ARCHIVE</p><h2>Latest articles.</h2><p className="section-note">{posts.length ? String(posts.length) + " posts from the Blogger archive" : "Your Blogger archive will appear here."}</p></div>
+          <div><p className="eyebrow">FROM THE ARCHIVE</p><h2>All articles.</h2><p className="section-note">{posts.length ? String(posts.length) + " posts from the Blogger archive — newest first" : "Your Blogger archive will appear here."}</p></div>
           <a href="/search/">View all →</a>
         </div>
         {posts.length ? (
           <div className="post-grid home-post-grid">
-            {posts.slice(0, 6).map((post, i) => {
+            {posts.map((post, i) => {
               const title = (post.title || "Untitled post").trim();
               const date = post.published || post.updated;
               const dateLabel = date ? new Intl.DateTimeFormat("en", { year: "numeric", month: "short" }).format(new Date(date)) : "Archive";
