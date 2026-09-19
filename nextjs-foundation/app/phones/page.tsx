@@ -1,0 +1,1 @@
+export default function Page(){return <main className="container page"><p className="eyebrow">PHONES</p><h1>Phone database</h1><p className="muted">Specifications, variants, prices and history.</p></main>}
