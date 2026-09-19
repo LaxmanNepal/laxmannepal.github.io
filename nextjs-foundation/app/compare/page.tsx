@@ -1,0 +1,1 @@
+export default function Page(){return <main className="container page"><p className="eyebrow">COMPARE</p><h1>Compare technology products</h1><p className="muted">Comparison UI will connect to the product API.</p></main>}
