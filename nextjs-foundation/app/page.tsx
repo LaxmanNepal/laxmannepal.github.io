@@ -1,12 +1,6 @@
 import { loadBloggerPosts } from "@/lib/content";
+import BlogArchive from "@/app/blog-archive";
 
-function postDescription(title: string) {
-  const t = title.toLowerCase();
-  if (t.includes("youtube")) return "Creator tools, analytics, SEO, research and practical workflows.";
-  if (t.includes("ai")) return "Practical AI resources, tools, workflows and productivity ideas.";
-  if (t.includes("converter") || t.includes("generator") || t.includes("downloader") || t.includes("scanner")) return "A useful free tool or practical guide for everyday digital work.";
-  return "A practical technology guide, resource or tool from the Laxman Nepal archive.";
-}
 
 const quick = [
   ["01", "Free Tools", "Converters, generators & utilities", "/tools/"],
@@ -109,19 +103,7 @@ export default function HomePage() {
           <div><p className="eyebrow">FROM THE ARCHIVE</p><h2>All articles.</h2><p className="section-note">{posts.length ? String(posts.length) + " posts from the Blogger archive — newest first" : "Your Blogger archive will appear here."}</p></div>
           <a href="/search/">View all →</a>
         </div>
-        {posts.length ? (
-          <div className="post-grid home-post-grid">
-            {posts.map((post, i) => {
-              const title = (post.title || "Untitled post").trim();
-              const date = post.published || post.updated;
-              const dateLabel = date ? new Intl.DateTimeFormat("en", { year: "numeric", month: "short" }).format(new Date(date)) : "Archive";
-              return <a className="post-card" href={post.path} key={post.path}>
-                <div className="post-top"><span className="post-number">{String(i + 1).padStart(2, "0")}</span><span className="tag">{dateLabel}</span></div>
-                <h3>{title}</h3><p>{postDescription(title)}</p><span className="read">Read article →</span>
-              </a>;
-            })}
-          </div>
-        ) : <div className="empty-card">No migrated Blogger posts were found during this build.</div>}
+        {posts.length ? <BlogArchive posts={posts} /> : <div className="empty-card">No migrated Blogger posts were found during this build.</div>}
       </section>
 
       <section className="container home-section">
