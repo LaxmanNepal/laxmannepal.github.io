@@ -8,7 +8,7 @@ from __future__ import annotations
 import argparse, html, json, re, shutil, sys
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
@@ -49,12 +49,22 @@ def inject_seo(content, title, description, canonical):
     return tags + content
 
 def fetch_all(feed):
+    """Fetch every post from a Blogger Atom feed, handling pagination safely."""
     entries, seen, start = [], set(), 1
+    parsed = urlparse(feed)
+    base_query = parse_qs(parsed.query, keep_blank_values=True)
+    # Blogger accepts large pages, but some feeds cap results; 150 keeps pagination safe.
+    page_size = 150
+    total = None
     while True:
-        sep = "&" if "?" in feed else "?"
-        url = f"{feed}{sep}start-index={start}&max-results=150"
+        query = {k: v[-1] if v else "" for k, v in base_query.items()}
+        query["start-index"] = str(start)
+        query["max-results"] = str(page_size)
+        url = urlunparse(parsed._replace(query=urlencode(query)))
         root = ET.fromstring(fetch(url))
-        total = int(node_text(root, "os:totalResults", "0") or 0)
+        feed_total = int(node_text(root, "os:totalResults", "0") or 0)
+        if feed_total:
+            total = feed_total
         batch = root.findall("a:entry", NS)
         if not batch:
             break
@@ -62,11 +72,14 @@ def fetch_all(feed):
         for entry in batch:
             eid = node_text(entry, "a:id")
             if eid and eid not in seen:
-                seen.add(eid); entries.append(entry); new += 1
+                seen.add(eid)
+                entries.append(entry)
+                new += 1
         start += len(batch)
-        if total and len(entries) >= total: break
-        if new == 0: break
-        if len(batch) < 150 and (not total or len(entries) >= total): break
+        if total and len(entries) >= total:
+            break
+        if new == 0 or len(batch) < page_size:
+            break
     return entries
 
 def main():
