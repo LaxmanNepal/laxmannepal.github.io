@@ -15,6 +15,15 @@ const quick = [
   ["04", "YouTube", "Channels, trends & creator data", "/youtube/"],
 ];
 
+
+const projects = [
+  ["Kritim", "AI & web tools", "A growing collection of practical AI experiments and utilities.", "Kritim", "https://github.com/LaxmanNepal/Kritim"],
+  ["Mausam", "Nepal weather", "A Nepal-focused weather experience designed for fast daily checks.", "mausam", "https://github.com/LaxmanNepal/mausam"],
+  ["Nepali Patro", "Nepali calendar", "A modern Nepali calendar experience with a legacy-friendly route.", "Nepali-Patro", "https://github.com/LaxmanNepal/Nepali-Patro"],
+  ["YouTube Channels", "Creator tools", "Channel identity, data and creator-focused experiments.", "youtube-channels", "https://github.com/LaxmanNepal/youtube-channels"],
+  ["MyTTS", "AI voice", "Nepali + English voice experimentation and creator workflow tooling.", "mytts", "https://github.com/LaxmanNepal/mytts"],
+];
+
 const topics = [
   ["NEWS", "What's happening", "Useful technology updates without the noise.", "/news/"],
   ["REVIEWS", "Before you buy", "Real-world context for phones, laptops and gadgets.", "/reviews/"],
@@ -75,6 +84,21 @@ export default function HomePage() {
               <span className="topic-icon">{tag === "NEWS" ? "◉" : tag === "REVIEWS" ? "◈" : "✦"}</span>
               <div><span className="tag">{tag}</span><h3>{title}</h3><p>{text}</p></div>
               <b>Explore →</b>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="container home-section project-section">
+        <div className="section-head">
+          <div><p className="eyebrow">PROJECT LAB</p><h2>Built, tested, shipped.</h2><p className="section-note">Live experiments and open-source projects from the Laxman Nepal workspace.</p></div>
+          <a href="https://github.com/LaxmanNepal?tab=repositories">View GitHub →</a>
+        </div>
+        <div className="project-grid">
+          {projects.map(([title, category, description, repo, href], i) => (
+            <a className="project-card glass" href={href} key={repo} target="_blank" rel="noreferrer">
+              <div className="project-snapshot"><img src={`https://opengraph.githubassets.com/1/LaxmanNepal/${repo}`} alt={`${title} GitHub project snapshot`} loading="lazy" /></div>
+              <div className="project-body"><div><span className="tag">{category}</span><h3>{title}</h3><p>{description}</p></div><span className="project-link">Open repo ↗</span></div>
             </a>
           ))}
         </div>
