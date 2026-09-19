@@ -1,0 +1,6 @@
+{
+  "/example/path.html": {
+    "type": "guide",
+    "tags": ["guide", "technology"]
+  }
+}
