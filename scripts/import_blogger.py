@@ -121,7 +121,7 @@ def main():
         target = args.base_url.rstrip("/") + "/" + key.replace("\\", "/")
         if args.inject_seo: content = inject_seo(content, title, description, target)
         dest = out / rel; dest.parent.mkdir(parents=True, exist_ok=True); dest.write_text(content, encoding="utf-8")
-        manifest.append({"title":title,"published":published,"updated":updated,"original_url":original,"imported_url":target,"path":"/"+key.replace("\\","/")})
+        manifest.append({"title":title,"published":published,"updated":updated,"original_url":original,"imported_url":target,"path":"/"+key.replace("\\","/"),"type":"blog","tags":["blog","technology"]})
     manifest.sort(key=lambda x:x["published"], reverse=True)
     (manifest_path).write_text(json.dumps({"source":args.feed,"total_feed_entries":len(entries),"imported_posts":len(manifest),"generated_at":datetime.now(timezone.utc).isoformat(),"posts":manifest}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Imported {len(manifest)} Blogger posts into repository URL paths under {out}")
