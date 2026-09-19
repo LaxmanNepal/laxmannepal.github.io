@@ -72,6 +72,23 @@ jobs:
           rm -rf .pages
           mkdir -p .pages
           cp -R nextjs-foundation/out/. .pages/
+          # Preserve migrated Blogger .html URLs exactly as published.
+          python3 - <<'PY'
+          import json, shutil
+          from pathlib import Path
+          root = Path(".")
+          pages = root / ".pages"
+          manifest = json.loads((root / ".blogger-migration.json").read_text(encoding="utf-8"))
+          for post in manifest.get("posts", []):
+              rel = post.get("path", "").lstrip("/")
+              if not rel:
+                  continue
+              src = root / rel
+              dst = pages / rel
+              if src.is_file():
+                  dst.parent.mkdir(parents=True, exist_ok=True)
+                  shutil.copy2(src, dst)
+          PY
           if [ -f CNAME ]; then cp CNAME .pages/CNAME; fi
           touch .pages/.nojekyll
       - name: Verify Next.js routes
