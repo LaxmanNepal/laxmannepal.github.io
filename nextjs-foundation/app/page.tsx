@@ -1,47 +1,66 @@
-const sections = [
-  { title: "Latest Technology", items: ["News", "Reviews", "Guides"] },
-  { title: "Tech Database", items: ["Phones", "Laptops", "Prices", "Compare"] },
-  { title: "AI & Creator Tools", items: ["AI Tools", "YouTube", "SEO", "Creator Tools"] },
+const news = [
+  { tag: "AI", title: "AI tools that actually save time", text: "Practical tools and workflows tested for everyday creators." },
+  { tag: "PHONES", title: "What to check before buying a phone", text: "Specs, software, battery and real-world value in one guide." },
+  { tag: "TOOLS", title: "Free tools built for creators", text: "Useful browser tools without unnecessary complexity." },
 ];
 
-export default function HomePage() {
+const products = [
+  { type: "PHONE", name: "Phone Database", text: "Compare specs, variants and prices." },
+  { type: "LAPTOP", name: "Laptop Database", text: "Find the right laptop for your budget." },
+  { type: "COMPARE", name: "Product Compare", text: "Put products side by side." },
+];
+
+const tools = [
+  ["AI Tools", "Discover practical AI tools and workflows."],
+  ["Creator Tools", "Utilities for YouTube, thumbnails and content."],
+  ["Web Tools", "Fast, free tools that work in your browser."],
+];
+
+export default function Home() {
   return (
     <main>
-      <header style={{ borderBottom: "1px solid var(--border)" }}>
-        <div className="container" style={{ minHeight: 72, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
-          <strong style={{ fontSize: 22 }}>LAXMAN NEPAL</strong>
-          <nav aria-label="Primary navigation" style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
-            <a href="/news">News</a>
-            <a href="/reviews">Reviews</a>
-            <a href="/guides">Guides</a>
-            <a href="/phones">Phones</a>
-            <a href="/laptops">Laptops</a>
-            <a href="/tools">Tools</a>
-            <a href="/youtube">YouTube</a>
+      <header className="site-header">
+        <div className="container nav">
+          <a className="brand" href="/">Laxman Nepal</a>
+          <nav>
+            <a href="/news/">News</a><a href="/reviews/">Reviews</a><a href="/phones/">Phones</a>
+            <a href="/laptops/">Laptops</a><a href="/compare/">Compare</a><a href="/tools/">Tools</a>
+            <a href="/ai/">AI</a><a href="/youtube/">YouTube</a>
           </nav>
         </div>
       </header>
 
-      <section className="container" style={{ paddingBlock: 72 }}>
-        <p style={{ color: "var(--muted)", marginBottom: 12 }}>THE NEXT LAXMANNEPAL PLATFORM</p>
-        <h1 style={{ fontSize: "clamp(42px, 7vw, 84px)", lineHeight: 0.98, maxWidth: 900, margin: 0 }}>
-          Technology, tools and creator intelligence — in one platform.
-        </h1>
-        <p style={{ color: "var(--muted)", fontSize: 18, lineHeight: 1.7, maxWidth: 720, marginTop: 24 }}>
-          This is the isolated Next.js foundation. Existing production content remains untouched while the new architecture is built and tested.
-        </p>
+      <section className="hero container">
+        <div>
+          <p className="eyebrow">TECHNOLOGY • TOOLS • AI</p>
+          <h1>Technology that helps you <span>do more.</span></h1>
+          <p className="hero-copy">Practical technology news, product data, comparisons, free tools and creator intelligence — built by Laxman Nepal.</p>
+          <div className="actions"><a className="button primary" href="/news/">Explore technology</a><a className="button" href="/tools/">Browse free tools</a></div>
+        </div>
+        <div className="hero-card"><p>YOUR TECH HUB</p><strong>News + Data + Tools</strong><small>One platform for technology and creators.</small></div>
       </section>
 
-      <section className="container" style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", paddingBottom: 72 }}>
-        {sections.map((section) => (
-          <article key={section.title} style={{ border: "1px solid var(--border)", borderRadius: 16, padding: 24, background: "var(--surface)" }}>
-            <h2 style={{ marginTop: 0 }}>{section.title}</h2>
-            <ul style={{ paddingLeft: 20, lineHeight: 1.9 }}>
-              {section.items.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </article>
-        ))}
+      <section className="container section">
+        <div className="section-head"><div><p className="eyebrow">LATEST</p><h2>Technology worth knowing</h2></div><a href="/news/">View all →</a></div>
+        <div className="news-grid">{news.map((item) => <article className="card" key={item.title}><span>{item.tag}</span><h3>{item.title}</h3><p>{item.text}</p><a href="/news/">Read more →</a></article>)}</div>
       </section>
+
+      <section className="container section">
+        <div className="section-head"><div><p className="eyebrow">TECH DATABASE</p><h2>Research before you buy</h2></div><a href="/compare/">Compare →</a></div>
+        <div className="product-grid">{products.map(([type,name,text]) => <a className="product-card" href={type === "PHONE" ? "/phones/" : type === "LAPTOP" ? "/laptops/" : "/compare/"} key={name}><span>{type}</span><h3>{name}</h3><p>{text}</p><b>Explore →</b></a>)}</div>
+      </section>
+
+      <section className="container section dark-section">
+        <p className="eyebrow">TOOLS & AI</p><h2>Useful tools. No noise.</h2>
+        <div className="tool-grid">{tools.map(([name,text]) => <a className="tool-card" href={name === "AI Tools" ? "/ai/" : "/tools/"} key={name}><h3>{name}</h3><p>{text}</p><b>Open →</b></a>)}</div>
+      </section>
+
+      <section className="container section youtube-card">
+        <div><p className="eyebrow">YOUTUBE INTELLIGENCE</p><h2>Understand what is working.</h2><p>Track your channels, competitors, viral videos and emerging topics from one dashboard.</p></div>
+        <a className="button primary" href="/youtube/">Open YouTube Intelligence</a>
+      </section>
+
+      <footer className="container footer"><strong>Laxman Nepal</strong><span>Technology • Tools • AI • Creator Intelligence</span></footer>
     </main>
   );
 }
