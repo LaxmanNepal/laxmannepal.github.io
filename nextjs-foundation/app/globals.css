@@ -63,3 +63,22 @@
 @media(max-width:900px){.project-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.project-grid{grid-template-columns:1fr}.project-body{padding:18px}.project-body h3{font-size:21px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project-card,.home-section,.quick-card,.feature-card{animation:none!important;transition:none!important}.project-card:hover .project-snapshot img{transform:none}}
+
+
+/* Interactive article archive */
+.archive-controls{display:grid;gap:12px;margin:0 0 14px}
+.archive-search-wrap{display:flex;align-items:center;gap:10px;padding:5px 7px 5px 16px;border:1px solid rgba(16,24,40,.1);border-radius:17px;background:rgba(255,255,255,.8);box-shadow:0 10px 30px rgba(16,24,40,.05)}
+.archive-search-wrap>span{font-size:20px;color:#98a2b3}
+.archive-search-wrap input{min-width:0;flex:1;border:0;outline:0;background:transparent;padding:11px 0;font:inherit;font-size:15px;color:var(--text)}
+.archive-search-wrap button,.archive-years button,.archive-status button{font:inherit;border:0;cursor:pointer}
+.archive-search-wrap button{width:34px;height:34px;border-radius:10px;background:#f2f4f7;color:#667085;font-size:20px}
+.archive-years{display:flex;gap:7px;overflow:auto;padding:2px 1px 5px;scrollbar-width:none}
+.archive-years::-webkit-scrollbar{display:none}
+.archive-years button{flex:0 0 auto;padding:8px 13px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.72);color:#667085;font-size:12px;font-weight:800}
+.archive-years button:hover{border-color:#cfd4dc;color:#101114}
+.archive-years button.active{background:#111318;color:#fff;border-color:#111318}
+.archive-status{margin:8px 0 18px;color:#7a8494;font-size:12px}
+.archive-status strong{color:#101114}
+.archive-status button{padding:0;background:transparent;text-decoration:underline;text-underline-offset:3px;color:#475467}
+.empty-card p{margin:7px 0 0;color:var(--muted)}
+@media(max-width:560px){.archive-search-wrap{border-radius:15px}.archive-years{margin-inline:-2px;padding-inline:2px}.archive-status{margin-bottom:14px}}
