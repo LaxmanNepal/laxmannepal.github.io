@@ -22,6 +22,7 @@ jobs:
         run: |
           rm -rf blogger-import
           python3 scripts/import_blogger.py --clean
+          python3 scripts/classify_content.py
 
       - name: Verify Blogger import
         run: |
