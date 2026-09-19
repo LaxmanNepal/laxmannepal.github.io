@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Safely copy public Blogger posts into blogger-import/.
+"""Safely copy public Blogger posts into the repository root using Blogger URL paths.
 
 The importer preserves each Blogger post's original URL path and full HTML.
 It never deletes or changes Blogger content and never stores the raw Atom feed.
@@ -15,6 +15,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_FEED = "https://www.laxmannepal.com.np/atom.xml?redirect=false&start-index=1&max-results=500"
 NS = {"a":"http://www.w3.org/2005/Atom", "os":"http://a9.com/-/spec/opensearchrss/1.0/"}
+MANIFEST_NAME = ".blogger-migration.json"
 
 def fetch(url):
     req = Request(url, headers={"User-Agent":"LaxmanNepal-BloggerImporter/1.0"})
@@ -85,14 +86,24 @@ def fetch_all(feed):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--feed", default=DEFAULT_FEED)
-    ap.add_argument("--output", default=str(ROOT / "blogger-import"))
+    ap.add_argument("--output", default=str(ROOT))
     ap.add_argument("--base-url", default="https://apps.laxmannepal.com.np")
     ap.add_argument("--inject-seo", action="store_true")
     ap.add_argument("--clean", action="store_true")
     args = ap.parse_args()
     out = Path(args.output)
-    if args.clean and out.exists(): shutil.rmtree(out)
     out.mkdir(parents=True, exist_ok=True)
+    manifest_path = out / MANIFEST_NAME
+    if args.clean and manifest_path.exists():
+        try:
+            previous = json.loads(manifest_path.read_text(encoding="utf-8"))
+            for item in previous.get("posts", []):
+                rel = item.get("path", "").lstrip("/")
+                if not rel: continue
+                target = out / rel
+                if target.is_file(): target.unlink()
+        except (OSError, ValueError, TypeError) as exc:
+            raise RuntimeError(f"Unable to safely clean previous Blogger imports: {exc}") from exc
     entries = fetch_all(args.feed)
     manifest, used = [], set()
     for entry in entries:
@@ -112,8 +123,8 @@ def main():
         dest = out / rel; dest.parent.mkdir(parents=True, exist_ok=True); dest.write_text(content, encoding="utf-8")
         manifest.append({"title":title,"published":published,"updated":updated,"original_url":original,"imported_url":target,"path":"/"+key.replace("\\","/")})
     manifest.sort(key=lambda x:x["published"], reverse=True)
-    (out / "manifest.json").write_text(json.dumps({"source":args.feed,"total_feed_entries":len(entries),"imported_posts":len(manifest),"generated_at":datetime.now(timezone.utc).isoformat(),"posts":manifest}, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Imported {len(manifest)} posts from Blogger into {out}")
+    (manifest_path).write_text(json.dumps({"source":args.feed,"total_feed_entries":len(entries),"imported_posts":len(manifest),"generated_at":datetime.now(timezone.utc).isoformat(),"posts":manifest}, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Imported {len(manifest)} Blogger posts into repository URL paths under {out}")
 
 if __name__ == "__main__":
     try: main()
