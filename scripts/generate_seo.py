@@ -54,7 +54,7 @@ def main():
             "<item>"
             f"<title>{title}</title>"
             f"<link>{escape(link)}</link>"
-            f"<guid isPermaLink="true">{escape(link)}</guid>"
+            f'<guid isPermaLink="true">{escape(link)}</guid>'
             f"{pub}"
             "</item>"
         )
