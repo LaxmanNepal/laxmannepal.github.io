@@ -3,7 +3,7 @@ import path from "node:path";
 import type { ContentItem, ContentType } from "./content-model";
 
 export type Locale = "en" | "ne" | "hi";
-export type BloggerPost = { title?: string; published?: string; updated?: string; path: string; original_url?: string };
+export type BloggerPost = { title?: string; published?: string; updated?: string; path: string; original_url?: string; type?: ContentType; tags?: string[] };
 
 export const locales: Record<Locale, {label:string; nativeLabel:string; href:string}> = {
   en:{label:"English",nativeLabel:"English",href:"/en/"},
@@ -25,9 +25,10 @@ export function loadBloggerPosts(): BloggerPost[] {
 
 export function getAllContent(): ContentItem[] {
   return loadBloggerPosts().map(post=>({
-    id:post.path,type:"blog" as ContentType,locale:"en" as Locale,
+    id:post.path,type:((post as BloggerPost & {type?:ContentType}).type || "blog") as ContentType,locale:"en" as Locale,
     title:(post.title||"Untitled post").trim(),path:post.path,
     published:post.published,updated:post.updated,source:"blogger" as const,
+    tags:(post as BloggerPost & {tags?:string[]}).tags || ["blog","technology"],
     translatedFrom:undefined
   }));
 }
