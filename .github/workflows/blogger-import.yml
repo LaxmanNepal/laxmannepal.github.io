@@ -33,8 +33,9 @@ jobs:
           print(f'Imported Blogger posts: {count}')
           if count < 1:
               raise SystemExit('No Blogger posts imported')
-          if count != 177:
-              print(f'WARNING: expected 177 posts from the current Blogger feed, got {count}')
+          feed_total = data.get('total_feed_entries', count)
+          if count != feed_total:
+              raise SystemExit(f'Import incomplete: feed reports {feed_total}, imported {count}')
           PY
 
       - name: Commit imported posts
