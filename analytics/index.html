@@ -17,7 +17,7 @@
 <main class="wrap">
 <header class="top"><div><div class="eyebrow">Laxman Nepal · Analytics</div><div class="title">Analytics Command Center</div><div class="sub">GA4 + Google Search performance · 90-day intelligence snapshot</div></div><div class="actions"><button class="btn" onclick="loadData()">Refresh</button><a class="primary" href="https://analytics.google.com/" target="_blank" rel="noopener">Open GA4</a><a href="https://search.google.com/search-console" target="_blank" rel="noopener">Search Console</a></div></header>
 <div id="status" class="status"><span class="dot"></span><b>Loading live snapshot…</b></div>
-<section class="grid" id="overview"></section>
+<section class="grid" id="overview"></section><section class="section"><h2>Period comparison</h2><div class="grid" id="comparison"></div></section>
 <section class="section"><div class="toolbar"><h2>Traffic trend</h2><div><button class="btn range" data-days="7">7D</button><button class="btn range primary" data-days="28">28D</button><button class="btn range" data-days="90">90D</button></div></div><div class="card"><canvas id="trend" height="110"></canvas><div id="trendMeta" class="updated"></div></div></section><section class="section"><h2>Traffic sources</h2><div class="cols"><div class="card"><div id="sources" class="list"><div class="empty">Loading…</div></div></div><div class="card"><div class="label">Top pages</div><div id="pages" class="list" style="margin-top:12px"></div></div></div></section>
 <section class="section"><h2>Audience breakdown</h2><div class="cols"><div class="card"><div class="label">Countries</div><div id="countries" class="list" style="margin-top:12px"></div></div><div class="card"><div class="label">Devices</div><div id="devices" class="list" style="margin-top:12px"></div></div></div></section>
 <section class="section"><h2>SEO opportunities</h2><div class="card" style="overflow:auto"><table class="table"><thead><tr><th>Opportunity</th><th>Query / page</th><th>Impressions</th><th>CTR</th><th>Position</th></tr></thead><tbody id="opportunities"></tbody></table></div></section>\n<section class="section"><h2>Search & product activity</h2><div class="grid" id="activity"></div></section>
@@ -35,7 +35,7 @@ function drawTrend(){\n const c=document.getElementById("trend"),ctx=c.getContex
   const r=await fetch('./data.json?ts='+Date.now(),{cache:'no-store'}); if(!r.ok) throw Error('HTTP '+r.status);
   const d=await r.json(); DATA=d; const o=d.ga4?.overview||{}, sc=(d.searchConsole?.summary||[])[0]||{};
   status.innerHTML='<span class="dot"></span><b>Live snapshot connected</b><span>'+escapeHtml(d.range||'')+' · Updated '+new Date(d.generatedAt).toLocaleString()+'</span>';
-  document.getElementById('overview').innerHTML=[
+  renderComparison(d); document.getElementById('overview').innerHTML=[
    ['Users',fmt(metric(o,'activeUsers')),'GA4 active users'],['Sessions',fmt(metric(o,'sessions')),'GA4 sessions'],['Page views',fmt(metric(o,'screenPageViews')),'GA4 screen/page views'],['Engagement',((metric(o,'engagementRate')*100).toFixed(1))+'%','GA4 engagement rate']
   ].map(x=>'<div class="card"><div class="label">'+x[0]+'</div><div class="value">'+x[1]+'</div><div class="hint">'+x[2]+'</div></div>').join('');
   const src=d.ga4?.sources||[]; const max=Math.max(1,...src.map(x=>metric(x.metrics,'sessions')));
@@ -49,7 +49,15 @@ function drawTrend(){\n const c=document.getElementById("trend"),ctx=c.getContex
   drawTrend(); renderOpportunities(d); document.getElementById('queries').innerHTML=(d.searchConsole?.queries||[]).map(x=>'<tr><td>'+escapeHtml(x.keys?.[0]||'')+'</td><td>'+fmt(x.clicks)+'</td><td>'+fmt(x.impressions)+'</td><td>'+((x.ctr||0)*100).toFixed(1)+'%</td><td>'+Number(x.position||0).toFixed(1)+'</td></tr>').join('')||'<tr><td colspan="5">No search query data</td></tr>';
  }catch(e){status.innerHTML='<span style="color:#ff9a9a">●</span><b>Snapshot unavailable</b><span>'+escapeHtml(e.message)+'</span>';document.getElementById('overview').innerHTML='<div class="card" style="grid-column:1/-1"><div class="empty">Run the “Sync Analytics Data” GitHub Action after configuring the required secrets.</div></div>'}
 }
-document.querySelectorAll(".range").forEach(b=>b.onclick=()=>{DAYS=Number(b.dataset.days);document.querySelectorAll(".range").forEach(x=>x.classList.remove("primary"));b.classList.add("primary");drawTrend()});\nfunction renderOpportunities(d){
+document.querySelectorAll(".range").forEach(b=>b.onclick=()=>{DAYS=Number(b.dataset.days);document.querySelectorAll(".range").forEach(x=>x.classList.remove("primary"));b.classList.add("primary");drawTrend()});\nfunction renderComparison(d){
+ const g=d.comparison?.ga4||{}, cur=g.current||{}, prev=g.previous||{};
+ const cards=[['Users','activeUsers'],['Sessions','sessions'],['Page views','screenPageViews']];
+ document.getElementById('comparison').innerHTML=cards.map(([label,key])=>{const a=Number(cur[key]||0),b=Number(prev[key]||0),delta=b?((a-b)/b*100):null;return '<div class="card"><div class="label">'+label+' vs previous 90 days</div><div class="value">'+fmt(a)+'</div><div class="hint">'+(delta===null?'No previous baseline':(delta>=0?'▲ ':'▼ ')+Math.abs(delta).toFixed(1)+'%')+'</div></div>'}).join('');
+ const sc=(d.comparison?.searchConsole?.current||[])[0]||{}, sp=(d.comparison?.searchConsole?.previous||[])[0]||{};
+ const clicks=Number(sc.clicks||0), prevClicks=Number(sp.clicks||0), imp=Number(sc.impressions||0), prevImp=Number(sp.impressions||0);
+ document.getElementById('comparison').innerHTML += '<div class="card"><div class="label">Google clicks vs previous</div><div class="value">'+fmt(clicks)+'</div><div class="hint">'+(prevClicks?((clicks-prevClicks)/prevClicks*100).toFixed(1)+'% change':'No previous baseline')+'</div></div><div class="card"><div class="label">Search impressions vs previous</div><div class="value">'+fmt(imp)+'</div><div class="hint">'+(prevImp?((imp-prevImp)/prevImp*100).toFixed(1)+'% change':'No previous baseline')+'</div></div>';
+}
+function renderOpportunities(d){
  const q=(d.searchConsole?.queries||[]).map(x=>({type:'Query',name:x.keys?.[0]||'',impressions:Number(x.impressions||0),ctr:Number(x.ctr||0),position:Number(x.position||0)}));
  const p=(d.searchConsole?.pages||[]).map(x=>({type:'Page',name:x.keys?.[0]||'',impressions:Number(x.impressions||0),ctr:Number(x.ctr||0),position:Number(x.position||0)}));
  const all=[...q,...p].filter(x=>x.impressions>20);
