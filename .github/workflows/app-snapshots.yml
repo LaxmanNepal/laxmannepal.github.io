@@ -12,12 +12,18 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: refresh-app-snapshots-main
+  cancel-in-progress: false
+
 jobs:
   screenshots:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -42,5 +48,6 @@ jobs:
             echo 'No snapshot changes.'
           else
             git commit -m 'chore: refresh app homepage snapshots'
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
