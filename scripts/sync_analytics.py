@@ -65,12 +65,12 @@ def rows(report):
         out.append(dict(zip(dims, d)) | {"metrics": dict(zip(mets, m))})
     return out
 
-def gsc_query(dimensions, row_limit=100):
+def gsc_query(dimensions, row_limit=100, start="90daysAgo", end="yesterday"):
     site = quote(GSC_SITE_URL, safe="")
     url = f"https://searchconsole.googleapis.com/webmasters/v3/sites/{site}/searchAnalytics/query"
     body = {
-        "startDate": "28daysAgo",
-        "endDate": "yesterday",
+        "startDate": start,
+        "endDate": end,
         "dimensions": dimensions,
         "rowLimit": row_limit,
         "type": "web",
@@ -101,8 +101,10 @@ try:
     countries = rows(ga4_report(["country"], ["activeUsers"], 15, "activeUsers"))
     devices = rows(ga4_report(["deviceCategory"], ["activeUsers"], 10, "activeUsers"))
     events = rows(ga4_report(["eventName"], ["eventCount"], 50, "eventCount"))
+    daily = rows(ga4_report(["date"], ["activeUsers", "sessions", "screenPageViews", "engagementRate"], 1000, "date"))
 
     search_summary = gsc_query([])
+    search_daily = gsc_query(["date"], 100)
     search_queries = gsc_query(["query"], 50)
     search_pages = gsc_query(["page"], 50)
 
@@ -117,10 +119,12 @@ try:
             "countries": countries,
             "devices": devices,
             "events": events,
+            "daily": daily,
         },
         "searchConsole": {
             "site": GSC_SITE_URL,
             "summary": gsc_rows(search_summary),
+            "daily": gsc_rows(search_daily),
             "queries": gsc_rows(search_queries),
             "pages": gsc_rows(search_pages),
         },
