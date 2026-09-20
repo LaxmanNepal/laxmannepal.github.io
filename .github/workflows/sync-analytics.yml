@@ -30,14 +30,17 @@ jobs:
           GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
         run: python scripts/sync_analytics.py
 
-      - name: Commit refreshed analytics snapshot
+      - name: Generate SEO Fix Report
+        run: python scripts/generate_seo_fix_report.py
+
+      - name: Commit refreshed analytics + SEO report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add analytics/data.json
+          git add analytics/data.json analytics/seo-fix-report.md
           if git diff --cached --quiet; then
-            echo "No analytics changes."
+            echo "No analytics or SEO report changes."
           else
-            git commit -m "chore: refresh analytics snapshot"
+            git commit -m "chore: refresh analytics and SEO fix report"
             git push
           fi
