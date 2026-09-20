@@ -149,14 +149,35 @@ def article_topics(article):
   if score: scored.append((score,topic))
  scored.sort(key=lambda x:x[0],reverse=True)
  return [t for _,t in scored[:4]]
+def editorial_signals(articles):
+ """Deterministic editorial intelligence for static builds; no fake engagement metrics."""
+ now=datetime.now(timezone.utc).date()
+ signals={}
+ for item in articles:
+  try: age=max(0,(now-datetime.strptime(item.get('date','')[:10],'%Y-%m-%d').date()).days)
+  except ValueError: age=3650
+  topics={t['slug'] for t in article_topics(item)}
+  freshness=max(0,120-age)
+  breadth=min(4,len(topics))
+  signals[item['slug']]={'freshness':freshness,'topic_breadth':breadth,'topics':topics,'score':freshness*2+breadth*8}
+ return signals
+
+def content_gaps(articles, limit=8):
+ counts={t['slug']:0 for t in TOPICS}
+ for item in articles:
+  for t in article_topics(item): counts[t['slug']]+=1
+ return sorted(((count,t) for t,count in counts.items()),key=lambda x:(x[0],x[1]))[:limit]
+
 def topic_related_articles(current, articles, topic_slug, limit=6):
  scored=[]
+ signals=editorial_signals(articles)
  for item in articles:
   if item.get('slug')==current.get('slug'): continue
-  if topic_slug not in {t['slug'] for t in article_topics(item)}: continue
+  if topic_slug not in signals.get(item.get('slug',{}),{}).get('topics',set()): continue
   cur=set(re.findall(r'[a-z0-9]+',(current.get('title','')+' '+current.get('category','')).lower()))
   other=set(re.findall(r'[a-z0-9]+',(item.get('title','')+' '+item.get('category','')).lower()))
-  scored.append((len(cur & other)+(3 if item.get('category')==current.get('category') else 0),item.get('date',''),item))
+  s=signals.get(item.get('slug'),{})
+  scored.append((len(cur & other)+(3 if item.get('category')==current.get('category') else 0)+s.get('freshness',0)*0.05,item.get('date',''),item))
  return [x[2] for x in sorted(scored,key=lambda x:(x[0],x[1]),reverse=True)[:limit]]
 def topic_page(topic, posts):
  url=f'{BASE}/topics/{topic["slug"]}/'
