@@ -15,8 +15,10 @@ SCOPES=["https://www.googleapis.com/auth/analytics.readonly","https://www.google
 def fail(message): print(f"ERROR: {message}",file=sys.stderr); sys.exit(1)
 if not SERVICE_JSON or not GA4_PROPERTY_ID or not GSC_SITE_URL: fail("Set GOOGLE_SERVICE_ACCOUNT_JSON, GA4_PROPERTY_ID and GSC_SITE_URL GitHub Secrets.")
 try:
+    print("STAGE: credentials", flush=True)
     info=json.loads(SERVICE_JSON); credentials=service_account.Credentials.from_service_account_info(info,scopes=SCOPES)
     credentials.refresh(transport.requests.Request()); session=requests.Session()
+    print("CHECK: credentials=ok", flush=True)
     session.headers.update({"Authorization":f"Bearer {credentials.token}"})
 except Exception as exc: fail(f"Could not load service-account credentials: {exc}")
 
@@ -96,6 +98,7 @@ today=datetime.now(timezone.utc).date(); end=today-timedelta(days=1); current_st
 previous_end=current_start-timedelta(days=1); previous_start=previous_end-timedelta(days=89)
 
 try:
+    print("STAGE: ga4", flush=True)
     overview_rows=rows(ga4_report([],["activeUsers","sessions","screenPageViews","engagementRate"],1)); overview=overview_rows[0]["metrics"] if overview_rows else {}
     sources=rows(ga4_report(["sessionDefaultChannelGroup"],["sessions"],10,order_metric="sessions"))
     pages=rows(ga4_report(["pagePath"],["screenPageViews"],20,order_metric="screenPageViews"))
@@ -103,14 +106,20 @@ try:
     devices=rows(ga4_report(["deviceCategory"],["activeUsers"],10,order_metric="activeUsers"))
     events=rows(ga4_report(["eventName"],["eventCount"],50,order_metric="eventCount"))
     daily=rows(ga4_report(["date"],["activeUsers","sessions","screenPageViews","engagementRate"],1000,order_dimension="date"))
+    print("CHECK: ga4=ok", flush=True)
+    print("STAGE: search_console", flush=True)
     previous_overview_rows=rows(ga4_report([],["activeUsers","sessions","screenPageViews","engagementRate"],1,start="181daysAgo",end="91daysAgo")); previous_overview=previous_overview_rows[0]["metrics"] if previous_overview_rows else {}
     cs=current_start.isoformat(); ce=end.isoformat(); ps=previous_start.isoformat(); pe=previous_end.isoformat()
+    print("CHECK: ga4=ok", flush=True)
     current_summary=gsc_rows(gsc_query([],start=cs,end=ce)); previous_summary=gsc_rows(gsc_query([],start=ps,end=pe))
     search_daily=gsc_rows(gsc_query(["date"],100,start=cs,end=ce))
     search_queries=gsc_rows(gsc_query(["query"],50,start=cs,end=ce)); previous_queries=gsc_rows(gsc_query(["query"],50,start=ps,end=pe))
     search_pages=gsc_rows(gsc_query(["page"],50,start=cs,end=ce)); previous_pages=gsc_rows(gsc_query(["page"],50,start=ps,end=pe))
     page_queries=gsc_rows(gsc_query(["page","query"],200,start=cs,end=ce)); previous_page_queries=gsc_rows(gsc_query(["page","query"],200,start=ps,end=pe))
+    print("CHECK: search_console=ok", flush=True)
+    print("STAGE: seo_audit", flush=True)
     seo_health=build_seo_health(pages,search_queries)
+    print("CHECK: seo_audit=ok", flush=True)
     data={"schemaVersion":7,"generatedAt":datetime.now(timezone.utc).isoformat(),"range":"90 days ending yesterday",
           "comparison":{"current":{"start":cs,"end":ce},"previous":{"start":ps,"end":pe},"ga4":{"current":overview,"previous":previous_overview},"searchConsole":{"current":current_summary,"previous":previous_summary}},
           "ga4":{"propertyId":GA4_PROPERTY_ID,"overview":overview,"sources":sources,"pages":pages,"countries":countries,"devices":devices,"events":events,"daily":daily},
@@ -119,4 +128,6 @@ try:
 except Exception as exc: fail(str(exc))
 os.makedirs(os.path.dirname(OUT),exist_ok=True)
 with open(OUT,"w",encoding="utf-8") as f: json.dump(data,f,ensure_ascii=False,separators=(",",":"))
+print("STAGE: write_snapshot", flush=True)
 print(f"Wrote {OUT}")
+print("CHECK: snapshot=ok", flush=True)
