@@ -1,3 +1,5 @@
-import type { Metadata } from "next"; import { getAllContent } from "@/lib/content";
-export const metadata: Metadata={title:"Phones — Nepal Phone Database",description:"Explore phone guides, comparisons, specifications and buying resources for Nepal."};
-export default function Page(){const posts=getAllContent().filter(p=>/phone|mobile|xiaomi|redmi|iphone|samsung/i.test((p.title||"")+" "+p.tags.join(" "))).slice(0,24);return <main className="container page"><p className="eyebrow">PHONES</p><h1>Phone database</h1><p className="muted">Phone guides and resources are automatically collected from the Laxman Nepal content archive.</p><div className="post-grid">{posts.map((p,i)=><article className="post-card" key={p.id}><span className="post-number">{String(i+1).padStart(2,"0")}</span><div><span className="tag">PHONE</span><h3>{p.title}</h3><p className="muted">{p.published?.slice(0,10)||"Archive"}</p><a href={p.path}>Open article →</a></div></article>)}</div></main>}
+import { ArchiveCards, sectionPosts } from "@/lib/section-content";
+export default function Page(){
+ const posts=sectionPosts(["phone","mobile","iphone","xiaomi","redmi","samsung","pixel","oneplus"],30);
+ return <main className="container page"><p className="eyebrow">PHONES</p><h1>Phones, specs & buying information</h1><p className="muted">Automatically surfaced phone content from the Laxman Nepal archive.</p><div className="section-head" style={{marginTop:38}}><div><h2>Latest from the archive</h2><p className="section-note">{posts.length} articles available</p></div></div><ArchiveCards posts={posts} tag="PHONES"/></main>
+}
