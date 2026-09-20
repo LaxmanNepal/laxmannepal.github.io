@@ -51,13 +51,31 @@ jobs:
           # Never publish credentials or raw service-account JSON.
           log=re.sub(r'"private_key"\\s*:\\s*"[^"]*"', '"private_key":"[redacted]"', log, flags=re.I)
           log=re.sub(r'-----BEGIN PRIVATE KEY-----.*?-----END PRIVATE KEY-----', '[private key redacted]', log, flags=re.S)
+          lines=details.splitlines() if details else []
+          stages=[x.split("STAGE:",1)[1].strip() for x in lines if "STAGE:" in x]
+          checks={}
+          for x in lines:
+              m=re.search(r"CHECK:\s*([a-z_]+)=(ok|failed)",x)
+              if m: checks[m.group(1)] = m.group(2)
           if os.environ.get("FETCH_OUTCOME") == "success":
-              status={"status":"success","stage":"fetch","message":"GA4 + Search Console sync completed successfully.","details":"","updatedAt":datetime.now(timezone.utc).isoformat()}
+              status={"status":"success","stage":"complete","message":"GA4 + Search Console sync completed successfully.","details":"","checks":{"credentials":"ok","ga4":"ok","search_console":"ok","seo_audit":"ok","snapshot":"ok"},"updatedAt":datetime.now(timezone.utc).isoformat()}
           else:
               details=log[-5000:] if log else "The sync process failed before producing diagnostic output."
-              first_error=next((x.strip() for x in reversed(details.splitlines()) if x.strip()), details)
-              status={"status":"failed","stage":"fetch","message":first_error[:500],"details":details,"updatedAt":datetime.now(timezone.utc).isoformat()}
-          with open("analytics/sync-status.json","w",encoding="utf-8") as f:
+              lines=details.splitlines()
+              stage=stages[-1] if stages else "unknown"
+              error_lines=[x.strip() for x in lines if re.search(r"ERROR:|403|401|400|404|429|500|503|Traceback|Exception",x,re.I)]
+              first_error=error_lines[-1] if error_lines else next((x.strip() for x in reversed(lines) if x.strip()), details)
+              status={"status":"failed","stage":stage,"message":first_error[:500],"details":details,"checks":checks,"updatedAt":datetime.now(timezone.utc).isoformat()}
+          history=[]
+          hp="analytics/sync-status.json"
+          try:
+              previous=json.load(open(hp,encoding="utf-8"))
+              history=list(previous.get("history",[]))
+          except Exception: pass
+          event={k:status[k] for k in ("status","stage","message","checks","updatedAt") if k in status}
+          history=[event]+history
+          status["history"]=history[:12]
+          with open(hp,"w",encoding="utf-8") as f:
               json.dump(status,f,ensure_ascii=False,indent=2)
           PY
 
