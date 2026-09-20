@@ -79,6 +79,27 @@ def load_articles():
    desc=re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',content)).strip()[:155]
    items.append({'title':str(x.get('title','')).strip() or slug.replace('-',' ').title(),'description':desc,'date':date10(x.get('published')),'updated':date10(x.get('updated',x.get('published'))),'author':'Laxman Nepal','category':'Imported','slug':slug,'source':content,'legacy':True,'original_url':x.get('original_url',''),'legacy_path':'/'+raw})
  return sorted(items,key=lambda a:a['date'],reverse=True)
+def add_heading_ids(content):
+ used=set(re.findall(r'\bid=["']([^"']+)["']',content,re.I))
+ def repl(m):
+  level,attrs,inner=m.group(1),m.group(2),m.group(3)
+  if re.search(r'\bid\s*=',attrs,re.I): return m.group(0)
+  label=re.sub(r'<[^>]+>',' ',inner); label=re.sub(r'\s+',' ',html.unescape(label)).strip()
+  base=slugify(label); slug=base; i=2
+  while slug in used: slug=f'{base}-{i}'; i+=1
+  used.add(slug)
+  return f'<h{level}{attrs} id="{slug}">{inner}</h{level}>'
+ return re.sub(r'<h([2-6])([^>]*)>(.*?)</h\1>',repl,content,flags=re.I|re.S)
+
+def build_toc(content):
+ items=re.findall(r'<h([2-6])[^>]*\bid="([^"]+)"[^>]*>(.*?)</h\1>',content,re.I|re.S)
+ if not items: return ''
+ links=[]
+ for level,anchor,inner in items:
+  label=re.sub(r'<[^>]+>',' ',inner); label=re.sub(r'\s+',' ',html.unescape(label)).strip()
+  if label: links.append(f'<a class="toc-link toc-level-{level}" href="#{esc(anchor)}">{esc(label,False)}</a>')
+ return ''.join(links)
+
 def related_articles(current, articles, limit=4):
  terms=set(re.findall(r'[a-z0-9]+', (current.get('title','')+' '+current.get('category','')).lower()))
  scored=[]
@@ -104,8 +125,14 @@ def main():
   related=related_articles(a,articles,4)
   related_html=''.join(f'<article class="post-card"><p class="eyebrow">{esc(r["category"])} · {r["date"]}</p><h2><a href="/blog/{r["slug"]}/">{esc(r["title"])}</a></h2><p>{esc(r["description"])}</p><a class="text-link" href="/blog/{r["slug"]}/">Read article →</a></article>' for r in related)
   breadcrumbs={'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'Blog','item':BASE+'/blog/'},{'@type':'ListItem','position':3,'name':a['title'],'item':url}]}
-  body=f'''<div class="article-wrap"><article><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / {esc(a["title"])}</nav><header class="article-header"><p class="eyebrow">{esc(a["category"])} · {mins} min read</p><h1>{esc(a["title"])}</h1><p class="article-description">{esc(a["description"])}</p><div class="article-meta">By {esc(a["author"])} · Published {a["date"]} · Updated {a["updated"]}</div></header><div class="article-content">{a["source"]}</div></article><section class="related-section"><div class="section-head"><div><p class="eyebrow">KEEP READING</p><h2>Related articles</h2><p>More from {esc(a["category"])} and nearby topics.</p></div><a href="/blog/">View all →</a></div><div class="post-grid">{related_html}</div></section></div>'''
+  article_html=add_heading_ids(a['source'])
+  toc=build_toc(article_html)
+  toc_html=f'<aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div>{toc}</aside>' if toc else ''
+  article_tools='''<div class="article-tools" aria-label="Article actions"><button type="button" data-share>↗ Share</button><button type="button" data-copy>⧉ Copy link</button></div>'''
+  article_script='''<script>(()=>{const bar=document.querySelector('[data-reading-progress] span'),article=document.querySelector('.article-content');const update=()=>{if(!bar||!article)return;const r=article.getBoundingClientRect(),top=window.scrollY+r.top,total=Math.max(1,article.scrollHeight-innerHeight*.35),p=Math.min(1,Math.max(0,(window.scrollY-top+innerHeight*.2)/total));bar.style.width=(p*100)+'%'};addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();const share=document.querySelector('[data-share]');share?.addEventListener('click',async()=>{try{if(navigator.share)await navigator.share({title:document.title,text:document.querySelector('.article-description')?.textContent||'',url:location.href});else await navigator.clipboard.writeText(location.href)}catch(e){}});const copy=document.querySelector('[data-copy]');copy?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);const old=copy.textContent;copy.textContent='✓ Copied';setTimeout(()=>copy.textContent=old,1600)}catch(e){copy.textContent='Copy unavailable'}})})();</script>'''
+  body=f'''<div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div><div class="article-wrap"><article><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / {esc(a["title"])}</nav><header class="article-header"><p class="eyebrow">{esc(a["category"])} · ~{mins} min read</p><h1>{esc(a["title"])}</h1><p class="article-description">{esc(a["description"])}</p><div class="article-meta">By {esc(a["author"])} · Published {a["date"]} · Updated {a["updated"]}</div>{article_tools}</header>{toc_html}<div class="article-content">{article_html}</div></article><section class="related-section"><div class="section-head"><div><p class="eyebrow">KEEP READING</p><h2>Related articles</h2><p>More from {esc(a["category"])} and nearby topics.</p></div><a href="/blog/">View all →</a></div><div class="post-grid">{related_html}</div></section></div>'''
   og_image=write_og_svg(a['title'],a['slug'],a['description'])
+  body += article_script
   d=OUT/a['slug']; d.mkdir(parents=True,exist_ok=True); (d/'index.html').write_text(shell(a['title'],a['description'],url,body,'Article',{'datePublished':a['date'],'dateModified':a['updated'],'breadcrumb':breadcrumbs,'image':og_image},og_image),encoding='utf-8')
   if a.get('legacy_path'): migration.append({'old_path':a['legacy_path'],'old_url':a.get('original_url',''),'new_path':'/blog/'+a['slug']+'/','new_url':url,'title':a['title']})
  cards=''.join(f'<article class="post-card"><p class="eyebrow">{esc(a["category"])} · {a["date"]}</p><h2><a href="/blog/{a["slug"]}/">{esc(a["title"])}</a></h2><p>{esc(a["description"])}</p><a class="text-link" href="/blog/{a["slug"]}/">Read article →</a></article>' for a in articles)
