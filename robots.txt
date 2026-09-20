@@ -3,4 +3,4 @@ Allow: /
 Disallow: /old/
 Disallow: /scripts/
 
-Sitemap: https://apps.laxmannepal.com.np/sitemap.xml
+Sitemap: https://laxmannepal.com.np/sitemap.xml
