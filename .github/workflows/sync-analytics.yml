@@ -51,6 +51,7 @@ jobs:
           # Never publish credentials or raw service-account JSON.
           log=re.sub(r'"private_key"\\s*:\\s*"[^"]*"', '"private_key":"[redacted]"', log, flags=re.I)
           log=re.sub(r'-----BEGIN PRIVATE KEY-----.*?-----END PRIVATE KEY-----', '[private key redacted]', log, flags=re.S)
+          details=log[-5000:] if log else "The sync process failed before producing diagnostic output."
           lines=details.splitlines() if details else []
           stages=[x.split("STAGE:",1)[1].strip() for x in lines if "STAGE:" in x]
           checks={}
