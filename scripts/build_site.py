@@ -173,7 +173,7 @@ def topic_related_articles(current, articles, topic_slug, limit=6):
  signals=editorial_signals(articles)
  for item in articles:
   if item.get('slug')==current.get('slug'): continue
-  if topic_slug not in signals.get(item.get('slug',{}),{}).get('topics',set()): continue
+  if topic_slug not in signals.get(item.get('slug'),{}).get('topics',set()): continue
   cur=set(re.findall(r'[a-z0-9]+',(current.get('title','')+' '+current.get('category','')).lower()))
   other=set(re.findall(r'[a-z0-9]+',(item.get('title','')+' '+item.get('category','')).lower()))
   s=signals.get(item.get('slug'),{})
