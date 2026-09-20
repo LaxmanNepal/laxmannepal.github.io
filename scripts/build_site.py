@@ -91,8 +91,8 @@ def related_articles(current, articles, limit=4):
 
 def write_og_svg(title,slug,description):
  assets=ROOT/'assets'; assets.mkdir(parents=True,exist_ok=True)
- safe_title=esc(title).replace('&','&amp;').replace('<','&lt;').replace('>','&gt;')
- safe_desc=esc(description).replace('&','&amp;').replace('<','&lt;').replace('>','&gt;')
+ safe_title=html.escape(str(title),quote=False)
+ safe_desc=html.escape(str(description),quote=False)
  svg=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f7ff"/><stop offset="1" stop-color="#dcecff"/></linearGradient></defs><rect width="1200" height="630" fill="url(#g)"/><circle cx="1040" cy="110" r="190" fill="#007aff" opacity=".10"/><circle cx="110" cy="570" r="210" fill="#8b5cf6" opacity=".08"/><rect x="70" y="70" width="92" height="92" rx="26" fill="#111114"/><text x="116" y="130" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="800" fill="#fff">LN</text><text x="70" y="250" font-family="Arial,sans-serif" font-size="50" font-weight="800" fill="#111114">{safe_title}</text><text x="70" y="330" font-family="Arial,sans-serif" font-size="25" fill="#5f6368">{safe_desc[:110]}</text><text x="70" y="555" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#007aff">LAXMAN NEPAL · TECHNOLOGY · TOOLS · AI</text></svg>'''
  (assets/f'og-{slug}.svg').write_text(svg,encoding='utf-8')
  return BASE+f'/assets/og-{slug}.svg'
