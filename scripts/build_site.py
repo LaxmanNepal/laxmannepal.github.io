@@ -79,6 +79,27 @@ def load_articles():
    desc=re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',content)).strip()[:155]
    items.append({'title':str(x.get('title','')).strip() or slug.replace('-',' ').title(),'description':desc,'date':date10(x.get('published')),'updated':date10(x.get('updated',x.get('published'))),'author':'Laxman Nepal','category':'Imported','slug':slug,'source':content,'legacy':True,'original_url':x.get('original_url',''),'legacy_path':'/'+raw})
  return sorted(items,key=lambda a:a['date'],reverse=True)
+def link_related_terms(content, current_slug, articles, limit=5):
+ candidates=[]
+ for item in articles:
+  if item.get('slug')==current_slug: continue
+  title=str(item.get('title','')).strip()
+  words=[w for w in re.findall(r'[A-Za-z0-9]{4,}',title) if w.lower() not in {'with','from','this','that','your','what','how','guide','best'}]
+  if words: candidates.append((item,words))
+ candidates.sort(key=lambda x: len(x[1]),reverse=True)
+ used=set()
+ for item,words in candidates:
+  if len(used)>=limit: break
+  for term in sorted(set(words),key=len,reverse=True):
+   pattern=re.compile(r'(?<![\w-])'+re.escape(term)+r'(?![\w-])',re.I)
+   if pattern.search(content):
+    url=f'/blog/{item["slug"]}/'
+    repl=f'<a href="{url}" class="context-link">{term}</a>'
+    updated,n=pattern.subn(lambda m: repl,content,count=1)
+    if n:
+     content=updated; used.add(item['slug']); break
+ return content
+
 def add_heading_ids(content):
  used=set(re.findall(r'\bid=["']([^"']+)["']',content,re.I))
  def repl(m):
@@ -136,6 +157,7 @@ def main():
   related_html=''.join(f'<article class="post-card"><p class="eyebrow">{esc(r["category"])} · {r["date"]}</p><h2><a href="/blog/{r["slug"]}/">{esc(r["title"])}</a></h2><p>{esc(r["description"])}</p><a class="text-link" href="/blog/{r["slug"]}/">Read article →</a></article>' for r in related)
   breadcrumbs={'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'Blog','item':BASE+'/blog/'},{'@type':'ListItem','position':3,'name':a['title'],'item':url}]}
   article_html=add_heading_ids(a['source'])
+  article_html=link_related_terms(article_html,a['slug'],articles,5)
   toc=build_toc(article_html)
   faq_pairs=detect_faq(article_html)
   toc_html=f'<aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div>{toc}</aside>' if toc else ''
