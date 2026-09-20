@@ -2,7 +2,7 @@
 import json, os, re, sys
 from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
-from urllib.parse import quote, urljoin, urlparse
+from urllib.parse import quote, urljoin
 import requests
 from google.auth import transport
 from google.oauth2 import service_account
@@ -66,8 +66,7 @@ def inspect_page(path):
     try:
         r=requests.get(url,timeout=20,headers={"User-Agent":"LaxmanNepal-SEO-Audit/1.0"})
         if r.status_code!=200: return {"path":path,"status":r.status_code,"score":0,"issues":["HTTP status is not 200"]}
-        p=SEOParser(); p.feed(r.text)
-        issues=[]
+        p=SEOParser(); p.feed(r.text); issues=[]
         title_len=len(p.title); desc_len=len(p.description)
         if not p.title: issues.append("Missing title")
         elif title_len<30 or title_len>60: issues.append(f"Title length {title_len}")
@@ -86,10 +85,7 @@ def build_seo_health(pages,queries):
     for x in pages:
         p=x.get("pagePath","/")
         if p and p not in paths and not p.startswith(("/analytics","/search","/old","/scripts")): paths.append(p)
-    for x in queries[:10]:
-        pass
-    paths=paths[:20]
-    audits=[inspect_page(p) for p in paths]
+    paths=paths[:20]; audits=[inspect_page(p) for p in paths]
     avg=round(sum(x["score"] for x in audits)/len(audits)) if audits else 0
     issues={}
     for a in audits:
@@ -107,7 +103,7 @@ try:
     devices=rows(ga4_report(["deviceCategory"],["activeUsers"],10,order_metric="activeUsers"))
     events=rows(ga4_report(["eventName"],["eventCount"],50,order_metric="eventCount"))
     daily=rows(ga4_report(["date"],["activeUsers","sessions","screenPageViews","engagementRate"],1000,order_dimension="date"))
-    previous_overview_rows=rows(ga4_report([],["activeUsers","sessions","screenPageViews","engagementRate"],1,start="181daysAgo",end="91daysAgo"))
+    previous_overview_rows=rows(ga4_report([] ,["activeUsers","sessions","screenPageViews","engagementRate"],1,start="181daysAgo",end="91daysAgo"))
     previous_overview=previous_overview_rows[0]["metrics"] if previous_overview_rows else {}
 
     cs=current_start.isoformat(); ce=end.isoformat(); ps=previous_start.isoformat(); pe=previous_end.isoformat()
@@ -115,14 +111,17 @@ try:
     search_daily=gsc_rows(gsc_query(["date"],100,start=cs,end=ce))
     search_queries=gsc_rows(gsc_query(["query"],50,start=cs,end=ce)); previous_queries=gsc_rows(gsc_query(["query"],50,start=ps,end=pe))
     search_pages=gsc_rows(gsc_query(["page"],50,start=cs,end=ce)); previous_pages=gsc_rows(gsc_query(["page"],50,start=ps,end=pe))
+    page_queries=gsc_rows(gsc_query(["page","query"],200,start=cs,end=ce))
+    previous_page_queries=gsc_rows(gsc_query(["page","query"],200,start=ps,end=pe))
     seo_health=build_seo_health(pages,search_queries)
 
-    data={"schemaVersion":5,"generatedAt":datetime.now(timezone.utc).isoformat(),"range":"90 days ending yesterday",
+    data={"schemaVersion":6,"generatedAt":datetime.now(timezone.utc).isoformat(),"range":"90 days ending yesterday",
           "comparison":{"current":{"start":cs,"end":ce},"previous":{"start":ps,"end":pe},"ga4":{"current":overview,"previous":previous_overview},
                        "searchConsole":{"current":current_summary,"previous":previous_summary}},
           "ga4":{"propertyId":GA4_PROPERTY_ID,"overview":overview,"sources":sources,"pages":pages,"countries":countries,"devices":devices,"events":events,"daily":daily},
           "searchConsole":{"site":GSC_SITE_URL,"startDate":cs,"endDate":ce,"summary":current_summary,"previousSummary":previous_summary,
-                           "daily":search_daily,"queries":search_queries,"previousQueries":previous_queries,"pages":search_pages,"previousPages":previous_pages},
+                           "daily":search_daily,"queries":search_queries,"previousQueries":previous_queries,"pages":search_pages,"previousPages":previous_pages,
+                           "pageQueries":page_queries,"previousPageQueries":previous_page_queries},
           "seoHealth":seo_health}
 except Exception as exc: fail(str(exc))
 os.makedirs(os.path.dirname(OUT),exist_ok=True)
