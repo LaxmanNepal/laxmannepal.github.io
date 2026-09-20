@@ -131,6 +131,41 @@ def build_toc(content):
   if label: links.append(f'<a class="toc-link toc-level-{level}" href="#{esc(anchor)}">{esc(label,False)}</a>')
  return ''.join(links)
 
+TOPICS=[
+ {'slug':'technology','name':'Technology','description':'Practical technology news, explainers and digital workflows.','keywords':['technology','tech','computer','software','hardware','digital','windows','internet']},
+ {'slug':'ai','name':'AI','description':'Artificial intelligence tools, tutorials, prompts and practical workflows.','keywords':['ai','artificial','intelligence','chatgpt','gemini','claude','copilot','prompt','llm','machine learning']},
+ {'slug':'mobile','name':'Mobile','description':'Phones, mobile apps, Android, iPhone and mobile buying guides.','keywords':['phone','mobile','iphone','android','xiaomi','samsung','redmi','pixel','smartphone']},
+ {'slug':'apps','name':'Apps','description':'Useful apps, websites, utilities and practical digital services.','keywords':['app','apps','application','website','web','tool','utility','software']},
+ {'slug':'productivity','name':'Productivity','description':'Guides for working faster with office tools, automation and digital workflows.','keywords':['productivity','excel','office','word','powerpoint','workflow','automation','shortcut','tally']},
+ {'slug':'nepal','name':'Nepal','description':'Technology, digital services, prices and practical guides relevant to Nepal.','keywords':['nepal','nepali','kathmandu','hetauda','nepse','nrb','ncell','ntc','daraz']},
+ {'slug':'creator','name':'Creator','description':'YouTube, content creation, video, social media and creator workflows.','keywords':['youtube','creator','video','content','instagram','tiktok','thumbnail','channel','editing']},
+ {'slug':'guides','name':'Guides','description':'Step-by-step tutorials and practical how-to articles.','keywords':['guide','how','tutorial','tips','step','fix','setup','install','download']}
+]
+def article_topics(article):
+ text=' '.join(str(article.get(k,'')) for k in ('title','description','category','source')).lower()
+ scored=[]
+ for topic in TOPICS:
+  score=sum(1 for kw in topic['keywords'] if re.search(r'(?<![a-z0-9])'+re.escape(kw)+r'(?![a-z0-9])',text))
+  if score: scored.append((score,topic))
+ scored.sort(key=lambda x:x[0],reverse=True)
+ return [t for _,t in scored[:4]]
+def topic_related_articles(current, articles, topic_slug, limit=6):
+ scored=[]
+ for item in articles:
+  if item.get('slug')==current.get('slug'): continue
+  if topic_slug not in {t['slug'] for t in article_topics(item)}: continue
+  cur=set(re.findall(r'[a-z0-9]+',(current.get('title','')+' '+current.get('category','')).lower()))
+  other=set(re.findall(r'[a-z0-9]+',(item.get('title','')+' '+item.get('category','')).lower()))
+  scored.append((len(cur & other)+(3 if item.get('category')==current.get('category') else 0),item.get('date',''),item))
+ return [x[2] for x in sorted(scored,key=lambda x:(x[0],x[1]),reverse=True)[:limit]]
+def topic_page(topic, posts):
+ url=f'{BASE}/topics/{topic["slug"]}/'
+ cards=''.join(f'<article class="topic-card"><p class="eyebrow">{esc(p["category"])} · {p["date"]}</p><h2><a href="/blog/{p["slug"]}/">{esc(p["title"])}</a></h2><p>{esc(p["description"])}</p><a class="text-link" href="/blog/{p["slug"]}/">Read article →</a></article>' for p in posts)
+ pills=''.join(f'<a href="/topics/{t["slug"]}/">{esc(t["name"])}</a>' for t in TOPICS)
+ body=f'<div class="article-wrap"><section class="topic-hero"><p class="eyebrow">TOPIC HUB</p><h1>{esc(topic["name"])}</h1><p>{esc(topic["description"])}</p><div class="topic-stats"><strong>{len(posts)}</strong><span>articles in this topic</span></div></section><section class="topic-list"><div class="section-head"><div><p class="eyebrow">EXPLORE</p><h2>Latest {esc(topic["name"])} articles</h2></div><a href="/blog/">All articles →</a></div><div class="post-grid">{cards or "<p>No articles in this topic yet.</p>"}</div></section><section class="topic-directory"><p class="eyebrow">BROWSE TOPICS</p><div class="topic-pills">{pills}</div></section></div>'
+ schema={'@type':'CollectionPage','isPartOf':{'@type':'WebSite','name':'Laxman Nepal','url':BASE+'/'},'about':{'@type':'Thing','name':topic['name']},'numberOfItems':len(posts)}
+ return url,shell(topic['name'],topic['description'],url,body,'CollectionPage',schema)
+
 def related_articles(current, articles, limit=4):
  terms=set(re.findall(r'[a-z0-9]+', (current.get('title','')+' '+current.get('category','')).lower()))
  scored=[]
@@ -154,6 +189,7 @@ def main():
  for a in articles:
   url=f'{BASE}/blog/{a["slug"]}/'; mins=max(1,round(len(re.findall(r'\b[\w’\'-]+\b',a['source']))/220))
   related=related_articles(a,articles,4)
+  topics=article_topics(a)
   related_html=''.join(f'<article class="post-card"><p class="eyebrow">{esc(r["category"])} · {r["date"]}</p><h2><a href="/blog/{r["slug"]}/">{esc(r["title"])}</a></h2><p>{esc(r["description"])}</p><a class="text-link" href="/blog/{r["slug"]}/">Read article →</a></article>' for r in related)
   breadcrumbs={'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'Blog','item':BASE+'/blog/'},{'@type':'ListItem','position':3,'name':a['title'],'item':url}]}
   article_html=add_heading_ids(a['source'])
@@ -164,7 +200,7 @@ def main():
   faq_schema={'@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':ans}} for q,ans in faq_pairs]} if faq_pairs else None
   article_tools='''<div class="article-tools" aria-label="Article actions"><button type="button" data-share>↗ Share</button><button type="button" data-copy>⧉ Copy link</button></div>'''
   article_script='''<script>(()=>{const bar=document.querySelector('[data-reading-progress] span'),article=document.querySelector('.article-content');const update=()=>{if(!bar||!article)return;const r=article.getBoundingClientRect(),top=window.scrollY+r.top,total=Math.max(1,article.scrollHeight-innerHeight*.35),p=Math.min(1,Math.max(0,(window.scrollY-top+innerHeight*.2)/total));bar.style.width=(p*100)+'%'};addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();const share=document.querySelector('[data-share]');share?.addEventListener('click',async()=>{try{if(navigator.share)await navigator.share({title:document.title,text:document.querySelector('.article-description')?.textContent||'',url:location.href});else await navigator.clipboard.writeText(location.href)}catch(e){}});const copy=document.querySelector('[data-copy]');copy?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);const old=copy.textContent;copy.textContent='✓ Copied';setTimeout(()=>copy.textContent=old,1600)}catch(e){copy.textContent='Copy unavailable'}})})();</script>'''
-  body=f'''<div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div><div class="article-wrap"><article><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / {esc(a["title"])}</nav><header class="article-header"><p class="eyebrow">{esc(a["category"])} · ~{mins} min read</p><h1>{esc(a["title"])}</h1><p class="article-description">{esc(a["description"])}</p><div class="article-meta">By {esc(a["author"])} · Published {a["date"]} · Updated {a["updated"]}</div>{article_tools}</header>{toc_html}<div class="article-content">{article_html}</div></article><section class="related-section"><div class="section-head"><div><p class="eyebrow">KEEP READING</p><h2>Related articles</h2><p>More from {esc(a["category"])} and nearby topics.</p></div><a href="/blog/">View all →</a></div><div class="post-grid">{related_html}</div></section></div>'''
+  body=f'''<div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div><div class="article-wrap"><article><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / {esc(a["title"])}</nav><header class="article-header"><p class="eyebrow">{esc(a["category"])} · ~{mins} min read</p><h1>{esc(a["title"])}</h1><p class="article-description">{esc(a["description"])}</p><div class="article-meta">By {esc(a["author"])} · Published {a["date"]} · Updated {a["updated"]}</div>{article_tools}</header>{toc_html}<div class="article-topics"><span>Topics</span>{''.join(f'<a href="/topics/{t["slug"]}/">{esc(t["name"])}</a>' for t in topics)}</div><div class="article-content">{article_html}</div></article><section class="related-section"><div class="section-head"><div><p class="eyebrow">KEEP READING</p><h2>Related articles</h2><p>More from {esc(a["category"])} and nearby topics.</p></div><a href="/blog/">View all →</a></div><div class="post-grid">{related_html}</div></section></div>'''
   og_image=write_og_svg(a['title'],a['slug'],a['description'])
   body += article_script
   schema_extra={'datePublished':a['date'],'dateModified':a['updated'],'breadcrumb':breadcrumbs,'image':{'@type':'ImageObject','url':og_image,'width':1200,'height':630},'mainEntityOfPage':{'@type':'WebPage','@id':url},'publisher':{'@type':'Person','name':'Laxman Nepal','url':BASE+'/about/'}}
