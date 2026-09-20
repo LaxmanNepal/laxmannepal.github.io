@@ -1,4 +1,4 @@
-import { loadBloggerPosts } from "@/lib/content";
+import { getAllContent, loadBloggerPosts } from "@/lib/content";
 import { ArchiveCards, sectionPosts, sectionPostsMany } from "@/lib/section-content";
 import BlogArchive from "@/app/blog-archive";
 
@@ -27,6 +27,18 @@ const topics = [
 
 export default function HomePage() {
   const posts = loadBloggerPosts();
+  const allContent = getAllContent();
+  const latest = [...allContent].sort((a,b)=>new Date(b.published||b.updated||0).getTime()-new Date(a.published||a.updated||0).getTime()).slice(0,6);
+  const recentCutoff = Date.now() - 1000*60*60*24*120;
+  const trendingTopics = ["technology","ai","mobile","apps","productivity","nepal","creator","guides"].map(slug => {
+    const items = allContent.filter(item => (item.sections||[]).includes(slug as never));
+    const recent = items.filter(item => new Date(item.published||item.updated||0).getTime() >= recentCutoff).length;
+    return {slug, count:items.length, recent, score:recent*3+items.length};
+  }).sort((a,b)=>b.score-a.score).slice(0,5);
+  const recommended = [...allContent].filter(item => item.type !== "news").sort((a,b)=>{
+    const score = (item:typeof a) => ((item.sections||[]).length*4) + (new Date(item.published||item.updated||0).getTime()/1e12);
+    return score(b)-score(a);
+  }).slice(0,4);
 
   return (
     <main className="home">
@@ -105,6 +117,28 @@ export default function HomePage() {
           <a href="/search/">View all →</a>
         </div>
         {posts.length ? <BlogArchive posts={posts} /> : <div className="empty-card">No migrated Blogger posts were found during this build.</div>}
+      </section>
+
+
+      <section className="container home-section home-intelligence">
+        <div className="section-head">
+          <div><p className="eyebrow">CONTENT INTELLIGENCE</p><h2>What to explore next.</h2><p className="section-note">A static editorial layer generated from your article dataset — no fake views or engagement numbers.</p></div>
+          <a href="/topics/">Browse topics →</a>
+        </div>
+        <div className="intelligence-grid">
+          <div className="intelligence-panel glass">
+            <div className="feed-heading"><div><span className="tag">LATEST</span><h3>Fresh articles</h3></div><a href="/news/">All news →</a></div>
+            <div className="intel-list">{latest.map((p,i)=><a className="intel-item" href={p.path} key={p.id}><span>{String(i+1).padStart(2,"0")}</span><div><b>{p.title}</b><small>{p.published || p.updated || "Archive"} · {(p.sections||[]).slice(0,2).join(" · ")}</small></div><strong>→</strong></a>)}</div>
+          </div>
+          <div className="intelligence-panel glass">
+            <div className="feed-heading"><div><span className="tag">TRENDING TOPICS</span><h3>What’s active</h3></div><a href="/topics/">Topics →</a></div>
+            <div className="trend-list">{trendingTopics.map((t,i)=><a className="trend-item" href={"/topics/"+t.slug+"/"} key={t.slug}><span className="trend-rank">{String(i+1).padStart(2,"0")}</span><div><b>{t.slug[0].toUpperCase()+t.slug.slice(1)}</b><small>{t.recent} recent · {t.count} total articles</small></div><strong>↗</strong></a>)}</div>
+          </div>
+        </div>
+        <div className="intelligence-recommended glass">
+          <div className="feed-heading"><div><span className="tag">RECOMMENDED READING</span><h3>Useful next reads</h3></div><a href="/blog/">Full archive →</a></div>
+          <div className="post-grid">{recommended.map((p,i)=><article className="post-card" key={p.id}><div className="post-top"><span className="post-number">{String(i+1).padStart(2,"0")}</span><span className="tag">{(p.sections||["ARTICLE"])[0].toUpperCase()}</span></div><h3>{p.title}</h3><p>{p.published || p.updated || "Archive"}</p><a className="read" href={p.path}>Read article →</a></article>)}</div>
+        </div>
       </section>
 
       <section className="container home-section home-auto-section">
