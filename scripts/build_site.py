@@ -91,6 +91,16 @@ def add_heading_ids(content):
   return f'<h{level}{attrs} id="{slug}">{inner}</h{level}>'
  return re.sub(r'<h([2-6])([^>]*)>(.*?)</h\1>',repl,content,flags=re.I|re.S)
 
+def detect_faq(content):
+ pairs=[]
+ heads=re.findall(r'<h([2-6])[^>]*>(.*?)</h\\1>\\s*<p[^>]*>(.*?)</p>',content,re.I|re.S)
+ for level,q,a in heads:
+  qtext=re.sub(r'<[^>]+>',' ',q); qtext=re.sub(r'\\s+',' ',html.unescape(qtext)).strip()
+  if '?' in qtext:
+   atext=re.sub(r'<[^>]+>',' ',a); atext=re.sub(r'\\s+',' ',html.unescape(atext)).strip()
+   if atext: pairs.append((qtext,atext))
+ return pairs[:8]
+
 def build_toc(content):
  items=re.findall(r'<h([2-6])[^>]*\bid="([^"]+)"[^>]*>(.*?)</h\1>',content,re.I|re.S)
  if not items: return ''
@@ -127,13 +137,17 @@ def main():
   breadcrumbs={'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'Blog','item':BASE+'/blog/'},{'@type':'ListItem','position':3,'name':a['title'],'item':url}]}
   article_html=add_heading_ids(a['source'])
   toc=build_toc(article_html)
+  faq_pairs=detect_faq(article_html)
   toc_html=f'<aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div>{toc}</aside>' if toc else ''
+  faq_schema={'@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':ans}} for q,ans in faq_pairs]} if faq_pairs else None
   article_tools='''<div class="article-tools" aria-label="Article actions"><button type="button" data-share>↗ Share</button><button type="button" data-copy>⧉ Copy link</button></div>'''
   article_script='''<script>(()=>{const bar=document.querySelector('[data-reading-progress] span'),article=document.querySelector('.article-content');const update=()=>{if(!bar||!article)return;const r=article.getBoundingClientRect(),top=window.scrollY+r.top,total=Math.max(1,article.scrollHeight-innerHeight*.35),p=Math.min(1,Math.max(0,(window.scrollY-top+innerHeight*.2)/total));bar.style.width=(p*100)+'%'};addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();const share=document.querySelector('[data-share]');share?.addEventListener('click',async()=>{try{if(navigator.share)await navigator.share({title:document.title,text:document.querySelector('.article-description')?.textContent||'',url:location.href});else await navigator.clipboard.writeText(location.href)}catch(e){}});const copy=document.querySelector('[data-copy]');copy?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);const old=copy.textContent;copy.textContent='✓ Copied';setTimeout(()=>copy.textContent=old,1600)}catch(e){copy.textContent='Copy unavailable'}})})();</script>'''
   body=f'''<div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div><div class="article-wrap"><article><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / {esc(a["title"])}</nav><header class="article-header"><p class="eyebrow">{esc(a["category"])} · ~{mins} min read</p><h1>{esc(a["title"])}</h1><p class="article-description">{esc(a["description"])}</p><div class="article-meta">By {esc(a["author"])} · Published {a["date"]} · Updated {a["updated"]}</div>{article_tools}</header>{toc_html}<div class="article-content">{article_html}</div></article><section class="related-section"><div class="section-head"><div><p class="eyebrow">KEEP READING</p><h2>Related articles</h2><p>More from {esc(a["category"])} and nearby topics.</p></div><a href="/blog/">View all →</a></div><div class="post-grid">{related_html}</div></section></div>'''
   og_image=write_og_svg(a['title'],a['slug'],a['description'])
   body += article_script
-  d=OUT/a['slug']; d.mkdir(parents=True,exist_ok=True); (d/'index.html').write_text(shell(a['title'],a['description'],url,body,'Article',{'datePublished':a['date'],'dateModified':a['updated'],'breadcrumb':breadcrumbs,'image':og_image},og_image),encoding='utf-8')
+  schema_extra={'datePublished':a['date'],'dateModified':a['updated'],'breadcrumb':breadcrumbs,'image':{'@type':'ImageObject','url':og_image,'width':1200,'height':630},'mainEntityOfPage':{'@type':'WebPage','@id':url},'publisher':{'@type':'Person','name':'Laxman Nepal','url':BASE+'/about/'}}
+  if faq_schema: schema_extra['subjectOf']=faq_schema
+  d=OUT/a['slug']; d.mkdir(parents=True,exist_ok=True); (d/'index.html').write_text(shell(a['title'],a['description'],url,body,'Article',schema_extra,og_image),encoding='utf-8')
   if a.get('legacy_path'): migration.append({'old_path':a['legacy_path'],'old_url':a.get('original_url',''),'new_path':'/blog/'+a['slug']+'/','new_url':url,'title':a['title']})
  cards=''.join(f'<article class="post-card"><p class="eyebrow">{esc(a["category"])} · {a["date"]}</p><h2><a href="/blog/{a["slug"]}/">{esc(a["title"])}</a></h2><p>{esc(a["description"])}</p><a class="text-link" href="/blog/{a["slug"]}/">Read article →</a></article>' for a in articles)
  article_cards=cards or "<p>No articles published yet.</p>"
