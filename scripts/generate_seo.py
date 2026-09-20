@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate static discovery files for the Next.js GitHub Pages build."""
+"""Generate static discovery files for the GitHub Pages build."""
 from __future__ import annotations
 
 import json
@@ -11,6 +11,13 @@ MANIFEST = ROOT / ".blogger-migration.json"
 PUBLIC = ROOT / "nextjs-foundation" / "public"
 BASE = "https://laxmannepal.com.np"
 
+# Search-result pages should be crawlable for navigation but not indexed.
+INDEXABLE_STATIC_PATHS = [
+    "/", "/en/", "/ne/", "/hi/", "/languages/",
+    "/news/", "/reviews/", "/guides/", "/products/",
+    "/compare/", "/tools/", "/ai/", "/youtube/",
+]
+
 def load_posts():
     if not MANIFEST.exists():
         return []
@@ -21,19 +28,17 @@ def main():
     PUBLIC.mkdir(parents=True, exist_ok=True)
     posts = load_posts()
 
-    static_paths = [
-        "/", "/en/", "/ne/", "/hi/", "/languages/",
-        "/news/", "/reviews/", "/guides/", "/products/",
-        "/compare/", "/tools/", "/ai/", "/youtube/", "/search/",
-    ]
     urls = []
-    for path in static_paths + [p["path"] for p in posts]:
+    for path in INDEXABLE_STATIC_PATHS + [p["path"] for p in posts]:
+        if path.startswith("/old/") or path.startswith("/scripts/") or path.startswith("/search/"):
+            continue
         if path not in urls:
             urls.append(path)
 
     items = []
     for path in urls:
         items.append(f"  <url><loc>{escape(BASE + path)}</loc></url>")
+
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n' + (
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "\n".join(items)
@@ -41,7 +46,13 @@ def main():
     )
     (PUBLIC / "sitemap.xml").write_text(sitemap, encoding="utf-8")
 
-    robots = "User-agent: *\nAllow: /\n\nSitemap: " + BASE + "/sitemap.xml\n"
+    robots = (
+        "User-agent: *\n"
+        "Allow: /\n"
+        "Disallow: /old/\n"
+        "Disallow: /scripts/\n"
+        "\nSitemap: " + BASE + "/sitemap.xml\n"
+    )
     (PUBLIC / "robots.txt").write_text(robots, encoding="utf-8")
 
     feed_items = []
@@ -58,6 +69,7 @@ def main():
             f"{pub}"
             "</item>"
         )
+
     rss = '<?xml version="1.0" encoding="UTF-8"?>\n' + (
         '<rss version="2.0"><channel>'
         "<title>Laxman Nepal</title>"
