@@ -1,5 +1,2 @@
-import { getAllContent } from "@/lib/content";
-export default function Page(){
- const posts=getAllContent().filter(p=>/phone|mobile|iphone|xiaomi|redmi|samsung|pixel|oneplus/i.test((p.title||"")+" "+p.tags.join(" "))).slice(0,30);
- return <main className="container page"><p className="eyebrow">PHONES</p><h1>Phones</h1><p className="muted">Phone guides, comparisons, prices and smartphone resources from the archive.</p><div className="post-grid">{posts.map((p,i)=><a className="post-card" key={p.id} href={p.path}><span className="post-number">{String(i+1).padStart(2,"0")}</span><h3>{p.title}</h3><p>Phone resource · {p.published?.slice(0,10)||"Archive"}</p><span className="read">Explore →</span></a>)}</div></main>;
-}
+import { ArchiveCards, sectionPosts } from "@/lib/section-content";
+export default function Page(){const posts=sectionPosts(["phone","mobile","iphone","xiaomi","redmi","samsung","pixel","oneplus"],30);return <main className="container page"><p className="eyebrow">PHONES</p><h1>Phones, specs & buying information</h1><p className="muted">Automatically surfaced phone content from the Laxman Nepal archive.</p><div className="section-head" style={{marginTop:38}}><div><h2>Latest from the archive</h2><p className="section-note">{posts.length} articles available</p></div></div><ArchiveCards posts={posts} tag="PHONES"/></main>}
