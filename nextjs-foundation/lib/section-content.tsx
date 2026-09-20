@@ -1,14 +1,6 @@
-import { getAllContent } from "@/lib/content";
+import type { ContentItem, ContentSection } from "@/lib/content-model";
+import { getAllContent, getContentBySection } from "@/lib/content";
 
-export function sectionPosts(keywords:string[], limit=24){
-  const all=getAllContent();
-  const matches=all.filter(p=>keywords.some(k=>((p.title||"")+" "+p.tags.join(" ")).toLowerCase().includes(k.toLowerCase())));
-  return (matches.length?matches:all).slice(0,limit);
-}
-export function ArchiveCards({posts,tag="ARTICLE"}:{posts:any[],tag?:string}){
-  return <div className="post-grid">{posts.map((p:any,i:number)=><article className="post-card" key={p.id}>
-    <div className="post-top"><span className="post-number">{String(i+1).padStart(2,"0")}</span><span className="tag">{tag}</span></div>
-    <h3>{p.title}</h3><p>{p.published?new Intl.DateTimeFormat("en",{year:"numeric",month:"short",day:"numeric"}).format(new Date(p.published)):"Archive"}</p>
-    <a className="read" href={p.path}>Read article →</a>
-  </article>)}</div>
-}
+export function sectionPosts(section:ContentSection,limit=24):ContentItem[]{return getContentBySection(section,limit);}
+export function sectionPostsMany(sections:ContentSection[],limit=24):ContentItem[]{const wanted=new Set(sections);return getAllContent().filter(p=>(p.sections||[p.section||"general"]).some(s=>wanted.has(s))).sort((a,b)=>new Date(b.published||b.updated||0).getTime()-new Date(a.published||a.updated||0).getTime()).slice(0,limit);}
+export function ArchiveCards({posts,tag="ARTICLE"}:{posts:ContentItem[],tag?:string}){return <div className="post-grid">{posts.map((p,i)=><article className="post-card" key={p.id}><div className="post-top"><span className="post-number">{String(i+1).padStart(2,"0")}</span><span className="tag">{tag}</span></div><h3>{p.title}</h3><p>{p.published?new Intl.DateTimeFormat("en",{year:"numeric",month:"short",day:"numeric"}).format(new Date(p.published)):"Archive"}</p><a className="read" href={p.path}>Read article →</a></article>)}</div>}
