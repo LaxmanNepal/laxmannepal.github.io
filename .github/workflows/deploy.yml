@@ -78,7 +78,7 @@ jobs:
 
           # Start with the generated static site so legacy Blogger URLs always survive.
           find . -maxdepth 1 -type f -not -name '.blogger-migration.json' -not -name 'CNAME' -not -name '404.html' -print0 | xargs -0 -r -I{} cp --parents "{}" .pages/
-          for dir in assets 2022 2023 2024 2025 2026 apps ai blog compare guides laptops news phones products reviews search tools youtube en ne hi Drumkit; do
+          for dir in assets 2022 2023 2024 2025 2026 apps ai blog compare guides laptops news phones products reviews search tools youtube en ne hi Drumkit analytics; do
             if [ -d "$dir" ]; then cp -R "$dir" .pages/; fi
           done
 
