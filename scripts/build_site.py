@@ -188,6 +188,7 @@ def topic_page(topic, posts):
  return url,shell(topic['name'],topic['description'],url,body,'CollectionPage',schema)
 
 def related_articles(current, articles, limit=4):
+ current_topics={t['slug'] for t in article_topics(current)}
  terms=set(re.findall(r'[a-z0-9]+', (current.get('title','')+' '+current.get('category','')).lower()))
  scored=[]
  for item in articles:
@@ -208,6 +209,17 @@ def write_og_svg(title,slug,description):
 
 def main():
  articles=load_articles(); OUT.mkdir(parents=True,exist_ok=True); migration=[]
+ signals=editorial_signals(articles)
+ gaps=content_gaps(articles)
+ insights={
+  'generated_at':datetime.now(timezone.utc).isoformat(),
+  'articles_total':len(articles),
+  'fresh_articles_120d':sum(1 for s in signals.values() if s['freshness']>0),
+  'topics':[{'slug':t['slug'],'name':t['name'],'article_count':sum(1 for a in articles if t['slug'] in signals.get(a['slug'],{}).get('topics',set())),'fresh_count':sum(1 for a in articles if t['slug'] in signals.get(a['slug'],{}).get('topics',set()) and signals[a['slug']]['freshness']>0)} for t in TOPICS],
+  'content_gaps':[{'slug':slug,'article_count':count} for count,slug in gaps]
+ }
+ (ROOT/'data'/'content-insights.json').write_text(json.dumps(insights,ensure_ascii=False,indent=2),encoding='utf-8')
+
  for a in articles:
   url=f'{BASE}/blog/{a["slug"]}/'; mins=max(1,round(len(re.findall(r'\b[\w’\'-]+\b',a['source']))/220))
   related=related_articles(a,articles,4)
