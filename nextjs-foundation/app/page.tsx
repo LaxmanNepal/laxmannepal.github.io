@@ -1,4 +1,5 @@
 import { loadBloggerPosts } from "@/lib/content";
+import { ArchiveCards, sectionPosts } from "@/lib/section-content";
 import BlogArchive from "@/app/blog-archive";
 
 
@@ -104,6 +105,29 @@ export default function HomePage() {
           <a href="/search/">View all →</a>
         </div>
         {posts.length ? <BlogArchive posts={posts} /> : <div className="empty-card">No migrated Blogger posts were found during this build.</div>}
+      </section>
+
+      <section className="container home-section home-auto-section">
+        <div className="section-head">
+          <div><p className="eyebrow">AUTOMATIC HUB</p><h2>Fresh from the archive.</h2><p className="section-note">These sections update automatically from your existing content.</p></div>
+          <a href="/content/">Explore content hub →</a>
+        </div>
+        <div className="home-feed-block">
+          <div className="feed-heading"><div><span className="tag">NEWS</span><h3>Latest technology</h3></div><a href="/news/">View all →</a></div>
+          <ArchiveCards posts={sectionPosts(["news","technology","update","launch","ai","software"],6)} tag="NEWS"/>
+        </div>
+        <div className="home-feed-block">
+          <div className="feed-heading"><div><span className="tag">PHONES</span><h3>Phones & mobile</h3></div><a href="/phones/">View all →</a></div>
+          <ArchiveCards posts={sectionPosts(["phone","mobile","iphone","xiaomi","redmi","samsung","pixel","oneplus"],6)} tag="PHONES"/>
+        </div>
+        <div className="home-feed-block">
+          <div className="feed-heading"><div><span className="tag">NEPAL MARKET</span><h3>Mobile prices & buying</h3></div><a href="/mobile-prices-in-nepal/">View all →</a></div>
+          <ArchiveCards posts={sectionPosts(["price","nepal","cost","buy","mobile","phone"],6)} tag="PRICES"/>
+        </div>
+        <div className="home-feed-block">
+          <div className="feed-heading"><div><span className="tag">GUIDES & REVIEWS</span><h3>Learn and decide</h3></div><a href="/guides/">View guides →</a></div>
+          <ArchiveCards posts={sectionPosts(["guide","how","tutorial","review","reviews","best","comparison"],6)} tag="GUIDES"/>
+        </div>
       </section>
 
       <section className="container home-section">
