@@ -1,0 +1,23 @@
+:root {
+  color-scheme: dark; --bg:#080b13; --panel:rgba(20,26,40,.72); --border:rgba(255,255,255,.12);
+  --text:#f7f9ff; --muted:#aeb8cb; --button:rgba(255,255,255,.06); --shadow:0 24px 70px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box} html{min-height:100%}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;color:var(--text);
+background:radial-gradient(circle at 15% 15%,rgba(124,92,255,.22),transparent 34%),radial-gradient(circle at 85% 80%,rgba(255,59,129,.18),transparent 32%),var(--bg);
+font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.app{width:min(1100px,100%);padding:clamp(24px,5vw,52px);border:1px solid var(--border);border-radius:32px;background:var(--panel);box-shadow:var(--shadow);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+.hero{text-align:center}.eyebrow{display:inline-block;margin-bottom:10px;color:#c8c1ff;font-size:.72rem;font-weight:800;letter-spacing:.18em}
+h1{margin:0;font-family:Arvo,Georgia,serif;font-size:clamp(3rem,8vw,6rem);line-height:1;letter-spacing:-.04em;text-shadow:0 8px 40px rgba(124,92,255,.25)}
+.hero p{margin:18px auto 0;max-width:650px;color:var(--muted);font-size:clamp(.9rem,2vw,1rem)}
+kbd{display:inline-flex;min-width:1.55em;justify-content:center;padding:.15em .4em;margin:0 .08em;border:1px solid var(--border);border-bottom-width:2px;border-radius:6px;color:var(--text);background:rgba(255,255,255,.08);font:700 .78em Inter,sans-serif}
+.kit{display:grid;grid-template-columns:repeat(7,minmax(90px,1fr));gap:14px;margin:clamp(30px,6vw,60px) auto 24px}
+.drum{position:relative;min-height:150px;padding:16px 10px;border:1px solid var(--border);border-radius:22px;color:var(--text);background-color:var(--button);background-size:82px;background-position:center 24px;background-repeat:no-repeat;cursor:pointer;touch-action:manipulation;user-select:none;-webkit-tap-highlight-color:transparent;transition:transform .09s ease,box-shadow .09s ease,border-color .09s ease,background-color .09s ease;box-shadow:inset 0 1px rgba(255,255,255,.08)}
+.drum:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.25);background-color:rgba(255,255,255,.1)}
+.drum:focus-visible{outline:3px solid rgba(124,92,255,.9);outline-offset:3px}.drum.pressed{transform:translateY(3px) scale(.96);border-color:rgba(255,255,255,.4);background-color:rgba(255,255,255,.14);box-shadow:0 0 0 5px rgba(255,255,255,.06),0 12px 30px rgba(124,92,255,.22)}
+.drum .key{position:absolute;left:12px;top:10px;font:800 .8rem Inter,sans-serif;opacity:.65}.drum .name{position:absolute;right:12px;bottom:12px;left:12px;font-size:.76rem;font-weight:700;text-align:center;text-transform:uppercase;letter-spacing:.08em;text-shadow:0 2px 8px #000}
+.w{background-image:url("https://raw.githubusercontent.com/LaxmanNepal/Drumkit/main/images/crash.png")}.a{background-image:url("https://raw.githubusercontent.com/LaxmanNepal/Drumkit/main/images/kick.png")}.s{background-image:url("https://raw.githubusercontent.com/LaxmanNepal/Drumkit/main/images/snare.png")}.d{background-image:url("https://raw.githubusercontent.com/LaxmanNepal/Drumkit/main/images/tom1.png")}.j{background-image:url("https://raw.githubusercontent.com/LaxmanNepal/Drumkit/main/images/tom2.png")}.k{background-image:url("https://raw.githubusercontent.com/LaxmanNepal/Drumkit/main/images/tom3.png")}.l{background-image:url("https://raw.githubusercontent.com/LaxmanNepal/Drumkit/main/images/tom4.png")}
+.status{display:flex;align-items:center;justify-content:center;gap:8px;color:var(--muted);font-size:.82rem}.status-dot{width:8px;height:8px;border-radius:50%;background:#48e6a1;box-shadow:0 0 14px #48e6a1}
+footer{margin-top:18px;color:#7f899c;font-size:.78rem;text-align:center}footer a{color:#b9b1ff;text-decoration:none}footer a:hover{text-decoration:underline}
+@media(max-width:850px){.kit{grid-template-columns:repeat(4,1fr)}}@media(max-width:520px){body{padding:12px;justify-content:flex-start}.app{margin-top:10px;padding:24px 14px;border-radius:24px}.kit{grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}.drum{min-height:135px;background-size:70px}.drum .name{font-size:.68rem}.hero p{line-height:1.7}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
