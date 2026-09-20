@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101522">
+  <meta name="description" content="Play a responsive virtual drum kit with your keyboard, mouse, or touch screen.">
+  <title>Drum Kit — Laxman Nepal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <span class="eyebrow">VIRTUAL DRUM KIT</span>
+      <h1 id="title">Drum <span>🥁</span> Kit</h1>
+      <p>Tap a drum or press <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> to play.</p>
+    </header>
+    <section class="kit" aria-label="Drum kit">
+      <button class="drum w" data-key="w" aria-label="Crash, W key"><span class="key">W</span><span class="name">Crash</span></button>
+      <button class="drum a" data-key="a" aria-label="Kick, A key"><span class="key">A</span><span class="name">Kick</span></button>
+      <button class="drum s" data-key="s" aria-label="Snare, S key"><span class="key">S</span><span class="name">Snare</span></button>
+      <button class="drum d" data-key="d" aria-label="Tom 1, D key"><span class="key">D</span><span class="name">Tom 1</span></button>
+      <button class="drum j" data-key="j" aria-label="Tom 2, J key"><span class="key">J</span><span class="name">Tom 2</span></button>
+      <button class="drum k" data-key="k" aria-label="Tom 3, K key"><span class="key">K</span><span class="name">Tom 3</span></button>
+      <button class="drum l" data-key="l" aria-label="Tom 4, L key"><span class="key">L</span><span class="name">Tom 4</span></button>
+    </section>
+    <div class="status" aria-live="polite"><span class="status-dot"></span><span id="statusText">Ready to play</span></div>
+  </main>
+  <footer>Made with ❤️ by <a href="https://laxmannepal.com.np/" target="_blank" rel="noopener">Laxman Nepal</a></footer>
+  <script src="./index.js"></script>
+</body>
+</html>
