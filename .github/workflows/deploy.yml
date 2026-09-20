@@ -25,6 +25,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Protect source homepage
+        run: |
+          test -f index.html
+          grep -q 'Useful tools.' index.html
+          grep -q 'All-in-One Free Online Tools by Laxman Nepal' index.html
+          cp index.html /tmp/laxman-root-homepage.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build SEO content and portal
@@ -63,6 +69,7 @@ jobs:
         continue-on-error: true
         working-directory: nextjs-foundation
         run: |
+          rm -rf out
           npm install
           npm run build
       - name: Assemble Pages artifact
@@ -70,18 +77,18 @@ jobs:
           rm -rf .pages
           mkdir -p .pages
 
-          # Start with the generated static site so legacy Blogger URLs always survive.
           find . -maxdepth 1 -type f -not -name '.blogger-migration.json' -not -name 'CNAME' -not -name '404.html' -print0 | xargs -0 -r -I{} cp --parents "{}" .pages/
           for dir in assets 2022 2023 2024 2025 2026 apps ai blog compare guides laptops news phones products reviews search tools youtube en ne hi Drumkit analytics; do
             if [ -d "$dir" ]; then cp -R "$dir" .pages/; fi
           done
 
-          # Overlay the modern Next.js site when its export exists.
           if [ -f nextjs-foundation/out/index.html ]; then
             cp -R nextjs-foundation/out/. .pages/
           fi
 
-          # Preserve migrated Blogger .html URLs exactly as published.
+          # Root homepage is owned by the committed root index.html.
+          cp /tmp/laxman-root-homepage.html .pages/index.html
+
           python3 - <<'PY'
           import json, shutil
           from pathlib import Path
@@ -107,6 +114,7 @@ jobs:
           test -f .pages/index.html
           grep -q 'Useful tools.' .pages/index.html
           grep -q 'All-in-One Free Online Tools by Laxman Nepal' .pages/index.html
+          ! grep -q 'Technology that helps you do more' .pages/index.html
 
       - name: Optimize every published page for SEO
         run: python3 scripts/optimize_published_seo.py
