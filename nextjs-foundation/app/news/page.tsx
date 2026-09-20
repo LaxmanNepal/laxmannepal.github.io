@@ -1,3 +1,5 @@
-import type { Metadata } from "next"; import { getAllContent } from "@/lib/content";
-export const metadata: Metadata={title:"News — Technology News",description:"Latest technology, AI, software, phone and digital news from Laxman Nepal."};
-export default function Page(){const posts=getAllContent().filter(p=>p.type==="news"||/news|update|launch|technology|ai/i.test(p.title||"")).slice(0,30);return <main className="container page"><p className="eyebrow">NEWS</p><h1>Latest technology news</h1><p className="muted">News automatically appears here from the content archive.</p><div className="post-grid">{posts.map((p,i)=><article className="post-card" key={p.id}><span className="post-number">{String(i+1).padStart(2,"0")}</span><div><span className="tag">NEWS</span><h3>{p.title}</h3><p className="muted">{p.published?.slice(0,10)||"Archive"}</p><a href={p.path}>Read article →</a></div></article>)}</div></main>}
+import { ArchiveCards, sectionPosts } from "@/lib/section-content";
+export default function Page(){
+ const posts=sectionPosts(["news","technology","launch","update","ai","phone","laptop"],30);
+ return <main className="container page"><p className="eyebrow">NEWS</p><h1>Latest technology news</h1><p className="muted">Phone launches, Nepal gadget prices, AI tools, software, apps and technology updates.</p><div className="section-head" style={{marginTop:38}}><div><h2>Latest from the archive</h2><p className="section-note">{posts.length} articles available</p></div></div><ArchiveCards posts={posts} tag="NEWS"/></main>
+}
