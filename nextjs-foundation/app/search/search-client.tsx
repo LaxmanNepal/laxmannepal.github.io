@@ -1,10 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import type { BloggerPost } from "@/lib/content";
 
 export default function SearchClient({ posts }: { posts: BloggerPost[] }) {
-  const [query, setQuery] = useState("");
+  const params = useSearchParams();
+  const [query, setQuery] = useState(() => params.get("q") || "");
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return posts.slice(0, 12);
