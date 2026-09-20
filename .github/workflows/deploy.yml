@@ -48,18 +48,12 @@ jobs:
       - name: Inject homepage tools
         if: always()
         run: python3 scripts/inject_home_tools.py
-      - name: Build unified main homepage
-        if: always()
-        run: python3 scripts/build_main_platform_home.py
-      - name: Verify unified homepage
+      - name: Protect committed homepage
         if: always()
         run: |
           test -f index.html
-          test -f assets/css/main-platform.css
-          grep -q 'Technology that helps you' index.html
-          grep -q 'TECH DATABASE' index.html
-          grep -q 'FREE TOOLS + AI' index.html
-          grep -q 'YOUTUBE INTELLIGENCE' index.html
+          grep -q 'Useful tools.' index.html
+          grep -q 'All-in-One Free Online Tools by Laxman Nepal' index.html
       - name: Apply modern Blogger article template
         run: python3 scripts/modernize_blogger_articles.py
       - name: Generate static SEO discovery files
@@ -107,6 +101,12 @@ jobs:
 
           if [ -f CNAME ]; then cp CNAME .pages/CNAME; fi
           touch .pages/.nojekyll
+
+      - name: Verify published homepage
+        run: |
+          test -f .pages/index.html
+          grep -q 'Useful tools.' .pages/index.html
+          grep -q 'All-in-One Free Online Tools by Laxman Nepal' .pages/index.html
 
       - name: Optimize every published page for SEO
         run: python3 scripts/optimize_published_seo.py
