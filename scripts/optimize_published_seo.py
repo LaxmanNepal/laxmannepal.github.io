@@ -9,7 +9,7 @@ SITE = "https://laxmannepal.com.np"
 GA4_ID = "G-VG1MHSYGQ0"
 PAGES = ROOT / ".pages"
 
-NOINDEX_PARTS = ("/old/", "/scripts/", "/search/")
+NOINDEX_PARTS = ("/old/", "/scripts/", "/search/", "/analytics/")
 
 ANALYTICS = f"""<!-- Laxman Nepal GA4 analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>
