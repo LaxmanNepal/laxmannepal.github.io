@@ -1,8 +1,10 @@
 from pathlib import Path
 import re
+import json
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.html"
+MANIFEST = ROOT / ".blogger-migration.json"
 SHARED_CSS = "/assets/css/shared-shell.css"
 
 HEADER = r'''<header class="shared-header" data-shared-shell="header">
@@ -25,8 +27,34 @@ def replace_once(text, pattern, replacement):
         raise RuntimeError(f"Required homepage element not found: {pattern}")
     return new
 
+def apply_shell(path: Path):
+    text = path.read_text(encoding="utf-8")
+    if SHARED_CSS not in text:
+        text = text.replace('</head>', f'<link rel="stylesheet" href="{SHARED_CSS}">\\n</head>', 1)
+    # Remove previously injected shell.
+    text = re.sub(r'<header\\s+class=["\\']shared-header["\\'].*?</header>', '', text, count=1, flags=re.I | re.S)
+    text = re.sub(r'<nav\\s+class=["\\']shared-mobile-menu["\\'].*?<div\\s+class=["\\']shared-menu-backdrop["\\']></div>', '', text, count=1, flags=re.I | re.S)
+    text = re.sub(r'<footer\\s+class=["\\']shared-footer["\\'].*?</footer>', '', text, count=1, flags=re.I | re.S)
+    text = text.replace('<body>', '<body>' + HEADER, 1) if 'data-shared-shell="header"' not in text else text
+    text = text.replace('</body>', FOOTER + SCRIPT + '\\n</body>', 1) if 'data-shared-shell="footer"' not in text else text
+    text = re.sub(r'<link[^>]+shared-shell\\.css[^>]*>', '', text, count=1, flags=re.I)
+    text = text.replace('</head>', f'<link rel="stylesheet" href="{SHARED_CSS}">\\n</head>', 1)
+    path.write_text(text, encoding="utf-8")
+
 def main():
-    text = INDEX.read_text(encoding="utf-8")
+    paths = [INDEX]
+    if MANIFEST.exists():
+        try:
+            data = json.loads(MANIFEST.read_text(encoding="utf-8"))
+            paths += [ROOT / str(p.get("path","")).lstrip("/") for p in data.get("posts",[])
+                      if str(p.get("path","")).lstrip("/").startswith(("2024/","2025/","2026/"))]
+        except Exception:
+            pass
+    seen=set()
+    for path in paths:
+        if path in seen or not path.is_file(): continue
+        seen.add(path)
+        apply_shell(path)
     if SHARED_CSS not in text:
         text = text.replace('</head>', f'<link rel="stylesheet" href="{SHARED_CSS}">\n</head>', 1)
     text = re.sub(r'<header\s+class=["\']shared-header["\'].*?</header>', '', text, count=1, flags=re.I | re.S)
