@@ -150,7 +150,15 @@ jobs:
             echo
             cat /tmp/seo-pr-body.md
           } > /tmp/final-pr-body.md
-          gh pr create --base main --head "$BRANCH" --title "SEO: improve $PATH_VALUE" --body-file /tmp/final-pr-body.md
+          PR_URL=$(gh pr create --base main --head "$BRANCH" --title "SEO: improve $PATH_VALUE" --body-file /tmp/final-pr-body.md)
+          echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Add PR validation comment
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_URL: ${{ steps.commit.outputs.pr_url }}
+        run: gh pr comment "$PR_URL" --body-file /tmp/seo-pr-body.md
 
       - name: Comment on source issue
         if: always()
@@ -158,9 +166,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           ISSUE: ${{ github.event.issue.number }}
           CHANGED: ${{ steps.diff.outputs.changed }}
+          PR_URL: ${{ steps.commit.outputs.pr_url }}
         run: |
           if [ "$CHANGED" = "true" ]; then
-            gh issue comment "$ISSUE" --body "✅ SEO Fix Center created a reviewable pull request. Please review the PR before merging."
+            gh issue comment "$ISSUE" --body "✅ SEO Fix Center created a reviewable pull request: $PR_URL. The PR includes before/after SEO evidence and automated validation. Please review before merging."
           else
             gh issue comment "$ISSUE" --body "ℹ️ SEO Fix Center found no file changes to apply. The proposed values may already match the page."
           fi
