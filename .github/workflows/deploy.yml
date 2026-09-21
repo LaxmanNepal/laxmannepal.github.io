@@ -115,6 +115,9 @@ jobs:
           if [ -f CNAME ]; then cp CNAME .pages/CNAME; fi
           touch .pages/.nojekyll
 
+      - name: Apply shared shell to final Pages artifact
+        run: SHELL_ROOT=.pages python3 scripts/apply_laxman_shared_shell.py
+
       - name: Verify published homepage
         run: |
           test -f .pages/index.html
