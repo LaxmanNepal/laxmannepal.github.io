@@ -62,6 +62,9 @@ jobs:
           grep -q 'All-in-One Free Online Tools by Laxman Nepal' index.html
       - name: Apply modern Blogger article template
         run: python3 scripts/modernize_blogger_articles.py
+      - name: Apply shared shell to Blogger articles
+        run: python3 scripts/apply_laxman_shared_shell.py
+
       - name: Upgrade migrated Blogger article CSS
         run: python3 scripts/upgrade_blogger_responsive.py
 
