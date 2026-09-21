@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Premium YouTube creator tools by Laxman Nepal — analytics, SEO, tags, titles, thumbnails, channel insights and more.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://laxmannepal.com.np/youtube-tools/">
+<meta property="og:title" content="YouTube Tools — Laxman Nepal">
+<meta property="og:description" content="A premium hub for practical YouTube creator tools.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://laxmannepal.com.np/youtube-tools/">
+<title>YouTube Tools — Creator Suite | Laxman Nepal</title>
+<link rel="stylesheet" href="/assets/css/shared-shell.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{
+ --yt-bg:#06070b;--yt-panel:rgba(16,18,25,.78);--yt-panel2:#10131b;--yt-line:rgba(255,255,255,.09);
+ --yt-text:#f8fafc;--yt-muted:#98a2b3;--yt-red:#ff1744;--yt-red2:#ff4d67;--yt-green:#38d996;
+ --yt-shadow:0 24px 70px rgba(0,0,0,.35);--yt-radius:24px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+ radial-gradient(circle at 10% 0%,rgba(255,23,68,.13),transparent 30rem),
+ radial-gradient(circle at 90% 10%,rgba(98,75,255,.12),transparent 28rem),
+ var(--yt-bg);color:var(--yt-text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.shared-header{position:relative;z-index:20}
+.yt-shell{max-width:1240px;margin:auto;padding:30px 20px 70px}
+.yt-hero{position:relative;overflow:hidden;border:1px solid var(--yt-line);border-radius:32px;padding:54px 42px 42px;background:
+ linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.015)),rgba(9,11,17,.78);
+ box-shadow:var(--yt-shadow);backdrop-filter:blur(24px)}
+.yt-orb{position:absolute;width:420px;height:420px;border-radius:50%;right:-160px;top:-230px;background:radial-gradient(circle,rgba(255,23,68,.27),transparent 68%);pointer-events:none}
+.yt-kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(255,23,68,.28);border-radius:999px;background:rgba(255,23,68,.08);color:#ff8093;font-size:.73rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
+.yt-kicker i{font-size:.75rem}
+.yt-hero h1{font-size:clamp(2.25rem,5vw,4.7rem);line-height:.98;letter-spacing:-.055em;max-width:850px;margin:18px 0 16px}
+.yt-hero h1 span{background:linear-gradient(90deg,#fff,#ff6c82);-webkit-background-clip:text;background-clip:text;color:transparent}
+.yt-hero p{max-width:760px;margin:0;color:#aeb6c5;font-size:1rem;line-height:1.7}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.hero-btn{display:inline-flex;align-items:center;gap:9px;padding:12px 17px;border-radius:13px;text-decoration:none;font-size:.82rem;font-weight:850;border:1px solid var(--yt-line);color:#fff;background:rgba(255,255,255,.055);transition:.2s}
+.hero-btn.primary{background:var(--yt-red);border-color:var(--yt-red);box-shadow:0 10px 28px rgba(255,23,68,.25)}
+.hero-btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.hero-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.hero-stat{min-width:125px;padding:12px 14px;border:1px solid var(--yt-line);border-radius:15px;background:rgba(0,0,0,.18)}
+.hero-stat strong{display:block;font-size:1.08rem}.hero-stat span{display:block;margin-top:2px;color:var(--yt-muted);font-size:.68rem}
+.toolbar{position:sticky;top:10px;z-index:10;margin:18px 0;padding:10px;border:1px solid var(--yt-line);border-radius:18px;background:rgba(8,10,15,.82);backdrop-filter:blur(20px);display:flex;gap:8px;align-items:center;box-shadow:0 14px 45px rgba(0,0,0,.18)}
+.search{position:relative;flex:1;min-width:180px}.search i{position:absolute;left:14px;top:13px;color:#697386;font-size:.9rem}.search input{width:100%;height:40px;border:1px solid var(--yt-line);background:#0e1118;color:#fff;border-radius:12px;padding:0 40px 0 39px;outline:none}.search input:focus{border-color:rgba(255,23,68,.5);box-shadow:0 0 0 3px rgba(255,23,68,.09)}.kbd{position:absolute;right:9px;top:8px;border:1px solid var(--yt-line);border-radius:6px;color:#7f8999;padding:3px 6px;font-size:.62rem}
+.filters{display:flex;gap:6px;overflow:auto;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}.filter{white-space:nowrap;border:1px solid var(--yt-line);background:#0d1017;color:#9da7b7;border-radius:10px;padding:9px 12px;font-size:.69rem;font-weight:800;cursor:pointer}.filter.active,.filter:hover{background:#fff;color:#090a0e;border-color:#fff}
+.tool-section{margin-top:30px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:13px}.section-head h2{margin:0;font-size:1.12rem;letter-spacing:-.02em}.section-head p{margin:4px 0 0;color:#7f8999;font-size:.72rem}.view-toggle{display:flex;gap:4px}.view-toggle button{border:1px solid var(--yt-line);background:#0e1118;color:#8892a2;border-radius:9px;padding:7px 9px;cursor:pointer}.view-toggle button.active{color:#fff;background:#1b1f29}
+.featured{display:grid;grid-template-columns:1.25fr .75fr;gap:14px;margin-bottom:14px}.featured-card,.tool-card{position:relative;border:1px solid var(--yt-line);border-radius:var(--yt-radius);background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));overflow:hidden;transition:.25s;box-shadow:0 12px 35px rgba(0,0,0,.16)}
+.featured-card{padding:25px}.featured-card:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,23,68,.12),transparent 50%);pointer-events:none}.featured-card:hover,.tool-card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.17);box-shadow:0 22px 50px rgba(0,0,0,.28)}
+.tool-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.tool-grid.compact{grid-template-columns:repeat(4,minmax(0,1fr))}
+.tool-card{min-height:220px;padding:20px;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.tool-icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(255,23,68,.11);border:1px solid rgba(255,23,68,.18);color:#ff5870;font-size:1.1rem;margin-bottom:16px}.tool-icon.blue{color:#78a8ff;background:rgba(75,120,255,.1);border-color:rgba(75,120,255,.2)}.tool-icon.purple{color:#bd91ff;background:rgba(144,78,255,.1);border-color:rgba(144,78,255,.2)}.tool-icon.green{color:#4ee1aa;background:rgba(56,217,150,.1);border-color:rgba(56,217,150,.2)}
+.badge{position:absolute;top:16px;right:16px;padding:5px 8px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--yt-line);color:#aeb6c5;font-size:.57rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em}.badge.hot{background:rgba(255,23,68,.1);color:#ff7b8d;border-color:rgba(255,23,68,.2)}.badge.new{background:rgba(56,217,150,.08);color:#57dfa9;border-color:rgba(56,217,150,.2)}
+.tool-card h3,.featured-card h3{margin:0;color:#fff;font-size:1rem;line-height:1.25;letter-spacing:-.02em}.tool-card p,.featured-card p{margin:8px 0 0;color:#8993a4;font-size:.75rem;line-height:1.55}.tool-meta{display:flex;gap:7px;align-items:center;margin-top:auto;padding-top:18px;color:#697386;font-size:.62rem;font-weight:800}.tool-meta .arrow{margin-left:auto;color:#fff;font-size:.78rem}.featured-card h3{font-size:1.4rem}.featured-card p{font-size:.82rem;max-width:650px}.featured-mini{display:flex;flex-direction:column;gap:10px}.mini-card{display:flex;align-items:center;gap:12px;padding:15px;border:1px solid var(--yt-line);border-radius:17px;background:rgba(255,255,255,.035);text-decoration:none;color:#fff}.mini-card .tool-icon{width:40px;height:40px;min-width:40px;margin:0;font-size:.9rem}.mini-card strong{font-size:.78rem}.mini-card span{display:block;color:#707b8c;font-size:.62rem;margin-top:3px}.mini-card i:last-child{margin-left:auto;color:#677183;font-size:.7rem}
+.no-results{display:none;text-align:center;padding:55px 20px;border:1px dashed var(--yt-line);border-radius:20px;color:#7f8999}.no-results i{font-size:2rem;margin-bottom:10px}.empty{display:none}
+.privacy-strip{margin-top:28px;padding:17px 20px;border:1px solid rgba(56,217,150,.13);background:rgba(56,217,150,.035);border-radius:17px;display:flex;gap:12px;align-items:flex-start;color:#8993a4;font-size:.72rem;line-height:1.55}.privacy-strip i{color:var(--yt-green);margin-top:2px}.privacy-strip strong{color:#dbe5e0}
+.footer{color:#788293!important;background:transparent!important}
+@media(max-width:950px){.featured{grid-template-columns:1fr}.tool-grid,.tool-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.yt-shell{padding:12px 10px 45px}.yt-hero{padding:32px 22px 25px;border-radius:24px}.yt-hero h1{font-size:2.45rem}.toolbar{position:relative;top:auto;flex-direction:column;align-items:stretch}.filters{order:2}.tool-grid,.tool-grid.compact{grid-template-columns:1fr}.tool-card{min-height:190px}.hero-stat{flex:1;min-width:100px}.section-head{align-items:start}.view-toggle{display:none}}
+</style>
+<script src="/assets/js/shared-shell.js"></script>
+</head>
+<body>
+<header class="shared-header" data-shared-shell="header">
+<a class="shared-brand" href="/" aria-label="Laxman Nepal home"><span class="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Blog · Digital</small></span></a>
+<nav class="shared-desktop-nav" aria-label="Main menu"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI</a><a href="/blog/">Blog</a><a href="/apps/">Apps</a><a href="/youtube/">YouTube</a><details class="nav-dropdown"><summary>Explore</summary><div class="nav-dropdown-menu"><a href="/news/">News &amp; Updates</a><a href="/guides/">Guides</a><a href="/mobile/">Mobile</a><a href="/contact/">Contact</a></div></details></nav>
+<div class="shared-actions"><form class="shared-search-box" action="/search/" method="get"><span aria-hidden="true">⌕</span><input name="q" type="search" autocomplete="off" aria-label="Search Laxman Nepal" placeholder="Search tools &amp; guides…"></form><button class="shared-menu-btn" type="button" data-shared-menu aria-label="Open menu" aria-expanded="false">☰</button></div></header>
+<nav class="shared-mobile-menu" data-shared-mobile aria-label="Mobile menu"><div class="shared-mobile-head"><strong>Laxman Nepal</strong><button type="button" data-shared-close aria-label="Close menu">×</button></div><a href="/">🏠 Home</a><a href="/tools/">🧰 Tools</a><a href="/youtube-tools/">▶️ YouTube Tools</a><a href="/ai-tools/">✨ AI Tools</a><a href="/blog/">📝 Blog</a><a href="/apps/">📦 Apps</a><a href="/youtube/">▶ YouTube</a><a href="/guides/">📖 Guides</a><a href="/news/">📰 News</a><a href="/contact/">✉ Contact</a></nav><div class="shared-menu-backdrop" data-shared-backdrop></div>
+
+<main class="yt-shell">
+<section class="yt-hero">
+<div class="yt-orb"></div>
+<div class="yt-kicker"><i class="fa-brands fa-youtube"></i> Creator Suite</div>
+<h1>Build smarter.<br><span>Grow on YouTube.</span></h1>
+<p>A premium collection of practical YouTube utilities from Laxman Nepal — discover channel insights, analyze videos, generate SEO assets, research trends and create better thumbnails.</p>
+<div class="hero-actions"><a class="hero-btn primary" href="#all-tools"><i class="fa-solid fa-wand-magic-sparkles"></i> Explore all tools</a><a class="hero-btn" href="/youtube/"><i class="fa-brands fa-youtube"></i> YouTube hub</a></div>
+<div class="hero-stats"><div class="hero-stat"><strong id="tool-count">18+</strong><span>Creator tools</span></div><div class="hero-stat"><strong>SEO</strong><span>Discovery focused</span></div><div class="hero-stat"><strong>Free</strong><span>Browser-first utilities</span></div><div class="hero-stat"><strong>⚡</strong><span>Fast workflow</span></div></div>
+</section>
+
+<div class="toolbar">
+<div class="search"><i class="fa-solid fa-magnifying-glass"></i><input id="search" type="search" placeholder="Search YouTube tools…" aria-label="Search YouTube tools"><span class="kbd">/</span></div>
+<div class="filters" id="filters" aria-label="Filter tools"></div>
+<div class="view-toggle"><button class="active" data-view="grid" aria-label="Grid view"><i class="fa-solid fa-grid-2"></i></button><button data-view="compact" aria-label="Compact view"><i class="fa-solid fa-table-cells"></i></button></div>
+</div>
+
+<section class="tool-section" id="featured">
+<div class="section-head"><div><h2>Creator essentials</h2><p>Start with the tools that cover the core publishing workflow.</p></div></div>
+<div class="featured">
+<a class="featured-card" href="/2026/07/youtube-channel-analytics-pro.html" data-tool="Channel Analytics Pro" data-cat="Analytics">
+<span class="badge hot">Featured</span><div class="tool-icon"><i class="fa-solid fa-chart-line"></i></div><h3>YouTube Channel Analytics Pro</h3><p>Explore channel-level metrics and performance insights in a focused creator dashboard.</p><div class="tool-meta"><span>Analytics</span><span class="arrow">Open tool →</span></div>
+</a>
+<div class="featured-mini">
+<a class="mini-card" href="/2025/11/youtube-video-seo-analyzer.html" data-tool="Video SEO Analyzer" data-cat="SEO"><div class="tool-icon blue"><i class="fa-solid fa-magnifying-glass-chart"></i></div><div><strong>Video SEO Analyzer</strong><span>Audit a video's discovery setup</span></div><i class="fa-solid fa-chevron-right"></i></a>
+<a class="mini-card" href="/2025/11/ai-powered-youtube-seo-deep-analyzer.html" data-tool="AI SEO Deep Analyzer" data-cat="SEO"><div class="tool-icon purple"><i class="fa-solid fa-brain"></i></div><div><strong>AI SEO Deep Analyzer</strong><span>Deeper content and SEO analysis</span></div><i class="fa-solid fa-chevron-right"></i></a>
+<a class="mini-card" href="/2025/11/youtube-video-title-description-tag.html" data-tool="Title Description Tag" data-cat="SEO"><div class="tool-icon green"><i class="fa-solid fa-wand-magic-sparkles"></i></div><div><strong>Title + Description + Tags</strong><span>Package your metadata faster</span></div><i class="fa-solid fa-chevron-right"></i></a>
+</div></div>
+</section>
+
+<section class="tool-section" id="all-tools">
+<div class="section-head"><div><h2>All YouTube tools</h2><p id="result-label">Everything in one creator workspace.</p></div></div>
+<div class="tool-grid" id="grid"></div>
+<div class="no-results" id="no-results"><i class="fa-solid fa-compass"></i><div>No matching tool found.</div><small>Try another keyword or category.</small></div>
+</section>
+
+<div class="privacy-strip"><i class="fa-solid fa-shield-halved"></i><div><strong>Creator-first workflow.</strong> Use each tool on its own page. This hub does not require a login and keeps your recent/favorite tool preferences in your browser.</div></div>
+</main>
+<footer class="footer section-wrap"><div><strong>Laxman Nepal</strong><span>© 2026 All rights reserved.</span></div><div><span>YouTube Creator Suite</span><a href="/">Back home ↑</a></div></footer>
+
+<script>
+const tools=[
+{name:"Channel Analytics Pro",cat:"Analytics",icon:"fa-chart-line",tone:"red",url:"/2026/07/youtube-channel-analytics-pro.html",tag:"Featured",desc:"Channel-level analytics and performance insights.",meta:"Channel"},
+{name:"YouTube Analytics",cat:"Analytics",icon:"fa-chart-column",tone:"blue",url:"/2025/11/youtube-analytics.html",tag:"Analytics",desc:"Explore practical YouTube analytics information.",meta:"Analytics"},
+{name:"Video Analytics",cat:"Analytics",icon:"fa-chart-simple",tone:"blue",url:"/2025/11/youtube-video-analytics.html",tag:"Analytics",desc:"Analyze individual video performance signals.",meta:"Video"},
+{name:"YouTube Analytics",cat:"Analytics",icon:"fa-chart-line",tone:"blue",url:"/2025/12/youtube-analytics.html",tag:"Tool",desc:"A second analytics workflow from the creator toolkit.",meta:"Analytics"},
+{name:"Channel Info Extractor",cat:"Research",icon:"fa-circle-info",tone:"green",url:"/2025/11/youtube-channel-info-extractor.html",tag:"Research",desc:"Extract useful public channel information.",meta:"Channel"},
+{name:"Channel ID Finder",cat:"Research",icon:"fa-fingerprint",tone:"purple",url:"/2025/11/youtube-channel-id-finder-analytics.html",tag:"Research",desc:"Find a YouTube channel ID for analysis workflows.",meta:"Channel"},
+{name:"Video SEO Analyzer",cat:"SEO",icon:"fa-magnifying-glass-chart",tone:"blue",url:"/2025/11/youtube-video-seo-analyzer.html",tag:"Popular",desc:"Audit titles, descriptions and other discovery signals.",meta:"SEO"},
+{name:"AI SEO Deep Analyzer",cat:"SEO",icon:"fa-brain",tone:"purple",url:"/2025/11/ai-powered-youtube-seo-deep-analyzer.html",tag:"AI",desc:"Go deeper into content, SEO and optimization opportunities.",meta:"AI + SEO"},
+{name:"Title + Description + Tags",cat:"SEO",icon:"fa-wand-magic-sparkles",tone:"red",url:"/2025/11/youtube-video-title-description-tag.html",tag:"Creator",desc:"Build a complete metadata package for a video.",meta:"Metadata"},
+{name:"Title Generator",cat:"SEO",icon:"fa-heading",tone:"red",url:"/2025/11/youtube-title-generator.html",tag:"Creator",desc:"Generate title ideas for your next upload.",meta:"Titles"},
+{name:"Trending Keywords",cat:"Research",icon:"fa-arrow-trend-up",tone:"green",url:"/2025/11/youtube-trending-keywords.html",tag:"Research",desc:"Explore keyword ideas for YouTube discovery.",meta:"Keywords"},
+{name:"Nepal Trend Explorer",cat:"Research",icon:"fa-earth-asia",tone:"green",url:"/2025/11/youtube-nepal-trend-explorer.html",tag:"Nepal",desc:"Explore YouTube trend research with a Nepal focus.",meta:"Trends"},
+{name:"Tag Extractor",cat:"SEO",icon:"fa-tags",tone:"purple",url:"/2025/11/youtube-tag-extractor.html",tag:"SEO",desc:"Extract tags from a YouTube video workflow.",meta:"Tags"},
+{name:"Tag Generator",cat:"SEO",icon:"fa-hashtag",tone:"purple",url:"/2026/02/youtube-tag-generator.html",tag:"New",desc:"Generate useful tag ideas around your topic.",meta:"Tags"},
+{name:"Hashtag Extractor",cat:"SEO",icon:"fa-hashtag",tone:"purple",url:"/2025/11/youtube-hashtag-extractor.html",tag:"SEO",desc:"Extract hashtags from YouTube content.",meta:"Hashtags"},
+{name:"Description Extractor",cat:"Research",icon:"fa-file-lines",tone:"blue",url:"/2025/11/youtube-description-extractor.html",tag:"Research",desc:"Pull a video's public description into a clean view.",meta:"Description"},
+{name:"Thumbnail Downloader",cat:"Thumbnail",icon:"fa-image",tone:"red",url:"/2025/11/youtube-thumbnail-downloader.html",tag:"Creator",desc:"Retrieve available YouTube thumbnail images.",meta:"Thumbnail"},
+{name:"Thumbnail Downloader 24",cat:"Thumbnail",icon:"fa-images",tone:"red",url:"/2025/11/youtube-thumbnail-downloader_24.html",tag:"Alternative",desc:"Alternative thumbnail downloader workflow.",meta:"Thumbnail"},
+{name:"YouTube Thumbnail",cat:"Thumbnail",icon:"fa-photo-film",tone:"red",url:"/2026/02/laxman-nepal-youtube-thumbnail.html",tag:"Laxman",desc:"Laxman Nepal's dedicated YouTube thumbnail utility.",meta:"Thumbnail"},
+{name:"Video Downloader",cat:"Download",icon:"fa-download",tone:"green",url:"/2025/12/youtube-video-download.html",tag:"Download",desc:"Open the existing video download utility.",meta:"Video"},
+];
+
+const grid=document.getElementById("grid"),filters=document.getElementById("filters"),search=document.getElementById("search"),noResults=document.getElementById("no-results"),resultLabel=document.getElementById("result-label"),count=document.getElementById("tool-count");
+const cats=["All",...new Set(tools.map(t=>t.cat))]; let active="All", view="grid";
+filters.innerHTML=cats.map(c=>'<button class="filter'+(c==="All"?' active':'')+'" data-cat="'+c+'">'+c+'</button>').join("");
+count.textContent=tools.length+"+";
+function render(){
+ const q=search.value.trim().toLowerCase();
+ const list=tools.filter(t=>(active==="All"||t.cat===active)&&(!q||(t.name+" "+t.cat+" "+t.desc+" "+t.meta).toLowerCase().includes(q)));
+ grid.className="tool-grid"+(view==="compact"?" compact":"");
+ grid.innerHTML=list.map(t=>'<a class="tool-card" href="'+t.url+'" data-tool="'+t.name+'" data-cat="'+t.cat+'"><span class="badge '+(t.tag==="New"?"new":t.tag==="Popular"||t.tag==="Featured"?"hot":"")+'">'+t.tag+'</span><div class="tool-icon '+t.tone+'"><i class="fa-solid '+t.icon+'"></i></div><h3>'+t.name+'</h3><p>'+t.desc+'</p><div class="tool-meta"><span>'+t.cat+' · '+t.meta+'</span><span class="arrow">Open →</span></div></a>').join("");
+ noResults.style.display=list.length?"none":"block";
+ grid.style.display=list.length?"grid":"none";
+ resultLabel.textContent=list.length+" tool"+(list.length===1?"":"s")+" shown · "+(active==="All"?"all categories":active);
+ document.querySelectorAll(".tool-card,.mini-card,.featured-card").forEach(el=>el.addEventListener("click",()=>remember(el.dataset.tool||el.querySelector("strong")?.textContent)));
+}
+function remember(name){if(!name)return;try{let r=JSON.parse(localStorage.getItem("laxmanYoutubeRecent")||"[]").filter(x=>x!==name);r.unshift(name);localStorage.setItem("laxmanYoutubeRecent",JSON.stringify(r.slice(0,8)))}catch(e){}}
+filters.addEventListener("click",e=>{const b=e.target.closest(".filter");if(!b)return;active=b.dataset.cat;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));render()});
+search.addEventListener("input",render);
+document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>{view=b.dataset.view;document.querySelectorAll("[data-view]").forEach(x=>x.classList.toggle("active",x===b));render()}));
+document.addEventListener("keydown",e=>{if(e.key==="/"&&document.activeElement!==search){e.preventDefault();search.focus()}if(e.key==="Escape"&&document.activeElement===search){search.value="";search.blur();render()}});
+render();
+</script>
+</body>
+</html>
