@@ -1,0 +1,171 @@
+name: Create Batch SEO Fix PRs
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  create-batch-seo-prs:
+    if: startsWith(github.event.issue.title, '[SEO Batch]') && (github.event.issue.author_association == 'OWNER' || github.event.issue.author_association == 'MEMBER' || github.event.issue.author_association == 'COLLABORATOR')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Parse and validate batch request
+        env:
+          BODY: ${{ github.event.issue.body }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          body=os.environ.get("BODY","")
+          blocks=re.findall(r"<!-- SEO_BATCH_ITEM_START -->\\s*(.*?)\\s*<!-- SEO_BATCH_ITEM_END -->", body, re.S)
+          if not blocks or len(blocks)>5:
+              raise SystemExit("Batch must contain 1-5 SEO items.")
+          items=[]
+          seen=set()
+          def get(block,name):
+              m=re.search(r"<!-- SEO_FIX_"+re.escape(name)+r":\\s*(.*?)\\s*-->", block, re.S)
+              return m.group(1).strip() if m else ""
+          for i,b in enumerate(blocks,1):
+              path=get(b,"PATH").lstrip("/")
+              title=get(b,"TITLE")
+              description=get(b,"DESCRIPTION")
+              h1=get(b,"H1")
+              if not path or not path.endswith(".html") or ".." in Path(path).parts:
+                  raise SystemExit(f"Item {i}: invalid SEO fix path.")
+              if path in seen:
+                  raise SystemExit(f"Item {i}: duplicate target path: {path}")
+              seen.add(path)
+              if not title or not description or not h1:
+                  raise SystemExit(f"Item {i}: missing title, description, or H1.")
+              if any(ch in value for value in (title,description,h1) for ch in ("<",">")):
+                  raise SystemExit(f"Item {i}: SEO values must not contain HTML angle brackets.")
+              if len(title)>70 or len(description)>180 or len(h1)>120:
+                  raise SystemExit(f"Item {i}: SEO values exceed safety limits.")
+              if not Path(path).is_file():
+                  raise SystemExit(f"Item {i}: target file does not exist: {path}")
+              items.append({"index":i,"path":path,"title":title,"description":description,"h1":h1})
+          Path("/tmp/seo-batch-items.json").write_text(json.dumps(items,ensure_ascii=False),encoding="utf-8")
+          print(f"Validated {len(items)} SEO batch items.")
+          PY
+
+      - name: Create independent PRs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          set +e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          : > /tmp/batch-results.md
+          while IFS= read -r item; do
+            IDX=$(echo "$item" | jq -r '.index')
+            PATH_VALUE=$(echo "$item" | jq -r '.path')
+            TITLE=$(echo "$item" | jq -r '.title')
+            DESCRIPTION=$(echo "$item" | jq -r '.description')
+            H1=$(echo "$item" | jq -r '.h1')
+            BRANCH="seo-fix/batch-$ISSUE-$IDX"
+
+            echo "## Batch item $IDX — $PATH_VALUE"
+            git reset --hard origin/main
+            git clean -fd
+            git checkout main
+            git branch -D "$BRANCH" 2>/dev/null
+
+            cp "$PATH_VALUE" /tmp/seo-before.html
+            SEO_PATH="$PATH_VALUE" SEO_TITLE="$TITLE" SEO_DESCRIPTION="$DESCRIPTION" SEO_H1="$H1" python3 scripts/apply_seo_fix.py "$PATH_VALUE" "$TITLE" "$DESCRIPTION" "$H1"
+            if [ $? -ne 0 ]; then
+              echo "- ❌ Apply failed." >> /tmp/batch-results.md
+              continue
+            fi
+
+            git diff --check
+            if git diff --quiet -- "$PATH_VALUE"; then
+              echo "- ℹ️ No change required." >> /tmp/batch-results.md
+              continue
+            fi
+
+            SEO_PATH="$PATH_VALUE" python3 - <<'PY'
+          import os,re
+          from pathlib import Path
+          p=Path(os.environ["SEO_PATH"])
+          h=p.read_text(encoding="utf-8")
+          title=re.search(r"<title\\b[^>]*>(.*?)</title>",h,re.I|re.S)
+          desc=re.search(r'<meta\\b[^>]*\\bname=["\']description["\'][^>]*\\bcontent=["\'](.*?)["\']',h,re.I|re.S)
+          h1=re.findall(r"<h1\\b[^>]*>(.*?)</h1>",h,re.I|re.S)
+          if not title or not (30<=len(re.sub(r"<.*?>","",title.group(1)).strip())<=60): raise SystemExit("Title validation failed.")
+          if not desc or not (70<=len(desc.group(1).strip())<=160): raise SystemExit("Meta description validation failed.")
+          if len(h1)!=1: raise SystemExit(f"H1 validation failed: {len(h1)} found.")
+          PY
+            if [ $? -ne 0 ]; then
+              echo "- ❌ Validation failed." >> /tmp/batch-results.md
+              git reset --hard origin/main
+              continue
+            fi
+
+            python3 scripts/build_site.py
+            python3 scripts/generate_seo.py
+            if [ $? -ne 0 ] || [ ! -f index.html ] || [ ! -f sitemap.xml ]; then
+              echo "- ❌ Site build/SEO validation failed." >> /tmp/batch-results.md
+              git reset --hard origin/main
+              continue
+            fi
+
+            python3 scripts/generate_seo_pr_intelligence.py "$PATH_VALUE" /tmp/seo-before.html "$PATH_VALUE" "/tmp/seo-pr-$IDX.md"
+            git checkout -b "$BRANCH"
+            git add -- "$PATH_VALUE"
+            git commit -m "seo: improve metadata for $PATH_VALUE"
+            if [ $? -ne 0 ]; then
+              echo "- ❌ Commit failed." >> /tmp/batch-results.md
+              git reset --hard origin/main
+              continue
+            fi
+            git push --set-upstream origin "$BRANCH"
+            if [ $? -ne 0 ]; then
+              echo "- ❌ Push failed." >> /tmp/batch-results.md
+              git reset --hard origin/main
+              continue
+            fi
+
+            {
+              echo "## SEO Fix Center batch item $IDX"
+              echo
+              echo "Source issue: #$ISSUE"
+              echo "Target page: $PATH_VALUE"
+              echo
+              cat "/tmp/seo-pr-$IDX.md"
+            } > "/tmp/final-pr-$IDX.md"
+            PR_URL=$(gh pr create --base main --head "$BRANCH" --title "SEO: improve $PATH_VALUE" --body-file "/tmp/final-pr-$IDX.md")
+            if [ $? -eq 0 ]; then
+              gh pr comment "$PR_URL" --body-file "/tmp/seo-pr-$IDX.md"
+              echo "- ✅ [$PATH_VALUE]($PR_URL)" >> /tmp/batch-results.md
+            else
+              echo "- ❌ PR creation failed for $PATH_VALUE." >> /tmp/batch-results.md
+            fi
+            git reset --hard origin/main
+            git clean -fd
+          done < <(jq -c '.[]' /tmp/seo-batch-items.json)
+
+      - name: Comment batch results
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          {
+            echo "## SEO Batch Processing"
+            echo
+            cat /tmp/batch-results.md
+            echo
+            echo "Each successful item is an independent PR. Nothing is merged or published automatically."
+          } > /tmp/batch-comment.md
+          gh issue comment "$ISSUE" --body-file /tmp/batch-comment.md
