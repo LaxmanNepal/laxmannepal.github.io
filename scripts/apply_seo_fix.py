@@ -10,6 +10,8 @@ def main():
     title, description, h1 = [str(x).strip() for x in sys.argv[2:]]
     if not path.is_file() or path.suffix.lower() != ".html":
         raise SystemExit(f"Invalid HTML target: {path}")
+    if any(x in value for value in (title, description, h1) for x in ("<", ">")):
+        raise SystemExit("SEO values must not contain HTML angle brackets.")
     if ".." in path.parts:
         raise SystemExit("Path traversal is not allowed.")
     text=path.read_text(encoding="utf-8")
