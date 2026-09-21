@@ -104,10 +104,19 @@ function remaining(){
  const sec=Math.floor(left/1000);
  return Math.floor(sec/86400)+" दिन "+pad(Math.floor(sec%86400/3600))+" घण्टा "+pad(Math.floor(sec%3600/60))+" मिनेट बाँकी 🇳🇵";
 }
-function notifyNow(body){
- if("Notification" in window && Notification.permission==="granted"){
+async function notifyNow(body){
+ if(!("Notification"in window)||Notification.permission!=="granted")return false;
+ try{
+  if("serviceWorker"in navigator){
+   const reg=await navigator.serviceWorker.ready;
+   if(reg&&"showNotification"in reg){
+    await reg.showNotification("Laxman Nepal Vacation",{body:body,icon:"/assets/icons/icon-192.png",badge:"/assets/icons/icon-192.png",tag:"laxman-vacation",renotify:true});
+    return true;
+   }
+  }
   new Notification("Laxman Nepal Vacation",{body:body,icon:"/assets/icons/icon-192.png",tag:"laxman-vacation"});
- }
+  return true;
+ }catch(e){console.warn("Notification failed",e);return false;}
 }
 function updateNotify(){
  const state=$("#notifyState");
@@ -118,10 +127,19 @@ function updateNotify(){
 }
 async function enableNotifications(){
  if(!("Notification" in window)){alert("यो browser ले Notifications support गर्दैन।");return false;}
- if(Notification.permission==="denied"){alert("Chrome site settings बाट Notifications लाई Allow गर्नुहोस्।");updateNotify();return false;}
+ if(Notification.permission==="denied"){
+ alert("Notifications पहिले Block भएको छ। Chrome → ⋮ → Settings → Site settings → Notifications → laxmannepal.com.np → Allow गर्नुहोस्। त्यसपछि page reload गरेर फेरि Notify थिच्नुहोस्।");
+ updateNotify();
+ return false;
+}
  const p=Notification.permission==="granted"?"granted":await Notification.requestPermission();
  updateNotify();
- if(p==="granted"){localStorage.setItem("vacationNotify","1");notifyNow("Notifications enabled! "+remaining());renderNotify();return true;}
+ if(p==="granted"){
+ localStorage.setItem("vacationNotify","1");
+ await notifyNow("Notifications enabled! "+remaining());
+ renderNotify();
+ return true;
+}
  return false;
 }
 function schedule(){
@@ -155,7 +173,7 @@ function renderNotify(){
   next.textContent=found?"Next reminder: "+found.toLocaleString("en-US",{weekday:"short",hour:"numeric",minute:"2-digit"}):"No reminder scheduled";
  }
 }
-function healthCheck(){ const perm=$("#hcPerm"),sw=$("#hcSw"),ins=$("#hcInstall"),sch=$("#hcSchedule"),bar=$("#hcBar"),txt=$("#hcText"),prev=$("#hcPreview"); const hasNotif="Notification"in window; const p=hasNotif?Notification.permission:"unsupported"; perm.textContent=p==="granted"?"🟢 Allowed":p==="denied"?"🔴 Blocked":p==="unsupported"?"⚪ Unsupported":"🟡 Not enabled"; perm.className=p==="granted"?"health-ok":p==="denied"?"health-bad":"health-warn"; const installed=standalone(); ins.textContent=installed?"🟢 Installed":"🟡 Browser mode"; ins.className=installed?"health-ok":"health-warn"; sw.textContent=navigator.serviceWorker?"🟢 Supported":"🔴 Unsupported";sw.className=navigator.serviceWorker?"health-ok":"health-bad"; const times=getTimes();sch.textContent=times.map(h=>h===8?"8 AM":h===13?"1 PM":"8 PM").join(" · "); sch.className=times.length?"health-ok":"health-bad"; let score=0;if(p==="granted")score+=40;if(navigator.serviceWorker)score+=30;if(installed)score+=15;if(times.length)score+=15; bar.style.width=score+"%"; txt.textContent=score>=85?"सबै मुख्य notification checks ठीक छन्।":"केही setup बाँकी छ। Permission Allow र app install गरे reliability बढ्छ।"; if(prev){prev.textContent=$("#nextNotify")?.textContent||"No reminder scheduled";}}async function healthTest(){if(await enableNotifications())notifyNow("Health Center test 🔔 "+remaining());healthCheck();}function selectedTimezone(){return localStorage.getItem("vacationNotifyTZ")||"device";}function zoneNow(){ const tz=selectedTimezone(); if(tz==="device")return new Date(); const parts=new Intl.DateTimeFormat("en-US",{timeZone:tz,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"}).formatToParts(new Date()); const o={};parts.forEach(p=>{if(p.type!=="literal")o[p.type]=p.value;}); return {year:+o.year,month:+o.month,day:+o.day,hour:+o.hour,minute:+o.minute,second:+o.second};}function timezoneLabel(){const z=selectedTimezone();return z==="device"?"📱 Device local time":z==="Asia/Kuwait"?"🇰🇼 Kuwait time (Asia/Kuwait)":z==="Asia/Kathmandu"?"🇳🇵 Nepal time (Asia/Kathmandu)":"🌐 UTC";}function renderTimezone(){ const z=selectedTimezone();document.querySelectorAll(".tz-btn").forEach(b=>b.classList.toggle("active",b.dataset.tz===z)); const info=$("#tzInfo");if(info)info.textContent="Reminders: "+timezoneLabel()+" · "+getTimes().map(h=>pad(h)+":00").join(" · ");}function simulateReminder(hr){ const label=hr===8?"शुभ प्रभात 🌅":hr===13?"शुभ दिउँसो ☀️":"शुभ साँझ 🌙"; notifyNow(label+"\n"+remaining()+"\nTimezone: "+timezoneLabel());}function updateFocus(){
+function healthCheck(){ const perm=$("#hcPerm"),sw=$("#hcSw"),ins=$("#hcInstall"),sch=$("#hcSchedule"),bar=$("#hcBar"),txt=$("#hcText"),prev=$("#hcPreview"); const hasNotif="Notification"in window; const p=hasNotif?Notification.permission:"unsupported"; perm.textContent=p==="granted"?"🟢 Allowed":p==="denied"?"🔴 Blocked":p==="unsupported"?"⚪ Unsupported":"🟡 Not enabled"; perm.className=p==="granted"?"health-ok":p==="denied"?"health-bad":"health-warn"; const installed=standalone(); ins.textContent=installed?"🟢 Installed":"🟡 Browser mode"; ins.className=installed?"health-ok":"health-warn"; sw.textContent=navigator.serviceWorker?"🟢 Supported":"🔴 Unsupported";sw.className=navigator.serviceWorker?"health-ok":"health-bad"; const times=getTimes();sch.textContent=times.map(h=>h===8?"8 AM":h===13?"1 PM":"8 PM").join(" · "); sch.className=times.length?"health-ok":"health-bad"; let score=0;if(p==="granted")score+=40;if(navigator.serviceWorker)score+=30;if(installed)score+=15;if(times.length)score+=15; bar.style.width=score+"%"; txt.textContent=p==="denied"?"Chrome Site Settings मा Notifications Block भएको छ। त्यहाँ Allow गरेपछि फेरि Test गर्नुहोस्।":score>=85?"सबै मुख्य notification checks ठीक छन्।":"Permission Allow गर्नुहोस् र app install गर्नुभयो भने setup अझ राम्रो हुन्छ।"; if(prev){prev.textContent=$("#nextNotify")?.textContent||"No reminder scheduled";}}async function healthTest(){if(await enableNotifications())notifyNow("Health Center test 🔔 "+remaining());healthCheck();}function selectedTimezone(){return localStorage.getItem("vacationNotifyTZ")||"device";}function zoneNow(){ const tz=selectedTimezone(); if(tz==="device")return new Date(); const parts=new Intl.DateTimeFormat("en-US",{timeZone:tz,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"}).formatToParts(new Date()); const o={};parts.forEach(p=>{if(p.type!=="literal")o[p.type]=p.value;}); return {year:+o.year,month:+o.month,day:+o.day,hour:+o.hour,minute:+o.minute,second:+o.second};}function timezoneLabel(){const z=selectedTimezone();return z==="device"?"📱 Device local time":z==="Asia/Kuwait"?"🇰🇼 Kuwait time (Asia/Kuwait)":z==="Asia/Kathmandu"?"🇳🇵 Nepal time (Asia/Kathmandu)":"🌐 UTC";}function renderTimezone(){ const z=selectedTimezone();document.querySelectorAll(".tz-btn").forEach(b=>b.classList.toggle("active",b.dataset.tz===z)); const info=$("#tzInfo");if(info)info.textContent="Reminders: "+timezoneLabel()+" · "+getTimes().map(h=>pad(h)+":00").join(" · ");}function simulateReminder(hr){ const label=hr===8?"शुभ प्रभात 🌅":hr===13?"शुभ दिउँसो ☀️":"शुभ साँझ 🌙"; notifyNow(label+"\n"+remaining()+"\nTimezone: "+timezoneLabel());}function updateFocus(){
  const now=Date.now();
  const next=milestones.map(x=>({x:x,t:new Date(x[2]+"T00:00:00+05:45").getTime()})).find(v=>v.t>now);
  if(!next){$("#focus").innerHTML='<span class="focus-tag">🇳🇵 VACATION MODE</span><div class="focus-main">घर फर्किने यात्रा सुरु भयो 🎉</div><div class="focus-sub">अब countdown को सट्टा तपाईंको Nepal journey मा focus गर्ने समय हो।</div>';return;}
