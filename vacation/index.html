@@ -38,46 +38,198 @@ body{background:radial-gradient(circle at 15% 10%,rgba(0,122,255,.10),transparen
 
 <footer class="shared-footer"><div class="shared-footer-grid"><div><div class="shared-footer-brand"><span class="shared-logo">LN</span><strong>Laxman Nepal</strong></div><p>Tools, AI, practical guides and useful digital resources.</p></div><div><strong>Explore</strong><a href="/tools/">Tools</a><a href="/ai-tools/">AI Tools</a><a href="/blog/">Blog</a></div><div><strong>Discover</strong><a href="/news/">News</a><a href="/guides/">Guides</a><a href="/contact/">Contact</a></div></div><div class="shared-footer-bottom"><span>© <span id="year"></span> Laxman Nepal.</span></div></footer>
 
-<script>
-(()=>{
-const T=new Date("2026-11-14T00:00:00+05:45").getTime(),S=new Date("2024-11-12T00:00:00+05:45").getTime(),NP=["०","१","२","३","४","५","६","७","८","९"],N=x=>String(x).replace(/\d/g,d=>NP[d]),P=x=>String(x).padStart(2,"0");
-const M=[["भदौ २५","सेप्टेम्बर १० · तयारी","2026-09-10"],["असोज ९","सेप्टेम्बर २५ · Salary + Flight Plan","2026-09-25"],["कार्तिक ९","अक्टोबर २५ · Final Preparation","2026-10-25"],["कार्तिक २८","नोभेम्बर १४ · 🇳🇵 घर फर्किने दिन","2026-11-14"]],items=["Passport / ID","Flight ticket & documents","Phone + charger","Laptop + charger","Clothes & essentials","नेपालका लागि gifts"];
+<script>(()=>{
+"use strict";
+const target=new Date("2026-11-14T00:00:00+05:45").getTime();
+const start=new Date("2024-11-12T00:00:00+05:45").getTime();
+const nep=["०","१","२","३","४","५","६","७","८","९"];
 const $=s=>document.querySelector(s);
-function render(){timeline.innerHTML=M.map(x=>{let done=Date.now()>=new Date(x[2]+"T00:00:00+05:45").getTime();return `<div class="mile ${done?"done":""}">${done?"✓":"○"} <span><b>${x[0]}</b><br><small class="muted">${x[1]}</small></span></div>`}).join("");pack.innerHTML=items.map((x,i)=>`<label><input type="checkbox" data-i="${i}">${x}</label>`).join("");pack.querySelectorAll("input").forEach((e,i)=>{e.checked=localStorage.getItem("vp"+i)==="1";e.onchange=()=>localStorage.setItem("vp"+i,e.checked?"1":"0")})}
-function update(){let now=Date.now(),q=Math.max(0,T-now),z=Math.floor(q/1000),d=Math.floor(z/86400),h=Math.floor(z%86400/3600),m=Math.floor(z%3600/60),s=z%60;$("#d").textContent=N(d);$("#h").textContent=N(P(h));$("#m").textContent=N(P(m));$("#s").textContent=N(P(s));$("#status").textContent=q?"● लाइभ समयसँग अपडेट हुँदैछ…":"🎉 अब vacation सुरु भयो!";$("#liveBadge").textContent=q?"● LIVE COUNTDOWN":"● VACATION STARTED";bar.style.width=Math.max(0,Math.min(100,(now-S)/(T-S)*100))+"%";pct.textContent=N(Math.max(0,Math.min(100,(now-S)/(T-S)*100)).toFixed(1))+"%";let a={hour:"2-digit",minute:"2-digit",second:"2-digit"},b={year:"numeric",month:"short",day:"numeric"};kw.textContent=new Intl.DateTimeFormat("en-US",{...a,timeZone:"Asia/Kuwait"}).format(now);np.textContent=new Intl.DateTimeFormat("en-US",{...a,timeZone:"Asia/Kathmandu"}).format(now);kwd.textContent=new Intl.DateTimeFormat("en-GB",{...b,timeZone:"Asia/Kuwait"}).format(now);npd.textContent=new Intl.DateTimeFormat("en-GB",{...b,timeZone:"Asia/Kathmandu"}).format(now)}
-function setTheme(d){document.body.classList.toggle("dark",d);localStorage.setItem("vtheme",d?"dark":"light");theme.textContent=d?"☀️ Light Mode":"🌙 Dark Mode";$("meta[name=theme-color]").setAttribute("content",d?"#090b10":"#f5f5f7")}
-setTheme(localStorage.getItem("vtheme")==="dark");theme.onclick=()=>setTheme(!document.body.classList.contains("dark"));url.value=location.href;copy.onclick=()=>navigator.clipboard?.writeText(location.href);share.onclick=()=>navigator.share?navigator.share({title:"Laxman Nepal Vacation Countdown",url:location.href}):copy.click();
+const nepNum=x=>String(x).replace(/\d/g,d=>nep[d]);
+const pad=x=>String(x).padStart(2,"0");
+const milestones=[
+ ["भदौ २५","सेप्टेम्बर १० · तयारी","2026-09-10"],
+ ["असोज ९","सेप्टेम्बर २५ · Salary + Flight Plan","2026-09-25"],
+ ["कार्तिक ९","अक्टोबर २५ · Final Preparation","2026-10-25"],
+ ["कार्तिक २८","नोभेम्बर १४ · 🇳🇵 घर फर्किने दिन","2026-11-14"]
+];
+const packing=["Passport / ID","Flight ticket & documents","Phone + charger","Laptop + charger","Clothes & essentials","नेपालका लागि gifts"];
+const defaultTimes=[8,13,20];
+const timeKey="vacationNotifyTimes";
 
-const NOTIFY_KEY="vacationNotify",NOTIFY_PREF="vacationNotifyTimes",DEFAULT_NOTIFY_TIMES=[8,13,20];
-function getNotifyTimes(){try{const x=JSON.parse(localStorage.getItem(NOTIFY_PREF)||"null");return Array.isArray(x)&&x.length?x.map(Number).filter(x=>[8,13,20].includes(x)):DEFAULT_NOTIFY_TIMES}catch(e){return DEFAULT_NOTIFY_TIMES}}
-function setNotifyTimes(x){localStorage.setItem(NOTIFY_PREF,JSON.stringify(x))}
-function remainingText(){let q=Math.max(0,T-Date.now()),z=Math.floor(q/1000),d=Math.floor(z/86400),h=Math.floor(z%86400/3600),m=Math.floor(z%3600/60);return d+" दिन "+P(h)+" घण्टा "+P(m)+" मिनेट बाँकी 🇳🇵"}
-function notifyNow(title,body){if("Notification"in window&&Notification.permission==="granted")new Notification(title,{body,icon:"/assets/icons/icon-192.png",tag:"vacation-"+new Date().toDateString()})}
-function updateNotifyButton(){if(!("Notification"in window))notify.textContent="🔕 Unsupported";else if(Notification.permission==="granted")notify.textContent="🔔 Notifications ON";else if(Notification.permission==="denied")notify.textContent="🚫 Notifications Blocked";else notify.textContent="🔔 Notify"}
-async function enableNotifications(){if(!("Notification"in window)){alert("यो browser ले Notifications support गर्दैन।");return false}if(Notification.permission==="denied"){alert("Chrome settings बाट यो site को notifications Allow गर्नुहोस्।");updateNotifyButton();return false}const p=Notification.permission==="granted"?"granted":await Notification.requestPermission();if(p==="granted"){localStorage.setItem(NOTIFY_KEY,"1");updateNotifyButton();notifyNow("Laxman Nepal Vacation","Notifications enabled! "+remainingText());return true}updateNotifyButton();return false}
-function scheduleNotifications(){if(!("Notification"in window)||Notification.permission!=="granted")return;const now=new Date(),today=now.toDateString();getNotifyTimes().forEach(hr=>{const key=NOTIFY_KEY+"-"+today+"-"+hr;if(now.getHours()===hr&&now.getMinutes()===0&&localStorage.getItem(key)!=="1"){localStorage.setItem(key,"1");const label=hr===8?"शुभ प्रभात 🌅":hr===13?"शुभ दिउँसो ☀️":"शुभ साँझ 🌙";notifyNow("Laxman Nepal Vacation",label+"\n"+remainingText())}})}
-notify.onclick=()=>enableNotifications();
-
-const setupModal=$("#setupModal"),setupTitle=$("#setupTitle"),setupText=$("#setupText"),setupAction=$("#setupAction"),setupStep=$("#setupStep"),setupClose=$("#setupClose"),setupSkip=$("#setupSkip");
-let setupStage="install",setupShown=false,deferred=null;
-function isStandalone(){return window.matchMedia("(display-mode: standalone)").matches||window.navigator.standalone===true}
-function showSetup(stage){setupStage=stage;setupModal.hidden=false;setupShown=true;if(stage==="install"){setupTitle.textContent="Vacation App Install";setupText.textContent="यो page लाई phone/PC मा app जस्तै install गर्नुहोस्। त्यसपछि daily countdown reminders enable गर्न सकिन्छ।";setupAction.textContent="📲 Install Page";setupStep.textContent="STEP 1 OF 2"}else{setupTitle.textContent="Daily Notifications Enable";setupText.textContent="अब Chrome बाट बिहान, दिउँसो र साँझ countdown reminder पठाउन अनुमति दिनुहोस्।";setupAction.textContent="🔔 Allow Notifications";setupStep.textContent="STEP 2 OF 2"}}
-async function continueSetup(){if(setupStage==="install"){if(deferred){try{deferred.prompt();const choice=await deferred.userChoice;deferred=null;install.hidden=true;if(choice?.outcome==="accepted")showSetup("notify");else showSetup("notify")}catch(e){showSetup("notify")}}else showSetup("notify")}else{if(await enableNotifications())setupModal.hidden=true}}
-setupAction.onclick=continueSetup;setupClose.onclick=()=>setupModal.hidden=true;setupSkip.onclick=()=>setupModal.hidden=true;
-addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferred=e;install.hidden=false});
-install.onclick=()=>{if(deferred)deferred.prompt();else showSetup("notify")};
-setTimeout(()=>{if(!setupShown&&!isStandalone()){if(deferred)showSetup("install");else showSetup("notify")}else if(!setupShown&&"Notification"in window&&Notification.permission!=="granted"&&Notification.permission!=="denied")showSetup("notify")},1800);
-
-reset.onclick=()=>{items.forEach((_,i)=>localStorage.removeItem("vp"+i));render()};
-function updateFocus(){const now=Date.now(),next=M.map((x,i)=>({x,i,t:new Date(x[2]+"T00:00:00+05:45").getTime()})).find(v=>v.t>now);if(!next){focus.innerHTML='<span class="focus-tag">🇳🇵 VACATION MODE</span><div class="focus-main">घर फर्किने यात्रा सुरु भयो 🎉</div><div class="focus-sub">अब countdown को सट्टा तपाईंको Nepal journey मा focus गर्ने समय हो।</div>';return}const days=Math.ceil((next.t-now)/86400000),label=days===1?"भोलि":days+" दिनमा";focus.innerHTML='<span class="focus-tag">NEXT MILESTONE</span><div class="focus-main">'+next.x[0]+' · '+label+'</div><div class="focus-sub">'+next.x[1]+'<br>अर्को तयारी चरणका लागि आजबाट checklist हेर्नुहोस्।</div>}
-
-function renderNotifyCenter(){const times=getNotifyTimes();document.querySelectorAll(".notify-time").forEach(b=>b.classList.toggle("active",times.includes(Number(b.dataset.hour))));const granted="Notification"in window&&Notification.permission==="granted";notifyState.textContent=granted?"🟢 Active":"⚪ Not enabled";notifyHelp.textContent=granted?"Daily reminders are enabled. You can select or deselect reminder times above.":"Click Enable / Fix Notifications and allow notifications in Chrome.";let now=new Date(),next=null;for(let d=0;d<2&&!next;d++){for(const hr of times){const x=new Date(now);x.setDate(now.getDate()+d);x.setHours(hr,0,0,0);if(x>now){next=x;break}}}nextNotify.textContent=next?"Next reminder: "+next.toLocaleString("en-US",{weekday:"short",hour:"numeric",minute:"2-digit"}):"No reminder scheduled"}
-document.querySelectorAll(".notify-time").forEach(b=>b.onclick=()=>{let h=Number(b.dataset.hour),t=getNotifyTimes();t=t.includes(h)?t.filter(x=>x!==h):[...t,h].sort((a,b)=>a-b);if(!t.length)t=[h];setNotifyTimes(t);renderNotifyCenter()});
-notifyTest.onclick=()=>enableNotifications().then(ok=>{if(ok)notifyNow("Laxman Nepal Vacation","Test reminder 🔔 "+remainingText());renderNotifyCenter()});notifySettings.onclick=()=>enableNotifications().then(renderNotifyCenter);
-qcopy.onclick=()=>{navigator.clipboard?.writeText("🇳🇵 Laxman Nepal Vacation — "+remainingText());qcopy.textContent="✅ Copied";setTimeout(()=>qcopy.textContent="📋 Copy Countdown",1600)};qshare.onclick=()=>share.click();qnotify.onclick=()=>notify.click();qtheme.onclick=()=>theme.click();
-render();update();updateFocus();updateNotifyButton();renderNotifyCenter();scheduleNotifications();setInterval(update,1000);setInterval(updateFocus,60000);setInterval(renderNotifyCenter,30000);setInterval(scheduleNotifications,30000);setInterval(render,60000);
+function getTimes(){
+ try{
+  const x=JSON.parse(localStorage.getItem(timeKey)||"null");
+  const valid=Array.isArray(x)?x.map(Number).filter(h=>defaultTimes.includes(h)):[];
+  return valid.length?valid:defaultTimes.slice();
+ }catch(e){return defaultTimes.slice();}
+}
+function saveTimes(x){localStorage.setItem(timeKey,JSON.stringify(x));}
+function render(){
+ $("#timeline").innerHTML=milestones.map(x=>{
+  const done=Date.now()>=new Date(x[2]+"T00:00:00+05:45").getTime();
+  return '<div class="mile '+(done?"done":"")+'">'+(done?"✓":"○")+' <span><b>'+x[0]+'</b><br><small class="muted">'+x[1]+'</small></span></div>';
+ }).join("");
+ $("#pack").innerHTML=packing.map((x,i)=>'<label><input type="checkbox" data-i="'+i+'">'+x+"</label>").join("");
+ $("#pack").querySelectorAll("input").forEach((el,i)=>{
+  el.checked=localStorage.getItem("vp"+i)==="1";
+  el.onchange=()=>localStorage.setItem("vp"+i,el.checked?"1":"0");
+ });
+}
+function update(){
+ const now=Date.now();
+ const left=Math.max(0,target-now);
+ const sec=Math.floor(left/1000);
+ const d=Math.floor(sec/86400);
+ const h=Math.floor(sec%86400/3600);
+ const m=Math.floor(sec%3600/60);
+ const s=sec%60;
+ $("#d").textContent=nepNum(d);
+ $("#h").textContent=nepNum(pad(h));
+ $("#m").textContent=nepNum(pad(m));
+ $("#s").textContent=nepNum(pad(s));
+ $("#status").textContent=left?"● लाइभ समयसँग अपडेट हुँदैछ…":"🎉 अब vacation सुरु भयो!";
+ $("#liveBadge").textContent=left?"● LIVE COUNTDOWN":"● VACATION STARTED";
+ const percent=Math.max(0,Math.min(100,(now-start)/(target-start)*100));
+ $("#bar").style.width=percent+"%";
+ $("#pct").textContent=nepNum(percent.toFixed(1))+"%";
+ const clock={hour:"2-digit",minute:"2-digit",second:"2-digit"};
+ const date={year:"numeric",month:"short",day:"numeric"};
+ $("#kw").textContent=new Intl.DateTimeFormat("en-US",{...clock,timeZone:"Asia/Kuwait"}).format(now);
+ $("#np").textContent=new Intl.DateTimeFormat("en-US",{...clock,timeZone:"Asia/Kathmandu"}).format(now);
+ $("#kwd").textContent=new Intl.DateTimeFormat("en-GB",{...date,timeZone:"Asia/Kuwait"}).format(now);
+ $("#npd").textContent=new Intl.DateTimeFormat("en-GB",{...date,timeZone:"Asia/Kathmandu"}).format(now);
+}
+function remaining(){
+ const left=Math.max(0,target-Date.now());
+ const sec=Math.floor(left/1000);
+ return Math.floor(sec/86400)+" दिन "+pad(Math.floor(sec%86400/3600))+" घण्टा "+pad(Math.floor(sec%3600/60))+" मिनेट बाँकी 🇳🇵";
+}
+function notifyNow(body){
+ if("Notification" in window && Notification.permission==="granted"){
+  new Notification("Laxman Nepal Vacation",{body:body,icon:"/assets/icons/icon-192.png",tag:"laxman-vacation"});
+ }
+}
+function updateNotify(){
+ const state=$("#notifyState");
+ if(!("Notification" in window)){ $("#notify").textContent="🔕 Unsupported"; if(state)state.textContent="⚪ Notifications unsupported"; return; }
+ if(Notification.permission==="granted"){ $("#notify").textContent="🔔 Notifications ON"; if(state)state.textContent="🟢 Notifications Active"; }
+ else if(Notification.permission==="denied"){ $("#notify").textContent="🚫 Notifications Blocked"; if(state)state.textContent="🔴 Blocked — allow in Chrome site settings"; }
+ else { $("#notify").textContent="🔔 Notify"; if(state)state.textContent="⚪ Not enabled"; }
+}
+async function enableNotifications(){
+ if(!("Notification" in window)){alert("यो browser ले Notifications support गर्दैन।");return false;}
+ if(Notification.permission==="denied"){alert("Chrome site settings बाट Notifications लाई Allow गर्नुहोस्।");updateNotify();return false;}
+ const p=Notification.permission==="granted"?"granted":await Notification.requestPermission();
+ updateNotify();
+ if(p==="granted"){localStorage.setItem("vacationNotify","1");notifyNow("Notifications enabled! "+remaining());renderNotify();return true;}
+ return false;
+}
+function schedule(){
+ if(!("Notification" in window) || Notification.permission!=="granted")return;
+ const now=new Date();
+ const today=now.toDateString();
+ getTimes().forEach(hr=>{
+  const key="vacation-"+today+"-"+hr;
+  if(now.getHours()===hr && now.getMinutes()===0 && localStorage.getItem(key)!=="1"){
+   localStorage.setItem(key,"1");
+   const label=hr===8?"शुभ प्रभात 🌅":hr===13?"शुभ दिउँसो ☀️":"शुभ साँझ 🌙";
+   notifyNow(label+"\n"+remaining());
+  }
+ });
+}
+function renderNotify(){
+ const times=getTimes();
+ document.querySelectorAll(".notify-time").forEach(b=>b.classList.toggle("active",times.includes(Number(b.dataset.hour))));
+ const next=$("#nextNotify");
+ if(next){
+  let found=null;
+  const now=new Date();
+  for(let day=0;day<2 && !found;day++){
+   for(const hr of times){
+    const x=new Date(now);
+    x.setDate(now.getDate()+day);
+    x.setHours(hr,0,0,0);
+    if(x>now){found=x;break;}
+   }
+  }
+  next.textContent=found?"Next reminder: "+found.toLocaleString("en-US",{weekday:"short",hour:"numeric",minute:"2-digit"}):"No reminder scheduled";
+ }
+}
+function updateFocus(){
+ const now=Date.now();
+ const next=milestones.map(x=>({x:x,t:new Date(x[2]+"T00:00:00+05:45").getTime()})).find(v=>v.t>now);
+ if(!next){$("#focus").innerHTML='<span class="focus-tag">🇳🇵 VACATION MODE</span><div class="focus-main">घर फर्किने यात्रा सुरु भयो 🎉</div><div class="focus-sub">अब countdown को सट्टा तपाईंको Nepal journey मा focus गर्ने समय हो।</div>';return;}
+ const days=Math.ceil((next.t-now)/86400000);
+ $("#focus").innerHTML='<span class="focus-tag">NEXT MILESTONE</span><div class="focus-main">'+next.x[0]+' · '+(days===1?"भोलि":days+" दिनमा")+'</div><div class="focus-sub">'+next.x[1]+'<br>अर्को तयारी चरणका लागि आजबाट checklist हेर्नुहोस्।</div>';
+}
+function themeSet(d){
+ document.body.classList.toggle("dark",d);
+ localStorage.setItem("vtheme",d?"dark":"light");
+ $("#theme").textContent=d?"☀️ Light Mode":"🌙 Dark Mode";
+ const meta=$('meta[name="theme-color"]');
+ if(meta)meta.setAttribute("content",d?"#090b10":"#f5f5f7");
+}
+const savedTheme=localStorage.getItem("vtheme")==="dark";
+themeSet(savedTheme);
+$("#theme").onclick=()=>themeSet(!document.body.classList.contains("dark"));
+$("#share").onclick=()=>navigator.share?navigator.share({title:"Laxman Nepal Vacation Countdown",url:location.href}):navigator.clipboard?.writeText(location.href);
+$("#copy").onclick=()=>navigator.clipboard?.writeText(location.href);
+$("#qcopy").onclick=()=>{navigator.clipboard?.writeText("🇳🇵 Laxman Nepal Vacation — "+remaining());$("#qcopy").textContent="✅ Copied";setTimeout(()=>$("#qcopy").textContent="📋 Copy Countdown",1600);};
+$("#qshare").onclick=()=>$("#share").click();
+$("#qnotify").onclick=()=>$("#notify").click();
+$("#qtheme").onclick=()=>$("#theme").click();
+$("#notify").onclick=enableNotifications;
+$("#notifyTest").onclick=async()=>{if(await enableNotifications())notifyNow("Test reminder 🔔 "+remaining());};
+$("#notifySettings").onclick=enableNotifications;
+document.querySelectorAll(".notify-time").forEach(b=>b.onclick=()=>{
+ const h=Number(b.dataset.hour);
+ let t=getTimes();
+ t=t.includes(h)?t.filter(x=>x!==h):t.concat(h).sort((a,b)=>a-b);
+ if(!t.length)t=[h];
+ saveTimes(t);
+ renderNotify();
+});
+$("#reset").onclick=()=>{packing.forEach((_,i)=>localStorage.removeItem("vp"+i));render();};
+let deferred=null;
+addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferred=e;$("#install").hidden=false;});
+$("#install").onclick=async()=>{
+ if(!deferred){alert("Install option अहिले Chrome ले उपलब्ध गराएको छैन। Chrome menu बाट Install page/app छान्नुहोस्।");return;}
+ deferred.prompt();
+ await deferred.userChoice;
+ deferred=null;
+ $("#install").hidden=true;
+};
+const modal=$("#setupModal");
+function standalone(){return matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;}
+function showSetup(stage){
+ modal.hidden=false;
+ $("#setupTitle").textContent=stage==="install"?"Vacation App Install":"Daily Notifications Enable";
+ $("#setupText").textContent=stage==="install"?"यो page लाई app जस्तै install गर्नुहोस्। त्यसपछि daily countdown reminders enable गर्न सकिन्छ।":"Chrome बाट बिहान, दिउँसो र साँझ countdown reminder पठाउन अनुमति दिनुहोस्।";
+ $("#setupAction").textContent=stage==="install"?"📲 Install Page":"🔔 Allow Notifications";
+ $("#setupStep").textContent=stage==="install"?"STEP 1 OF 2":"STEP 2 OF 2";
+ modal.dataset.stage=stage;
+}
+$("#setupClose").onclick=()=>modal.hidden=true;
+$("#setupSkip").onclick=()=>modal.hidden=true;
+$("#setupAction").onclick=async()=>{
+ if(modal.dataset.stage==="install"){
+  if(deferred){deferred.prompt();const choice=await deferred.userChoice;deferred=null;$("#install").hidden=true;if(choice?.outcome==="accepted" && !standalone())showSetup("notify");else showSetup("notify");}
+  else showSetup("notify");
+ }else if(await enableNotifications())modal.hidden=true;
+};
+setTimeout(()=>{if(!standalone() && deferred)showSetup("install");else if("Notification"in window && Notification.permission==="default")showSetup("notify");},1800);
+render();
+update();
+updateFocus();
+updateNotify();
+renderNotify();
+schedule();
+setInterval(update,1000);
+setInterval(updateFocus,60000);
+setInterval(renderNotify,30000);
+setInterval(schedule,30000);
+setInterval(render,60000);
 })();
-if("serviceWorker"in navigator)navigator.serviceWorker.register("/vacation/sw.js");
-</script>
-</body>
+if("serviceWorker"in navigator)navigator.serviceWorker.register("/vacation/sw.js").catch(()=>{});
+</script></body>
 </html>
