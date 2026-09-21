@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 import re
 import json
 
@@ -21,53 +22,73 @@ FOOTER = r'''<footer class="shared-footer" data-shared-shell="footer"><div class
 
 SCRIPT = r'''<script data-shared-shell-script="laxman">(()=>{const m=document.querySelector('[data-shared-menu]'),n=document.querySelector('[data-shared-mobile]'),c=document.querySelector('[data-shared-close]'),b=document.querySelector('[data-shared-backdrop]');const hide=()=>{n?.classList.remove('open');if(b)b.style.display='none';document.body.style.overflow=''};m?.addEventListener('click',()=>{n?.classList.add('open');if(b)b.style.display='block';document.body.style.overflow='hidden'});c?.addEventListener('click',hide);b?.addEventListener('click',hide);n?.querySelectorAll('a').forEach(a=>a.addEventListener('click',hide));document.addEventListener('keydown',e=>{if(e.key==='Escape')hide()});const y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear()})();</script>'''
 
-def replace_once(text, pattern, replacement):
-    new, count = re.subn(pattern, replacement, text, count=1, flags=re.I | re.S)
-    if count != 1:
-        raise RuntimeError(f"Required homepage element not found: {pattern}")
-    return new
-
 def apply_shell(path: Path):
-    text = path.read_text(encoding="utf-8")
-    if SHARED_CSS not in text:
-        text = text.replace('</head>', f'<link rel="stylesheet" href="{SHARED_CSS}">\\n</head>', 1)
-    # Remove previously injected shell.
-    text = re.sub(r'<header\\s+class=["\\']shared-header["\\'].*?</header>', '', text, count=1, flags=re.I | re.S)
-    text = re.sub(r'<nav\\s+class=["\\']shared-mobile-menu["\\'].*?<div\\s+class=["\\']shared-menu-backdrop["\\']></div>', '', text, count=1, flags=re.I | re.S)
-    text = re.sub(r'<footer\\s+class=["\\']shared-footer["\\'].*?</footer>', '', text, count=1, flags=re.I | re.S)
-    text = text.replace('<body>', '<body>' + HEADER, 1) if 'data-shared-shell="header"' not in text else text
-    text = text.replace('</body>', FOOTER + SCRIPT + '\\n</body>', 1) if 'data-shared-shell="footer"' not in text else text
-    text = re.sub(r'<link[^>]+shared-shell\\.css[^>]*>', '', text, count=1, flags=re.I)
-    text = text.replace('</head>', f'<link rel="stylesheet" href="{SHARED_CSS}">\\n</head>', 1)
+    try:
+        text = path.read_text(encoding="utf-8")
+    except (UnicodeDecodeError, OSError):
+        return False
+
+    # Remove any previously injected shell so repeated builds stay idempotent.
+    text = re.sub(r'<header\s+class=["\']shared-header["\'][^>]*>.*?</header>', '', text, count=1, flags=re.I | re.S)
+    text = re.sub(r'<nav\s+class=["\']shared-mobile-menu["\'][^>]*>.*?<div\s+class=["\']shared-menu-backdrop["\'][^>]*>.*?</div>', '', text, count=1, flags=re.I | re.S)
+    text = re.sub(r'<footer\s+class=["\']shared-footer["\'][^>]*>.*?</footer>', '', text, count=1, flags=re.I | re.S)
+    text = re.sub(r'<link[^>]+shared-shell\.css[^>]*>', '', text, count=0, flags=re.I)
+
+    # Remove common legacy shells that would otherwise appear above the new shell.
+    text = re.sub(r'<header\s+class=["\']gb-header["\'][^>]*>.*?</header>', '', text, count=1, flags=re.I | re.S)
+    text = re.sub(r'<footer\s+class=["\']gb-footer["\'][^>]*>.*?</footer>', '', text, count=1, flags=re.I | re.S)
+
+    # Add the shared stylesheet once.
+    if re.search(r'</head\s*>', text, flags=re.I):
+        text = re.sub(
+            r'</head\s*>',
+            f'<link rel="stylesheet" href="{SHARED_CSS}">\n</head>',
+            text, count=1, flags=re.I
+        )
+
+    # Replace an existing shell if one remains; otherwise inject after <body>,
+    # including <body class="..."> and other body attributes.
+    body_match = re.search(r'<body\b[^>]*>', text, flags=re.I)
+    if body_match:
+        text = text[:body_match.end()] + HEADER + text[body_match.end():]
+
+        # Remove legacy year-only footer scripts to avoid duplicate year handling.
+        text = re.sub(
+            r'<script>\s*\(\(\)=>\{const y=document\.getElementById\(["\']year["\']\).*?</script>',
+            '', text, count=1, flags=re.I | re.S
+        )
+
+        if re.search(r'</body\s*>', text, flags=re.I):
+            text = re.sub(
+                r'</body\s*>',
+                FOOTER + SCRIPT + '\n</body>',
+                text, count=1, flags=re.I
+            )
+    else:
+        return False
+
     path.write_text(text, encoding="utf-8")
+    return True
+
 
 def main():
-    paths = [INDEX]
-    if MANIFEST.exists():
-        try:
-            data = json.loads(MANIFEST.read_text(encoding="utf-8"))
-            paths += [ROOT / str(p.get("path","")).lstrip("/") for p in data.get("posts",[])
-                      if str(p.get("path","")).lstrip("/").startswith(("2024/","2025/","2026/"))]
-        except Exception:
-            pass
-    seen=set()
-    for path in paths:
-        if path in seen or not path.is_file(): continue
-        seen.add(path)
-        apply_shell(path)
-    if SHARED_CSS not in text:
-        text = text.replace('</head>', f'<link rel="stylesheet" href="{SHARED_CSS}">\n</head>', 1)
-    text = re.sub(r'<header\s+class=["\']shared-header["\'].*?</header>', '', text, count=1, flags=re.I | re.S)
-    text = re.sub(r'<header\s+class=["\']gb-header["\'].*?</header>', '', text, count=1, flags=re.I | re.S)
-    text = re.sub(r'<nav\s+class=["\']shared-mobile-menu["\'].*?<div class=["\']shared-menu-backdrop["\']></div>', '', text, count=1, flags=re.I | re.S)
-    text = re.sub(r'<footer\s+class=["\']shared-footer["\'].*?</footer>', '', text, count=1, flags=re.I | re.S)
-    text = re.sub(r'<footer\s+class=["\']gb-footer["\'].*?</footer>', '', text, count=1, flags=re.I | re.S)
-    text = text.replace('<body>', '<body>' + HEADER, 1)
-    text = text.replace('</body>', FOOTER + SCRIPT + '\n</body>', 1)
-    text = re.sub(r'<script>\s*\(\(\)=>\{const y=document\.getElementById\(["\']year["\']\).*?</script>', '', text, count=1, flags=re.I | re.S)
-    text = re.sub(r'<link[^>]+shared-shell\.css[^>]*>', '', text, count=1, flags=re.I)
-    text = text.replace('</head>', f'<link rel="stylesheet" href="{SHARED_CSS}">\n</head>', 1)
-    INDEX.write_text(text, encoding="utf-8")
+    target = Path(os.environ.get("SHELL_ROOT", str(ROOT))).resolve()
+    excluded = {".git", "node_modules", ".pages", "out", ".next"}
+    files = []
+
+    for path in target.rglob("*.html"):
+        if any(part in excluded for part in path.relative_to(target).parts):
+            continue
+        files.append(path)
+
+    # Stable ordering makes CI output deterministic.
+    changed = 0
+    for path in sorted(files):
+        if apply_shell(path):
+            changed += 1
+
+    print(f"Applied Laxman shared shell to {changed} HTML pages under {target}")
+
 
 if __name__ == "__main__":
     main()
