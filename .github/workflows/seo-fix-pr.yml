@@ -73,6 +73,36 @@ jobs:
           fi
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
+      - name: Validate SEO fix
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          path=Path("${{ steps.parse.outputs.path }}")
+          html=path.read_text(encoding="utf-8")
+          title=re.search(r"<title\\b[^>]*>(.*?)</title>",html,re.I|re.S)
+          desc=re.search(r'<meta\\b[^>]*\\bname=["\']description["\'][^>]*\\bcontent=["\'](.*?)["\']',html,re.I|re.S)
+          h1=re.findall(r"<h1\\b[^>]*>(.*?)</h1>",html,re.I|re.S)
+          if not title or not (30 <= len(re.sub(r"<.*?>","",title.group(1)).strip()) <= 60):
+              raise SystemExit("SEO validation failed: title must be 30-60 characters.")
+          if not desc or not (70 <= len(desc.group(1).strip()) <= 160):
+              raise SystemExit("SEO validation failed: meta description must be 70-160 characters.")
+          if len(h1) != 1:
+              raise SystemExit(f"SEO validation failed: expected exactly one H1, found {len(h1)}.")
+          print("SEO metadata validation passed.")
+          PY
+          git diff --check
+
+      - name: Build site validation
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          python3 scripts/build_site.py
+          python3 scripts/generate_seo.py
+          test -f index.html
+          test -f sitemap.xml
+          echo "Site build and SEO discovery validation passed."
+
       - name: Create branch and commit
         if: steps.diff.outputs.changed == 'true'
         id: commit
