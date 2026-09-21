@@ -34,7 +34,7 @@ body{background:radial-gradient(circle at 15% 10%,rgba(0,122,255,.10),transparen
 <section class="grid"><article class="card"><h2>🔗 Shareable Countdown</h2><input id="url" readonly style="width:100%;box-sizing:border-box;padding:11px;border-radius:12px;border:1px solid #ddd"><button class="btn" id="copy">Copy Link</button></article><article class="card"><h2>✨ Installable Vacation App</h2><p class="sub">यो page लाई phone home screen मा app जस्तै राख्न सकिन्छ। Theme र checklist browser मै save हुन्छ।</p></article></section>
 
 <section class="grid"><article class="card"><h2>🔔 Notification Center</h2><div class="notify-center"><div class="notify-status"><span id="notifyState">Checking…</span><button class="btn" id="notifyTest">Test</button></div><div class="notify-times"><button class="notify-time" data-hour="8">🌅 8:00 AM<small>शुभ प्रभात</small></button><button class="notify-time" data-hour="13">☀️ 1:00 PM<small>शुभ दिउँसो</small></button><button class="notify-time" data-hour="20">🌙 8:00 PM<small>शुभ साँझ</small></button></div><div class="next-notify" id="nextNotify">Next reminder: --</div><p class="sub">समय तपाईंको device को local time अनुसार हो। Browser notification अनुमति दिएपछि चयन गरिएका समय सक्रिय हुन्छन्।</p></div></article><article class="card"><h2>🛡️ Notification Status</h2><p class="sub" id="notifyHelp">Notifications permission जाँच हुँदैछ…</p><button class="btn" id="notifySettings">Enable / Fix Notifications</button></article></section><section class="grid"><article class="card focus-card"><h2>🎯 आजको Vacation Focus</h2><div id="focus"></div></article><article class="card"><h2>📅 Quick Planner</h2><div class="quick-grid"><button class="quick" id="qcopy">📋 Copy Countdown</button><button class="quick" id="qshare">↗️ Share</button><button class="quick" id="qnotify">🔔 Notifications</button><button class="quick" id="qtheme">🌓 Theme</button></div></article></section>
-<section class="grid"><article class="card"><h2>🩺 Notification Health Center</h2><div class="health-grid"><div class="health-item"><b>Permission</b><span id="hcPerm">Checking…</span></div><div class="health-item"><b>Service Worker</b><span id="hcSw">Checking…</span></div><div class="health-item"><b>Install Mode</b><span id="hcInstall">Checking…</span></div><div class="health-item"><b>Schedule</b><span id="hcSchedule">Checking…</span></div></div><div class="health-action"><div class="health-bar"><i id="hcBar"></i></div><p class="sub" id="hcText">Diagnostics चलिरहेको छ…</p><button class="btn" id="hcFix">Run Health Check</button></div></article><article class="card"><h2>📡 Reminder Preview</h2><p class="sub" id="hcPreview">Next reminder जाँच हुँदैछ…</p><button class="btn" id="hcTest">Send Test</button></article></section></main>
+<section class="grid"><article class="card"><h2>🩺 Notification Health Center</h2><div class="health-grid"><div class="health-item"><b>Permission</b><span id="hcPerm">Checking…</span></div><div class="health-item"><b>Service Worker</b><span id="hcSw">Checking…</span></div><div class="health-item"><b>Install Mode</b><span id="hcInstall">Checking…</span></div><div class="health-item"><b>Schedule</b><span id="hcSchedule">Checking…</span></div></div><div class="health-action"><div class="health-bar"><i id="hcBar"></i></div><p class="sub" id="hcText">Diagnostics चलिरहेको छ…</p><button class="btn" id="hcFix">Run Health Check</button></div></article><article class="card"><h2>📡 Reminder Preview</h2><p class="sub" id="hcPreview">Next reminder जाँच हुँदैछ…</p><button class="btn" id="hcTest">Send Test</button></article></section><section class="grid"><article class="card"><h2>🌍 Reminder Timezone</h2><div class="quick-grid"><button class="quick tz-btn" data-tz="device">📱 Device Time</button><button class="quick tz-btn" data-tz="Asia/Kuwait">🇰🇼 Kuwait</button><button class="quick tz-btn" data-tz="Asia/Kathmandu">🇳🇵 Nepal</button><button class="quick tz-btn" data-tz="UTC">🌐 UTC</button></div><p class="sub" id="tzInfo">Reminder schedule timezone जाँच हुँदैछ…</p></article><article class="card"><h2>🧪 Reminder Simulator</h2><p class="sub">चयन गरिएको timezone र reminder settings अनुसार अर्को notification preview गर्नुहोस्।</p><button class="btn" id="sim8">🌅 Morning</button><button class="btn" id="sim13">☀️ Afternoon</button><button class="btn" id="sim20">🌙 Evening</button></article></section></main>
 
 <footer class="shared-footer"><div class="shared-footer-grid"><div><div class="shared-footer-brand"><span class="shared-logo">LN</span><strong>Laxman Nepal</strong></div><p>Tools, AI, practical guides and useful digital resources.</p></div><div><strong>Explore</strong><a href="/tools/">Tools</a><a href="/ai-tools/">AI Tools</a><a href="/blog/">Blog</a></div><div><strong>Discover</strong><a href="/news/">News</a><a href="/guides/">Guides</a><a href="/contact/">Contact</a></div></div><div class="shared-footer-bottom"><span>© <span id="year"></span> Laxman Nepal.</span></div></footer>
 
@@ -126,11 +126,11 @@ async function enableNotifications(){
 }
 function schedule(){
  if(!("Notification" in window) || Notification.permission!=="granted")return;
- const now=new Date();
- const today=now.toDateString();
+ const z=zoneNow();
+ const today=z.year+"-"+z.month+"-"+z.day;
  getTimes().forEach(hr=>{
-  const key="vacation-"+today+"-"+hr;
-  if(now.getHours()===hr && now.getMinutes()===0 && localStorage.getItem(key)!=="1"){
+  const key="vacation-"+today+"-"+hr+"-"+selectedTimezone();
+  if(z.hour===hr && z.minute===0 && localStorage.getItem(key)!=="1"){
    localStorage.setItem(key,"1");
    const label=hr===8?"शुभ प्रभात 🌅":hr===13?"शुभ दिउँसो ☀️":"शुभ साँझ 🌙";
    notifyNow(label+"\n"+remaining());
@@ -155,7 +155,7 @@ function renderNotify(){
   next.textContent=found?"Next reminder: "+found.toLocaleString("en-US",{weekday:"short",hour:"numeric",minute:"2-digit"}):"No reminder scheduled";
  }
 }
-function healthCheck(){ const perm=$("#hcPerm"),sw=$("#hcSw"),ins=$("#hcInstall"),sch=$("#hcSchedule"),bar=$("#hcBar"),txt=$("#hcText"),prev=$("#hcPreview"); const hasNotif="Notification"in window; const p=hasNotif?Notification.permission:"unsupported"; perm.textContent=p==="granted"?"🟢 Allowed":p==="denied"?"🔴 Blocked":p==="unsupported"?"⚪ Unsupported":"🟡 Not enabled"; perm.className=p==="granted"?"health-ok":p==="denied"?"health-bad":"health-warn"; const installed=standalone(); ins.textContent=installed?"🟢 Installed":"🟡 Browser mode"; ins.className=installed?"health-ok":"health-warn"; sw.textContent=navigator.serviceWorker?"🟢 Supported":"🔴 Unsupported";sw.className=navigator.serviceWorker?"health-ok":"health-bad"; const times=getTimes();sch.textContent=times.map(h=>h===8?"8 AM":h===13?"1 PM":"8 PM").join(" · "); sch.className=times.length?"health-ok":"health-bad"; let score=0;if(p==="granted")score+=40;if(navigator.serviceWorker)score+=30;if(installed)score+=15;if(times.length)score+=15; bar.style.width=score+"%"; txt.textContent=score>=85?"सबै मुख्य notification checks ठीक छन्।":"केही setup बाँकी छ। Permission Allow र app install गरे reliability बढ्छ।"; if(prev){prev.textContent=$("#nextNotify")?.textContent||"No reminder scheduled";}}async function healthTest(){if(await enableNotifications())notifyNow("Health Center test 🔔 "+remaining());healthCheck();}function updateFocus(){
+function healthCheck(){ const perm=$("#hcPerm"),sw=$("#hcSw"),ins=$("#hcInstall"),sch=$("#hcSchedule"),bar=$("#hcBar"),txt=$("#hcText"),prev=$("#hcPreview"); const hasNotif="Notification"in window; const p=hasNotif?Notification.permission:"unsupported"; perm.textContent=p==="granted"?"🟢 Allowed":p==="denied"?"🔴 Blocked":p==="unsupported"?"⚪ Unsupported":"🟡 Not enabled"; perm.className=p==="granted"?"health-ok":p==="denied"?"health-bad":"health-warn"; const installed=standalone(); ins.textContent=installed?"🟢 Installed":"🟡 Browser mode"; ins.className=installed?"health-ok":"health-warn"; sw.textContent=navigator.serviceWorker?"🟢 Supported":"🔴 Unsupported";sw.className=navigator.serviceWorker?"health-ok":"health-bad"; const times=getTimes();sch.textContent=times.map(h=>h===8?"8 AM":h===13?"1 PM":"8 PM").join(" · "); sch.className=times.length?"health-ok":"health-bad"; let score=0;if(p==="granted")score+=40;if(navigator.serviceWorker)score+=30;if(installed)score+=15;if(times.length)score+=15; bar.style.width=score+"%"; txt.textContent=score>=85?"सबै मुख्य notification checks ठीक छन्।":"केही setup बाँकी छ। Permission Allow र app install गरे reliability बढ्छ।"; if(prev){prev.textContent=$("#nextNotify")?.textContent||"No reminder scheduled";}}async function healthTest(){if(await enableNotifications())notifyNow("Health Center test 🔔 "+remaining());healthCheck();}function selectedTimezone(){return localStorage.getItem("vacationNotifyTZ")||"device";}function zoneNow(){ const tz=selectedTimezone(); if(tz==="device")return new Date(); const parts=new Intl.DateTimeFormat("en-US",{timeZone:tz,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"}).formatToParts(new Date()); const o={};parts.forEach(p=>{if(p.type!=="literal")o[p.type]=p.value;}); return {year:+o.year,month:+o.month,day:+o.day,hour:+o.hour,minute:+o.minute,second:+o.second};}function timezoneLabel(){const z=selectedTimezone();return z==="device"?"📱 Device local time":z==="Asia/Kuwait"?"🇰🇼 Kuwait time (Asia/Kuwait)":z==="Asia/Kathmandu"?"🇳🇵 Nepal time (Asia/Kathmandu)":"🌐 UTC";}function renderTimezone(){ const z=selectedTimezone();document.querySelectorAll(".tz-btn").forEach(b=>b.classList.toggle("active",b.dataset.tz===z)); const info=$("#tzInfo");if(info)info.textContent="Reminders: "+timezoneLabel()+" · "+getTimes().map(h=>pad(h)+":00").join(" · ");}function simulateReminder(hr){ const label=hr===8?"शुभ प्रभात 🌅":hr===13?"शुभ दिउँसो ☀️":"शुभ साँझ 🌙"; notifyNow(label+"\n"+remaining()+"\nTimezone: "+timezoneLabel());}function updateFocus(){
  const now=Date.now();
  const next=milestones.map(x=>({x:x,t:new Date(x[2]+"T00:00:00+05:45").getTime()})).find(v=>v.t>now);
  if(!next){$("#focus").innerHTML='<span class="focus-tag">🇳🇵 VACATION MODE</span><div class="focus-main">घर फर्किने यात्रा सुरु भयो 🎉</div><div class="focus-sub">अब countdown को सट्टा तपाईंको Nepal journey मा focus गर्ने समय हो।</div>';return;}
@@ -183,6 +183,8 @@ $("#notifyTest").onclick=async()=>{if(await enableNotifications())notifyNow("Tes
 $("#notifySettings").onclick=async()=>{await enableNotifications();healthCheck();};
 $("#hcFix").onclick=async()=>{await enableNotifications();healthCheck();};
 $("#hcTest").onclick=healthTest;
+document.querySelectorAll(".tz-btn").forEach(b=>b.onclick=()=>{localStorage.setItem("vacationNotifyTZ",b.dataset.tz);renderTimezone();healthCheck();});
+$("#sim8").onclick=()=>simulateReminder(8);$("#sim13").onclick=()=>simulateReminder(13);$("#sim20").onclick=()=>simulateReminder(20);
 document.querySelectorAll(".notify-time").forEach(b=>b.onclick=()=>{
  const h=Number(b.dataset.hour);
  let t=getTimes();
@@ -226,11 +228,13 @@ updateFocus();
 updateNotify();
 healthCheck();
 renderNotify();
+renderTimezone();
 schedule();
 setInterval(update,1000);
 setInterval(updateFocus,60000);
 setInterval(renderNotify,30000);
 setInterval(healthCheck,30000);
+setInterval(renderTimezone,30000);
 setInterval(schedule,30000);
 setInterval(render,60000);
 })();
