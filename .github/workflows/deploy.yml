@@ -64,10 +64,8 @@ jobs:
         run: python3 scripts/modernize_blogger_articles.py
       - name: Apply shared shell to Blogger articles
         run: python3 scripts/apply_laxman_shared_shell.py
-
       - name: Upgrade migrated Blogger article CSS
         run: python3 scripts/upgrade_blogger_responsive.py
-
       - name: Generate static SEO discovery files
         run: python3 scripts/generate_seo.py
       - name: Build Next.js static site
@@ -82,19 +80,14 @@ jobs:
         run: |
           rm -rf .pages
           mkdir -p .pages
-
           find . -maxdepth 1 -type f -not -name '.blogger-migration.json' -not -name 'CNAME' -not -name '404.html' -print0 | xargs -0 -r -I{} cp --parents "{}" .pages/
           for dir in assets 2022 2023 2024 2025 2026 apps ai blog compare guides laptops news tech-news phones products reviews search tools youtube youtube-tools vacation en ne hi Drumkit analytics; do
             if [ -d "$dir" ]; then cp -R "$dir" .pages/; fi
           done
-
           if [ -f nextjs-foundation/out/index.html ]; then
             cp -R nextjs-foundation/out/. .pages/
           fi
-
-          # Root homepage is owned by the committed root index.html.
           cp /tmp/laxman-root-homepage.html .pages/index.html
-
           python3 - <<'PY'
           import json, shutil
           from pathlib import Path
@@ -111,26 +104,22 @@ jobs:
                   dst.parent.mkdir(parents=True, exist_ok=True)
                   shutil.copy2(src, dst)
           PY
-
           if [ -f CNAME ]; then cp CNAME .pages/CNAME; fi
           touch .pages/.nojekyll
-
       - name: Apply shared shell to final Pages artifact
         run: SHELL_ROOT=.pages python3 scripts/apply_laxman_shared_shell.py
-
       - name: Audit final Pages layout
         run: python3 scripts/audit_site_layout.py .pages
-
+      - name: Audit final Pages links and assets
+        run: python3 scripts/audit_site_links.py .pages
       - name: Verify published homepage
         run: |
           test -f .pages/index.html
           grep -q 'Useful tools.' .pages/index.html
           grep -q 'All-in-One Free Online Tools by Laxman Nepal' .pages/index.html
           ! grep -q 'Technology that helps you do more' .pages/index.html
-
       - name: Optimize every published page for SEO
         run: python3 scripts/optimize_published_seo.py
-
       - name: Verify published legacy routes
         run: |
           test -f .pages/2022/09/kalimati-font-download-by-laxman-nepal.html
@@ -152,7 +141,6 @@ jobs:
               raise SystemExit(1)
           print(f"Verified {len(posts)} migrated Blogger routes in Pages artifact.")
           PY
-
       - name: Verify Next.js routes when exported
         run: |
           if [ -d nextjs-foundation/out ]; then
@@ -167,7 +155,6 @@ jobs:
             test -f .pages/youtube/index.html
             test -f .pages/search/index.html
           fi
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
