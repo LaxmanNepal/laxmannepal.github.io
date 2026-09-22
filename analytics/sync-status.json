@@ -1,0 +1,17 @@
+{
+  "status": "failed",
+  "stage": "credentials",
+  "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
+  "details": "STAGE: credentials\nERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
+  "checks": {},
+  "updatedAt": "2026-09-22T22:06:37.863633+00:00",
+  "history": [
+    {
+      "status": "failed",
+      "stage": "credentials",
+      "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
+      "checks": {},
+      "updatedAt": "2026-09-22T22:06:37.863633+00:00"
+    }
+  ]
+}
