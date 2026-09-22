@@ -82,14 +82,26 @@ def modernize(path: Path, meta: dict, posts):
     body_match = re.search(r'<body\b([^>]*)>([\s\S]*?)</body>', text, re.I)
     if not body_match:
         return False
-    inner = strip_existing_shell(body_match.group(2))
+    inner = body_match.group(2)
+    shared_header = ""
+    shared_footer = ""
+    header_match = re.search(r'<header\s+class=["\']shared-header["\'][^>]*>.*?</header>', inner, flags=re.I | re.S)
+    footer_match = re.search(r'<footer\s+class=["\']shared-footer["\'][^>]*>.*?</footer>', inner, flags=re.I | re.S)
+    if header_match:
+        shared_header = header_match.group(0)
+        inner = inner[:header_match.start()] + inner[header_match.end():]
+    if footer_match:
+        shared_footer = footer_match.group(0)
+        inner = inner[:footer_match.start()] + inner[footer_match.end():]
+    if not shared_header:
+        inner = strip_existing_shell(inner)
     date_label = ""
     if published:
         date_label = f'<span class="modern-pill">{html.escape(published[:10])}</span>'
     related = related_posts(posts, meta)
     related_html = ''.join('<a href="'+html.escape(p.get('path',''),quote=True)+'">'+html.escape(p.get('title','Read article'))+' →</a>' for p in related)
     share = '<div class="modern-share"><strong>Share</strong><a target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u='+html.escape(canonical,quote=True)+'">Facebook</a><a target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url='+html.escape(canonical,quote=True)+'&text='+html.escape(title,quote=True)+'">X</a><a href="mailto:?subject='+html.escape(title,quote=True)+'&body='+html.escape(canonical,quote=True)+'">Email</a></div>'
-    article = f'''<body>{HEADER}<main class="modern-article-main"><div class="modern-breadcrumbs"><a href="/">Laxman Nepal</a> / Blog / Article</div><div class="modern-article-kicker"><span class="modern-pill">ARTICLE</span>{date_label}<span class="modern-pill">{reading_minutes} MIN READ</span></div><h1>{title_esc}</h1><p class="modern-dek">{desc_esc}</p>{share}<article class="modern-reading-card">{inner}</article><section class="modern-related"><strong>Related from Laxman Nepal</strong><br>{related_html}<a href="/search/">Search all articles →</a></section></main>{FOOTER}</body>'''
+    article = f'''<body>{shared_header}<main class="modern-article-main"><div class="modern-breadcrumbs"><a href="/">Laxman Nepal</a> / Blog / Article</div><div class="modern-article-kicker"><span class="modern-pill">ARTICLE</span>{date_label}<span class="modern-pill">{reading_minutes} MIN READ</span></div><h1>{title_esc}</h1><p class="modern-dek">{desc_esc}</p>{share}<article class="modern-reading-card">{inner}</article><section class="modern-related"><strong>Related from Laxman Nepal</strong><br>{related_html}<a href="/search/">Search all articles →</a></section></main>{shared_footer}</body>'''
     text = text[:body_match.start()] + article + text[body_match.end():]
     path.write_text(text, encoding="utf-8")
     return True
