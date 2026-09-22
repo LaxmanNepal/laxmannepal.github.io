@@ -1,0 +1,42 @@
+name: Vacation Background Push
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: "Optional test notification message"
+        required: false
+        default: "🧪 Laxman Nepal Vacation background push test"
+  schedule:
+    - cron: "0 8 * * *"
+      timezone: "Asia/Kuwait"
+    - cron: "0 13 * * *"
+      timezone: "Asia/Kuwait"
+    - cron: "0 20 * * *"
+      timezone: "Asia/Kuwait"
+
+permissions:
+  contents: read
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Send vacation push
+        env:
+          VAPID_SUBJECT: ${{ secrets.VAPID_SUBJECT }}
+          VAPID_PUBLIC_KEY: ${{ secrets.VAPID_PUBLIC_KEY }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+          VACATION_PUSH_SUBSCRIPTIONS_JSON: ${{ secrets.VACATION_PUSH_SUBSCRIPTIONS_JSON }}
+          PUSH_TITLE: "Laxman Nepal Vacation"
+          PUSH_URL: "https://laxmannepal.com.np/vacation/"
+          PUSH_BODY: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.message || '🇳🇵 Vacation reminder · आजको countdown हेर्नुहोस्' }}
+        run: |
+          test -n "$VAPID_SUBJECT"
+          test -n "$VAPID_PUBLIC_KEY"
+          test -n "$VAPID_PRIVATE_KEY"
+          test -n "$VACATION_PUSH_SUBSCRIPTIONS_JSON"
+          npm install --no-save web-push
+          node scripts/vacation_push.js
