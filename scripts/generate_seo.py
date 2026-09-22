@@ -15,7 +15,7 @@ BASE = "https://laxmannepal.com.np"
 INDEXABLE_STATIC_PATHS = [
     "/", "/en/", "/ne/", "/hi/", "/languages/",
     "/news/", "/reviews/", "/guides/", "/products/",
-    "/compare/", "/tools/", "/ai/", "/youtube/",
+    "/compare/", "/tools/", "/ai/", "/youtube/", "/tech-news/",
 ]
 
 def load_posts():
@@ -27,9 +27,14 @@ def load_posts():
 def main():
     PUBLIC.mkdir(parents=True, exist_ok=True)
     posts = load_posts()
+    tech_root = ROOT / "tech-news"
+    tech_urls = []
+    if tech_root.exists():
+        for p in sorted(tech_root.glob("*/index.html")):
+            tech_urls.append("/" + p.relative_to(ROOT).parent.as_posix() + "/")
 
     urls = []
-    for path in INDEXABLE_STATIC_PATHS + [p["path"] for p in posts]:
+    for path in INDEXABLE_STATIC_PATHS + tech_urls + [p["path"] for p in posts]:
         if path.startswith("/old/") or path.startswith("/scripts/") or path.startswith("/search/"):
             continue
         if path not in urls:
