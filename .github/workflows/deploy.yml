@@ -120,6 +120,8 @@ jobs:
           ! grep -q 'Technology that helps you do more' .pages/index.html
       - name: Optimize every published page for SEO
         run: python3 scripts/optimize_published_seo.py
+      - name: Audit published SEO health
+        run: python3 scripts/audit_seo_health.py .pages
       - name: Verify published legacy routes
         run: |
           test -f .pages/2022/09/kalimati-font-download-by-laxman-nepal.html
