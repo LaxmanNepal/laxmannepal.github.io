@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-22T05:04:22.074209+00:00",
-  "count": 133,
+  "updated_at": "2026-09-22T11:45:41.236124+00:00",
+  "count": 134,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -1091,6 +1091,23 @@
       ]
     },
     {
+      "id": "realme-c85-pro",
+      "name": "Realme C85 Pro",
+      "brand": "Realme",
+      "variants": [
+        "8GB + 128GB"
+      ],
+      "price": 36999,
+      "max_price": 36999,
+      "original_price": null,
+      "rams": [
+        "8GB"
+      ],
+      "storages": [
+        "128GB"
+      ]
+    },
+    {
       "id": "realme-gt-8-pro",
       "name": "Realme GT 8 Pro",
       "brand": "Realme",
@@ -1112,16 +1129,20 @@
       "name": "Realme Note 60x",
       "brand": "Realme",
       "variants": [
-        "3GB+64GB"
+        "3GB+64GB",
+        "4GB+128GB",
+        "4GB+64GB"
       ],
       "price": 15999,
-      "max_price": 15999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
-        "3GB"
+        "3GB",
+        "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -1129,15 +1150,19 @@
       "name": "Realme Note 70",
       "brand": "Realme",
       "variants": [
-        "6GB+128GB"
+        "6GB+128GB",
+        "4GB+128GB",
+        "4GB+64GB"
       ],
-      "price": 23999,
+      "price": 16999,
       "max_price": 23999,
       "original_price": null,
       "rams": [
+        "4GB",
         "6GB"
       ],
       "storages": [
+        "64GB",
         "128GB"
       ]
     },
@@ -1829,12 +1854,14 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "4GB + 128GB"
       ],
-      "price": 32999,
+      "price": 29999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
+        "4GB",
         "6GB"
       ],
       "storages": [
@@ -1863,16 +1890,18 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+64GB"
+        "4GB+64GB",
+        "4GB+128GB"
       ],
       "price": 21999,
-      "max_price": 21999,
+      "max_price": 25999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -2161,8 +2190,8 @@
       "variants": [
         "4GB+64GB"
       ],
-      "price": 15999,
-      "max_price": 15999,
+      "price": 18999,
+      "max_price": 18999,
       "original_price": null,
       "rams": [
         "4GB"
@@ -2178,8 +2207,8 @@
       "variants": [
         "4GB+128GB"
       ],
-      "price": 16999,
-      "max_price": 16999,
+      "price": 19999,
+      "max_price": 19999,
       "original_price": null,
       "rams": [
         "4GB"
@@ -2193,16 +2222,18 @@
       "name": "ZTE Nubia A57",
       "brand": "ZTE",
       "variants": [
-        "4GB + 64GB"
+        "4GB + 64GB",
+        "4GB + 128GB"
       ],
       "price": 22999,
-      "max_price": 22999,
+      "max_price": 24999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
