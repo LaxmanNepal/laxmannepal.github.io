@@ -1,1 +1,24 @@
-{"name":"Laxman Nepal Vacation","short_name":"Vacation","start_url":"/vacation/","display":"standalone","background_color":"#f5f5f7","theme_color":"#007aff","description":"Laxman Nepal Vacation Countdown"}
+{
+  "name": "Laxman Nepal Vacation",
+  "short_name": "Vacation",
+  "start_url": "/vacation/",
+  "scope": "/vacation/",
+  "display": "standalone",
+  "background_color": "#f5f5f7",
+  "theme_color": "#007aff",
+  "description": "Laxman Nepal Vacation Countdown and Command Center",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
