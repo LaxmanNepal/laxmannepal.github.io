@@ -1,6 +1,13 @@
-const CACHE="laxman-vacation-v5";
+const CACHE="laxman-vacation-v6";
 const APP_SHELL=["/vacation/","/vacation/manifest.webmanifest","/assets/css/shared-shell.css","/assets/js/shared-shell.js"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(APP_SHELL)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener("fetch",e=>{if(e.request.method!=="GET")return;e.respondWith(caches.match(e.request).then(cached=>cached||fetch(e.request).then(r=>{if(r.ok){const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy))}return r}).catch(()=>caches.match("/vacation/"))))});
 self.addEventListener("notificationclick",e=>{e.notification.close();e.waitUntil(clients.matchAll({type:"window",includeUncontrolled:true}).then(list=>{for(const c of list){if("focus"in c)return c.focus()}return clients.openWindow("/vacation/")}))});
+self.addEventListener("push",e=>{
+ let data={};
+ try{data=e.data?e.data.json():{};}catch(err){data={body:e.data?e.data.text():"🇳🇵 Vacation reminder"};}
+ const title=data.title||"Laxman Nepal Vacation";
+ const body=data.body||"🇳🇵 "+(data.message||"Vacation reminder");
+ e.waitUntil(self.registration.showNotification(title,{body,icon:data.icon||"/assets/icons/icon-192.png",badge:data.badge||"/assets/icons/icon-192.png",tag:data.tag||"laxman-vacation",renotify:true,data:{url:data.url||"/vacation/"}}));
+});
