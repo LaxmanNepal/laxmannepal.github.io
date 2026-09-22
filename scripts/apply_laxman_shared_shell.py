@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.html"
 MANIFEST = ROOT / ".blogger-migration.json"
 SHARED_CSS = "/assets/css/shared-shell.css"
+LEGACY_CSS = "/assets/css/legacy-normalizer.css"
 
 HEADER = r'''<header class="shared-header" data-shared-shell="header">
 <a class="shared-brand" href="/" aria-label="Laxman Nepal home"><span class="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Blog · Digital</small></span></a>
