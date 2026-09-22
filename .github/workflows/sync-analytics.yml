@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -32,6 +34,7 @@ jobs:
           GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
         run: |
           set -o pipefail
+          mkdir -p analytics
           python scripts/sync_analytics.py 2>&1 | tee analytics/sync.log
 
       - name: Diagnose sync result
@@ -90,12 +93,15 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           rm -f analytics/sync.log
-          git add analytics/data.json analytics/seo-fix-report.md analytics/sync-status.json
+          git add analytics/sync-status.json
+          if [ -f analytics/data.json ]; then git add analytics/data.json; fi
+          if [ -f analytics/seo-fix-report.md ]; then git add analytics/seo-fix-report.md; fi
           if git diff --cached --quiet; then
             echo "No analytics status changes."
           else
             git commit -m "chore: refresh analytics sync status"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
 
       - name: Fail workflow when sync failed
