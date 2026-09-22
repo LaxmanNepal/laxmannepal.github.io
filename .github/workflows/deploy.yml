@@ -118,6 +118,9 @@ jobs:
       - name: Apply shared shell to final Pages artifact
         run: SHELL_ROOT=.pages python3 scripts/apply_laxman_shared_shell.py
 
+      - name: Audit final Pages layout
+        run: python3 scripts/audit_site_layout.py .pages
+
       - name: Verify published homepage
         run: |
           test -f .pages/index.html
