@@ -1,4 +1,4 @@
-name: Daily Tech News
+name: Daily Tech News Research Queue
 on:
   schedule:
     - cron: "0 6 * * *"
@@ -6,23 +6,23 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: daily-tech-news
+  group: daily-tech-news-research
   cancel-in-progress: false
 jobs:
-  publish:
+  research:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
           python-version: "3.x"
-      - name: Generate five fresh tech stories
+      - name: Collect five fresh research leads
         run: python3 scripts/daily_tech_news.py
-      - name: Commit daily stories
+      - name: Commit research queue
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tech-news/
+          git add tech-news/_queue/
           git diff --cached --quiet && exit 0
-          git commit -m "Daily tech news: $(date -u +%Y-%m-%d)"
+          git commit -m "Daily tech news research queue: $(date -u +%Y-%m-%d)"
           git push
