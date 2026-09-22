@@ -1,0 +1,53 @@
+/* Legacy Visual Normalizer — safe compatibility layer for older Blogger/tool pages */
+html,body{max-width:100%;overflow-x:hidden}
+body{overflow-wrap:anywhere}
+main,[role="main"],.post-body,.entry-content,.article-body,.post,.post-outer,.widget,.content-area{min-width:0;max-width:100%}
+main img,.post-body img,.entry-content img,.article-body img{max-width:100%!important;height:auto}
+main video,.post-body video,.entry-content video,.article-body video{max-width:100%;height:auto}
+main iframe,.post-body iframe,.entry-content iframe,.article-body iframe{max-width:100%;width:100%;border:0}
+main embed,main object,.post-body embed,.post-body object{max-width:100%}
+main table,.post-body table,.entry-content table,.article-body table{max-width:100%;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+main pre,.post-body pre,.entry-content pre,.article-body pre{max-width:100%;overflow:auto;white-space:pre;overflow-wrap:normal}
+main input,main select,main textarea,.post-body input,.post-body select,.post-body textarea{max-width:100%;box-sizing:border-box}
+main button,.post-body button,.entry-content button,.article-body button{max-width:100%;box-sizing:border-box}
+main h1,main h2,main h3,main h4,main h5,main h6{max-width:100%;overflow-wrap:anywhere}
+main a,.post-body a,.entry-content a,.article-body a{overflow-wrap:anywhere}
+.separator,.separator a{max-width:100%;overflow:hidden}
+.separator img{display:block;margin-left:auto;margin-right:auto}
+
+/* Common fixed-width inline styles from old Blogger exports */
+[style*="width:1200px"],[style*="width: 1200px"],
+[style*="width:1100px"],[style*="width: 1100px"],
+[style*="width:1000px"],[style*="width: 1000px"],
+[style*="width:960px"],[style*="width: 960px"],
+[style*="width:900px"],[style*="width: 900px"],
+[style*="max-width:1200px"],[style*="max-width: 1200px"],
+[style*="max-width:1000px"],[style*="max-width: 1000px"]{max-width:100%!important}
+
+/* Prevent old centered wrappers from creating horizontal overflow */
+.post-body>div,.entry-content>div,.article-body>div{max-width:100%}
+.post-body [align="center"],.entry-content [align="center"],.article-body [align="center"]{max-width:100%}
+
+/* Old Blogger title/meta styling, while retaining page-specific colors */
+.post-title,.entry-title,.post-header,.entry-meta{max-width:100%;overflow-wrap:anywhere}
+.post-title a,.entry-title a{overflow-wrap:anywhere}
+
+/* Embedded media and social widgets */
+.twitter-tweet,.instagram-media,.fb-post,.fb-video{max-width:100%!important}
+.gist,.gist-file{max-width:100%;overflow:auto}
+
+/* Mobile normalization */
+@media(max-width:760px){
+  .post-body,.entry-content,.article-body{font-size:16px;line-height:1.65}
+  .post-body h1,.entry-content h1,.article-body h1{font-size:clamp(28px,8vw,42px)}
+  .post-body h2,.entry-content h2,.article-body h2{font-size:clamp(23px,6vw,32px)}
+  .post-body h3,.entry-content h3,.article-body h3{font-size:clamp(19px,5vw,26px)}
+  .post-body table,.entry-content table,.article-body table{font-size:14px}
+  .post-body input,.post-body select,.post-body textarea,.entry-content input,.entry-content select,.entry-content textarea,.article-body input,.article-body select,.article-body textarea{width:100%}
+  .post-body button,.entry-content button,.article-body button{min-height:42px}
+}
+@media(max-width:480px){
+  .post-body,.entry-content,.article-body{font-size:15.5px}
+  .post-body img,.entry-content img,.article-body img{border-radius:12px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
