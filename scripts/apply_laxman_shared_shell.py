@@ -29,7 +29,9 @@ def apply_shell(path: Path):
     except (UnicodeDecodeError, OSError):
         return False
     text = re.sub(r'<header\s+class=["\']shared-header["\'][^>]*>.*?</header>', '', text, count=1, flags=re.I | re.S)
-    text = re.sub(r'<nav\s+class=["\']shared-mobile-menu["\'][^>]*>.*?<div\s+class=["\']shared-menu-backdrop["\'][^>]*>.*?</div>', '', text, count=1, flags=re.I | re.S)
+    # Remove every previous shared mobile menu and backdrop. Older pages can place the backdrop outside the nav.
+    text = re.sub(r'<nav\s+class=["\']shared-mobile-menu["\'][^>]*>.*?</nav>', '', text, count=0, flags=re.I | re.S)
+    text = re.sub(r'<div\s+class=["\']shared-menu-backdrop["\'][^>]*>.*?</div>', '', text, count=0, flags=re.I | re.S)
     text = re.sub(r'<footer\s+class=["\']shared-footer["\'][^>]*>.*?</footer>', '', text, count=1, flags=re.I | re.S)
      text = re.sub(r'<link[^>]+(?:shared-shell\.css|legacy-normalizer\.css)[^>]*>', '', text, count=0, flags=re.I)
     text = re.sub(r'<header\s+class=["\']gb-header["\'][^>]*>.*?</header>', '', text, count=1, flags=re.I | re.S)
