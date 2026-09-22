@@ -33,11 +33,11 @@ def apply_shell(path: Path):
     text = re.sub(r'<nav\s+class=["\']shared-mobile-menu["\'][^>]*>.*?</nav>', '', text, count=0, flags=re.I | re.S)
     text = re.sub(r'<div\s+class=["\']shared-menu-backdrop["\'][^>]*>.*?</div>', '', text, count=0, flags=re.I | re.S)
     text = re.sub(r'<footer\s+class=["\']shared-footer["\'][^>]*>.*?</footer>', '', text, count=1, flags=re.I | re.S)
-     text = re.sub(r'<link[^>]+(?:shared-shell\.css|legacy-normalizer\.css)[^>]*>', '', text, count=0, flags=re.I)
+    text = re.sub(r'<link[^>]+(?:shared-shell\.css|legacy-normalizer\.css)[^>]*>', '', text, count=0, flags=re.I)
     text = re.sub(r'<header\s+class=["\']gb-header["\'][^>]*>.*?</header>', '', text, count=1, flags=re.I | re.S)
     text = re.sub(r'<footer\s+class=["\']gb-footer["\'][^>]*>.*?</footer>', '', text, count=1, flags=re.I | re.S)
     if re.search(r'</head\s*>', text, flags=re.I):
-         text = re.sub(r'</head\s*>', f'<link rel="stylesheet" href="{SHARED_CSS}">\n<link rel="stylesheet" href="{LEGACY_CSS}">\n</head>', text, count=1, flags=re.I)
+        text = re.sub(r'</head\s*>', f'<link rel="stylesheet" href="{SHARED_CSS}">\n<link rel="stylesheet" href="{LEGACY_CSS}">\n</head>', text, count=1, flags=re.I)
     body_match = re.search(r'<body\b[^>]*>', text, flags=re.I)
     if body_match:
         text = text[:body_match.end()] + HEADER + text[body_match.end():]
