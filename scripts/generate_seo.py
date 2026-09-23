@@ -11,12 +11,13 @@ MANIFEST = ROOT / ".blogger-migration.json"
 PUBLIC = ROOT / "nextjs-foundation" / "public"
 BASE = "https://laxmannepal.com.np"
 
-# Search-result pages should be crawlable for navigation but not indexed.
 INDEXABLE_STATIC_PATHS = [
     "/", "/en/", "/ne/", "/hi/", "/languages/",
     "/news/", "/reviews/", "/guides/", "/products/",
     "/compare/", "/tools/", "/ai/", "/youtube/", "/tech-news/",
     "/gold-price-in-nepal-today/",
+    "/gold-price-history-nepal/",
+    "/silver-price-in-nepal-today/",
 ]
 
 def load_posts():
@@ -41,10 +42,7 @@ def main():
         if path not in urls:
             urls.append(path)
 
-    items = []
-    for path in urls:
-        items.append(f"  <url><loc>{escape(BASE + path)}</loc></url>")
-
+    items = [f"  <url><loc>{escape(BASE + path)}</loc></url>" for path in urls]
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n' + (
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "\n".join(items)
