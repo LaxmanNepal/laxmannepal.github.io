@@ -63,6 +63,9 @@ def update_seo_snapshot(page_text, record):
 {end}'''
     return page_text[:page_text.index(start)] + block + page_text[page_text.index(end) + len(end):]
 
+def update_schema_date(page_text, local_date):
+    return re.sub(r'("dateModified"\s*:\s*")[0-9]{4}-[0-9]{2}-[0-9]{2}(")', rf'\g<1>{local_date}\g<2>', page_text, count=1)
+
 def main():
     old = load()
     found = None
@@ -118,7 +121,8 @@ def main():
     }
     DATA.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     page = PAGE.read_text(encoding="utf-8")
-    PAGE.write_text(update_seo_snapshot(page, record), encoding="utf-8")
+    page = update_seo_snapshot(page, record)
+    PAGE.write_text(update_schema_date(page, record["date"]), encoding="utf-8")
     print(json.dumps(record, ensure_ascii=False))
 
 if __name__ == "__main__":
