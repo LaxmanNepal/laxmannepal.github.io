@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T04:50:20.148553+00:00",
+  "updated_at": "2026-09-23T11:44:41.517321+00:00",
   "count": 134,
   "products": [
     {
@@ -11,7 +11,7 @@
         "Ai+ Nova 2 5G - 6GB - 128GB"
       ],
       "price": 22999,
-      "max_price": 26999,
+      "max_price": 28499,
       "original_price": null,
       "rams": [
         "4GB",
@@ -572,8 +572,8 @@
       "variants": [
         "4GB + 64GB"
       ],
-      "price": 24999,
-      "max_price": 24999,
+      "price": 26499,
+      "max_price": 26499,
       "original_price": null,
       "rams": [
         "4GB"
