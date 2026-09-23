@@ -13,7 +13,7 @@
  * The browser never receives the YouTube API key.
  */
 
-const ALLOWED = new Set(["/search", "/channels", "/playlistItems", "/videos"]);
+const ALLOWED = new Set(["/search", "/channels", "/playlistItems", "/videos"]);\nconst PREFIX = "/api/youtube";
 const ALLOWED_ORIGINS = new Set([
   "https://laxmannepal.com.np",
   "https://www.laxmannepal.com.np"
@@ -31,7 +31,7 @@ export default {
       });
     }
 
-    if (!ALLOWED.has(url.pathname)) {
+    const routePath = url.pathname.startsWith(PREFIX) ? url.pathname.slice(PREFIX.length) || "/" : url.pathname;\n\n    if (!ALLOWED.has(routePath)) {
       return json({ error: "Not found" }, 404, origin);
     }
 
@@ -49,7 +49,7 @@ export default {
 
     params.set("key", env.YOUTUBE_API_KEY);
 
-    const target = new URL("https://www.googleapis.com/youtube/v3" + url.pathname);
+    const target = new URL("https://www.googleapis.com/youtube/v3" + routePath);
     target.search = params.toString();
 
     try {
