@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-23T11:44:41.517321+00:00",
-  "count": 134,
+  "updated_at": "2026-09-23T17:08:18.962486+00:00",
+  "count": 133,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -1091,23 +1091,6 @@
       ]
     },
     {
-      "id": "realme-c85-pro",
-      "name": "Realme C85 Pro",
-      "brand": "Realme",
-      "variants": [
-        "8GB + 128GB"
-      ],
-      "price": 36999,
-      "max_price": 36999,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "128GB"
-      ]
-    },
-    {
       "id": "realme-gt-8-pro",
       "name": "Realme GT 8 Pro",
       "brand": "Realme",
@@ -1129,20 +1112,16 @@
       "name": "Realme Note 60x",
       "brand": "Realme",
       "variants": [
-        "3GB+64GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "3GB+64GB"
       ],
       "price": 15999,
-      "max_price": 21999,
+      "max_price": 15999,
       "original_price": null,
       "rams": [
-        "3GB",
-        "4GB"
+        "3GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1150,19 +1129,15 @@
       "name": "Realme Note 70",
       "brand": "Realme",
       "variants": [
-        "6GB+128GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "6GB+128GB"
       ],
-      "price": 16999,
+      "price": 23999,
       "max_price": 23999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
-        "64GB",
         "128GB"
       ]
     },
