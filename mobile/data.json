@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T21:23:22.402458+00:00",
+  "updated_at": "2026-09-23T04:50:20.148553+00:00",
   "count": 134,
   "products": [
     {
@@ -953,7 +953,7 @@
         "8GB + 256GB",
         "12GB + 512GB"
       ],
-      "price": 65999,
+      "price": 69999,
       "max_price": 76999,
       "original_price": null,
       "rams": [
@@ -973,8 +973,8 @@
         "12GB + 256GB",
         "12GB + 512GB"
       ],
-      "price": 83999,
-      "max_price": 94999,
+      "price": 94999,
+      "max_price": 104999,
       "original_price": null,
       "rams": [
         "12GB"
