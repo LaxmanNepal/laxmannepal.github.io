@@ -16,6 +16,7 @@ INDEXABLE_STATIC_PATHS = [
     "/", "/en/", "/ne/", "/hi/", "/languages/",
     "/news/", "/reviews/", "/guides/", "/products/",
     "/compare/", "/tools/", "/ai/", "/youtube/", "/tech-news/",
+    "/gold-price-in-nepal-today/",
 ]
 
 def load_posts():
