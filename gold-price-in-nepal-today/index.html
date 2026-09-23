@@ -25,7 +25,7 @@
 <div id="updated" class="gold-updated">Loading today's verified rate…</div>
 </div></section>
 
-<section class="gold-wrap"><div id="rate-grid" class="gold-grid"></div></section>
+<section class="gold-wrap"><div id="rate-grid" class="gold-grid"></div><div id="source-status" class="disclaimer" style="margin-top:14px">Verifying today's source…</div></section>
 
 <section class="section gold-wrap"><div class="panel">
 <div class="panel-head"><div><h2>Market trend</h2><div class="muted">Use the unit switch to compare the same rates in tola or 10 grams.</div></div>
@@ -59,8 +59,8 @@ const rate=(key,unit)=>unit==='tola'?Number(latest[key]||0):Number(latest[key]||
 const change=(key)=>{if(hist.length<2)return 0;const a=Number(hist[hist.length-1][key]||0),b=Number(hist[hist.length-2][key]||0);return a-b};
 function badge(v){const cls=v>0?'up':v<0?'down':'';return '<span class="change '+cls+'">'+(v>0?'▲ ':v<0?'▼ ':'')+money(Math.abs(v))+' vs previous day</span>'}
 const cards=[['Fine Gold (9999)','fine_gold_tola','🥇'],['Tejabi Gold','tejabi_gold_tola','🪙'],['Silver','silver_tola','🥈']];
-document.getElementById('rate-grid').innerHTML=cards.map(([label,key,icon])=>'<article class="rate-card"><div class="label">'+icon+' '+label+'</div><div class="price">'+money(rate(key,'tola'))+'</div><div class="unit">per tola · 11.6638 g</div>'+badge(change(key))+'</article>').join('');
-const dt=latest.date||''; document.getElementById('updated').textContent=(data.status==='verified'?'Updated '+dt+' · ':'Data status: '+data.status+' · ')+(latest.source||'published rate');
+document.getElementById('rate-grid').innerHTML=cards.map(([label,key,icon])=>'<article class="rate-card"><div class="label">'+icon+' '+label+'</div><div class="price">'+money(rate(key,'tola'))+'</div><div class="unit">per tola · 11.6638 g · '+money(rate(key,'10g'))+' / 10g</div>'+badge(change(key))+'</article>').join('');
+const dt=latest.date||''; document.getElementById('updated').textContent=(data.status==='verified'?'Updated '+dt+' · ':'Data status: '+data.status+' · ')+(latest.source||'published rate'); document.getElementById('source-status').innerHTML=(data.status==='verified'?'✅ <strong>Source verified:</strong> '+(latest.source||'Published federation rate')+' · <a href="'+(latest.source_url||'https://www.fenegosida.org/')+'" target="_blank" rel="noopener">View source feed</a>':'⚠️ <strong>Stale data:</strong> the latest source could not be verified, so the previous stored value is being shown.');
 let unit='tola', range=7;
 const unitBtns=[...document.querySelectorAll('#unit-switch button')],rangeBtns=[...document.querySelectorAll('#range-switch button')];
 unitBtns.forEach(b=>b.onclick=()=>{unit=b.dataset.unit;unitBtns.forEach(x=>x.classList.toggle('active',x===b));draw()});
