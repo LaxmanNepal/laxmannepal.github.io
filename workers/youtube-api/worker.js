@@ -1,19 +1,10 @@
 /**
  * Laxman Nepal — YouTube Data API proxy
- *
- * Deploy as a Cloudflare Worker and add:
- *   YOUTUBE_API_KEY = <Google/YouTube API key>
- *
- * Routes:
- *   /search
- *   /channels
- *   /playlistItems
- *   /videos
- *
- * The browser never receives the YouTube API key.
+ * The API key is stored as a Cloudflare Worker secret.
  */
 
-const ALLOWED = new Set(["/search", "/channels", "/playlistItems", "/videos"]);\nconst PREFIX = "/api/youtube";
+const PREFIX = "/api/youtube";
+const ALLOWED = new Set(["/search", "/channels", "/playlistItems", "/videos"]);
 const ALLOWED_ORIGINS = new Set([
   "https://laxmannepal.com.np",
   "https://www.laxmannepal.com.np"
@@ -25,14 +16,19 @@ export default {
     const origin = request.headers.get("Origin") || "";
 
     if (request.method === "OPTIONS") {
-      return new Response(null, {
-        status: 204,
-        headers: corsHeaders(origin)
-      });
+      return new Response(null, { status: 204, headers: corsHeaders(origin) });
     }
 
-    const routePath = url.pathname.startsWith(PREFIX) ? url.pathname.slice(PREFIX.length) || "/" : url.pathname;\n\n    if (!ALLOWED.has(routePath)) {
-      return json({ error: "Not found" }, 404, origin);
+    if (request.method !== "GET") {
+      return json({ error: "Method not allowed." }, 405, origin);
+    }
+
+    const routePath = url.pathname.startsWith(PREFIX)
+      ? url.pathname.slice(PREFIX.length) || "/"
+      : url.pathname;
+
+    if (!ALLOWED.has(routePath)) {
+      return json({ error: "Not found." }, 404, origin);
     }
 
     if (!env.YOUTUBE_API_KEY) {
@@ -40,9 +36,8 @@ export default {
     }
 
     const params = new URLSearchParams(url.search);
-
-    // Keep the proxy intentionally narrow. The page only needs public GET methods.
     const part = params.get("part");
+
     if (part && part.length > 200) {
       return json({ error: "Invalid request." }, 400, origin);
     }
@@ -55,7 +50,7 @@ export default {
     try {
       const upstream = await fetch(target.toString(), {
         method: "GET",
-        headers: { "Accept": "application/json" }
+        headers: { Accept: "application/json" }
       });
 
       const body = await upstream.text();
@@ -64,7 +59,7 @@ export default {
         status: upstream.status,
         headers: {
           "Content-Type": upstream.headers.get("Content-Type") || "application/json; charset=utf-8",
-          "Cache-Control": "public, max-age=60, s-maxage=300",
+          "Cache-Control": upstream.ok ? "public, max-age=60, s-maxage=300" : "no-store",
           ...corsHeaders(origin)
         }
       });
@@ -75,13 +70,17 @@ export default {
 };
 
 function corsHeaders(origin) {
-  const allowed = ALLOWED_ORIGINS.has(origin) ? origin : "https://laxmannepal.com.np";
-  return {
-    "Access-Control-Allow-Origin": allowed,
+  const headers = {
     "Access-Control-Allow-Methods": "GET, OPTIONS",
     "Access-Control-Allow-Headers": "Accept, Content-Type",
     "Vary": "Origin"
   };
+
+  if (ALLOWED_ORIGINS.has(origin)) {
+    headers["Access-Control-Allow-Origin"] = origin;
+  }
+
+  return headers;
 }
 
 function json(data, status, origin) {
