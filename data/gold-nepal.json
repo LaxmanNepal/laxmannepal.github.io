@@ -7,8 +7,8 @@
     "fine_gold_tola": 302300,
     "tejabi_gold_tola": 299300,
     "silver_tola": 4815,
-    "source": "FENEGOSIDA / published federation rate",
-    "source_url": "https://www.fenegosida.org/",
+    "source": "FENEGOSIDA rate · cross-checked via current published feed",
+    "source_url": "https://www.ashesh.com.np/gold/widget.php?api=872076p237&header_color=0077e5",
     "unit": "NPR per tola"
   },
   "history": [
