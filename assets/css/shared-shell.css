@@ -59,3 +59,13 @@ body>.header:not(.shared-header),body>.navbar:not(.shared-header),body>header:no
 .ln-shell-fallback{max-width:1240px;margin:0 auto;padding:0 12px}
 @media(max-width:760px){main{overflow-x:clip}main :where(.card,.tool-card,.box,.panel,.result,.result-card,.feature-card,.article,.post,.tool-container,.main-card){border-radius:18px}main :where(.container,.wrapper,.content-wrap,.page-container,.tool-wrapper,.article-container,.post-container){width:calc(100% - 20px)!important}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* LAXMAN UI SYSTEM V2 */
+body{background:radial-gradient(900px 420px at 50% -120px,rgba(0,122,255,.10),transparent 65%),var(--ln-bg);color:var(--ln-text)}
+main{min-height:55vh;min-width:0}main a{transition:color .16s ease,background .16s ease,border-color .16s ease,transform .16s ease,box-shadow .16s ease}
+main :where(.container,.wrapper,.content-wrap,.page-container,.tool-wrapper,.article-container,.post-container){max-width:1240px;margin-left:auto!important;margin-right:auto!important}
+main :where(.card,.tool-card,.box,.panel,.result,.result-card,.feature-card,.article,.post,.tool-container,.main-card){background:rgba(255,255,255,.82);border:1px solid rgba(16,24,40,.10);border-radius:22px;box-shadow:0 12px 36px rgba(16,24,40,.055)}
+main :where(button,.btn,[role=button]){border-radius:13px;min-height:42px;font-weight:700}main :where(input,select,textarea){border-radius:13px;min-height:42px;border-color:rgba(60,60,67,.18)}main :where(input,select,textarea):focus{outline:none;border-color:rgba(0,122,255,.48);box-shadow:0 0 0 4px rgba(0,122,255,.09)}main :where(img,video,iframe){max-width:100%;height:auto}main :where(pre){border-radius:16px;overflow:auto}
+body>.header:not(.shared-header),body>.navbar:not(.shared-header),body>header:not(.shared-header){position:relative!important;z-index:1!important}
+@media(max-width:760px){main{overflow-x:clip}main :where(.card,.tool-card,.box,.panel,.result,.result-card,.feature-card,.article,.post,.tool-container,.main-card){border-radius:18px}main :where(.container,.wrapper,.content-wrap,.page-container,.tool-wrapper,.article-container,.post-container){width:calc(100% - 20px)!important}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
