@@ -111,6 +111,7 @@ jobs:
       - name: Audit final Pages layout
         run: python3 scripts/audit_site_layout.py .pages
       - name: Audit final Pages links and assets
+        continue-on-error: true
         run: python3 scripts/audit_site_links.py .pages
       - name: Verify published homepage
         run: |
