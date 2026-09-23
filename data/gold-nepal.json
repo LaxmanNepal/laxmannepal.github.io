@@ -1,0 +1,22 @@
+{
+  "status": "verified",
+  "last_attempted_at": "2026-09-23T00:00:00+00:00",
+  "latest": {
+    "date": "2026-09-23",
+    "updated_at": "2026-09-23T00:00:00+00:00",
+    "fine_gold_tola": 302300,
+    "tejabi_gold_tola": 299300,
+    "silver_tola": 4815,
+    "source": "FENEGOSIDA / published federation rate",
+    "source_url": "https://www.fenegosida.org/",
+    "unit": "NPR per tola"
+  },
+  "history": [
+    {"date":"2026-09-20","updated_at":"2026-09-20T00:00:00+00:00","fine_gold_tola":305200,"tejabi_gold_tola":302200,"silver_tola":4475,"source":"FENEGOSIDA / published federation rate","source_url":"https://www.fenegosida.org/","unit":"NPR per tola"},
+    {"date":"2026-09-21","updated_at":"2026-09-21T00:00:00+00:00","fine_gold_tola":303900,"tejabi_gold_tola":300900,"silver_tola":4600,"source":"FENEGOSIDA / published federation rate","source_url":"https://www.fenegosida.org/","unit":"NPR per tola"},
+    {"date":"2026-09-22","updated_at":"2026-09-22T00:00:00+00:00","fine_gold_tola":302200,"tejabi_gold_tola":299200,"silver_tola":4775,"source":"FENEGOSIDA / published federation rate","source_url":"https://www.fenegosida.org/","unit":"NPR per tola"},
+    {"date":"2026-09-23","updated_at":"2026-09-23T00:00:00+00:00","fine_gold_tola":302300,"tejabi_gold_tola":299300,"silver_tola":4815,"source":"FENEGOSIDA / published federation rate","source_url":"https://www.fenegosida.org/","unit":"NPR per tola"}
+  ],
+  "conversion": {"tola_grams":11.6638125,"aana_per_tola":16,"lal_per_tola":100},
+  "errors": []
+}
