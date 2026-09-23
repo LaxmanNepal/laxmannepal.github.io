@@ -637,7 +637,7 @@
         <h1 id="tool-title">YouTube Channel Analytics</h1>
         <p>Explore public channel statistics, recent video performance, keywords and practical SEO opportunities — without pretending we have private YouTube Studio data.</p>
       </div>
-      <div class="tool-hero-badge"><i class="fab fa-youtube" aria-hidden="true"></i><span>Public data</span></div>
+      <div class="tool-hero-badge" id="serviceStatus" aria-live="polite"><i class="fab fa-youtube" aria-hidden="true"></i><span>Checking YouTube service…</span></div>
     </section>
     <!-- Search Card -->
     <div class="card">
@@ -658,6 +658,7 @@
         </button>
       </div>
       <div class="dropdown" id="resultsDropdown"></div>
+      <div class="data-note" id="serviceNote">This tool uses public YouTube Data API information. Revenue, private watch time and other YouTube Studio-only metrics are not available.</div>
       <div class="loading" id="loadingContainer" style="display:none;">
         <div class="spinner"></div> Searching channels...
       </div>
@@ -882,16 +883,74 @@ document.addEventListener('DOMContentLoaded', () => {
   async function api(path, params={}){
     const query=new URLSearchParams(params);
     const url=API_BASE + path + (query.toString() ? '?' + query.toString() : '');
-    const res=await fetch(url,{headers:{'Accept':'application/json'}});
+    let res;
+    try{
+      res=await fetch(url,{headers:{'Accept':'application/json'}});
+    }catch{
+      throw new Error('YouTube service could not be reached. The site API endpoint may not be deployed yet.');
+    }
     let data={};
     try{data=await res.json();}catch{}
-    if(!res.ok) throw new Error(data.error || 'YouTube data service is unavailable.');
+    if(!res.ok){
+      if(res.status===503) throw new Error(data.error || 'YouTube service is not configured yet.');
+      if(res.status===404) throw new Error('YouTube service endpoint was not found.');
+      if(res.status===403) throw new Error(data.error || 'YouTube API access was denied. Check the API key and quota.');
+      throw new Error(data.error || 'YouTube service returned HTTP '+res.status+'.');
+    }
     return data;
   }
 
+  async function checkService(){
+    const status=$('serviceStatus');
+    if(!status) return;
+    try{
+      await api('/health');
+      status.classList.add('service-online');
+      status.querySelector('span').textContent='YouTube service online';
+    }catch(error){
+      status.classList.add('service-offline');
+      status.querySelector('span').textContent='Service setup required';
+      const note=$('serviceNote');
+      if(note) note.textContent=error.message+' Add the required server-side API deployment secrets; never place the YouTube key in this page.';
+    }
+  }
+
   async function searchChannels(query){
-    const data=await api('/search',{q:query,type:'channel',maxResults:'5'});
+    const data=await api('/search',{q:query,type:'channel',part:'snippet',maxResults:'5'});
     return data.items || [];
+  }
+
+  async function resolveChannelInput(value){
+    const q=value.trim();
+    if(/^UC[A-Za-z0-9_-]{20,}$/.test(q)) return {id:q};
+    try{
+      const u=new URL(q);
+      const parts=u.pathname.split('/').filter(Boolean);
+      if(parts[0]?.toLowerCase()==='channel' && /^UC[A-Za-z0-9_-]{20,}$/.test(parts[1]||'')) return {id:parts[1]};
+      if(parts[0]?.startsWith('@')) return {handle:parts[0].slice(1)};
+      if(parts[0]?.toLowerCase()==='user' && parts[1]) return {username:parts[1]};
+      if(parts[0]?.toLowerCase()==='c' && parts[1]) return {handle:parts[1]};
+    }catch{}
+    if(q.startsWith('@')) return {handle:q.slice(1)};
+    return null;
+  }
+
+  async function getChannelByInput(value){
+    const resolved=await resolveChannelInput(value);
+    if(resolved?.id) return getChannel(resolved.id);
+    if(resolved?.handle){
+      const data=await api('/channels',{forHandle:resolved.handle,part:'snippet,statistics,contentDetails'});
+      if(data.items?.length) return data.items[0];
+      throw new Error('No channel was found for '+resolved.handle+'.');
+    }
+    if(resolved?.username){
+      const data=await api('/channels',{forUsername:resolved.username,part:'snippet,statistics,contentDetails'});
+      if(data.items?.length) return data.items[0];
+      throw new Error('No channel was found for '+resolved.username+'.');
+    }
+    const items=await searchChannels(value);
+    if(!items.length) throw new Error('No channels found. Try a channel name, @handle, or channel URL.');
+    return getChannel(items[0].id?.channelId || items[0].id);
   }
 
   async function getChannel(id){
@@ -1071,12 +1130,19 @@ document.addEventListener('DOMContentLoaded', () => {
   els.search?.addEventListener('click',async()=>{
     const q=els.input?.value?.trim(); if(!q) return showToast('Enter a channel name, URL or @handle.',true);
     try{
-      setLoading(true,'Searching public YouTube channels…');
-      let id='';
-      const m=q.match(/(?:youtube\.com\/(?:channel\/|@)|youtube\.com\/c\/|youtube\.com\/user\/)([A-Za-z0-9._-]+)/i);
-      if(/^UC[A-Za-z0-9_-]{20,}$/.test(q)) id=q;
-      if(id){await selectChannel(id);return;}
-      const items=await searchChannels(q); displayResults(items);
+      setLoading(true,'Finding YouTube channel…');
+      const direct=await resolveChannelInput(q);
+      if(direct){
+        currentChannel=await getChannelByInput(q);
+        updateChannelUI(currentChannel);
+        currentVideos=await getVideos(currentChannel.id);
+        renderVideos(currentVideos); renderKeywords(currentVideos); renderTips(currentChannel,currentVideos); updateMainCharts(currentVideos);
+        els.analyze.style.display='inline-flex';
+        showToast('Channel loaded. Public metrics are ready.');
+        return;
+      }
+      const items=await searchChannels(q);
+      displayResults(items);
     }catch(error){showToast(error.message||'Search failed.',true);}
     finally{setLoading(false);}
   });
@@ -1086,6 +1152,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $('closeModal')?.addEventListener('click',()=>{els.modal.classList.remove('active');document.body.style.overflow='';});
   els.modal?.addEventListener('click',e=>{if(e.target===els.modal){els.modal.classList.remove('active');document.body.style.overflow='';}});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&els.modal?.classList.contains('active')){els.modal.classList.remove('active');document.body.style.overflow='';}});
+  checkService();
 });
 </script>
 </body>
