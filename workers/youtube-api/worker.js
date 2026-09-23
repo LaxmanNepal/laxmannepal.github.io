@@ -4,7 +4,7 @@
  */
 
 const PREFIX = "/api/youtube";
-const ALLOWED = new Set(["/search", "/channels", "/playlistItems", "/videos"]);
+const ALLOWED = new Set(["/search", "/channels", "/playlistItems", "/videos", "/health"]);
 const ALLOWED_ORIGINS = new Set([
   "https://laxmannepal.com.np",
   "https://www.laxmannepal.com.np"
@@ -27,7 +27,7 @@ export default {
       ? url.pathname.slice(PREFIX.length) || "/"
       : url.pathname;
 
-    if (!ALLOWED.has(routePath)) {
+    if (routePath === "/health") {\n      return json({ ok: true, service: "youtube-api" }, 200, origin);\n    }\n\n    if (!ALLOWED.has(routePath)) {
       return json({ error: "Not found." }, 404, origin);
     }
 
