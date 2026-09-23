@@ -10,8 +10,8 @@ DATA = ROOT / "data" / "gold-nepal.json"
 DATA.parent.mkdir(parents=True, exist_ok=True)
 
 SOURCES = [
+    ("Ashesh.com.np · FENEGOSIDA feed", "https://www.ashesh.com.np/gold/widget.php?api=872076p237&header_color=0077e5"),
     ("FENEGOSIDA", "https://www.fenegosida.org/"),
-    ("Ashesh.com.np", "https://www.ashesh.com.np/gold/widget.php?api=872076p237&header_color=0077e5"),
 ]
 
 def fetch(url):
