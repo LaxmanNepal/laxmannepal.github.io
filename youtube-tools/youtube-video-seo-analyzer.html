@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="/assets/css/shared-shell.css"><script src="/assets/js/shared-shell.js" defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced YouTube Video SEO Analyzer</title>
+    <title>YouTube Video SEO Analyzer — Free YouTube SEO Tool | Laxman Nepal</title>
+    <meta name="description" content="Analyze any YouTube video with title, description, tags, engagement, metadata, performance and related-video SEO insights using Laxman Nepal's free YouTube Video SEO Analyzer.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://laxmannepal.com.np/youtube-tools/youtube-video-seo-analyzer.html">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -834,22 +837,24 @@
     </div>
 
     <script>
-        // YouTube Data API Key
-        // Note: In production, you should use your own API key
-        const API_KEYS = [
-            '',
-            '',
-            ''
-        ];
-        let currentApiKeyIndex = 0;
+        // YouTube Data API is accessed through the central Laxman Nepal API.
+        const API_BASE = (window.LAXMAN_YOUTUBE_API_BASE || 'https://api.laxmannepal.com.np/youtube').replace(/\\/$/, '');
 
-        function getApiKey() {
-            return API_KEYS[currentApiKeyIndex];
-        }
+        async function apiFetch(path, params = {}) {
+            const query = new URLSearchParams(params);
+            const url = API_BASE + path + (query.toString() ? '?' + query.toString() : '');
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: { 'Accept': 'application/json' }
+            });
 
-        function rotateApiKey() {
-            currentApiKeyIndex = (currentApiKeyIndex + 1) % API_KEYS.length;
-            return getApiKey();
+            let data = {};
+            try { data = await response.json(); } catch (_) {}
+
+            if (!response.ok) {
+                throw new Error(data.error || `YouTube service returned HTTP ${response.status}.`);
+            }
+            return data;
         }
 
         function updateApiStatus(message, type) {
@@ -916,53 +921,44 @@
         }
 
         async function fetchVideoData(videoId) {
-            const apiKey = getApiKey();
-            const response = await fetch(`https://api.laxmannepal.com.np/youtube/videos?part=snippet,statistics,contentDetails,player,topicDetails&id=${videoId}&key=${apiKey}`);
-            
-            if (!response.ok) {
-                // Try with next API key if quota exceeded
-                if (response.status === 403) {
-                    rotateApiKey();
-                    return await fetchVideoData(videoId);
-                }
-                throw new Error(`YouTube API error: ${response.status} ${response.statusText}`);
-            }
-            
-            const data = await response.json();
-            
+            const data = await apiFetch('/videos', {
+                part: 'snippet,statistics,contentDetails,player,topicDetails',
+                id: videoId
+            });
+
             if (!data.items || data.items.length === 0) {
                 throw new Error('No video found with the provided ID');
             }
-            
+
             return data.items[0];
         }
 
         async function fetchChannelData(channelId) {
-            const apiKey = getApiKey();
-            const response = await fetch(`https://api.laxmannepal.com.np/youtube/channels?part=snippet,statistics,brandingSettings&id=${channelId}&key=${apiKey}`);
-            
-            if (!response.ok) {
-                // If channel fetch fails, we'll still proceed with video data
-                console.error('Failed to fetch channel data:', response.status);
+            try {
+                const data = await apiFetch('/channels', {
+                    part: 'snippet,statistics,brandingSettings',
+                    id: channelId
+                });
+                return data.items && data.items.length > 0 ? data.items[0] : null;
+            } catch (error) {
+                console.error('Failed to fetch channel data:', error);
                 return null;
             }
-            
-            const data = await response.json();
-            return data.items && data.items.length > 0 ? data.items[0] : null;
         }
 
         async function fetchRelatedVideos(videoId) {
-            const apiKey = getApiKey();
-            const response = await fetch(`https://api.laxmannepal.com.np/youtube/search?part=snippet&type=video&relatedToVideoId=${videoId}&maxResults=5&key=${apiKey}`);
-            
-            if (!response.ok) {
-                // If related videos fetch fails, we'll still proceed
-                console.error('Failed to fetch related videos:', response.status);
+            try {
+                const data = await apiFetch('/search', {
+                    part: 'snippet',
+                    type: 'video',
+                    relatedToVideoId: videoId,
+                    maxResults: 5
+                });
+                return data.items || [];
+            } catch (error) {
+                console.error('Failed to fetch related videos:', error);
                 return null;
             }
-            
-            const data = await response.json();
-            return data.items || [];
         }
 
         function isValidYouTubeUrl(url) {
