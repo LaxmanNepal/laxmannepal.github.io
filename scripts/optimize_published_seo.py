@@ -152,7 +152,7 @@ def main():
     sitemap += [f"  <url><loc>{html.escape(u)}</loc></url>" for u in urls]
     sitemap.append("</urlset>")
     (PAGES / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
-    (PAGES / "robots.txt").write_text("User-agent: *\nAllow: /\nDisallow: /old/\nDisallow: /scripts/\n\n" + f"Sitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
+    (PAGES / "robots.txt").write_text("User-agent: *\nAllow: /\nDisallow: /old/\nDisallow: /scripts/\n\n# Google Search\nUser-agent: Googlebot\nAllow: /\n\n# ChatGPT Search\nUser-agent: OAI-SearchBot\nAllow: /\n\n# OpenAI crawler for model training\nUser-agent: GPTBot\nAllow: /\n\nSitemap: " + f"{SITE}/sitemap.xml\n", encoding="utf-8")
     print(f"SEO + GA4 optimized {changed}/{len(files)} HTML pages; sitemap contains {len(urls)} indexable URLs.")
 
 if __name__ == "__main__":
