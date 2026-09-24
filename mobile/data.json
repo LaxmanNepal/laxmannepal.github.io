@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-24T04:58:01.655158+00:00",
-  "count": 134,
+  "updated_at": "2026-09-24T11:53:11.263163+00:00",
+  "count": 135,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -435,6 +435,23 @@
       ]
     },
     {
+      "id": "infinix-gt-50-pro",
+      "name": "Infinix GT 50 Pro",
+      "brand": "Infinix",
+      "variants": [
+        "12GB + 256GB"
+      ],
+      "price": 84999,
+      "max_price": 84999,
+      "original_price": null,
+      "rams": [
+        "12GB"
+      ],
+      "storages": [
+        "256GB"
+      ]
+    },
+    {
       "id": "infinix-hot-70",
       "name": "Infinix Hot 70",
       "brand": "Infinix",
@@ -442,8 +459,8 @@
         "6GB + 128GB",
         "8GB + 128GB"
       ],
-      "price": 31999,
-      "max_price": 34999,
+      "price": 33999,
+      "max_price": 36999,
       "original_price": null,
       "rams": [
         "6GB",
@@ -461,8 +478,8 @@
         "8GB+128GB",
         "8GB+256GB"
       ],
-      "price": 45999,
-      "max_price": 51999,
+      "price": 54999,
+      "max_price": 59999,
       "original_price": null,
       "rams": [
         "8GB"
@@ -480,8 +497,8 @@
         "8GB+256GB",
         "12GB+256GB"
       ],
-      "price": 59999,
-      "max_price": 66999,
+      "price": 62999,
+      "max_price": 69999,
       "original_price": null,
       "rams": [
         "8GB",
@@ -497,12 +514,14 @@
       "brand": "Infinix",
       "variants": [
         "8GB+128GB",
+        "Infinix Note Edge - 6GB - 128GB",
         "8GB+256GB"
       ],
       "price": 41999,
       "max_price": 47999,
       "original_price": null,
       "rams": [
+        "6GB",
         "8GB"
       ],
       "storages": [
@@ -518,8 +537,8 @@
         "4GB + 64GB",
         "4GB + 128GB"
       ],
-      "price": 19999,
-      "max_price": 21999,
+      "price": 21999,
+      "max_price": 23999,
       "original_price": null,
       "rams": [
         "4GB"
