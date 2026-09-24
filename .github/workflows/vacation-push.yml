@@ -34,9 +34,11 @@ jobs:
           PUSH_URL: "https://laxmannepal.com.np/vacation/"
           PUSH_BODY: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.message || '🇳🇵 Vacation reminder · आजको countdown हेर्नुहोस्' }}
         run: |
-          test -n "$VAPID_SUBJECT"
-          test -n "$VAPID_PUBLIC_KEY"
-          test -n "$VAPID_PRIVATE_KEY"
-          test -n "$VACATION_PUSH_SUBSCRIPTIONS_JSON"
+          if [ -z "$VAPID_SUBJECT" ] || [ -z "$VAPID_PUBLIC_KEY" ] || [ -z "$VAPID_PRIVATE_KEY" ] || [ -z "$VACATION_PUSH_SUBSCRIPTIONS_JSON" ]; then
+            echo "Vacation push skipped: required Web Push secrets are not configured."
+            echo "Configure VAPID_SUBJECT, VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, and VACATION_PUSH_SUBSCRIPTIONS_JSON to enable notifications."
+            exit 0
+          fi
+
           npm install --no-save web-push
           node scripts/vacation_push.js
