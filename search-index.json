@@ -96,14 +96,6 @@
     "keywords": "advanced youtube video seo analyzer"
   },
   {
-    "title": "Advanced YouTube Video SEO Analyzer",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/youtube-video-seo-analyzer.html",
-    "description": "Advanced YouTube Video SEO Analyzer",
-    "keywords": "advanced youtube video seo analyzer"
-  },
-  {
     "title": "AI Content Analysis Tool",
     "category": "AI",
     "type": "resource",
@@ -246,14 +238,6 @@
     "url": "/2025/12/file-converter-tool.html",
     "description": "Blogger Universal Text Converter",
     "keywords": "blogger universal text converter"
-  },
-  {
-    "title": "BloggerTube Analytics | YouTube Tools for Bloggers",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/youtube-channel-analytics-pro.html",
-    "description": "BloggerTube Analytics | YouTube Tools for Bloggers",
-    "keywords": "bloggertube analytics youtube tools for bloggers"
   },
   {
     "title": "Claude Opus 5.5 Launch: What Changed, Pricing and Why It Matters | Laxman Nepal",
@@ -904,6 +888,14 @@
     "keywords": "youtube analytics pro dashboard free channel analyze public with subscriber view and video statistics using the data api. tool by laxman nepal."
   },
   {
+    "title": "YouTube Analytics Pro Dashboard | Free YouTube Channel Analytics",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-analytics.html",
+    "description": "Analyze a public YouTube channel with subscriber, view and video statistics using the YouTube Data API. Free YouTube analytics tool by Laxman Nepal.",
+    "keywords": "youtube analytics pro dashboard free channel analyze public with subscriber view and video statistics using the data api. tool by laxman nepal."
+  },
+  {
     "title": "YouTube Analytics | Laxman Nepal",
     "category": "YouTube",
     "type": "resource",
@@ -931,14 +923,6 @@
     "title": "YouTube Channel Analytics",
     "category": "Tools",
     "type": "tool",
-    "url": "/youtube-tools/youtube-analytics.html",
-    "description": "YouTube Channel Analytics",
-    "keywords": "youtube channel analytics"
-  },
-  {
-    "title": "YouTube Channel Analytics",
-    "category": "Tools",
-    "type": "tool",
     "url": "/youtube-tools/youtube-channel-id-finder-analytics.html",
     "description": "YouTube Channel Analytics",
     "keywords": "youtube channel analytics"
@@ -948,6 +932,14 @@
     "category": "Tools",
     "type": "tool",
     "url": "/youtube-channel-analytics-pro.html",
+    "description": "Analyze a public YouTube channel with recent video views, likes, comments, keywords and practical SEO insights. Free YouTube analytics tool by Laxman Nepal.",
+    "keywords": "youtube channel analytics tool free video insights laxman nepal analyze public with recent views likes comments keywords and practical seo insights. by nepal."
+  },
+  {
+    "title": "YouTube Channel Analytics Tool – Free Channel & Video Insights | Laxman Nepal",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-channel-analytics-pro.html",
     "description": "Analyze a public YouTube channel with recent video views, likes, comments, keywords and practical SEO insights. Free YouTube analytics tool by Laxman Nepal.",
     "keywords": "youtube channel analytics tool free video insights laxman nepal analyze public with recent views likes comments keywords and practical seo insights. by nepal."
   },
@@ -1054,6 +1046,14 @@
     "url": "/youtube-tools/youtube-video-analytics.html",
     "description": "YouTube Video Analytics | Blog Analytics",
     "keywords": "youtube video analytics blog"
+  },
+  {
+    "title": "YouTube Video SEO Analyzer — Free YouTube SEO Tool | Laxman Nepal",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-video-seo-analyzer.html",
+    "description": "Analyze any YouTube video with title, description, tags, engagement, metadata, performance and related-video SEO insights using Laxman Nepal",
+    "keywords": "youtube video seo analyzer free tool laxman nepal analyze any with title description tags engagement metadata performance and related-video insights using"
   },
   {
     "title": "YouTube Video SEO Analyzer — Free YouTube SEO Tool | Laxman Nepal",
