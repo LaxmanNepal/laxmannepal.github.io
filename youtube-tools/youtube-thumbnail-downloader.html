@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Metadata -->
+    <title>YouTube Thumbnail Downloader - Extract HD & 4K Thumbnails Free | Laxman Nepal</title>
+    <meta name="description" content="Free online YouTube Thumbnail Downloader tool by Laxman Nepal. Download high-resolution YouTube video thumbnails in 4K, 1080p HD, SD, and Medium quality instantly.">
+    <meta name="keywords" content="YouTube thumbnail downloader, download YouTube thumbnails, HD YouTube thumbnail grabber, free YouTube tools, YouTube image extractor, Laxman Nepal YouTube tools">
+    <meta name="author" content="Laxman Nepal">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://laxmannepal.com.np/youtube-tools/youtube-thumbnail-downloader.html">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://laxmannepal.com.np/youtube-tools/youtube-thumbnail-downloader.html">
+    <meta property="og:title" content="YouTube Thumbnail Downloader - Free HD Image Grabber">
+    <meta property="og:description" content="Extract and download full HD, 4K, and SD thumbnails from any YouTube video in seconds. Free, fast, and no registration required.">
+    <meta property="og:image" content="https://laxmannepal.com.np/assets/images/youtube-thumbnail-downloader-og.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YouTube Thumbnail Downloader - Laxman Nepal">
+    <meta name="twitter:description" content="Download high-quality YouTube thumbnails instantly in HD, SD, and 4K resolutions.">
+    <meta name="twitter:image" content="https://laxmannepal.com.np/assets/images/youtube-thumbnail-downloader-og.jpg">
+
+    <!-- External Assets & Styles -->
+    <link rel="stylesheet" href="/assets/css/shared-shell.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Embedded Theme Styles (Repository Consistent Design) -->
+    <style>
+        :root {
+            --ln-font-main: "Gilroy", "Noto Sans Devanagari", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --ln-primary: #6366f1;
+            --ln-primary-dark: #4f46e5;
+            --ln-primary-light: #e0e7ff;
+            --ln-accent: #ff0000;
+            --ln-bg-main: #f8fafc;
+            --ln-surface: #ffffff;
+            --ln-text-dark: #0f172a;
+            --ln-text-muted: #64748b;
+            --ln-border: #e2e8f0;
+            --ln-radius-lg: 18px;
+            --ln-radius-md: 12px;
+            --ln-shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --ln-shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+            --ln-shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.12);
+            --ln-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: var(--ln-font-main);
+            background-color: var(--ln-bg-main);
+            color: var(--ln-text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .ln-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Breadcrumbs */
+        .ln-breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--ln-text-muted);
+            margin-bottom: 1.5rem;
+        }
+        .ln-breadcrumbs a {
+            color: var(--ln-text-muted);
+            text-decoration: none;
+            transition: var(--ln-transition);
+        }
+        .ln-breadcrumbs a:hover {
+            color: var(--ln-primary);
+        }
+
+        /* Main Card Container */
+        .ln-card {
+            background: var(--ln-surface);
+            border-radius: var(--ln-radius-lg);
+            border: 1px solid var(--ln-border);
+            box-shadow: var(--ln-shadow-md);
+            padding: clamp(1.5rem, 5vw, 3rem);
+            margin-bottom: 2.5rem;
+        }
+
+        /* Hero Header */
+        .ln-hero-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .ln-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--ln-primary-light);
+            color: var(--ln-primary-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .ln-hero-title {
+            font-size: clamp(1.85rem, 4vw, 2.75rem);
+            font-weight: 800;
+            color: var(--ln-text-dark);
+            letter-spacing: -0.02em;
+            margin: 0 0 0.8rem 0;
+            line-height: 1.25;
+        }
+
+        .ln-hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            color: var(--ln-text-muted);
+            margin: 0;
+        }
+
+        /* Input Form */
+        .ln-search-box {
+            position: relative;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .ln-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .ln-input-icon {
+            position: absolute;
+            left: 1.25rem;
+            color: #ef4444;
+            font-size: 1.25rem;
+            pointer-events: none;
+            transition: var(--ln-transition);
+        }
+
+        .ln-input-field {
+            width: 100%;
+            padding: 1.15rem 11rem 1.15rem 3.5rem;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--ln-text-dark);
+            background: #ffffff;
+            border: 2px solid var(--ln-border);
+            border-radius: var(--ln-radius-md);
+            box-shadow: var(--ln-shadow-sm);
+            transition: var(--ln-transition);
+        }
+
+        .ln-input-field:focus {
+            border-color: var(--ln-primary);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+            outline: none;
+        }
+
+        .ln-submit-btn {
+            position: absolute;
+            right: 0.5rem;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            background: var(--ln-primary);
+            color: #ffffff;
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--ln-transition);
+        }
+
+        .ln-submit-btn:hover {
+            background: var(--ln-primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .ln-submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Error Notification */
+        .ln-error-banner {
+            display: none;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 0.85rem 1.25rem;
+            border-radius: var(--ln-radius-md);
+            margin-top: 1rem;
+            font-size: 0.925rem;
+            font-weight: 500;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        /* Results Area */
+        .ln-results-section {
+            display: none;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--ln-border);
+            animation: lnFadeIn 0.35s ease-out;
+        }
+
+        .ln-results-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .ln-results-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--ln-text-dark);
+            margin: 0;
+        }
+
+        .ln-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .ln-thumb-card {
+            background: #ffffff;
+            border: 1px solid var(--ln-border);
+            border-radius: var(--ln-radius-md);
+            overflow: hidden;
+            box-shadow: var(--ln-shadow-sm);
+            transition: var(--ln-transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ln-thumb-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--ln-shadow-lg);
+            border-color: var(--ln-primary-light);
+        }
+
+        .ln-thumb-preview {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #f1f5f9;
+            overflow: hidden;
+        }
+
+        .ln-thumb-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .ln-thumb-card:hover .ln-thumb-preview img {
+            transform: scale(1.03);
+        }
+
+        .ln-thumb-body {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .ln-meta-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+
+        .ln-quality-tag {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .ln-quality-tag.max { background: #dcfce7; color: #166534; }
+        .ln-quality-tag.hd { background: #e0e7ff; color: #3730a3; }
+        .ln-quality-tag.sd { background: #ffedd5; color: #9a3412; }
+        .ln-quality-tag.mq { background: #f1f5f9; color: #475569; }
+
+        .ln-dimens {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--ln-text-muted);
+        }
+
+        .ln-thumb-desc {
+            font-size: 0.875rem;
+            color: var(--ln-text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .ln-card-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .ln-btn-dl {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: var(--ln-text-dark);
+            color: #ffffff;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--ln-transition);
+        }
+
+        .ln-btn-dl:hover {
+            background: var(--ln-primary);
+            color: #ffffff;
+        }
+
+        .ln-btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem;
+            background: var(--ln-bg-main);
+            color: var(--ln-text-dark);
+            border: 1px solid var(--ln-border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--ln-transition);
+            text-decoration: none;
+        }
+
+        .ln-btn-secondary:hover {
+            background: #e2e8f0;
+        }
+
+        /* Notice banner for fallback */
+        .ln-notice-banner {
+            display: none;
+            background: #fffbebf;
+            border: 1px solid #fef3c7;
+            color: #b45309;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Content & SEO Section */
+        .ln-content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .ln-article {
+            color: #334155;
+            font-size: 1rem;
+        }
+
+        .ln-article h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--ln-text-dark);
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .ln-article p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .ln-article ul, .ln-article ol {
+            padding-left: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .ln-article li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sidebar Tools Navigation */
+        .ln-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .ln-sidebar-widget {
+            background: var(--ln-surface);
+            border: 1px solid var(--ln-border);
+            border-radius: var(--ln-radius-md);
+            padding: 1.5rem;
+            box-shadow: var(--ln-shadow-sm);
+        }
+
+        .ln-widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--ln-text-dark);
+            margin: 0 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--ln-primary-light);
+        }
+
+        .ln-related-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .ln-related-item a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--ln-text-dark);
+            text-decoration: none;
+            font-size: 0.925rem;
+            font-weight: 600;
+            padding: 0.6rem 0.8rem;
+            border-radius: 6px;
+            background: var(--ln-bg-main);
+            transition: var(--ln-transition);
+        }
+
+        .ln-related-item a:hover {
+            background: var(--ln-primary-light);
+            color: var(--ln-primary-dark);
+            transform: translateX(3px);
+        }
+
+        .ln-related-item i {
+            color: var(--ln-primary);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .ln-faq-section {
+            margin-top: 3rem;
+            background: var(--ln-surface);
+            border: 1px solid var(--ln-border);
+            border-radius: var(--ln-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--ln-shadow-sm);
+        }
+
+        .ln-faq-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--ln-text-dark);
+        }
+
+        .ln-faq-item {
+            border-bottom: 1px solid var(--ln-border);
+            padding: 1rem 0;
+        }
+
+        .ln-faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .ln-faq-question {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--ln-text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .ln-faq-answer {
+            color: var(--ln-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @keyframes lnFadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 868px) {
+            .ln-content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .ln-input-field {
+                padding: 1.15rem 1rem 1.15rem 3.25rem;
+                font-size: 0.95rem;
+            }
+            .ln-input-wrapper {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .ln-submit-btn {
+                position: static;
+                width: 100%;
+                justify-content: center;
+                padding: 1rem;
+            }
+            .ln-card-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "YouTube Thumbnail Downloader",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "Web",
+          "url": "https://laxmannepal.com.np/youtube-tools/youtube-thumbnail-downloader.html",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Laxman Nepal",
+            "url": "https://laxmannepal.com.np/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://laxmannepal.com.np/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "YouTube Tools",
+              "item": "https://laxmannepal.com.np/youtube-tools/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "YouTube Thumbnail Downloader",
+              "item": "https://laxmannepal.com.np/youtube-tools/youtube-thumbnail-downloader.html"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is this YouTube Thumbnail Downloader free to use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, this tool is 100% free with no registration or software installation required."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What thumbnail resolutions can I download?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can extract Maximum Resolution (1280x720 / 4K), High Definition HQ (480x360), Standard Quality SD (640x480), and Medium Quality MQ (320x180)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why is Full HD thumbnail missing for some videos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If a video creator uploaded a low-resolution video or did not supply a custom high-res thumbnail, YouTube only generates lower-resolution previews. The tool automatically detects and displays available options."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Shared Header Shell Navigation -->
+    <header id="site-header"></header>
+
+    <main class="ln-container">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav class="ln-breadcrumbs" aria-label="Breadcrumb">
+            <a href="/"><i class="fas fa-home"></i> Home</a>
+            <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+            <a href="/youtube-tools/">YouTube Tools</a>
+            <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+            <span>Thumbnail Downloader</span>
+        </nav>
+
+        <!-- Tool Hero Card -->
+        <div class="ln-card">
+            <div class="ln-hero-header">
+                <div class="ln-badge">
+                    <i class="fab fa-youtube"></i> Free YouTube Utility
+                </div>
+                <h1 class="ln-hero-title">YouTube Thumbnail Downloader</h1>
+                <p class="ln-hero-subtitle">Instantly extract high-definition 4K, 1080p HD, and SD thumbnail covers from any YouTube video or Short.</p>
+            </div>
+
+            <!-- Input Form Section -->
+            <form id="lnThumbForm" onsubmit="event.preventDefault(); handleExtractThumbnails();" class="ln-search-box">
+                <div class="ln-input-wrapper">
+                    <i class="fab fa-youtube ln-input-icon"></i>
+                    <input type="text" id="lnVideoUrl" class="ln-input-field" placeholder="Paste YouTube Video URL or Short link here..." autocomplete="off" required>
+                    <button type="submit" class="ln-submit-btn" id="lnSubmitBtn">
+                        <span>Get Thumbnails</span> <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div id="lnErrorMsg" class="ln-error-banner" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span id="lnErrorText">Invalid YouTube link. Please check the URL and try again.</span>
+                </div>
+            </form>
+
+            <!-- Results Section -->
+            <div id="lnResults" class="ln-results-section">
+                
+                <div class="ln-results-header">
+                    <h2 class="ln-results-title"><i class="fas fa-images"></i> Available Thumbnail Qualities</h2>
+                    <span id="lnVideoIdTag" style="font-size:0.875rem; color:var(--ln-text-muted); font-weight:600;"></span>
+                </div>
+
+                <div id="lnNotice" class="ln-notice-banner">
+                    <i class="fas fa-info-circle"></i> Note: The highest resolution (1080p/4K) image was not provided by the creator. Standard and HD options are displayed below.
+                </div>
+
+                <div class="ln-grid">
+
+                    <!-- Max Resolution (1280x720 / 4K) -->
+                    <div class="ln-thumb-card" id="cardMax">
+                        <div class="ln-thumb-preview">
+                            <img id="imgMax" src="" alt="Max Resolution Thumbnail" loading="lazy">
+                        </div>
+                        <div class="ln-thumb-body">
+                            <div class="ln-meta-row">
+                                <span class="ln-quality-tag max">Full HD / 4K</span>
+                                <span class="ln-dimens">1280 × 720</span>
+                            </div>
+                            <div class="ln-thumb-desc">Best for wallpapers, references, and high-res editing.</div>
+                            <div class="ln-card-actions">
+                                <button class="ln-btn-dl" onclick="downloadThumbnail('imgMax', 'maxresdefault')">
+                                    <i class="fas fa-download"></i> Download HD
+                                </button>
+                                <a id="linkMax" href="#" target="_blank" class="ln-btn-secondary" title="View Full Image">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- High Quality (480x360) -->
+                    <div class="ln-thumb-card">
+                        <div class="ln-thumb-preview">
+                            <img id="imgHQ" src="" alt="High Quality Thumbnail" loading="lazy">
+                        </div>
+                        <div class="ln-thumb-body">
+                            <div class="ln-meta-row">
+                                <span class="ln-quality-tag hd">HQ Quality</span>
+                                <span class="ln-dimens">480 × 360</span>
+                            </div>
+                            <div class="ln-thumb-desc">Standard YouTube display cover resolution.</div>
+                            <div class="ln-card-actions">
+                                <button class="ln-btn-dl" onclick="downloadThumbnail('imgHQ', 'hqdefault')">
+                                    <i class="fas fa-download"></i> Download HQ
+                                </button>
+                                <a id="linkHQ" href="#" target="_blank" class="ln-btn-secondary" title="View Full Image">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Standard Definition (640x480) -->
+                    <div class="ln-thumb-card">
+                        <div class="ln-thumb-preview">
+                            <img id="imgSD" src="" alt="Standard Quality Thumbnail" loading="lazy">
+                        </div>
+                        <div class="ln-thumb-body">
+                            <div class="ln-meta-row">
+                                <span class="ln-quality-tag sd">SD Quality</span>
+                                <span class="ln-dimens">640 × 480</span>
+                            </div>
+                            <div class="ln-thumb-desc">Ideal for social shares, blogs, and fast previews.</div>
+                            <div class="ln-card-actions">
+                                <button class="ln-btn-dl" onclick="downloadThumbnail('imgSD', 'sddefault')">
+                                    <i class="fas fa-download"></i> Download SD
+                                </button>
+                                <a id="linkSD" href="#" target="_blank" class="ln-btn-secondary" title="View Full Image">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Medium Quality (320x180) -->
+                    <div class="ln-thumb-card">
+                        <div class="ln-thumb-preview">
+                            <img id="imgMQ" src="" alt="Medium Quality Thumbnail" loading="lazy">
+                        </div>
+                        <div class="ln-thumb-body">
+                            <div class="ln-meta-row">
+                                <span class="ln-quality-tag mq">Medium</span>
+                                <span class="ln-dimens">320 × 180</span>
+                            </div>
+                            <div class="ln-thumb-desc">Compact thumbnail format for mobile apps and embeds.</div>
+                            <div class="ln-card-actions">
+                                <button class="ln-btn-dl" onclick="downloadThumbnail('imgMQ', 'mqdefault')">
+                                    <i class="fas fa-download"></i> Download MQ
+                                </button>
+                                <a id="linkMQ" href="#" target="_blank" class="ln-btn-secondary" title="View Full Image">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO Content & Sidebar -->
+        <div class="ln-content-grid">
+            
+            <article class="ln-article">
+                <h2>How to Download YouTube Video Thumbnails</h2>
+                <p>Downloading thumbnail images from YouTube videos is quick and effortless using our free web app. Follow these 3 simple steps:</p>
+                <ol>
+                    <li><strong>Copy YouTube Link:</strong> Open YouTube on your web browser or app and copy the URL of the video or Short.</li>
+                    <li><strong>Paste URL:</strong> Paste the link into the input field above and click <strong>Get Thumbnails</strong>.</li>
+                    <li><strong>Choose Resolution & Download:</strong> Pick your preferred resolution (1080p, HD, or SD) and click the Download button.</li>
+                </ol>
+
+                <h2>Supported YouTube Video URL Formats</h2>
+                <p>Our extractor supports all official YouTube link formats including:</p>
+                <ul>
+                    <li>Standard links: <code>https://www.youtube.com/watch?v=VIDEO_ID</code></li>
+                    <li>Shortened URLs: <code>https://youtu.be/VIDEO_ID</code></li>
+                    <li>YouTube Shorts: <code>https://www.youtube.com/shorts/VIDEO_ID</code></li>
+                    <li>Embedded URLs: <code>https://www.youtube.com/embed/VIDEO_ID</code></li>
+                </ul>
+
+                <h2>Is it Legal to Download YouTube Thumbnails?</h2>
+                <p>You can freely download YouTube thumbnails for personal reference, research, inspirational design, design mockups, and fair-use editorial reviews. Always remember to respect the intellectual property rights of original creators if you intend to reuse artwork publicly.</p>
+            </article>
+
+            <!-- Sidebar Contextual Links -->
+            <aside class="ln-sidebar">
+                <div class="ln-sidebar-widget">
+                    <h3 class="ln-widget-title"><i class="fas fa-tools"></i> More YouTube Tools</h3>
+                    <ul class="ln-related-list">
+                        <li class="ln-related-item">
+                            <a href="/youtube-tools/youtube-tag-generator.html">
+                                <i class="fas fa-tags"></i> YouTube Tag Generator
+                            </a>
+                        </li>
+                        <li class="ln-related-item">
+                            <a href="/youtube-tools/youtube-title-generator.html">
+                                <i class="fas fa-heading"></i> YouTube Title Generator
+                            </a>
+                        </li>
+                        <li class="ln-related-item">
+                            <a href="/youtube-tools/youtube-seo-analyzer.html">
+                                <i class="fas fa-chart-line"></i> YouTube SEO Analyzer
+                            </a>
+                        </li>
+                        <li class="ln-related-item">
+                            <a href="/youtube-tools/youtube-channel-analytics.html">
+                                <i class="fas fa-user-chart"></i> Channel Analytics Tool
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="ln-faq-section">
+            <h2 class="ln-faq-title"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+            
+            <div class="ln-faq-item">
+                <div class="ln-faq-question">Is this YouTube Thumbnail Downloader completely free?</div>
+                <div class="ln-faq-answer">Yes, this utility is completely free to use with no download limits, no premium upgrades, and no registration required.</div>
+            </div>
+
+            <div class="ln-faq-item">
+                <div class="ln-faq-question">What thumbnail resolutions can I download?</div>
+                <div class="ln-faq-answer">You can download Full HD (1280x720), High Quality (480x360), Standard Quality (640x480), and Medium Quality (320x180) images.</div>
+            </div>
+
+            <div class="ln-faq-item">
+                <div class="ln-faq-question">Why is the 1080p / 4K thumbnail missing for a video?</div>
+                <div class="ln-faq-answer">YouTube automatically generates maximum resolution thumbnails (<code>maxresdefault</code>) only if the creator uploaded a high-resolution custom thumbnail. If missing, our tool seamlessly highlights the highest available alternative.</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shared Footer Shell Component -->
+    <footer id="site-footer"></footer>
+
+    <script src="/assets/js/shared-shell.js" defer></script>
+
+    <!-- Application Script -->
+    <script>
+        (function() {
+            const form = document.getElementById('lnThumbForm');
+            const input = document.getElementById('lnVideoUrl');
+            const results = document.getElementById('lnResults');
+            const errorMsg = document.getElementById('lnErrorMsg');
+            const errorText = document.getElementById('lnErrorText');
+            const submitBtn = document.getElementById('lnSubmitBtn');
+            const notice = document.getElementById('lnNotice');
+            const cardMax = document.getElementById('cardMax');
+            const videoIdTag = document.getElementById('lnVideoIdTag');
+
+            const imgMax = document.getElementById('imgMax');
+            const imgHQ = document.getElementById('imgHQ');
+            const imgSD = document.getElementById('imgSD');
+            const imgMQ = document.getElementById('imgMQ');
+
+            const linkMax = document.getElementById('linkMax');
+            const linkHQ = document.getElementById('linkHQ');
+            const linkSD = document.getElementById('linkSD');
+            const linkMQ = document.getElementById('linkMQ');
+
+            // Robust YouTube Video ID Extraction
+            function extractVideoId(url) {
+                if (!url) return false;
+                url = url.trim();
+
+                // If input is directly an 11-character video ID
+                if (/^[a-zA-Z0-9_-]{11}$/.test(url)) {
+                    return url;
+                }
+
+                // Regex matching standard, short, embeds, and shorts URLs
+                const regExp = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/|shorts\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/;
+                const match = url.match(regExp);
+
+                return (match && match[1].length === 11) ? match[1] : false;
+            }
+
+            window.handleExtractThumbnails = function() {
+                const url = input.value.trim();
+                const videoId = extractVideoId(url);
+
+                if (!videoId) {
+                    showError("Invalid YouTube URL or Video ID. Please paste a valid link.");
+                    results.style.display = 'none';
+                    return;
+                }
+
+                hideError();
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Extracting...';
+
+                // Construct image URLs
+                const maxUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                const hqUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                const sdUrl = `https://img.youtube.com/vi/${videoId}/sddefault.jpg`;
+                const mqUrl = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+
+                // Update Image Elements
+                imgMax.src = maxUrl;
+                imgHQ.src = hqUrl;
+                imgSD.src = sdUrl;
+                imgMQ.src = mqUrl;
+
+                // Update External Links
+                linkMax.href = maxUrl;
+                linkHQ.href = hqUrl;
+                linkSD.href = sdUrl;
+                linkMQ.href = mqUrl;
+
+                videoIdTag.textContent = `Video ID: ${videoId}`;
+
+                // Validate if maxresdefault exists (YouTube returns a 120px wide placeholder when missing)
+                const tempImg = new Image();
+                tempImg.onload = function() {
+                    if (tempImg.naturalWidth <= 120) {
+                        cardMax.style.display = 'none';
+                        notice.style.display = 'block';
+                    } else {
+                        cardMax.style.display = 'flex';
+                        notice.style.display = 'none';
+                    }
+                    finalizeResults();
+                };
+                tempImg.onerror = function() {
+                    cardMax.style.display = 'none';
+                    notice.style.display = 'block';
+                    finalizeResults();
+                };
+                tempImg.src = maxUrl;
+            };
+
+            function finalizeResults() {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span>Get Thumbnails</span> <i class="fas fa-arrow-right"></i>';
+                results.style.display = 'block';
+
+                // Smooth scroll to results
+                results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            function showError(msg) {
+                errorText.textContent = msg;
+                errorMsg.style.display = 'flex';
+            }
+
+            function hideError() {
+                errorMsg.style.display = 'none';
+            }
+
+            // Image Download Handler with cross-origin fallback
+            window.downloadThumbnail = async function(imgId, qualityName) {
+                const img = document.getElementById(imgId);
+                if (!img || !img.src) return;
+
+                const srcUrl = img.src;
+                const filename = `youtube-thumbnail-${qualityName}-${Date.now()}.jpg`;
+
+                try {
+                    const response = await fetch(srcUrl);
+                    if (!response.ok) throw new Error("Network response was not ok");
+                    const blob = await response.blob();
+                    const blobUrl = URL.createObjectURL(blob);
+
+                    const a = document.createElement('a');
+                    a.href = blobUrl;
+                    a.download = filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(blobUrl);
+                } catch (e) {
+                    // Fallback if direct blob fetch is blocked by browser CORS
+                    window.open(srcUrl, '_blank');
+                }
+            };
+        })();
+    </script>
+</body>
+</html>
