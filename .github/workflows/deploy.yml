@@ -124,6 +124,8 @@ jobs:
       - name: Audit published SEO health
         continue-on-error: true
         run: python3 scripts/audit_seo_health.py .pages
+      - name: Validate gold-rate SEO cluster
+        run: python3 scripts/validate_gold_rate_seo.py .pages --data .pages/data/gold-nepal.json
       - name: Verify published legacy routes
         run: |
           test -f .pages/2022/09/kalimati-font-download-by-laxman-nepal.html
