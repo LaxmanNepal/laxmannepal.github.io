@@ -1,9 +1,9 @@
 /**
- * Laxman Nepal — YouTube Data API proxy
+ * Laxman Nepal — central YouTube Data API proxy
  * The API key is stored as a Cloudflare Worker secret.
  */
 
-const PREFIX = "/api/youtube";
+const PREFIXES = ["/youtube", "/api/youtube"];
 const ALLOWED = new Set(["/search", "/channels", "/playlistItems", "/videos", "/health"]);
 const ALLOWED_ORIGINS = new Set([
   "https://laxmannepal.com.np",
@@ -23,11 +23,13 @@ export default {
       return json({ error: "Method not allowed." }, 405, origin);
     }
 
-    const routePath = url.pathname.startsWith(PREFIX)
-      ? url.pathname.slice(PREFIX.length) || "/"
-      : url.pathname;
+    const routePath = normalizeRoute(url.pathname);
 
-    if (routePath === "/health") {\n      return json({ ok: true, service: "youtube-api" }, 200, origin);\n    }\n\n    if (!ALLOWED.has(routePath)) {
+    if (routePath === "/health") {
+      return json({ ok: true, service: "youtube-api" }, 200, origin);
+    }
+
+    if (!ALLOWED.has(routePath)) {
       return json({ error: "Not found." }, 404, origin);
     }
 
@@ -68,6 +70,17 @@ export default {
     }
   }
 };
+
+function normalizeRoute(pathname) {
+  for (const prefix of PREFIXES) {
+    if (pathname === prefix) return "/health";
+    if (pathname.startsWith(prefix + "/")) {
+      return pathname.slice(prefix.length) || "/";
+    }
+  }
+  if (pathname === "/health") return "/health";
+  return pathname;
+}
 
 function corsHeaders(origin) {
   const headers = {
