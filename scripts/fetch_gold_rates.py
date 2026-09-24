@@ -9,6 +9,8 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "gold-nepal.json"
 PAGE = ROOT / "gold-price-in-nepal-today" / "index.html"
+HISTORY_PAGE = ROOT / "gold-price-history-nepal" / "index.html"
+SILVER_PAGE = ROOT / "silver-price-in-nepal-today" / "index.html"
 DATA.parent.mkdir(parents=True, exist_ok=True)
 
 SOURCES = [
@@ -65,6 +67,26 @@ def update_seo_snapshot(page_text, record):
 
 def update_schema_date(page_text, local_date):
     return re.sub(r'("dateModified"\s*:\s*")[0-9]{4}-[0-9]{2}-[0-9]{2}(")', rf'\g<1>{local_date}\g<2>', page_text, count=1)
+
+def replace_marked(text, start, end, block):
+    if start not in text or end not in text:
+        raise RuntimeError(f"Missing snapshot markers: {start}")
+    a=text.index(start); b=text.index(end)+len(end)
+    return text[:a]+block+text[b:]
+
+def update_cluster_snapshots(record):
+    date=record["date"]
+    display=datetime.strptime(date,"%Y-%m-%d").strftime("%d %B %Y")
+    fine=f'{record["fine_gold_tola"]:,}'; tejabi=f'{record["tejabi_gold_tola"]:,}' if record.get("tejabi_gold_tola") else "Not reported"; silver=f'{record["silver_tola"]:,}'
+    ten=f'{round(record["silver_tola"]*10/11.6638125):,}'
+    history=HISTORY_PAGE.read_text(encoding="utf-8")
+    hs="<!-- LATEST_GOLD_HISTORY_SNAPSHOT_START -->"; he="<!-- LATEST_GOLD_HISTORY_SNAPSHOT_END -->"
+    hb=f'''{hs}<h2>Latest published gold rate in Nepal</h2><p><strong>Fine Gold: Rs {fine} per tola</strong> · <strong>Tejabi Gold: Rs {tejabi} per tola</strong> · <strong>Silver: Rs {silver} per tola</strong> ({display}).</p><p class="muted">This snapshot is updated automatically from the stored daily rate record.</p>{he}'''
+    HISTORY_PAGE.write_text(replace_marked(history,hs,he,hb),encoding="utf-8")
+    silver_page=SILVER_PAGE.read_text(encoding="utf-8")
+    ss="<!-- SILVER_SEO_SNAPSHOT_START -->"; se="<!-- SILVER_SEO_SNAPSHOT_END -->"
+    sb=f'''{ss}<strong>Silver price in Nepal today — latest published rate</strong><p><time datetime="{date}">{display}</time>: <strong>Rs {silver} per tola</strong> and <strong>Rs {ten} per 10 grams</strong>.</p><p class="muted">This crawlable snapshot is updated automatically from the stored daily rate record.</p>{se}'''
+    SILVER_PAGE.write_text(replace_marked(silver_page,ss,se,sb),encoding="utf-8")
 
 def main():
     old = load()
@@ -123,6 +145,7 @@ def main():
     page = PAGE.read_text(encoding="utf-8")
     page = update_seo_snapshot(page, record)
     PAGE.write_text(update_schema_date(page, record["date"]), encoding="utf-8")
+    update_cluster_snapshots(record)
     print(json.dumps(record, ensure_ascii=False))
 
 if __name__ == "__main__":
