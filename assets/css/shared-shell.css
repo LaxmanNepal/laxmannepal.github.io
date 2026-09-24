@@ -96,3 +96,8 @@ html,body,body *,button,input,select,textarea{font-family:"Gilroy","Noto Sans De
 .shared-mobile-menu *{
   font-family:"Gilroy","Noto Sans Devanagari",sans-serif!important;
 }
+
+
+/* YouTube Tools related-link SEO block */
+.yt-related-tools{margin:34px 0 8px;border:1px solid var(--yt-line,#e4e7ec);border-radius:22px;background:rgba(255,255,255,.78);box-shadow:0 12px 35px rgba(15,23,42,.06)}
+.yt-related-inner{padding:24px}.yt-related-kicker{font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#e31b45}.yt-related-tools h2{margin:5px 0 4px;font-size:1.25rem}.yt-related-tools p{margin:0;color:#667085;font-size:.78rem;line-height:1.6}.yt-related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:18px 0}.yt-related-grid a{display:flex;justify-content:space-between;gap:8px;padding:12px 13px;border:1px solid var(--yt-line,#e4e7ec);border-radius:12px;background:#fff;color:#344054;text-decoration:none;font-size:.72rem;font-weight:800}.yt-related-grid a:hover{border-color:#d9153d;color:#d9153d}.yt-related-all{display:inline-block;color:#d9153d;text-decoration:none;font-size:.74rem;font-weight:900}.yt-breadcrumbs{max-width:1240px;margin:0 auto;padding:12px 20px;color:#667085;font-size:.72rem;display:flex;gap:8px;flex-wrap:wrap}.yt-breadcrumbs a{color:#667085;text-decoration:none}.yt-breadcrumbs a:hover{color:#d9153d}@media(max-width:700px){.yt-related-grid{grid-template-columns:1fr 1fr}.yt-breadcrumbs{padding:10px 14px}}@media(max-width:480px){.yt-related-grid{grid-template-columns:1fr}.yt-related-inner{padding:18px}}
