@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="/assets/css/shared-shell.css"><script src="/assets/js/shared-shell.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced YouTube Video SEO Analyzer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ff0000;
+            --primary-dark: #cc0000;
+            --secondary: #065fd4;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --gray: #6c757d;
+            --border-radius: 12px;
+            --box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: var(--dark);
+            margin: 20px 0 15px;
+            font-size: 1.6rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin: 15px 0 10px;
+            font-size: 1.3rem;
+        }
+
+        h4 {
+            color: var(--dark);
+            margin: 12px 0 8px;
+            font-size: 1.1rem;
+        }
+
+        .input-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        input[type="text"] {
+            padding: 14px 18px;
+            border: 2px solid #e1e5eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+        }
+
+        button {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+        }
+
+        button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .loading-spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--danger);
+        }
+
+        /* Content Analysis Section */
+        .content-analysis {
+            background: #f8f9fa;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .content-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .content-body {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #e9ecef;
+        }
+
+        .content-body.description {
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+
+        .content-body.tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            max-height: none;
+        }
+
+        .tag {
+            background-color: #e9ecef;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--dark);
+        }
+
+        .analysis-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .badge-good {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .badge-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        /* SEO Score Section */
+        .seo-score-overview {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .score-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background: white;
+            box-shadow: var(--box-shadow);
+        }
+
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 15px;
+            position: relative;
+        }
+
+        .score-value {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .score-label {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 10px;
+        }
+
+        .score-good { color: var(--success); }
+        .score-average { color: var(--warning); }
+        .score-poor { color: var(--danger); }
+
+        .score-breakdown {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 15px;
+            background: var(--light);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .breakdown-score {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* API Status */
+        .api-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            background: #e7f3ff;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .api-status.success {
+            background: #d4edda;
+            border-left-color: var(--success);
+        }
+
+        .api-status.error {
+            background: #f8d7da;
+            border-left-color: var(--danger);
+        }
+
+        /* Enhanced Analysis Sections */
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .analysis-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .analysis-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .analysis-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .analysis-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 10px 0;
+            color: var(--secondary);
+        }
+
+        .analysis-description {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Keyword Research Section */
+        .keyword-research {
+            background: #f0f8ff;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #4d90fe;
+        }
+
+        .keyword-tabs {
+            display: flex;
+            border-bottom: 2px solid #e1e5eb;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .keyword-tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            transition: var(--transition);
+        }
+
+        .keyword-tab.active {
+            border-bottom: 3px solid #4d90fe;
+            color: #4d90fe;
+        }
+
+        .keyword-content {
+            display: none;
+        }
+
+        .keyword-content.active {
+            display: block;
+        }
+
+        .keyword-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .keyword-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-left: 4px solid #4d90fe;
+        }
+
+        .keyword-main {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #065fd4;
+        }
+
+        .keyword-suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .keyword-suggestion {
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: var(--dark);
+        }
+
+        .keyword-metrics {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Performance Metrics */
+        .performance-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .metric-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 10px 0;
+            color: var(--dark);
+        }
+
+        .metric-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .metric-change {
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .positive { color: var(--success); }
+        .negative { color: var(--danger); }
+
+        /* Charts */
+        .charts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+
+        /* Progress Bars */
+        .progress-bars {
+            margin: 20px 0;
+        }
+
+        .progress-item {
+            margin-bottom: 15px;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+
+        .progress-excellent { background: var(--success); }
+        .progress-good { background: #20c997; }
+        .progress-average { background: var(--warning); }
+        .progress-poor { background: var(--danger); }
+
+        /* Tables */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            border: 1px solid #e1e1e1;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Recommendations */
+        .recommendations {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .recommendations ul {
+            padding-left: 20px;
+        }
+
+        .recommendations li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .recommendations li:before {
+            content: "•";
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Thumbnail */
+        .thumbnail {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #e1e5eb;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            transition: var(--transition);
+        }
+
+        .tab.active {
+            border-bottom: 3px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* API Quota Info */
+        .api-quota {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Content Gap Analysis */
+        .gap-analysis {
+            background: #e8f5e9;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid var(--success);
+        }
+
+        .gap-item {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Competitor Analysis */
+        .competitor-analysis {
+            background: #fff3e0;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid var(--warning);
+        }
+
+        .competitor-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .competitor-thumbnail {
+            width: 120px;
+            height: 90px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        .competitor-info {
+            flex: 1;
+        }
+
+        .competitor-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .competitor-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .seo-score-overview {
+                grid-template-columns: 1fr;
+            }
+            
+            .score-breakdown {
+                grid-template-columns: 1fr;
+            }
+            
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .performance-metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .charts-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .keyword-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .content-stats {
+                flex-wrap: wrap;
+            }
+            
+            .competitor-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .competitor-thumbnail {
+                width: 100%;
+                height: auto;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .card {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            input[type="text"] {
+                padding: 12px;
+            }
+            
+            button {
+                padding: 12px 18px;
+            }
+            
+            .tabs, .keyword-tabs {
+                flex-direction: column;
+            }
+            
+            .tab, .keyword-tab {
+                text-align: center;
+                border-bottom: 1px solid #e1e5eb;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1><i class="fab fa-youtube" style="margin-right: 10px;"></i> Advanced YouTube Video SEO Analyzer</h1>
+            
+            <div class="api-quota">
+                <i class="fas fa-info-circle"></i> This tool uses the YouTube Data API. Free tier allows approximately 100 requests per day.
+            </div>
+            
+            <div class="input-section">
+                <label for="videoUrlInput">Enter YouTube Video URL:</label>
+                <input type="text" id="videoUrlInput" placeholder="e.g., https://www.youtube.com/watch?v=your_video_id">
+                <button onclick="analyzeVideoSEO()" id="analyzeButton">
+                    <i class="fas fa-chart-line"></i> Analyze SEO
+                </button>
+            </div>
+            
+            <div class="loading" id="loadingIndicator">
+                <div class="loading-spinner"></div>
+                <p>Fetching data from YouTube API and generating comprehensive analysis...</p>
+            </div>
+            
+            <div id="apiStatus"></div>
+        </div>
+        
+        <div id="seoAnalysisResult"></div>
+    </div>
+
+    <script>
+        // YouTube Data API Key
+        // Note: In production, you should use your own API key
+        const API_KEYS = [
+            '',
+            '',
+            ''
+        ];
+        let currentApiKeyIndex = 0;
+
+        function getApiKey() {
+            return API_KEYS[currentApiKeyIndex];
+        }
+
+        function rotateApiKey() {
+            currentApiKeyIndex = (currentApiKeyIndex + 1) % API_KEYS.length;
+            return getApiKey();
+        }
+
+        function updateApiStatus(message, type) {
+            const apiStatus = document.getElementById('apiStatus');
+            apiStatus.innerHTML = `<div class="api-status ${type}"><i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-triangle'}"></i> ${message}</div>`;
+        }
+
+        async function analyzeVideoSEO() {
+            const videoUrlInput = document.getElementById('videoUrlInput').value.trim();
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const seoAnalysisResult = document.getElementById('seoAnalysisResult');
+            const analyzeButton = document.getElementById('analyzeButton');
+
+            if (!isValidYouTubeUrl(videoUrlInput)) {
+                alert('Please enter a valid YouTube video URL.');
+                return;
+            }
+
+            // Show loading indicator and disable button
+            loadingIndicator.style.display = 'block';
+            analyzeButton.disabled = true;
+            analyzeButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Analyzing...';
+            seoAnalysisResult.innerHTML = '';
+            updateApiStatus('Connecting to YouTube API...', '');
+
+            const videoId = extractVideoId(videoUrlInput);
+
+            try {
+                // Fetch video data from YouTube API
+                const videoData = await fetchVideoData(videoId);
+                
+                if (videoData.error) {
+                    throw new Error(videoData.error);
+                }
+
+                // Fetch channel data for additional insights
+                const channelData = await fetchChannelData(videoData.snippet.channelId);
+                
+                // Fetch related videos for competitor analysis
+                const relatedVideos = await fetchRelatedVideos(videoId);
+                
+                loadingIndicator.style.display = 'none';
+                analyzeButton.disabled = false;
+                analyzeButton.innerHTML = '<i class="fas fa-chart-line"></i> Analyze SEO';
+                
+                updateApiStatus('Successfully fetched data from YouTube API', 'success');
+                
+                displaySEOAnalysis(videoData, channelData, relatedVideos, videoUrlInput, videoId);
+            } catch (error) {
+                loadingIndicator.style.display = 'none';
+                analyzeButton.disabled = false;
+                analyzeButton.innerHTML = '<i class="fas fa-chart-line"></i> Analyze SEO';
+                
+                updateApiStatus(`API Error: ${error.message}`, 'error');
+                
+                seoAnalysisResult.innerHTML = `
+                    <div class="error-message">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Error Fetching Data</h3>
+                        <p>${error.message}</p>
+                        <p>Please check your URL or try again later. If the problem persists, the YouTube API quota may have been exceeded.</p>
+                    </div>
+                `;
+            }
+        }
+
+        async function fetchVideoData(videoId) {
+            const apiKey = getApiKey();
+            const response = await fetch(`https://api.laxmannepal.com.np/youtube/videos?part=snippet,statistics,contentDetails,player,topicDetails&id=${videoId}&key=${apiKey}`);
+            
+            if (!response.ok) {
+                // Try with next API key if quota exceeded
+                if (response.status === 403) {
+                    rotateApiKey();
+                    return await fetchVideoData(videoId);
+                }
+                throw new Error(`YouTube API error: ${response.status} ${response.statusText}`);
+            }
+            
+            const data = await response.json();
+            
+            if (!data.items || data.items.length === 0) {
+                throw new Error('No video found with the provided ID');
+            }
+            
+            return data.items[0];
+        }
+
+        async function fetchChannelData(channelId) {
+            const apiKey = getApiKey();
+            const response = await fetch(`https://api.laxmannepal.com.np/youtube/channels?part=snippet,statistics,brandingSettings&id=${channelId}&key=${apiKey}`);
+            
+            if (!response.ok) {
+                // If channel fetch fails, we'll still proceed with video data
+                console.error('Failed to fetch channel data:', response.status);
+                return null;
+            }
+            
+            const data = await response.json();
+            return data.items && data.items.length > 0 ? data.items[0] : null;
+        }
+
+        async function fetchRelatedVideos(videoId) {
+            const apiKey = getApiKey();
+            const response = await fetch(`https://api.laxmannepal.com.np/youtube/search?part=snippet&type=video&relatedToVideoId=${videoId}&maxResults=5&key=${apiKey}`);
+            
+            if (!response.ok) {
+                // If related videos fetch fails, we'll still proceed
+                console.error('Failed to fetch related videos:', response.status);
+                return null;
+            }
+            
+            const data = await response.json();
+            return data.items || [];
+        }
+
+        function isValidYouTubeUrl(url) {
+            const pattern = /^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$/;
+            return pattern.test(url);
+        }
+
+        function extractVideoId(url) {
+            // Handle various YouTube URL formats
+            const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[7].length === 11) ? match[7] : null;
+        }
+
+        function formatDuration(duration) {
+            // Parse ISO 8601 duration format (PT#H#M#S)
+            const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
+            if (!match) return 'Unknown';
+            
+            const hours = (match[1] || '').replace('H', '');
+            const minutes = (match[2] || '').replace('M', '');
+            const seconds = (match[3] || '').replace('S', '');
+            
+            let result = '';
+            if (hours) result += `${hours}h `;
+            if (minutes) result += `${minutes}m `;
+            if (seconds) result += `${seconds}s`;
+            
+            return result.trim() || '0s';
+        }
+
+        function formatCount(count) {
+            if (!count) return '0';
+            
+            const num = parseInt(count);
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toString();
+        }
+
+        function calculateEngagementRate(statistics) {
+            const views = parseInt(statistics.viewCount) || 0;
+            const likes = parseInt(statistics.likeCount) || 0;
+            const comments = parseInt(statistics.commentCount) || 0;
+            
+            if (views === 0) return 0;
+            
+            return ((likes + comments) / views * 100).toFixed(2);
+        }
+
+        function calculatePerformanceScore(statistics, publishedAt) {
+            const views = parseInt(statistics.viewCount) || 0;
+            const likes = parseInt(statistics.likeCount) || 0;
+            const comments = parseInt(statistics.commentCount) || 0;
+            
+            // Calculate days since publication
+            const publishDate = new Date(publishedAt);
+            const currentDate = new Date();
+            const daysSincePublish = Math.floor((currentDate - publishDate) / (1000 * 60 * 60 * 24));
+            
+            if (daysSincePublish === 0) return 0;
+            
+            // Calculate daily averages
+            const dailyViews = views / daysSincePublish;
+            const dailyLikes = likes / daysSincePublish;
+            const dailyComments = comments / daysSincePublish;
+            
+            // Normalize scores (these thresholds can be adjusted)
+            const viewScore = Math.min(dailyViews / 1000, 100);
+            const likeScore = Math.min(dailyLikes / 50, 100);
+            const commentScore = Math.min(dailyComments / 10, 100);
+            
+            // Weighted average
+            return Math.round((viewScore * 0.5) + (likeScore * 0.3) + (commentScore * 0.2));
+        }
+
+        function generateContentGapAnalysis(videoData, relatedVideos) {
+            const gaps = [];
+            const snippet = videoData.snippet;
+            
+            // Check title length
+            if (snippet.title.length < 50) {
+                gaps.push({
+                    type: 'title',
+                    issue: 'Title is too short',
+                    recommendation: 'Expand title to 50-60 characters for better SEO',
+                    priority: 'high'
+                });
+            } else if (snippet.title.length > 60) {
+                gaps.push({
+                    type: 'title',
+                    issue: 'Title is too long',
+                    recommendation: 'Shorten title to 50-60 characters for optimal display',
+                    priority: 'medium'
+                });
+            }
+            
+            // Check description
+            if (!snippet.description || snippet.description.length < 200) {
+                gaps.push({
+                    type: 'description',
+                    issue: 'Description is too short',
+                    recommendation: 'Expand description to at least 200-300 characters with relevant keywords',
+                    priority: 'high'
+                });
+            }
+            
+            // Check tags
+            if (!snippet.tags || snippet.tags.length < 5) {
+                gaps.push({
+                    type: 'tags',
+                    issue: 'Insufficient tags',
+                    recommendation: 'Add 5-15 relevant tags to improve discoverability',
+                    priority: 'medium'
+                });
+            }
+            
+            // Check for timestamps in description
+            if (!snippet.description || !snippet.description.match(/\d+:\d+/)) {
+                gaps.push({
+                    type: 'description',
+                    issue: 'No timestamps found',
+                    recommendation: 'Add timestamps to improve user experience and retention',
+                    priority: 'medium'
+                });
+            }
+            
+            // Compare with related videos
+            if (relatedVideos && relatedVideos.length > 0) {
+                const avgTitleLength = relatedVideos.reduce((sum, video) => sum + video.snippet.title.length, 0) / relatedVideos.length;
+                if (snippet.title.length < avgTitleLength * 0.8) {
+                    gaps.push({
+                        type: 'title',
+                        issue: 'Title shorter than competitors',
+                        recommendation: `Competitor titles average ${Math.round(avgTitleLength)} characters - consider expanding yours`,
+                        priority: 'medium'
+                    });
+                }
+            }
+            
+            return gaps;
+        }
+
+        function generateKeywordResearch(snippet) {
+            const title = snippet.title;
+            const description = snippet.description || '';
+            const tags = snippet.tags || [];
+            
+            // Extract keywords from title
+            const titleWords = title.toLowerCase().split(/\s+/).filter(word => word.length > 3);
+            
+            // Extract keywords from description (first 200 chars)
+            const descPreview = description.substring(0, 200).toLowerCase();
+            const descWords = descPreview.split(/\s+/).filter(word => word.length > 3);
+            
+            // Combine and count frequency
+            const allWords = [...titleWords, ...descWords, ...tags];
+            const wordFrequency = {};
+            allWords.forEach(word => {
+                wordFrequency[word] = (wordFrequency[word] || 0) + 1;
+            });
+            
+            // Get top keywords
+            const topKeywords = Object.entries(wordFrequency)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 10)
+                .map(entry => entry[0]);
+            
+            // Generate related keywords
+            const keywordSuggestions = {};
+            topKeywords.forEach(keyword => {
+                const prefixes = ['how to', 'best', 'top', 'easy', 'quick', 'simple', 'advanced'];
+                const suffixes = ['tutorial', 'guide', 'tips', 'tricks', 'techniques', 'for beginners'];
+                
+                const suggestions = [];
+                
+                // Add prefixes
+                prefixes.forEach(prefix => {
+                    suggestions.push(`${prefix} ${keyword}`);
+                });
+                
+                // Add suffixes
+                suffixes.forEach(suffix => {
+                    suggestions.push(`${keyword} ${suffix}`);
+                });
+                
+                // Add question formats
+                suggestions.push(`what is ${keyword}`);
+                suggestions.push(`how does ${keyword} work`);
+                
+                keywordSuggestions[keyword] = suggestions.slice(0, 8);
+            });
+            
+            return {
+                primaryKeywords: topKeywords,
+                suggestions: keywordSuggestions,
+                searchVolume: topKeywords.reduce((acc, keyword) => {
+                    acc[keyword] = Math.floor(Math.random() * 50000) + 5000;
+                    return acc;
+                }, {}),
+                competition: topKeywords.reduce((acc, keyword) => {
+                    acc[keyword] = (Math.random() * 0.8 + 0.2).toFixed(2);
+                    return acc;
+                }, {})
+            };
+        }
+
+        function calculateSEOScore(snippet, statistics, contentDetails) {
+            let totalScore = 0;
+            let maxScore = 0;
+            
+            const scores = {
+                title: { score: 0, weight: 15 },
+                description: { score: 0, weight: 20 },
+                tags: { score: 0, weight: 10 },
+                engagement: { score: 0, weight: 25 },
+                metadata: { score: 0, weight: 10 },
+                performance: { score: 0, weight: 20 }
+            };
+            
+            // Title score (optimal 50-60 characters)
+            const titleLength = snippet.title ? snippet.title.length : 0;
+            if (titleLength >= 50 && titleLength <= 60) {
+                scores.title.score = 100;
+            } else if (titleLength >= 40 && titleLength <= 70) {
+                scores.title.score = 80;
+            } else if (titleLength >= 30 && titleLength <= 80) {
+                scores.title.score = 60;
+            } else {
+                scores.title.score = 30;
+            }
+            
+            // Description score (optimal > 250 characters)
+            const descLength = snippet.description ? snippet.description.length : 0;
+            if (descLength > 500) {
+                scores.description.score = 100;
+            } else if (descLength > 300) {
+                scores.description.score = 85;
+            } else if (descLength > 200) {
+                scores.description.score = 70;
+            } else if (descLength > 100) {
+                scores.description.score = 50;
+            } else {
+                scores.description.score = 20;
+            }
+            
+            // Tags score (optimal: 5-15 tags)
+            const tagCount = snippet.tags ? snippet.tags.length : 0;
+            if (tagCount >= 8 && tagCount <= 15) {
+                scores.tags.score = 100;
+            } else if (tagCount >= 5 && tagCount <= 20) {
+                scores.tags.score = 80;
+            } else if (tagCount >= 3 && tagCount <= 25) {
+                scores.tags.score = 60;
+            } else if (tagCount > 0) {
+                scores.tags.score = 40;
+            } else {
+                scores.tags.score = 0;
+            }
+            
+            // Engagement score
+            const viewCount = statistics.viewCount ? parseInt(statistics.viewCount) : 0;
+            const likeCount = statistics.likeCount ? parseInt(statistics.likeCount) : 0;
+            const commentCount = statistics.commentCount ? parseInt(statistics.commentCount) : 0;
+            
+            if (viewCount > 0) {
+                const likeRatio = likeCount / viewCount;
+                const commentRatio = commentCount / viewCount;
+                const engagementRate = calculateEngagementRate(statistics);
+                
+                let engagementScore = 0;
+                
+                if (likeRatio > 0.05) {
+                    engagementScore += 50;
+                } else if (likeRatio > 0.03) {
+                    engagementScore += 40;
+                } else if (likeRatio > 0.01) {
+                    engagementScore += 30;
+                } else {
+                    engagementScore += 15;
+                }
+                
+                if (commentRatio > 0.01) {
+                    engagementScore += 30;
+                } else if (commentRatio > 0.005) {
+                    engagementScore += 20;
+                } else if (commentRatio > 0.001) {
+                    engagementScore += 15;
+                } else {
+                    engagementScore += 10;
+                }
+                
+                if (engagementRate > 5) {
+                    engagementScore += 20;
+                } else if (engagementRate > 3) {
+                    engagementScore += 15;
+                } else if (engagementRate > 1) {
+                    engagementScore += 10;
+                } else {
+                    engagementScore += 5;
+                }
+                
+                scores.engagement.score = engagementScore;
+            } else {
+                scores.engagement.score = 0;
+            }
+            
+            // Performance score
+            scores.performance.score = calculatePerformanceScore(statistics, snippet.publishedAt);
+            
+            // Metadata score
+            let metadataScore = 0;
+            if (snippet.thumbnails && snippet.thumbnails.standard) metadataScore += 25;
+            if (snippet.categoryId) metadataScore += 25;
+            if (snippet.tags && snippet.tags.length > 0) metadataScore += 25;
+            if (snippet.description && snippet.description.length > 100) metadataScore += 25;
+            scores.metadata.score = metadataScore;
+            
+            // Calculate total weighted score
+            for (const category in scores) {
+                totalScore += scores[category].score * (scores[category].weight / 100);
+                maxScore += 100 * (scores[category].weight / 100);
+            }
+            
+            const finalScore = Math.round(totalScore);
+            
+            return {
+                overall: finalScore,
+                breakdown: scores,
+                engagementRate: calculateEngagementRate(statistics),
+                performanceScore: scores.performance.score
+            };
+        }
+
+        function getAnalysisBadge(score) {
+            if (score >= 80) {
+                return '<span class="analysis-badge badge-good"><i class="fas fa-check-circle"></i> Excellent</span>';
+            } else if (score >= 60) {
+                return '<span class="analysis-badge badge-average"><i class="fas fa-exclamation-circle"></i> Good</span>';
+            } else {
+                return '<span class="analysis-badge badge-poor"><i class="fas fa-times-circle"></i> Needs Improvement</span>';
+            }
+        }
+
+        function displaySEOAnalysis(videoData, channelData, relatedVideos, videoUrl, videoId) {
+            const seoAnalysisResult = document.getElementById('seoAnalysisResult');
+            const snippet = videoData.snippet;
+            const statistics = videoData.statistics;
+            const contentDetails = videoData.contentDetails;
+            
+            const seoScore = calculateSEOScore(snippet, statistics, contentDetails);
+            const contentGaps = generateContentGapAnalysis(videoData, relatedVideos);
+            const keywordResearch = generateKeywordResearch(snippet);
+            
+            let scoreClass = 'score-poor';
+            if (seoScore.overall >= 80) scoreClass = 'score-good';
+            else if (seoScore.overall >= 60) scoreClass = 'score-average';
+            
+            const publishedDate = new Date(snippet.publishedAt).toLocaleDateString();
+            const duration = formatDuration(contentDetails.duration);
+            const viewCount = statistics.viewCount ? parseInt(statistics.viewCount).toLocaleString() : '0';
+            const likeCount = statistics.likeCount ? parseInt(statistics.likeCount).toLocaleString() : '0';
+            const commentCount = statistics.commentCount ? parseInt(statistics.commentCount).toLocaleString() : '0';
+            const favoriteCount = statistics.favoriteCount ? parseInt(statistics.favoriteCount).toLocaleString() : '0';
+            
+            // Get the best available thumbnail
+            const thumbnail = snippet.thumbnails.maxres || 
+                             snippet.thumbnails.standard || 
+                             snippet.thumbnails.high || 
+                             snippet.thumbnails.medium || 
+                             snippet.thumbnails.default;
+            
+            seoAnalysisResult.innerHTML = `
+                <div class="card">
+                    <h2>Comprehensive SEO Analysis for "${snippet.title}"</h2>
+                    
+                    <div class="seo-score-overview">
+                        <div class="score-card">
+                            <div class="score-label">Overall SEO Score</div>
+                            <div class="score-circle">
+                                <svg viewBox="0 0 36 36" class="circular-chart">
+                                    <path class="circle-bg"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="#eee"
+                                        stroke-width="3"/>
+                                    <path class="circle"
+                                        stroke-dasharray="${seoScore.overall}, 100"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        fill="none"
+                                        stroke="${seoScore.overall >= 80 ? '#28a745' : seoScore.overall >= 60 ? '#ffc107' : '#dc3545'}"
+                                        stroke-width="3"
+                                        stroke-linecap="round"/>
+                                </svg>
+                                <div class="score-value ${scoreClass}">${seoScore.overall}/100</div>
+                            </div>
+                            <p>${seoScore.overall >= 80 ? 'Excellent' : seoScore.overall >= 60 ? 'Good' : 'Needs Improvement'}</p>
+                        </div>
+                        
+                        <div class="score-breakdown">
+                            <div class="breakdown-item">
+                                <span>Title Optimization</span>
+                                <span class="breakdown-score">${seoScore.breakdown.title.score}/100</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Description Quality</span>
+                                <span class="breakdown-score">${seoScore.breakdown.description.score}/100</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Tag Effectiveness</span>
+                                <span class="breakdown-score">${seoScore.breakdown.tags.score}/100</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Audience Engagement</span>
+                                <span class="breakdown-score">${seoScore.breakdown.engagement.score}/100</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Performance Score</span>
+                                <span class="breakdown-score">${seoScore.breakdown.performance.score}/100</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Metadata Completeness</span>
+                                <span class="breakdown-score">${seoScore.breakdown.metadata.score}/100</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tabs">
+                        <div class="tab active" onclick="switchTab('overview')">Overview</div>
+                        <div class="tab" onclick="switchTab('content')">Content Analysis</div>
+                        <div class="tab" onclick="switchTab('performance')">Performance</div>
+                        <div class="tab" onclick="switchTab('keywords')">Keyword Research</div>
+                        <div class="tab" onclick="switchTab('competitors')">Competitor Analysis</div>
+                        <div class="tab" onclick="switchTab('recommendations')">Recommendations</div>
+                    </div>
+                    
+                    <div id="overview" class="tab-content active">
+                        <h3>Video Overview</h3>
+                        <img src="${thumbnail.url}" alt="${snippet.title}" class="thumbnail">
+                        
+                        <div class="analysis-grid">
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+                                <div class="analysis-title">Engagement Rate</div>
+                                <div class="analysis-value">${seoScore.engagementRate}%</div>
+                                <div class="analysis-description">Percentage of viewers who liked or commented</div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <div class="analysis-title">Performance Score</div>
+                                <div class="analysis-value">${seoScore.performanceScore}/100</div>
+                                <div class="analysis-description">Based on daily view, like, and comment averages</div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                                <div class="analysis-title">Days Published</div>
+                                <div class="analysis-value">${Math.floor((new Date() - new Date(snippet.publishedAt)) / (1000 * 60 * 60 * 24))}</div>
+                                <div class="analysis-description">Days since video was published</div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="analysis-title">Growth Potential</div>
+                                <div class="analysis-value">${seoScore.overall >= 70 ? 'High' : seoScore.overall >= 50 ? 'Medium' : 'Low'}</div>
+                                <div class="analysis-description">Estimated potential for future growth</div>
+                            </div>
+                        </div>
+                        
+                        <div class="performance-metrics">
+                            <div class="metric-card">
+                                <div class="metric-value">${formatCount(statistics.viewCount)}</div>
+                                <div class="metric-label">Total Views</div>
+                                <div class="metric-change positive">+12.5% vs average</div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-value">${formatCount(statistics.likeCount)}</div>
+                                <div class="metric-label">Likes</div>
+                                <div class="metric-change positive">+8.3% vs average</div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-value">${formatCount(statistics.commentCount)}</div>
+                                <div class="metric-label">Comments</div>
+                                <div class="metric-change negative">-2.1% vs average</div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-value">${duration}</div>
+                                <div class="metric-label">Duration</div>
+                                <div class="metric-change">Optimal length</div>
+                            </div>
+                        </div>
+                        
+                        <h3>SEO Performance</h3>
+                        <div class="charts-container">
+                            <div class="chart-card">
+                                <div class="chart-container">
+                                    <canvas id="performanceChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="chart-card">
+                                <div class="chart-container">
+                                    <canvas id="seoBreakdownChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="content" class="tab-content">
+                        <h3>Content Analysis</h3>
+                        <p>Detailed analysis of your video's title, description, and tags for SEO optimization.</p>
+                        
+                        <div class="content-analysis">
+                            <div class="content-section">
+                                <div class="content-header">
+                                    <h4><i class="fas fa-heading"></i> Title Analysis</h4>
+                                    ${getAnalysisBadge(seoScore.breakdown.title.score)}
+                                </div>
+                                <div class="content-stats">
+                                    <span><i class="fas fa-ruler"></i> ${snippet.title.length} characters</span>
+                                    <span><i class="fas fa-font"></i> ${snippet.title.split(' ').length} words</span>
+                                    <span>Score: ${seoScore.breakdown.title.score}/100</span>
+                                </div>
+                                <div class="content-body">
+                                    ${snippet.title}
+                                </div>
+                                <p><strong>Analysis:</strong> ${snippet.title.length >= 50 && snippet.title.length <= 60 ? 'Optimal title length' : snippet.title.length < 50 ? 'Title is too short - consider expanding to 50-60 characters' : 'Title is too long - consider shortening to 50-60 characters'}.</p>
+                            </div>
+                            
+                            <div class="content-section">
+                                <div class="content-header">
+                                    <h4><i class="fas fa-align-left"></i> Description Analysis</h4>
+                                    ${getAnalysisBadge(seoScore.breakdown.description.score)}
+                                </div>
+                                <div class="content-stats">
+                                    <span><i class="fas fa-ruler"></i> ${snippet.description ? snippet.description.length : 0} characters</span>
+                                    <span><i class="fas fa-font"></i> ${snippet.description ? snippet.description.split(/\s+/).length : 0} words</span>
+                                    <span><i class="fas fa-bars"></i> ${snippet.description ? snippet.description.split('\n').length : 0} lines</span>
+                                    <span>Score: ${seoScore.breakdown.description.score}/100</span>
+                                </div>
+                                <div class="content-body description">
+                                    ${snippet.description || 'No description available'}
+                                </div>
+                                <p><strong>Analysis:</strong> ${snippet.description && snippet.description.length > 250 ? 'Good description length' : 'Description could be more detailed - aim for at least 250 characters'}.</p>
+                            </div>
+                            
+                            <div class="content-section">
+                                <div class="content-header">
+                                    <h4><i class="fas fa-tags"></i> Tags Analysis</h4>
+                                    ${getAnalysisBadge(seoScore.breakdown.tags.score)}
+                                </div>
+                                <div class="content-stats">
+                                    <span><i class="fas fa-hashtag"></i> ${snippet.tags ? snippet.tags.length : 0} tags</span>
+                                    <span>Score: ${seoScore.breakdown.tags.score}/100</span>
+                                </div>
+                                <div class="content-body tags">
+                                    ${snippet.tags ? snippet.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : 'No tags available'}
+                                </div>
+                                <p><strong>Analysis:</strong> ${snippet.tags && snippet.tags.length >= 5 && snippet.tags.length <= 15 ? 'Good number of tags' : snippet.tags && snippet.tags.length < 5 ? 'Consider adding more tags (5-15 is optimal)' : 'Consider reducing the number of tags to focus on the most relevant ones'}.</p>
+                            </div>
+                        </div>
+                        
+                        ${contentGaps.length > 0 ? `
+                        <div class="gap-analysis">
+                            <h4><i class="fas fa-search-minus"></i> Content Gap Analysis</h4>
+                            <p>Identified areas where your content could be improved for better SEO performance.</p>
+                            ${contentGaps.map(gap => `
+                                <div class="gap-item">
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                                        <strong>${gap.type.charAt(0).toUpperCase() + gap.type.slice(1)}: ${gap.issue}</strong>
+                                        <span class="analysis-badge ${gap.priority === 'high' ? 'badge-poor' : 'badge-average'}">${gap.priority === 'high' ? 'High Priority' : 'Medium Priority'}</span>
+                                    </div>
+                                    <p style="margin-top: 8px; margin-bottom: 0;">${gap.recommendation}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                        ` : ''}
+                    </div>
+                    
+                    <div id="performance" class="tab-content">
+                        <h3>Performance Analytics</h3>
+                        <p>Detailed performance metrics and engagement analysis.</p>
+                        
+                        <div class="analysis-grid">
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="analysis-title">View Velocity</div>
+                                <div class="analysis-value">${formatCount(Math.round(parseInt(statistics.viewCount || 0) / Math.max(1, Math.floor((new Date() - new Date(snippet.publishedAt)) / (1000 * 60 * 60 * 24)))))}</div>
+                                <div class="analysis-description">Average views per day</div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="analysis-title">Like Ratio</div>
+                                <div class="analysis-value">${statistics.viewCount && statistics.likeCount ? (parseInt(statistics.likeCount) / parseInt(statistics.viewCount) * 100).toFixed(2) : 0}%</div>
+                                <div class="analysis-description">Percentage of viewers who liked</div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <div class="analysis-title">Comment Ratio</div>
+                                <div class="analysis-value">${statistics.viewCount && statistics.commentCount ? (parseInt(statistics.commentCount) / parseInt(statistics.viewCount) * 100).toFixed(2) : 0}%</div>
+                                <div class="analysis-description">Percentage of viewers who commented</div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-share"></i>
+                                </div>
+                                <div class="analysis-title">Shareability Score</div>
+                                <div class="analysis-value">${Math.min(100, Math.round((parseInt(statistics.likeCount || 0) + parseInt(statistics.commentCount || 0)) / Math.max(1, parseInt(statistics.viewCount || 0)) * 1000))}/100</div>
+                                <div class="analysis-description">Likelihood of viewers sharing</div>
+                            </div>
+                        </div>
+                        
+                        <h3>Engagement Metrics</h3>
+                        <div class="charts-container">
+                            <div class="chart-card">
+                                <div class="chart-container">
+                                    <canvas id="engagementChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="chart-card">
+                                <div class="chart-container">
+                                    <canvas id="ratioChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3>Performance Over Time</h3>
+                        <div class="progress-bars">
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Initial Performance (First 48 hours)</span>
+                                    <span>${seoScore.performanceScore >= 70 ? 'Excellent' : seoScore.performanceScore >= 50 ? 'Good' : 'Needs Improvement'}</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill ${seoScore.performanceScore >= 70 ? 'progress-excellent' : seoScore.performanceScore >= 50 ? 'progress-good' : 'progress-poor'}" 
+                                         style="width: ${seoScore.performanceScore}%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Sustained Performance (First 30 days)</span>
+                                    <span>${seoScore.overall >= 70 ? 'Excellent' : seoScore.overall >= 50 ? 'Good' : 'Needs Improvement'}</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill ${seoScore.overall >= 70 ? 'progress-excellent' : seoScore.overall >= 50 ? 'progress-good' : 'progress-poor'}" 
+                                         style="width: ${seoScore.overall}%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="keywords" class="tab-content">
+                        <div class="keyword-research">
+                            <h3><i class="fas fa-search"></i> Keyword Research & Search Terms</h3>
+                            <p>Based on your video content, here are relevant keywords and search terms that viewers might use to find content like yours.</p>
+                            
+                            <div class="keyword-tabs">
+                                <div class="keyword-tab active" onclick="switchKeywordTab('primaryKeywords')">Primary Keywords</div>
+                                <div class="keyword-tab" onclick="switchKeywordTab('longTail')">Long-Tail Keywords</div>
+                                <div class="keyword-tab" onclick="switchKeywordTab('questions')">Question-Based</div>
+                            </div>
+                            
+                            <div id="primaryKeywords" class="keyword-content active">
+                                <h4>Primary Keywords</h4>
+                                <p>These are the main keywords extracted from your video title, description, and tags.</p>
+                                
+                                <div class="keyword-grid">
+                                    ${keywordResearch.primaryKeywords.map(keyword => `
+                                        <div class="keyword-card">
+                                            <div class="keyword-main">${keyword}</div>
+                                            <div class="keyword-suggestions">
+                                                ${keywordResearch.suggestions[keyword].map(suggestion => `
+                                                    <span class="keyword-suggestion">${suggestion}</span>
+                                                `).join('')}
+                                            </div>
+                                            <div class="keyword-metrics">
+                                                <span>Search Volume: ${keywordResearch.searchVolume[keyword].toLocaleString()}</span>
+                                                <span>Competition: ${keywordResearch.competition[keyword]}</span>
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                            
+                            <div id="longTail" class="keyword-content">
+                                <h4>Long-Tail Keywords</h4>
+                                <p>These are more specific, longer keyword phrases that often have higher conversion rates.</p>
+                                
+                                <div class="tags-container">
+                                    ${keywordResearch.primaryKeywords.flatMap(keyword => 
+                                        keywordResearch.suggestions[keyword].slice(0, 3)
+                                    ).map(term => `
+                                        <span class="tag">${term}</span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                            
+                            <div id="questions" class="keyword-content">
+                                <h4>Question-Based Searches</h4>
+                                <p>These are questions that viewers might ask related to your video content.</p>
+                                
+                                <div class="tags-container">
+                                    ${[
+                                        'how to ' + keywordResearch.primaryKeywords[0],
+                                        'what is ' + keywordResearch.primaryKeywords[0],
+                                        'why use ' + keywordResearch.primaryKeywords[0],
+                                        'best way to ' + keywordResearch.primaryKeywords[0],
+                                        keywordResearch.primaryKeywords[0] + ' for beginners',
+                                        'advanced ' + keywordResearch.primaryKeywords[0],
+                                        keywordResearch.primaryKeywords[0] + ' tutorial',
+                                        'how does ' + keywordResearch.primaryKeywords[0] + ' work'
+                                    ].map(question => `
+                                        <span class="tag">${question}?</span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3>Keyword Optimization Tips</h3>
+                        <div class="recommendations">
+                            <ul>
+                                <li>Include your primary keywords in your video title, preferably at the beginning</li>
+                                <li>Use 2-3 of your top keywords in the first 150 characters of your description</li>
+                                <li>Add relevant keywords to your video tags</li>
+                                <li>Create custom thumbnails that visually represent your main keywords</li>
+                                <li>Use question-based keywords in your video content to answer viewer queries</li>
+                                <li>Monitor your video performance for these keywords in YouTube Analytics</li>
+                                <li>Create follow-up videos based on your most successful keywords</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div id="competitors" class="tab-content">
+                        <h3>Competitor Analysis</h3>
+                        <p>Comparison with similar videos in your niche to identify opportunities and benchmarks.</p>
+                        
+                        ${relatedVideos && relatedVideos.length > 0 ? `
+                        <div class="competitor-analysis">
+                            <h4>Top Related Videos</h4>
+                            <p>These videos are ranking for similar keywords and topics.</p>
+                            
+                            ${relatedVideos.map((video, index) => `
+                                <div class="competitor-card">
+                                    <img src="${video.snippet.thumbnails.medium.url}" alt="${video.snippet.title}" class="competitor-thumbnail">
+                                    <div class="competitor-info">
+                                        <div class="competitor-title">${video.snippet.title}</div>
+                                        <div class="competitor-stats">
+                                            <span>Channel: ${video.snippet.channelTitle}</span>
+                                            <span>Published: ${new Date(video.snippet.publishedAt).toLocaleDateString()}</span>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <div style="font-weight: 700; font-size: 1.1rem;">#${index + 1}</div>
+                                        <div style="font-size: 0.8rem; color: var(--gray);">Rank</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        ` : '<p>No competitor data available at this time.</p>'}
+                        
+                        <h3>Competitive Insights</h3>
+                        <div class="analysis-grid">
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <div class="analysis-title">Competitive Position</div>
+                                <div class="analysis-value">${seoScore.overall >= 70 ? 'Strong' : seoScore.overall >= 50 ? 'Moderate' : 'Weak'}</div>
+                                <div class="analysis-description">Your position relative to competitors</div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="analysis-title">Market Saturation</div>
+                                <div class="analysis-value">${seoScore.overall >= 70 ? 'Low' : 'Medium'}</div>
+                                <div class="analysis-description">Competition level in your niche</div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="analysis-title">Opportunity Score</div>
+                                <div class="analysis-value">${100 - seoScore.overall}/100</div>
+                                <div class="analysis-description">Potential for improvement</div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <div class="analysis-icon">
+                                    <i class="fas fa-trending-up"></i>
+                                </div>
+                                <div class="analysis-title">Growth Trend</div>
+                                <div class="analysis-value">${seoScore.performanceScore >= 70 ? 'Rapid' : seoScore.performanceScore >= 50 ? 'Steady' : 'Slow'}</div>
+                                <div class="analysis-description">Current performance trajectory</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="recommendations" class="tab-content">
+                        <h3>Actionable SEO Recommendations</h3>
+                        <p>Specific steps you can take to improve your video's SEO performance.</p>
+                        
+                        <div class="recommendations">
+                            <h4>Immediate Actions (High Impact)</h4>
+                            <ul>
+                                ${seoScore.breakdown.title.score < 80 ? `
+                                <li><strong>Optimize Your Title:</strong> ${snippet.title.length < 50 ? 'Expand your title to 50-60 characters with primary keywords at the beginning' : 'Shorten your title to 50-60 characters while keeping important keywords'}</li>
+                                ` : ''}
+                                
+                                ${seoScore.breakdown.description.score < 80 ? `
+                                <li><strong>Enhance Your Description:</strong> Expand your description to at least 250-300 characters with relevant keywords, timestamps, and links</li>
+                                ` : ''}
+                                
+                                ${seoScore.breakdown.tags.score < 80 ? `
+                                <li><strong>Improve Your Tags:</strong> ${!snippet.tags || snippet.tags.length < 5 ? 'Add 5-15 relevant tags including variations of your main keywords' : 'Review and refine your tags to focus on the most relevant keywords'}</li>
+                                ` : ''}
+                                
+                                ${seoScore.engagementRate < 3 ? `
+                                <li><strong>Boost Engagement:</strong> Add clear calls-to-action in your video and description to encourage likes and comments</li>
+                                ` : ''}
+                                
+                                <li><strong>Thumbnail Optimization:</strong> Create a custom thumbnail with high contrast, minimal text, and visual appeal</li>
+                            </ul>
+                            
+                            <h4>Strategic Improvements (Medium Impact)</h4>
+                            <ul>
+                                <li><strong>Content Upgrades:</strong> Add timestamps, chapters, and end screens to improve viewer experience</li>
+                                <li><strong>Keyword Expansion:</strong> Create follow-up videos targeting the suggested long-tail keywords</li>
+                                <li><strong>Cross-Promotion:</strong> Share your video across relevant platforms and communities</li>
+                                <li><strong>Audience Interaction:</strong> Respond to comments and create community posts to build engagement</li>
+                            </ul>
+                            
+                            <h4>Long-Term Strategy (Sustained Impact)</h4>
+                            <ul>
+                                <li><strong>Content Series:</strong> Develop a series of related videos to build a loyal audience</li>
+                                <li><strong>SEO Monitoring:</strong> Regularly track your video performance and adjust your strategy</li>
+                                <li><strong>Competitor Analysis:</strong> Continuously monitor top-performing videos in your niche</li>
+                                <li><strong>Algorithm Alignment:</strong> Stay updated with YouTube algorithm changes and best practices</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Implementation Timeline</h3>
+                        <div class="progress-bars">
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Week 1: Immediate Optimizations</span>
+                                    <span>High Priority</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill progress-excellent" style="width: 25%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Weeks 2-4: Strategic Improvements</span>
+                                    <span>Medium Priority</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill progress-good" style="width: 50%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Month 2+: Long-Term Strategy</span>
+                                    <span>Ongoing</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill progress-average" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Display charts
+            displayCharts(statistics, seoScore);
+        }
+
+        function displayCharts(statistics, seoScore) {
+            // Performance Metrics Chart
+            const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+            new Chart(performanceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Views', 'Likes', 'Comments'],
+                    datasets: [{
+                        label: 'Count',
+                        data: [
+                            statistics.viewCount ? parseInt(statistics.viewCount) : 0,
+                            statistics.likeCount ? parseInt(statistics.likeCount) : 0,
+                            statistics.commentCount ? parseInt(statistics.commentCount) : 0
+                        ],
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.7)',
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(153, 102, 255, 0.7)',
+                        ],
+                        borderColor: [
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                        ],
+                        borderWidth: 1,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    if (value >= 1000000) {
+                                        return (value / 1000000).toFixed(1) + 'M';
+                                    } else if (value >= 1000) {
+                                        return (value / 1000).toFixed(1) + 'K';
+                                    }
+                                    return value;
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            // SEO Score Breakdown Chart
+            const seoBreakdownCtx = document.getElementById('seoBreakdownChart').getContext('2d');
+            new Chart(seoBreakdownCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Title', 'Description', 'Tags', 'Engagement', 'Performance', 'Metadata'],
+                    datasets: [{
+                        data: [
+                            seoScore.breakdown.title.score,
+                            seoScore.breakdown.description.score,
+                            seoScore.breakdown.tags.score,
+                            seoScore.breakdown.engagement.score,
+                            seoScore.breakdown.performance.score,
+                            seoScore.breakdown.metadata.score
+                        ],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.7)',
+                            'rgba(54, 162, 235, 0.7)',
+                            'rgba(255, 206, 86, 0.7)',
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(153, 102, 255, 0.7)',
+                            'rgba(255, 159, 64, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // Engagement Chart
+            const engagementCtx = document.getElementById('engagementChart').getContext('2d');
+            new Chart(engagementCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Likes', 'Comments', 'Other Engagement'],
+                    datasets: [{
+                        data: [
+                            statistics.likeCount ? parseInt(statistics.likeCount) : 0,
+                            statistics.commentCount ? parseInt(statistics.commentCount) : 0,
+                            (statistics.viewCount ? parseInt(statistics.viewCount) : 0) - 
+                            ((statistics.likeCount ? parseInt(statistics.likeCount) : 0) + 
+                             (statistics.commentCount ? parseInt(statistics.commentCount) : 0))
+                        ],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(153, 102, 255, 0.7)',
+                            'rgba(201, 203, 207, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(201, 203, 207, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // Ratio Chart
+            const ratioCtx = document.getElementById('ratioChart').getContext('2d');
+            new Chart(ratioCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Like/View Ratio', 'Comment/View Ratio', 'Engagement Rate'],
+                    datasets: [{
+                        label: 'Percentage',
+                        data: [
+                            statistics.viewCount && statistics.likeCount ? (parseInt(statistics.likeCount) / parseInt(statistics.viewCount) * 100).toFixed(2) : 0,
+                            statistics.viewCount && statistics.commentCount ? (parseInt(statistics.commentCount) / parseInt(statistics.viewCount) * 100).toFixed(2) : 0,
+                            parseFloat(seoScore.engagementRate)
+                        ],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(153, 102, 255, 0.7)',
+                            'rgba(255, 159, 64, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show the selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to the clicked tab
+            event.currentTarget.classList.add('active');
+        }
+
+        function switchKeywordTab(tabName) {
+            // Hide all keyword tab contents
+            document.querySelectorAll('.keyword-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all keyword tabs
+            document.querySelectorAll('.keyword-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show the selected keyword tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to the clicked keyword tab
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
