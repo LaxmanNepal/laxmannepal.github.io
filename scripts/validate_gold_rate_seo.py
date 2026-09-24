@@ -133,7 +133,7 @@ def main():
 
     try:
         latest_date = date.fromisoformat(latest["date"])
-        age = (date.fromisoformat(latest["date"]) - latest_date).days
+        age = (date.today() - latest_date).days
         if age > args.allow_stale_days:
             warnings.append(f"gold data is {age} days old ({latest['date']}); review source freshness")
         else:
