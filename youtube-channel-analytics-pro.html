@@ -859,7 +859,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * serverless proxy such as /api/youtube that keeps the API key secret.
    * Optional override: window.LAXMAN_YOUTUBE_API_BASE = '/api/youtube'
    */
-  const API_BASE = (window.LAXMAN_YOUTUBE_API_BASE || '/api/youtube').replace(/\/$/, '');
+  const API_BASE = (window.LAXMAN_YOUTUBE_API_BASE || 'https://api.laxmannepal.com.np/youtube').replace(/\/$/, '');
 
   const $ = id => document.getElementById(id);
   const els = {
