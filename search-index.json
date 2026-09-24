@@ -792,12 +792,20 @@
     "keywords": "xiaomi mimo-v2.6 ai models pro flash and ultraspeed explained laxman nepal"
   },
   {
-    "title": "YouTube Analytics Pro Dashboard",
+    "title": "YouTube Analytics Pro Dashboard | Free YouTube Channel Analytics",
+    "category": "YouTube",
+    "type": "resource",
+    "url": "/youtube-analytics.html",
+    "description": "Analyze a public YouTube channel with subscriber, view and video statistics using the YouTube Data API. Free YouTube analytics tool by Laxman Nepal.",
+    "keywords": "youtube analytics pro dashboard free channel analyze public with subscriber view and video statistics using the data api. tool by laxman nepal."
+  },
+  {
+    "title": "YouTube Analytics — Redirecting",
     "category": "YouTube",
     "type": "resource",
     "url": "/2025/12/youtube-analytics.html",
-    "description": "YouTube Analytics Pro Dashboard",
-    "keywords": "youtube analytics pro dashboard"
+    "description": "YouTube Analytics — Redirecting",
+    "keywords": "youtube analytics redirecting"
   },
   {
     "title": "YouTube Channel Analytics",
