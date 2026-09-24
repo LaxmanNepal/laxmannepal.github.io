@@ -77,3 +77,22 @@ body>.header:not(.shared-header),body>.navbar:not(.shared-header),body>header:no
  * Gilroy is preferred when available; Devanagari falls back to Noto Sans Devanagari.
  */
 html,body,body *,button,input,select,textarea{font-family:"Gilroy","Noto Sans Devanagari",sans-serif!important}
+
+
+/* HEADER/NAV FONT ENFORCEMENT */
+.shared-header,
+.shared-header * ,
+.shared-desktop-nav,
+.shared-desktop-nav a,
+.shared-desktop-nav summary,
+.nav-dropdown,
+.nav-dropdown-menu,
+.nav-dropdown-menu a,
+.shared-actions,
+.shared-search-box,
+.shared-search-box input,
+.shared-menu-btn,
+.shared-mobile-menu,
+.shared-mobile-menu *{
+  font-family:"Gilroy","Noto Sans Devanagari",sans-serif!important;
+}
