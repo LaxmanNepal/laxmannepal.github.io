@@ -69,3 +69,11 @@ main :where(button,.btn,[role=button]){border-radius:13px;min-height:42px;font-w
 body>.header:not(.shared-header),body>.navbar:not(.shared-header),body>header:not(.shared-header){position:relative!important;z-index:1!important}
 @media(max-width:760px){main{overflow-x:clip}main :where(.card,.tool-card,.box,.panel,.result,.result-card,.feature-card,.article,.post,.tool-container,.main-card){border-radius:18px}main :where(.container,.wrapper,.content-wrap,.page-container,.tool-wrapper,.article-container,.post-container){width:calc(100% - 20px)!important}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+/* GLOBAL FONT SYSTEM — Laxman Nepal */
+/*
+ * Primary typography across the repository.
+ * Gilroy is preferred when available; Devanagari falls back to Noto Sans Devanagari.
+ */
+html,body,body *,button,input,select,textarea{font-family:"Gilroy","Noto Sans Devanagari",sans-serif!important}
