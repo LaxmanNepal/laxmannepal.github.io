@@ -3,4 +3,16 @@ Allow: /
 Disallow: /old/
 Disallow: /scripts/
 
+# Google Search
+User-agent: Googlebot
+Allow: /
+
+# ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI crawler for model training
+User-agent: GPTBot
+Allow: /
+
 Sitemap: https://laxmannepal.com.np/sitemap.xml
