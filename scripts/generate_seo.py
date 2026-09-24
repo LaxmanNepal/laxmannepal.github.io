@@ -15,6 +15,7 @@ INDEXABLE_STATIC_PATHS = [
     "/", "/en/", "/ne/", "/hi/", "/languages/",
     "/news/", "/reviews/", "/guides/", "/products/",
     "/compare/", "/tools/", "/ai/", "/youtube/", "/tech-news/",
+    "/gold-rates-nepal/",
     "/gold-price-in-nepal-today/",
     "/gold-price-history-nepal/",
     "/silver-price-in-nepal-today/",
