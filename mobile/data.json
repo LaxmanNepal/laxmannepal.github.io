@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-24T21:34:21.110327+00:00",
-  "count": 131,
+  "updated_at": "2026-09-25T05:03:04.585594+00:00",
+  "count": 132,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -207,16 +207,19 @@
       "name": "Honor Play 10",
       "brand": "Honor",
       "variants": [
-        "3GB+64GB"
+        "3GB+64GB",
+        "4GB+128GB"
       ],
       "price": 17499,
-      "max_price": 17499,
+      "max_price": 19999,
       "original_price": null,
       "rams": [
-        "3GB"
+        "3GB",
+        "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -292,16 +295,18 @@
       "name": "Honor X6C 4G",
       "brand": "Honor",
       "variants": [
-        "6GB+128GB"
+        "6GB+128GB",
+        "6GB+256GB"
       ],
       "price": 23499,
-      "max_price": 23499,
+      "max_price": 25499,
       "original_price": null,
       "rams": [
         "6GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -360,16 +365,18 @@
       "name": "Honor X8d",
       "brand": "Honor",
       "variants": [
-        "8GB+128GB"
+        "8GB+128GB",
+        "8GB+256GB"
       ],
       "price": 39999,
-      "max_price": 39999,
+      "max_price": 43999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -377,13 +384,15 @@
       "name": "Honor X9d",
       "brand": "Honor",
       "variants": [
-        "8GB+256GB"
+        "8GB+256GB",
+        "12GB+256GB"
       ],
       "price": 54999,
-      "max_price": 54999,
+      "max_price": 59999,
       "original_price": null,
       "rams": [
-        "8GB"
+        "8GB",
+        "12GB"
       ],
       "storages": [
         "256GB"
@@ -447,16 +456,37 @@
       "name": "Infinix Hot 70",
       "brand": "Infinix",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "8GB + 128GB"
       ],
       "price": 33999,
-      "max_price": 33999,
+      "max_price": 36999,
       "original_price": null,
       "rams": [
-        "6GB"
+        "6GB",
+        "8GB"
       ],
       "storages": [
         "128GB"
+      ]
+    },
+    {
+      "id": "infinix-hot-70-pro",
+      "name": "Infinix Hot 70 Pro",
+      "brand": "Infinix",
+      "variants": [
+        "8GB + 128GB",
+        "8GB + 256GB"
+      ],
+      "price": 52999,
+      "max_price": 56999,
+      "original_price": null,
+      "rams": [
+        "8GB"
+      ],
+      "storages": [
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -498,20 +528,43 @@
       ]
     },
     {
+      "id": "infinix-note-edge",
+      "name": "Infinix Note Edge",
+      "brand": "Infinix",
+      "variants": [
+        "8GB+128GB",
+        "Infinix Note Edge - 6GB - 128GB",
+        "8GB+256GB"
+      ],
+      "price": 41999,
+      "max_price": 47999,
+      "original_price": null,
+      "rams": [
+        "6GB",
+        "8GB"
+      ],
+      "storages": [
+        "128GB",
+        "256GB"
+      ]
+    },
+    {
       "id": "infinix-smart-20",
       "name": "Infinix Smart 20",
       "brand": "Infinix",
       "variants": [
-        "4GB + 64GB"
+        "4GB + 64GB",
+        "4GB + 128GB"
       ],
       "price": 21999,
-      "max_price": 21999,
+      "max_price": 23999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -1140,15 +1193,13 @@
       "name": "Redmi 17 4G",
       "brand": "Xiaomi",
       "variants": [
-        "4GB + 128GB",
-        "6GB + 128GB"
+        "4GB + 128GB"
       ],
       "price": 27999,
-      "max_price": 33999,
+      "max_price": 27999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
         "128GB"
@@ -1159,20 +1210,16 @@
       "name": "Redmi 17 5G",
       "brand": "Xiaomi",
       "variants": [
-        "4GB + 128GB",
-        "4GB + 256GB",
-        "6GB + 256GB"
+        "4GB + 128GB"
       ],
       "price": 33999,
-      "max_price": 41999,
+      "max_price": 33999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1197,18 +1244,16 @@
       "name": "Redmi A7 Pro 4G",
       "brand": "Xiaomi",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 21499,
-      "max_price": 23999,
+      "max_price": 21499,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1216,19 +1261,16 @@
       "name": "Redmi Note 15 4G",
       "brand": "Xiaomi",
       "variants": [
-        "6GB+128GB",
-        "8GB+256GB"
+        "6GB+128GB"
       ],
       "price": 33999,
-      "max_price": 39999,
+      "max_price": 33999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1236,39 +1278,16 @@
       "name": "Redmi Note 15 5G",
       "brand": "Xiaomi",
       "variants": [
-        "8GB+256GB",
-        "12GB+512GB"
+        "8GB+256GB"
       ],
       "price": 43999,
-      "max_price": 49999,
+      "max_price": 43999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
-        "256GB",
-        "512GB"
-      ]
-    },
-    {
-      "id": "redmi-note-15-pro-5g",
-      "name": "Redmi Note 15 Pro 5G",
-      "brand": "Xiaomi",
-      "variants": [
-        "8GB+256GB",
-        "12GB+512GB"
-      ],
-      "price": 53999,
-      "max_price": 59999,
-      "original_price": null,
-      "rams": [
-        "8GB",
-        "12GB"
-      ],
-      "storages": [
-        "256GB",
-        "512GB"
+        "256GB"
       ]
     },
     {
@@ -1296,19 +1315,16 @@
       "name": "Redmi Note 17 4G",
       "brand": "Xiaomi",
       "variants": [
-        "6GB + 128GB",
-        "8GB + 256GB"
+        "6GB + 128GB"
       ],
       "price": 42999,
-      "max_price": 47999,
+      "max_price": 42999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1316,19 +1332,16 @@
       "name": "Redmi Note 17 5G",
       "brand": "Xiaomi",
       "variants": [
-        "6GB + 128GB",
-        "8GB - 256GB"
+        "6GB + 128GB"
       ],
       "price": 47999,
-      "max_price": 52999,
+      "max_price": 47999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1897,15 +1910,13 @@
       "name": "Vivo V70 FE",
       "brand": "Vivo",
       "variants": [
-        "8GB + 256GB",
-        "12GB + 256GB"
+        "8GB + 256GB"
       ],
       "price": 62999,
-      "max_price": 72999,
+      "max_price": 62999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
         "256GB"
@@ -1952,18 +1963,16 @@
       "name": "Vivo Y05",
       "brand": "Vivo",
       "variants": [
-        "4GB+64GB",
-        "4GB+128GB"
+        "4GB+64GB"
       ],
       "price": 21999,
-      "max_price": 24999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1988,15 +1997,13 @@
       "name": "Vivo Y11d",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB",
-        "6GB + 128GB"
+        "4GB + 128GB"
       ],
       "price": 27999,
-      "max_price": 33999,
+      "max_price": 27999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
         "128GB"
@@ -2024,22 +2031,16 @@
       "name": "Vivo Y31d",
       "brand": "Vivo",
       "variants": [
-        "6GB+128GB",
-        "8GB+128GB",
-        "8GB+256GB",
-        "4GB+128GB"
+        "6GB+128GB"
       ],
-      "price": 32999,
-      "max_price": 51999,
+      "price": 37999,
+      "max_price": 37999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2047,18 +2048,16 @@
       "name": "Vivo Y500",
       "brand": "Vivo",
       "variants": [
-        "8GB + 128GB",
-        "8GB + 256GB"
+        "8GB + 128GB"
       ],
       "price": 54999,
-      "max_price": 61999,
+      "max_price": 54999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
