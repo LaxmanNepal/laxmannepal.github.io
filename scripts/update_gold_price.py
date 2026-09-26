@@ -6,6 +6,7 @@ from html import unescape
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "gold-nepal.json"
+LIVE_DATA_PATH = ROOT / "data" / "gold-nepal-live.json"
 HTML_PATH = ROOT / "gold-price-in-nepal-today" / "index.html"
 SOURCE_URL = "https://www.ashesh.com.np/gold/widget.php?api=872076p237&header_color=0077e5"
 SOURCE_NAME = "FENEGOSIDA published rate feed via Ashesh widget"
@@ -66,7 +67,9 @@ def main():
         data["last_attempted_at"] = now
         data["status"] = "stale_source"
         data["errors"] = [f"Source returned {date}, older than stored verified record {old_date}."]
-        DATA_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        serialized = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
+        DATA_PATH.write_text(serialized, encoding="utf-8")
+        LIVE_DATA_PATH.write_text(serialized, encoding="utf-8")
         print(data["errors"][0])
         return
 
@@ -87,7 +90,9 @@ def main():
         "conversion": {"tola_grams": 11.6638125, "aana_per_tola": 16, "lal_per_tola": 100},
         "errors": []
     })
-    DATA_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    serialized = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
+    DATA_PATH.write_text(serialized, encoding="utf-8")
+    LIVE_DATA_PATH.write_text(serialized, encoding="utf-8")
     page = HTML_PATH.read_text(encoding="utf-8")
     page = update_snapshot(page, record).replace("FENEGOSIDA published rate feed", SOURCE_NAME)
     HTML_PATH.write_text(page, encoding="utf-8")
