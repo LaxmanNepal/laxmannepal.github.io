@@ -107,7 +107,7 @@
 const TOla=11.6638125;
 const money=n=>'Rs '+Math.round(n).toLocaleString('en-IN');
 let data;
-try{const r=await fetch('/data/gold-nepal.json?'+Date.now());if(!r.ok)throw new Error(r.status);data=await r.json()}catch(e){document.getElementById('updated').textContent='Rate data is temporarily unavailable.';return}
+try{const r=await fetch('/data/gold-nepal-live.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error(r.status);data=await r.json()}catch(e){document.getElementById('updated').textContent='Rate data is temporarily unavailable.';return}
 const latest=data.latest||{}; const hist=data.history||[];
 const rate=(key,unit)=>unit==='tola'?Number(latest[key]||0):Number(latest[key]||0)*10/TOla;
 const change=(key)=>{if(hist.length<2)return 0;const a=Number(hist[hist.length-1][key]||0),b=Number(hist[hist.length-2][key]||0);return a-b};
