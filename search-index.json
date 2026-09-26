@@ -56,6 +56,14 @@
     "keywords": "advanced youtube keyword explorer"
   },
   {
+    "title": "Advanced YouTube Keyword Explorer",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-trending-keywords/",
+    "description": "Advanced YouTube Keyword Explorer",
+    "keywords": "advanced youtube keyword explorer"
+  },
+  {
     "title": "Advanced YouTube Tag Extractor",
     "category": "YouTube",
     "type": "resource",
@@ -68,6 +76,14 @@
     "category": "Tools",
     "type": "tool",
     "url": "/youtube-tools/archive/youtube-tag-extractor.html",
+    "description": "Advanced YouTube Tag Extractor",
+    "keywords": "advanced youtube tag extractor"
+  },
+  {
+    "title": "Advanced YouTube Tag Extractor",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-tag-extractor/",
     "description": "Advanced YouTube Tag Extractor",
     "keywords": "advanced youtube tag extractor"
   },
@@ -100,6 +116,14 @@
     "category": "Tools",
     "type": "tool",
     "url": "/youtube-tools/archive/youtube-video-seo-analyzer.html",
+    "description": "Advanced YouTube Video SEO Analyzer",
+    "keywords": "advanced youtube video seo analyzer"
+  },
+  {
+    "title": "Advanced YouTube Video SEO Analyzer",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-video-seo-analyzer/",
     "description": "Advanced YouTube Video SEO Analyzer",
     "keywords": "advanced youtube video seo analyzer"
   },
@@ -142,6 +166,14 @@
     "url": "/ai-tools/",
     "description": "AI tools and resources curated by Laxman Nepal for creators, students, developers and everyday productivity.",
     "keywords": "ai tools laxman nepal and resources curated by for creators students developers everyday productivity."
+  },
+  {
+    "title": "AI YouTube SEO Analyzer — Free YouTube SEO Tool | Laxman Nepal",
+    "category": "AI",
+    "type": "resource",
+    "url": "/youtube-tools/ai-powered-youtube-seo-deep-analyzer/",
+    "description": "AI YouTube SEO Analyzer — Free YouTube SEO Tool | Laxman Nepal",
+    "keywords": "ai youtube seo analyzer free tool laxman nepal"
   },
   {
     "title": "AI YouTube SEO Analyzer — Free YouTube SEO Tool | Laxman Nepal",
@@ -300,6 +332,14 @@
     "category": "Tools",
     "type": "tool",
     "url": "/youtube-tools/archive/youtube-channel-info-extractor.html",
+    "description": "Enhanced YouTube Channel Analytics | laxmannepal.com.np",
+    "keywords": "enhanced youtube channel analytics laxmannepal.com.np"
+  },
+  {
+    "title": "Enhanced YouTube Channel Analytics | laxmannepal.com.np",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-channel-info-extractor/",
     "description": "Enhanced YouTube Channel Analytics | laxmannepal.com.np",
     "keywords": "enhanced youtube channel analytics laxmannepal.com.np"
   },
@@ -556,6 +596,14 @@
     "category": "Tools",
     "type": "tool",
     "url": "/youtube-tools/archive/laxman-nepal-youtube-thumbnail.html",
+    "description": "Laxman Nepal - YouTube Thumbnail Downloader",
+    "keywords": "laxman nepal youtube thumbnail downloader"
+  },
+  {
+    "title": "Laxman Nepal - YouTube Thumbnail Downloader",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/laxman-nepal-youtube-thumbnail/",
     "description": "Laxman Nepal - YouTube Thumbnail Downloader",
     "keywords": "laxman nepal youtube thumbnail downloader"
   },
@@ -944,6 +992,14 @@
     "keywords": "youtube channel analytics"
   },
   {
+    "title": "YouTube Channel Analytics",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-channel-id-finder-analytics/",
+    "description": "YouTube Channel Analytics",
+    "keywords": "youtube channel analytics"
+  },
+  {
     "title": "YouTube Channel Analytics Tool – Free Channel & Video Insights | Laxman Nepal",
     "category": "Tools",
     "type": "tool",
@@ -992,6 +1048,14 @@
     "keywords": "youtube content suite complete toolkit"
   },
   {
+    "title": "YouTube Content Suite - Complete Toolkit",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-video-title-description-tag/",
+    "description": "YouTube Content Suite - Complete Toolkit",
+    "keywords": "youtube content suite complete toolkit"
+  },
+  {
     "title": "YouTube Description Extractor",
     "category": "YouTube",
     "type": "resource",
@@ -1004,6 +1068,14 @@
     "category": "Tools",
     "type": "tool",
     "url": "/youtube-tools/archive/youtube-description-extractor.html",
+    "description": "YouTube Description Extractor",
+    "keywords": "youtube description extractor"
+  },
+  {
+    "title": "YouTube Description Extractor",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-description-extractor/",
     "description": "YouTube Description Extractor",
     "keywords": "youtube description extractor"
   },
@@ -1024,6 +1096,14 @@
     "keywords": "youtube hashtag extractor"
   },
   {
+    "title": "YouTube Hashtag Extractor",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-hashtag-extractor/",
+    "description": "YouTube Hashtag Extractor",
+    "keywords": "youtube hashtag extractor"
+  },
+  {
     "title": "YouTube Tag Generator — Free YouTube SEO Tool | Laxman Nepal",
     "category": "Tools",
     "type": "tool",
@@ -1032,10 +1112,26 @@
     "keywords": "youtube tag generator free seo tool laxman nepal"
   },
   {
+    "title": "YouTube Tag Generator — Free YouTube SEO Tool | Laxman Nepal",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-tag-generator/",
+    "description": "YouTube Tag Generator — Free YouTube SEO Tool | Laxman Nepal",
+    "keywords": "youtube tag generator free seo tool laxman nepal"
+  },
+  {
     "title": "YouTube Thumbnail Downloader - Extract HD & 4K Thumbnails Free | Laxman Nepal",
     "category": "Tools",
     "type": "tool",
     "url": "/youtube-tools/archive/youtube-thumbnail-downloader.html",
+    "description": "Free online YouTube Thumbnail Downloader tool by Laxman Nepal. Download high-resolution YouTube video thumbnails in 4K, 1080p HD, SD, and Medium quality instantly.",
+    "keywords": "youtube thumbnail downloader extract hd 4k thumbnails free laxman nepal online tool by nepal. download high-resolution video in 1080p sd and medium quality instantly."
+  },
+  {
+    "title": "YouTube Thumbnail Downloader - Extract HD & 4K Thumbnails Free | Laxman Nepal",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-thumbnail-downloader/",
     "description": "Free online YouTube Thumbnail Downloader tool by Laxman Nepal. Download high-resolution YouTube video thumbnails in 4K, 1080p HD, SD, and Medium quality instantly.",
     "keywords": "youtube thumbnail downloader extract hd 4k thumbnails free laxman nepal online tool by nepal. download high-resolution video in 1080p sd and medium quality instantly."
   },
@@ -1056,6 +1152,14 @@
     "keywords": "youtube title generator free tool laxman nepal"
   },
   {
+    "title": "YouTube Title Generator — Free YouTube Tool | Laxman Nepal",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-title-generator/",
+    "description": "YouTube Title Generator — Free YouTube Tool | Laxman Nepal",
+    "keywords": "youtube title generator free tool laxman nepal"
+  },
+  {
     "title": "YouTube Trend Explorer",
     "category": "YouTube",
     "type": "resource",
@@ -1072,6 +1176,14 @@
     "keywords": "youtube trend explorer"
   },
   {
+    "title": "YouTube Trend Explorer",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-nepal-trend-explorer/",
+    "description": "YouTube Trend Explorer",
+    "keywords": "youtube trend explorer"
+  },
+  {
     "title": "YouTube Video Analytics | Blog Analytics",
     "category": "Article",
     "type": "article",
@@ -1084,6 +1196,14 @@
     "category": "Tools",
     "type": "tool",
     "url": "/youtube-tools/archive/youtube-video-analytics.html",
+    "description": "YouTube Video Analytics | Blog Analytics",
+    "keywords": "youtube video analytics blog"
+  },
+  {
+    "title": "YouTube Video Analytics | Blog Analytics",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/youtube-video-analytics/",
     "description": "YouTube Video Analytics | Blog Analytics",
     "keywords": "youtube video analytics blog"
   },
