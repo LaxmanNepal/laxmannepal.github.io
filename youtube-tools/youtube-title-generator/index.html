@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="/assets/css/shared-shell.css"><script src="/assets/js/shared-shell.js" defer></script>
+  
+  
+    <title>YouTube Title Generator — Free YouTube Tool | Laxman Nepal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+     
+      
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .logo i {
+            color: #ff0000;
+            font-size: 2.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #222;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            border: 1px solid #eaeaea;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            color: #333;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #ff0000;
+            box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.1);
+            background: #fff;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .generate-btn {
+            background: linear-gradient(to right, #ff0000, #cc0000);
+            color: white;
+        }
+
+        .generate-btn:hover {
+            background: linear-gradient(to right, #cc0000, #990000);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+        }
+
+        .copy-btn {
+            background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        .copy-btn:hover {
+            background: linear-gradient(to right, #e8e8e8, #d8d8d8);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-container {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .result-count {
+            background: #ff0000;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .titles-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .title-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff0000;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .title-item:hover {
+            transform: translateX(5px);
+            background: #fff;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .title-number {
+            background: #ff0000;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .title-text {
+            flex: 1;
+            color: #333;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #888;
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9rem;
+            padding: 20px;
+            border-top: 1px solid #eaeaea;
+            width: 100%;
+        }
+
+        .loader {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .loader i {
+            font-size: 2rem;
+            color: #ff0000;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 600px) {
+            .button-group {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"YouTube Title Generator","url":"https://laxmannepal.com.np/youtube-tools/youtube-title-generator.html","applicationCategory":"MultimediaApplication","operatingSystem":"Web","description":"Generate YouTube title ideas for videos, improve keyword relevance and build stronger publishing concepts with this free YouTube title generator.","author":{"@type":"Person","name":"Laxman Nepal"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script></head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fab fa-youtube"></i>
+                <h1>YouTube Title Generator</h1>
+            </div>
+            <p class="subtitle">Generate compelling YouTube titles based on your keywords</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <div class="input-group">
+                    <label for="keyword"><i class="fas fa-keyboard"></i> Enter Keyword</label>
+                    <input type="text" id="keyword" placeholder="e.g., digital marketing, cooking tutorial, tech review">
+                </div>
+                
+                <div class="input-group">
+                    <label for="numTitles"><i class="fas fa-list-ol"></i> Number of Titles</label>
+                    <input type="number" id="numTitles" value="5" min="1" max="10">
+                </div>
+                
+                <div class="button-group">
+                    <button class="generate-btn" onclick="generateTitles()">
+                        <i class="fas fa-magic"></i> Generate Titles
+                    </button>
+                    <button class="copy-btn" onclick="copyTitles()">
+                        <i class="fas fa-copy"></i> Copy Titles
+                    </button>
+                </div>
+            </section>
+
+            <div class="loader" id="loader">
+                <i class="fas fa-spinner"></i>
+                <p>Searching for trending titles...</p>
+            </div>
+
+            <section class="card result-container" id="resultContainer">
+                <div class="result-header">
+                    <h2><i class="fas fa-film"></i> Generated Titles</h2>
+                    <span class="result-count" id="resultCount">5 titles</span>
+                </div>
+                
+                <div class="titles-list" id="titlesList">
+                    <!-- Titles will be inserted here -->
+                </div>
+            </section>
+
+            <div class="card empty-state" id="emptyState">
+                <i class="fas fa-lightbulb"></i>
+                <h3>No Titles Generated Yet</h3>
+                <p>Enter a keyword and click "Generate Titles" to get started</p>
+            </div>
+        </main>
+
+      
+    </div>
+
+    <script>
+        function generateTitles() {
+            const keyword = document.getElementById('keyword').value;
+            const numTitles = document.getElementById('numTitles').value;
+            const resultContainer = document.getElementById('resultContainer');
+            const emptyState = document.getElementById('emptyState');
+            const loader = document.getElementById('loader');
+            const titlesList = document.getElementById('titlesList');
+            const resultCount = document.getElementById('resultCount');
+
+            if (!keyword || numTitles < 1 || numTitles > 10) {
+                alert('Please enter a valid keyword and a number between 1 and 10 for titles');
+                return;
+            }
+
+            // Show loader, hide empty state
+            loader.style.display = 'block';
+            emptyState.style.display = 'none';
+            resultContainer.style.display = 'none';
+
+            // Replace 'YOUR_API_KEY' with your actual YouTube API key
+            const apiKey = '';
+            const apiUrl = `https://api.laxmannepal.com.np/youtube/search?q=${encodeURIComponent(keyword)}&part=snippet&maxResults=${numTitles}&type=video&key=${apiKey}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    // Hide loader
+                    loader.style.display = 'none';
+                    
+                    if (data.items && data.items.length > 0) {
+                        const titles = data.items.map(item => item.snippet.title);
+                        
+                        // Update result count
+                        resultCount.textContent = `${titles.length} title${titles.length > 1 ? 's' : ''}`;
+                        
+                        // Clear previous results
+                        titlesList.innerHTML = '';
+                        
+                        // Add titles to the list
+                        titles.forEach((title, index) => {
+                            const titleItem = document.createElement('div');
+                            titleItem.className = 'title-item';
+                            titleItem.innerHTML = `
+                                <div class="title-number">${index + 1}</div>
+                                <div class="title-text">${title}</div>
+                            `;
+                            titlesList.appendChild(titleItem);
+                        });
+                        
+                        // Show result container
+                        resultContainer.style.display = 'block';
+                    } else {
+                        emptyState.innerHTML = `
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>No Titles Found</h3>
+                            <p>Try a different keyword or check your internet connection</p>
+                        `;
+                        emptyState.style.display = 'block';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    loader.style.display = 'none';
+                    emptyState.innerHTML = `
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Error Fetching Data</h3>
+                        <p>An error occurred while fetching data. Please try again.</p>
+                    `;
+                    emptyState.style.display = 'block';
+                });
+        }
+
+        function copyTitles() {
+            const titleItems = document.querySelectorAll('.title-text');
+            
+            if (titleItems.length === 0) {
+                alert('No titles to copy');
+                return;
+            }
+
+            const titlesText = Array.from(titleItems)
+                .map((item, index) => `${index + 1}. ${item.textContent}`)
+                .join('\n');
+
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = titlesText;
+
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            // Show temporary feedback
+            const copyBtn = document.querySelector('.copy-btn');
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            copyBtn.style.background = 'linear-gradient(to right, #4CAF50, #45a049)';
+            
+            setTimeout(() => {
+                copyBtn.innerHTML = originalText;
+                copyBtn.style.background = 'linear-gradient(to right, #f0f0f0, #e0e0e0)';
+            }, 2000);
+        }
+
+        // Allow pressing Enter to generate titles
+        document.getElementById('keyword').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                generateTitles();
+            }
+        });
+    </script>
+</body>
+</html>
