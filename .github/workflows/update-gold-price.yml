@@ -26,6 +26,6 @@ jobs:
             echo "No new rate data to commit."
             exit 0
           fi
-          git add data/gold-nepal.json gold-price-in-nepal-today/index.html
+          git add data/gold-nepal.json data/gold-nepal-live.json gold-price-in-nepal-today/index.html
           git commit -m "chore: update Nepal gold and silver rates"
           git push
