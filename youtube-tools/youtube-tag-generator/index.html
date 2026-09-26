@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="/assets/css/shared-shell.css"><script src="/assets/js/shared-shell.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Tag Generator — Free YouTube SEO Tool | Laxman Nepal</title>
+<!-- External Assets (Fonts & Icons) -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<style>
+/* ----------------------------------------
+   CSS VARIABLES & RESET 
+   ----------------------------------------
+*/
+:root {
+    --primary: #4f46e5;       /* Indigo 600 */
+    --primary-hover: #4338ca; /* Indigo 700 */
+    --surface: #ffffff;
+    --background: #f8fafc;    /* Slate 50 */
+    --text-main: #0f172a;     /* Slate 900 */
+    --text-muted: #64748b;    /* Slate 500 */
+    --border: #e2e8f0;        /* Slate 200 */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --radius: 16px;
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { box-sizing: border-box; outline: none; }
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--background);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ----------------------------------------
+   LAYOUT CONTAINERS 
+   ----------------------------------------
+*/
+.ln-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: clamp(1rem, 5vw, 2rem);
+}
+
+/* ----------------------------------------
+   HERO / INPUT SECTION 
+   ----------------------------------------
+*/
+.ln-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    padding: clamp(1.5rem, 5vw, 3rem);
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+.ln-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ln-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #e0e7ff;
+    color: var(--primary);
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.ln-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.2;
+    background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ln-subtitle {
+    color: var(--text-muted);
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Input Group */
+.ln-input-group {
+    position: relative;
+    max-width: 650px;
+    margin: 2rem auto 0;
+}
+
+.ln-input {
+    width: 100%;
+    padding: 1.25rem 1.5rem 1.25rem 3.5rem;
+    font-size: 1.125rem;
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    background: #fff;
+    transition: var(--transition);
+    color: var(--text-main);
+    box-shadow: var(--shadow-sm);
+}
+
+.ln-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+.ln-icon-search {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.ln-input:focus + .ln-icon-search {
+    color: var(--primary);
+}
+
+/* Search Button (Desktop: Inside right / Mobile: Below) */
+.ln-btn-generate {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    bottom: 8px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0 1.75rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ln-btn-generate:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.ln-btn-generate:active {
+    transform: translateY(1px);
+}
+
+/* Loading State */
+.ln-loader {
+    display: none; /* Flex when active */
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.ln-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #e2e8f0;
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* ----------------------------------------
+   RESULTS SECTION 
+   ----------------------------------------
+*/
+.ln-results {
+    display: none; /* Block when active */
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    animation: slideUp 0.4s ease-out;
+    box-shadow: var(--shadow-lg);
+}
+
+.ln-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+}
+
+.ln-count {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.ln-count span {
+    color: var(--primary);
+}
+
+.ln-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.ln-btn-action {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--text-main);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ln-btn-action:hover {
+    background: #f1f5f9;
+}
+
+.ln-btn-primary {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.ln-btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+.ln-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 4px; /* Space for focus rings */
+}
+
+/* Individual Tag */
+.ln-tag {
+    display: inline-flex;
+    align-items: center;
+    background: #f1f5f9;
+    color: var(--text-main);
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid transparent;
+    cursor: default;
+    user-select: none;
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.ln-tag:hover {
+    background: white;
+    border-color: var(--primary);
+    box-shadow: var(--shadow-sm);
+    color: var(--primary);
+}
+
+.ln-tag i {
+    margin-left: 0.5rem;
+    color: #94a3b8;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.ln-tag i:hover {
+    background: #cbd5e1;
+    color: #ef4444;
+}
+
+/* ----------------------------------------
+   CONTENT / SEO TEXT 
+   ----------------------------------------
+*/
+.ln-content {
+    margin-top: 3rem;
+    color: var(--text-muted);
+}
+
+.ln-content h2 {
+    color: var(--text-main);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.ln-content p {
+    margin-bottom: 1rem;
+}
+
+/* ----------------------------------------
+   ANIMATIONS 
+   ----------------------------------------
+*/
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { to { opacity: 1; transform: scale(1); } }
+
+/* ----------------------------------------
+   RESPONSIVE QUERIES 
+   ----------------------------------------
+*/
+@media (max-width: 640px) {
+    .ln-input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ln-input {
+        padding-right: 1.5rem; /* Remove space for button */
+    }
+
+    .ln-btn-generate {
+        position: static;
+        width: 100%;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .ln-results-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .ln-actions {
+        width: 100%;
+    }
+    
+    .ln-btn-action {
+        flex: 1;
+        justify-content: center;
+    }
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"YouTube Tag Generator","url":"https://laxmannepal.com.np/youtube-tools/youtube-tag-generator.html","applicationCategory":"MultimediaApplication","operatingSystem":"Web","description":"Generate relevant YouTube tag ideas from your topic with a free YouTube tag generator designed for creator SEO workflows.","author":{"@type":"Person","name":"Laxman Nepal"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script></head>
+<body>
+
+<div class="ln-wrapper">
+    
+    <!-- Hero / Tool Section -->
+    <div class="ln-card">
+        <div class="ln-header">
+            <div class="ln-badge">
+                <i class="fas fa-bolt"></i> SEO Tool V2.0
+            </div>
+            <h1 class="ln-title">Rapid Tags Generator</h1>
+            <p class="ln-subtitle">Boost your videos and blogs on LaxmanNepal.com.np. Generate optimized tags from YouTube & Google instantly.</p>
+        </div>
+
+        <form id="lnForm" onsubmit="event.preventDefault();">
+            <div class="ln-input-group">
+                <input type="text" id="lnKeyword" class="ln-input" placeholder="Enter topic (e.g. Nepal Travel Guide)..." autocomplete="off">
+                <i class="fas fa-search ln-icon-search"></i>
+                <button type="submit" class="ln-btn-generate" id="lnSearchBtn">
+                    <span>Generate</span> <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </form>
+
+        <div id="lnLoader" class="ln-loader">
+            <div class="ln-spinner"></div>
+            <span>Analyzing trends & fetching tags...</span>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="lnResults" class="ln-results">
+        <div class="ln-results-header">
+            <div class="ln-count">Found <span id="lnTotalTags">0</span> optimized tags</div>
+            <div class="ln-actions">
+                <button id="lnCopyBtn" class="ln-btn-action ln-btn-primary">
+                    <i class="far fa-copy"></i> Copy All
+                </button>
+                <button id="lnClearBtn" class="ln-btn-action">
+                    <i class="fas fa-trash-alt"></i> Clear
+                </button>
+            </div>
+        </div>
+        <div id="lnTagsContainer" class="ln-tags-container">
+            <!-- Tags will be injected here -->
+        </div>
+    </div>
+
+    <!-- SEO Content for LaxmanNepal -->
+    <div class="ln-content">
+        <h2>About This Tool</h2>
+        <p>Welcome to the <strong>Laxman Nepal Tag Generator</strong>. This tool is designed to help content creators, bloggers, and YouTubers find the most relevant keywords for their niche. By analyzing real-time suggestion data, we ensure your content reaches the right audience.</p>
+        
+        <h2>Why use optimized tags?</h2>
+        <p>Using the right tags improves your Search Engine Optimization (SEO). Whether you are writing for your WordPress blog or uploading to YouTube, specific long-tail keywords help algorithms understand your content context, leading to higher rankings and more organic traffic.</p>
+    </div>
+
+</div>
+
+<!-- JavaScript Logic -->
+<script>
+(function() {
+    // DOM Elements
+    const form = document.getElementById('lnForm');
+    const input = document.getElementById('lnKeyword');
+    const searchBtn = document.getElementById('lnSearchBtn');
+    const loader = document.getElementById('lnLoader');
+    const resultsArea = document.getElementById('lnResults');
+    const tagsContainer = document.getElementById('lnTagsContainer');
+    const totalCount = document.getElementById('lnTotalTags');
+    const copyBtn = document.getElementById('lnCopyBtn');
+    const clearBtn = document.getElementById('lnClearBtn');
+
+    // JSONP Helper for CORS bypass
+    function jsonp(url) {
+        return new Promise((resolve, reject) => {
+            const callbackName = 'ln_cb_' + Math.round(100000 * Math.random());
+            const script = document.createElement('script');
+            
+            window[callbackName] = function(data) {
+                delete window[callbackName];
+                document.body.removeChild(script);
+                resolve(data);
+            };
+
+            script.src = url.replace('CALLBACK', callbackName);
+            script.onerror = () => {
+                delete window[callbackName];
+                document.body.removeChild(script);
+                reject('Error fetching data');
+            };
+            
+            document.body.appendChild(script);
+        });
+    }
+
+    // Fetch Logic
+    async function fetchTags(query) {
+        const ytUrl = `https://suggestqueries.google.com/complete/search?client=youtube&ds=yt&q=${encodeURIComponent(query)}&callback=CALLBACK`;
+        const googleUrl = `https://suggestqueries.google.com/complete/search?client=firefox&q=${encodeURIComponent(query)}&callback=CALLBACK`;
+
+        try {
+            // Run both requests in parallel
+            const [ytData, googleData] = await Promise.all([
+                jsonp(ytUrl).catch(() => [[], []]), 
+                jsonp(googleUrl).catch(() => [[], []])
+            ]);
+
+            // Extract Suggestions
+            const ytTags = (ytData[1] || []).map(item => item[0]);
+            const googleTags = (googleData[1] || []); // Firefox client returns flat array in pos 1
+
+            // Merge and Deduplicate
+            const uniqueTags = [...new Set([...ytTags, ...googleTags])].filter(tag => tag.trim() !== "");
+            
+            return uniqueTags;
+
+        } catch (error) {
+            console.error(error);
+            return [];
+        }
+    }
+
+    // UI Rendering
+    function renderTags(tags) {
+        tagsContainer.innerHTML = '';
+        totalCount.textContent = tags.length;
+
+        if (tags.length === 0) {
+            tagsContainer.innerHTML = '<div style="width:100%; text-align:center; color:var(--text-muted);">No suggestions found. Try a different keyword.</div>';
+            return;
+        }
+
+        // Add Animation Stagger
+        tags.forEach((tag, index) => {
+            const chip = document.createElement('div');
+            chip.className = 'ln-tag';
+            chip.style.animationDelay = `${index * 0.03}s`; // Stagger effect
+            
+            const text = document.createElement('span');
+            text.textContent = tag;
+            
+            const removeIcon = document.createElement('i');
+            removeIcon.className = 'fas fa-times';
+            removeIcon.onclick = () => {
+                chip.remove();
+                updateCount();
+            };
+
+            chip.appendChild(text);
+            chip.appendChild(removeIcon);
+            tagsContainer.appendChild(chip);
+        });
+    }
+
+    function updateCount() {
+        const count = tagsContainer.querySelectorAll('.ln-tag').length;
+        totalCount.textContent = count;
+    }
+
+    // Main Execution
+    async function handleSearch() {
+        const query = input.value.trim();
+        if (!query) return;
+
+        // UI Loading State
+        loader.style.display = 'flex';
+        resultsArea.style.display = 'none';
+        searchBtn.disabled = true;
+
+        const tags = await fetchTags(query);
+
+        // UI Success State
+        loader.style.display = 'none';
+        resultsArea.style.display = 'block';
+        searchBtn.disabled = false;
+        renderTags(tags);
+    }
+
+    // Event Listeners
+    form.addEventListener('submit', handleSearch);
+    
+    // Copy Functionality
+    copyBtn.addEventListener('click', () => {
+        const tags = Array.from(tagsContainer.querySelectorAll('.ln-tag span'))
+                          .map(span => span.textContent).join(', ');
+        
+        if (!tags) return;
+
+        navigator.clipboard.writeText(tags).then(() => {
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            copyBtn.style.background = '#10b981'; // Green
+            copyBtn.style.borderColor = '#10b981';
+            copyBtn.style.color = 'white';
+            
+            setTimeout(() => {
+                copyBtn.innerHTML = originalText;
+                copyBtn.style.background = ''; // Reset to CSS
+                copyBtn.style.borderColor = '';
+                copyBtn.style.color = '';
+            }, 2000);
+        });
+    });
+
+    // Clear Functionality
+    clearBtn.addEventListener('click', () => {
+        tagsContainer.innerHTML = '';
+        input.value = '';
+        resultsArea.style.display = 'none';
+        input.focus();
+    });
+
+})();
+</script>
+
+</body>
+</html>
