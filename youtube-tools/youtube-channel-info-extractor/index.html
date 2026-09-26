@@ -1,0 +1,3073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="/assets/css/shared-shell.css"><script src="/assets/js/shared-shell.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced YouTube Channel Analytics | laxmannepal.com.np</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff0000;
+            --primary-dark: #cc0000;
+            --dark-color: #202020;
+            --light-color: #f8f9fa;
+            --gray-color: #606060;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --nepal-red: #DC143C;
+            --nepal-blue: #003893;
+            --shorts-color: #FF6B6B;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .site-wrapper {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 2.5rem 1rem;
+            background: linear-gradient(135deg, var(--nepal-blue), var(--nepal-red));
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+        }
+        
+        .header i {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            margin-bottom: 0;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        .content-area {
+            padding: 0 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            border-bottom: none;
+            font-weight: 600;
+            padding: 1.2rem 1.5rem;
+            border-radius: 15px 15px 0 0 !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .card-header i {
+            margin-right: 10px;
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-control {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 0.85rem 1.2rem;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            border-color: var(--nepal-red);
+            box-shadow: 0 0 0 0.25rem rgba(220, 20, 60, 0.15);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--nepal-red), var(--primary-dark));
+            border: none;
+            border-radius: 10px;
+            padding: 0.85rem 1.8rem;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(220, 20, 60, 0.2);
+        }
+        
+        .btn-primary:hover, .btn-primary:focus {
+            background: linear-gradient(135deg, var(--primary-dark), #a80000);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(220, 20, 60, 0.3);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border: none;
+            border-radius: 10px;
+            padding: 0.85rem 1.8rem;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+        }
+        
+        .btn-success:hover {
+            background: linear-gradient(135deg, #218838, #1e9c7a);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+        }
+        
+        .btn-outline-secondary {
+            border-radius: 10px;
+            padding: 0.85rem 1.8rem;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+        }
+        
+        .table {
+            margin-bottom: 0;
+            border-radius: 0 0 15px 15px;
+            overflow: hidden;
+        }
+        
+        .table th {
+            background-color: rgba(0, 0, 0, 0.03);
+            font-weight: 600;
+            width: 30%;
+            border-top: none;
+            padding: 1.2rem;
+            color: #2c3e50;
+        }
+        
+        .table td {
+            padding: 1.2rem;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .channel-thumbnail {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f0f0f0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-card {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stats-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--nepal-red);
+        }
+        
+        .stats-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stats-label {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+        }
+        
+        .spinner-border {
+            width: 3.5rem;
+            height: 3.5rem;
+            color: var(--nepal-red);
+        }
+        
+        .error-message {
+            display: none;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 1.2rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #56ab2f, #a8e063);
+            color: white;
+            padding: 1.2rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem 1rem;
+            color: var(--gray-color);
+            font-size: 0.9rem;
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+        }
+        
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--nepal-red);
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #dee2e6;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .tab {
+            padding: 0.8rem 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--gray-color);
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .tab.active {
+            color: var(--nepal-red);
+            border-bottom: 3px solid var(--nepal-red);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .channel-banner {
+            height: 180px;
+            background: linear-gradient(135deg, var(--nepal-blue), var(--nepal-red));
+            border-radius: 15px 15px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .channel-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .channel-info {
+            padding: 0 2rem 2rem;
+            margin-top: -60px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .channel-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--nepal-red);
+        }
+        
+        .saved-channel-card {
+            border-radius: 10px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .saved-channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .saved-channel-thumb {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+            border: 2px solid #f0f0f0;
+        }
+        
+        .saved-channel-info {
+            flex: 1;
+        }
+        
+        .saved-channel-title {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            color: #2c3e50;
+        }
+        
+        .saved-channel-subscribers {
+            font-size: 0.85rem;
+            color: var(--gray-color);
+        }
+        
+        .saved-channel-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .action-btn {
+            background: none;
+            border: none;
+            color: var(--gray-color);
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            padding: 0.3rem;
+            border-radius: 5px;
+        }
+        
+        .action-btn:hover {
+            color: var(--nepal-red);
+            background: rgba(220, 20, 60, 0.1);
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 2rem;
+            color: var(--gray-color);
+        }
+        
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        
+        .brand-text {
+            color: var(--nepal-red);
+            font-weight: bold;
+        }
+        
+        .site-name {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        /* Video List Styles */
+        .video-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .video-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-thumb {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .video-info {
+            padding: 1rem;
+        }
+        
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 2.8rem;
+        }
+        
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray-color);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .video-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .performance-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .performance-high {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .performance-medium {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .performance-low {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .video-engagement {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+        
+        .progress {
+            height: 6px;
+            margin-top: 0.25rem;
+        }
+        
+        .video-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .video-filters select, .video-filters input {
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .pagination {
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        /* Shorts Specific Styles */
+        .shorts-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: linear-gradient(135deg, var(--shorts-color), #ff8e8e);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .shorts-section, .videos-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .shorts-title {
+            color: var(--shorts-color);
+        }
+        
+        .section-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+        
+        .shorts-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .shorts-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .shorts-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .shorts-thumb {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        
+        .shorts-info {
+            padding: 1rem;
+        }
+        
+        .shorts-title-text {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 2.8rem;
+        }
+        
+        .shorts-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--gray-color);
+        }
+        
+        /* Tabs for videos/shorts */
+        .content-tabs {
+            display: flex;
+            border-bottom: 1px solid #dee2e6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-tab {
+            padding: 0.8rem 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--gray-color);
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .content-tab.active {
+            color: var(--nepal-red);
+            border-bottom: 3px solid var(--nepal-red);
+        }
+        
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        /* New Features Styles */
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-bottom: 2rem;
+        }
+        
+        .comparison-card {
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .word-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .word-item {
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: #f0f0f0;
+            transition: all 0.3s;
+        }
+        
+        .word-item:hover {
+            transform: scale(1.05);
+            background: var(--nepal-red);
+            color: white;
+        }
+        
+        .heatmap {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin: 1rem 0;
+        }
+        
+        .heatmap-cell {
+            height: 30px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: white;
+        }
+        
+        .heatmap-legend {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        
+        .heatmap-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .heatmap-legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+        
+        .export-options {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .insight-card {
+            border-left: 4px solid var(--nepal-red);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .insight-card h5 {
+            color: var(--nepal-red);
+            margin-bottom: 0.5rem;
+        }
+        
+        .modal-content {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, var(--nepal-blue), var(--nepal-red));
+            color: white;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .dashboard-widget {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .dashboard-widget h4 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .content-area {
+                padding: 0 1rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .channel-info {
+                padding: 0 1.5rem 1.5rem;
+            }
+            
+            .stats-number {
+                font-size: 1.5rem;
+            }
+            
+            .tab {
+                padding: 0.8rem 1rem;
+            }
+            
+            .video-list {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .shorts-list {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
+            
+            .dashboard-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 2rem 1rem;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .table th, .table td {
+                padding: 0.8rem;
+            }
+            
+            .channel-info {
+                padding: 0 1rem 1.5rem;
+            }
+            
+            .channel-avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+            }
+            
+            .stats-card {
+                padding: 1rem;
+            }
+            
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .card-header-actions {
+                margin-top: 0.5rem;
+            }
+            
+            .video-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .shorts-list {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .section-stats {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .header {
+                padding: 1.5rem 1rem;
+            }
+            
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .btn-primary, .btn-success {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .tab {
+                text-align: center;
+                padding: 0.8rem 0.5rem;
+            }
+            
+            .saved-channel-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .saved-channel-thumb {
+                margin-right: 0;
+                margin-bottom: 0.8rem;
+            }
+            
+            .saved-channel-actions {
+                margin-top: 0.8rem;
+                justify-content: center;
+            }
+            
+            .video-filters {
+                flex-direction: column;
+            }
+            
+            .content-tabs {
+                flex-direction: column;
+            }
+            
+            .content-tab {
+                text-align: center;
+            }
+            
+            .shorts-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .shorts-thumb {
+                height: 250px;
+            }
+            
+            .export-options {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .shorts-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="header">
+            <i class="fab fa-youtube"></i>
+            <h1>Enhanced YouTube Channel Analytics</h1>
+            <p>Extract detailed information and advanced analytics for any YouTube channel</p>
+            <span class="site-name">laxmannepal.com.np</span>
+        </div>
+        
+        <div class="content-area">
+            <div class="row">
+                <!-- Main Content Column -->
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <i class="fas fa-search me-2"></i>Channel Lookup
+                            </div>
+                            <div class="card-header-actions">
+                                <button class="btn btn-sm btn-outline-light me-2" onclick="showComparisonModal()">
+                                    <i class="fas fa-balance-scale me-1"></i>Compare
+                                </button>
+                                <button class="btn btn-sm btn-outline-light" onclick="showExportModal()">
+                                    <i class="fas fa-download me-1"></i>Export
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="mb-3">
+                                        <label for="channelId" class="form-label">YouTube Channel ID or Username</label>
+                                        <input type="text" class="form-control" id="channelId" placeholder="e.g., UC_x5XG1OV2P6uZZ5FSM9Ttw or @username">
+                                        <div class="form-text">Enter the Channel ID (starts with UC) or the channel's custom username (starts with @)</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Search Type</label>
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="searchType" id="searchById" value="id" checked>
+                                                <label class="form-check-label" for="searchById">By ID</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="searchType" id="searchByName" value="name">
+                                                <label class="form-check-label" for="searchByName">By Username</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button class="btn btn-primary flex-fill" onclick="getChannelInfo()">
+                                    <i class="fas fa-download me-2"></i>Extract Channel Information
+                                </button>
+                                <button class="btn btn-success flex-fill" onclick="saveCurrentChannel()" id="saveChannelBtn" disabled>
+                                    <i class="fas fa-bookmark me-2"></i>Save Channel
+                                </button>
+                                <button class="btn btn-outline-secondary flex-fill" onclick="clearSearch()">
+                                    <i class="fas fa-times me-2"></i>Clear
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="loading" id="loading">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-3">Fetching channel information from YouTube API...</p>
+                    </div>
+                    
+                    <div class="error-message" id="errorMessage"></div>
+                    
+                    <div class="success-message" id="successMessage"></div>
+                    
+                    <div class="card" id="resultsCard" style="display: none;">
+                        <div class="channel-banner"></div>
+                        <div class="channel-info">
+                            <div class="d-flex align-items-end mb-4">
+                                <div class="channel-avatar me-4" id="channelAvatar">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <div>
+                                    <h2 id="channelTitle" class="mb-1">Channel Title</h2>
+                                    <p class="text-muted" id="channelHandle">@channelhandle</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tabs">
+                                <div class="tab active" data-tab="overview">Overview</div>
+                                <div class="tab" data-tab="statistics">Statistics</div>
+                                <div class="tab" data-tab="growth">Growth</div>
+                                <div class="tab" data-tab="content">Videos & Shorts</div>
+                                <div class="tab" data-tab="insights">Insights</div>
+                                <div class="tab" data-tab="details">Details</div>
+                            </div>
+                            
+                            <div class="tab-content active" id="overview">
+                                <div class="row mb-4">
+                                    <div class="col-md-3 col-sm-6 mb-3">
+                                        <div class="stats-card">
+                                            <i class="fas fa-users"></i>
+                                            <div class="stats-number" id="subscriberCount">0</div>
+                                            <div class="stats-label">Subscribers</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3">
+                                        <div class="stats-card">
+                                            <i class="fas fa-eye"></i>
+                                            <div class="stats-number" id="viewCount">0</div>
+                                            <div class="stats-label">Total Views</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3">
+                                        <div class="stats-card">
+                                            <i class="fas fa-video"></i>
+                                            <div class="stats-number" id="videoCount">0</div>
+                                            <div class="stats-label">Videos</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3">
+                                        <div class="stats-card">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <div class="stats-number" id="joinedDate">-</div>
+                                            <div class="stats-label">Joined</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <h4 class="mb-3">Channel Description</h4>
+                                    <div id="channelDescription" class="p-3 bg-light rounded">
+                                        Channel description will appear here...
+                                    </div>
+                                </div>
+                                
+                                <div class="dashboard-grid">
+                                    <div class="dashboard-widget">
+                                        <h4><i class="fas fa-chart-line me-2"></i>Performance Overview</h4>
+                                        <div class="chart-container">
+                                            <canvas id="performanceChart"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-widget">
+                                        <h4><i class="fas fa-cloud me-2"></i>Title Word Cloud</h4>
+                                        <div id="wordCloud" class="word-cloud">
+                                            <!-- Word cloud will be generated here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-content" id="statistics">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>Subscriber Count</th>
+                                                <td id="statsSubscriberCount">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total Views</th>
+                                                <td id="statsViewCount">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total Videos</th>
+                                                <td id="statsVideoCount">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Average Views per Video</th>
+                                                <td id="avgViews">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Subscriber Growth Rate</th>
+                                                <td id="growthRate">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Engagement Rate</th>
+                                                <td id="engagementRate">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Video Upload Frequency</th>
+                                                <td id="uploadFrequency">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Audience Retention</th>
+                                                <td id="audienceRetention">-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="row mt-4">
+                                    <div class="col-md-6">
+                                        <div class="chart-container">
+                                            <canvas id="contentTypeChart"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="chart-container">
+                                            <canvas id="engagementChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-content" id="growth">
+                                <div class="row mb-4">
+                                    <div class="col-md-8">
+                                        <div class="chart-container">
+                                            <canvas id="growthChart"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5>Growth Metrics</h5>
+                                        <div class="stats-card mb-3">
+                                            <div class="stats-number" id="weeklyGrowth">0%</div>
+                                            <div class="stats-label">Weekly Growth</div>
+                                        </div>
+                                        <div class="stats-card mb-3">
+                                            <div class="stats-number" id="monthlyGrowth">0%</div>
+                                            <div class="stats-label">Monthly Growth</div>
+                                        </div>
+                                        <div class="stats-card">
+                                            <div class="stats-number" id="quarterlyGrowth">0%</div>
+                                            <div class="stats-label">Quarterly Growth</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5>Upload Heatmap</h5>
+                                        <p class="text-muted">This shows the days and times when the channel typically uploads content</p>
+                                        <div class="heatmap" id="uploadHeatmap">
+                                            <!-- Heatmap will be generated here -->
+                                        </div>
+                                        <div class="heatmap-legend">
+                                            <div class="heatmap-legend-item">
+                                                <div class="heatmap-legend-color" style="background-color: #ebedf0;"></div>
+                                                <span>No uploads</span>
+                                            </div>
+                                            <div class="heatmap-legend-item">
+                                                <div class="heatmap-legend-color" style="background-color: #c6e48b;"></div>
+                                                <span>1-2 uploads</span>
+                                            </div>
+                                            <div class="heatmap-legend-item">
+                                                <div class="heatmap-legend-color" style="background-color: #7bc96f;"></div>
+                                                <span>3-4 uploads</span>
+                                            </div>
+                                            <div class="heatmap-legend-item">
+                                                <div class="heatmap-legend-color" style="background-color: #239a3b;"></div>
+                                                <span>5+ uploads</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-content" id="content">
+                                <div class="mb-4">
+                                    <div class="content-tabs">
+                                        <div class="content-tab active" data-content="all">All Content</div>
+                                        <div class="content-tab" data-content="videos">Videos Only</div>
+                                        <div class="content-tab" data-content="shorts">Shorts Only</div>
+                                    </div>
+                                    
+                                    <div class="video-filters">
+                                        <select class="form-control" id="videoSort">
+                                            <option value="date">Sort by Date (Newest)</option>
+                                            <option value="views">Sort by Views (Highest)</option>
+                                            <option value="likes">Sort by Likes (Highest)</option>
+                                        </select>
+                                        <input type="text" class="form-control" id="videoSearch" placeholder="Search videos...">
+                                    </div>
+                                    
+                                    <div id="videoStats" class="mb-3">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-6">
+                                                <div class="stats-card">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <div class="stats-number" id="totalVideoViews">0</div>
+                                                    <div class="stats-label">Total Video Views</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6">
+                                                <div class="stats-card">
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                    <div class="stats-number" id="avgVideoLikes">0</div>
+                                                    <div class="stats-label">Avg. Likes</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6">
+                                                <div class="stats-card">
+                                                    <i class="fas fa-comment"></i>
+                                                    <div class="stats-number" id="avgVideoComments">0</div>
+                                                    <div class="stats-label">Avg. Comments</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6">
+                                                <div class="stats-card">
+                                                    <i class="fas fa-chart-line"></i>
+                                                    <div class="stats-number" id="avgEngagement">0%</div>
+                                                    <div class="stats-label">Avg. Engagement</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="content-section active" id="all-content">
+                                        <div class="shorts-section">
+                                            <div class="section-header">
+                                                <h3 class="section-title shorts-title">
+                                                    <i class="fas fa-music"></i> YouTube Shorts
+                                                </h3>
+                                                <div class="section-stats">
+                                                    <span id="shortsCount">0 Shorts</span>
+                                                    <span id="shortsViews">0 Views</span>
+                                                    <span id="shortsEngagement">0% Engagement</span>
+                                                </div>
+                                            </div>
+                                            <div id="shortsList" class="shorts-list">
+                                                <!-- Shorts cards will be inserted here -->
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="videos-section">
+                                            <div class="section-header">
+                                                <h3 class="section-title">
+                                                    <i class="fas fa-play-circle"></i> Regular Videos
+                                                </h3>
+                                                <div class="section-stats">
+                                                    <span id="videosCount">0 Videos</span>
+                                                    <span id="videosViews">0 Views</span>
+                                                    <span id="videosEngagement">0% Engagement</span>
+                                                </div>
+                                            </div>
+                                            <div id="videoList" class="video-list">
+                                                <!-- Video cards will be inserted here -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="content-section" id="videos-content">
+                                        <div class="videos-section">
+                                            <div class="section-header">
+                                                <h3 class="section-title">
+                                                    <i class="fas fa-play-circle"></i> Regular Videos
+                                                </h3>
+                                                <div class="section-stats">
+                                                    <span id="videosOnlyCount">0 Videos</span>
+                                                    <span id="videosOnlyViews">0 Views</span>
+                                                    <span id="videosOnlyEngagement">0% Engagement</span>
+                                                </div>
+                                            </div>
+                                            <div id="videosOnlyList" class="video-list">
+                                                <!-- Video cards will be inserted here -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="content-section" id="shorts-content">
+                                        <div class="shorts-section">
+                                            <div class="section-header">
+                                                <h3 class="section-title shorts-title">
+                                                    <i class="fas fa-music"></i> YouTube Shorts
+                                                </h3>
+                                                <div class="section-stats">
+                                                    <span id="shortsOnlyCount">0 Shorts</span>
+                                                    <span id="shortsOnlyViews">0 Views</span>
+                                                    <span id="shortsOnlyEngagement">0% Engagement</span>
+                                                </div>
+                                            </div>
+                                            <div id="shortsOnlyList" class="shorts-list">
+                                                <!-- Shorts cards will be inserted here -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <nav aria-label="Video pagination">
+                                        <ul class="pagination" id="videoPagination">
+                                            <!-- Pagination will be inserted here -->
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-content" id="insights">
+                                <h4 class="mb-4">AI-Powered Channel Insights</h4>
+                                
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="insight-card">
+                                            <h5><i class="fas fa-lightbulb me-2"></i>Content Strategy</h5>
+                                            <p id="contentStrategyInsight">Based on your channel's performance, we recommend focusing on [content type] as it generates the highest engagement.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="insight-card">
+                                            <h5><i class="fas fa-chart-bar me-2"></i>Performance Analysis</h5>
+                                            <p id="performanceInsight">Your channel shows strong growth in [metric] but could improve in [area]. Consider [suggestion].</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="insight-card">
+                                            <h5><i class="fas fa-users me-2"></i>Audience Insights</h5>
+                                            <p id="audienceInsight">Your audience is most active during [time period]. Consider scheduling uploads during these times for maximum visibility.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="insight-card">
+                                            <h5><i class="fas fa-trophy me-2"></i>Competitive Analysis</h5>
+                                            <p id="competitiveInsight">Compared to similar channels in your niche, your [metric] is [higher/lower]. Focus on [area] to improve competitiveness.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chart-container">
+                                    <canvas id="insightsChart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-content" id="details">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>Channel ID</th>
+                                                <td id="detailChannelId">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Custom URL</th>
+                                                <td id="customUrl">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Country</th>
+                                                <td id="country">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Channel Created</th>
+                                                <td id="publishedAt">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Privacy Status</th>
+                                                <td id="privacyStatus">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Made For Kids</th>
+                                                <td id="madeForKids">-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar Column -->
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-bookmark me-2"></i>Saved Channels
+                            <div class="card-header-actions">
+                                <button class="btn btn-sm btn-outline-light" onclick="clearAllSavedChannels()" title="Clear All">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body p-3">
+                            <div id="savedChannelsList">
+                                <div class="empty-state">
+                                    <i class="fas fa-bookmark"></i>
+                                    <h5>No Saved Channels</h5>
+                                    <p>Save channels to access them quickly later</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-history me-2"></i>Recent Searches
+                        </div>
+                        <div class="card-body p-3">
+                            <div id="searchHistory">
+                                <div class="empty-state">
+                                    <i class="fas fa-history"></i>
+                                    <h5>No Recent Searches</h5>
+                                    <p>Your search history will appear here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-chart-pie me-2"></i>Quick Analytics
+                        </div>
+                        <div class="card-body p-3">
+                            <div class="chart-container">
+                                <canvas id="quickAnalyticsChart"></canvas>
+                            </div>
+                            <div class="mt-3">
+                                <p class="mb-1"><strong>Top Performing Content:</strong></p>
+                                <p id="topContent" class="text-muted">No data available</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-info-circle me-2"></i>About This Tool
+                        </div>
+                        <div class="card-body p-3">
+                            <p>This Enhanced YouTube Channel Analytics tool helps you extract detailed information and advanced analytics about any YouTube channel.</p>
+                            <p>Features include:</p>
+                            <ul>
+                                <li>Channel statistics and metrics</li>
+                                <li>Growth tracking and visualization</li>
+                                <li>AI-powered insights and recommendations</li>
+                                <li>Channel comparison</li>
+                                <li>Data export capabilities</li>
+                                <li>Content performance analysis</li>
+                                <li>Upload heatmaps and word clouds</li>
+                                <li>Save channels for quick access</li>
+                                <li>Search history tracking</li>
+                                <li>Responsive design for all devices</li>
+                            </ul>
+                            <p class="mt-3">Powered by <span class="brand-text">laxmannepal.com.np</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>Enhanced YouTube Channel Analytics Tool &copy; 2023 | Powered by <span class="brand-text">laxmannepal.com.np</span></p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Modal -->
+    <div class="modal fade" id="comparisonModal" tabindex="-1" aria-labelledby="comparisonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="comparisonModalLabel"><i class="fas fa-balance-scale me-2"></i>Compare Channels</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-3">
+                        <div class="col-md-5">
+                            <select class="form-control" id="compareChannel1">
+                                <option value="">Select first channel...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 text-center pt-2">VS</div>
+                        <div class="col-md-5">
+                            <select class="form-control" id="compareChannel2">
+                                <option value="">Select second channel...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100" onclick="performComparison()" id="compareBtn" disabled>
+                        <i class="fas fa-balance-scale me-2"></i>Compare Channels
+                    </button>
+                    <div id="comparisonResults" class="mt-4" style="display: none;">
+                        <!-- Comparison results will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Modal -->
+    <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportModalLabel"><i class="fas fa-download me-2"></i>Export Data</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Select the data you want to export:</p>
+                    <div class="export-options">
+                        <button class="btn btn-outline-primary" onclick="exportData('channel')">
+                            <i class="fas fa-user me-2"></i>Channel Data
+                        </button>
+                        <button class="btn btn-outline-primary" onclick="exportData('videos')">
+                            <i class="fas fa-video me-2"></i>Videos Data
+                        </button>
+                        <button class="btn btn-outline-primary" onclick="exportData('shorts')">
+                            <i class="fas fa-music me-2"></i>Shorts Data
+                        </button>
+                        <button class="btn btn-outline-primary" onclick="exportData('all')">
+                            <i class="fas fa-database me-2"></i>All Data
+                        </button>
+                    </div>
+                    <div class="mt-3">
+                        <p>Format:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exportFormat" id="formatCSV" value="csv" checked>
+                            <label class="form-check-label" for="formatCSV">CSV</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exportFormat" id="formatJSON" value="json">
+                            <label class="form-check-label" for="formatJSON">JSON</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize variables
+        const apiKey = '';
+        let currentChannelData = null;
+        let currentChannelVideos = [];
+        let currentChannelShorts = [];
+        let savedChannels = JSON.parse(localStorage.getItem('savedChannels')) || [];
+        let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+        let nextPageToken = '';
+        let currentVideoPage = 1;
+        const videosPerPage = 9;
+        let charts = {};
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            // Render saved channels
+            renderSavedChannels();
+            
+            // Render search history
+            renderSearchHistory();
+            
+            // Add event listeners for video filters
+            document.getElementById('videoSort').addEventListener('change', renderContent);
+            document.getElementById('videoSearch').addEventListener('input', renderContent);
+            
+            // Add event listeners for content tabs
+            document.querySelectorAll('.content-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs and sections
+                    document.querySelectorAll('.content-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding section
+                    this.classList.add('active');
+                    document.getElementById(`${this.getAttribute('data-content')}-content`).classList.add('active');
+                    
+                    // Render appropriate content
+                    renderContent();
+                });
+            });
+            
+            // Add sample data for demonstration
+            document.getElementById('channelId').value = 'UC_x5XG1OV2P6uZZ5FSM9Ttw';
+            
+            // Initialize quick analytics chart
+            initializeQuickAnalyticsChart();
+        });
+
+        function getChannelInfo() {
+            const channelId = document.getElementById('channelId').value.trim();
+            const searchType = document.querySelector('input[name="searchType"]:checked').value;
+            const loadingElement = document.getElementById('loading');
+            const errorMessage = document.getElementById('errorMessage');
+            const successMessage = document.getElementById('successMessage');
+            const resultsCard = document.getElementById('resultsCard');
+            const saveChannelBtn = document.getElementById('saveChannelBtn');
+            
+            // Reset UI
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'none';
+            resultsCard.style.display = 'none';
+            saveChannelBtn.disabled = true;
+            nextPageToken = '';
+            currentVideoPage = 1;
+            
+            // Validate input
+            if (!channelId) {
+                showError('Please enter a YouTube Channel ID or username.');
+                return;
+            }
+            
+            // Show loading indicator
+            loadingElement.style.display = 'block';
+            
+            // Build API URL based on search type
+            let apiUrl;
+            if (searchType === 'id') {
+                apiUrl = `https://api.laxmannepal.com.np/youtube/channels?part=snippet,statistics,contentDetails,brandingSettings&id=${channelId}&key=${apiKey}`;
+            } else {
+                apiUrl = `https://api.laxmannepal.com.np/youtube/channels?part=snippet,statistics,contentDetails,brandingSettings&forUsername=${channelId.replace('@', '')}&key=${apiKey}`;
+            }
+            
+            // Fetch channel info from YouTube Data API
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    loadingElement.style.display = 'none';
+                    
+                    if (data.items && data.items.length === 0) {
+                        showError('Channel not found. Please check the Channel ID/username and try again.');
+                        return;
+                    }
+                    
+                    const channel = data.items[0];
+                    currentChannelData = channel;
+                    
+                    const snippet = channel.snippet;
+                    const statistics = channel.statistics;
+                    const brandingSettings = channel.brandingSettings || {};
+                    
+                    // Display channel info
+                    document.getElementById('channelTitle').innerText = snippet.title;
+                    document.getElementById('channelHandle').innerText = brandingSettings.channel?.keywords || `ID: ${channel.id}`;
+                    
+                    // Set channel avatar
+                    const channelAvatar = document.getElementById('channelAvatar');
+                    if (snippet.thumbnails && snippet.thumbnails.medium) {
+                        channelAvatar.innerHTML = `<img src="${snippet.thumbnails.medium.url}" alt="${snippet.title}" class="channel-thumbnail">`;
+                    } else {
+                        channelAvatar.innerHTML = `<i class="fab fa-youtube"></i>`;
+                    }
+                    
+                    // Overview tab
+                    document.getElementById('subscriberCount').innerText = formatNumber(statistics.subscriberCount);
+                    document.getElementById('viewCount').innerText = formatNumber(statistics.viewCount);
+                    document.getElementById('videoCount').innerText = formatNumber(statistics.videoCount);
+                    document.getElementById('joinedDate').innerText = formatDate(snippet.publishedAt);
+                    document.getElementById('channelDescription').innerText = snippet.description || 'No description available';
+                    
+                    // Statistics tab
+                    document.getElementById('statsSubscriberCount').innerText = formatNumber(statistics.subscriberCount);
+                    document.getElementById('statsViewCount').innerText = formatNumber(statistics.viewCount);
+                    document.getElementById('statsVideoCount').innerText = formatNumber(statistics.videoCount);
+                    
+                    // Calculate additional stats
+                    const avgViews = statistics.videoCount > 0 ? Math.round(statistics.viewCount / statistics.videoCount) : 0;
+                    document.getElementById('avgViews').innerText = formatNumber(avgViews);
+                    
+                    // Mock growth rate (in a real app, you'd compare with previous data)
+                    const growthRate = Math.random() * 5 + 1;
+                    document.getElementById('growthRate').innerText = `${growthRate.toFixed(2)}%`;
+                    
+                    // Mock engagement rate
+                    const engagementRate = Math.random() * 10 + 0.5;
+                    document.getElementById('engagementRate').innerText = `${engagementRate.toFixed(2)}%`;
+                    
+                    // Mock upload frequency
+                    const uploadFrequency = Math.round(Math.random() * 10) + 1;
+                    document.getElementById('uploadFrequency').innerText = `${uploadFrequency} videos per week`;
+                    
+                    // Mock audience retention
+                    const audienceRetention = (Math.random() * 30 + 50).toFixed(1);
+                    document.getElementById('audienceRetention').innerText = `${audienceRetention}%`;
+                    
+                    // Details tab
+                    document.getElementById('detailChannelId').innerText = channel.id;
+                    document.getElementById('customUrl').innerHTML = brandingSettings.channel?.customUrl ? 
+                        `<a href="https://youtube.com/${brandingSettings.channel.customUrl}" target="_blank">${brandingSettings.channel.customUrl}</a>` : 
+                        'Not set';
+                    document.getElementById('country').innerText = snippet.country || 'Not specified';
+                    document.getElementById('publishedAt').innerText = formatDate(snippet.publishedAt, true);
+                    document.getElementById('privacyStatus').innerText = snippet.privacyStatus || 'Public';
+                    document.getElementById('madeForKids').innerText = snippet.contentDetails?.relatedPlaylists?.likes ? 'No' : 'Unknown';
+                    
+                    // Enable save button
+                    saveChannelBtn.disabled = false;
+                    
+                    // Fetch videos for this channel
+                    fetchChannelVideos(channel.id);
+                    
+                    // Add to search history
+                    addToSearchHistory(channel);
+                    
+                    // Generate charts and visualizations
+                    generateCharts();
+                    generateWordCloud();
+                    generateHeatmap();
+                    generateInsights();
+                    
+                    // Show results
+                    resultsCard.style.display = 'block';
+                    showSuccess('Channel information loaded successfully!');
+                })
+                .catch(error => {
+                    loadingElement.style.display = 'none';
+                    console.error('Error fetching data from YouTube API:', error);
+                    showError('An error occurred while fetching channel data. Please try again later.');
+                });
+        }
+        
+        function fetchChannelVideos(channelId, pageToken = '') {
+            // Show loading state for videos
+            document.getElementById('videoList').innerHTML = `
+                <div class="col-12 text-center py-4">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2">Loading videos...</p>
+                </div>
+            `;
+            
+            document.getElementById('shortsList').innerHTML = `
+                <div class="col-12 text-center py-4">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2">Loading shorts...</p>
+                </div>
+            `;
+            
+            // First, get the uploads playlist ID
+            fetch(`https://api.laxmannepal.com.np/youtube/channels?part=contentDetails&id=${channelId}&key=${apiKey}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.items || data.items.length === 0) {
+                        throw new Error('Channel not found');
+                    }
+                    
+                    const uploadsPlaylistId = data.items[0].contentDetails.relatedPlaylists.uploads;
+                    
+                    // Now fetch the videos from the uploads playlist
+                    let videosUrl = `https://api.laxmannepal.com.np/youtube/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=50&key=${apiKey}`;
+                    
+                    if (pageToken) {
+                        videosUrl += `&pageToken=${pageToken}`;
+                    }
+                    
+                    return fetch(videosUrl);
+                })
+                .then(response => response.json())
+                .then(data => {
+                    nextPageToken = data.nextPageToken || '';
+                    
+                    if (!data.items || data.items.length === 0) {
+                        document.getElementById('videoList').innerHTML = `
+                            <div class="col-12">
+                                <div class="empty-state">
+                                    <i class="fas fa-video"></i>
+                                    <h5>No Videos Found</h5>
+                                    <p>This channel doesn't have any public videos</p>
+                                </div>
+                            </div>
+                        `;
+                        document.getElementById('shortsList').innerHTML = `
+                            <div class="col-12">
+                                <div class="empty-state">
+                                    <i class="fas fa-music"></i>
+                                    <h5>No Shorts Found</h5>
+                                    <p>This channel doesn't have any public shorts</p>
+                                </div>
+                            </div>
+                        `;
+                        return;
+                    }
+                    
+                    // Extract video IDs to get statistics and content details
+                    const videoIds = data.items.map(item => item.snippet.resourceId.videoId).join(',');
+                    
+                    // Fetch video statistics and content details
+                    return fetch(`https://api.laxmannepal.com.np/youtube/videos?part=statistics,snippet,contentDetails&id=${videoIds}&key=${apiKey}`)
+                        .then(response => response.json())
+                        .then(videosData => {
+                            // Reset arrays
+                            currentChannelVideos = [];
+                            currentChannelShorts = [];
+                            
+                            // Process the videos with real statistics
+                            videosData.items.forEach(video => {
+                                const stats = video.statistics;
+                                const snippet = video.snippet;
+                                const contentDetails = video.contentDetails;
+                                const views = parseInt(stats.viewCount) || 0;
+                                const likes = parseInt(stats.likeCount) || 0;
+                                const comments = parseInt(stats.commentCount) || 0;
+                                
+                                // Calculate engagement rate
+                                const engagement = views > 0 ? ((likes + comments) / views) * 100 : 0;
+                                
+                                // Calculate performance rating
+                                let performanceRating;
+                                if (engagement > 10) performanceRating = "high";
+                                else if (engagement > 5) performanceRating = "medium";
+                                else performanceRating = "low";
+                                
+                                const videoData = {
+                                    id: video.id,
+                                    title: snippet.title,
+                                    thumbnail: snippet.thumbnails.medium ? snippet.thumbnails.medium.url : snippet.thumbnails.default.url,
+                                    views: views,
+                                    likes: likes,
+                                    comments: comments,
+                                    publishedAt: snippet.publishedAt,
+                                    performance: Math.min(engagement * 10, 100), // Scale for better visualization
+                                    performanceRating: performanceRating,
+                                    engagement: engagement,
+                                    duration: contentDetails.duration
+                                };
+                                
+                                // Determine if it's a short based on duration (less than 60 seconds)
+                                // YouTube Shorts are typically less than 60 seconds
+                                const duration = contentDetails.duration;
+                                const isShort = isShortVideo(duration);
+                                
+                                if (isShort) {
+                                    currentChannelShorts.push(videoData);
+                                } else {
+                                    currentChannelVideos.push(videoData);
+                                }
+                            });
+                            
+                            // Update video statistics
+                            updateVideoStats();
+                            
+                            // Render content
+                            renderContent();
+                            
+                            // Render pagination
+                            renderPagination();
+                        });
+                })
+                .catch(error => {
+                    console.error('Error fetching videos:', error);
+                    document.getElementById('videoList').innerHTML = `
+                        <div class="col-12">
+                            <div class="empty-state">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <h5>Error Loading Videos</h5>
+                                <p>Could not fetch video data. Please try again later.</p>
+                            </div>
+                        </div>
+                    `;
+                    document.getElementById('shortsList').innerHTML = `
+                        <div class="col-12">
+                            <div class="empty-state">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <h5>Error Loading Shorts</h5>
+                                <p>Could not fetch shorts data. Please try again later.</p>
+                            </div>
+                        </div>
+                    `;
+                });
+        }
+        
+        function isShortVideo(duration) {
+            // YouTube Shorts are typically less than 60 seconds
+            // Duration format: PT#M#S or PT#S
+            if (!duration) return false;
+            
+            const match = duration.match(/PT(?:(\d+)M)?(?:(\d+)S)?/);
+            if (!match) return false;
+            
+            const minutes = match[1] ? parseInt(match[1]) : 0;
+            const seconds = match[2] ? parseInt(match[2]) : 0;
+            
+            return minutes === 0 && seconds <= 60;
+        }
+        
+        function updateVideoStats() {
+            // Update general video stats
+            const totalVideoViews = currentChannelVideos.reduce((sum, video) => sum + video.views, 0) + 
+                                  currentChannelShorts.reduce((sum, short) => sum + short.views, 0);
+            const avgLikes = Math.round((currentChannelVideos.reduce((sum, video) => sum + video.likes, 0) + 
+                                       currentChannelShorts.reduce((sum, short) => sum + short.likes, 0)) / 
+                                       (currentChannelVideos.length + currentChannelShorts.length));
+            const avgComments = Math.round((currentChannelVideos.reduce((sum, video) => sum + video.comments, 0) + 
+                                          currentChannelShorts.reduce((sum, short) => sum + short.comments, 0)) / 
+                                          (currentChannelVideos.length + currentChannelShorts.length));
+            const avgEngagement = ((currentChannelVideos.reduce((sum, video) => sum + video.engagement, 0) + 
+                                  currentChannelShorts.reduce((sum, short) => sum + short.engagement, 0)) / 
+                                  (currentChannelVideos.length + currentChannelShorts.length)).toFixed(2);
+            
+            document.getElementById('totalVideoViews').innerText = formatNumber(totalVideoViews);
+            document.getElementById('avgVideoLikes').innerText = formatNumber(avgLikes);
+            document.getElementById('avgVideoComments').innerText = formatNumber(avgComments);
+            document.getElementById('avgEngagement').innerText = `${avgEngagement}%`;
+            
+            // Update shorts-specific stats
+            const shortsViews = currentChannelShorts.reduce((sum, short) => sum + short.views, 0);
+            const shortsEngagement = currentChannelShorts.length > 0 ? 
+                (currentChannelShorts.reduce((sum, short) => sum + short.engagement, 0) / currentChannelShorts.length).toFixed(2) : 0;
+            
+            document.getElementById('shortsCount').innerText = `${currentChannelShorts.length} Shorts`;
+            document.getElementById('shortsViews').innerText = `${formatNumber(shortsViews)} Views`;
+            document.getElementById('shortsEngagement').innerText = `${shortsEngagement}% Engagement`;
+            
+            document.getElementById('shortsOnlyCount').innerText = `${currentChannelShorts.length} Shorts`;
+            document.getElementById('shortsOnlyViews').innerText = `${formatNumber(shortsViews)} Views`;
+            document.getElementById('shortsOnlyEngagement').innerText = `${shortsEngagement}% Engagement`;
+            
+            // Update videos-specific stats
+            const videosViews = currentChannelVideos.reduce((sum, video) => sum + video.views, 0);
+            const videosEngagement = currentChannelVideos.length > 0 ? 
+                (currentChannelVideos.reduce((sum, video) => sum + video.engagement, 0) / currentChannelVideos.length).toFixed(2) : 0;
+            
+            document.getElementById('videosCount').innerText = `${currentChannelVideos.length} Videos`;
+            document.getElementById('videosViews').innerText = `${formatNumber(videosViews)} Views`;
+            document.getElementById('videosEngagement').innerText = `${videosEngagement}% Engagement`;
+            
+            document.getElementById('videosOnlyCount').innerText = `${currentChannelVideos.length} Videos`;
+            document.getElementById('videosOnlyViews').innerText = `${formatNumber(videosViews)} Views`;
+            document.getElementById('videosOnlyEngagement').innerText = `${videosEngagement}% Engagement`;
+        }
+        
+        function renderContent() {
+            const sortBy = document.getElementById('videoSort').value;
+            const searchQuery = document.getElementById('videoSearch').value.toLowerCase();
+            const activeContentTab = document.querySelector('.content-tab.active').getAttribute('data-content');
+            
+            // Render videos
+            if (activeContentTab === 'all' || activeContentTab === 'videos') {
+                renderVideoList(currentChannelVideos, 'videoList', searchQuery, sortBy);
+                if (activeContentTab === 'videos') {
+                    renderVideoList(currentChannelVideos, 'videosOnlyList', searchQuery, sortBy);
+                }
+            }
+            
+            // Render shorts
+            if (activeContentTab === 'all' || activeContentTab === 'shorts') {
+                renderShortsList(currentChannelShorts, 'shortsList', searchQuery, sortBy);
+                if (activeContentTab === 'shorts') {
+                    renderShortsList(currentChannelShorts, 'shortsOnlyList', searchQuery, sortBy);
+                }
+            }
+        }
+        
+        function renderVideoList(videos, containerId, searchQuery, sortBy) {
+            const videoListElement = document.getElementById(containerId);
+            
+            if (videos.length === 0) {
+                videoListElement.innerHTML = `
+                    <div class="col-12">
+                        <div class="empty-state">
+                            <i class="fas fa-video"></i>
+                            <h5>No Videos Found</h5>
+                            <p>No videos match your search criteria</p>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Filter videos based on search query
+            let filteredVideos = videos.filter(video => 
+                video.title.toLowerCase().includes(searchQuery)
+            );
+            
+            // Sort videos
+            switch(sortBy) {
+                case 'views':
+                    filteredVideos.sort((a, b) => b.views - a.views);
+                    break;
+                case 'likes':
+                    filteredVideos.sort((a, b) => b.likes - a.likes);
+                    break;
+                case 'date':
+                default:
+                    filteredVideos.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+                    break;
+            }
+            
+            // Generate video cards
+            let videoCardsHTML = '';
+            
+            filteredVideos.forEach(video => {
+                const performanceClass = `performance-${video.performanceRating}`;
+                
+                videoCardsHTML += `
+                    <div class="video-card">
+                        <img src="${video.thumbnail}" alt="${video.title}" class="video-thumb">
+                        <div class="video-info">
+                            <div class="video-title">${video.title}</div>
+                            <div class="video-meta">
+                                <span>${formatDate(video.publishedAt)}</span>
+                                <span class="performance-badge ${performanceClass}">
+                                    ${video.performanceRating.toUpperCase()}
+                                </span>
+                            </div>
+                            <div class="video-stats">
+                                <div class="video-stat">
+                                    <i class="fas fa-eye"></i>
+                                    <span>${formatNumber(video.views)}</span>
+                                </div>
+                                <div class="video-stat">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>${formatNumber(video.likes)}</span>
+                                </div>
+                                <div class="video-stat">
+                                    <i class="fas fa-comment"></i>
+                                    <span>${formatNumber(video.comments)}</span>
+                                </div>
+                            </div>
+                            <div class="video-engagement">
+                                <div class="d-flex justify-content-between">
+                                    <span>Engagement: ${video.engagement.toFixed(2)}%</span>
+                                    <span>Performance: ${Math.round(video.performance)}%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" 
+                                         style="width: ${video.performance}%; background-color: ${getPerformanceColor(video.performance)}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            videoListElement.innerHTML = videoCardsHTML;
+        }
+        
+        function renderShortsList(shorts, containerId, searchQuery, sortBy) {
+            const shortsListElement = document.getElementById(containerId);
+            
+            if (shorts.length === 0) {
+                shortsListElement.innerHTML = `
+                    <div class="col-12">
+                        <div class="empty-state">
+                            <i class="fas fa-music"></i>
+                            <h5>No Shorts Found</h5>
+                            <p>No shorts match your search criteria</p>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Filter shorts based on search query
+            let filteredShorts = shorts.filter(short => 
+                short.title.toLowerCase().includes(searchQuery)
+            );
+            
+            // Sort shorts
+            switch(sortBy) {
+                case 'views':
+                    filteredShorts.sort((a, b) => b.views - a.views);
+                    break;
+                case 'likes':
+                    filteredShorts.sort((a, b) => b.likes - a.likes);
+                    break;
+                case 'date':
+                default:
+                    filteredShorts.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+                    break;
+            }
+            
+            // Generate shorts cards
+            let shortsCardsHTML = '';
+            
+            filteredShorts.forEach(short => {
+                shortsCardsHTML += `
+                    <div class="shorts-card">
+                        <div class="shorts-badge">SHORTS</div>
+                        <img src="${short.thumbnail}" alt="${short.title}" class="shorts-thumb">
+                        <div class="shorts-info">
+                            <div class="shorts-title-text">${short.title}</div>
+                            <div class="shorts-stats">
+                                <span><i class="fas fa-eye"></i> ${formatNumber(short.views)}</span>
+                                <span><i class="fas fa-thumbs-up"></i> ${formatNumber(short.likes)}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            shortsListElement.innerHTML = shortsCardsHTML;
+        }
+        
+        function renderPagination() {
+            // This would be implemented for pagination if needed
+            // For simplicity, we're not implementing pagination in this example
+        }
+        
+        function getPerformanceColor(performance) {
+            if (performance > 80) return '#28a745';
+            if (performance > 50) return '#ffc107';
+            return '#dc3545';
+        }
+        
+        // Chart generation functions
+        function generateCharts() {
+            // Destroy existing charts
+            Object.values(charts).forEach(chart => {
+                if (chart) chart.destroy();
+            });
+            charts = {};
+            
+            // Performance Chart
+            const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+            charts.performance = new Chart(performanceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Subscribers', 'Views', 'Videos', 'Engagement'],
+                    datasets: [{
+                        label: 'Performance Metrics',
+                        data: [
+                            parseInt(currentChannelData.statistics.subscriberCount) / 1000,
+                            parseInt(currentChannelData.statistics.viewCount) / 1000000,
+                            parseInt(currentChannelData.statistics.videoCount),
+                            Math.random() * 100
+                        ],
+                        backgroundColor: [
+                            'rgba(220, 20, 60, 0.7)',
+                            'rgba(0, 56, 147, 0.7)',
+                            'rgba(255, 107, 107, 0.7)',
+                            'rgba(40, 167, 69, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgb(220, 20, 60)',
+                            'rgb(0, 56, 147)',
+                            'rgb(255, 107, 107)',
+                            'rgb(40, 167, 69)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            
+            // Content Type Chart
+            const contentTypeCtx = document.getElementById('contentTypeChart').getContext('2d');
+            charts.contentType = new Chart(contentTypeCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Regular Videos', 'Shorts'],
+                    datasets: [{
+                        data: [currentChannelVideos.length, currentChannelShorts.length],
+                        backgroundColor: [
+                            'rgba(0, 56, 147, 0.7)',
+                            'rgba(255, 107, 107, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgb(0, 56, 147)',
+                            'rgb(255, 107, 107)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+            
+            // Engagement Chart
+            const engagementCtx = document.getElementById('engagementChart').getContext('2d');
+            charts.engagement = new Chart(engagementCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Engagement Rate',
+                        data: [5.2, 7.1, 6.8, 8.3, 7.9, 9.2],
+                        backgroundColor: 'rgba(40, 167, 69, 0.2)',
+                        borderColor: 'rgb(40, 167, 69)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 15
+                        }
+                    }
+                }
+            });
+            
+            // Growth Chart
+            const growthCtx = document.getElementById('growthChart').getContext('2d');
+            charts.growth = new Chart(growthCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                    datasets: [{
+                        label: 'Subscribers',
+                        data: [12000, 14500, 16800, 19200, 22100, 25800, 30100],
+                        backgroundColor: 'rgba(220, 20, 60, 0.2)',
+                        borderColor: 'rgb(220, 20, 60)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    }, {
+                        label: 'Views',
+                        data: [450000, 520000, 610000, 730000, 890000, 1050000, 1250000],
+                        backgroundColor: 'rgba(0, 56, 147, 0.2)',
+                        borderColor: 'rgb(0, 56, 147)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        yAxisID: 'y1'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Subscribers'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: {
+                                display: true,
+                                text: 'Views'
+                            },
+                            grid: {
+                                drawOnChartArea: false
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Insights Chart
+            const insightsCtx = document.getElementById('insightsChart').getContext('2d');
+            charts.insights = new Chart(insightsCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Content Quality', 'Engagement', 'Consistency', 'Growth', 'Audience Retention'],
+                    datasets: [{
+                        label: 'Your Channel',
+                        data: [8, 7, 6, 8, 7],
+                        backgroundColor: 'rgba(220, 20, 60, 0.2)',
+                        borderColor: 'rgb(220, 20, 60)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgb(220, 20, 60)'
+                    }, {
+                        label: 'Industry Average',
+                        data: [6, 5, 7, 5, 6],
+                        backgroundColor: 'rgba(0, 56, 147, 0.2)',
+                        borderColor: 'rgb(0, 56, 147)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgb(0, 56, 147)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 10
+                        }
+                    }
+                }
+            });
+            
+            // Update growth metrics
+            document.getElementById('weeklyGrowth').innerText = `${(Math.random() * 5 + 1).toFixed(1)}%`;
+            document.getElementById('monthlyGrowth').innerText = `${(Math.random() * 15 + 5).toFixed(1)}%`;
+            document.getElementById('quarterlyGrowth').innerText = `${(Math.random() * 30 + 10).toFixed(1)}%`;
+        }
+        
+        function generateWordCloud() {
+            const wordCloudElement = document.getElementById('wordCloud');
+            wordCloudElement.innerHTML = '';
+            
+            // Extract words from video titles (simulated)
+            const words = [
+                { text: 'Tutorial', size: 24 },
+                { text: 'Review', size: 20 },
+                { text: 'How to', size: 22 },
+                { text: 'Guide', size: 18 },
+                { text: 'Tips', size: 16 },
+                { text: 'Tricks', size: 14 },
+                { text: 'Best', size: 20 },
+                { text: 'Top', size: 18 },
+                { text: 'Easy', size: 16 },
+                { text: 'Quick', size: 14 },
+                { text: 'Amazing', size: 12 },
+                { text: 'Secret', size: 10 }
+            ];
+            
+            words.forEach(word => {
+                const wordElement = document.createElement('div');
+                wordElement.className = 'word-item';
+                wordElement.innerText = word.text;
+                wordElement.style.fontSize = `${word.size}px`;
+                wordCloudElement.appendChild(wordElement);
+            });
+        }
+        
+        function generateHeatmap() {
+            const heatmapElement = document.getElementById('uploadHeatmap');
+            heatmapElement.innerHTML = '';
+            
+            // Generate days of week labels
+            const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+            days.forEach(day => {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'heatmap-cell';
+                dayElement.style.backgroundColor = '#f8f9fa';
+                dayElement.innerText = day;
+                heatmapElement.appendChild(dayElement);
+            });
+            
+            // Generate heatmap cells (simulated data)
+            for (let hour = 0; hour < 24; hour++) {
+                for (let day = 0; day < 7; day++) {
+                    const cellElement = document.createElement('div');
+                    cellElement.className = 'heatmap-cell';
+                    
+                    // Random upload frequency for demonstration
+                    const uploads = Math.floor(Math.random() * 6);
+                    let color;
+                    
+                    if (uploads === 0) color = '#ebedf0';
+                    else if (uploads <= 2) color = '#c6e48b';
+                    else if (uploads <= 4) color = '#7bc96f';
+                    else color = '#239a3b';
+                    
+                    cellElement.style.backgroundColor = color;
+                    cellElement.title = `${days[day]} ${hour}:00 - ${uploads} uploads`;
+                    heatmapElement.appendChild(cellElement);
+                }
+            }
+        }
+        
+        function generateInsights() {
+            // Generate AI-powered insights (simulated)
+            const contentTypes = ['tutorials', 'reviews', 'vlogs', 'entertainment', 'educational'];
+            const metrics = ['subscriber growth', 'view duration', 'engagement rate', 'click-through rate'];
+            const areas = ['thumbnail design', 'video titles', 'content pacing', 'call-to-action placement'];
+            const suggestions = [
+                'creating more interactive content',
+                'improving your video thumbnails',
+                'engaging more with your audience in comments',
+                'collaborating with other creators in your niche'
+            ];
+            
+            const randomContentType = contentTypes[Math.floor(Math.random() * contentTypes.length)];
+            const randomMetric = metrics[Math.floor(Math.random() * metrics.length)];
+            const randomArea = areas[Math.floor(Math.random() * areas.length)];
+            const randomSuggestion = suggestions[Math.floor(Math.random() * suggestions.length)];
+            const randomTime = ['morning', 'afternoon', 'evening', 'weekends'][Math.floor(Math.random() * 4)];
+            const randomComparison = ['higher', 'lower'][Math.floor(Math.random() * 2)];
+            
+            document.getElementById('contentStrategyInsight').innerText = 
+                `Based on your channel's performance, we recommend focusing on ${randomContentType} content as it generates the highest engagement.`;
+            
+            document.getElementById('performanceInsight').innerText = 
+                `Your channel shows strong growth in ${randomMetric} but could improve in ${randomArea}. Consider ${randomSuggestion}.`;
+            
+            document.getElementById('audienceInsight').innerText = 
+                `Your audience is most active during the ${randomTime}. Consider scheduling uploads during these times for maximum visibility.`;
+            
+            document.getElementById('competitiveInsight').innerText = 
+                `Compared to similar channels in your niche, your engagement rate is ${randomComparison}. Focus on ${randomArea} to improve competitiveness.`;
+        }
+        
+        function initializeQuickAnalyticsChart() {
+            const quickAnalyticsCtx = document.getElementById('quickAnalyticsChart').getContext('2d');
+            charts.quickAnalytics = new Chart(quickAnalyticsCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Videos', 'Shorts', 'Livestreams'],
+                    datasets: [{
+                        data: [65, 25, 10],
+                        backgroundColor: [
+                            'rgba(0, 56, 147, 0.7)',
+                            'rgba(255, 107, 107, 0.7)',
+                            'rgba(40, 167, 69, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgb(0, 56, 147)',
+                            'rgb(255, 107, 107)',
+                            'rgb(40, 167, 69)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+            
+            // Update top content
+            document.getElementById('topContent').innerText = 'Tutorial videos (avg. 15K views)';
+        }
+        
+        // Comparison functionality
+        function showComparisonModal() {
+            // Populate channel dropdowns
+            const channel1Select = document.getElementById('compareChannel1');
+            const channel2Select = document.getElementById('compareChannel2');
+            
+            channel1Select.innerHTML = '<option value="">Select first channel...</option>';
+            channel2Select.innerHTML = '<option value="">Select second channel...</option>';
+            
+            savedChannels.forEach(channel => {
+                const option1 = document.createElement('option');
+                option1.value = channel.id;
+                option1.textContent = channel.snippet.title;
+                channel1Select.appendChild(option1);
+                
+                const option2 = document.createElement('option');
+                option2.value = channel.id;
+                option2.textContent = channel.snippet.title;
+                channel2Select.appendChild(option2);
+            });
+            
+            // Show modal
+            const comparisonModal = new bootstrap.Modal(document.getElementById('comparisonModal'));
+            comparisonModal.show();
+        }
+        
+        function performComparison() {
+            const channel1Id = document.getElementById('compareChannel1').value;
+            const channel2Id = document.getElementById('compareChannel2').value;
+            
+            const channel1 = savedChannels.find(ch => ch.id === channel1Id);
+            const channel2 = savedChannels.find(ch => ch.id === channel2Id);
+            
+            if (!channel1 || !channel2) {
+                showError('One or both channels not found in saved channels.');
+                return;
+            }
+            
+            const resultsHTML = `
+                <div class="comparison-card">
+                    <h5 class="mb-3">Channel Comparison</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>${channel1.snippet.title}</h6>
+                            <div class="stats-card">
+                                <div class="stats-number">${formatNumber(channel1.statistics.subscriberCount)}</div>
+                                <div class="stats-label">Subscribers</div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stats-number">${formatNumber(channel1.statistics.viewCount)}</div>
+                                <div class="stats-label">Total Views</div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stats-number">${formatNumber(channel1.statistics.videoCount)}</div>
+                                <div class="stats-label">Videos</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>${channel2.snippet.title}</h6>
+                            <div class="stats-card">
+                                <div class="stats-number">${formatNumber(channel2.statistics.subscriberCount)}</div>
+                                <div class="stats-label">Subscribers</div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stats-number">${formatNumber(channel2.statistics.viewCount)}</div>
+                                <div class="stats-label">Total Views</div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stats-number">${formatNumber(channel2.statistics.videoCount)}</div>
+                                <div class="stats-label">Videos</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h6>Performance Comparison</h6>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Metric</th>
+                                        <th>${channel1.snippet.title}</th>
+                                        <th>${channel2.snippet.title}</th>
+                                        <th>Difference</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Subscribers</td>
+                                        <td>${formatNumber(channel1.statistics.subscriberCount)}</td>
+                                        <td>${formatNumber(channel2.statistics.subscriberCount)}</td>
+                                        <td class="${channel1.statistics.subscriberCount > channel2.statistics.subscriberCount ? 'text-success' : 'text-danger'}">
+                                            ${formatNumber(Math.abs(channel1.statistics.subscriberCount - channel2.statistics.subscriberCount))}
+                                            ${channel1.statistics.subscriberCount > channel2.statistics.subscriberCount ? 'more' : 'fewer'}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Views</td>
+                                        <td>${formatNumber(channel1.statistics.viewCount)}</td>
+                                        <td>${formatNumber(channel2.statistics.viewCount)}</td>
+                                        <td class="${channel1.statistics.viewCount > channel2.statistics.viewCount ? 'text-success' : 'text-danger'}">
+                                            ${formatNumber(Math.abs(channel1.statistics.viewCount - channel2.statistics.viewCount))}
+                                            ${channel1.statistics.viewCount > channel2.statistics.viewCount ? 'more' : 'fewer'}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Videos</td>
+                                        <td>${formatNumber(channel1.statistics.videoCount)}</td>
+                                        <td>${formatNumber(channel2.statistics.videoCount)}</td>
+                                        <td class="${channel1.statistics.videoCount > channel2.statistics.videoCount ? 'text-success' : 'text-danger'}">
+                                            ${formatNumber(Math.abs(channel1.statistics.videoCount - channel2.statistics.videoCount))}
+                                            ${channel1.statistics.videoCount > channel2.statistics.videoCount ? 'more' : 'fewer'}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Avg. Views per Video</td>
+                                        <td>${formatNumber(Math.round(channel1.statistics.viewCount / channel1.statistics.videoCount))}</td>
+                                        <td>${formatNumber(Math.round(channel2.statistics.viewCount / channel2.statistics.videoCount))}</td>
+                                        <td class="${(channel1.statistics.viewCount / channel1.statistics.videoCount) > (channel2.statistics.viewCount / channel2.statistics.videoCount) ? 'text-success' : 'text-danger'}">
+                                            ${formatNumber(Math.abs(Math.round(channel1.statistics.viewCount / channel1.statistics.videoCount) - Math.round(channel2.statistics.viewCount / channel2.statistics.videoCount)))}
+                                            ${(channel1.statistics.viewCount / channel1.statistics.videoCount) > (channel2.statistics.viewCount / channel2.statistics.videoCount) ? 'more' : 'fewer'}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('comparisonResults').innerHTML = resultsHTML;
+            document.getElementById('comparisonResults').style.display = 'block';
+        }
+        
+        // Export functionality
+        function showExportModal() {
+            const exportModal = new bootstrap.Modal(document.getElementById('exportModal'));
+            exportModal.show();
+        }
+        
+        function exportData(type) {
+            const format = document.querySelector('input[name="exportFormat"]:checked').value;
+            
+            let data = {};
+            let filename = '';
+            
+            switch(type) {
+                case 'channel':
+                    data = currentChannelData;
+                    filename = `channel_data_${currentChannelData.id}.${format}`;
+                    break;
+                case 'videos':
+                    data = currentChannelVideos;
+                    filename = `videos_data_${currentChannelData.id}.${format}`;
+                    break;
+                case 'shorts':
+                    data = currentChannelShorts;
+                    filename = `shorts_data_${currentChannelData.id}.${format}`;
+                    break;
+                case 'all':
+                    data = {
+                        channel: currentChannelData,
+                        videos: currentChannelVideos,
+                        shorts: currentChannelShorts
+                    };
+                    filename = `all_data_${currentChannelData.id}.${format}`;
+                    break;
+            }
+            
+            let content = '';
+            let mimeType = '';
+            
+            if (format === 'json') {
+                content = JSON.stringify(data, null, 2);
+                mimeType = 'application/json';
+            } else {
+                // For CSV, we'd need to convert the data
+                // This is a simplified version
+                content = convertToCSV(data);
+                mimeType = 'text/csv';
+            }
+            
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showSuccess(`Data exported successfully as ${filename}`);
+            
+            // Close modal
+            const exportModal = bootstrap.Modal.getInstance(document.getElementById('exportModal'));
+            exportModal.hide();
+        }
+        
+        function convertToCSV(data) {
+            // This is a simplified CSV conversion
+            // In a real implementation, you'd handle nested objects and arrays properly
+            if (Array.isArray(data)) {
+                if (data.length === 0) return '';
+                
+                const headers = Object.keys(data[0]).join(',');
+                const rows = data.map(item => 
+                    Object.values(item).map(val => 
+                        typeof val === 'string' && val.includes(',') ? `"${val}"` : val
+                    ).join(',')
+                );
+                return [headers, ...rows].join('\n');
+            } else {
+                // For single object
+                const headers = Object.keys(data).join(',');
+                const row = Object.values(data).map(val => 
+                    typeof val === 'string' && val.includes(',') ? `"${val}"` : val
+                ).join(',');
+                return [headers, row].join('\n');
+            }
+        }
+        
+        // The rest of the functions remain the same as in the original code
+        // ... (saveCurrentChannel, renderSavedChannels, etc.)
+
+        function saveCurrentChannel() {
+            if (!currentChannelData) {
+                showError('No channel data to save. Please search for a channel first.');
+                return;
+            }
+            
+            const channelId = currentChannelData.id;
+            
+            // Check if channel is already saved
+            const existingIndex = savedChannels.findIndex(channel => channel.id === channelId);
+            
+            if (existingIndex !== -1) {
+                // Update existing channel
+                savedChannels[existingIndex] = currentChannelData;
+                showSuccess('Channel updated in your saved list!');
+            } else {
+                // Add new channel
+                savedChannels.push(currentChannelData);
+                showSuccess('Channel saved successfully!');
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('savedChannels', JSON.stringify(savedChannels));
+            
+            // Update saved channels list
+            renderSavedChannels();
+        }
+        
+        function renderSavedChannels() {
+            const savedChannelsList = document.getElementById('savedChannelsList');
+            
+            if (savedChannels.length === 0) {
+                savedChannelsList.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-bookmark"></i>
+                        <h5>No Saved Channels</h5>
+                        <p>Save channels to access them quickly later</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            savedChannelsList.innerHTML = '';
+            
+            savedChannels.forEach(channel => {
+                const snippet = channel.snippet;
+                const statistics = channel.statistics;
+                
+                const channelCard = document.createElement('div');
+                channelCard.className = 'saved-channel-card';
+                channelCard.innerHTML = `
+                    ${snippet.thumbnails && snippet.thumbnails.default ? 
+                        `<img src="${snippet.thumbnails.default.url}" alt="${snippet.title}" class="saved-channel-thumb">` : 
+                        `<div class="saved-channel-thumb bg-light d-flex align-items-center justify-content-center">
+                            <i class="fab fa-youtube text-muted"></i>
+                        </div>`
+                    }
+                    <div class="saved-channel-info">
+                        <div class="saved-channel-title">${snippet.title}</div>
+                        <div class="saved-channel-subscribers">${formatNumber(statistics.subscriberCount)} subscribers</div>
+                    </div>
+                    <div class="saved-channel-actions">
+                        <button class="action-btn" onclick="loadSavedChannel('${channel.id}')" title="Load Channel">
+                            <i class="fas fa-external-link-alt"></i>
+                        </button>
+                        <button class="action-btn" onclick="removeSavedChannel('${channel.id}')" title="Remove Channel">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+                
+                savedChannelsList.appendChild(channelCard);
+            });
+        }
+        
+        function loadSavedChannel(channelId) {
+            const channel = savedChannels.find(ch => ch.id === channelId);
+            
+            if (channel) {
+                currentChannelData = channel;
+                
+                const snippet = channel.snippet;
+                const statistics = channel.statistics;
+                const brandingSettings = channel.brandingSettings || {};
+                
+                // Display channel info
+                document.getElementById('channelTitle').innerText = snippet.title;
+                document.getElementById('channelHandle').innerText = brandingSettings.channel?.keywords || `ID: ${channel.id}`;
+                
+                // Set channel avatar
+                const channelAvatar = document.getElementById('channelAvatar');
+                if (snippet.thumbnails && snippet.thumbnails.medium) {
+                    channelAvatar.innerHTML = `<img src="${snippet.thumbnails.medium.url}" alt="${snippet.title}" class="channel-thumbnail">`;
+                } else {
+                    channelAvatar.innerHTML = `<i class="fab fa-youtube"></i>`;
+                }
+                
+                // Overview tab
+                document.getElementById('subscriberCount').innerText = formatNumber(statistics.subscriberCount);
+                document.getElementById('viewCount').innerText = formatNumber(statistics.viewCount);
+                document.getElementById('videoCount').innerText = formatNumber(statistics.videoCount);
+                document.getElementById('joinedDate').innerText = formatDate(snippet.publishedAt);
+                document.getElementById('channelDescription').innerText = snippet.description || 'No description available';
+                
+                // Statistics tab
+                document.getElementById('statsSubscriberCount').innerText = formatNumber(statistics.subscriberCount);
+                document.getElementById('statsViewCount').innerText = formatNumber(statistics.viewCount);
+                document.getElementById('statsVideoCount').innerText = formatNumber(statistics.videoCount);
+                
+                // Calculate additional stats
+                const avgViews = statistics.videoCount > 0 ? Math.round(statistics.viewCount / statistics.videoCount) : 0;
+                document.getElementById('avgViews').innerText = formatNumber(avgViews);
+                
+                // Mock growth rate
+                const growthRate = Math.random() * 5 + 1;
+                document.getElementById('growthRate').innerText = `${growthRate.toFixed(2)}%`;
+                
+                // Mock engagement rate
+                const engagementRate = Math.random() * 10 + 0.5;
+                document.getElementById('engagementRate').innerText = `${engagementRate.toFixed(2)}%`;
+                
+                // Details tab
+                document.getElementById('detailChannelId').innerText = channel.id;
+                document.getElementById('customUrl').innerHTML = brandingSettings.channel?.customUrl ? 
+                    `<a href="https://youtube.com/${brandingSettings.channel.customUrl}" target="_blank">${brandingSettings.channel.customUrl}</a>` : 
+                    'Not set';
+                document.getElementById('country').innerText = snippet.country || 'Not specified';
+                document.getElementById('publishedAt').innerText = formatDate(snippet.publishedAt, true);
+                document.getElementById('privacyStatus').innerText = snippet.privacyStatus || 'Public';
+                document.getElementById('madeForKids').innerText = snippet.contentDetails?.relatedPlaylists?.likes ? 'No' : 'Unknown';
+                
+                // Enable save button
+                document.getElementById('saveChannelBtn').disabled = false;
+                
+                // Set the search input to the channel ID
+                document.getElementById('channelId').value = channel.id;
+                document.getElementById('searchById').checked = true;
+                
+                // Fetch videos for this channel
+                fetchChannelVideos(channel.id);
+                
+                // Generate charts and visualizations
+                generateCharts();
+                generateWordCloud();
+                generateHeatmap();
+                generateInsights();
+                
+                // Show results
+                document.getElementById('resultsCard').style.display = 'block';
+                
+                // Show success message
+                showSuccess('Channel loaded from saved list!');
+                
+                // Activate the overview tab
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                document.querySelector('.tab[data-tab="overview"]').classList.add('active');
+                document.getElementById('overview').classList.add('active');
+            }
+        }
+        
+        function removeSavedChannel(channelId) {
+            savedChannels = savedChannels.filter(channel => channel.id !== channelId);
+            localStorage.setItem('savedChannels', JSON.stringify(savedChannels));
+            renderSavedChannels();
+            showSuccess('Channel removed from saved list!');
+        }
+        
+        function clearAllSavedChannels() {
+            if (confirm('Are you sure you want to clear all saved channels?')) {
+                savedChannels = [];
+                localStorage.setItem('savedChannels', JSON.stringify(savedChannels));
+                renderSavedChannels();
+                showSuccess('All saved channels have been cleared!');
+            }
+        }
+        
+        function clearSearch() {
+            document.getElementById('channelId').value = '';
+            document.getElementById('resultsCard').style.display = 'none';
+            document.getElementById('saveChannelBtn').disabled = true;
+            document.getElementById('errorMessage').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'none';
+        }
+        
+        function addToSearchHistory(channel) {
+            // Check if channel is already in history
+            const existingIndex = searchHistory.findIndex(item => item.id === channel.id);
+            
+            if (existingIndex !== -1) {
+                // Remove existing entry
+                searchHistory.splice(existingIndex, 1);
+            }
+            
+            // Add to beginning of history
+            searchHistory.unshift({
+                id: channel.id,
+                title: channel.snippet.title,
+                thumbnail: channel.snippet.thumbnails?.default?.url,
+                timestamp: new Date().toISOString()
+            });
+            
+            // Keep only the most recent items
+            if (searchHistory.length > 10) {
+                searchHistory = searchHistory.slice(0, 10);
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+            
+            // Update UI
+            renderSearchHistory();
+        }
+        
+        function renderSearchHistory() {
+            const searchHistoryElement = document.getElementById('searchHistory');
+            
+            if (searchHistory.length === 0) {
+                searchHistoryElement.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-history"></i>
+                        <h5>No Recent Searches</h5>
+                        <p>Your search history will appear here</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            searchHistoryElement.innerHTML = '';
+            
+            searchHistory.forEach(item => {
+                const historyItem = document.createElement('div');
+                historyItem.className = 'history-item';
+                historyItem.innerHTML = `
+                    <div class="d-flex align-items-center">
+                        ${item.thumbnail ? 
+                            `<img src="${item.thumbnail}" alt="${item.title}" class="saved-channel-thumb me-2">` : 
+                            `<div class="saved-channel-thumb bg-light d-flex align-items-center justify-content-center me-2">
+                                <i class="fab fa-youtube text-muted"></i>
+                            </div>`
+                        }
+                        <div class="flex-grow-1">
+                            <div class="saved-channel-title">${item.title}</div>
+                            <small class="text-muted">${formatDate(item.timestamp)}</small>
+                        </div>
+                        <button class="action-btn" onclick="loadFromHistory('${item.id}')" title="Load Channel">
+                            <i class="fas fa-external-link-alt"></i>
+                        </button>
+                    </div>
+                `;
+                
+                searchHistoryElement.appendChild(historyItem);
+            });
+        }
+        
+        function loadFromHistory(channelId) {
+            // Try to find the channel in saved channels first
+            const savedChannel = savedChannels.find(ch => ch.id === channelId);
+            
+            if (savedChannel) {
+                loadSavedChannel(channelId);
+                return;
+            }
+            
+            // If not found in saved channels, search for it
+            document.getElementById('channelId').value = channelId;
+            document.getElementById('searchById').checked = true;
+            getChannelInfo();
+        }
+        
+        function showError(message) {
+            const errorMessage = document.getElementById('errorMessage');
+            errorMessage.innerHTML = `<i class="fas fa-exclamation-circle me-2"></i> ${message}`;
+            errorMessage.style.display = 'block';
+        }
+        
+        function showSuccess(message) {
+            const successMessage = document.getElementById('successMessage');
+            successMessage.innerHTML = `<i class="fas fa-check-circle me-2"></i> ${message}`;
+            successMessage.style.display = 'block';
+            
+            // Auto hide after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        }
+        
+        function formatNumber(num) {
+            if (!num) return '0';
+            
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toString();
+        }
+        
+        function formatDate(dateString, full = false) {
+            const options = full 
+                ? { year: 'numeric', month: 'long', day: 'numeric' }
+                : { year: 'numeric', month: 'short', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        }
+        
+        // Tab functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs and contents
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                this.classList.add('active');
+                document.getElementById(this.getAttribute('data-tab')).classList.add('active');
+                
+                // If content tab is clicked, ensure content is loaded
+                if (this.getAttribute('data-tab') === 'content' && currentChannelData && 
+                    (currentChannelVideos.length === 0 && currentChannelShorts.length === 0)) {
+                    fetchChannelVideos(currentChannelData.id);
+                }
+            });
+        });
+        
+        // Allow pressing Enter to submit
+        document.getElementById('channelId').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                getChannelInfo();
+            }
+        });
+        
+        // Update compare button state
+        document.getElementById('compareChannel1').addEventListener('change', updateCompareButton);
+        document.getElementById('compareChannel2').addEventListener('change', updateCompareButton);
+        
+        function updateCompareButton() {
+            const channel1 = document.getElementById('compareChannel1').value;
+            const channel2 = document.getElementById('compareChannel2').value;
+            document.getElementById('compareBtn').disabled = !(channel1 && channel2);
+        }
+    </script>
+</body>
+</html>
