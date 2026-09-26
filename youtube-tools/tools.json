@@ -1,0 +1,184 @@
+{
+  "tools": [
+    {
+      "name": "Channel Analytics Pro",
+      "cat": "Analytics",
+      "icon": "fa-chart-line",
+      "tone": "red",
+      "url": "/youtube-tools/archive/youtube-channel-analytics-pro.html",
+      "tag": "Featured",
+      "desc": "Channel-level analytics and performance insights.",
+      "meta": "Channel"
+    },
+    {
+      "name": "YouTube Analytics",
+      "cat": "Analytics",
+      "icon": "fa-chart-column",
+      "tone": "blue",
+      "url": "/youtube-tools/archive/youtube-analytics.html",
+      "tag": "Analytics",
+      "desc": "Explore practical YouTube analytics information.",
+      "meta": "Analytics"
+    },
+    {
+      "name": "Video Analytics",
+      "cat": "Analytics",
+      "icon": "fa-chart-simple",
+      "tone": "blue",
+      "url": "/youtube-tools/archive/youtube-video-analytics.html",
+      "tag": "Analytics",
+      "desc": "Analyze individual video performance signals.",
+      "meta": "Video"
+    },
+    {
+      "name": "Video SEO Analyzer",
+      "cat": "SEO & Metadata",
+      "icon": "fa-magnifying-glass-chart",
+      "tone": "blue",
+      "url": "/youtube-tools/archive/youtube-video-seo-analyzer.html",
+      "tag": "Popular",
+      "desc": "Audit titles, descriptions and discovery signals.",
+      "meta": "SEO"
+    },
+    {
+      "name": "AI SEO Deep Analyzer",
+      "cat": "SEO & Metadata",
+      "icon": "fa-brain",
+      "tone": "purple",
+      "url": "/youtube-tools/archive/ai-powered-youtube-seo-deep-analyzer.html",
+      "tag": "AI",
+      "desc": "Explore deeper content and SEO optimization opportunities.",
+      "meta": "AI + SEO"
+    },
+    {
+      "name": "Title + Description + Tags",
+      "cat": "SEO & Metadata",
+      "icon": "fa-wand-magic-sparkles",
+      "tone": "red",
+      "url": "/youtube-tools/archive/youtube-video-title-description-tag.html",
+      "tag": "Creator",
+      "desc": "Build a complete metadata package for a video.",
+      "meta": "Metadata"
+    },
+    {
+      "name": "Title Generator",
+      "cat": "SEO & Metadata",
+      "icon": "fa-heading",
+      "tone": "red",
+      "url": "/youtube-tools/archive/youtube-title-generator.html",
+      "tag": "Creator",
+      "desc": "Generate title ideas for your next upload.",
+      "meta": "Titles"
+    },
+    {
+      "name": "Tag Extractor",
+      "cat": "SEO & Metadata",
+      "icon": "fa-tags",
+      "tone": "purple",
+      "url": "/youtube-tools/archive/youtube-tag-extractor.html",
+      "tag": "SEO",
+      "desc": "Extract tags from a YouTube video workflow.",
+      "meta": "Tags"
+    },
+    {
+      "name": "Tag Generator",
+      "cat": "SEO & Metadata",
+      "icon": "fa-hashtag",
+      "tone": "purple",
+      "url": "/youtube-tools/archive/youtube-tag-generator.html",
+      "tag": "New",
+      "desc": "Generate useful tag ideas around your topic.",
+      "meta": "Tags"
+    },
+    {
+      "name": "Hashtag Extractor",
+      "cat": "SEO & Metadata",
+      "icon": "fa-hashtag",
+      "tone": "purple",
+      "url": "/youtube-tools/archive/youtube-hashtag-extractor.html",
+      "tag": "SEO",
+      "desc": "Extract hashtags from YouTube content.",
+      "meta": "Hashtags"
+    },
+    {
+      "name": "Trending Keywords",
+      "cat": "Research & Trends",
+      "icon": "fa-arrow-trend-up",
+      "tone": "green",
+      "url": "/youtube-tools/archive/youtube-trending-keywords.html",
+      "tag": "Research",
+      "desc": "Explore keyword ideas for YouTube discovery.",
+      "meta": "Keywords"
+    },
+    {
+      "name": "Nepal Trend Explorer",
+      "cat": "Research & Trends",
+      "icon": "fa-earth-asia",
+      "tone": "green",
+      "url": "/youtube-tools/archive/youtube-nepal-trend-explorer.html",
+      "tag": "Nepal",
+      "desc": "Explore YouTube trend research with a Nepal focus.",
+      "meta": "Trends"
+    },
+    {
+      "name": "Channel Info Extractor",
+      "cat": "Research & Trends",
+      "icon": "fa-circle-info",
+      "tone": "green",
+      "url": "/youtube-tools/archive/youtube-channel-info-extractor.html",
+      "tag": "Research",
+      "desc": "Extract useful public channel information.",
+      "meta": "Channel"
+    },
+    {
+      "name": "Channel ID Finder",
+      "cat": "Research & Trends",
+      "icon": "fa-fingerprint",
+      "tone": "purple",
+      "url": "/youtube-tools/archive/youtube-channel-id-finder-analytics.html",
+      "tag": "Research",
+      "desc": "Find a YouTube channel ID for analysis workflows.",
+      "meta": "Channel"
+    },
+    {
+      "name": "Description Extractor",
+      "cat": "Research & Trends",
+      "icon": "fa-file-lines",
+      "tone": "blue",
+      "url": "/youtube-tools/archive/youtube-description-extractor.html",
+      "tag": "Research",
+      "desc": "Pull a video's public description into a clean view.",
+      "meta": "Description"
+    },
+    {
+      "name": "Thumbnail Downloader",
+      "cat": "Thumbnails",
+      "icon": "fa-image",
+      "tone": "red",
+      "url": "/youtube-tools/archive/youtube-thumbnail-downloader.html",
+      "tag": "Creator",
+      "desc": "Retrieve available YouTube thumbnail images.",
+      "meta": "Thumbnail"
+    },
+    {
+      "name": "Laxman Nepal Thumbnail",
+      "cat": "Thumbnails",
+      "icon": "fa-photo-film",
+      "tone": "red",
+      "url": "/youtube-tools/archive/laxman-nepal-youtube-thumbnail.html",
+      "tag": "Laxman",
+      "desc": "Laxman Nepal's dedicated YouTube thumbnail utility.",
+      "meta": "Thumbnail"
+    },
+    {
+      "name": "Video Downloader",
+      "cat": "Download",
+      "icon": "fa-download",
+      "tone": "green",
+      "url": "/youtube-tools/archive/youtube-video-download.html",
+      "tag": "Download",
+      "desc": "Open the existing video download utility.",
+      "meta": "Video"
+    }
+  ]
+}
