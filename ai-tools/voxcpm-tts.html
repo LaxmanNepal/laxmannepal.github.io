@@ -4,12 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="VoxCPM AI Text to Speech by Laxman Nepal. Generate expressive English and experimental Nepali or Nepaglish speech using the VoxCPM demo.">
-<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://laxmannepal.com.np/ai-tools/voxcpm-tts.html">
 <meta property="og:title" content="VoxCPM AI Text to Speech — Laxman Nepal">
 <meta property="og:description" content="Use VoxCPM for expressive AI text-to-speech and voice cloning experiments.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://laxmannepal.com.np/ai-tools/voxcpm-tts.html">
+<meta name="twitter:card" content="summary_large_image">
 <title>VoxCPM AI Text to Speech — Laxman Nepal</title>
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/shared-shell.css">
@@ -30,7 +31,7 @@ h1{font-size:clamp(2.1rem,5vw,4rem);line-height:1;letter-spacing:-.05em;margin:1
 .demo-wrap{margin-top:18px;border:1px solid var(--v-line);border-radius:24px;background:#fff;box-shadow:0 20px 60px rgba(16,24,40,.09);overflow:hidden}
 .demo-head{padding:16px 20px;border-bottom:1px solid var(--v-line);display:flex;justify-content:space-between;align-items:center;gap:12px}.demo-head strong{font-size:.92rem}.demo-head span{font-size:.7rem;color:var(--v-muted)}
 iframe{display:block;width:100%;height:900px;border:0;background:#fff}
-.notice{margin-top:18px;padding:15px 17px;border-radius:16px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;font-size:.76rem;line-height:1.6}
+.quick-tests{margin-top:18px}.test-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}.test-tabs button{border:1px solid var(--v-line);background:#fff;border-radius:10px;padding:8px 11px;font-weight:800;font-size:.72rem;cursor:pointer}.test-tabs button.active{background:#101828;color:#fff}.test-box{position:relative}.test-box textarea{width:100%;min-height:150px;resize:vertical;border:1px solid var(--v-line);border-radius:14px;padding:14px;font:inherit;font-size:.82rem;line-height:1.65;box-sizing:border-box;outline:none}.test-box textarea:focus{border-color:rgba(227,27,69,.45);box-shadow:0 0 0 3px rgba(227,27,69,.08)}.copy-test{margin-top:8px;border:0;border-radius:10px;padding:9px 12px;background:#101828;color:#fff;font-weight:800;cursor:pointer;font-size:.72rem}.notice{margin-top:18px;padding:15px 17px;border-radius:16px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;font-size:.76rem;line-height:1.6}
 @media(max-width:760px){.v-shell{padding:12px 10px 40px}.v-hero{padding:28px 20px;border-radius:22px}.v-grid{grid-template-columns:1fr}iframe{height:1050px}.demo-head{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
@@ -48,6 +49,7 @@ iframe{display:block;width:100%;height:900px;border:0;background:#fff}
 <p>Generate expressive speech with VoxCPM through the official OpenBMB Hugging Face demo. This page gives the tool a native Laxman Nepal home while the heavy AI inference stays on the hosted GPU service.</p>
 <div class="v-actions"><a class="v-btn primary" href="#demo">Open voice generator ↓</a><a class="v-btn" href="https://huggingface.co/spaces/openbmb/VoxCPM-Demo" target="_blank" rel="noopener">Open official demo ↗</a></div>
 </section>
+<section class="v-card quick-tests"><h2>Quick TTS test text</h2><div class="test-tabs"><button class="active" data-lang="en">English</button><button data-lang="ne">नेपाली</button><button data-lang="np">Nepaglish</button></div><div class="test-box"><textarea id="testText" aria-label="TTS test text"></textarea><button class="copy-test" id="copyTest">Copy test text</button></div></section>
 <section class="v-grid">
 <article class="v-card"><h2>What you can test</h2><ul><li>English text-to-speech</li><li>Nepali and Nepaglish experiments</li><li>Expressive speech and pacing</li><li>Short reference-audio voice cloning where supported by the demo</li></ul></article>
 <article class="v-card"><h2>Important limitation</h2><p>VoxCPM-0.5B is trained primarily on Chinese and English. OpenBMB states that performance in other languages is not guaranteed, so treat Nepali output as experimental and test it before relying on it for production content.</p></article>
@@ -59,5 +61,16 @@ iframe{display:block;width:100%;height:900px;border:0;background:#fff}
 <div class="notice"><strong>Privacy note:</strong> This page embeds the hosted VoxCPM demo rather than running a GPU model inside GitHub Pages. Do not upload a voice recording unless you are comfortable with the demo provider processing it. For a fully independent version, the next step is a dedicated GPU backend under your control.</div>
 </main>
 <footer class="footer section-wrap"><div><strong>Laxman Nepal</strong><span>© 2026 All rights reserved.</span></div><div><span>VoxCPM AI Voice Studio</span><a href="/ai-tools/">Back to AI tools ↑</a></div></footer>
+<script>
+const samples={
+en:"Hello everyone! Today we're testing an expressive AI voice. Technology is changing quickly, but clear communication still matters. In 2026, creators can use AI to turn a simple script into natural-sounding audio.",
+ne:"नमस्कार सबैलाई! आज हामी एउटा प्राकृतिक र अभिव्यक्तिशील एआई आवाज परीक्षण गर्दैछौँ। प्रविधि निकै छिटो परिवर्तन भइरहेको छ, तर स्पष्ट र स्वाभाविक संवाद अझै पनि महत्त्वपूर्ण छ।",
+np:"Namaste everyone! Aaja hami euta expressive AI voice test gardai chhau. Technology dherai chito change bhairako cha, tara natural communication अझै पनि important cha. Aba yo script lai voice ma convert garera herau."
+};
+const ta=document.getElementById("testText"), tabs=document.querySelectorAll("[data-lang]"); function setSample(k){ta.value=samples[k];tabs.forEach(b=>b.classList.toggle("active",b.dataset.lang===k))}
+setSample("en");
+tabs.forEach(b=>b.addEventListener("click",()=>setSample(b.dataset.lang)));
+document.getElementById("copyTest").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(ta.value);document.getElementById("copyTest").textContent="Copied ✓";setTimeout(()=>document.getElementById("copyTest").textContent="Copy test text",1200)}catch(e){ta.select();document.execCommand("copy")}});
+</script>
 </body>
 </html>
