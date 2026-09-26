@@ -1,0 +1,31 @@
+name: Update Nepal Gold & Silver Rates
+
+on:
+  schedule:
+    - cron: "35 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-gold-rate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update verified market data
+        run: python3 scripts/update_gold_price.py
+
+      - name: Commit updated rates
+        run: |
+          git config user.name "Laxman Nepal Gold Rate Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "No new rate data to commit."
+            exit 0
+          fi
+          git add data/gold-nepal.json gold-price-in-nepal-today/index.html
+          git commit -m "chore: update Nepal gold and silver rates"
+          git push
