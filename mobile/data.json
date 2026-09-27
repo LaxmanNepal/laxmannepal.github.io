@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-27T05:23:32.748961+00:00",
-  "count": 137,
+  "updated_at": "2026-09-27T12:08:26.135237+00:00",
+  "count": 138,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -298,8 +298,8 @@
         "6GB+128GB",
         "6GB+256GB"
       ],
-      "price": 23499,
-      "max_price": 25499,
+      "price": 26999,
+      "max_price": 28999,
       "original_price": null,
       "rams": [
         "6GB"
@@ -921,6 +921,23 @@
       ],
       "price": 53999,
       "max_price": 53999,
+      "original_price": null,
+      "rams": [
+        "8GB"
+      ],
+      "storages": [
+        "256GB"
+      ]
+    },
+    {
+      "id": "oneplus-nord-ce6",
+      "name": "OnePlus Nord CE6",
+      "brand": "OnePlus",
+      "variants": [
+        "OnePlus Nord CE6 - 8GB - 256GB"
+      ],
+      "price": 64999,
+      "max_price": 64999,
       "original_price": null,
       "rams": [
         "8GB"
