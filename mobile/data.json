@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-28T05:30:23.818138+00:00",
-  "count": 132,
+  "updated_at": "2026-09-28T14:03:56.809327+00:00",
+  "count": 134,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -112,6 +112,22 @@
         "64GB",
         "128GB"
       ]
+    },
+    {
+      "id": "honor-choice-t10",
+      "name": "HONOR CHOICE T10",
+      "brand": "HONOR",
+      "variants": [
+        "HONOR CHOICE T10 - 3GB - 32GB"
+      ],
+      "price": 16499,
+      "max_price": 16499,
+      "original_price": null,
+      "rams": [
+        "3GB",
+        "32GB"
+      ],
+      "storages": []
     },
     {
       "id": "honor-600",
@@ -1034,25 +1050,6 @@
       ]
     },
     {
-      "id": "realme-c85-5g",
-      "name": "Realme C85 5G",
-      "brand": "Realme",
-      "variants": [
-        "Realme C85 5G - 8GB - 128GB",
-        "Realme C85 5G - 8GB - 256GB"
-      ],
-      "price": 39999,
-      "max_price": 44999,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "128GB",
-        "256GB"
-      ]
-    },
-    {
       "id": "realme-c85-pro",
       "name": "Realme C85 Pro",
       "brand": "Realme",
@@ -1091,20 +1088,16 @@
       "name": "Realme Note 60x",
       "brand": "Realme",
       "variants": [
-        "3GB+64GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "3GB+64GB"
       ],
       "price": 15999,
-      "max_price": 21999,
+      "max_price": 15999,
       "original_price": null,
       "rams": [
-        "3GB",
-        "4GB"
+        "3GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1112,19 +1105,15 @@
       "name": "Realme Note 70",
       "brand": "Realme",
       "variants": [
-        "6GB+128GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "6GB+128GB"
       ],
-      "price": 16999,
+      "price": 23999,
       "max_price": 23999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
-        "64GB",
         "128GB"
       ]
     },
@@ -1435,16 +1424,20 @@
       "name": "Samsung Galaxy A07",
       "brand": "Samsung",
       "variants": [
-        "4GB+64GB"
+        "4GB+64GB",
+        "4GB+128GB",
+        "6GB+128GB"
       ],
       "price": 25499,
-      "max_price": 25499,
+      "max_price": 33499,
       "original_price": null,
       "rams": [
-        "4GB"
+        "4GB",
+        "6GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -1469,16 +1462,20 @@
       "name": "Samsung Galaxy A17 5G",
       "brand": "Samsung",
       "variants": [
-        "6GB+128GB"
+        "6GB+128GB",
+        "8GB+128GB",
+        "8GB+256GB"
       ],
       "price": 44999,
-      "max_price": 44999,
+      "max_price": 56999,
       "original_price": null,
       "rams": [
-        "6GB"
+        "6GB",
+        "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -1486,16 +1483,19 @@
       "name": "Samsung Galaxy A27 5G",
       "brand": "Samsung",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "8GB + 256GB"
       ],
       "price": 51999,
-      "max_price": 51999,
-      "original_price": 55999,
+      "max_price": 65999,
+      "original_price": 69999,
       "rams": [
-        "6GB"
+        "6GB",
+        "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -1503,15 +1503,19 @@
       "name": "Samsung Galaxy A37 5G",
       "brand": "Samsung",
       "variants": [
-        "8GB+256GB"
+        "8GB+256GB",
+        "12GB+256GB",
+        "8GB+128GB"
       ],
-      "price": 72999,
-      "max_price": 72999,
+      "price": 74999,
+      "max_price": 96999,
       "original_price": null,
       "rams": [
-        "8GB"
+        "8GB",
+        "12GB"
       ],
       "storages": [
+        "128GB",
         "256GB"
       ]
     },
@@ -1520,12 +1524,14 @@
       "name": "Samsung Galaxy A57 5G",
       "brand": "Samsung",
       "variants": [
-        "12GB+256GB"
+        "12GB+256GB",
+        "8GB+256GB"
       ],
-      "price": 107999,
+      "price": 96999,
       "max_price": 107999,
       "original_price": null,
       "rams": [
+        "8GB",
         "12GB"
       ],
       "storages": [
@@ -1615,6 +1621,23 @@
       "price": 123999,
       "max_price": 159999,
       "original_price": 182999,
+      "rams": [
+        "12GB"
+      ],
+      "storages": [
+        "256GB"
+      ]
+    },
+    {
+      "id": "samsung-galaxy-z-flip-8",
+      "name": "Samsung Galaxy Z Flip 8",
+      "brand": "Samsung",
+      "variants": [
+        "12GB+256GB"
+      ],
+      "price": 194999,
+      "max_price": 194999,
+      "original_price": null,
       "rams": [
         "12GB"
       ],
@@ -1799,14 +1822,12 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB",
-        "4GB + 128GB"
+        "6GB + 128GB"
       ],
-      "price": 29999,
+      "price": 32999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
@@ -1835,18 +1856,16 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+64GB",
-        "4GB+128GB"
+        "4GB+64GB"
       ],
       "price": 21999,
-      "max_price": 25999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -2167,18 +2186,16 @@
       "name": "ZTE Nubia A57",
       "brand": "ZTE",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 22999,
-      "max_price": 24999,
+      "max_price": 22999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -2303,6 +2320,25 @@
       ]
     },
     {
+      "id": "iphone-17",
+      "name": "iPhone 17",
+      "brand": "Apple",
+      "variants": [
+        "8GB+256GB",
+        "8GB+512GB"
+      ],
+      "price": 173499,
+      "max_price": 215699,
+      "original_price": null,
+      "rams": [
+        "8GB"
+      ],
+      "storages": [
+        "256GB",
+        "512GB"
+      ]
+    },
+    {
       "id": "iphone-17-pro",
       "name": "iPhone 17 Pro",
       "brand": "Apple",
@@ -2351,15 +2387,17 @@
       "name": "iPhone 17e",
       "brand": "Apple",
       "variants": [
-        "8GB+512GB"
+        "8GB+512GB",
+        "8GB+256GB"
       ],
-      "price": 175099,
+      "price": 132499,
       "max_price": 175099,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
+        "256GB",
         "512GB"
       ]
     },
