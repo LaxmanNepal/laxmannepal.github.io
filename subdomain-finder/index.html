@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Free subdomain finder using Certificate Transparency data. Search indexed subdomains for any domain with first-seen dates.">
+<meta name="keywords" content="subdomain finder, subdomain enumeration, domain scanner, certificate transparency, crt.name, DNS, OSINT">
+<link rel="canonical" href="https://laxmannepal.com.np/subdomain-finder/">
+<title>Subdomain Finder — Laxman Nepal</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/blog.css">
+<link rel="stylesheet" href="/assets/css/shared-shell.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="/assets/js/shared-shell.js"></script>
+<style>
+*{box-sizing:border-box}
+body{background:#f8fafc}
+.sf-page{min-height:100vh;padding:24px 15px 50px}
+.sf-wrap{max-width:1050px;margin:auto}
+.sf-hero{text-align:center;padding:34px 10px 22px}
+.sf-badge{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border:1px solid #dbeafe;background:#eff6ff;color:#2563eb;border-radius:999px;font-size:.72rem;font-weight:800}
+.sf-hero h1{margin:14px 0 9px;color:#0f172a;font-size:clamp(28px,5vw,42px);letter-spacing:-.035em}
+.sf-hero h1 span{color:#2563eb}
+.sf-hero p{max-width:720px;margin:0 auto;color:#64748b;line-height:1.65;font-size:.94rem}
+.sf-search{margin:22px auto 0;max-width:760px;display:flex;gap:9px}
+.sf-search input{flex:1;min-width:0;height:52px;border:1px solid #cbd5e1;border-radius:14px;padding:0 16px;font-size:1rem;background:#fff;outline:0}
+.sf-search input:focus{border-color:#2563eb;box-shadow:0 0 0 4px rgba(37,99,235,.09)}
+.sf-search button{height:52px;border:0;border-radius:14px;padding:0 22px;background:#2563eb;color:#fff;font-weight:800;cursor:pointer}
+.sf-search button:hover{background:#1d4ed8}
+.sf-search button:disabled{opacity:.65;cursor:wait}
+.sf-examples{margin:10px 0 0;color:#94a3b8;font-size:.75rem}
+.sf-examples button{border:0;background:none;color:#2563eb;cursor:pointer;padding:0;font:inherit}
+.sf-status{display:none;margin:16px auto;max-width:760px;padding:11px 14px;border-radius:12px;font-size:.82rem;line-height:1.45}
+.sf-status.show{display:block}
+.sf-status.info{background:#eff6ff;color:#1e40af;border:1px solid #bfdbfe}
+.sf-status.error{background:#fef2f2;color:#b91c1c;border:1px solid #fecaca}
+.sf-status.ok{background:#f0fdf4;color:#166534;border:1px solid #bbf7d0}
+.sf-results{display:none;margin-top:18px}
+.sf-results.show{display:block}
+.sf-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.sf-stat{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:15px}
+.sf-stat small{display:block;color:#64748b;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.sf-stat strong{display:block;margin-top:5px;color:#0f172a;font-size:1.35rem}
+.sf-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;overflow:hidden}
+.sf-card-head{padding:15px 16px;border-bottom:1px solid #e2e8f0;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.sf-card-head strong{color:#0f172a}
+.sf-actions{display:flex;gap:7px}
+.sf-small-btn{border:1px solid #dbe2ea;background:#fff;color:#334155;border-radius:9px;padding:7px 10px;font-size:.72rem;font-weight:800;cursor:pointer}
+.sf-small-btn:hover{background:#f8fafc}
+.sf-filter{padding:0 16px 12px}
+.sf-filter input{width:100%;height:38px;border:1px solid #e2e8f0;border-radius:9px;padding:0 11px;outline:0;font-size:.82rem}
+.sf-filter input:focus{border-color:#2563eb}
+.sf-table-wrap{overflow:auto;max-height:560px}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid #f1f5f9;white-space:nowrap}
+th{position:sticky;top:0;background:#f8fafc;color:#64748b;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;z-index:1}
+td:first-child{font-weight:700;color:#0f172a}
+td a{color:#2563eb;text-decoration:none}
+td a:hover{text-decoration:underline}
+.empty{padding:30px;text-align:center;color:#64748b}
+.sf-note{margin-top:14px;padding:13px 15px;background:#fff;border:1px solid #e2e8f0;border-radius:13px;color:#64748b;font-size:.75rem;line-height:1.6}
+.sf-note strong{color:#334155}
+.sf-footer{text-align:center;margin-top:20px;color:#94a3b8;font-size:.72rem}
+.sf-footer a{color:#2563eb;text-decoration:none}
+@media(max-width:650px){
+ .sf-page{padding:12px 9px 35px}.sf-hero{padding:25px 5px 15px}.sf-hero p{font-size:.82rem}
+ .sf-search{flex-direction:column}.sf-search button{width:100%}
+ .sf-summary{grid-template-columns:1fr 1fr}.sf-stat:last-child{grid-column:1/-1}
+ th,td{padding:10px 12px}
+}
+</style>
+</head>
+<body>
+<header class="shared-header" data-shared-shell="header">
+<a class="shared-brand" href="/" aria-label="Laxman Nepal home"><span class="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Blog · Digital</small></span></a>
+<nav class="shared-desktop-nav" aria-label="Main menu"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI</a><a href="/blog/">Blog</a><a href="/apps/">Apps</a><a href="/youtube/">YouTube</a><details class="nav-dropdown"><summary>Explore</summary><div class="nav-dropdown-menu"><a href="/news/">News &amp; Updates</a><a href="/guides/">Guides</a><a href="/mobile/">Mobile</a><a href="/laptop/">Laptops</a><a href="/gadgets/">Gadgets</a><a href="/brands/">Brands</a></div></details></nav>
+<div class="shared-actions"><form class="shared-search-box" action="/search/" method="get"><span aria-hidden="true">⌕</span><input name="q" type="search" autocomplete="off" aria-label="Search Laxman Nepal" placeholder="Search tools &amp; guides…"></form><button class="shared-menu-btn" type="button" data-shared-menu aria-label="Open menu" aria-expanded="false">☰</button></div>
+</header>
+<nav class="shared-mobile-menu" data-shared-mobile aria-label="Mobile menu"><div class="shared-mobile-head"><strong>Laxman Nepal</strong><button type="button" data-shared-close aria-label="Close menu">×</button></div><a href="/">🏠 Home</a><a href="/tools/">🧰 Tools</a><a href="/ai-tools/">✨ AI Tools</a><a href="/blog/">📝 Blog</a><a href="/apps/">📦 Apps</a><a href="/youtube/">▶ YouTube</a><a href="/guides/">📖 Guides</a><a href="/news/">📰 News</a><a href="/contact/">✉ Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav><div class="shared-menu-backdrop" data-shared-backdrop></div>
+
+<main class="sf-page">
+<div class="sf-wrap">
+<section class="sf-hero">
+<div class="sf-badge"><i class="fa-solid fa-sitemap"></i> Free Subdomain Intelligence Tool</div>
+<h1>Find <span>Subdomains</span> of Any Domain</h1>
+<p>Search a large Certificate Transparency-based hostname index and see subdomains that have been observed, including their first-seen dates when available.</p>
+<form class="sf-search" id="searchForm">
+<input id="domainInput" type="text" inputmode="url" autocomplete="off" spellcheck="false" placeholder="Enter a domain, e.g. example.com" aria-label="Domain to search" required>
+<button id="searchBtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Find Subdomains</button>
+</form>
+<div class="sf-examples">Try <button type="button" data-example="example.com">example.com</button> or <button type="button" data-example="github.com">github.com</button></div>
+</section>
+
+<div id="status" class="sf-status" role="status" aria-live="polite"></div>
+
+<section id="results" class="sf-results" aria-live="polite">
+<div class="sf-summary">
+<div class="sf-stat"><small>Subdomains found</small><strong id="count">0</strong></div>
+<div class="sf-stat"><small>With first-seen date</small><strong id="datedCount">0</strong></div>
+<div class="sf-stat"><small>Domain</small><strong id="searchedDomain">—</strong></div>
+</div>
+<div class="sf-card">
+<div class="sf-card-head"><strong>Discovered hostnames</strong><div class="sf-actions"><button class="sf-small-btn" id="copyBtn" type="button"><i class="fa-regular fa-copy"></i> Copy all</button><button class="sf-small-btn" id="downloadBtn" type="button"><i class="fa-solid fa-download"></i> CSV</button></div></div>
+<div class="sf-filter"><input id="filterInput" type="search" placeholder="Filter results..." aria-label="Filter subdomains"></div>
+<div class="sf-table-wrap"><table><thead><tr><th>Subdomain</th><th>First seen</th></tr></thead><tbody id="resultBody"></tbody></table><div id="empty" class="empty" hidden>No subdomains match the filter.</div></div>
+</div>
+<div class="sf-note"><strong>Important:</strong> An indexed hostname means it was observed by the underlying data sources; it does not guarantee that the host is live today. This tool is intended for legitimate domain research, asset inventory, and security awareness. Results are provided by <a href="https://crt.name/" target="_blank" rel="noopener">crt.name</a>.</div>
+</section>
+<div class="sf-footer">Powered by <a href="https://crt.name/" target="_blank" rel="noopener">crt.name</a> · Built by Laxman Nepal</div>
+</div>
+</main>
+
+<script>
+(function(){
+'use strict';
+const API='https://crt.name/v1/search';
+const form=document.getElementById('searchForm'), input=document.getElementById('domainInput'), btn=document.getElementById('searchBtn');
+const status=document.getElementById('status'), results=document.getElementById('results'), body=document.getElementById('resultBody'), empty=document.getElementById('empty');
+const filter=document.getElementById('filterInput'), count=document.getElementById('count'), datedCount=document.getElementById('datedCount'), searchedDomain=document.getElementById('searchedDomain');
+let rows=[], currentDomain='';
+
+function setStatus(message,type){
+ status.textContent=message; status.className='sf-status show '+type;
+}
+function normalizeDomain(value){
+ let d=value.trim().toLowerCase().replace(/^https?:\\/\\//,'').split('/')[0].split('?')[0].split('#')[0].replace(/\\.$/,'');
+ if(d.startsWith('www.')) d=d.slice(4);
+ return d;
+}
+function validDomain(d){
+ return d && d.length<=253 && /^[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?$/.test(d) && d.includes('.');
+}
+function escapeHtml(s){
+ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function extractRows(data,domain){
+ let raw=[];
+ if(Array.isArray(data)) raw=data;
+ else if(data && Array.isArray(data.results)) raw=data.results;
+ else if(data && Array.isArray(data.data)) raw=data.data;
+ else if(typeof data==='string') raw=data.split(/\\r?\\n/).filter(Boolean);
+ return raw.map(item=>{
+   if(typeof item==='string') return {host:item.trim(),date:''};
+   if(Array.isArray(item)) return {host:String(item[0]||'').trim(),date:String(item[1]||'').trim()};
+   return {host:String(item.subdomain||item.hostname||item.name||item.domain||'').trim(),date:String(item.first_seen||item.firstSeen||item.date||'').trim()};
+ }).filter(x=>x.host).map(x=>{
+   let host=x.host.replace(/^\\*\\./,'').toLowerCase();
+   if(host.startsWith('*.')) host=host.slice(2);
+   return {host,date:x.date};
+ }).filter(x=>x.host===domain || x.host.endsWith('.'+domain));
+}
+function render(){
+ const q=filter.value.trim().toLowerCase();
+ const list=rows.filter(r=>!q||r.host.includes(q));
+ body.innerHTML=list.map(r=>{
+   const href='https://'+r.host;
+   return '<tr><td><a href="'+href+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></td><td>'+escapeHtml(formatDate(r.date))+'</td></tr>';
+ }).join('');
+ empty.hidden=list.length!==0;
+}
+function formatDate(v){
+ if(!v) return '—';
+ const d=new Date(v);
+ return Number.isNaN(d.getTime())?v:d.toISOString().slice(0,10);
+}
+async function search(){
+ const domain=normalizeDomain(input.value);
+ if(!validDomain(domain)){setStatus('Enter a valid apex domain such as example.com. Do not include a path.', 'error'); return;}
+ btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Searching…';
+ results.classList.remove('show'); filter.value=''; body.innerHTML=''; rows=[]; currentDomain=domain;
+ setStatus('Searching the indexed hostname database for '+domain+'…','info');
+ try{
+   const url=API+'?apex='+encodeURIComponent(domain)+'&format=json&dates=1';
+   const response=await fetch(url,{headers:{Accept:'application/json'}});
+   if(!response.ok) throw new Error('The data provider returned HTTP '+response.status+'.');
+   const text=await response.text();
+   let data;
+   try{data=JSON.parse(text)}catch(e){data=text}
+   rows=extractRows(data,domain);
+   rows.sort((a,b)=>a.host.localeCompare(b.host));
+   count.textContent=rows.length.toLocaleString();
+   datedCount.textContent=rows.filter(r=>r.date).length.toLocaleString();
+   searchedDomain.textContent=domain;
+   render(); results.classList.add('show');
+   if(rows.length) setStatus('Found '+rows.length.toLocaleString()+' indexed hostname'+(rows.length===1?'':'s')+' for '+domain+'.','ok');
+   else setStatus('No indexed subdomains were returned for '+domain+'.','info');
+ }catch(err){
+   setStatus('Search failed. Your browser may be blocking the external API, or the provider may be rate-limiting requests. Try opening the domain directly on crt.name.','error');
+   console.error(err);
+ }finally{
+   btn.disabled=false; btn.innerHTML='<i class="fa-solid fa-magnifying-glass"></i> Find Subdomains';
+ }
+}
+form.addEventListener('submit',e=>{e.preventDefault();search()});
+filter.addEventListener('input',render);
+document.querySelectorAll('[data-example]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.example;search()}));
+document.getElementById('copyBtn').addEventListener('click',async()=>{
+ const text=rows.map(r=>r.host).join('\n');
+ if(!text)return;
+ try{await navigator.clipboard.writeText(text);setStatus('Copied '+rows.length.toLocaleString()+' hostnames to the clipboard.','ok')}catch(e){setStatus('Clipboard access was blocked by the browser.','error')}
+});
+document.getElementById('downloadBtn').addEventListener('click',()=>{
+ if(!rows.length)return;
+ const csv='Subdomain,First Seen\n'+rows.map(r=>'"'+r.host.replace(/"/g,'""')+'","'+r.date.replace(/"/g,'""')+'"').join('\n');
+ const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=currentDomain+'-subdomains.csv';a.click();URL.revokeObjectURL(a.href);
+});
+})();
+</script>
+</body>
+</html>
