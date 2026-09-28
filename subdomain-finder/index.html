@@ -135,20 +135,35 @@ function escapeHtml(s){
  return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 function extractRows(data,domain){
- let raw=[];
- if(Array.isArray(data)) raw=data;
- else if(data && Array.isArray(data.results)) raw=data.results;
- else if(data && Array.isArray(data.data)) raw=data.data;
- else if(typeof data==='string') raw=data.split(/\\r?\\n/).filter(Boolean);
- return raw.map(item=>{
-   if(typeof item==='string') return {host:item.trim(),date:''};
-   if(Array.isArray(item)) return {host:String(item[0]||'').trim(),date:String(item[1]||'').trim()};
-   return {host:String(item.subdomain||item.hostname||item.name||item.domain||'').trim(),date:String(item.first_seen||item.firstSeen||item.date||'').trim()};
- }).filter(x=>x.host).map(x=>{
+ const raw=[];
+ const seen=new Set();
+ function walk(value){
+   if(Array.isArray(value)){ value.forEach(walk); return; }
+   if(typeof value==='string'){
+     value.split(/\\r?\\n/).map(s=>s.trim()).filter(Boolean).forEach(host=>raw.push({host,date:''}));
+     return;
+   }
+   if(!value||typeof value!=='object') return;
+   const host=value.sub||value.subdomain||value.hostname||value.host||value.name||value.domain||value.match;
+   const date=value.first_seen||value.firstSeen||value.firstSeenAt||value.date||'';
+   if(host) raw.push({host:String(host).trim(),date:String(date).trim()});
+   Object.keys(value).forEach(key=>{
+     if(['sub','subdomain','hostname','host','name','domain','match','first_seen','firstSeen','firstSeenAt','date'].includes(key)) return;
+     const child=value[key];
+     if(child && (Array.isArray(child)||typeof child==='object')) walk(child);
+   });
+ }
+ walk(data);
+ return raw.map(x=>{
    let host=x.host.replace(/^\\*\\./,'').toLowerCase();
-   if(host.startsWith('*.')) host=host.slice(2);
    return {host,date:x.date};
- }).filter(x=>x.host===domain || x.host.endsWith('.'+domain));
+ }).filter(x=>{
+   if(!x.host || (x.host!==domain && !x.host.endsWith('.'+domain))) return false;
+   const key=x.host+'|'+x.date;
+   if(seen.has(key)) return false;
+   seen.add(key);
+   return true;
+ });
 }
 function render(){
  const q=filter.value.trim().toLowerCase();
