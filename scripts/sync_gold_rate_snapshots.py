@@ -32,7 +32,7 @@ def main() -> None:
         PAGES / "gold-price-history-nepal" / "index.html",
         "<!-- LATEST_GOLD_HISTORY_SNAPSHOT_START -->",
         "<!-- LATEST_GOLD_HISTORY_SNAPSHOT_END -->",
-        f'''<!-- LATEST_GOLD_HISTORY_SNAPSHOT_START --><h2>Latest published gold rate in Nepal</h2><p><strong>Fine Gold: Rs {fine} per tola</strong> · <strong>Tejabi Gold: Rs {tejabi} per tola</strong> · <strong>Silver: Rs {silver} per tola</strong> ({display}).</p><p class="muted">This snapshot is updated automatically from the stored daily rate record.</p><!-- LATEST_GOLD_HISTORY_SNAPSHOT_END -->'''
+        f'''<!-- LATEST_GOLD_HISTORY_SNAPSHOT_START --><h2>Latest published gold rate in Nepal</h2><p><strong>Fine Gold: Rs {fine} per tola</strong> · <strong>Tejabi Gold: Rs {tejabi} per tola</strong> · <strong>Silver: Rs {silver} per tola</strong> (<time datetime="{date}">{display}</time>).</p><p class="muted">This snapshot is updated automatically from the stored daily rate record.</p><!-- LATEST_GOLD_HISTORY_SNAPSHOT_END -->'''
     )
 
     replace_marked(
