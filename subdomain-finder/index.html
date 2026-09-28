@@ -114,6 +114,7 @@ td a:hover{text-decoration:underline}
 (function(){
 'use strict';
 const API='https://crt.name/v1/search';
+const FALLBACK_API='https://newisty.com/api/subdomain-finder/search';
 const form=document.getElementById('searchForm'), input=document.getElementById('domainInput'), btn=document.getElementById('searchBtn');
 const status=document.getElementById('status'), results=document.getElementById('results'), body=document.getElementById('resultBody'), empty=document.getElementById('empty');
 const filter=document.getElementById('filterInput'), count=document.getElementById('count'), datedCount=document.getElementById('datedCount'), searchedDomain=document.getElementById('searchedDomain');
@@ -170,22 +171,32 @@ async function search(){
  results.classList.remove('show'); filter.value=''; body.innerHTML=''; rows=[]; currentDomain=domain;
  setStatus('Searching the indexed hostname database for '+domain+'…','info');
  try{
-   const url=API+'?apex='+encodeURIComponent(domain)+'&format=json&dates=1';
-   const response=await fetch(url,{headers:{Accept:'application/json'}});
-   if(!response.ok) throw new Error('The data provider returned HTTP '+response.status+'.');
-   const text=await response.text();
-   let data;
-   try{data=JSON.parse(text)}catch(e){data=text}
+   let data=null, source='crt.name', lastError='';
+   const endpoints=[
+     API+'?apex='+encodeURIComponent(domain)+'&format=json&dates=1',
+     FALLBACK_API+'?apex='+encodeURIComponent(domain)+'&dates=1'
+   ];
+   for(let i=0;i<endpoints.length;i++){
+     try{
+       const response=await fetch(endpoints[i],{headers:{Accept:'application/json,text/plain,*/*'}});
+       if(!response.ok) throw new Error('HTTP '+response.status);
+       const text=await response.text();
+       try{data=JSON.parse(text)}catch(e){data=text}
+       source=i===0?'crt.name':'Newisty fallback';
+       break;
+     }catch(err){lastError=err.message}
+   }
+   if(data===null) throw new Error(lastError||'All data providers failed');
    rows=extractRows(data,domain);
    rows.sort((a,b)=>a.host.localeCompare(b.host));
    count.textContent=rows.length.toLocaleString();
    datedCount.textContent=rows.filter(r=>r.date).length.toLocaleString();
    searchedDomain.textContent=domain;
    render(); results.classList.add('show');
-   if(rows.length) setStatus('Found '+rows.length.toLocaleString()+' indexed hostname'+(rows.length===1?'':'s')+' for '+domain+'.','ok');
+   if(rows.length) setStatus('Found '+rows.length.toLocaleString()+' indexed hostname'+(rows.length===1?'':'s')+' for '+domain+' via '+source+'.','ok');
    else setStatus('No indexed subdomains were returned for '+domain+'.','info');
  }catch(err){
-   setStatus('Search failed. Your browser may be blocking the external API, or the provider may be rate-limiting requests. Try opening the domain directly on crt.name.','error');
+   setStatus('Search failed. Both data providers were unreachable from your browser. Please try again in a moment.','error');
    console.error(err);
  }finally{
    btn.disabled=false; btn.innerHTML='<i class="fa-solid fa-magnifying-glass"></i> Find Subdomains';
