@@ -254,14 +254,14 @@ function filteredRows(){
  return list;
 }
 function dateValue(r){const t=r.date?new Date(r.date).getTime():0;return Number.isNaN(t)?0:t}
-function dnsHtml(host){return dnsCache.has(host)?'<span class="sf-dns-result '+(dnsCache.get(host)?'ok':'no')+'"><i class="fa-solid fa-'+(dnsCache.get(host)?'check':'circle-exclamation')+'"></i> '+(dnsCache.get(host)?'Resolves':'No DNS')+'</span>':'<button type="button" data-dns="'+escapeHtml(host)+'"><i class="fa-solid fa-globe"></i> Check DNS</button>'}
+function dnsHtml(host){return dnsCache.has(host)?'<span class="sf-dns-result '+(dnsCache.get(host)===null?'pending':dnsCache.get(host)?'ok':'no')+'"><i class="fa-solid fa-'+(dnsCache.get(host)===null?'triangle-exclamation':dnsCache.get(host)?'check':'circle-exclamation')+'"></i> '+(dnsCache.get(host)===null?'Check failed':dnsCache.get(host)?'Resolves':'No DNS')+'</span>':'<button type="button" data-dns="'+escapeHtml(host)+'"><i class="fa-solid fa-globe"></i> Check DNS</button>'}
 function actionHtml(host){
  const url='https://'+host;
  return '<div class="sf-card-actions"><button class="sf-icon-btn" type="button" data-copy-host="'+escapeHtml(host)+'" title="Copy hostname"><i class="fa-regular fa-copy"></i></button><a class="sf-icon-btn" style="display:inline-grid;place-items:center;text-decoration:none" href="'+url+'" target="_blank" rel="noopener noreferrer" title="Open host"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>';
 }
 function render(){
  const list=filteredRows(); resultMeta.textContent=list.length.toLocaleString()+' shown · '+rows.length.toLocaleString()+' total'; empty.hidden=list.length!==0;
- body.innerHTML=list.map((r,i)=>'<tr><td class="sf-num"><input type="checkbox" data-select-host="'+escapeHtml(r.host)+'" '+(selected.has(r.host)?'checked':'')+'></td><td><span class="sf-host"><span class="sf-host-icon"><i class="fa-solid fa-globe"></i></span><a href="https://'+r.host+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></span></td><td><span class="sf-type">'+escapeHtml(r.type)+'</span></td><td class="sf-dns">'+dnsHtml(r.host)+'</td><td>'+(r.date?'<span class="sf-date"><i class="fa-regular fa-calendar"></i>'+escapeHtml(formatDate(r.date))+'</span>':'<span class="sf-live">No date recorded</span>')+'</td><td>'+actionHtml(r.host)+'</td></tr>').join('');
+ body.innerHTML=list.map((r,i)=>'<tr><td class="sf-num"><input type="checkbox" data-select-host="'+escapeHtml(r.host)+'" '+(selected.has(r.host)?'checked':'')+'></td><td><span class="sf-host"><span class="sf-host-icon"><i class="fa-solid fa-globe"></i></span><a href="https://'+r.host+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></span></td><td><span class="sf-type">'+escapeHtml(r.type)+'</span></td><td>'+(r.date?'<span class="sf-date"><i class="fa-regular fa-calendar"></i>'+escapeHtml(formatDate(r.date))+'</span>':'<span class="sf-live">No date recorded</span>')+'</td><td class="sf-dns">'+dnsHtml(r.host)+'</td><td>'+actionHtml(r.host)+'</td></tr>').join('');
  gridWrap.innerHTML=list.map(r=>'<article class="sf-grid-card"><div class="sf-grid-host"><span class="sf-host-icon"><i class="fa-solid fa-globe"></i></span><a class="sf-grid-link" href="https://'+r.host+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></div><div class="sf-grid-bottom"><span class="sf-type">'+escapeHtml(r.type)+'</span><span class="sf-date-mini">'+escapeHtml(r.date?formatDate(r.date):'No date')+'</span></div><div class="sf-grid-bottom"><span></span>'+actionHtml(r.host)+'</div></article>').join('');
  tableWrap.hidden=viewMode!=='table'; gridWrap.hidden=viewMode!=='grid'; selectAll.checked=list.length>0&&list.every(r=>selected.has(r.host)); selectedMeta.textContent=selected.size.toLocaleString()+' selected'; copySelected.disabled=!selected.size; exportSelected.disabled=!selected.size;
 }
@@ -288,7 +288,7 @@ async function search(){
    const directCrt=API+'?apex='+encodeURIComponent(domain)+'&format=json&dates=1';
    const directFallback=FALLBACK_API+'?apex='+encodeURIComponent(domain)+'&dates=1&limit=5000';
    const endpoints=[
-     {url:directFallback,source:'Newisty / crt.name',wrapped:false},
+     {url:directFallback,source:'Newisty',wrapped:false},
      {url:directCrt,source:'crt.name',wrapped:false},
      {url:CORS_PROXY+encodeURIComponent(directFallback),source:'Newisty via AllOrigins',wrapped:true},
      {url:CORS_PROXY+encodeURIComponent(directCrt),source:'crt.name via AllOrigins',wrapped:true}
@@ -333,7 +333,7 @@ const typeMap={}; rows.forEach(r=>typeMap[r.type]=(typeMap[r.type]||0)+1); const
    if(rows.length) setStatus('Found '+rows.length.toLocaleString()+' indexed hostname'+(rows.length===1?'':'s')+' for '+domain+' via '+source+'.','ok');
    else setStatus('No indexed subdomains were returned for '+domain+'.','info');
  }catch(err){
-   setStatus('Search failed. Both data providers were unreachable from your browser. Please try again in a moment.','error');
+   setStatus('Search failed. All available data providers were unreachable from your browser. Please try again in a moment.','error');
    console.error(err);
  }finally{
    btn.disabled=false; btn.innerHTML='<i class="fa-solid fa-magnifying-glass"></i> Find Subdomains';
@@ -343,7 +343,7 @@ form.addEventListener('submit',e=>{e.preventDefault();search()});
 filter.addEventListener('input',render); sortSelect.addEventListener('change',render); typeSelect.addEventListener('change',render);
 selectAll.addEventListener('change',()=>{filteredRows().forEach(r=>selectAll.checked?selected.add(r.host):selected.delete(r.host));render()});
 body.addEventListener('change',e=>{const x=e.target.closest('[data-select-host]');if(x){x.checked?selected.add(x.dataset.selectHost):selected.delete(x.dataset.selectHost);render()}});
-async function checkDns(host){if(dnsCache.has(host))return;try{const r=await fetch('https://dns.google/resolve?name='+encodeURIComponent(host)+'&type=A',{cache:'no-store'});const d=await r.json();dnsCache.set(host,Array.isArray(d.Answer)&&d.Answer.length>0)}catch(e){dnsCache.set(host,false)}render()}
+async function checkDns(host){if(dnsCache.has(host))return;const types=['A','AAAA','CNAME'];let resolved=false;try{for(const type of types){const r=await fetch('https://dns.google/resolve?name='+encodeURIComponent(host)+'&type='+type,{cache:'no-store'});if(!r.ok)continue;const d=await r.json();if(Array.isArray(d.Answer)&&d.Answer.length>0){resolved=true;break}}dnsCache.set(host,resolved)}catch(e){dnsCache.set(host,null)}render()}
 body.addEventListener('click',e=>{const b=e.target.closest('[data-dns]');if(b){b.disabled=true;b.textContent='Checking…';checkDns(b.dataset.dns)}});
 gridWrap.addEventListener('click',e=>{const b=e.target.closest('[data-dns]');if(b){b.disabled=true;b.textContent='Checking…';checkDns(b.dataset.dns)}});
 copySelected.addEventListener('click',async()=>{try{await navigator.clipboard.writeText([...selected].join('\n'));setStatus('Copied '+selected.size.toLocaleString()+' selected hostnames.','ok')}catch(e){setStatus('Clipboard access was blocked by the browser.','error')}});
@@ -356,11 +356,6 @@ input.addEventListener('input',()=>clearDomain.classList.toggle('show',!!input.v
 body.addEventListener('click',copyHostClick); gridWrap.addEventListener('click',copyHostClick);
 async function copyHostClick(e){const b=e.target.closest('[data-copy-host]');if(!b)return;try{await navigator.clipboard.writeText(b.dataset.copyHost);setStatus('Copied '+b.dataset.copyHost+' to the clipboard.','ok')}catch(x){setStatus('Clipboard access was blocked by the browser.','error')}}
 document.querySelectorAll('[data-example]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.example;search()}));
-document.getElementById('copyBtn').addEventListener('click',async()=>{
- const text=rows.map(r=>r.host).join('\n');
- if(!text)return;
- try{await navigator.clipboard.writeText(text);setStatus('Copied '+rows.length.toLocaleString()+' hostnames to the clipboard.','ok')}catch(e){setStatus('Clipboard access was blocked by the browser.','error')}
-});
 function downloadFile(name,content,type){const blob=new Blob([content],{type:type});const a=document.createElement('a');const url=URL.createObjectURL(blob);a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),500)}
 document.getElementById('downloadJsonBtn').addEventListener('click',()=>{if(rows.length)downloadFile(currentDomain+'-subdomains.json',JSON.stringify({domain:currentDomain,count:rows.length,results:rows},null,2),'application/json')});
 document.getElementById('downloadTxtBtn').addEventListener('click',()=>{if(rows.length)downloadFile(currentDomain+'-subdomains.txt',rows.map(r=>r.host).join('\n'),'text/plain;charset=utf-8')});
