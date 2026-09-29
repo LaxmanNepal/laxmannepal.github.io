@@ -103,10 +103,10 @@ td a:hover{text-decoration:underline}
 .sf-type{display:inline-flex;padding:3px 7px;border-radius:999px;background:#f1f5f9;color:#475569;font-size:.62rem;font-weight:800;text-transform:uppercase}
 .sf-card-actions{display:flex;gap:5px}.sf-icon-btn{border:1px solid #e2e8f0;background:#fff;color:#64748b;border-radius:8px;width:28px;height:28px;cursor:pointer}.sf-icon-btn:hover{color:#1d4ed8;border-color:#bfdbfe}
 .sf-date-mini{color:#94a3b8;font-size:.63rem;font-weight:700}
-.sf-bulkbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:9px 17px;border-top:1px solid #eef2f7;background:#fbfdff;color:#64748b;font-size:.7rem;font-weight:700}.sf-bulkbar button:disabled{opacity:.45;cursor:not-allowed}.sf-dns{font-size:.68rem;font-weight:800}.sf-dns button{border:1px solid #e2e8f0;background:#fff;border-radius:7px;padding:4px 7px;color:#64748b;cursor:pointer}.sf-dns button:hover{border-color:#bfdbfe;color:#1d4ed8}.sf-dns-result.ok{color:#15803d}.sf-dns-result.no{color:#b45309}.sf-progress{height:4px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin-top:9px}.sf-progress i{display:block;height:100%;width:45%;background:#2563eb;animation:sfLoad 1.1s ease-in-out infinite alternate}@keyframes sfLoad{to{width:92%}}
+.sf-insights{display:grid;grid-template-columns:1.15fr .85fr;gap:12px;margin-bottom:14px}.sf-insight{background:#fff;border:1px solid #dfe7f1;border-radius:16px;padding:15px 17px;box-shadow:0 8px 24px rgba(15,23,42,.045)}.sf-insight h3{margin:0 0 10px;font-size:.78rem;color:#0f172a}.sf-bars{display:flex;flex-direction:column;gap:7px}.sf-bar-row{display:grid;grid-template-columns:82px 1fr 35px;gap:7px;align-items:center;font-size:.65rem;color:#64748b}.sf-bar{height:7px;background:#eef2f7;border-radius:99px;overflow:hidden}.sf-bar i{display:block;height:100%;background:#2563eb;border-radius:99px}.sf-summary-text{color:#64748b;font-size:.75rem;line-height:1.6}.sf-summary-text strong{color:#0f172a}.sf-bulkbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:9px 17px;border-top:1px solid #eef2f7;background:#fbfdff;color:#64748b;font-size:.7rem;font-weight:700}.sf-bulkbar button:disabled{opacity:.45;cursor:not-allowed}.sf-dns{font-size:.68rem;font-weight:800}.sf-dns button{border:1px solid #e2e8f0;background:#fff;border-radius:7px;padding:4px 7px;color:#64748b;cursor:pointer}.sf-dns button:hover{border-color:#bfdbfe;color:#1d4ed8}.sf-dns-result.ok{color:#15803d}.sf-dns-result.no{color:#b45309}.sf-progress{height:4px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin-top:9px}.sf-progress i{display:block;height:100%;width:45%;background:#2563eb;animation:sfLoad 1.1s ease-in-out infinite alternate}@keyframes sfLoad{to{width:92%}}
 .sf-history{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:12px auto 0;max-width:760px}.sf-history button{border:1px solid #e2e8f0;background:#fff;color:#64748b;border-radius:999px;padding:5px 9px;font-size:.68rem;cursor:pointer}.sf-history button:hover{border-color:#bfdbfe;color:#1d4ed8}
 .sf-search-clear{position:relative}.sf-clear{position:absolute;right:7px;top:7px;width:38px;height:38px;border:0;background:#f1f5f9;color:#64748b;border-radius:9px;cursor:pointer;display:none}.sf-clear.show{display:block}
-@media(max-width:650px){.sf-toolbar{align-items:stretch}.sf-controls{width:100%}.sf-select,.sf-control{flex:1}.sf-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.sf-insights{grid-template-columns:1fr}.sf-toolbar{align-items:stretch}.sf-controls{width:100%}.sf-select,.sf-control{flex:1}.sf-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -141,6 +141,10 @@ td a:hover{text-decoration:underline}
 <div class="sf-stat"><small>Oldest observation</small><strong id="oldestSeen">—</strong></div>
 <div class="sf-stat"><small>Host types</small><strong id="typeCount">0</strong></div>
 <div class="sf-stat"><small>Domain</small><strong id="searchedDomain">—</strong></div>
+</div>
+<div class="sf-insights">
+ <div class="sf-insight"><h3><i class="fa-solid fa-chart-column"></i> Host type breakdown</h3><div id="typeBars" class="sf-bars"></div></div>
+ <div class="sf-insight"><h3><i class="fa-solid fa-chart-line"></i> Intelligence summary</h3><div id="intelSummary" class="sf-summary-text">Run a search to generate an overview.</div></div>
 </div>
 <div class="sf-card">
 <div class="sf-card-head">
@@ -187,7 +191,7 @@ const CORS_PROXY='https://api.allorigins.win/raw?url=';
 const form=document.getElementById('searchForm'), input=document.getElementById('domainInput'), btn=document.getElementById('searchBtn');
 const status=document.getElementById('status'), results=document.getElementById('results'), body=document.getElementById('resultBody'), empty=document.getElementById('empty');
 const filter=document.getElementById('filterInput'), count=document.getElementById('count'), datedCount=document.getElementById('datedCount'), searchedDomain=document.getElementById('searchedDomain');
-const latestSeen=document.getElementById('latestSeen'), oldestSeen=document.getElementById('oldestSeen'), typeCount=document.getElementById('typeCount'), resultMeta=document.getElementById('resultMeta');
+const latestSeen=document.getElementById('latestSeen'), oldestSeen=document.getElementById('oldestSeen'), typeCount=document.getElementById('typeCount'), resultMeta=document.getElementById('resultMeta'), typeBars=document.getElementById('typeBars'), intelSummary=document.getElementById('intelSummary');
 const selectAll=document.getElementById('selectAll'), selectedMeta=document.getElementById('selectedMeta'), copySelected=document.getElementById('copySelected'), exportSelected=document.getElementById('exportSelected');
 const sortSelect=document.getElementById('sortSelect'), typeSelect=document.getElementById('typeSelect'), datedOnly=document.getElementById('datedOnly'), tableWrap=document.getElementById('tableWrap'), gridWrap=document.getElementById('gridWrap'), tableView=document.getElementById('tableView'), gridView=document.getElementById('gridView'), historyEl=document.getElementById('history'), clearDomain=document.getElementById('clearDomain');
 let rows=[], currentDomain='', datedMode=false, viewMode='table', selected=new Set(), dnsCache=new Map();
@@ -322,6 +326,7 @@ async function search(){
    latestSeen.textContent=dated.length?formatDate(dated[dated.length-1].date):'—';
    oldestSeen.textContent=dated.length?formatDate(dated[0].date):'—';
    const types=[...new Set(rows.map(r=>r.type))].sort(); typeSelect.innerHTML='<option value="">All types</option>'+types.map(t=>'<option value="'+escapeHtml(t)+'">'+escapeHtml(t)+'</option>').join(''); typeCount.textContent=types.length.toLocaleString();
+const typeMap={}; rows.forEach(r=>typeMap[r.type]=(typeMap[r.type]||0)+1); const ranked=Object.entries(typeMap).sort((a,b)=>b[1]-a[1]); const max=ranked[0]?.[1]||1; typeBars.innerHTML=ranked.slice(0,8).map(([t,n])=>'<div class="sf-bar-row"><span>'+escapeHtml(t)+'</span><span class="sf-bar"><i style="width:'+Math.max(4,n/max*100)+'%"></i></span><b>'+n+'</b></div>').join(''); const api=typeMap.API||0,mail=typeMap.Mail||0,dev=(typeMap.Development||0)+(typeMap.Staging||0)+(typeMap.Testing||0); intelSummary.innerHTML='<strong>'+rows.length.toLocaleString()+' hosts</strong> were indexed. '+(api?'<strong>'+api+'</strong> API-related host'+(api===1?'':'s')+' detected. ':'')+(mail?'<strong>'+mail+'</strong> mail-related host'+(mail===1?'':'s')+' detected. ':'')+(dev?'<strong>'+dev+'</strong> development/staging/testing host'+(dev===1?'':'s')+' detected. ':'')+'Use DNS checks to separately test whether individual hosts currently resolve.';
    searchedDomain.textContent=domain;
    saveHistory(domain); historyEl.hidden=false; render(); results.classList.add('show');
    const shareUrl=new URL(location.href); shareUrl.searchParams.set('domain',domain); history.replaceState(null,'',shareUrl.href);
