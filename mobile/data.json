@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-28T23:19:58.442074+00:00",
-  "count": 138,
+  "updated_at": "2026-09-29T05:48:56.721227+00:00",
+  "count": 140,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -1929,14 +1929,12 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB",
-        "4GB + 128GB"
+        "6GB + 128GB"
       ],
-      "price": 29999,
+      "price": 32999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
@@ -1965,18 +1963,16 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+64GB",
-        "4GB+128GB"
+        "4GB+64GB"
       ],
       "price": 21999,
-      "max_price": 25999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -2297,18 +2293,16 @@
       "name": "ZTE Nubia A57",
       "brand": "ZTE",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 22999,
-      "max_price": 24999,
+      "max_price": 22999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -2512,6 +2506,52 @@
       "storages": [
         "256GB",
         "512GB"
+      ]
+    },
+    {
+      "id": "iphone-18-pro",
+      "name": "iPhone 18 Pro",
+      "brand": "Apple",
+      "variants": [
+        "12GB+256GB",
+        "12GB+512GB",
+        "12GB+1TB",
+        "12GB+2TB"
+      ],
+      "price": 259900,
+      "max_price": 513900,
+      "original_price": null,
+      "rams": [
+        "12GB"
+      ],
+      "storages": [
+        "256GB",
+        "512GB",
+        "1TB",
+        "2TB"
+      ]
+    },
+    {
+      "id": "iphone-18-pro-max",
+      "name": "iPhone 18 Pro Max",
+      "brand": "Apple",
+      "variants": [
+        "12GB - 2TB",
+        "12GB+256GB",
+        "12GB+512GB",
+        "12GB+1TB"
+      ],
+      "price": 279900,
+      "max_price": 534900,
+      "original_price": null,
+      "rams": [
+        "12GB"
+      ],
+      "storages": [
+        "256GB",
+        "512GB",
+        "1TB",
+        "2TB"
       ]
     },
     {
