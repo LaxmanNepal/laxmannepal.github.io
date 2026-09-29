@@ -86,6 +86,27 @@ td a:hover{text-decoration:underline}
  .sf-summary{grid-template-columns:1fr 1fr}.sf-stat:last-child{grid-column:1/-1}
  th,td{padding:10px 12px}
 }
+
+/* v2 dashboard */
+.sf-toolbar{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:0 17px 13px;flex-wrap:wrap}
+.sf-controls{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.sf-select,.sf-control{height:38px;border:1px solid #e2e8f0;border-radius:10px;background:#fff;color:#475569;padding:0 10px;font-size:.72rem;font-weight:700;outline:0}
+.sf-control{cursor:pointer}.sf-control.active{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
+.sf-meta{color:#94a3b8;font-size:.7rem;font-weight:700}
+.sf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:11px;padding:15px;background:#f8fafc;border-top:1px solid #eef2f7}
+.sf-grid-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:13px;box-shadow:0 5px 16px rgba(15,23,42,.04);transition:.18s ease}
+.sf-grid-card:hover{transform:translateY(-2px);border-color:#bfdbfe;box-shadow:0 10px 24px rgba(37,99,235,.08)}
+.sf-grid-host{display:flex;align-items:flex-start;gap:9px}.sf-grid-host .sf-host-icon{flex:none}
+.sf-grid-link{font-size:.78rem;font-weight:800;word-break:break-all;color:#1d4ed8;text-decoration:none;line-height:1.4}
+.sf-grid-link:hover{text-decoration:underline}
+.sf-grid-bottom{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:11px}
+.sf-type{display:inline-flex;padding:3px 7px;border-radius:999px;background:#f1f5f9;color:#475569;font-size:.62rem;font-weight:800;text-transform:uppercase}
+.sf-card-actions{display:flex;gap:5px}.sf-icon-btn{border:1px solid #e2e8f0;background:#fff;color:#64748b;border-radius:8px;width:28px;height:28px;cursor:pointer}.sf-icon-btn:hover{color:#1d4ed8;border-color:#bfdbfe}
+.sf-date-mini{color:#94a3b8;font-size:.63rem;font-weight:700}
+.sf-progress{height:4px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin-top:9px}.sf-progress i{display:block;height:100%;width:45%;background:#2563eb;animation:sfLoad 1.1s ease-in-out infinite alternate}@keyframes sfLoad{to{width:92%}}
+.sf-history{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:12px auto 0;max-width:760px}.sf-history button{border:1px solid #e2e8f0;background:#fff;color:#64748b;border-radius:999px;padding:5px 9px;font-size:.68rem;cursor:pointer}.sf-history button:hover{border-color:#bfdbfe;color:#1d4ed8}
+.sf-search-clear{position:relative}.sf-clear{position:absolute;right:7px;top:7px;width:38px;height:38px;border:0;background:#f1f5f9;color:#64748b;border-radius:9px;cursor:pointer;display:none}.sf-clear.show{display:block}
+@media(max-width:650px){.sf-toolbar{align-items:stretch}.sf-controls{width:100%}.sf-select,.sf-control{flex:1}.sf-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -103,18 +124,22 @@ td a:hover{text-decoration:underline}
 <h1>Find <span>Subdomains</span> of Any Domain</h1>
 <p>Search a large Certificate Transparency-based hostname index and see subdomains that have been observed, including their first-seen dates when available.</p>
 <form class="sf-search" id="searchForm">
-<input id="domainInput" type="text" inputmode="url" autocomplete="off" spellcheck="false" placeholder="Enter a domain, e.g. example.com" aria-label="Domain to search" required>
+<div class="sf-search-clear" style="flex:1;min-width:0"><input id="domainInput" type="text" inputmode="url" autocomplete="off" spellcheck="false" placeholder="Enter a domain, e.g. example.com" aria-label="Domain to search" required><button id="clearDomain" class="sf-clear" type="button" aria-label="Clear domain">×</button></div>
 <button id="searchBtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Find Subdomains</button>
 </form>
 <div class="sf-examples">Try <button type="button" data-example="example.com">example.com</button> or <button type="button" data-example="github.com">github.com</button></div>
+<div id="history" class="sf-history" aria-label="Recent searches"></div>
 </section>
 
 <div id="status" class="sf-status" role="status" aria-live="polite"></div>
 
 <section id="results" class="sf-results" aria-live="polite">
 <div class="sf-summary">
-<div class="sf-stat"><small>Subdomains found</small><strong id="count">0</strong></div>
+<div class="sf-stat"><small>Total hosts</small><strong id="count">0</strong></div>
 <div class="sf-stat"><small>With first-seen date</small><strong id="datedCount">0</strong></div>
+<div class="sf-stat"><small>Latest observation</small><strong id="latestSeen">—</strong></div>
+<div class="sf-stat"><small>Oldest observation</small><strong id="oldestSeen">—</strong></div>
+<div class="sf-stat"><small>Host types</small><strong id="typeCount">0</strong></div>
 <div class="sf-stat"><small>Domain</small><strong id="searchedDomain">—</strong></div>
 </div>
 <div class="sf-card">
@@ -128,10 +153,19 @@ td a:hover{text-decoration:underline}
     <button class="sf-small-btn" id="downloadBtn" type="button"><i class="fa-solid fa-download"></i> Export CSV</button>
   </div>
 </div>
-<div class="sf-filter">
-  <div class="sf-filter-box"><i class="fa-solid fa-filter"></i><input id="filterInput" type="search" placeholder="Filter by hostname..." aria-label="Filter subdomains"></div>
+<div class="sf-filter"><div class="sf-filter-box"><i class="fa-solid fa-filter"></i><input id="filterInput" type="search" placeholder="Filter by hostname or type..." aria-label="Filter subdomains"></div></div>
+<div class="sf-toolbar">
+ <div class="sf-meta" id="resultMeta">0 results</div>
+ <div class="sf-controls">
+  <select id="sortSelect" class="sf-select" aria-label="Sort results"><option value="az">A–Z</option><option value="za">Z–A</option><option value="oldest">Oldest first</option><option value="newest">Newest first</option></select>
+  <button id="datedOnly" class="sf-control" type="button">Dated only</button>
+  <button id="tableView" class="sf-control active" type="button"><i class="fa-solid fa-table-list"></i> Table</button>
+  <button id="gridView" class="sf-control" type="button"><i class="fa-solid fa-grip"></i> Grid</button>
+ </div>
 </div>
-<div class="sf-table-wrap"><table><thead><tr><th class="sf-num">#</th><th>Subdomain</th><th>First seen</th></tr></thead><tbody id="resultBody"></tbody></table><div id="empty" class="empty" hidden><i class="fa-regular fa-folder-open"></i>No subdomains match the filter.</div></div>
+<div id="tableWrap" class="sf-table-wrap"><table><thead><tr><th class="sf-num">#</th><th>Hostname</th><th>Type</th><th>First seen</th><th>Action</th></tr></thead><tbody id="resultBody"></tbody></table></div>
+<div id="gridWrap" class="sf-grid" hidden></div>
+<div id="empty" class="empty" hidden><i class="fa-regular fa-folder-open"></i>No subdomains match the current filter.</div>
 </div>
 <div class="sf-note"><strong>Important:</strong> An indexed hostname means it was observed by the underlying data sources; it does not guarantee that the host is live today. This tool is intended for legitimate domain research, asset inventory, and security awareness. Results are provided by <a href="https://crt.name/" target="_blank" rel="noopener">crt.name</a>.</div>
 </section>
@@ -148,7 +182,9 @@ const CORS_PROXY='https://api.allorigins.win/raw?url=';
 const form=document.getElementById('searchForm'), input=document.getElementById('domainInput'), btn=document.getElementById('searchBtn');
 const status=document.getElementById('status'), results=document.getElementById('results'), body=document.getElementById('resultBody'), empty=document.getElementById('empty');
 const filter=document.getElementById('filterInput'), count=document.getElementById('count'), datedCount=document.getElementById('datedCount'), searchedDomain=document.getElementById('searchedDomain');
-let rows=[], currentDomain='';
+const latestSeen=document.getElementById('latestSeen'), oldestSeen=document.getElementById('oldestSeen'), typeCount=document.getElementById('typeCount'), resultMeta=document.getElementById('resultMeta');
+const sortSelect=document.getElementById('sortSelect'), datedOnly=document.getElementById('datedOnly'), tableWrap=document.getElementById('tableWrap'), gridWrap=document.getElementById('gridWrap'), tableView=document.getElementById('tableView'), gridView=document.getElementById('gridView'), historyEl=document.getElementById('history'), clearDomain=document.getElementById('clearDomain');
+let rows=[], currentDomain='', datedMode=false, viewMode='table';
 
 function setStatus(message,type){
  status.textContent=message; status.className='sf-status show '+type;
@@ -195,19 +231,36 @@ function extractRows(data,domain){
    return true;
  });
 }
-function render(){
- const q=filter.value.trim().toLowerCase();
- const list=rows.filter(r=>!q||r.host.includes(q));
- body.innerHTML=list.map((r,i)=>{
-   const href='https://'+r.host;
-   const date=formatDate(r.date);
-   const dateHtml=date==='—'
-     ? '<span class="sf-live">No date recorded</span>'
-     : '<span class="sf-date"><i class="fa-regular fa-calendar"></i>'+escapeHtml(date)+'</span>';
-   return '<tr><td class="sf-num">'+(i+1)+'</td><td><span class="sf-host"><span class="sf-host-icon"><i class="fa-solid fa-globe"></i></span><a href="'+href+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></span></td><td>'+dateHtml+'</td></tr>';
- }).join('');
- empty.hidden=list.length!==0;
+function classify(host){
+ const p=host.split('.')[0];
+ const map={api:'API',admin:'Admin',mail:'Mail',smtp:'Mail',imap:'Mail',pop:'Mail',dev:'Development',development:'Development',test:'Testing',testing:'Testing',stage:'Staging',staging:'Staging',beta:'Beta',cdn:'CDN',static:'Static',assets:'Assets',media:'Media',vpn:'VPN',portal:'Portal',blog:'Blog',shop:'Shop',store:'Store',app:'App',docs:'Docs',support:'Support',status:'Status',www:'WWW'};
+ return map[p]||'Other';
 }
+function filteredRows(){
+ const q=filter.value.trim().toLowerCase();
+ let list=rows.filter(r=>(!q||r.host.includes(q)||r.type.toLowerCase().includes(q))&&( !datedMode||r.date));
+ const s=sortSelect.value;
+ list.sort((a,b)=>s==='za'?b.host.localeCompare(a.host):s==='oldest'?dateValue(a)-dateValue(b):s==='newest'?dateValue(b)-dateValue(a):a.host.localeCompare(b.host));
+ return list;
+}
+function dateValue(r){const t=r.date?new Date(r.date).getTime():0;return Number.isNaN(t)?0:t}
+function actionHtml(host){
+ const url='https://'+host;
+ return '<div class="sf-card-actions"><button class="sf-icon-btn" type="button" data-copy-host="'+escapeHtml(host)+'" title="Copy hostname"><i class="fa-regular fa-copy"></i></button><a class="sf-icon-btn" style="display:inline-grid;place-items:center;text-decoration:none" href="'+url+'" target="_blank" rel="noopener noreferrer" title="Open host"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>';
+}
+function render(){
+ const list=filteredRows(); resultMeta.textContent=list.length.toLocaleString()+' shown · '+rows.length.toLocaleString()+' total'; empty.hidden=list.length!==0;
+ body.innerHTML=list.map((r,i)=>'<tr><td class="sf-num">'+(i+1)+'</td><td><span class="sf-host"><span class="sf-host-icon"><i class="fa-solid fa-globe"></i></span><a href="https://'+r.host+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></span></td><td><span class="sf-type">'+escapeHtml(r.type)+'</span></td><td>'+(r.date?'<span class="sf-date"><i class="fa-regular fa-calendar"></i>'+escapeHtml(formatDate(r.date))+'</span>':'<span class="sf-live">No date recorded</span>')+'</td><td>'+actionHtml(r.host)+'</td></tr>').join('');
+ gridWrap.innerHTML=list.map(r=>'<article class="sf-grid-card"><div class="sf-grid-host"><span class="sf-host-icon"><i class="fa-solid fa-globe"></i></span><a class="sf-grid-link" href="https://'+r.host+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></div><div class="sf-grid-bottom"><span class="sf-type">'+escapeHtml(r.type)+'</span><span class="sf-date-mini">'+escapeHtml(r.date?formatDate(r.date):'No date')+'</span></div><div class="sf-grid-bottom"><span></span>'+actionHtml(r.host)+'</div></article>').join('');
+ tableWrap.hidden=viewMode!=='table'; gridWrap.hidden=viewMode!=='grid';
+}
+function setView(mode){viewMode=mode;tableView.classList.toggle('active',mode==='table');gridView.classList.toggle('active',mode==='grid');render();localStorage.setItem('sf-view',mode)}
+function renderHistory(){
+ let h=[];try{h=JSON.parse(localStorage.getItem('sf-history')||'[]')}catch(e){}
+ historyEl.innerHTML=h.map(d=>'<button type="button" data-history="'+escapeHtml(d)+'">'+escapeHtml(d)+'</button>').join('');
+ historyEl.hidden=!h.length;
+}
+function saveHistory(d){let h=[];try{h=JSON.parse(localStorage.getItem('sf-history')||'[]')}catch(e){} h=[d,...h.filter(x=>x!==d)].slice(0,8);localStorage.setItem('sf-history',JSON.stringify(h));renderHistory()}
 function formatDate(v){
  if(!v) return '—';
  const d=new Date(v);
@@ -254,12 +307,16 @@ async function search(){
      }catch(err){lastError=err.name==='AbortError'?'request timed out':err.message}
    }
    if(data===null) throw new Error(lastError||'All data providers failed');
-   rows=extractRows(data,domain);
+   rows=extractRows(data,domain).map(r=>({...r,type:classify(r.host)}));
    rows.sort((a,b)=>a.host.localeCompare(b.host));
    count.textContent=rows.length.toLocaleString();
-   datedCount.textContent=rows.filter(r=>r.date).length.toLocaleString();
+   const dated=rows.filter(r=>r.date).sort((a,b)=>dateValue(a)-dateValue(b));
+   datedCount.textContent=dated.length.toLocaleString();
+   latestSeen.textContent=dated.length?formatDate(dated[dated.length-1].date):'—';
+   oldestSeen.textContent=dated.length?formatDate(dated[0].date):'—';
+   typeCount.textContent=new Set(rows.map(r=>r.type)).size.toLocaleString();
    searchedDomain.textContent=domain;
-   render(); results.classList.add('show');
+   saveHistory(domain); historyEl.hidden=false; render(); results.classList.add('show');
    if(rows.length) setStatus('Found '+rows.length.toLocaleString()+' indexed hostname'+(rows.length===1?'':'s')+' for '+domain+' via '+source+'.','ok');
    else setStatus('No indexed subdomains were returned for '+domain+'.','info');
  }catch(err){
@@ -270,7 +327,14 @@ async function search(){
  }
 }
 form.addEventListener('submit',e=>{e.preventDefault();search()});
-filter.addEventListener('input',render);
+filter.addEventListener('input',render); sortSelect.addEventListener('change',render);
+datedOnly.addEventListener('click',()=>{datedMode=!datedMode;datedOnly.classList.toggle('active',datedMode);render()});
+tableView.addEventListener('click',()=>setView('table')); gridView.addEventListener('click',()=>setView('grid'));
+historyEl.addEventListener('click',e=>{const b=e.target.closest('[data-history]');if(b){input.value=b.dataset.history;search()}});
+clearDomain.addEventListener('click',()=>{input.value='';input.focus();clearDomain.classList.remove('show')});
+input.addEventListener('input',()=>clearDomain.classList.toggle('show',!!input.value));
+body.addEventListener('click',copyHostClick); gridWrap.addEventListener('click',copyHostClick);
+async function copyHostClick(e){const b=e.target.closest('[data-copy-host]');if(!b)return;try{await navigator.clipboard.writeText(b.dataset.copyHost);setStatus('Copied '+b.dataset.copyHost+' to the clipboard.','ok')}catch(x){setStatus('Clipboard access was blocked by the browser.','error')}}
 document.querySelectorAll('[data-example]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.example;search()}));
 document.getElementById('copyBtn').addEventListener('click',async()=>{
  const text=rows.map(r=>r.host).join('\n');
@@ -278,11 +342,16 @@ document.getElementById('copyBtn').addEventListener('click',async()=>{
  try{await navigator.clipboard.writeText(text);setStatus('Copied '+rows.length.toLocaleString()+' hostnames to the clipboard.','ok')}catch(e){setStatus('Clipboard access was blocked by the browser.','error')}
 });
 document.getElementById('downloadBtn').addEventListener('click',()=>{
+
  if(!rows.length)return;
  const csv='Subdomain,First Seen\n'+rows.map(r=>'"'+r.host.replace(/"/g,'""')+'","'+r.date.replace(/"/g,'""')+'"').join('\n');
  const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=currentDomain+'-subdomains.csv';a.click();URL.revokeObjectURL(a.href);
 });
+document.getElementById('copyBtn').addEventListener('contextmenu',e=>e.preventDefault());
+try{viewMode=localStorage.getItem('sf-view')||'table'}catch(e){}
+const sharedDomain=new URLSearchParams(location.search).get('domain'); if(sharedDomain){input.value=sharedDomain;clearDomain.classList.add('show');setTimeout(search,80)}
+renderHistory(); setView(viewMode);
 })();
 </script>
 </body>
