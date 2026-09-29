@@ -35,29 +35,47 @@ body{background:#f8fafc}
 .sf-status.info{background:#eff6ff;color:#1e40af;border:1px solid #bfdbfe}
 .sf-status.error{background:#fef2f2;color:#b91c1c;border:1px solid #fecaca}
 .sf-status.ok{background:#f0fdf4;color:#166534;border:1px solid #bbf7d0}
-.sf-results{display:none;margin-top:18px}
+.sf-results{display:none;margin-top:24px;animation:sfIn .35s ease}
 .sf-results.show{display:block}
-.sf-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
-.sf-stat{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:15px}
-.sf-stat small{display:block;color:#64748b;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
-.sf-stat strong{display:block;margin-top:5px;color:#0f172a;font-size:1.35rem}
-.sf-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;overflow:hidden}
-.sf-card-head{padding:15px 16px;border-bottom:1px solid #e2e8f0;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.sf-card-head strong{color:#0f172a}
+@keyframes sfIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.sf-summary{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:12px;margin-bottom:14px}
+.sf-stat{position:relative;background:linear-gradient(145deg,#fff,#f8fbff);border:1px solid #e2e8f0;border-radius:16px;padding:16px 17px;box-shadow:0 8px 24px rgba(15,23,42,.045);overflow:hidden}
+.sf-stat:after{content:"";position:absolute;right:-22px;top:-22px;width:70px;height:70px;border-radius:50%;background:#eff6ff}
+.sf-stat small{display:flex;align-items:center;gap:7px;color:#64748b;font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;position:relative;z-index:1}
+.sf-stat small:before{content:"";width:7px;height:7px;border-radius:50%;background:#2563eb;display:inline-block}
+.sf-stat strong{display:block;margin-top:6px;color:#0f172a;font-size:1.5rem;line-height:1.15;position:relative;z-index:1;overflow:hidden;text-overflow:ellipsis}
+.sf-card{background:#fff;border:1px solid #dfe7f1;border-radius:18px;overflow:hidden;box-shadow:0 14px 40px rgba(15,23,42,.07)}
+.sf-card-head{padding:16px 17px 12px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.sf-card-title{display:flex;align-items:center;gap:10px}
+.sf-card-title-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:#eff6ff;color:#2563eb}
+.sf-card-head strong{color:#0f172a;font-size:.92rem}
+.sf-card-sub{display:block;color:#94a3b8;font-size:.7rem;margin-top:2px}
 .sf-actions{display:flex;gap:7px}
-.sf-small-btn{border:1px solid #dbe2ea;background:#fff;color:#334155;border-radius:9px;padding:7px 10px;font-size:.72rem;font-weight:800;cursor:pointer}
-.sf-small-btn:hover{background:#f8fafc}
-.sf-filter{padding:0 16px 12px}
-.sf-filter input{width:100%;height:38px;border:1px solid #e2e8f0;border-radius:9px;padding:0 11px;outline:0;font-size:.82rem}
-.sf-filter input:focus{border-color:#2563eb}
-.sf-table-wrap{overflow:auto;max-height:560px}
-table{width:100%;border-collapse:collapse;font-size:.82rem}
-th,td{text-align:left;padding:11px 16px;border-bottom:1px solid #f1f5f9;white-space:nowrap}
-th{position:sticky;top:0;background:#f8fafc;color:#64748b;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;z-index:1}
+.sf-small-btn{border:1px solid #dbe2ea;background:#fff;color:#334155;border-radius:10px;padding:8px 11px;font-size:.72rem;font-weight:800;cursor:pointer;transition:.18s ease}
+.sf-small-btn:hover{background:#f8fafc;border-color:#bfdbfe;color:#1d4ed8;transform:translateY(-1px)}
+.sf-filter{padding:0 17px 13px}
+.sf-filter-box{position:relative}
+.sf-filter-box i{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:.75rem}
+.sf-filter input{width:100%;height:40px;border:1px solid #e2e8f0;border-radius:10px;padding:0 12px 0 34px;outline:0;font-size:.8rem;background:#f8fafc;transition:.18s ease}
+.sf-filter input:focus{border-color:#93c5fd;background:#fff;box-shadow:0 0 0 4px rgba(37,99,235,.07)}
+.sf-table-wrap{overflow:auto;max-height:560px;border-top:1px solid #eef2f7}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:.81rem}
+th,td{text-align:left;padding:11px 15px;border-bottom:1px solid #f1f5f9;white-space:nowrap}
+th{position:sticky;top:0;background:#f8fafc;color:#64748b;font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;z-index:2}
+tbody tr{transition:background .15s ease}
+tbody tr:hover{background:#f8fbff}
 td:first-child{font-weight:700;color:#0f172a}
-td a{color:#2563eb;text-decoration:none}
+.sf-num{width:44px;color:#94a3b8;font-weight:700;font-size:.68rem}
+.sf-host{display:inline-flex;align-items:center;gap:8px}
+.sf-host-icon{width:27px;height:27px;display:grid;place-items:center;border-radius:8px;background:#eff6ff;color:#2563eb;font-size:.68rem}
+td a{color:#1d4ed8;text-decoration:none}
 td a:hover{text-decoration:underline}
-.empty{padding:30px;text-align:center;color:#64748b}
+.sf-date{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:999px;background:#f8fafc;border:1px solid #edf2f7;color:#64748b;font-size:.68rem;font-weight:700}
+.sf-date i{color:#94a3b8}
+.sf-live{display:inline-flex;align-items:center;gap:6px;color:#64748b;font-size:.72rem}
+.sf-live:before{content:"";width:6px;height:6px;border-radius:50%;background:#22c55e}
+.empty{padding:42px 20px;text-align:center;color:#64748b}
+.empty i{display:block;font-size:1.5rem;color:#cbd5e1;margin-bottom:9px}
 .sf-note{margin-top:14px;padding:13px 15px;background:#fff;border:1px solid #e2e8f0;border-radius:13px;color:#64748b;font-size:.75rem;line-height:1.6}
 .sf-note strong{color:#334155}
 .sf-footer{text-align:center;margin-top:20px;color:#94a3b8;font-size:.72rem}
@@ -100,9 +118,20 @@ td a:hover{text-decoration:underline}
 <div class="sf-stat"><small>Domain</small><strong id="searchedDomain">—</strong></div>
 </div>
 <div class="sf-card">
-<div class="sf-card-head"><strong>Discovered hostnames</strong><div class="sf-actions"><button class="sf-small-btn" id="copyBtn" type="button"><i class="fa-regular fa-copy"></i> Copy all</button><button class="sf-small-btn" id="downloadBtn" type="button"><i class="fa-solid fa-download"></i> CSV</button></div></div>
-<div class="sf-filter"><input id="filterInput" type="search" placeholder="Filter results..." aria-label="Filter subdomains"></div>
-<div class="sf-table-wrap"><table><thead><tr><th>Subdomain</th><th>First seen</th></tr></thead><tbody id="resultBody"></tbody></table><div id="empty" class="empty" hidden>No subdomains match the filter.</div></div>
+<div class="sf-card-head">
+  <div class="sf-card-title">
+    <div class="sf-card-title-icon"><i class="fa-solid fa-list-ul"></i></div>
+    <div><strong>Discovered hostnames</strong><span class="sf-card-sub">Certificate Transparency observations</span></div>
+  </div>
+  <div class="sf-actions">
+    <button class="sf-small-btn" id="copyBtn" type="button"><i class="fa-regular fa-copy"></i> Copy all</button>
+    <button class="sf-small-btn" id="downloadBtn" type="button"><i class="fa-solid fa-download"></i> Export CSV</button>
+  </div>
+</div>
+<div class="sf-filter">
+  <div class="sf-filter-box"><i class="fa-solid fa-filter"></i><input id="filterInput" type="search" placeholder="Filter by hostname..." aria-label="Filter subdomains"></div>
+</div>
+<div class="sf-table-wrap"><table><thead><tr><th class="sf-num">#</th><th>Subdomain</th><th>First seen</th></tr></thead><tbody id="resultBody"></tbody></table><div id="empty" class="empty" hidden><i class="fa-regular fa-folder-open"></i>No subdomains match the filter.</div></div>
 </div>
 <div class="sf-note"><strong>Important:</strong> An indexed hostname means it was observed by the underlying data sources; it does not guarantee that the host is live today. This tool is intended for legitimate domain research, asset inventory, and security awareness. Results are provided by <a href="https://crt.name/" target="_blank" rel="noopener">crt.name</a>.</div>
 </section>
@@ -169,9 +198,13 @@ function extractRows(data,domain){
 function render(){
  const q=filter.value.trim().toLowerCase();
  const list=rows.filter(r=>!q||r.host.includes(q));
- body.innerHTML=list.map(r=>{
+ body.innerHTML=list.map((r,i)=>{
    const href='https://'+r.host;
-   return '<tr><td><a href="'+href+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></td><td>'+escapeHtml(formatDate(r.date))+'</td></tr>';
+   const date=formatDate(r.date);
+   const dateHtml=date==='—'
+     ? '<span class="sf-live">No date recorded</span>'
+     : '<span class="sf-date"><i class="fa-regular fa-calendar"></i>'+escapeHtml(date)+'</span>';
+   return '<tr><td class="sf-num">'+(i+1)+'</td><td><span class="sf-host"><span class="sf-host-icon"><i class="fa-solid fa-globe"></i></span><a href="'+href+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></span></td><td>'+dateHtml+'</td></tr>';
  }).join('');
  empty.hidden=list.length!==0;
 }
