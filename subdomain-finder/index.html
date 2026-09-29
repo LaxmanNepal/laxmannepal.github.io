@@ -103,7 +103,7 @@ td a:hover{text-decoration:underline}
 .sf-type{display:inline-flex;padding:3px 7px;border-radius:999px;background:#f1f5f9;color:#475569;font-size:.62rem;font-weight:800;text-transform:uppercase}
 .sf-card-actions{display:flex;gap:5px}.sf-icon-btn{border:1px solid #e2e8f0;background:#fff;color:#64748b;border-radius:8px;width:28px;height:28px;cursor:pointer}.sf-icon-btn:hover{color:#1d4ed8;border-color:#bfdbfe}
 .sf-date-mini{color:#94a3b8;font-size:.63rem;font-weight:700}
-.sf-progress{height:4px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin-top:9px}.sf-progress i{display:block;height:100%;width:45%;background:#2563eb;animation:sfLoad 1.1s ease-in-out infinite alternate}@keyframes sfLoad{to{width:92%}}
+.sf-bulkbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:9px 17px;border-top:1px solid #eef2f7;background:#fbfdff;color:#64748b;font-size:.7rem;font-weight:700}.sf-bulkbar button:disabled{opacity:.45;cursor:not-allowed}.sf-dns{font-size:.68rem;font-weight:800}.sf-dns button{border:1px solid #e2e8f0;background:#fff;border-radius:7px;padding:4px 7px;color:#64748b;cursor:pointer}.sf-dns button:hover{border-color:#bfdbfe;color:#1d4ed8}.sf-dns-result.ok{color:#15803d}.sf-dns-result.no{color:#b45309}.sf-progress{height:4px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin-top:9px}.sf-progress i{display:block;height:100%;width:45%;background:#2563eb;animation:sfLoad 1.1s ease-in-out infinite alternate}@keyframes sfLoad{to{width:92%}}
 .sf-history{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:12px auto 0;max-width:760px}.sf-history button{border:1px solid #e2e8f0;background:#fff;color:#64748b;border-radius:999px;padding:5px 9px;font-size:.68rem;cursor:pointer}.sf-history button:hover{border-color:#bfdbfe;color:#1d4ed8}
 .sf-search-clear{position:relative}.sf-clear{position:absolute;right:7px;top:7px;width:38px;height:38px;border:0;background:#f1f5f9;color:#64748b;border-radius:9px;cursor:pointer;display:none}.sf-clear.show{display:block}
 @media(max-width:650px){.sf-toolbar{align-items:stretch}.sf-controls{width:100%}.sf-select,.sf-control{flex:1}.sf-grid{grid-template-columns:1fr}}
@@ -161,12 +161,14 @@ td a:hover{text-decoration:underline}
  <div class="sf-meta" id="resultMeta">0 results</div>
  <div class="sf-controls">
   <select id="sortSelect" class="sf-select" aria-label="Sort results"><option value="az">A–Z</option><option value="za">Z–A</option><option value="oldest">Oldest first</option><option value="newest">Newest first</option></select>
+  <select id="typeSelect" class="sf-select" aria-label="Filter host type"><option value="">All types</option></select>
   <button id="datedOnly" class="sf-control" type="button">Dated only</button>
   <button id="tableView" class="sf-control active" type="button"><i class="fa-solid fa-table-list"></i> Table</button>
   <button id="gridView" class="sf-control" type="button"><i class="fa-solid fa-grip"></i> Grid</button>
  </div>
 </div>
-<div id="tableWrap" class="sf-table-wrap"><table><thead><tr><th class="sf-num">#</th><th>Hostname</th><th>Type</th><th>First seen</th><th>Action</th></tr></thead><tbody id="resultBody"></tbody></table></div>
+<div class="sf-bulkbar"><label><input id="selectAll" type="checkbox"> Select all shown</label><span id="selectedMeta">0 selected</span><button id="copySelected" class="sf-control" type="button">Copy selected</button><button id="exportSelected" class="sf-control" type="button">Export selected</button></div>
+<div id="tableWrap" class="sf-table-wrap"><table><thead><tr><th class="sf-num">#</th><th>Hostname</th><th>Type</th><th>First seen</th><th>DNS</th><th>Action</th></tr></thead><tbody id="resultBody"></tbody></table></div>
 <div id="gridWrap" class="sf-grid" hidden></div>
 <div id="empty" class="empty" hidden><i class="fa-regular fa-folder-open"></i>No subdomains match the current filter.</div>
 </div>
@@ -186,8 +188,9 @@ const form=document.getElementById('searchForm'), input=document.getElementById(
 const status=document.getElementById('status'), results=document.getElementById('results'), body=document.getElementById('resultBody'), empty=document.getElementById('empty');
 const filter=document.getElementById('filterInput'), count=document.getElementById('count'), datedCount=document.getElementById('datedCount'), searchedDomain=document.getElementById('searchedDomain');
 const latestSeen=document.getElementById('latestSeen'), oldestSeen=document.getElementById('oldestSeen'), typeCount=document.getElementById('typeCount'), resultMeta=document.getElementById('resultMeta');
-const sortSelect=document.getElementById('sortSelect'), datedOnly=document.getElementById('datedOnly'), tableWrap=document.getElementById('tableWrap'), gridWrap=document.getElementById('gridWrap'), tableView=document.getElementById('tableView'), gridView=document.getElementById('gridView'), historyEl=document.getElementById('history'), clearDomain=document.getElementById('clearDomain');
-let rows=[], currentDomain='', datedMode=false, viewMode='table';
+const selectAll=document.getElementById('selectAll'), selectedMeta=document.getElementById('selectedMeta'), copySelected=document.getElementById('copySelected'), exportSelected=document.getElementById('exportSelected');
+const sortSelect=document.getElementById('sortSelect'), typeSelect=document.getElementById('typeSelect'), datedOnly=document.getElementById('datedOnly'), tableWrap=document.getElementById('tableWrap'), gridWrap=document.getElementById('gridWrap'), tableView=document.getElementById('tableView'), gridView=document.getElementById('gridView'), historyEl=document.getElementById('history'), clearDomain=document.getElementById('clearDomain');
+let rows=[], currentDomain='', datedMode=false, viewMode='table', selected=new Set(), dnsCache=new Map();
 
 function setStatus(message,type){
  status.innerHTML=message; status.className='sf-status show '+type;
@@ -241,21 +244,22 @@ function classify(host){
 }
 function filteredRows(){
  const q=filter.value.trim().toLowerCase();
- let list=rows.filter(r=>(!q||r.host.includes(q)||r.type.toLowerCase().includes(q))&&( !datedMode||r.date));
+ let list=rows.filter(r=>(!q||r.host.includes(q)||r.type.toLowerCase().includes(q))&&(!datedMode||r.date)&&(!typeSelect.value||r.type===typeSelect.value));
  const s=sortSelect.value;
  list.sort((a,b)=>s==='za'?b.host.localeCompare(a.host):s==='oldest'?dateValue(a)-dateValue(b):s==='newest'?dateValue(b)-dateValue(a):a.host.localeCompare(b.host));
  return list;
 }
 function dateValue(r){const t=r.date?new Date(r.date).getTime():0;return Number.isNaN(t)?0:t}
+function dnsHtml(host){return dnsCache.has(host)?'<span class="sf-dns-result '+(dnsCache.get(host)?'ok':'no')+'"><i class="fa-solid fa-'+(dnsCache.get(host)?'check':'circle-exclamation')+'"></i> '+(dnsCache.get(host)?'Resolves':'No DNS')+'</span>':'<button type="button" data-dns="'+escapeHtml(host)+'"><i class="fa-solid fa-globe"></i> Check DNS</button>'}
 function actionHtml(host){
  const url='https://'+host;
  return '<div class="sf-card-actions"><button class="sf-icon-btn" type="button" data-copy-host="'+escapeHtml(host)+'" title="Copy hostname"><i class="fa-regular fa-copy"></i></button><a class="sf-icon-btn" style="display:inline-grid;place-items:center;text-decoration:none" href="'+url+'" target="_blank" rel="noopener noreferrer" title="Open host"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>';
 }
 function render(){
  const list=filteredRows(); resultMeta.textContent=list.length.toLocaleString()+' shown · '+rows.length.toLocaleString()+' total'; empty.hidden=list.length!==0;
- body.innerHTML=list.map((r,i)=>'<tr><td class="sf-num">'+(i+1)+'</td><td><span class="sf-host"><span class="sf-host-icon"><i class="fa-solid fa-globe"></i></span><a href="https://'+r.host+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></span></td><td><span class="sf-type">'+escapeHtml(r.type)+'</span></td><td>'+(r.date?'<span class="sf-date"><i class="fa-regular fa-calendar"></i>'+escapeHtml(formatDate(r.date))+'</span>':'<span class="sf-live">No date recorded</span>')+'</td><td>'+actionHtml(r.host)+'</td></tr>').join('');
+ body.innerHTML=list.map((r,i)=>'<tr><td class="sf-num"><input type="checkbox" data-select-host="'+escapeHtml(r.host)+'" '+(selected.has(r.host)?'checked':'')+'></td><td><span class="sf-host"><span class="sf-host-icon"><i class="fa-solid fa-globe"></i></span><a href="https://'+r.host+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></span></td><td><span class="sf-type">'+escapeHtml(r.type)+'</span></td><td class="sf-dns">'+dnsHtml(r.host)+'</td><td>'+(r.date?'<span class="sf-date"><i class="fa-regular fa-calendar"></i>'+escapeHtml(formatDate(r.date))+'</span>':'<span class="sf-live">No date recorded</span>')+'</td><td>'+actionHtml(r.host)+'</td></tr>').join('');
  gridWrap.innerHTML=list.map(r=>'<article class="sf-grid-card"><div class="sf-grid-host"><span class="sf-host-icon"><i class="fa-solid fa-globe"></i></span><a class="sf-grid-link" href="https://'+r.host+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(r.host)+'</a></div><div class="sf-grid-bottom"><span class="sf-type">'+escapeHtml(r.type)+'</span><span class="sf-date-mini">'+escapeHtml(r.date?formatDate(r.date):'No date')+'</span></div><div class="sf-grid-bottom"><span></span>'+actionHtml(r.host)+'</div></article>').join('');
- tableWrap.hidden=viewMode!=='table'; gridWrap.hidden=viewMode!=='grid';
+ tableWrap.hidden=viewMode!=='table'; gridWrap.hidden=viewMode!=='grid'; selectAll.checked=list.length>0&&list.every(r=>selected.has(r.host)); selectedMeta.textContent=selected.size.toLocaleString()+' selected'; copySelected.disabled=!selected.size; exportSelected.disabled=!selected.size;
 }
 function setView(mode){viewMode=mode;tableView.classList.toggle('active',mode==='table');gridView.classList.toggle('active',mode==='grid');render();localStorage.setItem('sf-view',mode)}
 function renderHistory(){
@@ -317,7 +321,7 @@ async function search(){
    datedCount.textContent=dated.length.toLocaleString();
    latestSeen.textContent=dated.length?formatDate(dated[dated.length-1].date):'—';
    oldestSeen.textContent=dated.length?formatDate(dated[0].date):'—';
-   typeCount.textContent=new Set(rows.map(r=>r.type)).size.toLocaleString();
+   const types=[...new Set(rows.map(r=>r.type))].sort(); typeSelect.innerHTML='<option value="">All types</option>'+types.map(t=>'<option value="'+escapeHtml(t)+'">'+escapeHtml(t)+'</option>').join(''); typeCount.textContent=types.length.toLocaleString();
    searchedDomain.textContent=domain;
    saveHistory(domain); historyEl.hidden=false; render(); results.classList.add('show');
    const shareUrl=new URL(location.href); shareUrl.searchParams.set('domain',domain); history.replaceState(null,'',shareUrl.href);
@@ -331,7 +335,14 @@ async function search(){
  }
 }
 form.addEventListener('submit',e=>{e.preventDefault();search()});
-filter.addEventListener('input',render); sortSelect.addEventListener('change',render);
+filter.addEventListener('input',render); sortSelect.addEventListener('change',render); typeSelect.addEventListener('change',render);
+selectAll.addEventListener('change',()=>{filteredRows().forEach(r=>selectAll.checked?selected.add(r.host):selected.delete(r.host));render()});
+body.addEventListener('change',e=>{const x=e.target.closest('[data-select-host]');if(x){x.checked?selected.add(x.dataset.selectHost):selected.delete(x.dataset.selectHost);render()}});
+async function checkDns(host){if(dnsCache.has(host))return;try{const r=await fetch('https://dns.google/resolve?name='+encodeURIComponent(host)+'&type=A',{cache:'no-store'});const d=await r.json();dnsCache.set(host,Array.isArray(d.Answer)&&d.Answer.length>0)}catch(e){dnsCache.set(host,false)}render()}
+body.addEventListener('click',e=>{const b=e.target.closest('[data-dns]');if(b){b.disabled=true;b.textContent='Checking…';checkDns(b.dataset.dns)}});
+gridWrap.addEventListener('click',e=>{const b=e.target.closest('[data-dns]');if(b){b.disabled=true;b.textContent='Checking…';checkDns(b.dataset.dns)}});
+copySelected.addEventListener('click',async()=>{try{await navigator.clipboard.writeText([...selected].join('\n'));setStatus('Copied '+selected.size.toLocaleString()+' selected hostnames.','ok')}catch(e){setStatus('Clipboard access was blocked by the browser.','error')}});
+exportSelected.addEventListener('click',()=>{if(selected.size)downloadFile(currentDomain+'-selected.txt',[...selected].join('\n'),'text/plain;charset=utf-8')});
 datedOnly.addEventListener('click',()=>{datedMode=!datedMode;datedOnly.classList.toggle('active',datedMode);render()});
 tableView.addEventListener('click',()=>setView('table')); gridView.addEventListener('click',()=>setView('grid'));
 historyEl.addEventListener('click',e=>{const b=e.target.closest('[data-history]');if(b){input.value=b.dataset.history;search()}});
