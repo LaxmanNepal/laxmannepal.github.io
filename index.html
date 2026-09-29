@@ -73,54 +73,6 @@ const input=document.getElementById('global-nav-search');input?.addEventListener
 </script>
 <script>
 (function(){
-const grid=document.getElementById('home-tools-grid'), search=document.getElementById('directory-search'), count=document.getElementById('directory-count'), filters=[...document.querySelectorAll('.directory-filter')];
-if(!grid)return;
-const cards=[...grid.querySelectorAll('.home-tool-card')];
-if(document.getElementById('stat-tools'))document.getElementById('stat-tools').textContent=cards.length;
-function category(card,i){
- const t=card.innerText.toLowerCase(),u=(card.getAttribute('href')||'').toLowerCase();
- if(i<1||t.includes('ai')) return 'ai';
- if(/youtube|facebook|video|image prompt|thumbnail|background remover/.test(t)) return 'media';
- if(/pdf|ebook|word|sitemap|data/.test(t)) return 'documents';
- if(/rashifal|patro|festival|exam|gold price/.test(t)) return 'nepal';
- return 'other';
-}
-cards.forEach((c,i)=>c.dataset.category=category(c,i));
-let active='all';
-function apply(){
- const q=(search?.value||'').trim().toLowerCase(); let visible=0;
- cards.forEach(c=>{const okCat=active==='all'||c.dataset.category===active;const okQ=!q||c.innerText.toLowerCase().includes(q);const show=okCat&&okQ;c.classList.toggle('is-hidden',!show);if(show)visible++});
- if(count)count.textContent=visible+' of '+cards.length+' tools shown';
- const stat=document.getElementById('stat-tools'); if(stat)stat.textContent=cards.length;
-}
-filters.forEach(b=>b.addEventListener('click',()=>{filters.forEach(x=>x.classList.remove('active'));b.classList.add('active');active=b.dataset.cat;apply()}));
-search?.addEventListener('input',apply);apply();
-})();
-</script><script>
-(function(){
-const tools=[...document.querySelectorAll('#home-tools-grid .home-tool-card')];
-const dateEl=document.getElementById('daily-date'),pick=document.getElementById('daily-pick'),random=document.getElementById('random-tool');
-const recentTitle=document.getElementById('recent-tool-title'),recentText=document.getElementById('recent-tool-text'),recentLink=document.getElementById('recent-tool-link');
-const picks=[
-['/gold-price-in-nepal-today/','🥇 Check today’s gold price'],
-['/p/youtube-tools.html','▶️ Open YouTube tools'],
-['/ai-tools/','🤖 Discover an AI tool'],
-['/p/aajako-patro.html','🇳🇵 Check today’s Patro'],
-['/p/pdf.html','📄 Try a PDF tool'],
-['/p/image.html','🖼️ Open image tools']
-];
-const d=new Date(), days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], months=['January','February','March','April','May','June','July','August','September','October','November','December'];
-if(dateEl)dateEl.textContent=days[d.getDay()]+', '+months[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear()+' · A fresh reason to explore';
-const pickIndex=(Math.floor(d.getTime()/86400000))%picks.length;
-if(pick){pick.href=picks[pickIndex][0];pick.textContent=picks[pickIndex][1]}
-let recent=[];try{recent=JSON.parse(localStorage.getItem('ln_recent_tools')||'[]')}catch(e){}
-function renderRecent(){if(!recent.length)return;const r=recent[0];if(recentTitle)recentTitle.textContent=r.title;if(recentText)recentText.textContent='Pick up where you left off — your last visit was saved on this device.';if(recentLink){recentLink.href=r.url;recentLink.textContent='Continue →'}}
-renderRecent();
-tools.forEach(card=>card.addEventListener('click',()=>{try{const item={title:card.innerText.trim(),url:card.href.replace(location.origin,'')};recent=[item,...recent.filter(x=>x.url!==item.url)].slice(0,5);localStorage.setItem('ln_recent_tools',JSON.stringify(recent))}catch(e){}}));
-random?.addEventListener('click',()=>{if(!tools.length)return;const c=tools[Math.floor(Math.random()*tools.length)];location.href=c.href});
-})();
-</script><script>
-(function(){
 const grid=document.getElementById('home-tools-grid'), tabs=[...document.querySelectorAll('.cat-tab')], search=document.getElementById('directory-search'), count=document.getElementById('directory-count');
 if(!grid)return;
 const cards=[...grid.querySelectorAll('.home-tool-card')];
