@@ -115,7 +115,7 @@ td a:hover{text-decoration:underline}
 'use strict';
 const API='https://crt.name/v1/search';
 const FALLBACK_API='https://newisty.com/api/subdomain-finder/search';
-const CORS_PROXY='https://everyorigin.jwvbremen.nl/get?url=';
+const CORS_PROXY='https://api.allorigins.win/get?url=';
 const form=document.getElementById('searchForm'), input=document.getElementById('domainInput'), btn=document.getElementById('searchBtn');
 const status=document.getElementById('status'), results=document.getElementById('results'), body=document.getElementById('resultBody'), empty=document.getElementById('empty');
 const filter=document.getElementById('filterInput'), count=document.getElementById('count'), datedCount=document.getElementById('datedCount'), searchedDomain=document.getElementById('searchedDomain');
@@ -125,7 +125,7 @@ function setStatus(message,type){
  status.textContent=message; status.className='sf-status show '+type;
 }
 function normalizeDomain(value){
- let d=value.trim().toLowerCase().replace(/^https?:\\/\\//,'').split('/')[0].split('?')[0].split('#')[0].replace(/\\.$/,'');
+ let d=value.trim().toLowerCase().replace(/^https?:\/\//i,'').split('/')[0].split('?')[0].split('#')[0].replace(/\.$/,'');
  if(d.startsWith('www.')) d=d.slice(4);
  return d;
 }
@@ -141,7 +141,7 @@ function extractRows(data,domain){
  function walk(value){
    if(Array.isArray(value)){ value.forEach(walk); return; }
    if(typeof value==='string'){
-     value.split(/\\r?\\n/).map(s=>s.trim()).filter(Boolean).forEach(host=>raw.push({host,date:''}));
+     value.split(/\r?\n/).map(s=>s.trim()).filter(Boolean).forEach(host=>raw.push({host,date:''}));
      return;
    }
    if(!value||typeof value!=='object') return;
@@ -156,7 +156,7 @@ function extractRows(data,domain){
  }
  walk(data);
  return raw.map(x=>{
-   let host=x.host.replace(/^\\*\\./,'').toLowerCase();
+   let host=x.host.replace(/^\*\./,'').toLowerCase();
    return {host,date:x.date};
  }).filter(x=>{
    if(!x.host || (x.host!==domain && !x.host.endsWith('.'+domain))) return false;
@@ -191,10 +191,10 @@ async function search(){
    const directCrt=API+'?apex='+encodeURIComponent(domain)+'&format=json&dates=1';
    const directFallback=FALLBACK_API+'?apex='+encodeURIComponent(domain)+'&dates=1';
    const endpoints=[
-     {url:CORS_PROXY+encodeURIComponent(directCrt),source:'crt.name via CORS proxy',wrapped:true},
-     {url:CORS_PROXY+encodeURIComponent(directFallback),source:'Newisty via CORS proxy',wrapped:true},
+     {url:directFallback,source:'Newisty / crt.name',wrapped:false},
      {url:directCrt,source:'crt.name',wrapped:false},
-     {url:directFallback,source:'Newisty fallback',wrapped:false}
+     {url:CORS_PROXY+encodeURIComponent(directFallback),source:'Newisty via AllOrigins',wrapped:true},
+     {url:CORS_PROXY+encodeURIComponent(directCrt),source:'crt.name via AllOrigins',wrapped:true}
    ];
    for(let i=0;i<endpoints.length;i++){
      try{
