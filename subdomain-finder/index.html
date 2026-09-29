@@ -115,7 +115,7 @@ td a:hover{text-decoration:underline}
 'use strict';
 const API='https://crt.name/v1/search';
 const FALLBACK_API='https://newisty.com/api/subdomain-finder/search';
-const CORS_PROXY='https://api.allorigins.win/get?url=';
+const CORS_PROXY='https://api.allorigins.win/raw?url=';
 const form=document.getElementById('searchForm'), input=document.getElementById('domainInput'), btn=document.getElementById('searchBtn');
 const status=document.getElementById('status'), results=document.getElementById('results'), body=document.getElementById('resultBody'), empty=document.getElementById('empty');
 const filter=document.getElementById('filterInput'), count=document.getElementById('count'), datedCount=document.getElementById('datedCount'), searchedDomain=document.getElementById('searchedDomain');
@@ -189,7 +189,7 @@ async function search(){
  try{
    let data=null, source='crt.name', lastError='';
    const directCrt=API+'?apex='+encodeURIComponent(domain)+'&format=json&dates=1';
-   const directFallback=FALLBACK_API+'?apex='+encodeURIComponent(domain)+'&dates=1';
+   const directFallback=FALLBACK_API+'?apex='+encodeURIComponent(domain)+'&dates=1&limit=5000';
    const endpoints=[
      {url:directFallback,source:'Newisty / crt.name',wrapped:false},
      {url:directCrt,source:'crt.name',wrapped:false},
@@ -198,7 +198,12 @@ async function search(){
    ];
    for(let i=0;i<endpoints.length;i++){
      try{
-       const response=await fetch(endpoints[i].url,{headers:{Accept:'application/json,text/plain,*/*'}});
+       const controller=new AbortController();
+       const timeout=setTimeout(()=>controller.abort(),8000);
+       let response;
+       try{
+         response=await fetch(endpoints[i].url,{headers:{Accept:'application/json,text/plain,*/*'},signal:controller.signal,cache:'no-store'});
+       }finally{clearTimeout(timeout)}
        if(!response.ok) throw new Error('HTTP '+response.status);
        const text=await response.text();
        let parsed;
@@ -213,7 +218,7 @@ async function search(){
        }
        source=endpoints[i].source;
        break;
-     }catch(err){lastError=err.message}
+     }catch(err){lastError=err.name==='AbortError'?'request timed out':err.message}
    }
    if(data===null) throw new Error(lastError||'All data providers failed');
    rows=extractRows(data,domain);
