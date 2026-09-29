@@ -150,7 +150,10 @@ td a:hover{text-decoration:underline}
   </div>
   <div class="sf-actions">
     <button class="sf-small-btn" id="copyBtn" type="button"><i class="fa-regular fa-copy"></i> Copy all</button>
-    <button class="sf-small-btn" id="downloadBtn" type="button"><i class="fa-solid fa-download"></i> Export CSV</button>
+    <button class="sf-small-btn" id="downloadBtn" type="button"><i class="fa-solid fa-file-csv"></i> CSV</button>
+<button class="sf-small-btn" id="downloadJsonBtn" type="button"><i class="fa-solid fa-code"></i> JSON</button>
+<button class="sf-small-btn" id="downloadTxtBtn" type="button"><i class="fa-solid fa-file-lines"></i> TXT</button>
+<button class="sf-small-btn" id="shareBtn" type="button"><i class="fa-solid fa-share-nodes"></i> Share</button>
   </div>
 </div>
 <div class="sf-filter"><div class="sf-filter-box"><i class="fa-solid fa-filter"></i><input id="filterInput" type="search" placeholder="Filter by hostname or type..." aria-label="Filter subdomains"></div></div>
@@ -187,7 +190,7 @@ const sortSelect=document.getElementById('sortSelect'), datedOnly=document.getEl
 let rows=[], currentDomain='', datedMode=false, viewMode='table';
 
 function setStatus(message,type){
- status.textContent=message; status.className='sf-status show '+type;
+ status.innerHTML=message; status.className='sf-status show '+type;
 }
 function normalizeDomain(value){
  let d=value.trim().toLowerCase().replace(/^https?:\/\//i,'').split('/')[0].split('?')[0].split('#')[0].replace(/\.$/,'');
@@ -271,7 +274,7 @@ async function search(){
  if(!validDomain(domain)){setStatus('Enter a valid apex domain such as example.com. Do not include a path.', 'error'); return;}
  btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Searching…';
  results.classList.remove('show'); filter.value=''; body.innerHTML=''; rows=[]; currentDomain=domain;
- setStatus('Searching the indexed hostname database for '+domain+'…','info');
+ setStatus('<span>Searching the indexed hostname database for '+escapeHtml(domain)+'…</span><div class="sf-progress"><i></i></div>','info');
  try{
    let data=null, source='crt.name', lastError='';
    const directCrt=API+'?apex='+encodeURIComponent(domain)+'&format=json&dates=1';
@@ -317,6 +320,7 @@ async function search(){
    typeCount.textContent=new Set(rows.map(r=>r.type)).size.toLocaleString();
    searchedDomain.textContent=domain;
    saveHistory(domain); historyEl.hidden=false; render(); results.classList.add('show');
+   const shareUrl=new URL(location.href); shareUrl.searchParams.set('domain',domain); history.replaceState(null,'',shareUrl.href);
    if(rows.length) setStatus('Found '+rows.length.toLocaleString()+' indexed hostname'+(rows.length===1?'':'s')+' for '+domain+' via '+source+'.','ok');
    else setStatus('No indexed subdomains were returned for '+domain+'.','info');
  }catch(err){
@@ -341,6 +345,10 @@ document.getElementById('copyBtn').addEventListener('click',async()=>{
  if(!text)return;
  try{await navigator.clipboard.writeText(text);setStatus('Copied '+rows.length.toLocaleString()+' hostnames to the clipboard.','ok')}catch(e){setStatus('Clipboard access was blocked by the browser.','error')}
 });
+function downloadFile(name,content,type){const blob=new Blob([content],{type:type});const a=document.createElement('a');const url=URL.createObjectURL(blob);a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),500)}
+document.getElementById('downloadJsonBtn').addEventListener('click',()=>{if(rows.length)downloadFile(currentDomain+'-subdomains.json',JSON.stringify({domain:currentDomain,count:rows.length,results:rows},null,2),'application/json')});
+document.getElementById('downloadTxtBtn').addEventListener('click',()=>{if(rows.length)downloadFile(currentDomain+'-subdomains.txt',rows.map(r=>r.host).join('\n'),'text/plain;charset=utf-8')});
+document.getElementById('shareBtn').addEventListener('click',async()=>{if(!currentDomain)return;const u=new URL(location.href);u.searchParams.set('domain',currentDomain);try{await navigator.clipboard.writeText(u.href);setStatus('Share link copied to the clipboard.','ok')}catch(e){setStatus('Share URL: '+escapeHtml(u.href),'ok')}});
 document.getElementById('downloadBtn').addEventListener('click',()=>{
 
  if(!rows.length)return;
