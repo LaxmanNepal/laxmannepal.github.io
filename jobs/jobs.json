@@ -1,8 +1,285 @@
 [
-{"id":"demo-gov-01","title":"शाखा अधिकृत / अधिकृतस्तर — Sample Listing","organization":"Demo Government Vacancy","category":"सरकारी","location":"Kathmandu","qualification":"Bachelor","experience":"Fresher","salary":"Official notice","salaryMax":0,"deadline":"2026-10-20","posted":"2026-10-02","type":"Full-time","remote":false,"verified":false,"source":"Demo data — replace with the official vacancy notice","description":"यो demo record हो। Production मा राख्दा सम्बन्धित सरकारी निकायको official notice, पद, विज्ञापन नम्बर, qualification र deadline सँग data verify गरेर मात्र publish गर्नुहोस्।","requirements":["Bachelor's degree or the exact qualification stated in the official notice","Age and inclusion requirements as stated in the notice","Follow the official application procedure"],"skills":["Administration","Communication","MS Office"],"applyUrl":"https://psc.gov.np/"},
-{"id":"demo-private-01","title":"Management Trainee — Sample Listing","organization":"Demo Private Company","category":"निजी","location":"Hetauda","qualification":"+2","experience":"Fresher","salary":"Negotiable","salaryMax":0,"deadline":"2026-10-18","posted":"2026-10-02","type":"Full-time","remote":false,"verified":false,"source":"Demo data — replace with a verified employer listing","description":"Demo listing for testing the portal. Replace this record with a real employer vacancy before publishing.","requirements":["+2 or the employer's stated qualification","Basic computer skills","Good communication"],"skills":["MS Office","Communication"],"applyUrl":"https://merojob.com/"},
-{"id":"demo-ngo-01","title":"Program Assistant — Sample Listing","organization":"Demo NGO / INGO","category":"संस्था / NGO / INGO","location":"Pokhara","qualification":"Bachelor","experience":"1–2 years","salary":"As per organization","salaryMax":0,"deadline":"2026-10-15","posted":"2026-10-01","type":"Full-time","remote":false,"verified":false,"source":"Demo data — verify with the organization's official vacancy","description":"Demo listing. The final portal should store the exact organization, job description, qualification, experience, deadline and official apply URL.","requirements":["Bachelor's degree in a relevant field","1–2 years relevant experience","Report writing and communication skills"],"skills":["Reporting","Excel","Communication"],"applyUrl":"https://www.jobsnepal.com/"},
-{"id":"demo-bank-01","title":"Junior Assistant — Sample Listing","organization":"Demo Bank / Financial Institution","category":"बैंकिङ / वित्त","location":"Biratnagar","qualification":"+2","experience":"Fresher","salary":"As per institution","salaryMax":0,"deadline":"2026-10-22","posted":"2026-10-02","type":"Full-time","remote":false,"verified":false,"source":"Demo data — verify the bank's official career page","description":"Demo listing for banking-category UI and filters.","requirements":["+2 or exact qualification in the official notice","Basic computer literacy","Customer service skills"],"skills":["Excel","Customer Service","Banking"],"applyUrl":"https://www.rbb.com.np/"},
-{"id":"demo-it-01","title":"Junior IT Support — Sample Listing","organization":"Demo Technology Company","category":"IT / Technology","location":"Remote","qualification":"Diploma","experience":"1–2 years","salary":"Negotiable","salaryMax":0,"deadline":"2026-10-25","posted":"2026-09-30","type":"Full-time","remote":true,"verified":false,"source":"Demo data — replace with verified vacancy","description":"Demo remote IT vacancy for testing search, remote filter and qualification filters.","requirements":["Diploma or relevant technical qualification","Basic troubleshooting knowledge","Clear communication"],"skills":["Windows","Hardware","Networking","Help Desk"],"applyUrl":"https://merojob.com/"},
-{"id":"demo-edu-01","title":"Basic Level Teacher — Sample Listing","organization":"Demo School","category":"शिक्षा","location":"Chitwan","qualification":"Bachelor","experience":"1–2 years","salary":"As per school","salaryMax":0,"deadline":"2026-10-12","posted":"2026-09-29","type":"Full-time","remote":false,"verified":false,"source":"Demo data — verify directly with the school","description":"Demo education vacancy. Replace with the actual school, subject, level and official application details.","requirements":["Bachelor's degree or required teaching qualification","Relevant teaching experience where required","Subject knowledge"],"skills":["Teaching","Lesson Planning","Communication"],"applyUrl":"https://www.tsc.gov.np/"}
+  {
+    "id": "live-hi-mhpss-2026-10-02",
+    "title": "MHPSS Officer",
+    "organization": "Handicap International Federation (HI)",
+    "category": "संस्था / NGO / INGO",
+    "location": "Nepal",
+    "qualification": "Bachelor",
+    "experience": "2–5 years",
+    "salary": "Not disclosed",
+    "salaryMax": 0,
+    "deadline": "2026-10-02",
+    "posted": "2026-09-28",
+    "type": "Full-time",
+    "remote": false,
+    "verified": true,
+    "source": "Nepal Impact / Association of INGOs in Nepal",
+    "description": "MHPSS Officer vacancy listed for Nepal. Check the source listing for the complete job description and application instructions.",
+    "requirements": [
+      "Relevant academic qualification as specified in the vacancy",
+      "Relevant professional experience as specified by the employer",
+      "Follow the employer's application instructions"
+    ],
+    "skills": [
+      "MHPSS",
+      "Humanitarian",
+      "Communication"
+    ],
+    "applyUrl": "https://nepalimpact.org/jobs"
+  },
+  {
+    "id": "live-cbm-proj-2026-10-02",
+    "title": "Project Officer - Humanitarian Response",
+    "organization": "CBM Global Nepal Country Office",
+    "category": "संस्था / NGO / INGO",
+    "location": "Nepal",
+    "qualification": "Bachelor",
+    "experience": "2–5 years",
+    "salary": "Not disclosed",
+    "salaryMax": 0,
+    "deadline": "2026-10-02",
+    "posted": "2026-09-22",
+    "type": "Full-time",
+    "remote": false,
+    "verified": true,
+    "source": "Nepal Impact / JobsNepal",
+    "description": "Humanitarian Response Project Officer opportunity listed for Nepal. Review the source for the exact qualification and experience requirements.",
+    "requirements": [
+      "Relevant Bachelor's degree or exact qualification in the vacancy",
+      "Relevant humanitarian/project experience",
+      "Complete the application through the listed source"
+    ],
+    "skills": [
+      "Project Management",
+      "Humanitarian Response"
+    ],
+    "applyUrl": "https://nepalimpact.org/jobs"
+  },
+  {
+    "id": "live-giz-pr-2026-10-02",
+    "title": "Government & PR, Marketing, Communications Advisor",
+    "organization": "GIZ Nepal",
+    "category": "संस्था / NGO / INGO",
+    "location": "Kathmandu",
+    "qualification": "Master",
+    "experience": "5+ years",
+    "salary": "Not disclosed",
+    "salaryMax": 0,
+    "deadline": "2026-10-02",
+    "posted": "2026-09-28",
+    "type": "Full-time",
+    "remote": false,
+    "verified": true,
+    "source": "Nepal Impact / Merojob",
+    "description": "GIZ Nepal vacancy covering government engagement, PR, marketing and communications. The listing states a relevant Master's degree and minimum five years of professional experience.",
+    "requirements": [
+      "Master’s degree in a relevant field",
+      "Minimum 5 years professional experience",
+      "Strong communication and networking skills",
+      "English proficiency equivalent to C2"
+    ],
+    "skills": [
+      "PR",
+      "Marketing",
+      "Communications",
+      "Government Relations"
+    ],
+    "applyUrl": "https://nepalimpact.org/jobs"
+  },
+  {
+    "id": "live-unicef-planning-2026-10-02",
+    "title": "Planning Officer (NO-2), FT — two positions",
+    "organization": "UNICEF Nepal",
+    "category": "संस्था / NGO / INGO",
+    "location": "Surkhet",
+    "qualification": "Bachelor",
+    "experience": "2–5 years",
+    "salary": "UN scale",
+    "salaryMax": 0,
+    "deadline": "2026-10-02",
+    "posted": "2026-09-28",
+    "type": "Fixed-term",
+    "remote": false,
+    "verified": true,
+    "source": "UNICEF Careers",
+    "description": "UNICEF Nepal lists two Planning Officer positions based in Surkhet and Janakpur. Confirm the exact education and experience requirements in the official vacancy.",
+    "requirements": [
+      "Relevant qualification specified in the official UNICEF vacancy",
+      "Professional experience as specified by UNICEF",
+      "Open the official vacancy for nationality and eligibility conditions"
+    ],
+    "skills": [
+      "Planning",
+      "Programme Management"
+    ],
+    "applyUrl": "https://jobs.unicef.org/es/search/?search-keyword=nepal%20population%202035"
+  },
+  {
+    "id": "live-educate-gandaki-2026-10-12",
+    "title": "Vacancy — Gandaki Province Government",
+    "organization": "Gandaki Province, Government of Nepal",
+    "category": "सरकारी",
+    "location": "Pokhara",
+    "qualification": "Bachelor",
+    "experience": "Not specified",
+    "salary": "Government scale",
+    "salaryMax": 0,
+    "deadline": "2026-10-12",
+    "posted": "2026-10-02",
+    "type": "Government",
+    "remote": false,
+    "verified": true,
+    "source": "EducateNepal",
+    "description": "Current government vacancy notice listed for Gandaki Province. Use the source notice to confirm the exact post, qualification, age and application process.",
+    "requirements": [
+      "Exact post-specific qualification must be checked in the notice",
+      "Follow the official government application procedure",
+      "Check deadline and applicable fees"
+    ],
+    "skills": [
+      "Government Service"
+    ],
+    "applyUrl": "https://www.educatenepal.com/vacancies"
+  },
+  {
+    "id": "live-educate-everest-2026-10-13",
+    "title": "Vacancy — Everest Bank Limited",
+    "organization": "Everest Bank Limited",
+    "category": "बैंकिङ / वित्त",
+    "location": "Nepal",
+    "qualification": "Bachelor",
+    "experience": "Not specified",
+    "salary": "As per bank",
+    "salaryMax": 0,
+    "deadline": "2026-10-13",
+    "posted": "2026-10-02",
+    "type": "Full-time",
+    "remote": false,
+    "verified": true,
+    "source": "EducateNepal",
+    "description": "Current Everest Bank vacancy notice listed by EducateNepal. Confirm the exact position, qualification and official application instructions before applying.",
+    "requirements": [
+      "Check the exact qualification in the vacancy notice",
+      "Check position-specific experience requirements",
+      "Use the bank's stated application process"
+    ],
+    "skills": [
+      "Banking",
+      "Customer Service"
+    ],
+    "applyUrl": "https://www.educatenepal.com/vacancies"
+  },
+  {
+    "id": "live-educate-wfp-2026-10-10",
+    "title": "Vacancy — World Food Programme",
+    "organization": "World Food Programme",
+    "category": "संस्था / NGO / INGO",
+    "location": "Nepal",
+    "qualification": "Bachelor",
+    "experience": "Not specified",
+    "salary": "UN/WFP scale",
+    "salaryMax": 0,
+    "deadline": "2026-10-10",
+    "posted": "2026-10-02",
+    "type": "Full-time",
+    "remote": false,
+    "verified": true,
+    "source": "EducateNepal",
+    "description": "Current WFP Nepal vacancy notice listed by EducateNepal. Open the source and official WFP application page for exact requirements.",
+    "requirements": [
+      "Check the specific vacancy for education requirements",
+      "Check experience and eligibility",
+      "Apply through the official process"
+    ],
+    "skills": [
+      "Development",
+      "Humanitarian"
+    ],
+    "applyUrl": "https://www.educatenepal.com/vacancies"
+  },
+  {
+    "id": "live-educate-american-embassy-2026-10-08",
+    "title": "Vacancy — American Embassy Kathmandu",
+    "organization": "U.S. Embassy Kathmandu",
+    "category": "संस्था / NGO / INGO",
+    "location": "Kathmandu",
+    "qualification": "Bachelor",
+    "experience": "Not specified",
+    "salary": "NPR 119K+ listed",
+    "salaryMax": 119000,
+    "deadline": "2026-10-08",
+    "posted": "2026-10-02",
+    "type": "Full-time",
+    "remote": false,
+    "verified": true,
+    "source": "EducateNepal",
+    "description": "Current American Embassy Kathmandu vacancy listed by EducateNepal. The listing advertises salary of NPR 119K+; verify the specific position and official notice before applying.",
+    "requirements": [
+      "Position-specific qualification must be checked",
+      "Check citizenship/eligibility conditions",
+      "Follow U.S. Embassy application instructions"
+    ],
+    "skills": [
+      "Administration",
+      "Communication"
+    ],
+    "applyUrl": "https://www.educatenepal.com/vacancies"
+  },
+  {
+    "id": "live-educate-embassy-india-2026-10-16",
+    "title": "Vacancy — Embassy of India, Kathmandu",
+    "organization": "Embassy of India, Kathmandu",
+    "category": "संस्था / NGO / INGO",
+    "location": "Kathmandu",
+    "qualification": "Bachelor",
+    "experience": "Not specified",
+    "salary": "Not disclosed",
+    "salaryMax": 0,
+    "deadline": "2026-10-16",
+    "posted": "2026-10-02",
+    "type": "Full-time",
+    "remote": false,
+    "verified": true,
+    "source": "EducateNepal",
+    "description": "Current Embassy of India vacancy listing. Confirm the exact position, qualification and application method from the vacancy notice.",
+    "requirements": [
+      "Check position-specific educational requirements",
+      "Check experience and eligibility",
+      "Follow embassy application instructions"
+    ],
+    "skills": [
+      "Administration",
+      "Communication"
+    ],
+    "applyUrl": "https://www.educatenepal.com/vacancies"
+  },
+  {
+    "id": "live-psc-2026-10",
+    "title": "Public Service Commission — Current Advertisements",
+    "organization": "Public Service Commission (Lok Sewa Aayog)",
+    "category": "सरकारी",
+    "location": "Nepal",
+    "qualification": "Bachelor",
+    "experience": "Not specified",
+    "salary": "Government scale",
+    "salaryMax": 0,
+    "deadline": "2026-10-13",
+    "posted": "2026-10-02",
+    "type": "Government",
+    "remote": false,
+    "verified": true,
+    "source": "Public Service Commission Nepal",
+    "description": "The Public Service Commission's current advertisement pages contain active and recent government recruitment notices. Open the official page to choose the specific advertisement and verify its deadline and qualification.",
+    "requirements": [
+      "Post-specific qualification varies",
+      "Check age, inclusion and examination requirements",
+      "Use only the official PSC notice for final application details"
+    ],
+    "skills": [
+      "Government Service",
+      "Public Administration"
+    ],
+    "applyUrl": "https://psc.gov.np/category/notice-advertisement"
+  }
 ]
