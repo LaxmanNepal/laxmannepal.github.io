@@ -28,8 +28,8 @@ jobs:
       - name: Protect source homepage
         run: |
           test -f index.html
-          grep -q 'data-home-v2="true"' index.html
-          grep -q 'All-in-One Free Online Tools by Laxman Nepal' index.html
+          grep -q '<title>Laxman Nepal — Free Tools, AI Tools & Practical Guides</title>' index.html
+          grep -q 'name="description" content="Laxman Nepal — free online tools, AI tools, practical tutorials, apps and useful digital resources\."' index.html
           cp index.html /tmp/laxman-root-homepage.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -58,8 +58,8 @@ jobs:
         if: always()
         run: |
           test -f index.html
-          grep -q 'Useful tools.' index.html
-          grep -q 'All-in-One Free Online Tools by Laxman Nepal' index.html
+          grep -q '<title>Laxman Nepal — Free Tools, AI Tools & Practical Guides</title>' index.html
+          grep -q 'name="description" content="Laxman Nepal — free online tools, AI tools, practical tutorials, apps and useful digital resources\."' index.html
       - name: Apply modern Blogger article template
         run: python3 scripts/modernize_blogger_articles.py
       - name: Apply shared shell to Blogger articles
@@ -116,8 +116,8 @@ jobs:
       - name: Verify published homepage
         run: |
           test -f .pages/index.html
-          grep -q 'data-home-v2="true"' .pages/index.html
-          grep -q 'All-in-One Free Online Tools by Laxman Nepal' .pages/index.html
+          grep -q '<title>Laxman Nepal — Free Tools, AI Tools & Practical Guides</title>' .pages/index.html
+          grep -q 'name="description" content="Laxman Nepal — free online tools, AI tools, practical tutorials, apps and useful digital resources\."' .pages/index.html
           ! grep -q 'Technology that helps you do more' .pages/index.html
       - name: Optimize every published page for SEO
         run: python3 scripts/optimize_published_seo.py
