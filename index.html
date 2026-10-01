@@ -59,6 +59,15 @@
 .directory-filter{transition:.15s}
 .directory-search:focus-within{border-color:#98a2b3;box-shadow:0 0 0 4px rgba(16,24,40,.04)}
 @media(max-width:700px){.category-canvas{grid-template-rows:125px 125px}.cat-icon{width:44px;height:44px}.cat-tile strong{font-size:13px}.cat-tile small{font-size:9px}.category-results{padding-top:22px}}
+</style><style>
+/* TinyWow-inspired category canvas: original Laxman Nepal design */
+.category-canvas{max-width:1040px;gap:14px}
+.cat-tile{min-height:154px;border-radius:24px;padding:20px;box-shadow:0 8px 25px rgba(16,24,40,.045)}
+.cat-tile strong{font-size:18px}.cat-tile small{font-size:11px}
+.cat-pdf{background:linear-gradient(145deg,#fff 35%,#fff0f1)}.cat-image{background:linear-gradient(145deg,#fff 35%,#edf5ff)}.cat-ai{background:linear-gradient(145deg,#fff 35%,#f3efff)}.cat-youtube{background:linear-gradient(145deg,#fff 35%,#fff3e8)}.cat-data{background:linear-gradient(145deg,#fff 35%,#eafbf3)}.cat-nepal{background:linear-gradient(145deg,#fff 35%,#edf4ff)}
+.category-nav{margin-top:2px}.category-scroll{max-width:1040px;margin:auto;padding:3px 2px}.cat-tab{padding:10px 15px;font-size:12px}
+.category-results .home-tools-grid{grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:12px}
+@media(max-width:700px){.category-canvas{grid-template-columns:repeat(2,1fr);gap:10px}.cat-tile{min-height:132px;padding:15px;border-radius:20px}.category-results .home-tools-grid{grid-template-columns:repeat(2,1fr);gap:9px}}
 </style></head>
 <body data-home-v2="true">
 <header class="shared-header" id="site-header">
@@ -104,14 +113,14 @@ const input=document.getElementById('global-nav-search');input?.addEventListener
 </script>
 <script>
 (function(){
-const grid=document.getElementById('home-tools-grid'), tabs=[...document.querySelectorAll('.cat-tab')], search=document.getElementById('directory-search'), count=document.getElementById('directory-count');
+const grid=document.getElementById('home-tools-grid'), tabs=[...document.querySelectorAll('.cat-tab')], filters=[...document.querySelectorAll('.directory-filter')], search=document.getElementById('directory-search'), count=document.getElementById('directory-count');
 if(!grid)return;
 const cards=[...grid.querySelectorAll('.home-tool-card')];
 function cat(card){const t=card.innerText.toLowerCase(),u=(card.getAttribute('href')||'').toLowerCase();if(/ai/.test(t)||u.includes('/ai-tools'))return'ai';if(/pdf/.test(t)||u.includes('/pdf'))return'pdf';if(/image|thumbnail|background/.test(t)||u.includes('/image'))return'image';if(/youtube|facebook|video/.test(t)||u.includes('youtube'))return'youtube';if(/data|word|ebook|qr/.test(t))return'data';if(/rashifal|patro|festival|exam|gold|nepal/.test(t))return'nepal';return'other'}
 cards.forEach(x=>x.dataset.cat=cat(x));
 let active='all';
 function apply(){const q=(search?.value||'').toLowerCase().trim();let n=0;cards.forEach(x=>{const ok=(active==='all'||x.dataset.cat===active)&&(!q||x.innerText.toLowerCase().includes(q));x.classList.toggle('cat-visible',ok);if(ok)n++});if(count)count.textContent=n+' tools available'}
-tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));t.classList.add('active');active=t.dataset.cat;apply();document.querySelector('.category-results')?.scrollIntoView({behavior:'smooth',block:'start'})}));search?.addEventListener('input',apply);apply();
+[...tabs,...filters].forEach(t=>t.addEventListener('click',()=>{const group=t.classList.contains('cat-tab')?tabs:filters;group.forEach(x=>x.classList.remove('active'));t.classList.add('active');active=t.dataset.cat;apply();document.querySelector('.category-results')?.scrollIntoView({behavior:'smooth',block:'start'})}));search?.addEventListener('input',apply);apply();
 })();
 </script></body>
 </html>
