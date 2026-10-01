@@ -28,7 +28,7 @@ jobs:
       - name: Protect source homepage
         run: |
           test -f index.html
-          grep -q 'Useful tools.' index.html
+          grep -q 'data-home-v2="true"' index.html
           grep -q 'All-in-One Free Online Tools by Laxman Nepal' index.html
           cp index.html /tmp/laxman-root-homepage.html
       - name: Setup Pages
@@ -116,7 +116,7 @@ jobs:
       - name: Verify published homepage
         run: |
           test -f .pages/index.html
-          grep -q 'Useful tools.' .pages/index.html
+          grep -q 'data-home-v2="true"' .pages/index.html
           grep -q 'All-in-One Free Online Tools by Laxman Nepal' .pages/index.html
           ! grep -q 'Technology that helps you do more' .pages/index.html
       - name: Optimize every published page for SEO
