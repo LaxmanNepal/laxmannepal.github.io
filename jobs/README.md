@@ -2,20 +2,21 @@
 
 Static GitHub Pages job portal at /jobs/.
 
-Features:
+## Current features
 - Government, private, NGO/INGO, banking/finance, education, IT, health and other categories
 - Keyword search
 - Qualification, location, experience and remote filters
 - Deadline countdown
 - Job details modal
-- Direct Apply / official notice button
-- Local bookmark using browser localStorage
+- Apply / official notice button
+- Local bookmarks
 - Responsive mobile UI
-- SEO metadata and canonical URL
+- SEO metadata
 
-Updating jobs:
-Edit jobs/jobs.json. Each record should contain id, title, organization, category, location, qualification, experience, deadline, posted, description, requirements, skills, applyUrl, source and verified.
+## Automatic maintenance
+GitHub Actions runs every 6 hours and can also be started manually. It removes listings after their published deadline, records a `lastVerified` timestamp, and updates `jobs/last-updated.json`.
 
-The current JSON contains DEMO records only, so the site does not present invented vacancies as real jobs. Replace them with verified listings before publishing.
+The automation intentionally does not scrape arbitrary sites or invent vacancies. New listings should come from an allowed RSS/API/feed or an explicitly approved public source, retaining the original source and application URL.
 
-Set verified=true only after checking the employer's official vacancy/notice and use the official application URL where possible.
+## Data quality
+Each listing should contain `source`, `applyUrl`, `verified`, `deadline`, and `lastVerified`. Use the employer's official application URL whenever available.
