@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-01T13:25:10.003425+00:00",
-  "count": 137,
+  "updated_at": "2026-10-01T22:44:30.309386+00:00",
+  "count": 136,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -118,20 +118,16 @@
       "name": "HONOR CHOICE T10",
       "brand": "HONOR",
       "variants": [
-        "HONOR CHOICE T10 - 3GB - 32GB",
-        "HONOR CHOICE T10 - 4GB - 64GB"
+        "HONOR CHOICE T10 - 3GB - 32GB"
       ],
       "price": 16499,
-      "max_price": 19499,
+      "max_price": 16499,
       "original_price": null,
       "rams": [
         "3GB",
-        "4GB",
         "32GB"
       ],
-      "storages": [
-        "64GB"
-      ]
+      "storages": []
     },
     {
       "id": "honor-600",
@@ -227,19 +223,16 @@
       "name": "Honor Play 10",
       "brand": "Honor",
       "variants": [
-        "3GB+64GB",
-        "4GB+128GB"
+        "3GB+64GB"
       ],
       "price": 17499,
-      "max_price": 19999,
+      "max_price": 17499,
       "original_price": null,
       "rams": [
-        "3GB",
-        "4GB"
+        "3GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -315,18 +308,16 @@
       "name": "Honor X6C 4G",
       "brand": "Honor",
       "variants": [
-        "6GB+128GB",
-        "6GB+256GB"
+        "6GB+128GB"
       ],
       "price": 26999,
-      "max_price": 28999,
+      "max_price": 26999,
       "original_price": null,
       "rams": [
         "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -385,18 +376,16 @@
       "name": "Honor X8d",
       "brand": "Honor",
       "variants": [
-        "8GB+128GB",
-        "8GB+256GB"
+        "8GB+128GB"
       ],
       "price": 39999,
-      "max_price": 43999,
+      "max_price": 39999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -404,15 +393,13 @@
       "name": "Honor X9d",
       "brand": "Honor",
       "variants": [
-        "8GB+256GB",
-        "12GB+256GB"
+        "8GB+256GB"
       ],
       "price": 54999,
-      "max_price": 59999,
+      "max_price": 54999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
         "256GB"
@@ -596,23 +583,6 @@
       "storages": [
         "256GB",
         "512GB"
-      ]
-    },
-    {
-      "id": "motorola-moto-g06-power",
-      "name": "Motorola Moto G06 Power",
-      "brand": "Motorola",
-      "variants": [
-        "4GB + 64GB"
-      ],
-      "price": 26499,
-      "max_price": 26499,
-      "original_price": null,
-      "rams": [
-        "4GB"
-      ],
-      "storages": [
-        "64GB"
       ]
     },
     {
@@ -2354,18 +2324,16 @@
       "name": "iPhone 17",
       "brand": "Apple",
       "variants": [
-        "8GB+256GB",
-        "8GB+512GB"
+        "8GB+256GB"
       ],
       "price": 173499,
-      "max_price": 215699,
+      "max_price": 173499,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "256GB",
-        "512GB"
+        "256GB"
       ]
     },
     {
@@ -2373,13 +2341,30 @@
       "name": "iPhone 17 Pro",
       "brand": "Apple",
       "variants": [
+        "12GB+256GB"
+      ],
+      "price": 221299,
+      "max_price": 221299,
+      "original_price": 236899,
+      "rams": [
+        "12GB"
+      ],
+      "storages": [
+        "256GB"
+      ]
+    },
+    {
+      "id": "iphone-17-pro-max",
+      "name": "iPhone 17 Pro Max",
+      "brand": "Apple",
+      "variants": [
         "12GB+256GB",
         "12GB+512GB",
         "12GB+1TB"
       ],
-      "price": 221299,
-      "max_price": 305699,
-      "original_price": 321299,
+      "price": 242499,
+      "max_price": 327099,
+      "original_price": 342499,
       "rams": [
         "12GB"
       ],
@@ -2390,44 +2375,19 @@
       ]
     },
     {
-      "id": "iphone-17-pro-max",
-      "name": "iPhone 17 Pro Max",
-      "brand": "Apple",
-      "variants": [
-        "12GB+256GB",
-        "12GB+512GB",
-        "12GB+1TB",
-        "12GB+2TB"
-      ],
-      "price": 242499,
-      "max_price": 411399,
-      "original_price": 426999,
-      "rams": [
-        "12GB"
-      ],
-      "storages": [
-        "256GB",
-        "512GB",
-        "1TB",
-        "2TB"
-      ]
-    },
-    {
       "id": "iphone-17e",
       "name": "iPhone 17e",
       "brand": "Apple",
       "variants": [
-        "8GB+512GB",
-        "8GB+256GB"
+        "8GB+512GB"
       ],
-      "price": 132499,
+      "price": 175099,
       "max_price": 175099,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "256GB",
         "512GB"
       ]
     },
@@ -2482,20 +2442,16 @@
       "name": "iPhone Air",
       "brand": "Apple",
       "variants": [
-        "12GB+256GB",
-        "12GB+512GB",
-        "12GB+1TB"
+        "12GB+256GB"
       ],
       "price": 190699,
-      "max_price": 275099,
+      "max_price": 190699,
       "original_price": null,
       "rams": [
         "12GB"
       ],
       "storages": [
-        "256GB",
-        "512GB",
-        "1TB"
+        "256GB"
       ]
     }
   ]
