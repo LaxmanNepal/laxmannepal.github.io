@@ -13,12 +13,12 @@
 <div class="panel">
 <h2>⌨️ Kalimati Typing Studio</h2>
 <p>Click keys below or type directly. The tool builds the legacy key sequence and shows the mapped Nepali characters where a direct mapping is known.</p>
-<div class="mode"><button class="active" data-mode="keys">Key sequence</button><button data-mode="mapped">Mapped preview</button></div>
-<textarea id="legacyInput" class="editor" placeholder="Type or click the keyboard… e.g. s v k"></textarea>
-<div class="studio-actions"><button class="mini" id="copyLegacy">Copy sequence</button><button class="mini" id="backspace">⌫ Backspace</button><button class="mini" id="space">Space</button></div>
-<div class="kbd-note">Tip: this is a reference/typing helper, not a full font converter. Legacy fonts can have context-sensitive glyph composition.</div>
+<div class="mode"><button class="active" data-mode="p2u">Preeti → Unicode</button><button data-mode="u2p">Unicode → Preeti</button></div>
+<textarea id="legacyInput" class="editor" placeholder="Paste Preeti text, e.g. g]kfn"></textarea>
+<div class="studio-actions"><button class="mini" id="copyLegacy">Copy input</button><button class="mini" id="sample">Try sample</button><button class="mini" id="backspace">⌫ Backspace</button><button class="mini" id="space">Space</button></div>
+<div class="kbd-note">Runs entirely in your browser. Review names, numbers, punctuation, ि-matra, reph and rare conjuncts before using important documents.</div>
 </div>
-<div class="panel"><h2>👀 Live preview</h2><p>Known single-key mappings are rendered here for quick checking.</p><div id="mappedPreview" class="output">Start typing…</div><div class="studio-actions"><button class="mini" id="copyPreview">Copy preview</button></div></div>
+<div class="panel"><h2>👀 Converted Unicode</h2><p>The result updates instantly as you type or paste.</p><div id="mappedPreview" class="output">Start typing…</div><div class="studio-actions"><button class="mini" id="copyPreview">Copy preview</button></div></div>
 </section><section class="section"><div class="head"><h2>⌨️ Visual Keyboard</h2><p>Key क्लिक गर्दा त्यो key खोजिन्छ।</p></div><div class="keyboard" id="keyboard"></div></section>
 <section class="section"><div class="head"><h2>🔎 Complete searchable mapping</h2><p>अक्षर, key, sequence, meaning वा category बाट खोज्नुहोस्।</p></div><div class="tablewrap"><table><thead><tr><th>Output</th><th>Kalimati key / sequence</th><th>Meaning</th><th>Category</th></tr></thead><tbody id="tbody"></tbody></table><div class="empty" id="empty">कुनै mapping भेटिएन।</div></div></section>
 <section class="section"><div class="head"><h2>🧩 मात्रा र क-श्रृंखला</h2><p>क लाई base बनाएर मात्रा सम्झन सजिलो हुन्छ।</p></div><div class="tablewrap"><table><thead><tr><th>Output</th><th>Sequence</th><th>नाम</th></tr></thead><tbody id="matra"></tbody></table></div></section>
@@ -40,6 +40,123 @@ document.querySelectorAll(".keybtn").forEach(b=>b.onclick=()=>{q.value=b.dataset
 document.getElementById("matra").innerHTML=m.map(x=>'<tr><td><span class="glyph">'+esc(x[0])+'</span></td><td><span class="key">'+esc(x[1])+'</span><button class="copy" data-c="'+esc(x[1])+'">copy</button></td><td>'+esc(x[2])+'</td></tr>').join("");
 document.getElementById("alts").innerHTML=a.map(x=>'<tr><td><span class="glyph">'+esc(x[0])+'</span></td><td><span class="key">'+esc(x[1])+'</span><button class="copy" data-c="'+esc(x[1])+'">copy</button></td><td>Legacy special glyph / conjunct — verify in your installed font</td></tr>').join("");
 render();
+
+
+// === Full Preeti ↔ Unicode conversion engine ===
+// Algorithm adapted from @dpr4dhan/preeti-to-unicode (MIT licensed),
+// whose mapping/rules are based on established Preeti/npttf2utf work.
+class PreetiConverter{
+ constructor(){this.map={
+'a':'ब','A':'ब्','b':'द','B':'द्य','c':'अ','C':'ऋ','d':'म','D':'म्','e':'भ','E':'भ्',
+'f':'ा','F':'ँ','g':'न','G':'न्','h':'ज','H':'ज्','i':'ष्','j':'व','J':'व्','k':'प','K':'प्',
+'l':'ि','L':'ी','M':'ः','n':'ल','N':'ल्','o':'य','O':'इ','p':'उ','P':'ए','q':'त्र','Q':'त्त',
+'r':'च','R':'च्','s':'क','S':'क्','t':'त','T':'त्','u':'ग','U':'ग्','v':'ख','V':'ख्','w':'ध','W':'ध्',
+'x':'ह','X':'ह्','y':'थ','Y':'थ्','z':'श','Z':'श/','/':'र','\\':'्','|':'्र',';':'स',':':'स्',
+"'":'ु','"':'ू','[':'ृ',']':'े','}':'ै','+':'ं',',':',','.':'।','?':'रु','>':'श्र','<':'?',
+'_':')','-':'(','=':'.','`':'ञ','~':'ञ्','0':'ण्','1':'ज्ञ','2':'द्द','3':'घ','4':'द्ध','5':'छ',
+'6':'ट','7':'ठ','8':'ड','9':'ढ','!':'१','@':'२','#':'३','
+const legacyMap=new Map(d.map(x=>[x[1],x[0]]));
+const practiceWords=[
+ {word:"नेपाल",key:"g]kfn"},{word:"नेपाल",key:"g]kfn"},{word:"काठमाडौँ",key:"sf7df08"},
+ {word:"नमस्ते",key:"gd:t]"}, {word:"कम्प्युटर",key:"sDk?o'6/"},
+ {word:"प्रश्न",key:"k|Zg"}, {word:"शिक्षा",key:"lzIff"}, {word:"सरकार",key:";/sf/"}
+];
+let pIndex=0;
+const legacyInput=document.getElementById("legacyInput"), mappedPreview=document.getElementById("mappedPreview");
+function renderPreview(){convertStudio()}
+legacyInput.addEventListener("input",renderPreview);
+document.querySelectorAll(".keybtn").forEach(b=>b.addEventListener("click",()=>{
+ legacyInput.focus();legacyInput.value+=b.dataset.k;convertStudio();
+}));
+document.getElementById("copyLegacy").onclick=()=>navigator.clipboard?.writeText(legacyInput.value);
+document.getElementById("copyPreview").onclick=()=>navigator.clipboard?.writeText(mappedPreview.textContent);
+document.getElementById("backspace").onclick=()=>{legacyInput.value=legacyInput.value.slice(0,-1);convertStudio();legacyInput.focus()};
+document.getElementById("space").onclick=()=>{legacyInput.value+=" ";convertStudio();legacyInput.focus()};
+document.getElementById("clearAll").onclick=()=>{legacyInput.value="";convertStudio();q.value="";render();document.getElementById("practiceInput").value=""};
+document.getElementById("copyPage").onclick=()=>navigator.clipboard?.writeText(location.href);
+document.getElementById("theme").onclick=()=>{
+ document.documentElement.classList.toggle("dark");
+ const dark=document.documentElement.classList.contains("dark");
+ localStorage.setItem("kalimati-theme",dark?"dark":"light");
+ document.getElementById("theme").textContent=dark?"☀ Light mode":"☾ Dark mode";
+};
+if(localStorage.getItem("kalimati-theme")==="dark"){document.documentElement.classList.add("dark");document.getElementById("theme").textContent="☀ Light mode"}
+
+document.querySelectorAll(".mode button").forEach(btn=>btn.onclick=()=>{
+ document.querySelectorAll(".mode button").forEach(x=>x.classList.remove("active"));btn.classList.add("active");
+ convertStudio();
+});
+
+function loadPractice(){
+ const p=practiceWords[pIndex%practiceWords.length];
+ document.getElementById("practiceTarget").textContent=p.word;
+ const inp=document.getElementById("practiceInput");inp.value="";inp.dataset.answer=p.key;
+ document.getElementById("practiceScore").textContent="—";inp.focus();
+}
+document.getElementById("nextPractice").onclick=()=>{pIndex++;loadPractice()};
+document.getElementById("practiceInput").addEventListener("input",e=>{
+ const answer=e.target.dataset.answer||"",v=e.target.value;
+ let good=0;for(let i=0;i<Math.min(answer.length,v.length);i++)if(answer[i]===v[i])good++;
+ const score=v.length?Math.round(good/Math.max(answer.length,v.length)*100):0;
+ document.getElementById("practiceScore").textContent=score+"%";
+});
+loadPractice();convertStudio();
+</script></body></html>:'४','%':'५','^':'६','&':'७','*':'८',
+'(':'९',')':'०','ª':'ङ','´':'झ','¿':'रू','«':'्र','•':'ड्ड','˜':'ऽ','›':'द्र','¡':'ज्ञ्','¢':'द्घ',
+'£':'घ्','¤':'झ्','¥':'्र','§':'ट्ट','©':'र','°':'ङ्ढ','±':'+','¶':'ठ्ठ','Å':'हृ','Ë':'ङ्ग','Ì':'न्न',
+'Í':'ङ्क','Î':'ङ्ख','Ø':'्य','Ý':'ट्ठ','ß':'द्म','å':'द्व','ç':'ॐ','÷':'/','„':'ध्र','‰':'झ्',
+'‹':'ङ्घ','‘':'ॅ'};
+ this.rules=[
+ [/्ा/g,''],[/(त्र|त्त)([^उभप]+?)m/g,'$1m$2'],[/त्रm/g,'क्र'],[/त्तm/g,'क्त'],
+ [/([^उभप]+?)m/g,'m$1'],[/उm/g,'ऊ'],[/भm/g,'झ'],[/पm/g,'फ'],[/इ{/g,'ई'],
+ [/ि((.्)*[^्])/g,'$1ि'],[/(.[ािीुूृेैोौंःँ]*?){/g,'{$1'],[/((.्)*){/g,'{$1'],
+ [/{/g,'र्'],[/([ाीुूृेैोौंःँ]+?)(्(.्)*[^्])/g,'$2$1'],[/्([ाीुूृेैोौःँ]+?)((.्)*[^्])/g,'्$2$1'],
+ [/([ंँ])([ािीुूृेैोौः]*)/g,'$2$1'],[/ँँ/g,'ँ'],[/ंं/g,'ं'],[/ेे/g,'े'],[/ैै/g,'ै'],
+ [/ुु/g,'ु'],[/ूू/g,'ू'],[/^ः/g,':'],[/टृ/g,'ट्ट'],[/ेा/g,'ाे'],[/ैा/g,'ाै'],
+ [/अाे/g,'ओ'],[/अाै/g,'औ'],[/अा/g,'आ'],[/एे/g,'ऐ'],[/ाे/g,'ो'],[/ाै/g,'ौ']
+ ];
+ }
+ convert(s){if(!s)return'';let r='';for(const c of s)r+=this.map[c]??c;for(const [a,b] of this.rules)r=r.replace(a,b);return r}
+ reverse(s){
+   if(!s)return'';
+   const pairs=Object.entries(this.map).filter(([k,v])=>v).sort((a,b)=>b[1].length-a[1].length);
+   let r=s;
+   // Logical Unicode -> legacy order for common conjuncts/matras.
+   const specials=[['ओ','f]'],['औ','f}'],['आ','f'],['ई','L'],['ऊ','"'],['ए',']'],['ऐ','}'],['ऋ','['],['ं','+'],['ः','M'],['ँ','F']];
+   for(const [u,k] of specials)r=r.split(u).join(k);
+   const cmap=new Map(pairs.map(([k,v])=>[v,k]));
+   let out='';for(let i=0;i<r.length;){
+     let found=null;
+     for(const [u,k] of cmap){if(r.startsWith(u,i)){found=k;break}}
+     if(found){out+=found;i+=Array.from(cmap.keys()).find(u=>r.startsWith(u,i))?.length||1}else{out+=r[i];i++}
+   }
+   // Common Unicode logical sequences that need Preeti visual ordering.
+   out=out.replace(/ि/g,'l');
+   out=out.replace(/्र/g,'|');
+   out=out.replace(/र्/g,'{');
+   return out;
+ }
+}
+const converter=new PreetiConverter();
+let direction='p2u';
+function convertStudio(){
+ const v=legacyInput.value;
+ mappedPreview.textContent=direction==='p2u'?converter.convert(v):converter.reverse(v);
+}
+document.querySelectorAll(".mode button").forEach(btn=>btn.onclick=()=>{
+ document.querySelectorAll(".mode button").forEach(x=>x.classList.remove("active"));btn.classList.add("active");
+ direction=btn.dataset.mode; legacyInput.placeholder=direction==="p2u"?"Paste Preeti text, e.g. g]kfn":"Paste Unicode Nepali text, e.g. नेपाल";
+ convertStudio();
+});
+legacyInput.oninput=convertStudio;
+document.getElementById("copyLegacy").onclick=()=>navigator.clipboard?.writeText(legacyInput.value);
+document.getElementById("copyPreview").onclick=()=>navigator.clipboard?.writeText(mappedPreview.textContent);
+document.getElementById("backspace").onclick=()=>{legacyInput.value=legacyInput.value.slice(0,-1);convertStudio();legacyInput.focus()};
+document.getElementById("space").onclick=()=>{legacyInput.value+=" ";convertStudio();legacyInput.focus()};
+document.getElementById("sample").onclick=()=>{
+ legacyInput.value=direction==="p2u"?"g]kfnL gfd /fh x]f":"नेपाल";
+ convertStudio();legacyInput.focus();
+};
 
 // === Kalimati utility enhancements ===
 const legacyMap=new Map(d.map(x=>[x[1],x[0]]));
