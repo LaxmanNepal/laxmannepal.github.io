@@ -16,7 +16,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Refresh job data
         run: python3 scripts/refresh_jobs.py
-      - name: Sync live Nepal Impact jobs\n        run: python3 scripts/aggregate_jobs.py\n      - name: Generate SEO job pages
+      - name: Sync live Nepal Impact jobs
+        run: python3 scripts/aggregate_jobs.py
+      - name: Generate SEO job pages
         run: python3 scripts/generate_job_pages.py
       - name: Commit changes
         run: |
