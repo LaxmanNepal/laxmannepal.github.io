@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "laxman-digital-footprint",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-02",
+  "routes": [
+    {
+      "pattern": "api.laxmannepal.com.np",
+      "custom_domain": true
+    }
+  ],
+  "vars": {
+    "APP_NAME": "Laxman Digital Footprint",
+    "MAX_RESULTS": "25"
+  }
+}
