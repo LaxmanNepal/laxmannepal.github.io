@@ -1,1 +1,12 @@
-{"updatedAt":"2026-10-02T00:00:00Z","mode":"approved-source-manifest","message":"Approved sources are registered. Automatic ingestion is enabled only after each source API/RSS/public-feed contract is confirmed."}
+{
+  "updatedAt": "2026-10-02T05:34:53Z",
+  "connectors": {
+    "nepalImpact": {
+      "enabled": true,
+      "recordsFetched": 97,
+      "recordsImported": 71,
+      "endpoint": "https://nepalimpact.org/api/v1/opportunities"
+    }
+  },
+  "message": "Nepal Impact jobs are fetched from its documented public API; upstream source evidence is preserved."
+}
