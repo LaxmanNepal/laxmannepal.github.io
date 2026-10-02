@@ -116,6 +116,11 @@ jobs:
       - name: Verify published homepage
         run: |
           test -f .pages/index.html
+          test -f .pages/pdf-tools/index.html
+          test -f .pages/pdf-tools/merge/index.html
+          test -f .pages/pdf-tools/split/index.html
+          test -f .pages/pdf-tools/images-to-pdf/index.html
+          test -f .pages/pdf-tools/pdf-to-image/index.html
           grep -q '<title>Laxman Nepal — Free Tools, AI Tools & Practical Guides</title>' .pages/index.html
           grep -q 'name="description" content="Laxman Nepal — free online tools, AI tools, practical tutorials, apps and useful digital resources\."' .pages/index.html
           ! grep -q 'Technology that helps you do more' .pages/index.html
