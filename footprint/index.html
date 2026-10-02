@@ -25,7 +25,6 @@
 <nav class="shared-desktop-nav" aria-label="Main menu"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI</a><a href="/blog/">Blog</a><a href="/apps/">Apps</a><a href="/youtube/">YouTube</a><details class="nav-dropdown"><summary>Explore</summary><div class="nav-dropdown-menu"><a href="/news/">News &amp; Updates</a><a href="/guides/">Guides</a><a href="/mobile/">Mobile</a><a href="/contact/">Contact</a></div></details></nav>
 <div class="shared-actions"><form class="shared-search-box" action="/search/" method="get"><span aria-hidden="true">⌕</span><input name="q" type="search" autocomplete="off" aria-label="Search Laxman Nepal" placeholder="Search tools &amp; guides…"></form><button class="shared-menu-btn" type="button" data-shared-menu aria-label="Open menu" aria-expanded="false">☰</button></div></header>
 <nav class="shared-mobile-menu" data-shared-mobile aria-label="Mobile menu"><div class="shared-mobile-head"><strong>Laxman Nepal</strong><button type="button" data-shared-close aria-label="Close menu">×</button></div><a href="/">🏠 Home</a><a href="/tools/">🧰 Tools</a><a href="/youtube-tools/">▶️ YouTube Tools</a><a href="/ai-tools/">✨ AI Tools</a><a href="/blog/">📝 Blog</a><a href="/apps/">📦 Apps</a><a href="/youtube/">▶ YouTube</a><a href="/guides/">📖 Guides</a><a href="/news/">📰 News</a><a href="/contact/">✉ Contact</a></nav><div class="shared-menu-backdrop" data-shared-backdrop></div>
-
 <main class="fp-page">
 <section class="fp-hero">
 <div class="fp-kicker">LAXMAN NEPAL · FREE SECURITY TOOL</div>
@@ -39,7 +38,6 @@
 <div class="fp-hint" id="fp-hint">Start with your own email, username or website.</div>
 <div class="fp-disclaimer">Results are based on public or permitted security data. An account match does not prove that two profiles belong to the same person.</div>
 </section>
-
 <section class="fp-dashboard" id="fp-dashboard" aria-live="polite">
 <div class="fp-status"><span id="fp-status"><strong>Ready</strong> — no scan running.</span><button id="fp-clear" type="button" style="border:0;background:transparent;color:#667085;cursor:pointer;font-weight:800">Clear</button></div>
 <div class="fp-grid">
@@ -56,7 +54,6 @@
 <div class="fp-panel" id="panel-graph"><h2>Relationship graph</h2><p>Illustrative relationships are labeled as possible associations rather than identity proof.</p><div class="fp-graph"><svg class="fp-lines" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="50" y1="50" x2="23" y2="29"/><line x1="50" y1="50" x2="77" y2="29"/><line x1="50" y1="50" x2="23" y2="72"/><line x1="50" y1="50" x2="77" y2="72"/></svg><div class="fp-node email" id="graph-email">EMAIL</div><div class="fp-node a">GitHub</div><div class="fp-node b">Reddit</div><div class="fp-node c">Website</div><div class="fp-node d">Breach</div></div></div>
 <div class="fp-footer-note">Privacy-first default: this page does not permanently save your search in the browser or expose secrets. Provider/API configuration determines which live sources are available.</div>
 </section>
-
 <section class="fp-features">
 <article class="fp-feature"><div>🔎</div><b>Public footprint</b><p>Discover publicly visible account signals without claiming uncertain matches are the same person.</p></article>
 <article class="fp-feature"><div>🔐</div><b>Breach exposure</b><p>Show known breach metadata and exposed data classes without displaying credentials or authentication secrets.</p></article>
@@ -64,44 +61,17 @@
 </section>
 <div class="fp-privacy"><strong>Security boundary:</strong> This tool is designed for your own digital footprint and legitimate security research. It does not search for or expose stolen passwords, session cookies, authentication tokens, infostealer logs or private files.</div>
 </main>
-
 <script>
 const form=document.getElementById('fp-form'),typeEl=document.getElementById('fp-type'),input=document.getElementById('fp-input'),submit=document.getElementById('fp-submit'),dash=document.getElementById('fp-dashboard'),statusEl=document.getElementById('fp-status');
-const apiBase=''; let lastResult=null;
+const apiBase='https://api.laxmannepal.com.np'; let lastResult=null;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 const typeLabels={email:'Email',username:'Username',url:'URL'};
 function setPlaceholder(){input.placeholder=typeEl.value==='email'?'Enter an email address…':typeEl.value==='username'?'Enter a username…':'Enter a website URL…'}
 typeEl.addEventListener('change',setPlaceholder);
 function row(title,detail,pill='UNKNOWN',cls=''){return '<div class="fp-row"><div class="fp-row-main"><strong>'+esc(title)+'</strong><small>'+esc(detail)+'</small></div><span class="fp-pill '+cls+'">'+esc(pill)+'</span></div>'}
-function empty(target,title,text){target.innerHTML='<div class="fp-empty"><strong>'+esc(title)+'</strong>'+esc(text)+'</div>'}
-function render(r){
-lastResult=r;dash.classList.add('show');
-const a=r.accounts||[],b=r.breaches||[],s=r.security||[],t=r.timeline||[];
-document.getElementById('stat-accounts').textContent=a.length;document.getElementById('stat-breaches').textContent=b.length;document.getElementById('stat-security').textContent=s.length;document.getElementById('stat-events').textContent=t.length;
-document.getElementById('graph-email').textContent=typeLabels[r.query?.type]||'QUERY';
-document.getElementById('overview-copy').textContent=r.summary?.message||'Scan completed. Review each section for source-level evidence.';
-document.getElementById('overview-list').innerHTML=(r.summary?.items||[]).map(x=>row(x.title,x.detail,x.status||'INFO',x.status==='FOUND'?'ok':x.status==='EXPOSED'?'danger':'')).join('')||'<div class="fp-empty">No overview signals returned.</div>';
-document.getElementById('accounts-list').innerHTML=a.map(x=>row(x.name,x.detail||x.url||'Public source',x.status||'FOUND',x.status==='FOUND'?'ok':'')).join('')||'<div class="fp-empty">No verified public account signals were returned.</div>';
-document.getElementById('breaches-list').innerHTML=b.map(x=>row(x.name,x.detail||'Breach metadata',x.status||'EXPOSED','danger')).join('')||'<div class="fp-empty">No breach records returned by the configured provider.</div>';
-document.getElementById('timeline-list').innerHTML=t.map(x=>'<div class="fp-event"><strong>'+esc(x.date||'Undated')+' · '+esc(x.title)+'</strong><small>'+esc(x.detail||x.source||'Source information')+'</small></div>').join('')||'<div class="fp-empty">No timeline events returned.</div>';
-}
-async function scan(value,type){
-statusEl.innerHTML='<span class="fp-loading"><span style="width:13px;height:13px;border:2px solid #d0d5dd;border-top-color:#111827;border-radius:50%;animation:spin .7s linear infinite"></span><strong>Scanning…</strong></span>';
-submit.disabled=true;submit.innerHTML='<span class="fp-loading"><span class="fp-spinner"></span>Scanning</span>';
-try{
-const res=await fetch(apiBase+'/api/footprint',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type,value})});
-if(!res.ok)throw new Error('API '+res.status);
-const data=await res.json();render(data);statusEl.innerHTML='<strong>Scan complete</strong> — source data returned successfully.';
-}catch(e){
-const fallback={query:{type,value},summary:{message:'The interface is ready, but the live provider endpoint is not connected yet. Deploy the included Cloudflare Worker and point apiBase to it.',items:[{title:'Frontend',detail:'GitHub Pages footprint dashboard is working.',status:'READY'},{title:'Backend',detail:'Cloudflare Worker endpoint /api/footprint is required for live lookups.',status:'PENDING'}]},accounts:[],breaches:[],security:[],timeline:[]};
-render(fallback);statusEl.innerHTML='<strong>Frontend ready</strong> — live API endpoint is not connected yet.';
-console.warn(e);
-}finally{submit.disabled=false;submit.textContent='Scan footprint'}
-}
-form.addEventListener('submit',e=>{e.preventDefault();const v=input.value.trim();if(v)scan(v,typeEl.value)});
-document.getElementById('fp-clear').addEventListener('click',()=>{dash.classList.remove('show');input.value='';input.focus()});
-document.querySelectorAll('.fp-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.fp-tab').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.fp-panel').forEach(x=>x.classList.toggle('active',x.id==='panel-'+b.dataset.panel))}));
-setPlaceholder();
+function render(r){lastResult=r;dash.classList.add('show');const a=r.accounts||[],b=r.breaches||[],s=r.security||[],t=r.timeline||[];document.getElementById('stat-accounts').textContent=a.length;document.getElementById('stat-breaches').textContent=b.length;document.getElementById('stat-security').textContent=s.length;document.getElementById('stat-events').textContent=t.length;document.getElementById('graph-email').textContent=typeLabels[r.query?.type]||'QUERY';document.getElementById('overview-copy').textContent=r.summary?.message||'Scan completed. Review each section for source-level evidence.';document.getElementById('overview-list').innerHTML=(r.summary?.items||[]).map(x=>row(x.title,x.detail,x.status||'INFO',x.status==='FOUND'?'ok':x.status==='EXPOSED'?'danger':'')).join('')||'<div class="fp-empty">No overview signals returned.</div>';document.getElementById('accounts-list').innerHTML=a.map(x=>row(x.name,x.detail||x.url||'Public source',x.status||'FOUND',x.status==='FOUND'?'ok':'')).join('')||'<div class="fp-empty">No verified public account signals were returned.</div>';document.getElementById('breaches-list').innerHTML=b.map(x=>row(x.name,x.detail||'Breach metadata',x.status||'EXPOSED','danger')).join('')||'<div class="fp-empty">No breach records returned by the configured provider.</div>';document.getElementById('timeline-list').innerHTML=t.map(x=>'<div class="fp-event"><strong>'+esc(x.date||'Undated')+' · '+esc(x.title)+'</strong><small>'+esc(x.detail||x.source||'Source information')+'</small></div>').join('')||'<div class="fp-empty">No timeline events returned.</div>'}
+async function scan(value,type){statusEl.innerHTML='<span class="fp-loading"><span style="width:13px;height:13px;border:2px solid #d0d5dd;border-top-color:#111827;border-radius:50%;animation:spin .7s linear infinite"></span><strong>Scanning…</strong></span>';submit.disabled=true;submit.innerHTML='<span class="fp-loading"><span class="fp-spinner"></span>Scanning</span>';try{const res=await fetch(apiBase+'/api/footprint',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type,value})});if(!res.ok)throw new Error('API '+res.status);const data=await res.json();render(data);statusEl.innerHTML='<strong>Scan complete</strong> — source data returned successfully.'}catch(e){const fallback={query:{type,value},summary:{message:'The live API is not ready yet. The frontend is connected to api.laxmannepal.com.np; the existing laxman-youtube-api Worker must expose /api/footprint.',items:[{title:'Frontend',detail:'GitHub Pages footprint dashboard is connected to the existing API hostname.',status:'READY'},{title:'Backend',detail:'Waiting for /api/footprint to be added to the existing Worker.',status:'PENDING'}]},accounts:[],breaches:[],security:[],timeline:[]};render(fallback);statusEl.innerHTML='<strong>Backend pending</strong> — API hostname is reachable from the page, but /api/footprint is not available yet.';console.warn(e)}finally{submit.disabled=false;submit.textContent='Scan footprint'}}
+form.addEventListener('submit',e=>{e.preventDefault();const v=input.value.trim();if(v)scan(v,typeEl.value)});document.getElementById('fp-clear').addEventListener('click',()=>{dash.classList.remove('show');input.value='';input.focus()});document.querySelectorAll('.fp-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.fp-tab').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.fp-panel').forEach(x=>x.classList.toggle('active',x.id==='panel-'+b.dataset.panel))}));setPlaceholder();
 </script>
 </body>
 </html>
