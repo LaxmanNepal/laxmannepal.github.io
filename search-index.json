@@ -688,12 +688,20 @@
     "keywords": "mobile phones in nepal price ram storage specifications live phone prices images and complete nepal."
   },
   {
-    "title": "Nepal Jobs — moved",
+    "title": "Nepal Jobs",
     "category": "Nepali",
     "type": "resource",
     "url": "/jobs/",
-    "description": "Nepal Jobs — moved",
-    "keywords": "nepal jobs moved"
+    "description": "Nepal Jobs",
+    "keywords": "nepal jobs"
+  },
+  {
+    "title": "Nepal Jobs — सरकारी, निजी र संस्था रोजगारी",
+    "category": "Nepali",
+    "type": "resource",
+    "url": "/nepal-jobs/",
+    "description": "नेपालका सरकारी, निजी, बैंकिङ, NGO/INGO, शिक्षा, IT र अन्य रोजगारीका अवसर खोज्ने Job Portal। Qualification, location, experience, deadline र Apply link सहित।",
+    "keywords": "nepal jobs ngo ingo it job portal qualification location experience deadline apply link"
   },
   {
     "title": "Nepal Resource Hub",
