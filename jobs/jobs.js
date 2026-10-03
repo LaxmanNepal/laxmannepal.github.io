@@ -8,7 +8,16 @@ function save(id){if(state.saved.has(id))state.saved.delete(id);else state.saved
 function values(){return{q:$("heroSearch").value.trim().toLowerCase(),category:$("category").value,qualification:$("qualification").value,location:$("location").value,experience:$("experience").value,remote:$("remote").checked}}
 function matches(j,v){const hay=[j.title,j.organization,j.location,j.description,(j.skills||[]).join(" "),j.category,j.qualification].join(" ").toLowerCase();return(!v.q||hay.includes(v.q))&&(!v.category||j.category===v.category)&&(!v.qualification||j.qualification.includes(v.qualification))&&(!v.location||j.location===v.location)&&(!v.experience||j.experience===v.experience)&&(!v.remote||j.remote)}
 function render(){const v=values();state.filtered=state.jobs.filter(j=>matches(j,v));const sort=$("sort").value;
-state.filtered.sort((a,b)=>sort==="salary"?Number(b.salaryMax||0)-Number(a.salaryMax||0):sort==="deadline"?String(a.deadline).localeCompare(String(b.deadline)):String(b.posted).localeCompare(String(a.posted)));
+const score=j=>{
+  const left=daysLeft(j.deadline), days=Number.isFinite(left)?left:9999;
+  const official=/public service commission|psc|government|सरकारी/i.test((j.source||"")+" "+(j.category||""));
+  const verified=j.verified?12:0;
+  const urgency=days>=0?Math.max(0,30-Math.min(days,30)):0;
+  const fresh=j.posted?Math.max(0,14-Math.min(Math.max(0,Math.floor((Date.now()-new Date(j.posted+"T00:00:00"))/86400000)),14)):0;
+  const salary=Number(j.salaryMax||0)>0?6:0;
+  return verified+urgency+fresh+(official?8:0)+salary;
+};
+state.filtered.sort((a,b)=>sort==="salary"?Number(b.salaryMax||0)-Number(a.salaryMax||0):sort==="deadline"?String(a.deadline||"9999").localeCompare(String(b.deadline||"9999")):score(b)-score(a));
 $("resultText").textContent=state.filtered.length+" job"+(state.filtered.length===1?"":"s")+" found";
 $("jobGrid").innerHTML=state.filtered.map(card).join("");$("emptyState").hidden=state.filtered.length>0;
 $("activeFilters").innerHTML=[["category","Category: "+v.category],["qualification","Qualification: "+v.qualification],["location","Location: "+v.location],["experience","Experience: "+v.experience],["remote","Remote"]].filter(x=>v[x[0]]).map(x=>"<button data-clear=\""+esc(x[0])+"\">"+esc(x[1])+" ×</button>").join("");
