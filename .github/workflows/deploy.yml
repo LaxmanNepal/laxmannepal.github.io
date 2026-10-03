@@ -125,6 +125,24 @@ jobs:
           test -f .pages/jobs/jobs.json
           test -f .pages/jobs/jobs.js
           test -f .pages/jobs/jobs.css
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path(".pages/jobs")
+          jobs = json.loads((root / "jobs.json").read_text(encoding="utf-8"))
+          assert isinstance(jobs, list) and jobs, "jobs.json is empty or invalid"
+          missing=[]
+          for job in jobs:
+              title=str(job.get("title","job")); org=str(job.get("organization",""))
+              import re, unicodedata
+              slug=unicodedata.normalize("NFKD", title+"-"+org).lower()
+              slug=re.sub(r"[^\\w\\s-]","",slug,flags=re.UNICODE)
+              slug=re.sub(r"-+","-",re.sub(r"\\s+","-",slug)).strip("-")[:70] or "job"
+              if not (root / slug / "index.html").is_file(): missing.append(slug)
+          if missing:
+              raise SystemExit("Missing generated job pages: "+"; ".join(missing[:10]))
+          print(f"Verified {len(jobs)} job records and generated detail pages.")
+          PY
           grep -q '<title>Laxman Nepal — Free Tools, AI Tools & Practical Guides</title>' .pages/index.html
           grep -q 'name="description" content="Laxman Nepal — free online tools, AI tools, practical tutorials, apps and useful digital resources\."' .pages/index.html
           ! grep -q 'Technology that helps you do more' .pages/index.html
