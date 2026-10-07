@@ -43,5 +43,14 @@ jobs:
             echo 'No generated blog changes to commit.'
           else
             git commit -m 'chore: maintain native blog metadata and SEO'
-            git push
+            for attempt in 1 2 3 4 5; do
+              if git fetch origin main && git rebase origin/main && git push origin HEAD:main; then
+                exit 0
+              fi
+              git rebase --abort || true
+              echo "Push race detected; retrying ($attempt/5)..."
+              sleep $((attempt * 2))
+            done
+            echo "Unable to push generated blog metadata after 5 attempts."
+            exit 1
           fi
