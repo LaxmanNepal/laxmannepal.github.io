@@ -346,8 +346,8 @@
     "category": "Tools",
     "type": "tool",
     "url": "/data-tools/",
-    "description": "Free data and productivity tools by Laxman Nepal.",
-    "keywords": "data tools laxman nepal free and productivity by nepal.",
+    "description": "Free Data tools by Laxman Nepal. Browse tools automatically discovered from this category folder.",
+    "keywords": "data tools laxman nepal free by nepal. browse automatically discovered from this category folder.",
     "image": ""
   },
   {
@@ -403,15 +403,6 @@
     "description": "FortressKey - Strong Password Generator",
     "keywords": "fortresskey strong password generator",
     "image": ""
-  },
-  {
-    "title": "Free YouTube Tools — YouTube SEO, Analytics, Tags & Creator Tools | Laxman Nepal",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/",
-    "description": "Free YouTube creator tools by Laxman Nepal for SEO, analytics, keyword research, titles, tags, thumbnails, channel research and video optimization. Browse and launch every tool from one fast creator hub.",
-    "keywords": "free youtube tools seo analytics tags creator laxman nepal by for keyword research titles thumbnails channel and video optimization. browse launch every tool from one fast hub.",
-    "image": "https://laxmannepal.com.np/youtube-tools/youtube-channel-analytics-pro/logo.webp"
   },
   {
     "title": "Gemini Watermark Remover",
@@ -643,8 +634,8 @@
     "category": "Tools",
     "type": "tool",
     "url": "/image-tools/",
-    "description": "Free image utilities, prompts and editing resources for creators, bloggers and everyday users.",
-    "keywords": "image tools laxman nepal free utilities prompts and editing resources for creators bloggers everyday users.",
+    "description": "Free Image tools by Laxman Nepal. Browse tools automatically discovered from this category folder.",
+    "keywords": "image tools laxman nepal free by nepal. browse automatically discovered from this category folder.",
     "image": ""
   },
   {
@@ -805,8 +796,8 @@
     "category": "Tools",
     "type": "tool",
     "url": "/nepal-tools/",
-    "description": "Nepal-focused free tools including Nepali Patro, Rashifal, festivals, exams and gold price.",
-    "keywords": "nepal tools laxman nepal-focused free including nepali patro rashifal festivals exams and gold price.",
+    "description": "Free Nepal tools by Laxman Nepal. Browse tools automatically discovered from this category folder.",
+    "keywords": "nepal tools laxman free by nepal. browse automatically discovered from this category folder.",
     "image": ""
   },
   {
@@ -922,8 +913,8 @@
     "category": "Tools",
     "type": "tool",
     "url": "/pdf-tools/",
-    "description": "Free PDF utilities and PDF-related tools for common everyday tasks.",
-    "keywords": "pdf tools laxman nepal free utilities and pdf-related for common everyday tasks.",
+    "description": "Free PDF tools by Laxman Nepal. Browse tools automatically discovered from this category folder.",
+    "keywords": "pdf tools laxman nepal free by nepal. browse automatically discovered from this category folder.",
     "image": ""
   },
   {
@@ -1420,6 +1411,15 @@
     "description": "Generate YouTube title ideas from your topic and improve your publishing workflow with a fast browser tool.",
     "keywords": "youtube title generator free tool laxman nepal generate ideas from your topic and improve publishing workflow with fast browser tool.",
     "image": "https://laxmannepal.com.np/youtube-tools/youtube-title-generator/logo.webp"
+  },
+  {
+    "title": "YouTube Tools — Laxman Nepal",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/youtube-tools/",
+    "description": "Free YouTube tools by Laxman Nepal. Browse tools automatically discovered from this category folder.",
+    "keywords": "youtube tools laxman nepal free by nepal. browse automatically discovered from this category folder.",
+    "image": ""
   },
   {
     "title": "YouTube Trend Explorer",
