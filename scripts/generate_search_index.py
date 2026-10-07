@@ -59,6 +59,8 @@ for file in ROOT.rglob("*.html"):
         continue
     t = title(content)
     if not t: continue
+    robots = meta(content, "robots").lower()
+    if "noindex" in robots: continue
     desc = meta(content, "description") or t
     cat = category(rel, t)
     keywords = " ".join(dict.fromkeys(re.findall(r"[a-z0-9][a-z0-9+.-]{1,}", (t + " " + desc).lower())))
