@@ -261,6 +261,15 @@
     "image": "${esc(a.snapshot)}"
   },
   {
+    "title": "Article moved",
+    "category": "Article",
+    "type": "article",
+    "url": "/blogs/download-entire-youtube-channel-using-cmd.html",
+    "description": "Article moved",
+    "keywords": "article moved",
+    "image": ""
+  },
+  {
     "title": "Best Online Typing Jobs in 2025 — Work From Home & Earn Real Money",
     "category": "Resource",
     "type": "resource",
@@ -498,10 +507,10 @@
     "title": "How to Download an Entire YouTube Channel Using CMD | Laxman Nepal",
     "category": "Article",
     "type": "article",
-    "url": "/blogs/download-entire-youtube-channel-using-cmd.html",
-    "description": "Learn how to download all accessible videos from a YouTube channel using CMD on Windows with yt-dlp and FFmpeg. Includes copy-and-paste commands for playlists, channels, MP4, subtitles, thumbnails, archives and resume su",
-    "keywords": "how to download an entire youtube channel using cmd laxman nepal learn all accessible videos from on windows with yt-dlp and ffmpeg. includes copy-and-paste commands for playlists channels mp4 subtitles thumbnails archives resume support.",
-    "image": ""
+    "url": "/blogs/download-entire-youtube-channel-using-cmd/",
+    "description": "Learn how to download all accessible videos from a YouTube channel using Windows CMD with yt-dlp and FFmpeg.",
+    "keywords": "how to download an entire youtube channel using cmd laxman nepal learn all accessible videos from windows with yt-dlp and ffmpeg.",
+    "image": "https://laxmannepal.com.np/blogs/download-entire-youtube-channel-using-cmd/thumbnail.jpg"
   },
   {
     "title": "How to Download YouTube Thumbnails in High Quality - Free Tool",
