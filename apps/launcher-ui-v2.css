@@ -73,3 +73,5 @@ html[data-view=list] .app-open{font-size:10px;margin-top:8px}
  .app-card{border-radius:14px}.app-name{font-size:10px}.app-open{font-size:6.5px}
 }
 @media(prefers-reduced-motion:reduce){.apps-page *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+.app-description{display:-webkit-box;margin-top:6px;color:var(--muted);font-size:9px;line-height:1.35;overflow:hidden;-webkit-line-clamp:1;-webkit-box-orient:vertical}.app-category{font-weight:800}.app-domain{max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.app-open>i{margin-left:auto}.app-info{align-items:flex-start}.app-icon{margin-top:1px}@media(max-width:760px){.app-description{font-size:7px;margin-top:4px}.app-domain{display:none}}html[data-view=list] .app-description{font-size:10px;-webkit-line-clamp:2;max-width:680px}html[data-view=list] .app-open{display:flex;max-width:100%}
