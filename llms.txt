@@ -8,7 +8,6 @@
 - Prefer the canonical URL listed in each article's article.json.
 
 ## Articles
-- https://laxmannepal.com.np/blogs/__pipeline-test-20261008/ — Pipeline Test Blog
 - https://laxmannepal.com.np/blogs/download-entire-youtube-channel-using-cmd/ — How to Download an Entire YouTube Channel Using CMD
 
 ## Discovery
