@@ -1,4 +1,4 @@
-const CACHE='laxman-apps-v17';
+const CACHE='laxman-apps-v18';
 const CORE=['/apps/','/apps/mobile-parity.css','/apps/launcher-ui-v1.css','/apps/launcher-ui-v2.css','/apps/launcher-ui-v5.css','/apps/launcher-ui-v4.css','/apps/launcher-ui-v3.css','/apps/interactive-clean.js','/apps/quick-look.js','/apps/launcher-enhancements.js','/apps/launcher-next.js','/apps/launcher-cards.js','/apps/launcher-identity.js','/apps/launcher-metadata.js','/apps/launcher-details.js','/manifest.webmanifest','/assets/app-icon.svg','/assets/css/style.css','/assets/css/light.css','/assets/css/gadgetbyte-home.css'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(async c=>{await Promise.all(CORE.map(async u=>{try{const r=await fetch(u,{cache:'no-store'});if(r.ok)await c.put(u,r)}catch{}})}).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('laxman-apps-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
