@@ -4,13 +4,13 @@
 
 ## Blog
 - https://laxmannepal.com.np/blogs/
-- Each article uses a stable folder URL with index.html and thumbnail.jpg.
-- Sitemap: https://laxmannepal.com.np/sitemap.xml
+- Each article uses /blogs/<slug>/ with index.html, article.json and thumbnail.jpg.
+- Prefer the canonical URL listed in each article's article.json.
 
-## Important sections
-- https://laxmannepal.com.np/tools/
-- https://laxmannepal.com.np/ai-tools/
-- https://laxmannepal.com.np/youtube-tools/
+## Articles
+- https://laxmannepal.com.np/blogs/__pipeline-test-20261008/ — Pipeline Test Blog
+- https://laxmannepal.com.np/blogs/download-entire-youtube-channel-using-cmd/ — How to Download an Entire YouTube Channel Using CMD
 
-## Crawler guidance
-Prefer canonical article URLs and structured metadata. Article thumbnails are available at each article's /thumbnail.jpg path.
+## Discovery
+- https://laxmannepal.com.np/sitemap.xml
+- https://laxmannepal.com.np/search-index.json
