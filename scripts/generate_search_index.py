@@ -63,8 +63,11 @@ for file in ROOT.rglob("*.html"):
     if "noindex" in robots: continue
     desc = meta(content, "description") or t
     cat = category(rel, t)
+    image = image_meta(content)
+    if rel.startswith("blogs/") and (file.parent / "thumbnail.jpg").is_file():
+        image = "/" + (file.parent / "thumbnail.jpg").relative_to(ROOT).as_posix()
     keywords = " ".join(dict.fromkeys(re.findall(r"[a-z0-9][a-z0-9+.-]{1,}", (t + " " + desc).lower())))
-    items.append({"title": t, "category": cat, "type": "article" if cat == "Article" else "tool" if cat == "Tools" else "resource", "url": url_for(rel), "description": desc[:220], "keywords": keywords[:500], "image": image_meta(content)})
+    items.append({"title": t, "category": cat, "type": "article" if cat == "Article" else "tool" if cat == "Tools" else "resource", "url": url_for(rel), "description": desc[:220], "keywords": keywords[:500], "image": image})
 
 # Prefer canonical-looking URLs and stable alphabetical ordering.
 items.sort(key=lambda x: (x["title"].lower(), x["url"]))
