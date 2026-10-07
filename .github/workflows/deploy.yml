@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Validate native blog architecture
+        run: python3 scripts/manage_blogs.py --check
       - name: Protect source homepage
         run: |
           test -f index.html
