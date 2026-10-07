@@ -234,15 +234,6 @@
     "image": ""
   },
   {
-    "title": "Analytics Command Center — Laxman Nepal",
-    "category": "Nepali",
-    "type": "resource",
-    "url": "/analytics/",
-    "description": "Analytics Command Center — Laxman Nepal",
-    "keywords": "analytics command center laxman nepal",
-    "image": ""
-  },
-  {
     "title": "App — Laxman Nepal",
     "category": "Apps",
     "type": "resource",
@@ -259,15 +250,6 @@
     "description": "Explore Laxman Nepal",
     "keywords": "apps tools laxman nepal explore",
     "image": "${esc(a.snapshot)}"
-  },
-  {
-    "title": "Article moved",
-    "category": "Article",
-    "type": "article",
-    "url": "/blogs/download-entire-youtube-channel-using-cmd.html",
-    "description": "Article moved",
-    "keywords": "article moved",
-    "image": ""
   },
   {
     "title": "Best Online Typing Jobs in 2025 — Work From Home & Earn Real Money",
@@ -510,7 +492,7 @@
     "url": "/blogs/download-entire-youtube-channel-using-cmd/",
     "description": "Learn how to download all accessible videos from a YouTube channel using Windows CMD with yt-dlp and FFmpeg.",
     "keywords": "how to download an entire youtube channel using cmd laxman nepal learn all accessible videos from windows with yt-dlp and ffmpeg.",
-    "image": "https://laxmannepal.com.np/blogs/download-entire-youtube-channel-using-cmd/thumbnail.jpg"
+    "image": "/blogs/download-entire-youtube-channel-using-cmd/thumbnail.jpg"
   },
   {
     "title": "How to Download YouTube Thumbnails in High Quality - Free Tool",
@@ -801,15 +783,6 @@
     "image": ""
   },
   {
-    "title": "Nepal Jobs",
-    "category": "Nepali",
-    "type": "resource",
-    "url": "/jobs/",
-    "description": "Nepal Jobs",
-    "keywords": "nepal jobs",
-    "image": ""
-  },
-  {
     "title": "Nepal Jobs — सरकारी, निजी र संस्था रोजगारी",
     "category": "Nepali",
     "type": "resource",
@@ -933,15 +906,6 @@
     "url": "/pdf-tools/optimize/",
     "description": "Optimize a PDF with browser-side structural processing.",
     "keywords": "optimize pdf laxman nepal with browser-side structural processing.",
-    "image": ""
-  },
-  {
-    "title": "Page not found — Drum Kit",
-    "category": "Resource",
-    "type": "resource",
-    "url": "/Drumkit/404.html",
-    "description": "Page not found — Drum Kit",
-    "keywords": "page not found drum kit",
     "image": ""
   },
   {
@@ -1224,15 +1188,6 @@
     "image": "https://laxmannepal.com.np/youtube-tools/youtube-analytics/logo.webp"
   },
   {
-    "title": "YouTube Analytics | Laxman Nepal",
-    "category": "YouTube",
-    "type": "resource",
-    "url": "/2025/12/youtube-analytics.html",
-    "description": "YouTube Analytics | Laxman Nepal",
-    "keywords": "youtube analytics laxman nepal",
-    "image": ""
-  },
-  {
     "title": "YouTube Analytics — Redirecting",
     "category": "YouTube",
     "type": "resource",
@@ -1285,15 +1240,6 @@
     "description": "Analyze public YouTube channel and video performance signals with a focused creator analytics dashboard.",
     "keywords": "youtube channel analytics tool free video insights laxman nepal analyze public and performance signals with focused creator dashboard.",
     "image": "https://laxmannepal.com.np/assets/images/laxman-nepal-og.jpg"
-  },
-  {
-    "title": "YouTube Channel Analytics | Laxman Nepal",
-    "category": "YouTube",
-    "type": "resource",
-    "url": "/2026/07/youtube-channel-analytics-pro.html",
-    "description": "YouTube Channel Analytics | Laxman Nepal",
-    "keywords": "youtube channel analytics laxman nepal",
-    "image": ""
   },
   {
     "title": "YouTube Channel ID Finder — Free Channel Analytics Tool | Laxman Nepal",
