@@ -1,0 +1,53 @@
+name: Build and validate native blogs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'blogs/**'
+      - 'scripts/manage_blogs.py'
+      - '.github/workflows/blog-system.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: native-blog-system
+  cancel-in-progress: false
+
+jobs:
+  manage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install thumbnail generator dependency
+        run: python3 -m pip install --disable-pip-version-check pillow
+
+      - name: Create article metadata, thumbnails and SEO
+        run: python3 scripts/manage_blogs.py --fix
+
+      - name: Validate every blog folder
+        run: python3 scripts/manage_blogs.py --check
+
+      - name: Refresh search index
+        run: python3 scripts/generate_search_index.py
+
+      - name: Refresh SEO discovery files
+        run: python3 scripts/generate_seo.py
+
+      - name: Commit generated blog metadata
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add blogs llms.txt search-index.json nextjs-foundation/public/sitemap.xml nextjs-foundation/public/robots.txt
+          if git diff --cached --quiet; then
+            echo 'No generated blog changes to commit.'
+          else
+            git commit -m 'chore: maintain native blog metadata and SEO'
+            git push
+          fi
