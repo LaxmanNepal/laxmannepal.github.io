@@ -272,6 +272,14 @@
     "keywords": "blogger universal text converter"
   },
   {
+    "title": "Blogs & Tutorials | Laxman Nepal",
+    "category": "Article",
+    "type": "article",
+    "url": "/blogs/",
+    "description": "Laxman Nepal practical tutorials about YouTube, AI, Windows, command-line tools and useful digital workflows.",
+    "keywords": "blogs tutorials laxman nepal practical about youtube ai windows command-line tools and useful digital workflows."
+  },
+  {
     "title": "Claude Opus 5.5 Launch: What Changed, Pricing and Why It Matters | Laxman Nepal",
     "category": "News",
     "type": "resource",
@@ -430,6 +438,14 @@
     "url": "/2026/06/how-to-create-google-play-store.html",
     "description": "Learn how to create a Google Play Store Developer Account in 2026. Complete step-by-step guide including registration fee, verification, and app publishing process.",
     "keywords": "how to create google play store developer account in 2026 learn 2026. complete step-by-step guide including registration fee verification and app publishing process."
+  },
+  {
+    "title": "How to Download an Entire YouTube Channel Using CMD | Laxman Nepal",
+    "category": "Article",
+    "type": "article",
+    "url": "/blogs/download-entire-youtube-channel-using-cmd.html",
+    "description": "Learn how to download all accessible videos from a YouTube channel using CMD on Windows with yt-dlp and FFmpeg. Includes copy-and-paste commands for playlists, channels, MP4, subtitles, thumbnails, archives and resume su",
+    "keywords": "how to download an entire youtube channel using cmd laxman nepal learn all accessible videos from on windows with yt-dlp and ffmpeg. includes copy-and-paste commands for playlists channels mp4 subtitles thumbnails archives resume support."
   },
   {
     "title": "How to Download YouTube Thumbnails in High Quality - Free Tool",
