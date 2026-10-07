@@ -24,7 +24,7 @@ html[data-theme=dark]{--clean-accent:#f8fafc;--clean-soft:#1f2937;--clean-line:r
   const actions=document.createElement('div');actions.className='clean-actions';
   const preview=document.createElement('button');preview.className='clean-action';preview.type='button';preview.title='Preview';preview.setAttribute('aria-label','Preview app');preview.innerHTML='<i class="fa-regular fa-eye"></i>';
   const open=document.createElement('a');open.className='clean-action';open.href=card.href;open.target='_blank';open.rel='noopener';open.title='Open app';open.setAttribute('aria-label','Open app');open.innerHTML='<i class="fa-solid fa-arrow-up-right-from-square"></i>';
-  preview.onclick=e=>{e.preventDefault();e.stopPropagation();card.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}))};
+  preview.onclick=e=>{e.preventDefault();e.stopPropagation();if(window.LaxmanAppsQuickLook?.show)window.LaxmanAppsQuickLook.show(card);else card.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}))};
   actions.append(preview,open);card.appendChild(actions);
   card.setAttribute('tabindex','0');card.setAttribute('role','link');
   card.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();card.click()}if(e.key===' '){e.preventDefault();card.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,cancelable:true}))}});
