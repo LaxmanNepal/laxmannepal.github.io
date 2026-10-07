@@ -17,6 +17,16 @@ def meta(content, name):
         m = re.search(r'<meta[^>]+content=["\']([^"\']*)["\'][^>]+name=["\']' + re.escape(name) + r'["\']', content, re.I)
     return clean(m.group(1)) if m else ""
 
+def image_meta(content):
+    for pattern in (
+        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<img[^>]+src=["\']([^"\']+)["\']',
+    ):
+        m = re.search(pattern, content, re.I)
+        if m: return clean(m.group(1))
+    return ""
+
 def title(content):
     m = re.search(r"<title[^>]*>(.*?)</title>", content, re.I | re.S)
     return clean(re.sub(r"<[^>]+>", "", m.group(1))) if m else ""
@@ -52,7 +62,7 @@ for file in ROOT.rglob("*.html"):
     desc = meta(content, "description") or t
     cat = category(rel, t)
     keywords = " ".join(dict.fromkeys(re.findall(r"[a-z0-9][a-z0-9+.-]{1,}", (t + " " + desc).lower())))
-    items.append({"title": t, "category": cat, "type": "article" if cat == "Article" else "tool" if cat == "Tools" else "resource", "url": url_for(rel), "description": desc[:220], "keywords": keywords[:500]})
+    items.append({"title": t, "category": cat, "type": "article" if cat == "Article" else "tool" if cat == "Tools" else "resource", "url": url_for(rel), "description": desc[:220], "keywords": keywords[:500], "image": image_meta(content)})
 
 # Prefer canonical-looking URLs and stable alphabetical ordering.
 items.sort(key=lambda x: (x["title"].lower(), x["url"]))
