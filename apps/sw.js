@@ -10,8 +10,7 @@ async function inject(response){
   const text=await response.text();let injected=text;
   const styles=['mobile-parity.css?v=16'];
   styles.forEach(href=>{const path='/apps/'+href.split('?')[0];if(!injected.includes(path))injected=injected.replace('</head>','<link rel="stylesheet" href="/apps/'+href+'"></head>')});
-  const scripts=['launcher-enhancements.js?v=16','launcher-next.js?v=16','launcher-cards.js?v=16','launcher-identity.js?v=16','launcher-metadata.js?v=16','launcher-details.js?v=16','interactive-clean.js?v=16','quick-look.js?v=16'];
-  scripts.forEach(src=>{const path='/apps/'+src.split('?')[0];if(!injected.includes(path))injected=injected.replace('</body>','<script src="/apps/'+src+'" defer></script></body>')});
+  /* Launcher behavior is owned by launcher.js; avoid legacy script injection here. */
   const headers=new Headers(response.headers);headers.delete('content-length');
   return new Response(injected,{status:response.status,statusText:response.statusText,headers});
  }catch{return response}
