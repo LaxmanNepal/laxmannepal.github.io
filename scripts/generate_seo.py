@@ -15,6 +15,7 @@ INDEXABLE_STATIC_PATHS = [
     "/", "/en/", "/ne/", "/hi/", "/languages/",
     "/news/", "/reviews/", "/guides/", "/products/",
     "/compare/", "/tools/", "/ai/", "/youtube/", "/tech-news/",
+    "/blogs/", "/llms.txt",
     "/gold-rates-nepal/",
     "/gold-price-in-nepal-today/",
     "/gold-price-history-nepal/",
@@ -30,6 +31,18 @@ def load_posts():
 def main():
     PUBLIC.mkdir(parents=True, exist_ok=True)
     posts = load_posts()
+    blogs_root = ROOT / "blogs"
+    blog_urls = []
+    if blogs_root.exists():
+        for p in sorted(blogs_root.glob("*/index.html")):
+            try:
+                html = p.read_text(encoding="utf-8", errors="ignore")
+            except OSError:
+                continue
+            if 'name="robots" content="noindex' in html.lower() or "name='robots' content='noindex" in html.lower():
+                continue
+            blog_urls.append("/" + p.relative_to(ROOT).parent.as_posix() + "/")
+
     tech_root = ROOT / "tech-news"
     tech_urls = []
     if tech_root.exists():
@@ -37,7 +50,7 @@ def main():
             tech_urls.append("/" + p.relative_to(ROOT).parent.as_posix() + "/")
 
     urls = []
-    for path in INDEXABLE_STATIC_PATHS + tech_urls + [p["path"] for p in posts]:
+    for path in INDEXABLE_STATIC_PATHS + blog_urls + tech_urls + [p["path"] for p in posts]:
         if path.startswith("/old/") or path.startswith("/scripts/") or path.startswith("/search/"):
             continue
         if path not in urls:
@@ -56,6 +69,10 @@ def main():
         "Allow: /\n"
         "Disallow: /old/\n"
         "Disallow: /scripts/\n"
+        "User-agent: OAI-SearchBot\n"
+        "Allow: /\n"
+        "User-agent: GPTBot\n"
+        "Allow: /\n"
         "\nSitemap: " + BASE + "/sitemap.xml\n"
     )
     (PUBLIC / "robots.txt").write_text(robots, encoding="utf-8")
