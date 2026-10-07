@@ -1,0 +1,75 @@
+/* Apps UI v2 — marketplace-style catalog. Keep each UI version in its own file so the launcher can switch safely. */
+.apps-page{--ui-accent:#111827;--ui-accent-soft:#f1f5f9;--ui-card-radius:22px;--ui-gap:18px}
+html[data-theme=dark] .apps-page{--ui-accent:#f8fafc;--ui-accent-soft:#1e293b}
+.apps-main{max-width:1320px;padding:42px 20px 80px}
+.apps-top{align-items:center;margin-bottom:28px}
+.apps-kicker{padding:7px 10px;border:1px solid var(--border);border-radius:999px;background:var(--panel);font-size:10px;letter-spacing:.1em}
+.apps-title{font-size:clamp(42px,6vw,72px);letter-spacing:-.065em}
+.apps-subtitle{max-width:650px;font-size:15px;line-height:1.6}
+.apps-actions{gap:9px}
+.icon-btn{width:44px;height:44px;border-radius:14px;transition:transform .18s,box-shadow .18s}
+.icon-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.1)}
+.apps-toolbar{grid-template-columns:minmax(0,1fr) auto;gap:12px;margin-bottom:10px}
+.search-wrap{min-width:0}
+.apps-search,.sort-select{height:52px;border-radius:15px}
+.apps-search{font-size:15px}
+.apps-search:focus,.sort-select:focus{border-color:#94a3b8;box-shadow:0 0 0 4px rgba(148,163,184,.14)}
+.sort-select{min-width:190px}
+.category-bar{gap:7px;padding:4px 0 20px}
+.category-btn{padding:9px 14px;font-size:11px;transition:.16s}
+.category-btn:hover{transform:translateY(-1px);color:var(--text)}
+.category-btn.active{box-shadow:0 5px 16px rgba(0,0,0,.12)}
+.section-label{margin:8px 0 13px}
+.section-label h2{font-size:18px;letter-spacing:-.02em}
+.featured-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-bottom:30px}
+.featured-card{position:relative;min-height:76px;padding:12px 13px;border-radius:17px;transition:transform .18s,box-shadow .18s,border-color .18s}
+.featured-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.09);border-color:#cbd5e1}
+.featured-logo{width:44px;height:44px;border-radius:13px}
+.featured-name{font-size:12px}
+.featured-meta{font-size:9px}
+.launcher-tools{margin:0 0 14px;padding-top:2px}
+.launcher-tools small{font-size:11px}
+.view-toggle{border-radius:12px;padding:2px}
+.view-toggle button{border-radius:9px;width:34px;height:30px}
+.apps-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--ui-gap)}
+.app-card{aspect-ratio:4/3;grid-template-rows:67% 33%;border-radius:var(--ui-card-radius);box-shadow:0 7px 25px rgba(15,23,42,.07);transition:transform .2s,box-shadow .2s,border-color .2s}
+.app-card:hover{transform:translateY(-5px);box-shadow:0 18px 42px rgba(15,23,42,.13);border-color:#cbd5e1}
+.app-preview{background:linear-gradient(135deg,#eef2f7,#e2e8f0)}
+.app-preview:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,.02),rgba(15,23,42,.14));pointer-events:none}
+.app-snapshot{object-position:top center}
+.preview-loading{background:linear-gradient(110deg,#eef2f7 8%,#f8fafc 18%,#eef2f7 33%);background-size:200% 100%;animation:appsShimmer 1.25s linear infinite}
+@keyframes appsShimmer{to{background-position:-200% 0}}
+.app-info{padding:12px 14px;gap:10px;border-top:0}
+.app-icon{width:42px;height:42px;border-radius:13px;background:var(--ui-accent-soft)}
+.app-icon img{width:28px;height:28px}
+.app-name{font-size:13px;line-height:1.2}
+.app-open{margin-top:5px;font-size:9px}
+.app-status{padding:3px 6px;border-radius:999px;background:rgba(34,197,94,.1)}
+.fav-btn{right:10px;top:10px;width:32px;height:32px;border-radius:10px;background:rgba(255,255,255,.78);box-shadow:0 4px 12px rgba(0,0,0,.08)}
+html[data-theme=dark] .fav-btn{background:rgba(15,23,42,.78)}
+.fav-btn:hover{transform:scale(1.06)}
+.fav-btn.active{background:rgba(245,158,11,.12)}
+.empty{display:block;min-height:220px;padding:65px 20px;border:1px dashed var(--border);border-radius:var(--ui-card-radius);background:var(--panel)}
+.apps-footnote{margin:20px 2px 0;color:var(--muted);font-size:10px}
+html[data-view=list] .apps-grid{grid-template-columns:1fr;gap:12px}
+html[data-view=list] .app-card{min-height:142px;aspect-ratio:auto;grid-template-columns:230px minmax(0,1fr);grid-template-rows:1fr}
+html[data-view=list] .app-preview{grid-column:1;grid-row:1}
+html[data-view=list] .app-info{grid-column:2;grid-row:1;padding:18px}
+html[data-view=list] .app-name{font-size:17px}
+html[data-view=list] .app-open{font-size:10px;margin-top:8px}
+@media(max-width:1050px){.apps-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+ .apps-main{padding:28px 12px 58px}.apps-top{align-items:flex-start}.apps-title{font-size:clamp(40px,12vw,56px)}
+ .apps-subtitle{font-size:13px}.apps-toolbar{grid-template-columns:1fr}.sort-select{width:100%;min-width:0}
+ .apps-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.featured-grid{gap:9px}
+ .app-card{aspect-ratio:1/1.04;border-radius:16px}.app-info{padding:9px 10px}.app-icon{width:36px;height:36px}.app-icon img{width:24px;height:24px}
+ .app-name{font-size:11px}.app-open{font-size:7px}.fav-btn{width:30px;height:30px;right:8px;top:8px}
+ html[data-view=list] .app-card{min-height:106px;grid-template-columns:125px minmax(0,1fr)}html[data-view=list] .app-info{padding:11px}
+ html[data-view=list] .app-name{font-size:13px}
+}
+@media(max-width:460px){
+ .apps-main{padding-left:9px;padding-right:9px}.apps-actions .icon-btn{width:40px;height:40px}.featured-card{padding:10px}
+ .featured-logo{width:38px;height:38px}.featured-name{font-size:10px}.featured-meta{font-size:8px}
+ .app-card{border-radius:14px}.app-name{font-size:10px}.app-open{font-size:6.5px}
+}
+@media(prefers-reduced-motion:reduce){.apps-page *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
