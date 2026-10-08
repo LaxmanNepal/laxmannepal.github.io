@@ -1,4 +1,4 @@
-const CACHE='laxman-apps-v19';
+const CACHE='laxman-apps-v20';
 const CORE=['/apps/','/apps/index.html','/apps/mobile-parity.css','/apps/launcher-ui-v1.css','/apps/launcher-ui-v2.css','/apps/launcher-ui-v5.css','/apps/launcher-ui-v4.css','/apps/launcher-ui-v3.css','/apps/interactive-clean.js','/apps/quick-look.js','/apps/launcher.js','/manifest.webmanifest','/assets/app-icon.svg','/assets/css/style.css','/assets/css/light.css','/assets/css/gadgetbyte-home.css'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(async c=>{await Promise.all(CORE.map(async u=>{try{const r=await fetch(u,{cache:'no-store'});if(r.ok)await c.put(u,r)}catch{}})}).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('laxman-apps-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
@@ -8,7 +8,7 @@ async function inject(response){
   const type=response.headers.get('content-type')||'';
   if(!type.includes('text/html'))return response;
   const text=await response.text();let injected=text;
-  const styles=['mobile-parity.css?v=18'];
+  const styles=['mobile-parity.css?v=19'];
   styles.forEach(href=>{const path='/apps/'+href.split('?')[0];if(!injected.includes(path))injected=injected.replace('</head>','<link rel="stylesheet" href="/apps/'+href+'"></head>')});
   const headers=new Headers(response.headers);headers.delete('content-length');
   return new Response(injected,{status:response.status,statusText:response.statusText,headers});
