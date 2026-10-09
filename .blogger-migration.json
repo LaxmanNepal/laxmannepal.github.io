@@ -1,8 +1,8 @@
 {
-  "source": "https://www.laxmannepal.com.np/atom.xml?redirect=false&start-index=1&max-results=500",
-  "total_feed_entries": 61,
-  "imported_posts": 61,
-  "generated_at": "2026-09-19T17:03:32.432091+00:00",
+  "source": "historical sitemap + monthly Blogger archive discovery",
+  "total_feed_entries": 62,
+  "imported_posts": 62,
+  "generated_at": "2026-10-09T09:10:38.769685+00:00",
   "posts": [
     {
       "title": "Youtube Channel Analytics pro ",
@@ -10,7 +10,12 @@
       "updated": "2026-07-04T03:50:22.784+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/07/youtube-channel-analytics-pro.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/07/youtube-channel-analytics-pro.html",
-      "path": "/2026/07/youtube-channel-analytics-pro.html"
+      "path": "/2026/07/youtube-channel-analytics-pro.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "Free Online HEIC to JPG Converter & Instant Viewer ",
@@ -18,7 +23,12 @@
       "updated": "2026-06-17T00:38:48.441+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/06/free-online-heic-to-jpg-converter.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/06/free-online-heic-to-jpg-converter.html",
-      "path": "/2026/06/free-online-heic-to-jpg-converter.html"
+      "path": "/2026/06/free-online-heic-to-jpg-converter.html",
+      "type": "tool",
+      "tags": [
+        "tool",
+        "technology"
+      ]
     },
     {
       "title": "How To Create Google Play Store Developer Account 2026",
@@ -26,7 +36,12 @@
       "updated": "2026-06-08T19:59:31.712+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/06/how-to-create-google-play-store.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/06/how-to-create-google-play-store.html",
-      "path": "/2026/06/how-to-create-google-play-store.html"
+      "path": "/2026/06/how-to-create-google-play-store.html",
+      "type": "guide",
+      "tags": [
+        "guide",
+        "technology"
+      ]
     },
     {
       "title": "How to remove gemini logo in one click | Free Tool",
@@ -34,7 +49,12 @@
       "updated": "2026-04-06T05:19:11.627+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/04/how-to-remove-gemini-logo-in-one-click.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/04/how-to-remove-gemini-logo-in-one-click.html",
-      "path": "/2026/04/how-to-remove-gemini-logo-in-one-click.html"
+      "path": "/2026/04/how-to-remove-gemini-logo-in-one-click.html",
+      "type": "ai",
+      "tags": [
+        "ai",
+        "technology"
+      ]
     },
     {
       "title": "Hidden Android Features Most Users Don’t Know (Complete Guide)",
@@ -42,7 +62,12 @@
       "updated": "2026-03-30T03:21:47.689+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/03/hidden-android-features-most-users-dont.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/03/hidden-android-features-most-users-dont.html",
-      "path": "/2026/03/hidden-android-features-most-users-dont.html"
+      "path": "/2026/03/hidden-android-features-most-users-dont.html",
+      "type": "guide",
+      "tags": [
+        "guide",
+        "technology"
+      ]
     },
     {
       "title": "NEPSE ",
@@ -50,7 +75,12 @@
       "updated": "2026-03-25T12:13:23.967+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/03/nepse.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/03/nepse.html",
-      "path": "/2026/03/nepse.html"
+      "path": "/2026/03/nepse.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "Blogger SEO Checkup",
@@ -58,7 +88,12 @@
       "updated": "2026-03-30T03:53:44.524+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/03/blogger-seo-checkup.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/03/blogger-seo-checkup.html",
-      "path": "/2026/03/blogger-seo-checkup.html"
+      "path": "/2026/03/blogger-seo-checkup.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "Blogger Post Extracter Free Tool",
@@ -66,7 +101,12 @@
       "updated": "2026-03-30T04:09:29.014+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/03/blogger-post-extracter-free-tool.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/03/blogger-post-extracter-free-tool.html",
-      "path": "/2026/03/blogger-post-extracter-free-tool.html"
+      "path": "/2026/03/blogger-post-extracter-free-tool.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "Graphic Design Tool",
@@ -74,7 +114,12 @@
       "updated": "2026-02-23T17:01:50.980+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/02/graphic-design-tool.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/02/graphic-design-tool.html",
-      "path": "/2026/02/graphic-design-tool.html"
+      "path": "/2026/02/graphic-design-tool.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "Open Source Music Apps",
@@ -82,7 +127,12 @@
       "updated": "2026-03-30T04:45:09.732+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/02/open-source-music-apps.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/02/open-source-music-apps.html",
-      "path": "/2026/02/open-source-music-apps.html"
+      "path": "/2026/02/open-source-music-apps.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "Bulk Image resizer",
@@ -90,7 +140,12 @@
       "updated": "2026-03-30T04:54:43.201+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/02/bulk-image-resizer.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/02/bulk-image-resizer.html",
-      "path": "/2026/02/bulk-image-resizer.html"
+      "path": "/2026/02/bulk-image-resizer.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Thumbnail Downloader",
@@ -98,7 +153,12 @@
       "updated": "2026-02-10T03:28:16.025+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/02/laxman-nepal-youtube-thumbnail.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/02/laxman-nepal-youtube-thumbnail.html",
-      "path": "/2026/02/laxman-nepal-youtube-thumbnail.html"
+      "path": "/2026/02/laxman-nepal-youtube-thumbnail.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Tag Generator",
@@ -106,7 +166,12 @@
       "updated": "2026-02-10T03:21:39.468+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/02/youtube-tag-generator.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/02/youtube-tag-generator.html",
-      "path": "/2026/02/youtube-tag-generator.html"
+      "path": "/2026/02/youtube-tag-generator.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "Poster Design Studio ",
@@ -114,7 +179,12 @@
       "updated": "2026-01-24T05:27:41.739+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/01/poster-design-studio.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/01/poster-design-studio.html",
-      "path": "/2026/01/poster-design-studio.html"
+      "path": "/2026/01/poster-design-studio.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "Facebook post generator ",
@@ -122,7 +192,12 @@
       "updated": "2026-01-24T05:26:55.604+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/01/facebook-post-generator.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/01/facebook-post-generator.html",
-      "path": "/2026/01/facebook-post-generator.html"
+      "path": "/2026/01/facebook-post-generator.html",
+      "type": "tool",
+      "tags": [
+        "tool",
+        "technology"
+      ]
     },
     {
       "title": "Pinterest Image and Video Downloader",
@@ -130,7 +205,12 @@
       "updated": "2026-01-23T04:24:45.788+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/01/pinterest-image-and-video-downloader.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/01/pinterest-image-and-video-downloader.html",
-      "path": "/2026/01/pinterest-image-and-video-downloader.html"
+      "path": "/2026/01/pinterest-image-and-video-downloader.html",
+      "type": "tool",
+      "tags": [
+        "tool",
+        "technology"
+      ]
     },
     {
       "title": "Blogger Post Extractor",
@@ -138,7 +218,12 @@
       "updated": "2026-01-22T17:41:18.688+05:45",
       "original_url": "https://www.laxmannepal.com.np/2026/01/blogger-post-extractor.html",
       "imported_url": "https://apps.laxmannepal.com.np/2026/01/blogger-post-extractor.html",
-      "path": "/2026/01/blogger-post-extractor.html"
+      "path": "/2026/01/blogger-post-extractor.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "QR Code Generator ",
@@ -146,7 +231,12 @@
       "updated": "2025-12-30T04:16:10.630+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/12/qr-code-generator.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/12/qr-code-generator.html",
-      "path": "/2025/12/qr-code-generator.html"
+      "path": "/2025/12/qr-code-generator.html",
+      "type": "tool",
+      "tags": [
+        "tool",
+        "technology"
+      ]
     },
     {
       "title": "File Converter Tool",
@@ -154,7 +244,12 @@
       "updated": "2025-12-29T04:28:42.168+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/12/file-converter-tool.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/12/file-converter-tool.html",
-      "path": "/2025/12/file-converter-tool.html"
+      "path": "/2025/12/file-converter-tool.html",
+      "type": "tool",
+      "tags": [
+        "tool",
+        "technology"
+      ]
     },
     {
       "title": "AI Content Detector",
@@ -162,7 +257,12 @@
       "updated": "2025-12-29T04:22:31.796+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/12/ai-content-detector.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/12/ai-content-detector.html",
-      "path": "/2025/12/ai-content-detector.html"
+      "path": "/2025/12/ai-content-detector.html",
+      "type": "ai",
+      "tags": [
+        "ai",
+        "technology"
+      ]
     },
     {
       "title": "IBAN CHECKER FREE ",
@@ -170,7 +270,12 @@
       "updated": "2025-12-26T04:49:10.519+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/12/iban-checker-free.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/12/iban-checker-free.html",
-      "path": "/2025/12/iban-checker-free.html"
+      "path": "/2025/12/iban-checker-free.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "50+ AI Tools That Are Actually Free",
@@ -178,7 +283,12 @@
       "updated": "2025-12-21T03:39:01.783+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/12/50-ai-tools-that-are-actually-free.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/12/50-ai-tools-that-are-actually-free.html",
-      "path": "/2025/12/50-ai-tools-that-are-actually-free.html"
+      "path": "/2025/12/50-ai-tools-that-are-actually-free.html",
+      "type": "ai",
+      "tags": [
+        "ai",
+        "technology"
+      ]
     },
     {
       "title": "You Should see this ",
@@ -186,7 +296,12 @@
       "updated": "2025-12-26T04:31:04.993+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/12/watch-movie-online-sites.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/12/watch-movie-online-sites.html",
-      "path": "/2025/12/watch-movie-online-sites.html"
+      "path": "/2025/12/watch-movie-online-sites.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Analytics",
@@ -194,7 +309,12 @@
       "updated": "2025-12-16T03:46:56.432+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/12/youtube-analytics.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/12/youtube-analytics.html",
-      "path": "/2025/12/youtube-analytics.html"
+      "path": "/2025/12/youtube-analytics.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Video Download",
@@ -202,7 +322,12 @@
       "updated": "2025-12-13T16:15:43.668+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/12/youtube-video-download.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/12/youtube-video-download.html",
-      "path": "/2025/12/youtube-video-download.html"
+      "path": "/2025/12/youtube-video-download.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "Direct Download Anything",
@@ -210,7 +335,12 @@
       "updated": "2025-12-12T03:47:04.664+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/12/direct-download-anything.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/12/direct-download-anything.html",
-      "path": "/2025/12/direct-download-anything.html"
+      "path": "/2025/12/direct-download-anything.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "Strong Password Generator",
@@ -218,7 +348,12 @@
       "updated": "2025-12-10T23:06:49.712+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/12/strong-password-generator.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/12/strong-password-generator.html",
-      "path": "/2025/12/strong-password-generator.html"
+      "path": "/2025/12/strong-password-generator.html",
+      "type": "tool",
+      "tags": [
+        "tool",
+        "technology"
+      ]
     },
     {
       "title": "File Converter Online",
@@ -226,7 +361,12 @@
       "updated": "2025-12-08T04:50:02.205+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/12/file-converter-online.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/12/file-converter-online.html",
-      "path": "/2025/12/file-converter-online.html"
+      "path": "/2025/12/file-converter-online.html",
+      "type": "tool",
+      "tags": [
+        "tool",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Analytics",
@@ -234,7 +374,12 @@
       "updated": "2025-11-28T04:01:10.695+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-analytics.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-analytics.html",
-      "path": "/2025/11/youtube-analytics.html"
+      "path": "/2025/11/youtube-analytics.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Trending Keywords",
@@ -242,7 +387,12 @@
       "updated": "2025-11-28T04:03:08.031+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-trending-keywords.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-trending-keywords.html",
-      "path": "/2025/11/youtube-trending-keywords.html"
+      "path": "/2025/11/youtube-trending-keywords.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Channel ID Finder & Analytics",
@@ -250,7 +400,12 @@
       "updated": "2025-11-28T03:59:18.248+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-channel-id-finder-analytics.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-channel-id-finder-analytics.html",
-      "path": "/2025/11/youtube-channel-id-finder-analytics.html"
+      "path": "/2025/11/youtube-channel-id-finder-analytics.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Nepal Trend Explorer",
@@ -258,7 +413,12 @@
       "updated": "2025-11-26T03:34:49.501+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-nepal-trend-explorer.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-nepal-trend-explorer.html",
-      "path": "/2025/11/youtube-nepal-trend-explorer.html"
+      "path": "/2025/11/youtube-nepal-trend-explorer.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Description Extractor",
@@ -266,7 +426,12 @@
       "updated": "2025-11-24T05:26:46.041+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-description-extractor.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-description-extractor.html",
-      "path": "/2025/11/youtube-description-extractor.html"
+      "path": "/2025/11/youtube-description-extractor.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Hashtag Extractor",
@@ -274,7 +439,12 @@
       "updated": "2025-11-24T05:36:20.800+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-hashtag-extractor.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-hashtag-extractor.html",
-      "path": "/2025/11/youtube-hashtag-extractor.html"
+      "path": "/2025/11/youtube-hashtag-extractor.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Tag Extractor",
@@ -282,7 +452,12 @@
       "updated": "2025-11-26T03:44:22.736+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-tag-extractor.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-tag-extractor.html",
-      "path": "/2025/11/youtube-tag-extractor.html"
+      "path": "/2025/11/youtube-tag-extractor.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Video Analytics",
@@ -290,7 +465,12 @@
       "updated": "2025-11-24T05:03:18.446+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-video-analytics.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-video-analytics.html",
-      "path": "/2025/11/youtube-video-analytics.html"
+      "path": "/2025/11/youtube-video-analytics.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Thumbnail Downloader",
@@ -298,7 +478,12 @@
       "updated": "2025-11-24T05:10:05.702+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-thumbnail-downloader_24.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-thumbnail-downloader_24.html",
-      "path": "/2025/11/youtube-thumbnail-downloader_24.html"
+      "path": "/2025/11/youtube-thumbnail-downloader_24.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": " AI-Powered YouTube SEO Deep Analyzer",
@@ -306,7 +491,12 @@
       "updated": "2025-11-20T15:13:47.664+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/ai-powered-youtube-seo-deep-analyzer.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/ai-powered-youtube-seo-deep-analyzer.html",
-      "path": "/2025/11/ai-powered-youtube-seo-deep-analyzer.html"
+      "path": "/2025/11/ai-powered-youtube-seo-deep-analyzer.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube video title, description, tag, thumnail generator",
@@ -314,7 +504,12 @@
       "updated": "2025-11-20T05:12:56.170+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-video-title-description-tag.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-video-title-description-tag.html",
-      "path": "/2025/11/youtube-video-title-description-tag.html"
+      "path": "/2025/11/youtube-video-title-description-tag.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Title Generator",
@@ -322,7 +517,12 @@
       "updated": "2025-11-20T04:49:32.577+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-title-generator.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-title-generator.html",
-      "path": "/2025/11/youtube-title-generator.html"
+      "path": "/2025/11/youtube-title-generator.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Thumbnail Downloader",
@@ -330,7 +530,12 @@
       "updated": "2025-11-20T16:17:04.644+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-thumbnail-downloader.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-thumbnail-downloader.html",
-      "path": "/2025/11/youtube-thumbnail-downloader.html"
+      "path": "/2025/11/youtube-thumbnail-downloader.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Video SEO Analyzer",
@@ -338,7 +543,12 @@
       "updated": "2025-11-20T05:14:30.179+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-video-seo-analyzer.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-video-seo-analyzer.html",
-      "path": "/2025/11/youtube-video-seo-analyzer.html"
+      "path": "/2025/11/youtube-video-seo-analyzer.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Channel Info Extractor",
@@ -346,7 +556,12 @@
       "updated": "2025-11-20T15:37:43.357+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/11/youtube-channel-info-extractor.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/11/youtube-channel-info-extractor.html",
-      "path": "/2025/11/youtube-channel-info-extractor.html"
+      "path": "/2025/11/youtube-channel-info-extractor.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "7 Genuine Ways to Earn Free USDT Without Investing Money (2025 Guide)",
@@ -354,7 +569,12 @@
       "updated": "2025-10-16T00:29:05.985+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/10/7-genuine-ways-to-earn-free-usdt.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/10/7-genuine-ways-to-earn-free-usdt.html",
-      "path": "/2025/10/7-genuine-ways-to-earn-free-usdt.html"
+      "path": "/2025/10/7-genuine-ways-to-earn-free-usdt.html",
+      "type": "guide",
+      "tags": [
+        "guide",
+        "technology"
+      ]
     },
     {
       "title": "Best Online Typing Jobs in 2025: Work From Anywhere and Earn Real Money",
@@ -362,7 +582,12 @@
       "updated": "2025-09-30T13:58:09.454+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/09/best-online-typing-jobs-in-2025-work.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/09/best-online-typing-jobs-in-2025-work.html",
-      "path": "/2025/09/best-online-typing-jobs-in-2025-work.html"
+      "path": "/2025/09/best-online-typing-jobs-in-2025-work.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "How to Make a Free NewsPortal Website: Complete Beginner's Guide",
@@ -370,7 +595,12 @@
       "updated": "2025-09-19T03:58:27.997+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/09/how-to-make-free-newsportal-website.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/09/how-to-make-free-newsportal-website.html",
-      "path": "/2025/09/how-to-make-free-newsportal-website.html"
+      "path": "/2025/09/how-to-make-free-newsportal-website.html",
+      "type": "guide",
+      "tags": [
+        "guide",
+        "technology"
+      ]
     },
     {
       "title": "AI trend Image Prompt For Boys",
@@ -378,7 +608,12 @@
       "updated": "2025-09-18T03:50:44.772+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/09/ai-trend-image-prompt-for-boys.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/09/ai-trend-image-prompt-for-boys.html",
-      "path": "/2025/09/ai-trend-image-prompt-for-boys.html"
+      "path": "/2025/09/ai-trend-image-prompt-for-boys.html",
+      "type": "ai",
+      "tags": [
+        "ai",
+        "technology"
+      ]
     },
     {
       "title": "Remittance Tracker",
@@ -386,7 +621,12 @@
       "updated": "2025-09-02T04:00:20.138+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/09/remittance-tracker.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/09/remittance-tracker.html",
-      "path": "/2025/09/remittance-tracker.html"
+      "path": "/2025/09/remittance-tracker.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "How to Restore Snapchat Streak Without Paying [2025 Guide]",
@@ -394,7 +634,12 @@
       "updated": "2025-08-22T02:09:53.707+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/08/how-to-restore-snapchat-streak-without.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/08/how-to-restore-snapchat-streak-without.html",
-      "path": "/2025/08/how-to-restore-snapchat-streak-without.html"
+      "path": "/2025/08/how-to-restore-snapchat-streak-without.html",
+      "type": "guide",
+      "tags": [
+        "guide",
+        "technology"
+      ]
     },
     {
       "title": "Nepali Date Converter",
@@ -402,7 +647,12 @@
       "updated": "2025-08-15T06:20:00.805+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/08/nepali-date-converter.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/08/nepali-date-converter.html",
-      "path": "/2025/08/nepali-date-converter.html"
+      "path": "/2025/08/nepali-date-converter.html",
+      "type": "tool",
+      "tags": [
+        "tool",
+        "technology"
+      ]
     },
     {
       "title": "Nepali to English Date Converter ",
@@ -410,7 +660,12 @@
       "updated": "2025-08-15T06:27:12.809+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/08/nepali-to-english-date-converter.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/08/nepali-to-english-date-converter.html",
-      "path": "/2025/08/nepali-to-english-date-converter.html"
+      "path": "/2025/08/nepali-to-english-date-converter.html",
+      "type": "tool",
+      "tags": [
+        "tool",
+        "technology"
+      ]
     },
     {
       "title": "20 Free AI Tools to Skyrocket Your Productivity in 2025",
@@ -418,7 +673,12 @@
       "updated": "2025-08-15T05:20:59.923+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/08/20-free-ai-tools-to-skyrocket-your.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/08/20-free-ai-tools-to-skyrocket-your.html",
-      "path": "/2025/08/20-free-ai-tools-to-skyrocket-your.html"
+      "path": "/2025/08/20-free-ai-tools-to-skyrocket-your.html",
+      "type": "ai",
+      "tags": [
+        "ai",
+        "technology"
+      ]
     },
     {
       "title": "Free Image Download",
@@ -426,7 +686,12 @@
       "updated": "2025-08-08T05:47:17.600+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/08/free-image-download.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/08/free-image-download.html",
-      "path": "/2025/08/free-image-download.html"
+      "path": "/2025/08/free-image-download.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "Word Counter Free Tool",
@@ -434,7 +699,12 @@
       "updated": "2025-08-09T04:47:57.513+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/08/word-counter-free-tool.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/08/word-counter-free-tool.html",
-      "path": "/2025/08/word-counter-free-tool.html"
+      "path": "/2025/08/word-counter-free-tool.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "Generate a Full Web App Using Just an AI Prompt — Step-by-Step Guide",
@@ -442,7 +712,12 @@
       "updated": "2025-08-05T05:55:50.552+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/08/generate-full-web-app-using-just-ai.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/08/generate-full-web-app-using-just-ai.html",
-      "path": "/2025/08/generate-full-web-app-using-just-ai.html"
+      "path": "/2025/08/generate-full-web-app-using-just-ai.html",
+      "type": "ai",
+      "tags": [
+        "ai",
+        "technology"
+      ]
     },
     {
       "title": "YouTube Thumnail Downloader",
@@ -450,7 +725,12 @@
       "updated": "2025-07-24T04:25:06.525+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/07/youtube-thumnail-downloader.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/07/youtube-thumnail-downloader.html",
-      "path": "/2025/07/youtube-thumnail-downloader.html"
+      "path": "/2025/07/youtube-thumnail-downloader.html",
+      "type": "youtube",
+      "tags": [
+        "youtube",
+        "technology"
+      ]
     },
     {
       "title": "Image to URL",
@@ -458,7 +738,12 @@
       "updated": "2025-07-24T03:30:09.702+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/07/image-to-url.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/07/image-to-url.html",
-      "path": "/2025/07/image-to-url.html"
+      "path": "/2025/07/image-to-url.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "QR Code Scanner ",
@@ -466,7 +751,12 @@
       "updated": "2025-07-24T03:29:17.743+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/07/qr-code-scanner.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/07/qr-code-scanner.html",
-      "path": "/2025/07/qr-code-scanner.html"
+      "path": "/2025/07/qr-code-scanner.html",
+      "type": "tool",
+      "tags": [
+        "tool",
+        "technology"
+      ]
     },
     {
       "title": "Usefull link",
@@ -474,7 +764,12 @@
       "updated": "2025-07-17T23:34:37.390+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/07/usefull-link.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/07/usefull-link.html",
-      "path": "/2025/07/usefull-link.html"
+      "path": "/2025/07/usefull-link.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "Nepali usefull link",
@@ -482,7 +777,12 @@
       "updated": "2025-07-17T21:22:34.439+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/07/nepali-usefull-link.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/07/nepali-usefull-link.html",
-      "path": "/2025/07/nepali-usefull-link.html"
+      "path": "/2025/07/nepali-usefull-link.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     },
     {
       "title": "Usefull Links",
@@ -490,7 +790,30 @@
       "updated": "2025-07-17T23:44:36.948+05:45",
       "original_url": "https://www.laxmannepal.com.np/2025/07/usefull-links.html",
       "imported_url": "https://apps.laxmannepal.com.np/2025/07/usefull-links.html",
-      "path": "/2025/07/usefull-links.html"
+      "path": "/2025/07/usefull-links.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
+    },
+    {
+      "title": "Kalimati Font Download | Nepali Unicode Font & Keyboard Layout",
+      "published": "",
+      "updated": "",
+      "original_url": "https://laxmannepal.com.np/2022/09/kalimati-font-download-by-laxman-nepal.html",
+      "path": "/2022/09/kalimati-font-download-by-laxman-nepal.html",
+      "imported_url": "https://www.laxmannepal.com.np/2022/09/kalimati-font-download-by-laxman-nepal.html",
+      "type": "blog",
+      "tags": [
+        "blog",
+        "technology"
+      ]
     }
-  ]
+  ],
+  "classifier": {
+    "version": 1,
+    "method": "deterministic title rules + manual overrides"
+  },
+  "classified_posts": 62
 }
