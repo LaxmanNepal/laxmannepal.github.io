@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T06:15:39.796761+00:00",
+  "updated_at": "2026-10-09T13:27:49.619256+00:00",
   "count": 146,
   "products": [
     {
@@ -1779,8 +1779,8 @@
       "variants": [
         "8GB+256GB"
       ],
-      "price": 119999,
-      "max_price": 119999,
+      "price": 124999,
+      "max_price": 124999,
       "original_price": null,
       "rams": [
         "8GB"
@@ -2022,12 +2022,14 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "4GB + 128GB"
       ],
-      "price": 32999,
+      "price": 29999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
+        "4GB",
         "6GB"
       ],
       "storages": [
@@ -2056,16 +2058,18 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+64GB"
+        "4GB+64GB",
+        "4GB+128GB"
       ],
       "price": 25499,
-      "max_price": 25499,
+      "max_price": 29999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -2543,12 +2547,12 @@
       "name": "iPhone 17",
       "brand": "Apple",
       "variants": [
-        "8GB+256GB",
-        "8GB+512GB"
+        "8GB+512GB",
+        "8GB+256GB"
       ],
-      "price": 173499,
+      "price": 164999,
       "max_price": 215699,
-      "original_price": null,
+      "original_price": 173499,
       "rams": [
         "8GB"
       ],
