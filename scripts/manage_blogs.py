@@ -423,11 +423,11 @@ def inject_related_blogs(folder: Path, articles: list[dict], fix: bool) -> list[
         updated = pattern.sub(lambda _: block.strip(), text)
     else:
         updated = text
-        insertion = re.search(r"</main\\s*>", updated, re.I)
+        insertion = re.search(r"</main\s*>", updated, re.I)
         if insertion:
             updated = updated[:insertion.start()] + block + updated[insertion.start():]
         else:
-            insertion = re.search(r"</body\\s*>", updated, re.I)
+            insertion = re.search(r"</body\s*>", updated, re.I)
             if insertion:
                 updated = updated[:insertion.start()] + block + updated[insertion.start():]
             else:
