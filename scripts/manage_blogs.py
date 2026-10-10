@@ -372,7 +372,7 @@ def render_related_blogs(current: dict, articles: list[dict]) -> str:
     for article in suggestions:
         title = html.escape(str(article.get("title") or article.get("slug") or "Read article"))
         description = html.escape(str(article.get("description") or "Read this practical guide."))
-        url = html.escape(str(article.get("canonical") or article_url(str(article.get("slug", ""))))
+        url = html.escape(str(article.get("canonical") or article_url(str(article.get("slug", "")))))
         image = html.escape(str(article.get("thumbnail") or f"/blogs/{article.get('slug', '')}/thumbnail.jpg"))
         if image.startswith("/"):
             image = html.escape(BASE + image)
