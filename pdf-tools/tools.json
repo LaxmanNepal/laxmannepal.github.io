@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "name": "images-to-pdf",
+    "title": "Images to PDF",
+    "description": "Convert images into a single PDF document."
+  },
+  {
+    "name": "merge",
+    "title": "Merge PDFs",
+    "description": "Combine multiple PDF files into one document."
+  },
+  {
+    "name": "optimize",
+    "title": "Optimize PDF",
+    "description": "Reduce PDF file size for easier sharing."
+  },
+  {
+    "name": "pdf-to-image",
+    "title": "PDF to Image",
+    "description": "Convert PDF pages into image files."
+  },
+  {
+    "name": "rotate",
+    "title": "Rotate PDF",
+    "description": "Rotate pages in a PDF document."
+  },
+  {
+    "name": "split",
+    "title": "Split PDF",
+    "description": "Split a PDF into separate files or page ranges."
+  },
+  {
+    "name": "watermark",
+    "title": "PDF Watermark",
+    "description": "Add a watermark to PDF documents."
+  }
+]
