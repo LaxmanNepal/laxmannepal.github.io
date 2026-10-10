@@ -72,7 +72,37 @@
 .category-nav{margin-top:2px}.category-scroll{max-width:1040px;margin:auto;padding:3px 2px}.cat-tab{padding:10px 15px;font-size:12px}
 .category-results .home-tools-grid{grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:12px}
 @media(max-width:700px){.category-canvas{grid-template-columns:repeat(2,1fr);gap:10px}.cat-tile{min-height:132px;padding:15px;border-radius:20px}.category-results .home-tools-grid{grid-template-columns:repeat(2,1fr);gap:9px}}
-</style></head>
+</style>
+<style id="homepage-search-hero-final-fix">
+/* Keep the main search compact and centered instead of stretching across the page. */
+.directory-controls{width:min(560px,calc(100% - 32px))!important;max-width:560px!important;margin:0 auto 24px!important;display:block!important;box-sizing:border-box!important}
+.directory-controls .directory-search{display:flex!important;flex-flow:row nowrap!important;align-items:center!important;gap:10px!important;width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important;padding:8px 9px 8px 14px!important;box-sizing:border-box!important;border:1px solid #dbe3ef!important;border-radius:16px!important;background:#fff!important;box-shadow:0 10px 28px rgba(15,23,42,.075)!important}
+.directory-controls .directory-search input{flex:1 1 auto!important;width:0!important;min-width:0!important;padding:11px 0!important;font-size:14px!important}
+.directory-controls .directory-search button{flex:0 0 auto!important;white-space:nowrap!important;padding:11px 17px!important;border-radius:11px!important}
+.tools-hero-showcase{isolation:isolate;animation:heroReveal .75s cubic-bezier(.2,.75,.25,1) both}
+.tools-hero-showcase:before,.tools-hero-showcase:after{content:"";position:absolute;z-index:-1;pointer-events:none;border-radius:50%;filter:blur(2px)}
+.tools-hero-showcase:before{width:300px;height:300px;top:-150px;left:-70px;background:radial-gradient(circle,rgba(59,130,246,.17),rgba(59,130,246,0) 70%);animation:heroOrbDrift 8s ease-in-out infinite alternate}
+.tools-hero-showcase:after{width:340px;height:340px;right:-110px;bottom:-210px;background:radial-gradient(circle,rgba(139,92,246,.15),rgba(139,92,246,0) 70%);animation:heroOrbDrift 10s ease-in-out infinite alternate-reverse}
+.tools-hero-glow{position:absolute;z-index:-1;pointer-events:none;border-radius:50%;filter:blur(1px)}
+.tools-hero-glow-one{width:9px;height:9px;left:12%;top:28%;background:#60a5fa;box-shadow:0 0 0 8px #60a5fa18,0 0 35px #60a5fa70;animation:heroFloat 5s ease-in-out infinite}
+.tools-hero-glow-two{width:7px;height:7px;right:13%;top:35%;background:#a78bfa;box-shadow:0 0 0 7px #a78bfa1c,0 0 28px #a78bfa80;animation:heroFloat 6s ease-in-out -2s infinite}
+.tools-hero-showcase h1 span{background:linear-gradient(100deg,#2563eb 5%,#7c3aed 45%,#0891b2 75%,#2563eb 95%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:heroTextShimmer 7s linear infinite}
+.tools-hero-categories a{animation:heroCardIn .65s both;will-change:transform}
+.tools-hero-categories a:nth-child(1){animation-delay:.08s}.tools-hero-categories a:nth-child(2){animation-delay:.16s}.tools-hero-categories a:nth-child(3){animation-delay:.24s}.tools-hero-categories a:nth-child(4){animation-delay:.32s}
+.tools-hero-categories a:hover .tools-hero-cat-icon{transform:translateY(-3px) rotate(-5deg)}
+.tools-hero-cat-icon{transition:transform .25s ease}
+.tools-hero-badge{animation:heroBadgeIn .65s .08s both}
+@keyframes heroReveal{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroCardIn{from{opacity:0;transform:translateY(13px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes heroBadgeIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroOrbDrift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(28px,18px,0) scale(1.12)}}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes heroTextShimmer{to{background-position:220% center}}
+@media(max-width:600px){.directory-controls{width:calc(100% - 28px)!important;max-width:560px!important;margin-bottom:18px!important}.directory-controls .directory-search{gap:7px!important;padding:7px!important}.directory-controls .directory-search input{font-size:12px!important}.directory-controls .directory-search button{padding:10px 12px!important;font-size:12px!important}.tools-hero-glow-one{left:7%;top:20%}.tools-hero-glow-two{right:8%;top:30%}}
+@media(prefers-reduced-motion:reduce){.tools-hero-showcase,.tools-hero-showcase:before,.tools-hero-showcase:after,.tools-hero-glow,.tools-hero-showcase h1 span,.tools-hero-categories a,.tools-hero-badge{animation:none!important;transition:none!important}}
+</style>
+
+</head>
 <body data-home-v2="true">
 <header class="shared-header" id="site-header">
 <a class="shared-brand" href="/" aria-label="Laxman Nepal home"><span class="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Guides</small></span></a>
