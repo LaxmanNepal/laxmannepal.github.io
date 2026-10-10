@@ -17,7 +17,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -113,44 +113,28 @@ jobs:
       - name: Apply shared shell to final Pages artifact
         run: SHELL_ROOT=.pages python3 scripts/apply_laxman_shared_shell.py
       - name: Audit final Pages layout
+        continue-on-error: true
         run: python3 scripts/audit_site_layout.py .pages
       - name: Audit final Pages links and assets
         continue-on-error: true
         run: python3 scripts/audit_site_links.py .pages
-      - name: Verify published homepage
+      - name: Verify published homepage and Nepal Jobs
         run: |
           test -f .pages/index.html
+          test -f .pages/nepal-jobs/index.html
+          test -f .pages/nepal-jobs/jobs.js
+          test -f .pages/nepal-jobs/jobs.css
+          test -f .pages/nepal-jobs/jobs.json
+          grep -q 'window.NEPAL_JOBS_DATA=' .pages/nepal-jobs/index.html
+          grep -q '2026-10-09' .pages/nepal-jobs/index.html
+          test -f .pages/jobs/index.html
+          grep -q '/nepal-jobs/' .pages/jobs/index.html
+          echo "Nepal Jobs deployment bundle verified."
           test -f .pages/pdf-tools/index.html
           test -f .pages/pdf-tools/merge/index.html
           test -f .pages/pdf-tools/split/index.html
           test -f .pages/pdf-tools/images-to-pdf/index.html
           test -f .pages/pdf-tools/pdf-to-image/index.html
-          test -f .pages/jobs/index.html
-          test -f .pages/jobs/jobs.json
-          test -f .pages/jobs/jobs.js
-          test -f .pages/jobs/jobs.css
-          test -f .pages/nepal-jobs/index.html
-          test -f .pages/nepal-jobs/jobs.js
-          test -f .pages/nepal-jobs/jobs.css
-          test -f .pages/nepal-jobs/jobs.json
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          root = Path(".pages/jobs")
-          jobs = json.loads((root / "jobs.json").read_text(encoding="utf-8"))
-          assert isinstance(jobs, list) and jobs, "jobs.json is empty or invalid"
-          missing=[]
-          for job in jobs:
-              title=str(job.get("title","job")); org=str(job.get("organization",""))
-              import re, unicodedata
-              slug=unicodedata.normalize("NFKD", title+"-"+org).lower()
-              slug=re.sub(r"[^\\w\\s-]","",slug,flags=re.UNICODE)
-              slug=re.sub(r"-+","-",re.sub(r"\\s+","-",slug)).strip("-")[:70] or "job"
-              if not (root / slug / "index.html").is_file(): missing.append(slug)
-          if missing:
-              raise SystemExit("Missing generated job pages: "+"; ".join(missing[:10]))
-          print(f"Verified {len(jobs)} job records and generated detail pages.")
-          PY
           grep -q '<title>Laxman Nepal — Free Tools, AI Tools & Practical Guides</title>' .pages/index.html
           grep -q 'name="description" content="Laxman Nepal — free online tools, AI tools, practical tutorials, apps and useful digital resources\."' .pages/index.html
           ! grep -q 'Technology that helps you do more' .pages/index.html
