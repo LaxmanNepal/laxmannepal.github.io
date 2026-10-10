@@ -2,18 +2,46 @@
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const slug=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-const catalog=Array.isArray(window.LAXMAN_APP_CATALOG)?window.LAXMAN_APP_CATALOG.map(a=>({...a,url:new URL(a.url,location.origin).href,slug:slug(a.name)})):[];
+const categoryFor=name=>{
+ const n=String(name||'').toLowerCase();
+ if(/patro|kundali|sabda|typing|quotes/.test(n))return 'Nepali & Culture';
+ if(/weather|mausam/.test(n))return 'Weather';
+ if(/gold|nepse/.test(n))return 'Finance';
+ if(/youtube|clipora|lofi|music|radio|live tv|photos/.test(n))return 'Media & Creator';
+ if(/pdf|document|book|compress|qr code|handwriting|nisulka|tools/.test(n))return 'Productivity & Tools';
+ if(/ai tools|kritim/.test(n))return 'AI & Creativity';
+ if(/search|laxlink/.test(n))return 'Utilities';
+ if(/progress bar/.test(n))return 'Utilities';
+ return 'Web Apps';
+};
+const catalog=Array.isArray(window.LAXMAN_APP_CATALOG)?window.LAXMAN_APP_CATALOG.map(a=>({...a,url:new URL(a.url,location.origin).href,slug:slug(a.name),category:categoryFor(a.name)})):[];
 const key=new URLSearchParams(location.search).get('app')||'';
 const app=catalog.find(a=>a.slug===key);
-if(!app){$('#detail-state').innerHTML='<strong>App not found.</strong><p>Choose an app from the main directory.</p><a class="detail-btn primary" href="/apps/">Browse all apps</a>';}
-else{
+const state=$('#detail-state'),detail=$('#app-detail'),related=$('#related-apps');
+if(!app){
+ state.innerHTML='<strong>App not found.</strong><p>This link may be outdated or the app may have been removed from the directory.</p><a class="detail-btn primary" href="/apps/">Browse all apps</a>';
+}else{
  document.title=app.name+' — App details | Laxman Nepal';
- $('meta[name="description"]').content=app.description+' Explore features and open the official app from Laxman Nepal.';
- $('#detail-state').hidden=true;
+ const description=(app.description||'Explore this web app from the Laxman Nepal digital collection.').trim();
+ $('meta[name="description"]').content=description+' View access details and open the app.';
+ state.hidden=true;detail.hidden=false;
  const image='/assets/app-snapshots/'+app.slug+'.webp';
- $('#app-detail').hidden=false;
- $('#app-detail').innerHTML='<section class="detail-hero"><div><div class="detail-eyebrow">Laxman Nepal Apps Directory</div><h1 class="detail-title">'+esc(app.name)+'</h1><p class="detail-description">'+esc(app.description||'Explore this app from the Laxman Nepal digital collection.')+'</p><div class="detail-domain">'+esc(new URL(app.url).hostname)+'</div><div class="detail-actions"><a class="detail-btn primary" href="'+esc(app.url)+'" target="_blank" rel="noopener noreferrer">Open app ↗</a><a class="detail-btn" href="'+esc(app.url)+'" target="_blank" rel="noopener noreferrer">Visit website</a><a class="detail-btn" href="/apps/">← All apps</a></div><div class="detail-meta"><span class="detail-pill">Web app</span><span class="detail-pill">External website</span><span class="detail-pill">Free to explore</span></div><p class="detail-notice">You are leaving Laxman Nepal when opening this app. Availability, features and privacy practices are controlled by the destination website.</p></div><div class="detail-preview"><img src="'+esc(image)+'" alt="'+esc(app.name)+' preview" onerror="this.remove();this.parentElement.innerHTML=\'<div class=&quot;preview-placeholder&quot;><strong>'+esc(app.name)+'</strong><p>Preview image is not available yet.</p></div>\'"></div></section>';
- const others=catalog.filter(a=>a.slug!==app.slug).slice(0,6);
- $('#related-apps').innerHTML=others.map(a=>'<a class="related-card" href="/apps/details/?app='+encodeURIComponent(a.slug)+'"><span class="related-icon">✦</span><span><strong>'+esc(a.name)+'</strong><small>'+esc(a.description)+'</small></span></a>').join('');
+ const same=catalog.filter(a=>a.slug!==app.slug&&a.category===app.category);
+ const suggestions=[...same,...catalog.filter(a=>a.slug!==app.slug&&a.category!==app.category)].slice(0,6);
+ const points={
+ 'Nepali & Culture':['Explore a focused Nepali-language or culture-related experience','Open the tool directly in your browser','Return to the directory to discover related resources'],
+ 'Weather':['Open the weather-related experience','Check the information available on the destination page','Use the browser back button to return here'],
+ 'Finance':['Explore the finance-related information or tools available','Review the destination page before relying on figures','Return to the directory for other Nepal-focused resources'],
+ 'Media & Creator':['Open the media or creator experience','Explore the controls and content available on its page','Use the directory to discover more creator tools'],
+ 'Productivity & Tools':['Open the tool in your browser','Follow the instructions shown inside the tool','Return to this directory for related utilities'],
+ 'AI & Creativity':['Explore the AI or creative experience','Review any usage requirements shown by the destination','Return to the directory to find more tools'],
+ 'Utilities':['Open the utility directly in your browser','Use the destination page to access its available functions','Browse related apps from the directory'],
+ 'Web Apps':['Open the app in your browser','Review its available features on the destination page','Explore other web apps in the directory']
+ };
+ detail.innerHTML='<section class="detail-hero"><div class="detail-copy"><div class="detail-eyebrow">Laxman Nepal Apps Directory</div><h1 class="detail-title">'+esc(app.name)+'</h1><p class="detail-description">'+esc(description)+'</p><div class="detail-domain"><span class="detail-live-dot"></span>'+esc(new URL(app.url).hostname)+' <span aria-hidden="true">·</span> Opens in browser</div><div class="detail-actions"><a class="detail-btn primary" href="'+esc(app.url)+'" target="_blank" rel="noopener noreferrer">Open app <span aria-hidden="true">↗</span></a><button class="detail-btn" id="share-app" type="button">Copy app link</button><a class="detail-btn" href="/apps/">← All apps</a></div><div class="detail-meta"><span class="detail-pill">'+esc(app.category)+'</span><span class="detail-pill">Web app</span><span class="detail-pill">No installer listed</span></div><p class="detail-notice">This directory links to the app destination. Features, availability, sign-in requirements and privacy practices may vary by app; check the destination before using it.</p></div><div class="detail-preview"><img src="'+esc(image)+'" alt="'+esc(app.name)+' screenshot preview" loading="lazy"><div class="preview-placeholder" hidden><span aria-hidden="true">✦</span><strong>'+esc(app.name)+'</strong><p>App preview coming soon</p></div></div></section><section class="detail-info-grid"><article class="detail-info-card"><div class="info-card-icon">✦</div><h2>About this app</h2><p>'+esc(description)+' Browse its available functions on the app page.</p><div class="info-card-foot">Category <strong>'+esc(app.category)+'</strong></div></article><article class="detail-info-card"><div class="info-card-icon">↗</div><h2>How to access</h2><ol class="access-steps"><li>Select <strong>Open app</strong> above.</li><li>The destination opens in a new browser tab.</li><li>Follow any instructions displayed by the app.</li></ol><div class="info-card-foot">Access type <strong>Browser</strong></div></article><article class="detail-info-card"><div class="info-card-icon">✓</div><h2>Before you use it</h2><ul class="access-steps"><li>Check the destination URL.</li><li>Review permissions or sign-in requests.</li><li>Verify important information independently.</li></ul><div class="info-card-foot">Directory <strong>Laxman Nepal</strong></div></article></section><section class="detail-highlights"><div><div class="detail-eyebrow">Explore the experience</div><h2>What to expect</h2><p>Use these quick pointers to get started. Exact features depend on the app itself.</p></div><ul class="highlight-list">'+(points[app.category]||points['Web Apps']).map(x=>'<li><span aria-hidden="true">✓</span>'+esc(x)+'</li>').join('')+'</ul></section>';
+ const img=detail.querySelector('.detail-preview img'),placeholder=detail.querySelector('.preview-placeholder');
+ img.addEventListener('error',()=>{img.hidden=true;placeholder.hidden=false;},{once:true});
+ $('#share-app').addEventListener('click',async e=>{const b=e.currentTarget;try{await navigator.clipboard.writeText(location.href);b.textContent='Link copied ✓';}catch(_){const input=document.createElement('textarea');input.value=location.href;input.setAttribute('readonly','');input.style.position='fixed';input.style.opacity='0';document.body.appendChild(input);input.select();const ok=document.execCommand('copy');input.remove();b.textContent=ok?'Link copied ✓':'Copy unavailable';}setTimeout(()=>{b.textContent='Copy app link';},1800);});
+ related.innerHTML=suggestions.map(a=>'<a class="related-card" href="/apps/details/?app='+encodeURIComponent(a.slug)+'"><span class="related-icon" aria-hidden="true">✦</span><span><strong>'+esc(a.name)+'</strong><small>'+esc(a.description)+'</small><em>'+esc(a.category)+'</em></span></a>').join('');
 }
 })();
