@@ -1,4 +1,4 @@
-const CACHE='laxman-apps-v24';
+const CACHE='laxman-apps-v25';
 const CORE=['/apps/','/apps/index.html','/apps/launcher-ui-v3.css','/apps/interactive-clean.js','/apps/quick-look.js','/apps/launcher.js','/apps/catalog.js','/manifest.webmanifest','/assets/app-icon.svg','/assets/css/style.css','/assets/css/light.css','/assets/css/gadgetbyte-home.css'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(async c=>{await Promise.all(CORE.map(async u=>{try{const r=await fetch(u,{cache:'no-store'});if(r.ok)await c.put(u,r)}catch{}})}).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('laxman-apps-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
