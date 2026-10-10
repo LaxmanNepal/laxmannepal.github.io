@@ -387,8 +387,8 @@ def render_related_blogs(current: dict, articles: list[dict]) -> str:
 .related-blogs{{margin:54px 0 12px;padding-top:28px;border-top:1px solid #e5e7eb;color:#101828}}
 .related-blogs h2{{font-size:clamp(23px,3vw,30px);line-height:1.2;margin:0 0 8px}}
 .related-blogs .related-blogs-intro{{margin:0 0 20px;color:#667085;font-size:15px;line-height:1.6}}
-.related-blogs-grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
-.related-blog-card{{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #e5e7eb;border-radius:16px;background:#fff;color:inherit;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}}
+.related-blogs-grid{{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;padding:4px 3px 16px;scroll-snap-type:x mandatory;scroll-padding-inline:3px;-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#98a2b3 #f2f4f7}}.related-blogs-grid::-webkit-scrollbar{{height:8px}}.related-blogs-grid::-webkit-scrollbar-track{{background:#f2f4f7;border-radius:99px}}.related-blogs-grid::-webkit-scrollbar-thumb{{background:#98a2b3;border-radius:99px}}
+.related-blog-card{{display:flex;flex:0 0 280px;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #e5e7eb;border-radius:16px;background:#fff;color:inherit;text-decoration:none;scroll-snap-align:start;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}}
 .related-blog-card:hover{{transform:translateY(-3px);border-color:#b2ccff;box-shadow:0 10px 24px rgba(16,24,40,.08)}}
 .related-blog-card:focus-visible{{outline:3px solid #84adff;outline-offset:3px}}
 .related-blog-card img{{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#f2f4f7}}
@@ -396,8 +396,8 @@ def render_related_blogs(current: dict, articles: list[dict]) -> str:
 .related-blog-card-copy strong{{font-size:16px;line-height:1.4;color:#101828}}
 .related-blog-card-copy span{{font-size:13px;line-height:1.55;color:#667085;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}
 .related-blog-card-copy em{{margin-top:auto;padding-top:3px;font-size:13px;font-style:normal;font-weight:650;color:#175cd3}}
-@media(max-width:700px){{.related-blogs-grid{{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}.related-blog-card-copy{{padding:12px}}.related-blog-card-copy strong{{font-size:14px}}}}
-@media(max-width:420px){{.related-blogs-grid{{grid-template-columns:1fr}}.related-blog-card{{display:grid;grid-template-columns:112px minmax(0,1fr)}}.related-blog-card img{{height:100%;min-height:125px;aspect-ratio:auto}}.related-blog-card-copy{{padding:12px}}}}
+@media(max-width:700px){{.related-blogs-grid{{gap:12px}}.related-blog-card{{flex-basis:250px}}.related-blog-card-copy{{padding:12px}}.related-blog-card-copy strong{{font-size:14px}}}}
+@media(max-width:420px){{.related-blog-card{{flex-basis:min(82vw,280px)}}.related-blog-card-copy{{padding:12px}}}}
 @media(prefers-reduced-motion:reduce){{.related-blog-card{{transition:none}}.related-blog-card:hover{{transform:none}}}}
 </style>
 <h2 id="related-blogs-title">You might also like</h2>
