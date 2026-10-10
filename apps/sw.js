@@ -1,5 +1,46 @@
 const CACHE='laxman-apps-v28';
-const CORE=['/apps/','/apps/index.html','/apps/launcher-ui-v3.css','/apps/interactive-clean.js','/apps/quick-look.js','/apps/launcher.js','/apps/catalog.js','/manifest.webmanifest','/assets/app-icon.svg','/assets/css/style.css','/assets/css/light.css','/assets/css/gadgetbyte-home.css'];
-self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(async c=>{await Promise.all(CORE.map(async u=>{try{const r=await fetch(u,{cache:'no-store'});if(r.ok)await c.put(u,r)}catch{}})}).then(()=>self.skipWaiting())));
-self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('laxman-apps-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
-self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;const u=new URL(e.request.url);if(u.origin!==location.origin)return;e.respondWith((async()=>{const cached=await caches.match(e.request);try{const fresh=await fetch(e.request);if(fresh.ok&&/\.webp$|\.css$|\.js$|\.html$|\.webmanifest$|\.svg$/.test(u.pathname))caches.open(CACHE).then(c=>c.put(e.request,fresh.clone()));return fresh}catch{return cached||new Response('Offline',{status:503})}})())});
+const CORE=[
+  '/apps/','/apps/index.html','/apps/launcher-ui-v3.css',
+  '/apps/interactive-clean.js','/apps/quick-look.js','/apps/launcher.js',
+  '/apps/catalog.js','/apps/details/','/apps/details/index.html',
+  '/apps/details.css','/apps/details.js','/manifest.webmanifest',
+  '/assets/app-icon.svg','/assets/css/style.css','/assets/css/light.css',
+  '/assets/css/gadgetbyte-home.css'
+];
+self.addEventListener('install', event => {
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE);
+    await Promise.all(CORE.map(async url => {
+      try {
+        const response = await fetch(url, { cache: 'no-store' });
+        if (response.ok) await cache.put(url, response);
+      } catch (_) {}
+    }));
+    await self.skipWaiting();
+  })());
+});
+self.addEventListener('activate', event => {
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.filter(key => key.startsWith('laxman-apps-') && key !== CACHE).map(key => caches.delete(key)));
+    await self.clients.claim();
+  })());
+});
+self.addEventListener('fetch', event => {
+  if (event.request.method !== 'GET') return;
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin) return;
+  event.respondWith((async () => {
+    const cached = await caches.match(event.request);
+    try {
+      const fresh = await fetch(event.request);
+      if (fresh.ok && /\\.(?:webp|css|js|html|webmanifest|svg)$/.test(url.pathname)) {
+        const cache = await caches.open(CACHE);
+        await cache.put(event.request, fresh.clone());
+      }
+      return fresh;
+    } catch (_) {
+      return cached || new Response('Offline', { status: 503 });
+    }
+  })());
+});
