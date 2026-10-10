@@ -891,6 +891,51 @@
     "image": ""
   },
   {
+    "title": "Open Source App Store | Laxman Nepal",
+    "category": "Apps",
+    "type": "resource",
+    "url": "/Open-Source/",
+    "description": "Discover free and open-source apps for Android, web, iOS, Windows, macOS and Linux. Search apps, view source code and visit official downloads.",
+    "keywords": "open source app store laxman nepal discover free and open-source apps for android web ios windows macos linux. search view code visit official downloads.",
+    "image": ""
+  },
+  {
+    "title": "Open-source android apps | Laxman Nepal",
+    "category": "Mobile",
+    "type": "resource",
+    "url": "/Open-Source/android/",
+    "description": "Open-source android apps | Laxman Nepal",
+    "keywords": "open-source android apps laxman nepal",
+    "image": ""
+  },
+  {
+    "title": "Open-source ios apps | Laxman Nepal",
+    "category": "Apps",
+    "type": "resource",
+    "url": "/Open-Source/ios/",
+    "description": "Open-source ios apps | Laxman Nepal",
+    "keywords": "open-source ios apps laxman nepal",
+    "image": ""
+  },
+  {
+    "title": "Open-source web apps | Laxman Nepal",
+    "category": "Apps",
+    "type": "resource",
+    "url": "/Open-Source/web/",
+    "description": "Open-source web apps | Laxman Nepal",
+    "keywords": "open-source web apps laxman nepal",
+    "image": ""
+  },
+  {
+    "title": "Open-source windows apps | Laxman Nepal",
+    "category": "Apps",
+    "type": "resource",
+    "url": "/Open-Source/windows/",
+    "description": "Open-source windows apps | Laxman Nepal",
+    "keywords": "open-source windows apps laxman nepal",
+    "image": ""
+  },
+  {
     "title": "Optimize PDF — Laxman Nepal",
     "category": "Tools",
     "type": "tool",
