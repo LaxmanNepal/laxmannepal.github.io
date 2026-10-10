@@ -322,6 +322,122 @@ def blog_folders() -> list[Path]:
     return sorted(p for p in BLOGS.iterdir() if p.is_dir() and not p.name.startswith("."))
 
 
+
+RELATED_START = "<!-- related-blogs:start -->"
+RELATED_END = "<!-- related-blogs:end -->"
+
+STOP_WORDS = {
+    "about", "after", "also", "and", "are", "best", "can", "cmd", "for", "from",
+    "guide", "how", "into", "learn", "more", "using", "with", "your", "the", "this",
+    "that", "using", "what", "when", "where", "why", "you", "all", "new", "blog",
+    "laxman", "nepal", "tutorial", "tips", "step", "complete", "easy", "free",
+}
+
+def article_tokens(article: dict) -> set[str]:
+    text = " ".join(str(article.get(key, "")) for key in ("title", "description", "slug"))
+    tokens = set(re.findall(r"[a-z0-9]{3,}", text.lower()))
+    return tokens - STOP_WORDS
+
+
+def related_articles(current: dict, all_articles: list[dict], limit: int = 3) -> list[dict]:
+    current_tokens = article_tokens(current)
+    ranked = []
+    for candidate in all_articles:
+        if candidate.get("slug") == current.get("slug"):
+            continue
+        tokens = article_tokens(candidate)
+        overlap = len(current_tokens & tokens)
+        union = len(current_tokens | tokens) or 1
+        score = overlap / union
+        # Keep useful suggestions even when titles cover different topics.
+        ranked.append((score, str(candidate.get("published", "")), candidate))
+    ranked.sort(key=lambda item: (item[0], item[1]), reverse=True)
+    chosen = [item[2] for item in ranked[:limit] if item[0] > 0]
+    if len(chosen) < limit:
+        used = {item.get("slug") for item in chosen}
+        for _, _, candidate in sorted(ranked, key=lambda item: item[1], reverse=True):
+            if candidate.get("slug") not in used:
+                chosen.append(candidate)
+                used.add(candidate.get("slug"))
+            if len(chosen) >= limit:
+                break
+    return chosen
+
+
+def render_related_blogs(current: dict, articles: list[dict]) -> str:
+    suggestions = related_articles(current, articles)
+    if not suggestions:
+        return ""
+    cards = []
+    for article in suggestions:
+        title = html.escape(str(article.get("title") or article.get("slug") or "Read article"))
+        description = html.escape(str(article.get("description") or "Read this practical guide."))
+        url = html.escape(str(article.get("canonical") or article_url(str(article.get("slug", ""))))
+        image = html.escape(str(article.get("thumbnail") or f"/blogs/{article.get('slug', '')}/thumbnail.jpg"))
+        if image.startswith("/"):
+            image = html.escape(BASE + image)
+        cards.append(f"""<a class="related-blog-card" href="{url}">
+<img src="{image}" alt="" loading="lazy" decoding="async">
+<span class="related-blog-card-copy"><strong>{title}</strong><span>{description}</span><em>Read article →</em></span>
+</a>""")
+    return f"""
+{RELATED_START}
+<section class="related-blogs" aria-labelledby="related-blogs-title">
+<style>
+.related-blogs{{margin:54px 0 12px;padding-top:28px;border-top:1px solid #e5e7eb;color:#101828}}
+.related-blogs h2{{font-size:clamp(23px,3vw,30px);line-height:1.2;margin:0 0 8px}}
+.related-blogs .related-blogs-intro{{margin:0 0 20px;color:#667085;font-size:15px;line-height:1.6}}
+.related-blogs-grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+.related-blog-card{{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #e5e7eb;border-radius:16px;background:#fff;color:inherit;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}}
+.related-blog-card:hover{{transform:translateY(-3px);border-color:#b2ccff;box-shadow:0 10px 24px rgba(16,24,40,.08)}}
+.related-blog-card:focus-visible{{outline:3px solid #84adff;outline-offset:3px}}
+.related-blog-card img{{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#f2f4f7}}
+.related-blog-card-copy{{display:flex;flex:1;flex-direction:column;align-items:flex-start;gap:9px;padding:15px}}
+.related-blog-card-copy strong{{font-size:16px;line-height:1.4;color:#101828}}
+.related-blog-card-copy span{{font-size:13px;line-height:1.55;color:#667085;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}
+.related-blog-card-copy em{{margin-top:auto;padding-top:3px;font-size:13px;font-style:normal;font-weight:650;color:#175cd3}}
+@media(max-width:700px){{.related-blogs-grid{{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}.related-blog-card-copy{{padding:12px}}.related-blog-card-copy strong{{font-size:14px}}}}
+@media(max-width:420px){{.related-blogs-grid{{grid-template-columns:1fr}}.related-blog-card{{display:grid;grid-template-columns:112px minmax(0,1fr)}}.related-blog-card img{{height:100%;min-height:125px;aspect-ratio:auto}}.related-blog-card-copy{{padding:12px}}}}
+@media(prefers-reduced-motion:reduce){{.related-blog-card{{transition:none}}.related-blog-card:hover{{transform:none}}}}
+</style>
+<h2 id="related-blogs-title">You might also like</h2>
+<p class="related-blogs-intro">More practical guides selected from the Laxman Nepal blog.</p>
+<div class="related-blogs-grid">
+{''.join(cards)}
+</div>
+<p style="margin:18px 0 0"><a href="/blogs/">Explore all blogs →</a></p>
+</section>
+{RELATED_END}
+"""
+
+
+def inject_related_blogs(folder: Path, articles: list[dict], fix: bool) -> list[str]:
+    index = folder / "index.html"
+    if not index.is_file():
+        return []
+    text = index.read_text(encoding="utf-8", errors="ignore")
+    current = read_json(folder / "article.json")
+    block = render_related_blogs(current, articles)
+    pattern = re.compile(re.escape(RELATED_START) + r".*?" + re.escape(RELATED_END), re.I | re.S)
+    if pattern.search(text):
+        updated = pattern.sub(lambda _: block.strip(), text)
+    else:
+        updated = text
+        insertion = re.search(r"</main\\s*>", updated, re.I)
+        if insertion:
+            updated = updated[:insertion.start()] + block + updated[insertion.start():]
+        else:
+            insertion = re.search(r"</body\\s*>", updated, re.I)
+            if insertion:
+                updated = updated[:insertion.start()] + block + updated[insertion.start():]
+            else:
+                updated += block
+    if fix and updated != text:
+        index.write_text(updated, encoding="utf-8")
+    if len(articles) > 1 and (RELATED_START not in updated or "related-blog-card" not in updated):
+        return ["missing related blog suggestions"]
+    return []
+
 def write_llms() -> None:
     links = []
     for folder in blog_folders():
@@ -375,10 +491,23 @@ def main() -> int:
         if errors:
             failures.append((folder, errors))
 
+    articles = []
+    for folder in folders:
+        data = read_json(folder / "article.json")
+        if data.get("title") and data.get("slug") and data.get("canonical"):
+            articles.append(data)
+
+    for folder in folders:
+        if not (folder / "index.html").is_file():
+            continue
+        related_errors = inject_related_blogs(folder, articles, fix)
+        if related_errors:
+            failures.append((folder, related_errors))
+
     if fix:
         write_llms()
 
-    print(f"Checked {processed} native blog folders.")
+    print(f"Checked {processed} native blog folders and related-article sections.")
     if failures:
         print("\nBlog validation failures:")
         for folder, errors in failures:
