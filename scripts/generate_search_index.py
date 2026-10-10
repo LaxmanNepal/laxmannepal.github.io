@@ -38,7 +38,7 @@ def category(path, title_text):
     if "/tools" in p or any(x in s for x in ("tool", "converter", "generator", "downloader", "scanner", "counter")): return "Tools"
     if "/mobile" in p or any(x in s for x in ("mobile", "phone", "smartphone", "android", "iphone")): return "Mobile"
     if "/news" in p or "news" in s: return "News"
-    if "/blog" in p or any(x in s for x in ("blog", "seo", "tutorial", "guide", "how to")): return "Article"
+    if p.startswith("blogs/") or "/blog" in p or any(x in s for x in ("blog", "seo", "tutorial", "guide", "how to")): return "Article"
     if "/apps" in p or " app" in s: return "Apps"
     if any(x in s for x in ("youtube", "video", "thumbnail")): return "YouTube"
     if any(x in s for x in ("nepal", "nepali", "patro", "rashifal", "festival")): return "Nepali"
