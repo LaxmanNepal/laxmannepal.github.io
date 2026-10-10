@@ -43,7 +43,7 @@ const apps=[
 {name:"Open Camera",platform:["android"],category:"Photography",icon:"📸",color:"#fff0e2",desc:"Feature-rich open-source camera app with manual controls.",license:"GPL-3.0",site:"https://opencamera.org.uk/",source:"https://sourceforge.net/p/opencamera/code/",download:"https://opencamera.org.uk/"},
 {name:"Tailscale",platform:["android","ios","windows","linux"],category:"Networking",icon:"🔒",color:"#e9f0ff",desc:"Mesh VPN based on WireGuard; note that not every server-side component is open source.",license:"Mixed; verify components",site:"https://tailscale.com/",source:"https://github.com/tailscale/tailscale",download:"https://tailscale.com/download"}
 ];
-const path=location.pathname.toLowerCase();let platform="all";for(const p of ["android","web","ios","windows","linux"])if(path.includes("/"+p+"/"))platform=p;
+const path=location.pathname.toLowerCase();let platform=new URLSearchParams(location.search).get("platform")||"all";for(const p of ["android","web","ios","windows","linux"])if(path.includes("/"+p+"/"))platform=p;
 const labels={all:"Discover open-source apps",android:"Open-source Android apps",web:"Open-source web apps",ios:"Open-source iOS apps",windows:"Open-source Windows apps",linux:"Open-source Linux apps"};
 document.getElementById("headline").textContent=platform==="all"?"Good software should be open.":labels[platform].replace("Open-source ","Open-source ");
 document.getElementById("list-title").textContent=labels[platform];
