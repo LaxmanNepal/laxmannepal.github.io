@@ -14,7 +14,7 @@ def clean(value):
 def meta(content, name):
     m = re.search(r'<meta[^>]+name=["\']' + re.escape(name) + r'["\'][^>]+content=["\']([^"\']*)["\']', content, re.I)
     if not m:
-        m = re.search(r'<meta[^>]+content=["\']([^"\']*)["\'][^>]+name=["\']' + re.escape(name) + r'["\']', content, re.I)
+        m = re.search(r'<meta[^>]+content=["\']([^"\']*)["\'][^>]+name=["\']' + re.escape(name) + r'["\']([^"\']*)["\']', content, re.I)
     return clean(m.group(1)) if m else ""
 
 def image_meta(content):
@@ -66,7 +66,10 @@ for file in ROOT.rglob("*.html"):
     image = image_meta(content)
     if rel.startswith("blogs/") and (file.parent / "thumbnail.jpg").is_file():
         image = "/" + (file.parent / "thumbnail.jpg").relative_to(ROOT).as_posix()
-    keywords = " ".join(dict.fromkeys(re.findall(r"[a-z0-9][a-z0-9+.-]{1,}", (t + " " + desc).lower())))
+    # Include title, description, path and useful HTML keywords so legacy
+    # Blogger-style .html pages are discoverable as well as newer /slug/ pages.
+    source = " ".join((t, desc, rel.replace("/", " ").replace("-", " ").replace("_", " ")))
+    keywords = " ".join(dict.fromkeys(re.findall(r"[\w][\w+.-]{1,}", source.lower(), re.UNICODE)))
     items.append({"title": t, "category": cat, "type": "article" if cat == "Article" else "tool" if cat == "Tools" else "resource", "url": url_for(rel), "description": desc[:220], "keywords": keywords[:500], "image": image})
 
 # Prefer canonical-looking URLs and stable alphabetical ordering.
