@@ -1,4 +1,4 @@
-const CACHE='laxman-apps-v31';
+const CACHE='laxman-apps-v32';
 const CORE=[
   '/apps/','/apps/index.html','/apps/launcher-ui-v3.css',
   '/apps/interactive-clean.js','/apps/quick-look.js','/apps/launcher.js',
