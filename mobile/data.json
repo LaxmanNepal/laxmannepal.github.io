@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T12:38:40.515981+00:00",
+  "updated_at": "2026-10-10T21:48:55.855751+00:00",
   "count": 146,
   "products": [
     {
@@ -2022,12 +2022,14 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "4GB + 128GB"
       ],
-      "price": 32999,
+      "price": 29999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
+        "4GB",
         "6GB"
       ],
       "storages": [
@@ -2056,16 +2058,18 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+64GB"
+        "4GB+64GB",
+        "4GB+128GB"
       ],
       "price": 25499,
-      "max_price": 25499,
+      "max_price": 29999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
