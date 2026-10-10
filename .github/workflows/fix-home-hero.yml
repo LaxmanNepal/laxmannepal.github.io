@@ -1,0 +1,39 @@
+name: Fix home hero animation placement
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: "!contains(github.event.head_commit.message, 'fix: move hero animation')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Move hero banner into body
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          banner = '<div class="free-tools-banner" aria-label="Every tool you need is free"><p>Every tool you need is <span>FREE</span></p><div class="free-tools-rotator" aria-label="YouTube tools, image tools, PDF tools"><span>YouTube Tools</span><span>Image Tools</span><span>PDF Tools</span><span>YouTube Tools</span></div></div>\n'
+          controls = '<div class="directory-controls"><form class="directory-search" action="/search/" method="get" role="search"><span aria-hidden="true">⌕</span><input id="directory-search" name="q" type="search" placeholder="Search the entire Laxman Nepal website…" aria-label="Search the entire website"><button type="submit" aria-label="Search website">Search</button></form></div>\n'
+          if banner not in s or controls not in s:
+              raise SystemExit('Expected hero markup not found')
+          s = s.replace(banner, '', 1).replace(controls, '', 1)
+          marker = '<header class="shared-header" id="site-header">'
+          insert_at = s.index('</header>', s.index(marker)) + len('</header>')
+          s = s[:insert_at] + '\n' + banner + controls + s[insert_at:]
+          s = s.replace('.directory-controls{display:block!important}.directory-search{width:100%}', '.directory-search{width:100%}', 1)
+          s = s.replace('.directory-search{grid-template-columns:auto minmax(0,1fr) auto!important}', '.directory-search{display:grid;grid-template-columns:auto minmax(0,1fr) auto!important;align-items:center}', 1)
+          p.write_text(s, encoding='utf-8')
+      - name: Commit fix
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git diff --cached --quiet || git commit -m 'fix: move hero animation'
+          git push
