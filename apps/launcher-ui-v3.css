@@ -15,3 +15,11 @@ html[data-theme=dark] .platform-tab.active{background:#e5e7eb;color:#111827;bord
 .apps-empty{padding:26px;border:1px dashed var(--border,#cbd5e1);border-radius:12px;color:var(--muted,#64748b);display:flex!important;flex-direction:column;gap:6px}
 .apps-empty strong{color:var(--text,#111827)}
 @media(max-width:700px){.platform-tab{padding:8px 12px}.app-card{min-height:225px}.app-info{padding:8px}.app-name{font-size:11px}.app-description{font-size:9px}}
+
+/* Verified release badges and direct installer shortcuts */
+.app-release-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:8px;min-width:0}
+.app-release-badge{display:inline-flex;align-items:center;max-width:100%;padding:4px 7px;border:1px solid var(--border,#dbe2ea);border-radius:999px;background:var(--soft,#f3f4f6);color:var(--muted,#64748b);font-size:9px;font-weight:700;line-height:1.2;overflow-wrap:anywhere}
+.app-download-action{display:inline-flex;align-items:center;justify-content:center;gap:5px;max-width:100%;padding:6px 8px;border-radius:7px;background:#166534;color:#fff;font-size:10px;font-weight:750;line-height:1.25;cursor:pointer;text-decoration:none;overflow-wrap:anywhere}
+.app-download-action:hover{background:#14532d;color:#fff;filter:brightness(1.04)}
+.app-download-action:focus-visible{outline:3px solid #86efac;outline-offset:2px}
+@media(max-width:700px){.app-release-row{gap:5px;margin-top:7px}.app-release-badge{font-size:8px}.app-download-action{font-size:9px;padding:6px 7px}}
