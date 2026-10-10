@@ -20,7 +20,7 @@ const boot=()=>{
   const img=card.querySelector('.app-snapshot')?.src||card.querySelector('.app-icon img')?.src||'';
   const icon=card.querySelector('.app-icon img')?.src||'';
   const cat=card.querySelector('.category-badge')?.textContent?.trim()||card.dataset.category||'App';
-  const href=card.href||card.querySelector('a')?.href||'#';
+  const href=card.dataset.appUrl||card.href||card.querySelector('a')?.href||'#';
   document.getElementById('ln-ql-name').textContent=name;document.getElementById('ln-ql-category').textContent=cat;
   document.getElementById('ln-ql-shot').src=img;document.getElementById('ln-ql-icon').src=icon;
   document.getElementById('ln-ql-open').href=href;
@@ -30,8 +30,7 @@ const boot=()=>{
   const fav=card.querySelector('.fav-btn');const fb=document.getElementById('ln-ql-fav');fb.textContent=fav?.classList.contains('active')?'★ Favorited':'☆ Favorite';fb.onclick=()=>{fav?.click();setTimeout(()=>fb.textContent=fav?.classList.contains('active')?'★ Favorited':'☆ Favorite',30)};
   panel.classList.add('open');
  };
- document.addEventListener('click',e=>{const card=e.target.closest?.('.app-card');if(!card||e.target.closest('.clean-actions,.fav-btn'))return; if(e.ctrlKey||e.metaKey)return; e.preventDefault();show(card)});
- document.addEventListener('dblclick',e=>{if(e.target.closest?.('#ln-quick-panel'))return;const card=e.target.closest?.('.app-card');if(card){e.preventDefault();window.open(card.href,'_blank','noopener')}});
+
 };
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
