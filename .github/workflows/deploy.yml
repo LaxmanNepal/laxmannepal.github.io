@@ -71,7 +71,9 @@ jobs:
       - name: Upgrade migrated Blogger article CSS
         run: python3 scripts/upgrade_blogger_responsive.py
       - name: Generate static SEO discovery files
-        run: python3 scripts/generate_seo.py
+        run: |
+          python3 scripts/generate_seo.py
+          python3 scripts/generate_search_index.py
       - name: Build Next.js static site
         id: next_build
         continue-on-error: true
