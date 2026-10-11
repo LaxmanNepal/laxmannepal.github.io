@@ -1,0 +1,1486 @@
+{
+  "updatedAt": "2026-10-12",
+  "count": 148,
+  "tools": [
+    {
+      "id": 1,
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com/",
+      "category": "assistant",
+      "icon": "✳️",
+      "tagline": "General-purpose assistant",
+      "description": "Brainstorm, draft, learn, analyze files and solve everyday tasks.",
+      "search": "chatgpt assistant general-purpose assistant brainstorm, draft, learn, analyze files and solve everyday tasks."
+    },
+    {
+      "id": 2,
+      "name": "Google Gemini",
+      "url": "https://gemini.google.com/",
+      "category": "assistant",
+      "icon": "✦",
+      "tagline": "Google AI assistant",
+      "description": "Help with questions, writing, planning and Google workflows.",
+      "search": "google gemini assistant google ai assistant help with questions, writing, planning and google workflows."
+    },
+    {
+      "id": 3,
+      "name": "Claude",
+      "url": "https://claude.ai/",
+      "category": "assistant",
+      "icon": "◉",
+      "tagline": "Writing and reasoning",
+      "description": "Work with long documents, structured analysis and coding.",
+      "search": "claude assistant writing and reasoning work with long documents, structured analysis and coding."
+    },
+    {
+      "id": 4,
+      "name": "Microsoft Copilot",
+      "url": "https://copilot.microsoft.com/",
+      "category": "assistant",
+      "icon": "Ⓜ️",
+      "tagline": "Everyday productivity",
+      "description": "Get help with questions, drafts and productivity tasks.",
+      "search": "microsoft copilot assistant everyday productivity get help with questions, drafts and productivity tasks."
+    },
+    {
+      "id": 5,
+      "name": "Meta AI",
+      "url": "https://www.meta.ai/",
+      "category": "assistant",
+      "icon": "∞",
+      "tagline": "Conversational AI",
+      "description": "Explore assistant, image and social creative features.",
+      "search": "meta ai assistant conversational ai explore assistant, image and social creative features."
+    },
+    {
+      "id": 6,
+      "name": "Grok",
+      "url": "https://grok.com/",
+      "category": "assistant",
+      "icon": "𝕏",
+      "tagline": "Conversational AI",
+      "description": "Explore answers, reasoning and current-topic conversations.",
+      "search": "grok assistant conversational ai explore answers, reasoning and current-topic conversations."
+    },
+    {
+      "id": 7,
+      "name": "DeepSeek",
+      "url": "https://chat.deepseek.com/",
+      "category": "assistant",
+      "icon": "🐋",
+      "tagline": "Reasoning and chat",
+      "description": "Try explanations, coding and reasoning workflows.",
+      "search": "deepseek assistant reasoning and chat try explanations, coding and reasoning workflows."
+    },
+    {
+      "id": 8,
+      "name": "Qwen Chat",
+      "url": "https://chat.qwen.ai/",
+      "category": "assistant",
+      "icon": "🌐",
+      "tagline": "Multilingual assistant",
+      "description": "Explore multilingual chat and reasoning.",
+      "search": "qwen chat assistant multilingual assistant explore multilingual chat and reasoning."
+    },
+    {
+      "id": 9,
+      "name": "Le Chat",
+      "url": "https://chat.mistral.ai/",
+      "category": "assistant",
+      "icon": "🌬️",
+      "tagline": "Mistral assistant",
+      "description": "Chat, write, research and explore Mistral models.",
+      "search": "le chat assistant mistral assistant chat, write, research and explore mistral models."
+    },
+    {
+      "id": 10,
+      "name": "Poe",
+      "url": "https://poe.com/",
+      "category": "assistant",
+      "icon": "💬",
+      "tagline": "Multiple AI bots",
+      "description": "Access different bots and compare assistant experiences.",
+      "search": "poe assistant multiple ai bots access different bots and compare assistant experiences."
+    },
+    {
+      "id": 11,
+      "name": "You.com",
+      "url": "https://you.com/",
+      "category": "assistant",
+      "icon": "🔎",
+      "tagline": "AI search assistant",
+      "description": "Use AI-assisted search and productivity workflows.",
+      "search": "you.com assistant ai search assistant use ai-assisted search and productivity workflows."
+    },
+    {
+      "id": 12,
+      "name": "Pi",
+      "url": "https://pi.ai/",
+      "category": "assistant",
+      "icon": "🙂",
+      "tagline": "Conversational companion",
+      "description": "Try natural conversational dialogue.",
+      "search": "pi assistant conversational companion try natural conversational dialogue."
+    },
+    {
+      "id": 13,
+      "name": "Character.AI",
+      "url": "https://character.ai/",
+      "category": "assistant",
+      "icon": "🎭",
+      "tagline": "Character chat",
+      "description": "Explore community-created AI characters.",
+      "search": "character.ai assistant character chat explore community-created ai characters."
+    },
+    {
+      "id": 14,
+      "name": "HuggingChat",
+      "url": "https://huggingface.co/chat/",
+      "category": "assistant",
+      "icon": "🤗",
+      "tagline": "Open-model chat",
+      "description": "Experiment with chat experiences powered by open models.",
+      "search": "huggingchat assistant open-model chat experiment with chat experiences powered by open models."
+    },
+    {
+      "id": 15,
+      "name": "Phind",
+      "url": "https://www.phind.com/",
+      "category": "assistant",
+      "icon": "🧭",
+      "tagline": "Technical answers",
+      "description": "Find explanations for technical questions.",
+      "search": "phind assistant technical answers find explanations for technical questions."
+    },
+    {
+      "id": 16,
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai/",
+      "category": "research",
+      "icon": "⌕",
+      "tagline": "AI research search",
+      "description": "Explore web answers with sources to verify.",
+      "search": "perplexity research ai research search explore web answers with sources to verify."
+    },
+    {
+      "id": 17,
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google.com/",
+      "category": "research",
+      "icon": "📚",
+      "tagline": "Source-grounded research",
+      "description": "Ask questions about your sources and organize notes.",
+      "search": "notebooklm research source-grounded research ask questions about your sources and organize notes."
+    },
+    {
+      "id": 18,
+      "name": "Elicit",
+      "url": "https://elicit.com/",
+      "category": "research",
+      "icon": "🧪",
+      "tagline": "Academic research",
+      "description": "Find and synthesize papers for literature reviews.",
+      "search": "elicit research academic research find and synthesize papers for literature reviews."
+    },
+    {
+      "id": 19,
+      "name": "Consensus",
+      "url": "https://consensus.app/",
+      "category": "research",
+      "icon": "📑",
+      "tagline": "Scientific literature",
+      "description": "Explore evidence-focused answers from research.",
+      "search": "consensus research scientific literature explore evidence-focused answers from research."
+    },
+    {
+      "id": 20,
+      "name": "SciSpace",
+      "url": "https://scispace.com/",
+      "category": "research",
+      "icon": "🔬",
+      "tagline": "Research paper assistant",
+      "description": "Understand academic papers with AI help.",
+      "search": "scispace research research paper assistant understand academic papers with ai help."
+    },
+    {
+      "id": 21,
+      "name": "Semantic Scholar",
+      "url": "https://www.semanticscholar.org/",
+      "category": "research",
+      "icon": "📖",
+      "tagline": "Academic search",
+      "description": "Discover scholarly literature and references.",
+      "search": "semantic scholar research academic search discover scholarly literature and references."
+    },
+    {
+      "id": 22,
+      "name": "ResearchRabbit",
+      "url": "https://www.researchrabbit.ai/",
+      "category": "research",
+      "icon": "🐇",
+      "tagline": "Literature discovery",
+      "description": "Explore related papers and authors.",
+      "search": "researchrabbit research literature discovery explore related papers and authors."
+    },
+    {
+      "id": 23,
+      "name": "Connected Papers",
+      "url": "https://www.connectedpapers.com/",
+      "category": "research",
+      "icon": "🕸️",
+      "tagline": "Paper relationship maps",
+      "description": "Visualize connections among academic papers.",
+      "search": "connected papers research paper relationship maps visualize connections among academic papers."
+    },
+    {
+      "id": 24,
+      "name": "scite",
+      "url": "https://scite.ai/",
+      "category": "research",
+      "icon": "📊",
+      "tagline": "Citation context",
+      "description": "Explore how research is cited and discussed.",
+      "search": "scite research citation context explore how research is cited and discussed."
+    },
+    {
+      "id": 25,
+      "name": "Scholarcy",
+      "url": "https://www.scholarcy.com/",
+      "category": "research",
+      "icon": "🗒️",
+      "tagline": "Paper summaries",
+      "description": "Turn research documents into digestible summaries.",
+      "search": "scholarcy research paper summaries turn research documents into digestible summaries."
+    },
+    {
+      "id": 26,
+      "name": "Explainpaper",
+      "url": "https://www.explainpaper.com/",
+      "category": "research",
+      "icon": "💡",
+      "tagline": "Paper explanations",
+      "description": "Understand difficult passages in research papers.",
+      "search": "explainpaper research paper explanations understand difficult passages in research papers."
+    },
+    {
+      "id": 27,
+      "name": "ChatPDF",
+      "url": "https://www.chatpdf.com/",
+      "category": "research",
+      "icon": "📄",
+      "tagline": "Chat with PDFs",
+      "description": "Ask questions about PDF documents.",
+      "search": "chatpdf research chat with pdfs ask questions about pdf documents."
+    },
+    {
+      "id": 28,
+      "name": "Humata",
+      "url": "https://www.humata.ai/",
+      "category": "research",
+      "icon": "🗃️",
+      "tagline": "Document Q&A",
+      "description": "Search and ask questions about documents.",
+      "search": "humata research document q&a search and ask questions about documents."
+    },
+    {
+      "id": 29,
+      "name": "AskYourPDF",
+      "url": "https://askyourpdf.com/",
+      "category": "research",
+      "icon": "📑",
+      "tagline": "PDF assistant",
+      "description": "Explore document conversations and research.",
+      "search": "askyourpdf research pdf assistant explore document conversations and research."
+    },
+    {
+      "id": 30,
+      "name": "Khanmigo",
+      "url": "https://www.khanacademy.org/khan-labs",
+      "category": "research",
+      "icon": "🎓",
+      "tagline": "Learning assistant",
+      "description": "Explore guided learning from Khan Academy.",
+      "search": "khanmigo research learning assistant explore guided learning from khan academy."
+    },
+    {
+      "id": 31,
+      "name": "Quizlet",
+      "url": "https://quizlet.com/",
+      "category": "research",
+      "icon": "🧠",
+      "tagline": "Study and flashcards",
+      "description": "Create and review learning materials.",
+      "search": "quizlet research study and flashcards create and review learning materials."
+    },
+    {
+      "id": 32,
+      "name": "Duolingo",
+      "url": "https://www.duolingo.com/",
+      "category": "research",
+      "icon": "🦉",
+      "tagline": "Language learning",
+      "description": "Practice languages with interactive lessons.",
+      "search": "duolingo research language learning practice languages with interactive lessons."
+    },
+    {
+      "id": 33,
+      "name": "Grammarly",
+      "url": "https://www.grammarly.com/",
+      "category": "writing",
+      "icon": "✍️",
+      "tagline": "Writing assistance",
+      "description": "Improve clarity, tone, grammar and communication.",
+      "search": "grammarly writing writing assistance improve clarity, tone, grammar and communication."
+    },
+    {
+      "id": 34,
+      "name": "QuillBot",
+      "url": "https://quillbot.com/",
+      "category": "writing",
+      "icon": "🪶",
+      "tagline": "Paraphrase and summarize",
+      "description": "Rephrase drafts and summarize content.",
+      "search": "quillbot writing paraphrase and summarize rephrase drafts and summarize content."
+    },
+    {
+      "id": 35,
+      "name": "Wordtune",
+      "url": "https://www.wordtune.com/",
+      "category": "writing",
+      "icon": "📝",
+      "tagline": "Rewrite and refine",
+      "description": "Improve wording and tone.",
+      "search": "wordtune writing rewrite and refine improve wording and tone."
+    },
+    {
+      "id": 36,
+      "name": "LanguageTool",
+      "url": "https://languagetool.org/",
+      "category": "writing",
+      "icon": "🔤",
+      "tagline": "Grammar checker",
+      "description": "Check grammar, spelling and style.",
+      "search": "languagetool writing grammar checker check grammar, spelling and style."
+    },
+    {
+      "id": 37,
+      "name": "DeepL Write",
+      "url": "https://www.deepl.com/write",
+      "category": "writing",
+      "icon": "🌍",
+      "tagline": "Writing refinement",
+      "description": "Improve wording and tone in supported languages.",
+      "search": "deepl write writing writing refinement improve wording and tone in supported languages."
+    },
+    {
+      "id": 38,
+      "name": "Jasper",
+      "url": "https://www.jasper.ai/",
+      "category": "writing",
+      "icon": "✒️",
+      "tagline": "Marketing content",
+      "description": "Create and refine marketing copy.",
+      "search": "jasper writing marketing content create and refine marketing copy."
+    },
+    {
+      "id": 39,
+      "name": "Copy.ai",
+      "url": "https://www.copy.ai/",
+      "category": "writing",
+      "icon": "📣",
+      "tagline": "Marketing workflows",
+      "description": "Explore marketing copy and automation.",
+      "search": "copy.ai writing marketing workflows explore marketing copy and automation."
+    },
+    {
+      "id": 40,
+      "name": "Writesonic",
+      "url": "https://writesonic.com/",
+      "category": "writing",
+      "icon": "⚡",
+      "tagline": "Content and search",
+      "description": "Create content and explore search workflows.",
+      "search": "writesonic writing content and search create content and explore search workflows."
+    },
+    {
+      "id": 41,
+      "name": "Rytr",
+      "url": "https://rytr.me/",
+      "category": "writing",
+      "icon": "🖋️",
+      "tagline": "Writing assistant",
+      "description": "Draft short-form content with templates.",
+      "search": "rytr writing writing assistant draft short-form content with templates."
+    },
+    {
+      "id": 42,
+      "name": "Sudowrite",
+      "url": "https://www.sudowrite.com/",
+      "category": "writing",
+      "icon": "📚",
+      "tagline": "Creative writing",
+      "description": "Develop stories and fiction.",
+      "search": "sudowrite writing creative writing develop stories and fiction."
+    },
+    {
+      "id": 43,
+      "name": "Anyword",
+      "url": "https://www.anyword.com/",
+      "category": "writing",
+      "icon": "📈",
+      "tagline": "Performance copy",
+      "description": "Create marketing variations and evaluate messaging.",
+      "search": "anyword writing performance copy create marketing variations and evaluate messaging."
+    },
+    {
+      "id": 44,
+      "name": "WordPress AI",
+      "url": "https://wordpress.com/ai/",
+      "category": "writing",
+      "icon": "🌐",
+      "tagline": "Website writing",
+      "description": "Explore AI features for websites and blogs.",
+      "search": "wordpress ai writing website writing explore ai features for websites and blogs."
+    },
+    {
+      "id": 45,
+      "name": "Notion AI",
+      "url": "https://www.notion.so/product/ai",
+      "category": "productivity",
+      "icon": "📓",
+      "tagline": "Workspace assistant",
+      "description": "Summarize notes and organize workspace knowledge.",
+      "search": "notion ai productivity workspace assistant summarize notes and organize workspace knowledge."
+    },
+    {
+      "id": 46,
+      "name": "ClickUp AI",
+      "url": "https://clickup.com/ai",
+      "category": "productivity",
+      "icon": "✅",
+      "tagline": "Work management",
+      "description": "Assist with project documentation and team tasks.",
+      "search": "clickup ai productivity work management assist with project documentation and team tasks."
+    },
+    {
+      "id": 47,
+      "name": "Asana AI",
+      "url": "https://asana.com/product/ai",
+      "category": "productivity",
+      "icon": "🗂️",
+      "tagline": "Project workflows",
+      "description": "Explore AI features for planning projects.",
+      "search": "asana ai productivity project workflows explore ai features for planning projects."
+    },
+    {
+      "id": 48,
+      "name": "Slack AI",
+      "url": "https://slack.com/features/ai",
+      "category": "productivity",
+      "icon": "💼",
+      "tagline": "Team knowledge",
+      "description": "Summarize conversations and find information.",
+      "search": "slack ai productivity team knowledge summarize conversations and find information."
+    },
+    {
+      "id": 49,
+      "name": "Zapier AI",
+      "url": "https://zapier.com/ai",
+      "category": "productivity",
+      "icon": "🔗",
+      "tagline": "Workflow automation",
+      "description": "Connect apps and automate repetitive work.",
+      "search": "zapier ai productivity workflow automation connect apps and automate repetitive work."
+    },
+    {
+      "id": 50,
+      "name": "Make",
+      "url": "https://www.make.com/",
+      "category": "productivity",
+      "icon": "🧩",
+      "tagline": "Visual automation",
+      "description": "Build workflows between apps and services.",
+      "search": "make productivity visual automation build workflows between apps and services."
+    },
+    {
+      "id": 51,
+      "name": "n8n",
+      "url": "https://n8n.io/",
+      "category": "productivity",
+      "icon": "🔄",
+      "tagline": "Workflow automation",
+      "description": "Build flexible automations with AI integrations.",
+      "search": "n8n productivity workflow automation build flexible automations with ai integrations."
+    },
+    {
+      "id": 52,
+      "name": "Reclaim AI",
+      "url": "https://reclaim.ai/",
+      "category": "productivity",
+      "icon": "🗓️",
+      "tagline": "Calendar planning",
+      "description": "Explore smart scheduling and time management.",
+      "search": "reclaim ai productivity calendar planning explore smart scheduling and time management."
+    },
+    {
+      "id": 53,
+      "name": "Motion",
+      "url": "https://www.usemotion.com/",
+      "category": "productivity",
+      "icon": "⏱️",
+      "tagline": "AI planning",
+      "description": "Plan tasks and schedules with AI features.",
+      "search": "motion productivity ai planning plan tasks and schedules with ai features."
+    },
+    {
+      "id": 54,
+      "name": "Otter.ai",
+      "url": "https://otter.ai/",
+      "category": "productivity",
+      "icon": "🎧",
+      "tagline": "Meeting transcription",
+      "description": "Transcribe and summarize meetings.",
+      "search": "otter.ai productivity meeting transcription transcribe and summarize meetings."
+    },
+    {
+      "id": 55,
+      "name": "Fireflies.ai",
+      "url": "https://fireflies.ai/",
+      "category": "productivity",
+      "icon": "🔥",
+      "tagline": "Meeting notes",
+      "description": "Capture, transcribe and search conversations.",
+      "search": "fireflies.ai productivity meeting notes capture, transcribe and search conversations."
+    },
+    {
+      "id": 56,
+      "name": "Fathom",
+      "url": "https://fathom.video/",
+      "category": "productivity",
+      "icon": "🎥",
+      "tagline": "Meeting summaries",
+      "description": "Create meeting notes and summaries.",
+      "search": "fathom productivity meeting summaries create meeting notes and summaries."
+    },
+    {
+      "id": 57,
+      "name": "Read AI",
+      "url": "https://www.read.ai/",
+      "category": "productivity",
+      "icon": "📊",
+      "tagline": "Meeting insights",
+      "description": "Explore collaboration insights from meetings.",
+      "search": "read ai productivity meeting insights explore collaboration insights from meetings."
+    },
+    {
+      "id": 58,
+      "name": "Sembly AI",
+      "url": "https://www.sembly.ai/",
+      "category": "productivity",
+      "icon": "🗣️",
+      "tagline": "Meeting assistant",
+      "description": "Generate notes and action items.",
+      "search": "sembly ai productivity meeting assistant generate notes and action items."
+    },
+    {
+      "id": 59,
+      "name": "Canva",
+      "url": "https://www.canva.com/",
+      "category": "image",
+      "icon": "🎨",
+      "tagline": "Design and presentations",
+      "description": "Create graphics, slides and visual content.",
+      "search": "canva image design and presentations create graphics, slides and visual content."
+    },
+    {
+      "id": 60,
+      "name": "Adobe Firefly",
+      "url": "https://firefly.adobe.com/",
+      "category": "image",
+      "icon": "🔥",
+      "tagline": "Generative design",
+      "description": "Generate and edit creative visual assets.",
+      "search": "adobe firefly image generative design generate and edit creative visual assets."
+    },
+    {
+      "id": 61,
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com/",
+      "category": "image",
+      "icon": "🌌",
+      "tagline": "Image generation",
+      "description": "Create stylized images from text prompts.",
+      "search": "midjourney image image generation create stylized images from text prompts."
+    },
+    {
+      "id": 62,
+      "name": "Ideogram",
+      "url": "https://ideogram.ai/",
+      "category": "image",
+      "icon": "🖼️",
+      "tagline": "Image generation",
+      "description": "Create posters, concepts and typography-focused visuals.",
+      "search": "ideogram image image generation create posters, concepts and typography-focused visuals."
+    },
+    {
+      "id": 63,
+      "name": "Leonardo AI",
+      "url": "https://leonardo.ai/",
+      "category": "image",
+      "icon": "🦁",
+      "tagline": "Creative image tools",
+      "description": "Generate and refine visual concepts.",
+      "search": "leonardo ai image creative image tools generate and refine visual concepts."
+    },
+    {
+      "id": 64,
+      "name": "Black Forest Labs",
+      "url": "https://blackforestlabs.ai/",
+      "category": "image",
+      "icon": "🌀",
+      "tagline": "FLUX image models",
+      "description": "Explore FLUX image generation models.",
+      "search": "black forest labs image flux image models explore flux image generation models."
+    },
+    {
+      "id": 65,
+      "name": "Recraft",
+      "url": "https://www.recraft.ai/",
+      "category": "image",
+      "icon": "🧵",
+      "tagline": "Vector and image design",
+      "description": "Create visual assets and vector designs.",
+      "search": "recraft image vector and image design create visual assets and vector designs."
+    },
+    {
+      "id": 66,
+      "name": "Playground",
+      "url": "https://playground.com/",
+      "category": "image",
+      "icon": "🛝",
+      "tagline": "Image creation",
+      "description": "Create and edit images in a browser workspace.",
+      "search": "playground image image creation create and edit images in a browser workspace."
+    },
+    {
+      "id": 67,
+      "name": "Krea AI",
+      "url": "https://www.krea.ai/",
+      "category": "image",
+      "icon": "✨",
+      "tagline": "Real-time visual AI",
+      "description": "Explore image generation and enhancement.",
+      "search": "krea ai image real-time visual ai explore image generation and enhancement."
+    },
+    {
+      "id": 68,
+      "name": "Microsoft Designer",
+      "url": "https://designer.microsoft.com/",
+      "category": "image",
+      "icon": "🪄",
+      "tagline": "Design assistant",
+      "description": "Create graphics and visual concepts.",
+      "search": "microsoft designer image design assistant create graphics and visual concepts."
+    },
+    {
+      "id": 69,
+      "name": "remove.bg",
+      "url": "https://www.remove.bg/",
+      "category": "image",
+      "icon": "✂️",
+      "tagline": "Background removal",
+      "description": "Remove image backgrounds automatically.",
+      "search": "remove.bg image background removal remove image backgrounds automatically."
+    },
+    {
+      "id": 70,
+      "name": "Clipdrop",
+      "url": "https://clipdrop.co/",
+      "category": "image",
+      "icon": "🧼",
+      "tagline": "Image editing",
+      "description": "Access cleanup, relighting and image tools.",
+      "search": "clipdrop image image editing access cleanup, relighting and image tools."
+    },
+    {
+      "id": 71,
+      "name": "Photoroom",
+      "url": "https://www.photoroom.com/",
+      "category": "image",
+      "icon": "📸",
+      "tagline": "Product photo editing",
+      "description": "Create product visuals and edit backgrounds.",
+      "search": "photoroom image product photo editing create product visuals and edit backgrounds."
+    },
+    {
+      "id": 72,
+      "name": "Let's Enhance",
+      "url": "https://letsenhance.io/",
+      "category": "image",
+      "icon": "🔍",
+      "tagline": "Image upscaling",
+      "description": "Improve image resolution and quality.",
+      "search": "let's enhance image image upscaling improve image resolution and quality."
+    },
+    {
+      "id": 73,
+      "name": "Upscayl",
+      "url": "https://upscayl.org/",
+      "category": "image",
+      "icon": "⬆️",
+      "tagline": "Open-source upscaling",
+      "description": "Upscale images with a desktop app.",
+      "search": "upscayl image open-source upscaling upscale images with a desktop app."
+    },
+    {
+      "id": 74,
+      "name": "Magnific AI",
+      "url": "https://magnific.ai/",
+      "category": "image",
+      "icon": "💎",
+      "tagline": "Image enhancement",
+      "description": "Explore image upscaling and detail enhancement.",
+      "search": "magnific ai image image enhancement explore image upscaling and detail enhancement."
+    },
+    {
+      "id": 75,
+      "name": "Google Flow",
+      "url": "https://flow.google/",
+      "category": "video",
+      "icon": "🎬",
+      "tagline": "AI filmmaking",
+      "description": "Create cinematic clips and sequences.",
+      "search": "google flow video ai filmmaking create cinematic clips and sequences."
+    },
+    {
+      "id": 76,
+      "name": "Runway",
+      "url": "https://runwayml.com/",
+      "category": "video",
+      "icon": "🎞️",
+      "tagline": "AI video creation",
+      "description": "Generate and edit video with creative AI tools.",
+      "search": "runway video ai video creation generate and edit video with creative ai tools."
+    },
+    {
+      "id": 77,
+      "name": "Pika",
+      "url": "https://pika.art/",
+      "category": "video",
+      "icon": "🪄",
+      "tagline": "AI video generation",
+      "description": "Create and transform short video clips.",
+      "search": "pika video ai video generation create and transform short video clips."
+    },
+    {
+      "id": 78,
+      "name": "Luma Dream Machine",
+      "url": "https://lumalabs.ai/dream-machine",
+      "category": "video",
+      "icon": "🌙",
+      "tagline": "Video generation",
+      "description": "Generate clips from prompts and visual references.",
+      "search": "luma dream machine video video generation generate clips from prompts and visual references."
+    },
+    {
+      "id": 79,
+      "name": "Kling AI",
+      "url": "https://klingai.com/",
+      "category": "video",
+      "icon": "🎥",
+      "tagline": "AI video generator",
+      "description": "Explore text-to-video and image-to-video creation.",
+      "search": "kling ai video ai video generator explore text-to-video and image-to-video creation."
+    },
+    {
+      "id": 80,
+      "name": "Hailuo AI",
+      "url": "https://hailuoai.video/",
+      "category": "video",
+      "icon": "🌊",
+      "tagline": "AI video creation",
+      "description": "Create short videos from prompts and images.",
+      "search": "hailuo ai video ai video creation create short videos from prompts and images."
+    },
+    {
+      "id": 81,
+      "name": "PixVerse",
+      "url": "https://pixverse.ai/",
+      "category": "video",
+      "icon": "🪐",
+      "tagline": "Video generation",
+      "description": "Generate and transform short clips.",
+      "search": "pixverse video video generation generate and transform short clips."
+    },
+    {
+      "id": 82,
+      "name": "Vidu",
+      "url": "https://www.vidu.com/",
+      "category": "video",
+      "icon": "🌀",
+      "tagline": "Video generation",
+      "description": "Explore prompt-based video workflows.",
+      "search": "vidu video video generation explore prompt-based video workflows."
+    },
+    {
+      "id": 83,
+      "name": "HeyGen",
+      "url": "https://www.heygen.com/",
+      "category": "video",
+      "icon": "🧑‍💻",
+      "tagline": "Avatar videos",
+      "description": "Create presenter videos and multilingual avatars.",
+      "search": "heygen video avatar videos create presenter videos and multilingual avatars."
+    },
+    {
+      "id": 84,
+      "name": "Synthesia",
+      "url": "https://www.synthesia.io/",
+      "category": "video",
+      "icon": "🗣️",
+      "tagline": "AI presenter videos",
+      "description": "Create business and training videos.",
+      "search": "synthesia video ai presenter videos create business and training videos."
+    },
+    {
+      "id": 85,
+      "name": "InVideo AI",
+      "url": "https://invideo.io/",
+      "category": "video",
+      "icon": "📹",
+      "tagline": "Prompt-to-video",
+      "description": "Turn ideas into editable video drafts.",
+      "search": "invideo ai video prompt-to-video turn ideas into editable video drafts."
+    },
+    {
+      "id": 86,
+      "name": "VEED",
+      "url": "https://www.veed.io/",
+      "category": "video",
+      "icon": "✂️",
+      "tagline": "Online video editor",
+      "description": "Edit videos with captions and AI tools.",
+      "search": "veed video online video editor edit videos with captions and ai tools."
+    },
+    {
+      "id": 87,
+      "name": "Descript",
+      "url": "https://www.descript.com/",
+      "category": "video",
+      "icon": "🎙️",
+      "tagline": "Audio and video editing",
+      "description": "Edit recordings through transcripts.",
+      "search": "descript video audio and video editing edit recordings through transcripts."
+    },
+    {
+      "id": 88,
+      "name": "CapCut",
+      "url": "https://www.capcut.com/",
+      "category": "video",
+      "icon": "📱",
+      "tagline": "Video editing",
+      "description": "Edit social videos with captions and templates.",
+      "search": "capcut video video editing edit social videos with captions and templates."
+    },
+    {
+      "id": 89,
+      "name": "OpusClip",
+      "url": "https://www.opus.pro/",
+      "category": "video",
+      "icon": "📐",
+      "tagline": "Long video to clips",
+      "description": "Find short clips from longer recordings.",
+      "search": "opusclip video long video to clips find short clips from longer recordings."
+    },
+    {
+      "id": 90,
+      "name": "Wisecut",
+      "url": "https://www.wisecut.video/",
+      "category": "video",
+      "icon": "🎬",
+      "tagline": "Automatic video editing",
+      "description": "Explore speech-aware editing.",
+      "search": "wisecut video automatic video editing explore speech-aware editing."
+    },
+    {
+      "id": 91,
+      "name": "ElevenLabs",
+      "url": "https://elevenlabs.io/",
+      "category": "audio",
+      "icon": "🎙️",
+      "tagline": "AI voice and audio",
+      "description": "Generate speech and explore voice tools.",
+      "search": "elevenlabs audio ai voice and audio generate speech and explore voice tools."
+    },
+    {
+      "id": 92,
+      "name": "Murf AI",
+      "url": "https://murf.ai/",
+      "category": "audio",
+      "icon": "🔊",
+      "tagline": "Voiceovers",
+      "description": "Create voiceovers for videos and presentations.",
+      "search": "murf ai audio voiceovers create voiceovers for videos and presentations."
+    },
+    {
+      "id": 93,
+      "name": "PlayHT",
+      "url": "https://play.ht/",
+      "category": "audio",
+      "icon": "🗣️",
+      "tagline": "Text to speech",
+      "description": "Explore voice generation and audio workflows.",
+      "search": "playht audio text to speech explore voice generation and audio workflows."
+    },
+    {
+      "id": 94,
+      "name": "Suno",
+      "url": "https://suno.com/",
+      "category": "audio",
+      "icon": "🎵",
+      "tagline": "AI music",
+      "description": "Create songs and musical ideas from prompts.",
+      "search": "suno audio ai music create songs and musical ideas from prompts."
+    },
+    {
+      "id": 95,
+      "name": "Udio",
+      "url": "https://www.udio.com/",
+      "category": "audio",
+      "icon": "🎼",
+      "tagline": "AI music generation",
+      "description": "Explore music creation from text.",
+      "search": "udio audio ai music generation explore music creation from text."
+    },
+    {
+      "id": 96,
+      "name": "AIVA",
+      "url": "https://www.aiva.ai/",
+      "category": "audio",
+      "icon": "🎹",
+      "tagline": "AI composition",
+      "description": "Generate musical compositions.",
+      "search": "aiva audio ai composition generate musical compositions."
+    },
+    {
+      "id": 97,
+      "name": "Soundraw",
+      "url": "https://soundraw.io/",
+      "category": "audio",
+      "icon": "🎧",
+      "tagline": "AI music tools",
+      "description": "Generate and customize music.",
+      "search": "soundraw audio ai music tools generate and customize music."
+    },
+    {
+      "id": 98,
+      "name": "Adobe Podcast",
+      "url": "https://podcast.adobe.com/",
+      "category": "audio",
+      "icon": "🎚️",
+      "tagline": "Speech enhancement",
+      "description": "Improve spoken audio and podcast recordings.",
+      "search": "adobe podcast audio speech enhancement improve spoken audio and podcast recordings."
+    },
+    {
+      "id": 99,
+      "name": "Krisp",
+      "url": "https://krisp.ai/",
+      "category": "audio",
+      "icon": "🔇",
+      "tagline": "Noise cancellation",
+      "description": "Reduce background noise in calls.",
+      "search": "krisp audio noise cancellation reduce background noise in calls."
+    },
+    {
+      "id": 100,
+      "name": "Whisper",
+      "url": "https://github.com/openai/whisper",
+      "category": "audio",
+      "icon": "📝",
+      "tagline": "Speech recognition",
+      "description": "Explore open-source speech recognition.",
+      "search": "whisper audio speech recognition explore open-source speech recognition."
+    },
+    {
+      "id": 101,
+      "name": "VoxCPM",
+      "url": "https://github.com/OpenBMB/VoxCPM",
+      "category": "audio",
+      "icon": "🗣️",
+      "tagline": "Speech generation model",
+      "description": "Explore an open speech generation model.",
+      "search": "voxcpm audio speech generation model explore an open speech generation model."
+    },
+    {
+      "id": 102,
+      "name": "Google AI Studio",
+      "url": "https://aistudio.google.com/",
+      "category": "developer",
+      "icon": "🧪",
+      "tagline": "AI prototyping",
+      "description": "Experiment with models and prototype apps.",
+      "search": "google ai studio developer ai prototyping experiment with models and prototype apps."
+    },
+    {
+      "id": 103,
+      "name": "Hugging Face",
+      "url": "https://huggingface.co/",
+      "category": "developer",
+      "icon": "🤗",
+      "tagline": "Models and datasets",
+      "description": "Discover models, datasets, demos and AI projects.",
+      "search": "hugging face developer models and datasets discover models, datasets, demos and ai projects."
+    },
+    {
+      "id": 104,
+      "name": "GitHub Copilot",
+      "url": "https://github.com/features/copilot",
+      "category": "developer",
+      "icon": "⌘",
+      "tagline": "Coding companion",
+      "description": "Get coding assistance in supported environments.",
+      "search": "github copilot developer coding companion get coding assistance in supported environments."
+    },
+    {
+      "id": 105,
+      "name": "Cursor",
+      "url": "https://cursor.com/",
+      "category": "developer",
+      "icon": "🖱️",
+      "tagline": "AI code editor",
+      "description": "Build software with AI-assisted code editing.",
+      "search": "cursor developer ai code editor build software with ai-assisted code editing."
+    },
+    {
+      "id": 106,
+      "name": "Windsurf",
+      "url": "https://windsurf.com/",
+      "category": "developer",
+      "icon": "🏄",
+      "tagline": "AI coding environment",
+      "description": "Explore agentic coding workflows.",
+      "search": "windsurf developer ai coding environment explore agentic coding workflows."
+    },
+    {
+      "id": 107,
+      "name": "Replit",
+      "url": "https://replit.com/",
+      "category": "developer",
+      "icon": "💻",
+      "tagline": "Build apps online",
+      "description": "Prototype and deploy apps in a browser.",
+      "search": "replit developer build apps online prototype and deploy apps in a browser."
+    },
+    {
+      "id": 108,
+      "name": "Bolt.new",
+      "url": "https://bolt.new/",
+      "category": "developer",
+      "icon": "⚡",
+      "tagline": "Prompt-to-app",
+      "description": "Prototype web applications from natural language.",
+      "search": "bolt.new developer prompt-to-app prototype web applications from natural language."
+    },
+    {
+      "id": 109,
+      "name": "Lovable",
+      "url": "https://lovable.dev/",
+      "category": "developer",
+      "icon": "💗",
+      "tagline": "AI app builder",
+      "description": "Create web app prototypes conversationally.",
+      "search": "lovable developer ai app builder create web app prototypes conversationally."
+    },
+    {
+      "id": 110,
+      "name": "v0",
+      "url": "https://v0.dev/",
+      "category": "developer",
+      "icon": "▲",
+      "tagline": "UI generation",
+      "description": "Generate frontend interfaces and iterate on designs.",
+      "search": "v0 developer ui generation generate frontend interfaces and iterate on designs."
+    },
+    {
+      "id": 111,
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "category": "developer",
+      "icon": "⌨️",
+      "tagline": "Coding agent",
+      "description": "Explore agentic coding assistance.",
+      "search": "claude code developer coding agent explore agentic coding assistance."
+    },
+    {
+      "id": 112,
+      "name": "OpenAI API",
+      "url": "https://platform.openai.com/",
+      "category": "developer",
+      "icon": "🔌",
+      "tagline": "AI APIs",
+      "description": "Build applications using OpenAI's API.",
+      "search": "openai api developer ai apis build applications using openai's api."
+    },
+    {
+      "id": 113,
+      "name": "Anthropic API",
+      "url": "https://console.anthropic.com/",
+      "category": "developer",
+      "icon": "🧠",
+      "tagline": "Model API",
+      "description": "Build applications with Claude models.",
+      "search": "anthropic api developer model api build applications with claude models."
+    },
+    {
+      "id": 114,
+      "name": "GroqCloud",
+      "url": "https://console.groq.com/",
+      "category": "developer",
+      "icon": "🚀",
+      "tagline": "Fast inference",
+      "description": "Experiment with supported open models.",
+      "search": "groqcloud developer fast inference experiment with supported open models."
+    },
+    {
+      "id": 115,
+      "name": "Together AI",
+      "url": "https://www.together.ai/",
+      "category": "developer",
+      "icon": "🔗",
+      "tagline": "Model platform",
+      "description": "Explore hosted open models and inference APIs.",
+      "search": "together ai developer model platform explore hosted open models and inference apis."
+    },
+    {
+      "id": 116,
+      "name": "Replicate",
+      "url": "https://replicate.com/",
+      "category": "developer",
+      "icon": "🧬",
+      "tagline": "Run AI models",
+      "description": "Discover and run community and production models.",
+      "search": "replicate developer run ai models discover and run community and production models."
+    },
+    {
+      "id": 117,
+      "name": "Ollama",
+      "url": "https://ollama.com/",
+      "category": "developer",
+      "icon": "🦙",
+      "tagline": "Local AI models",
+      "description": "Run supported language models on your computer.",
+      "search": "ollama developer local ai models run supported language models on your computer."
+    },
+    {
+      "id": 118,
+      "name": "LM Studio",
+      "url": "https://lmstudio.ai/",
+      "category": "developer",
+      "icon": "🖥️",
+      "tagline": "Local model workspace",
+      "description": "Download and test local LLMs.",
+      "search": "lm studio developer local model workspace download and test local llms."
+    },
+    {
+      "id": 119,
+      "name": "Jan",
+      "url": "https://jan.ai/",
+      "category": "developer",
+      "icon": "🌱",
+      "tagline": "Local AI assistant",
+      "description": "Explore an open-source local AI assistant.",
+      "search": "jan developer local ai assistant explore an open-source local ai assistant."
+    },
+    {
+      "id": 120,
+      "name": "Dify",
+      "url": "https://dify.ai/",
+      "category": "developer",
+      "icon": "🧱",
+      "tagline": "AI app development",
+      "description": "Build AI apps and workflows visually.",
+      "search": "dify developer ai app development build ai apps and workflows visually."
+    },
+    {
+      "id": 121,
+      "name": "Flowise",
+      "url": "https://flowiseai.com/",
+      "category": "developer",
+      "icon": "🔀",
+      "tagline": "Visual AI flows",
+      "description": "Create LLM workflows with a visual builder.",
+      "search": "flowise developer visual ai flows create llm workflows with a visual builder."
+    },
+    {
+      "id": 122,
+      "name": "LangChain",
+      "url": "https://www.langchain.com/",
+      "category": "developer",
+      "icon": "🦜",
+      "tagline": "LLM framework",
+      "description": "Build apps with model integrations and orchestration.",
+      "search": "langchain developer llm framework build apps with model integrations and orchestration."
+    },
+    {
+      "id": 123,
+      "name": "LlamaIndex",
+      "url": "https://www.llamaindex.ai/",
+      "category": "developer",
+      "icon": "🦙",
+      "tagline": "Data-connected AI",
+      "description": "Connect models to knowledge sources.",
+      "search": "llamaindex developer data-connected ai connect models to knowledge sources."
+    },
+    {
+      "id": 124,
+      "name": "CrewAI",
+      "url": "https://www.crewai.com/",
+      "category": "developer",
+      "icon": "👥",
+      "tagline": "Agent orchestration",
+      "description": "Build multi-agent workflows.",
+      "search": "crewai developer agent orchestration build multi-agent workflows."
+    },
+    {
+      "id": 125,
+      "name": "AutoGen",
+      "url": "https://microsoft.github.io/autogen/",
+      "category": "developer",
+      "icon": "🤖",
+      "tagline": "Agent framework",
+      "description": "Explore multi-agent AI applications.",
+      "search": "autogen developer agent framework explore multi-agent ai applications."
+    },
+    {
+      "id": 126,
+      "name": "ComfyUI",
+      "url": "https://www.comfy.org/",
+      "category": "developer",
+      "icon": "🧩",
+      "tagline": "Node-based AI",
+      "description": "Build modular image and media workflows.",
+      "search": "comfyui developer node-based ai build modular image and media workflows."
+    },
+    {
+      "id": 127,
+      "name": "Stable Diffusion",
+      "url": "https://stability.ai/",
+      "category": "developer",
+      "icon": "🌄",
+      "tagline": "Image models",
+      "description": "Explore generative image models.",
+      "search": "stable diffusion developer image models explore generative image models."
+    },
+    {
+      "id": 128,
+      "name": "Open WebUI",
+      "url": "https://openwebui.com/",
+      "category": "developer",
+      "icon": "🪟",
+      "tagline": "Self-hosted AI interface",
+      "description": "Use a self-hosted interface for supported models.",
+      "search": "open webui developer self-hosted ai interface use a self-hosted interface for supported models."
+    },
+    {
+      "id": 129,
+      "name": "AnythingLLM",
+      "url": "https://anythingllm.com/",
+      "category": "developer",
+      "icon": "📦",
+      "tagline": "Knowledge assistant",
+      "description": "Explore document chat and knowledge workflows.",
+      "search": "anythingllm developer knowledge assistant explore document chat and knowledge workflows."
+    },
+    {
+      "id": 130,
+      "name": "Aider",
+      "url": "https://aider.chat/",
+      "category": "developer",
+      "icon": "🛠️",
+      "tagline": "AI pair programming",
+      "description": "Work with an AI coding assistant in a codebase.",
+      "search": "aider developer ai pair programming work with an ai coding assistant in a codebase."
+    },
+    {
+      "id": 131,
+      "name": "Continue",
+      "url": "https://www.continue.dev/",
+      "category": "developer",
+      "icon": "⏩",
+      "tagline": "Open-source coding assistant",
+      "description": "Add AI coding assistance to supported editors.",
+      "search": "continue developer open-source coding assistant add ai coding assistance to supported editors."
+    },
+    {
+      "id": 132,
+      "name": "Tabnine",
+      "url": "https://www.tabnine.com/",
+      "category": "developer",
+      "icon": "⌨️",
+      "tagline": "Code completion",
+      "description": "Explore AI coding assistance and completion.",
+      "search": "tabnine developer code completion explore ai coding assistance and completion."
+    },
+    {
+      "id": 133,
+      "name": "Sourcegraph Cody",
+      "url": "https://sourcegraph.com/cody",
+      "category": "developer",
+      "icon": "🔍",
+      "tagline": "Codebase assistant",
+      "description": "Ask questions and navigate codebases.",
+      "search": "sourcegraph cody developer codebase assistant ask questions and navigate codebases."
+    },
+    {
+      "id": 134,
+      "name": "Blackbox AI",
+      "url": "https://www.blackbox.ai/",
+      "category": "developer",
+      "icon": "⬛",
+      "tagline": "Coding assistant",
+      "description": "Explore AI-powered coding tools.",
+      "search": "blackbox ai developer coding assistant explore ai-powered coding tools."
+    },
+    {
+      "id": 135,
+      "name": "Codeium",
+      "url": "https://codeium.com/",
+      "category": "developer",
+      "icon": "💠",
+      "tagline": "Code assistance",
+      "description": "Explore AI coding and autocomplete.",
+      "search": "codeium developer code assistance explore ai coding and autocomplete."
+    },
+    {
+      "id": 136,
+      "name": "Amazon Q Developer",
+      "url": "https://aws.amazon.com/q/developer/",
+      "category": "developer",
+      "icon": "☁️",
+      "tagline": "Cloud development",
+      "description": "Get AI help for coding and AWS workflows.",
+      "search": "amazon q developer developer cloud development get ai help for coding and aws workflows."
+    },
+    {
+      "id": 137,
+      "name": "Vercel AI SDK",
+      "url": "https://sdk.vercel.ai/",
+      "category": "developer",
+      "icon": "▲",
+      "tagline": "AI app toolkit",
+      "description": "Build AI-powered web interfaces.",
+      "search": "vercel ai sdk developer ai app toolkit build ai-powered web interfaces."
+    },
+    {
+      "id": 138,
+      "name": "Pinecone",
+      "url": "https://www.pinecone.io/",
+      "category": "developer",
+      "icon": "🌲",
+      "tagline": "Vector database",
+      "description": "Build semantic search and retrieval systems.",
+      "search": "pinecone developer vector database build semantic search and retrieval systems."
+    },
+    {
+      "id": 139,
+      "name": "Weaviate",
+      "url": "https://weaviate.io/",
+      "category": "developer",
+      "icon": "🧊",
+      "tagline": "Vector database",
+      "description": "Explore vector search infrastructure.",
+      "search": "weaviate developer vector database explore vector search infrastructure."
+    },
+    {
+      "id": 140,
+      "name": "Chroma",
+      "url": "https://www.trychroma.com/",
+      "category": "developer",
+      "icon": "🎨",
+      "tagline": "AI data infrastructure",
+      "description": "Build retrieval and embedding workflows.",
+      "search": "chroma developer ai data infrastructure build retrieval and embedding workflows."
+    },
+    {
+      "id": 141,
+      "name": "Weights & Biases",
+      "url": "https://wandb.ai/",
+      "category": "developer",
+      "icon": "📉",
+      "tagline": "Experiment tracking",
+      "description": "Track machine learning experiments.",
+      "search": "weights & biases developer experiment tracking track machine learning experiments."
+    },
+    {
+      "id": 142,
+      "name": "Comet",
+      "url": "https://www.comet.com/",
+      "category": "developer",
+      "icon": "☄️",
+      "tagline": "ML observability",
+      "description": "Track experiments and model performance.",
+      "search": "comet developer ml observability track experiments and model performance."
+    },
+    {
+      "id": 143,
+      "name": "Roboflow",
+      "url": "https://roboflow.com/",
+      "category": "developer",
+      "icon": "👁️",
+      "tagline": "Computer vision",
+      "description": "Build datasets and vision AI workflows.",
+      "search": "roboflow developer computer vision build datasets and vision ai workflows."
+    },
+    {
+      "id": 144,
+      "name": "Label Studio",
+      "url": "https://labelstud.io/",
+      "category": "developer",
+      "icon": "🏷️",
+      "tagline": "Data labeling",
+      "description": "Label datasets for machine learning.",
+      "search": "label studio developer data labeling label datasets for machine learning."
+    },
+    {
+      "id": 145,
+      "name": "Teachable Machine",
+      "url": "https://teachablemachine.withgoogle.com/",
+      "category": "developer",
+      "icon": "🧑‍🏫",
+      "tagline": "No-code model experiments",
+      "description": "Train simple models in the browser.",
+      "search": "teachable machine developer no-code model experiments train simple models in the browser."
+    },
+    {
+      "id": 146,
+      "name": "RunPod",
+      "url": "https://www.runpod.io/",
+      "category": "developer",
+      "icon": "☁️",
+      "tagline": "GPU cloud",
+      "description": "Explore GPU infrastructure for AI workloads.",
+      "search": "runpod developer gpu cloud explore gpu infrastructure for ai workloads."
+    },
+    {
+      "id": 147,
+      "name": "Modal",
+      "url": "https://modal.com/",
+      "category": "developer",
+      "icon": "⚙️",
+      "tagline": "Serverless AI compute",
+      "description": "Run AI workloads on scalable cloud infrastructure.",
+      "search": "modal developer serverless ai compute run ai workloads on scalable cloud infrastructure."
+    },
+    {
+      "id": 148,
+      "name": "Baseten",
+      "url": "https://www.baseten.co/",
+      "category": "developer",
+      "icon": "🏗️",
+      "tagline": "Model deployment",
+      "description": "Deploy and serve machine learning models.",
+      "search": "baseten developer model deployment deploy and serve machine learning models."
+    }
+  ]
+}
