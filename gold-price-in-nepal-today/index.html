@@ -63,7 +63,60 @@ function card(title,key,icon){const v=Number(data.latest[key]),c=change(key);ret
 function draw(){const h=(data.history||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).slice(-days),v=h.map(x=>+x.fine_gold_tola),svg=$('chart');if(!v.length)return;const W=1000,H=280,l=60,r=18,t=20,b=35,min=Math.min(...v),max=Math.max(...v),s=max-min||1,pts=h.map((x,i)=>[l+i*(W-l-r)/Math.max(1,h.length-1),t+(max-x.fine_gold_tola)/s*(H-t-b)]),path=pts.map((p,i)=>(i?'L':'M')+p[0]+','+p[1]).join(' ');svg.innerHTML='<line x1="'+l+'" x2="'+(W-r)+'" y1="'+t+'" y2="'+t+'" stroke="#e8ecf2"/><line x1="'+l+'" x2="'+(W-r)+'" y1="'+(H-b)+'" y2="'+(H-b)+'" stroke="#e8ecf2"/><text x="5" y="30" fill="#667085" font-size="12">'+money(max)+'</text><text x="5" y="'+(H-b)+'" fill="#667085" font-size="12">'+money(min)+'</text><path d="'+path+'" fill="none" stroke="#b7791f" stroke-width="4" stroke-linecap="round"/>'+pts.map(p=>'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="4" fill="#fff" stroke="#b7791f" stroke-width="3"/>').join('')+h.map((x,i)=>i%Math.max(1,Math.ceil(h.length/5))===0?'<text x="'+pts[i][0]+'" y="'+(H-10)+'" text-anchor="middle" fill="#667085" font-size="11">'+x.date.slice(5)+'</text>':'').join('')}
 function calc(){if(!data)return;const k=$('metal').value==='fine'?'fine_gold_tola':$('metal').value==='tejabi'?'tejabi_gold_tola':'silver_tola',rate=Number(data.latest[k])||0,w=Number($('weight').value)||0,u=$('unit').value,t=u==='tola'?w:u==='gram'?w/T:u==='aana'?w/A:w/L,total=rate*t+(Number($('extra').value)||0);$('total').textContent=money(total);$('detail').textContent=w+' '+u+' = '+t.toFixed(4)+' tola · '+money(rate)+'/tola'}
 function render(){const r=data.latest;$('cards').innerHTML=card('छापावाल सुन · Fine Gold 9999','fine_gold_tola','🥇')+card('तेजाबी सुन · Tejabi Gold','tejabi_gold_tola','🪙')+card('चाँदी · Silver','silver_tola','🥈');$('source').textContent=r.date+' · '+r.source+' · '+r.fine_gold_tola.toLocaleString('en-IN')+' NPR/tola';const h=data.history.slice().sort((a,b)=>b.date.localeCompare(a.date));$('history').innerHTML=h.map((x,i)=>{const p=h[i+1],c=p?x.fine_gold_tola-p.fine_gold_tola:0;return '<tr><td>'+x.date+'</td><td>'+money(x.fine_gold_tola)+'</td><td>'+money(x.tejabi_gold_tola)+'</td><td>'+money(x.silver_tola)+'</td><td class="'+(c>0?'up':c<0?'down':'')+'">'+(c>0?'▲ +':c<0?'▼ ':'')+(c?money(Math.abs(c)):'—')+'</td></tr>'}).join('');draw();calc()}
-async function init(){try{const r=await fetch('/data/gold-nepal.json?'+Date.now(),{cache:'no-store'});data=await r.json();render()}catch(e){$('cards').innerHTML='<div class="card"><strong>Rate data unavailable.</strong></div>'}try{const r=await fetch('https://usemiti.com/api/today',{cache:'no-store'}),d=await r.json();$('date').textContent='आज: '+d.bs.day+' '+['बैशाख','जेठ','असार','श्रावण','भाद्र','आश्विन','कार्तिक','मंसिर','पौष','माघ','फाल्गुण','चैत्र'][d.bs.month-1]+' '+d.bs.year+' · AD '+d.ad.year+'-'+String(d.ad.month).padStart(2,'0')+'-'+String(d.ad.day).padStart(2,'0')}catch(e){$('date').textContent='आजको नेपाली मिति API उपलब्ध भएन'}}
+const FENEGOSIDA_API='https://api.fenegosida.org/api/website/v1/Dashboard/today';
+const normalizeRateLabel=v=>String(v??'').normalize('NFKC').replace(/[०-९]/g,d=>String('०१२३४५६७८९'.indexOf(d))).replace(/[\\s._-]+/g,'').toLowerCase();
+async function fetchOfficialFenegosida(){
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);
+  try{
+    const res=await fetch(FENEGOSIDA_API+'?t='+Date.now(),{cache:'no-store',signal:controller.signal,headers:{Accept:'application/json'}});
+    if(!res.ok)throw new Error('FENEGOSIDA HTTP '+res.status);
+    const rows=await res.json();if(!Array.isArray(rows)||!rows.length)throw new Error('Unexpected FENEGOSIDA response');
+    const find=(metals,units)=>rows.find(x=>metals.map(normalizeRateLabel).some(m=>normalizeRateLabel(x.rateType).includes(m))&&units.map(normalizeRateLabel).some(u=>normalizeRateLabel(x.rateType).includes(u)));
+    const gold=find(['छापावाल सुन','fine gold','hallmark gold'],['१ तोला','1 tola','tola']);
+    const tejabi=find(['तेजाबी सुन','tejabi gold','tejabi'],['१ तोला','1 tola','tola']);
+    const silver=find(['असली चाँदी','चाँदी','silver'],['१ तोला','1 tola','tola']);
+    if(!gold||!silver)throw new Error('Gold/silver rates not found');
+    const g=Number(gold.todayBaseRatePerGram),s=Number(silver.todayBaseRatePerGram),t=Number(tejabi?.todayBaseRatePerGram);
+    if(!(g>0&&s>0))throw new Error('Invalid FENEGOSIDA rates');
+    const date=String(gold.todayDate||new Date().toISOString()).split('T')[0];
+    const record={date,fine_gold_tola:g,tejabi_gold_tola:t>0?t:(Number(data?.latest?.tejabi_gold_tola)||0),silver_tola:s,updated_at:new Date().toISOString(),source:'FENEGOSIDA official API',source_url:'https://www.fenegosida.org/',unit:'NPR per tola'};
+    const history=(Array.isArray(data?.history)?data.history:[]).filter(x=>x.date!==date);
+    history.push(record);history.sort((a,b)=>a.date.localeCompare(b.date));
+    data={...(data||{}),status:'live',last_attempted_at:record.updated_at,latest:record,history:history.slice(-365)};
+    render();
+    $('source').textContent=date+' · FENEGOSIDA LIVE · '+g.toLocaleString('en-IN')+' NPR/tola';
+    $('date').textContent='✓ Direct FENEGOSIDA update checked '+new Date().toLocaleTimeString();
+    try{localStorage.setItem('gold-nepal-live-snapshot',JSON.stringify(data))}catch(_e){}
+    return true;
+  }finally{clearTimeout(timer)}
+}
+async function loadPublishedFenegosidaSnapshot(){
+  for(const url of ['/Gold-Price-In-Nepal/data/fenegosida.json','/data/gold-nepal.json']){
+    try{
+      const res=await fetch(url+'?t='+Date.now(),{cache:'no-store'});if(!res.ok)continue;
+      const saved=await res.json();
+      if(url.includes('fenegosida.json')&&Number(saved.goldTola)>0){
+        const history=(saved.history||[]).map(x=>({date:x.date,fine_gold_tola:Number(x.gold),tejabi_gold_tola:Number(saved.tejabiTola)||0,silver_tola:Number(x.silver),updated_at:saved.fetchedAt,source:'FENEGOSIDA verified snapshot',source_url:'https://www.fenegosida.org/',unit:'NPR per tola'}));
+        data={status:'verified',last_attempted_at:saved.fetchedAt,latest:{date:saved.rateDate,updated_at:saved.fetchedAt,fine_gold_tola:Number(saved.goldTola),tejabi_gold_tola:Number(saved.tejabiTola)||0,silver_tola:Number(saved.silverTola),source:'FENEGOSIDA verified snapshot',source_url:'https://www.fenegosida.org/',unit:'NPR per tola'},history};
+      }else if(saved.latest&&Array.isArray(saved.history)){data=saved}
+      if(data?.latest&&Number(data.latest.fine_gold_tola)>0){render();$('source').textContent=data.latest.date+' · '+(data.latest.source||'FENEGOSIDA snapshot')+' · '+Number(data.latest.fine_gold_tola).toLocaleString('en-IN')+' NPR/tola';return true}
+    }catch(e){console.warn('Snapshot source unavailable:',url,e)}
+  }
+  return false;
+}
+async function init(){
+  try{
+    const cached=JSON.parse(localStorage.getItem('gold-nepal-live-snapshot')||'null');
+    if(cached?.latest&&Number(cached.latest.fine_gold_tola)>0){data=cached;render()}
+    else{const r=await fetch('/data/gold-nepal.json?'+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('Local snapshot HTTP '+r.status);data=await r.json();render()}
+  }catch(e){$('cards').innerHTML='<div class="card"><strong>Rate data unavailable. Checking FENEGOSIDA…</strong></div>'}
+  let live=false;
+  try{live=await fetchOfficialFenegosida();}catch(e){console.warn('Direct FENEGOSIDA fetch failed; trying verified published snapshot.',e)}
+  if(!live){const loaded=await loadPublishedFenegosidaSnapshot();if(!loaded)$('date').textContent='Live source unavailable · showing last stored rate';}
+  try{const r=await fetch('https://usemiti.com/api/today',{cache:'no-store'}),d=await r.json();$('date').textContent=(live?'✓ FENEGOSIDA LIVE · ':'')+'आज: '+d.bs.day+' '+['बैशाख','जेठ','असार','श्रावण','भाद्र','आश्विन','कार्तिक','मंसिर','पौष','माघ','फाल्गुण','चैत्र'][d.bs.month-1]+' '+d.bs.year+' · AD '+d.ad.year+'-'+String(d.ad.month).padStart(2,'0')+'-'+String(d.ad.day).padStart(2,'0')+(live?' · Source checked '+new Date().toLocaleTimeString():'')}
+  catch(e){if(!live)$('date').textContent='आजको नेपाली मिति API उपलब्ध भएन'}
+}
+setInterval(()=>fetchOfficialFenegosida().catch(e=>console.warn('Scheduled FENEGOSIDA refresh failed',e)),15*60*1000);
 document.querySelectorAll('[data-r]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-r]').forEach(x=>x.classList.remove('active'));b.classList.add('active');days=+b.dataset.r;draw()});
 ['metal','weight','unit','extra'].forEach(x=>$(x).addEventListener('input',calc));init();
 </script>
