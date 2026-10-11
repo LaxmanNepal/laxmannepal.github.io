@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T21:48:55.855751+00:00",
+  "updated_at": "2026-10-11T05:54:08.802469+00:00",
   "count": 146,
   "products": [
     {
@@ -2517,9 +2517,9 @@
       "variants": [
         "128GB"
       ],
-      "price": 127499,
-      "max_price": 127499,
-      "original_price": null,
+      "price": 119499,
+      "max_price": 119499,
+      "original_price": 127499,
       "rams": [],
       "storages": [
         "128GB"
