@@ -137,6 +137,8 @@ jobs:
           test -f .pages/pdf-tools/split/index.html
           test -f .pages/pdf-tools/images-to-pdf/index.html
           test -f .pages/pdf-tools/pdf-to-image/index.html
+          test -f .pages/qrcodetool/index.html
+          grep -q "QR Code Generator &amp; Scanner" .pages/qrcodetool/index.html || grep -q "QR Code Generator & Scanner" .pages/qrcodetool/index.html
           test -f .pages/ai-tools/index.html
           test -f .pages/ai-tools/tools.json
           test -f .pages/ai-tools/discoveries.json
