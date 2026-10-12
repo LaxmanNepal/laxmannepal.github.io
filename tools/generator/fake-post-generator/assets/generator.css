@@ -61,3 +61,10 @@ h1{font-size:clamp(2rem,5vw,3.1rem);letter-spacing:-.045em;line-height:1.08;marg
  .post-actions .action{font-size:11px}
  .action-glyph{font-size:15px}
 }
+
+
+.platform-setting-select{width:100%;font:inherit;font-size:.9rem;color:#17202b;background:#fff;border:1px solid #cbd5df;border-radius:9px;padding:10px 11px;min-width:0}
+.community-poll{display:grid;gap:9px;border:1px solid var(--postline);border-radius:12px;padding:12px;margin:10px 0;color:var(--postfg);font-size:13px}
+.community-poll[hidden]{display:none}
+.community-poll span{display:flex;justify-content:space-between;gap:12px;border:1px solid color-mix(in srgb,var(--brand),white 45%);background:color-mix(in srgb,var(--brand),white 94%);border-radius:8px;padding:9px 10px}
+.community-poll span b{color:var(--brand)}
