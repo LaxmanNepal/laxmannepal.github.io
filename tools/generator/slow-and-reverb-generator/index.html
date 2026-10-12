@@ -4303,6 +4303,78 @@ figcaption {
                 </div>
             </div>
         </div>
+
+<section class="ln-preset-studio" id="ln-preset-studio" aria-labelledby="ln-preset-title">
+  <div class="ln-preset-heading">
+    <div><span class="ln-preset-kicker">QUICK SOUND DESIGN</span><h2 id="ln-preset-title">One-tap sound presets</h2><p>Choose a vibe, then fine-tune Speed, Reverb and Impulse above.</p></div>
+    <button type="button" class="ln-reset-preset" id="ln-reset-preset">Reset controls</button>
+  </div>
+  <div class="ln-preset-grid">
+    <button type="button" class="ln-preset-card" data-ln-preset="dreamy" aria-pressed="false"><span class="ln-preset-icon">☁</span><strong>Dreamy</strong><small>Soft, spacious and mellow</small><span class="ln-preset-values">0.80× speed · 72% reverb</span></button>
+    <button type="button" class="ln-preset-card" data-ln-preset="slowed" aria-pressed="false"><span class="ln-preset-icon">◒</span><strong>Slowed + Reverb</strong><small>A balanced, classic sound</small><span class="ln-preset-values">0.75× speed · 60% reverb</span></button>
+    <button type="button" class="ln-preset-card" data-ln-preset="night" aria-pressed="false"><span class="ln-preset-icon">☾</span><strong>Night Drive</strong><small>Deep and atmospheric</small><span class="ln-preset-values">0.90× speed · 48% reverb</span></button>
+    <button type="button" class="ln-preset-card" data-ln-preset="ethereal" aria-pressed="false"><span class="ln-preset-icon">✧</span><strong>Ethereal</strong><small>Wide, floating ambience</small><span class="ln-preset-values">0.85× speed · 88% reverb</span></button>
+    <button type="button" class="ln-preset-card" data-ln-preset="vocal" aria-pressed="false"><span class="ln-preset-icon">♫</span><strong>Vocal Focus</strong><small>Keep the vocal more upfront</small><span class="ln-preset-values">0.95× speed · 28% reverb</span></button>
+    <button type="button" class="ln-preset-card" data-ln-preset="chill" aria-pressed="false"><span class="ln-preset-icon">〰</span><strong>Chill Tape</strong><small>Gentle slowdown and room tone</small><span class="ln-preset-values">0.88× speed · 38% reverb</span></button>
+  </div>
+  <div class="ln-preset-note"><span aria-hidden="true">ⓘ</span><p><strong>Tip:</strong> Upload your own audio first. Presets adjust the existing controls; they do not upload or process audio by themselves. Use Download in the player when you're happy with the result.</p></div>
+  <p class="ln-preset-status" id="ln-preset-status" role="status" aria-live="polite">Choose a preset to get started.</p>
+</section>
+<style id="ln-preset-studio-css">
+.ln-preset-studio{width:min(calc(100% - 32px),1040px);margin:24px auto 42px;padding:clamp(20px,3.6vw,36px);border:1px solid rgba(255,255,255,.9);border-radius:26px;background:rgba(255,255,255,.82);box-shadow:0 12px 40px rgba(0,0,0,.06);color:var(--ln-text,#111114)}
+.ln-preset-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:22px}
+.ln-preset-kicker{font-size:10px;font-weight:850;letter-spacing:.12em;color:var(--ln-accent,#007aff)}
+.ln-preset-heading h2{margin:7px 0 7px;font-size:clamp(24px,4vw,34px);letter-spacing:-.045em;line-height:1.15}
+.ln-preset-heading p{margin:0;color:var(--ln-muted,#6e6e73);font-size:14px;line-height:1.6}
+.ln-reset-preset{flex-shrink:0;border:1px solid var(--ln-line,rgba(60,60,67,.14));border-radius:12px;padding:10px 13px;background:#fff;color:inherit;font:inherit;font-size:12px;font-weight:750;cursor:pointer}
+.ln-preset-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ln-preset-card{display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0;padding:17px;text-align:left;border:1px solid rgba(60,60,67,.13);border-radius:17px;background:rgba(255,255,255,.9);color:var(--ln-text,#111114);cursor:pointer;transition:border-color .16s,background .16s,transform .16s,box-shadow .16s}
+.ln-preset-card:hover{transform:translateY(-2px);border-color:rgba(0,122,255,.35);box-shadow:0 8px 22px rgba(0,0,0,.055)}
+.ln-preset-card[aria-pressed="true"]{border-color:var(--ln-accent,#007aff);background:rgba(0,122,255,.055);box-shadow:0 0 0 2px rgba(0,122,255,.09)}
+.ln-preset-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:rgba(0,122,255,.09);color:var(--ln-accent,#007aff);font-size:21px}
+.ln-preset-card strong{font-size:14px;line-height:1.35}
+.ln-preset-card small{font-size:12px;line-height:1.5;color:var(--ln-muted,#6e6e73)}
+.ln-preset-values{margin-top:3px;font-size:11px;font-weight:750;color:var(--ln-accent,#007aff);line-height:1.45}
+.ln-preset-note{display:flex;gap:10px;margin-top:18px;padding:13px 15px;border-radius:14px;background:rgba(118,118,128,.07);color:var(--ln-muted,#6e6e73)}
+.ln-preset-note>span{flex-shrink:0;color:var(--ln-accent,#007aff)}
+.ln-preset-note p{margin:0;font-size:12px;line-height:1.65}
+.ln-preset-note strong{color:var(--ln-text,#111114)}
+.ln-preset-status{min-height:1em;margin:12px 0 0;color:var(--ln-muted,#6e6e73);font-size:12px;line-height:1.5}
+@media(max-width:760px){.ln-preset-studio{width:calc(100% - 20px);margin:18px auto 28px;padding:20px;border-radius:20px}.ln-preset-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ln-preset-card{padding:14px;border-radius:15px}.ln-preset-heading{gap:10px}.ln-reset-preset{padding:9px 10px;white-space:nowrap}}
+@media(max-width:430px){.ln-preset-studio{width:calc(100% - 16px);padding:17px}.ln-preset-heading{display:block}.ln-reset-preset{margin-top:13px}.ln-preset-card{padding:12px}.ln-preset-card strong{font-size:13px}.ln-preset-card small{font-size:11px}.ln-preset-values{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.ln-preset-card{transition:none}}
+</style>
+<script id="ln-preset-studio-script">
+(function(){
+ const speed=document.getElementById('tempoChangerSlider'),reverb=document.getElementById('reverbSlider'),impulse=document.getElementById('impulseSelect');
+ const status=document.getElementById('ln-preset-status'),cards=[...document.querySelectorAll('[data-ln-preset]')],reset=document.getElementById('ln-reset-preset');
+ if(!speed||!reverb||!impulse||!status)return;
+ const presets={
+  dreamy:{name:'Dreamy',speed:.80,reverb:.72,impulse:'ElvedenHallVisitorsCloakroom'},
+  slowed:{name:'Slowed + Reverb',speed:.75,reverb:.60,impulse:'ElvedenHallVisitorsCloakroom'},
+  night:{name:'Night Drive',speed:.90,reverb:.48,impulse:'PurnodesRailroadTunnel'},
+  ethereal:{name:'Ethereal',speed:.85,reverb:.88,impulse:'HamiltonMausoleum'},
+  vocal:{name:'Vocal Focus',speed:.95,reverb:.28,impulse:'Basement'},
+  chill:{name:'Chill Tape',speed:.88,reverb:.38,impulse:'TerrysTypingRoom'}
+ };
+ function setValue(el,value,eventName){el.value=String(value);el.dispatchEvent(new Event(eventName,{bubbles:true}))}
+ function apply(key){
+  const p=presets[key];if(!p)return;
+  setValue(speed,p.speed,'input');setValue(reverb,p.reverb,'input');
+  if([...impulse.options].some(o=>o.value===p.impulse))setValue(impulse,p.impulse,'change');
+  cards.forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.lnPreset===key)));
+  status.textContent=p.name+' preset selected. Fine-tune the controls above to taste.';
+ }
+ cards.forEach(c=>c.addEventListener('click',()=>apply(c.dataset.lnPreset)));
+ reset?.addEventListener('click',()=>{
+  setValue(speed,.85,'input');setValue(reverb,.60,'input');
+  const defaultImpulse='ElvedenHallVisitorsCloakroom';
+  if([...impulse.options].some(o=>o.value===defaultImpulse))setValue(impulse,defaultImpulse,'change');
+  cards.forEach(c=>c.setAttribute('aria-pressed','false'));
+  status.textContent='Controls reset to the default starting values.';
+ });
+})();
+</script>
 <footer class="shared-footer" id="site-footer">
   <div class="shared-footer-grid">
     <div>
