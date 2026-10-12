@@ -1,101 +1,119 @@
 (() => {
   const $ = id => document.getElementById(id);
-  const cfg = {
-    twitter:{name:'X / Twitter',brand:'#1d9bf0',handle:'@',metrics:['Reposts','Replies','Likes'],placeholder:'What is happening?!',client:'X for Web',limit:280,nameLimit:50,handleLimit:15,context:'',actions:['Reply','Repost','Like','Views'],description:'Create an X-style post with its compact text-first layout, @handle, timestamp, source label, reply/repost/like metrics and optional media. Standard posts are limited to 280 characters.',settingLabel:'Reply permissions',settingOptions:['Everyone can reply','Accounts you follow','Only accounts mentioned'],settingPrefix:'Replies: ',},
-    facebook:{name:'Facebook',brand:'#0866ff',handle:'',metrics:['Reactions','Comments','Shares'],placeholder:'What’s on your mind?',client:'Facebook Web',limit:63206,nameLimit:50,handleLimit:40,context:'🌐 Public · Feed post',actions:['Like','Comment','Share'],description:'Build a Facebook feed-style post with reaction totals, comments, shares, an audience label and optional photo. Use the audience label as illustrative context only.',settingLabel:'Post audience',settingOptions:['Public','Friends','Only me'],settingPrefix:'Audience: ',},
-    instagram:{name:'Instagram',brand:'#c13584',handle:'@',metrics:['Likes','Comments','Shares'],placeholder:'Write a caption…',client:'Instagram',limit:2200,nameLimit:30,handleLimit:30,context:'',actions:['Like','Comment','Share','Save'],description:'Create a photo-first Instagram feed mockup with a square media area, caption, likes, comments, share and save actions. Add a local image to make the preview feel like a real feed post.',settingLabel:'Post format',settingOptions:['Feed photo','Caption only'],settingPrefix:'Format: ',},
-    linkedin:{name:'LinkedIn',brand:'#0a66c2',handle:'',metrics:['Reactions','Comments','Reposts'],placeholder:'What would you like to share with your network?',client:'LinkedIn',limit:3000,nameLimit:50,handleLimit:40,context:'🌐 Anyone · Professional update',actions:['Like','Comment','Repost','Send'],description:'Create a professional LinkedIn update with profile identity, professional context, reactions, comments and reposts. The audience line is illustrative, not a live privacy setting.',settingLabel:'Post audience',settingOptions:['Anyone','Connections only','Group members'],settingPrefix:'Audience: ',},
-    threads:{name:'Threads',brand:'#111111',handle:'@',metrics:['Likes','Replies','Reposts'],placeholder:'Start a thread…',client:'Threads',limit:500,nameLimit:50,handleLimit:30,context:'',actions:['Like','Reply','Repost','Share'],description:'Create a Threads-style text-first post with an @handle, short conversational copy, replies, reposts and likes. The standard post text field is set to 500 characters.',settingLabel:'Reply controls',settingOptions:['Everyone','Followers only','Mentioned profiles only'],settingPrefix:'Replies: ',},
-    youtube:{name:'YouTube Community',brand:'#ff0033',handle:'@',metrics:['Likes','Comments','Shares'],placeholder:'Share something with your community…',client:'YouTube',limit:5000,nameLimit:50,handleLimit:30,context:'Community post',actions:['Like','Comment','Share'],description:'Create a YouTube Community-style creator update with channel handle, optional image, likes, comments and shares. Community posts can include text or media; this mockup focuses on a single image or text post.'}
+  const DEFAULT_AVATAR='https://yt3.googleusercontent.com/PiqDHS27IXtF4qf1Unqbf77nNL_8sdsi48OjJQMy8hJc9XCknV8IRSDJEqzws30MjDlYQMHh=s120-c-k-c0x00ffffff-no-rj';
+  const platform=document.body.dataset.platform||'twitter';
+  const cfg={
+    twitter:{name:'X / Twitter',brand:'#1d9bf0',usernameLabel:'Username',name:'Laxman Nepal'},
+    facebook:{name:'Facebook',brand:'#0866ff',usernameLabel:'Username',name:'Laxman Nepal'},
+    instagram:{name:'Instagram',brand:'#c13584',usernameLabel:'Username',name:'Laxman Nepal'},
+    linkedin:{name:'LinkedIn',brand:'#0a66c2',usernameLabel:'Username / headline',name:'Laxman Nepal'},
+    threads:{name:'Threads',brand:'#111111',usernameLabel:'Username',name:'Laxman Nepal'},
+    youtube:{name:'YouTube Community',brand:'#ff0033',usernameLabel:'Channel handle',name:'Laxman Nepal'}
   };
-  const platform=document.body.dataset.platform||'twitter', c=cfg[platform]||cfg.twitter;
+  const c=cfg[platform]||cfg.twitter;
   document.documentElement.style.setProperty('--brand',c.brand);
-  document.title=c.name+' Mockup Generator | Laxman Nepal';
-  $('platformName').textContent=c.name;
-  $('eyebrow').textContent='✦ '+c.name.toUpperCase()+' MOCKUP TOOL';
-  $('pageTitle').textContent=c.name+' Mockup Generator';
-  $('pageDescription').textContent=c.description+' Export a clearly labeled fictional PNG mockup.';
-  $('usernameLabel').textContent=platform==='facebook'||platform==='linkedin'?'Profile label':'Username / handle';
-  $('username').value=platform==='facebook'?'Sample Creator':platform==='linkedin'?'Sample Creator · Product Designer':'sample_creator';
-  $('displayName').maxLength=c.nameLimit;$('username').maxLength=c.handleLimit;
-  $('nameCount').textContent=$('displayName').value.length+'/'+c.nameLimit;$('userCount').textContent=$('username').value.length+'/'+c.handleLimit;
-  $('message').maxLength=c.limit;
-  $('message').placeholder=c.placeholder;
-  $('message').value=platform==='twitter'?'Quick update: building something useful today. ✨':platform==='facebook'?'A little update from my day. What do you think? ✨':platform==='instagram'?'Small moments, big memories. ✨ #DailyUpdate':platform==='linkedin'?'I’ve been working on a new project and learned a lot along the way. Here are a few takeaways.':platform==='threads'?'What’s one small thing that made your day better?':'New community update! What should we make next?';
-  $('client').value=c.client;
-  $('metricOneLabel').textContent=c.metrics[0];$('metricTwoLabel').textContent=c.metrics[1];$('metricThreeLabel').textContent=c.metrics[2];
-  $('outMetricOneLabel').textContent=c.metrics[0];$('outMetricTwoLabel').textContent=c.metrics[1];$('outMetricThreeLabel').textContent=c.metrics[2];
-  $('outHandlePrefix').textContent=c.handle;
-  $('post').classList.add(platform);
-  $('post').dataset.platform=platform;
-  $('messageCount').previousElementSibling.textContent='Up to '+c.limit.toLocaleString()+' characters';
-  let context=$('post').querySelector('.platform-context');
-  if(!context){context=document.createElement('div');context.className='platform-context';$('outMessage').insertAdjacentElement('afterend',context);}
-  const settingField=document.createElement('div');settingField.className='field platform-setting';
-  const settingLabel=document.createElement('label');settingLabel.htmlFor='platformSetting';settingLabel.textContent=c.settingLabel;
-  const settingSelect=document.createElement('select');settingSelect.id='platformSetting';settingSelect.className='platform-setting-select';
-  c.settingOptions.forEach(option=>{const el=document.createElement('option');el.value=option;el.textContent=option;settingSelect.appendChild(el);});
-  settingField.append(settingLabel,settingSelect);
-  const themeField=document.querySelector('input[name=theme]')?.closest('.field');
-  if(themeField)themeField.parentNode.insertBefore(settingField,themeField);
-  const poll=document.createElement('div');poll.className='community-poll';poll.innerHTML='<strong>Sample community poll</strong><div>Which should we cover next?</div><span>AI tools <b>62%</b></span><span>Mobile tips <b>38%</b></span>';poll.hidden=true;
-  $('postMedia').insertAdjacentElement('afterend',poll);
-  const actions=$('post').querySelector('.post-actions');
-  actions.innerHTML=c.actions.map((label,i)=>'<span class="action action-'+i+'"><span class="action-glyph" aria-hidden="true">'+({Like:'♡',Reply:'↩',Replies:'↩',Repost:'⟳',Reposts:'⟳',Comment:'▢',Comments:'▢',Share:'↗',Send:'➤',Save:'⌑',Views:'◉'}[label]||'•')+'</span>'+label+'</span>').join('');
+  document.title=c.name+' Post Card Designer | Laxman Nepal';
+  $('platformName').textContent=c.name;$('eyebrow').textContent='✦ '+c.name.toUpperCase()+' CARD DESIGNER';
+  $('pageTitle').textContent=c.name+' Post Card Designer';
+  $('pageDescription').textContent='Design a customizable fictional '+c.name+'-inspired post card inside your own frame. Adjust proportions, spacing, colors, shadows and text fit, then export a PNG.';
+  $('usernameLabel').textContent=c.usernameLabel;
+  $('displayName').value='Laxman Nepal';$('username').value='@laxmannepal';$('message').value='your post show here ,';
+  $('outName').textContent='Laxman Nepal';$('outUsername').textContent='@laxmannepal';$('outMessage').textContent='your post show here ,';
+  $('outHandlePrefix').textContent='';
+  $('avatarImage').src=DEFAULT_AVATAR;$('avatarImage').hidden=false;$('avatarFallback').hidden=true;
+  $('fileName').textContent='Default profile picture loaded';
+  $('post').classList.add(platform);$('post').dataset.platform=platform;
+  $('messageCount').textContent=$('message').value.length+'/10000';
   document.querySelectorAll('.platforms a').forEach(a=>{if(a.dataset.platform===platform)a.setAttribute('aria-current','page');});
-  const formatCount=value=>{const n=Math.max(0,Number(value)||0);return n>=1e6?(n/1e6).toFixed(n%1e6===0?0:1)+'M':n>=1e3?(n/1e3).toFixed(n%1e3===0?0:1)+'K':String(n);};
-  function update(){
-    const name=$('displayName').value.trim()||'Sample Creator';
-    const user=$('username').value.trim().replace(platform==='facebook'||platform==='linkedin'?/[^a-zA-Z0-9 ._·-]/g:/[^a-zA-Z0-9_.]/g,'').slice(0,40);
-    if($('username').value!==user)$('username').value=user;
-    $('outName').textContent=name;$('outUsername').textContent=user||(platform==='facebook'?'Sample Creator':'sample_creator');
-    $('outMessage').textContent=$('message').value;
-    $('outTime').textContent=$('time').value.trim()||'Time';$('outDate').textContent=$('date').value.trim()||'Date';
-    $('outClient').textContent=$('client').value.trim()||c.client;
-    $('outMetricOne').textContent=formatCount($('metricOne').value);$('outMetricTwo').textContent=formatCount($('metricTwo').value);$('outMetricThree').textContent=formatCount($('metricThree').value);
-    $('nameCount').textContent=$('displayName').value.length+'/'+c.nameLimit;$('userCount').textContent=user.length+'/'+c.handleLimit;$('messageCount').textContent=$('message').value.length+'/'+c.limit;
-    const settingValue=settingSelect.value;
-    context.textContent=platform==='instagram'?(settingValue==='Caption only'?'Caption-only post · no image required':'Photo feed post'):platform==='youtube'?(settingValue==='Poll'?'Community · Poll':settingValue==='Image post'?'Community · Image post':'Community · Text post'):c.settingPrefix+settingValue;
-    context.hidden=false;
-    poll.hidden=!(platform==='youtube'&&settingValue==='Poll');
-    const media=$('postMedia'),hasMedia=!!media.getAttribute('src');
-    const showMedia=hasMedia&&!(platform==='instagram'&&settingValue==='Caption only')&&!(platform==='youtube'&&settingValue!=='Image post')&&!(platform==='youtube'&&settingValue==='Poll');
-    media.hidden=!showMedia;media.classList.toggle('visible',showMedia);
-    $('avatarFallback').textContent=[...name][0]?.toUpperCase()||'S';
-    $('post').classList.remove('dim','dark');
-    const theme=document.querySelector('input[name=theme]:checked')?.value||'light';if(theme!=='light')$('post').classList.add(theme);
-    $('verifiedBadge').classList.toggle('show',document.querySelector('input[name=verified]:checked')?.value==='show');
+  const root=document.documentElement, frame=$('frame'), post=$('post'), message=$('outMessage');
+  const pairs=[['frameWidth','frameWidthOut',' px'],['framePadding','framePaddingOut',' px'],['frameRadius','frameRadiusOut',' px'],['cardPadding','cardPaddingOut',' px'],['cardRadius','cardRadiusOut',' px'],['cardWidth','cardWidthOut','%'],['fontSize','fontSizeOut',' px'],['avatarSize','avatarSizeOut',' px'],['nameSize','nameSizeOut',' px']];
+  function apply(){
+    const ratio=$('frameRatio').value;
+    frame.style.aspectRatio=ratio==='auto'?'auto':ratio;
+    frame.classList.toggle('no-frame-shadow',$('frameShadow').value==='off');
+    frame.style.width='min('+ $('frameWidth').value+'px, 100%)';
+    frame.style.padding=$('framePadding').value+'px';
+    frame.style.borderRadius=$('frameRadius').value+'px';
+    frame.style.background=$('frameColor').value;
+    frame.style.boxShadow=$('frameShadow').value==='on'?'0 12px 34px rgba(15,23,42,.15)':'none';
+    post.style.padding=$('cardPadding').value+'px';
+    post.style.borderRadius=$('cardRadius').value+'px';
+    post.style.background=$('cardColor').value;
+    post.style.color=$('cardTextColor').value;
+    post.style.width=$('cardWidth').value+'%';
+    post.style.maxWidth='none';
+    post.style.boxShadow=$('cardShadow').value==='on'?'0 8px 26px rgba(15,23,42,.20)':'none';
+    post.style.border=$('cardBorder').value==='on'?'1px solid rgba(100,116,139,.35)':'none';
+    post.style.height=$('postHeight').value==='auto'?'100%':$('postHeight').value+'px';
+    post.style.minHeight=$('postHeight').value==='auto'?'0':$('postHeight').value+'px';
+    post.style.alignSelf='center';
+    post.style.setProperty('--custom-avatar-size',$('avatarSize').value+'px');
+    post.style.setProperty('--custom-avatar-shape',$('avatarShape').value);
+    post.style.setProperty('--custom-name-size',$('nameSize').value+'px');
+    post.style.setProperty('--custom-handle-color',$('handleColor').value);
+    $('verifiedBadge').classList.toggle('show',$('showBadge').value==='on');
+    $('post').querySelector('.mock-label').hidden=$('showLabel').value==='off';
+    pairs.forEach(([id,out,suffix])=>$(out).textContent=$(id).value+suffix);
+    fitMessage();
   }
-  ['displayName','username','message','time','date','client','metricOne','metricTwo','metricThree'].forEach(id=>$(id).addEventListener('input',update));
-  settingSelect.addEventListener('change',update);
-  document.querySelectorAll('input[name=theme],input[name=verified]').forEach(el=>el.addEventListener('change',update));
+  function fitMessage(){
+    const behavior=$('fitText').value, requested=Number($('fontSize').value);
+    message.style.fontSize=requested+'px';message.style.overflow='hidden';
+    post.style.overflow='hidden';
+    if($('postHeight').value==='auto' && $('frameRatio').value==='auto'){
+      post.style.height='auto';post.style.minHeight='0';message.style.overflow='visible';
+      return;
+    }
+    if(behavior==='grow'){
+      post.style.height='auto';post.style.minHeight='100%';message.style.overflow='visible';return;
+    }
+    if(behavior==='scroll'){
+      message.style.overflow='auto';message.style.flex='1 1 auto';message.style.minHeight='0';return;
+    }
+    message.style.flex='1 1 auto';message.style.minHeight='0';
+    let size=requested;
+    for(let i=0;i<36;i++){
+      message.style.fontSize=size+'px';
+      if(message.scrollHeight<=message.clientHeight+1)break;
+      size=Math.max(7,size-.5);
+    }
+  }
+  ['displayName','username','message'].forEach(id=>$(id).addEventListener('input',()=>{
+    $('outName').textContent=$('displayName').value||'Laxman Nepal';
+    let user=$('username').value.trim();if(user&& !user.startsWith('@'))user='@'+user;
+    $('outUsername').textContent=user||'@laxmannepal';
+    $('outMessage').textContent=$('message').value;
+    $('nameCount').textContent=$('displayName').value.length+'/50';
+    $('userCount').textContent=$('username').value.length+'/40';
+    $('messageCount').textContent=$('message').value.length+'/10000';
+    fitMessage();
+  }));
+  const controlIds=['frameRatio','frameWidth','framePadding','frameRadius','frameColor','frameShadow','cardPadding','cardRadius','cardColor','cardTextColor','cardWidth','postHeight','fontSize','fitText','cardShadow','cardBorder','avatarSize','avatarShape','nameSize','handleColor','showBadge','showLabel'];
+  controlIds.forEach(id=>$(id).addEventListener('input',apply));
+  controlIds.forEach(id=>$(id).addEventListener('change',apply));
   $('avatarInput').addEventListener('change',e=>{
-    const f=e.target.files&&e.target.files[0];if(!f)return;
-    if(!/^image\/(png|jpeg|webp)$/.test(f.type)){alert('Choose a PNG, JPG or WebP image.');e.target.value='';return}
-    if(f.size>5*1024*1024){alert('Please choose an image under 5 MB.');e.target.value='';return}
-    const reader=new FileReader();reader.onload=()=>{$('avatarImage').src=reader.result;$('avatarImage').hidden=false;$('avatarFallback').hidden=true;$('fileName').textContent=f.name};reader.readAsDataURL(f);
-  });
-  if($('mediaInput'))$('mediaInput').addEventListener('change',e=>{
-    const f=e.target.files&&e.target.files[0];if(!f)return;
-    if(!/^image\/(png|jpeg|webp)$/.test(f.type)){alert('Choose a PNG, JPG or WebP image.');e.target.value='';return}
-    if(f.size>5*1024*1024){alert('Please choose an image under 5 MB.');e.target.value='';return}
-    const reader=new FileReader();reader.onload=()=>{$('postMedia').src=reader.result;$('mediaFileName').textContent=f.name;if(platform==='youtube')settingSelect.value='Image post';update();};reader.readAsDataURL(f);
+    const file=e.target.files&&e.target.files[0];if(!file)return;
+    if(!/^image\/(png|jpeg|webp)$/.test(file.type)){alert('Choose a PNG, JPG or WebP image.');e.target.value='';return;}
+    if(file.size>5*1024*1024){alert('Choose an image under 5 MB.');e.target.value='';return;}
+    const reader=new FileReader();reader.onload=()=>{$('avatarImage').src=reader.result;$('avatarImage').hidden=false;$('avatarFallback').hidden=true;$('fileName').textContent=file.name;};reader.readAsDataURL(file);
   });
   $('resetBtn').addEventListener('click',()=>{
-    $('displayName').value='Sample Creator';$('username').value=platform==='facebook'?'Sample Creator':platform==='linkedin'?'Sample Creator · Product Designer':'sample_creator';
-    $('message').value=platform==='twitter'?'Quick update: building something useful today. ✨':platform==='facebook'?'A little update from my day. What do you think? ✨':platform==='instagram'?'Small moments, big memories. ✨ #DailyUpdate':platform==='linkedin'?'I’ve been working on a new project and learned a lot along the way. Here are a few takeaways.':platform==='threads'?'What’s one small thing that made your day better?':'New community update! What should we make next?';
-    $('time').value='4:38 PM';$('date').value='Oct 13, 2026';$('client').value=c.client;$('metricOne').value='100';$('metricTwo').value='12';$('metricThree').value='453';
-    document.querySelector('input[name=theme][value=light]').checked=true;document.querySelector('input[name=verified][value=hide]').checked=true;settingSelect.selectedIndex=0;
-    $('avatarInput').value='';$('avatarImage').removeAttribute('src');$('avatarImage').hidden=true;$('avatarFallback').hidden=false;$('fileName').textContent='No image selected';
-    if($('mediaInput')){$('mediaInput').value='';$('postMedia').removeAttribute('src');$('postMedia').hidden=true;$('postMedia').classList.remove('visible');$('mediaFileName').textContent='No image selected';}
-    update();
+    $('displayName').value='Laxman Nepal';$('username').value='@laxmannepal';$('message').value='your post show here ,';
+    $('avatarInput').value='';$('avatarImage').src=DEFAULT_AVATAR;$('avatarImage').hidden=false;$('avatarFallback').hidden=true;$('fileName').textContent='Default profile picture loaded';
+    const defaults={frameRatio:'1 / 1',frameWidth:520,framePadding:24,frameRadius:18,frameColor:'#eef2f7',frameShadow:'on',cardPadding:18,cardRadius:14,cardColor:'#ffffff',cardTextColor:'#17202b',cardWidth:100,postHeight:'auto',fontSize:16,fitText:'shrink',cardShadow:'off',cardBorder:'on',avatarSize:48,avatarShape:'50%',nameSize:16,handleColor:'#64748b',showBadge:'off',showLabel:'on'};
+    Object.entries(defaults).forEach(([id,value])=>$(id).value=value);
+    $('nameCount').textContent='12/50';$('userCount').textContent='12/40';$('messageCount').textContent=$('message').value.length+'/10000';
+    $('outName').textContent='Laxman Nepal';$('outUsername').textContent='@laxmannepal';$('outMessage').textContent='your post show here ,';apply();
   });
   $('downloadBtn').addEventListener('click',async()=>{
-    const b=$('downloadBtn');if(typeof window.html2canvas!=='function'){alert('Image export library is still loading. Please try again in a moment.');return}
-    b.disabled=true;b.textContent='Preparing PNG…';
-    try{const canvas=await window.html2canvas($('post'),{scale:window.devicePixelRatio>1?2:1,backgroundColor:null,useCORS:true,logging:false});const a=document.createElement('a');a.download='fictional-'+platform+'-mockup.png';a.href=canvas.toDataURL('image/png');a.click();}
-    catch(e){alert('Could not export the image. Please try a smaller profile or post image.');}
-    finally{b.disabled=false;b.textContent='Download PNG';}
+    const button=$('downloadBtn');
+    if(typeof window.html2canvas!=='function'){alert('PNG export is loading. Please try again in a moment.');return;}
+    button.disabled=true;button.textContent='Preparing PNG…';
+    try{
+      const canvas=await window.html2canvas(frame,{scale:2,backgroundColor:null,useCORS:true,logging:false});
+      const link=document.createElement('a');link.download='laxman-nepal-'+platform+'-post-card.png';link.href=canvas.toDataURL('image/png');link.click();
+    }catch(error){alert('PNG export failed. Please try a smaller frame or profile picture.');}
+    finally{button.disabled=false;button.textContent='Download PNG';}
   });
-  update();
-})(),settingLabel:'Community format',settingOptions:['Text post','Image post','Poll'],settingPrefix:'Community · ';
+  apply();
+})();
