@@ -80,7 +80,7 @@
     $('displayName').value='Sample Creator';$('username').value=platform==='facebook'?'Sample Creator':platform==='linkedin'?'Sample Creator · Product Designer':'sample_creator';
     $('message').value=platform==='twitter'?'Quick update: building something useful today. ✨':platform==='facebook'?'A little update from my day. What do you think? ✨':platform==='instagram'?'Small moments, big memories. ✨ #DailyUpdate':platform==='linkedin'?'I’ve been working on a new project and learned a lot along the way. Here are a few takeaways.':platform==='threads'?'What’s one small thing that made your day better?':'New community update! What should we make next?';
     $('time').value='4:38 PM';$('date').value='Oct 13, 2026';$('client').value=c.client;$('metricOne').value='100';$('metricTwo').value='12';$('metricThree').value='453';
-    document.querySelector('input[name=theme][value=light]').checked=true;document.querySelector('input[name=verified][value=hide]').checked=true;
+    document.querySelector('input[name=theme][value=light]').checked=true;document.querySelector('input[name=verified][value=hide]').checked=true;settingSelect.selectedIndex=0;
     $('avatarInput').value='';$('avatarImage').removeAttribute('src');$('avatarImage').hidden=true;$('avatarFallback').hidden=false;$('fileName').textContent='No image selected';
     if($('mediaInput')){$('mediaInput').value='';$('postMedia').removeAttribute('src');$('postMedia').hidden=true;$('postMedia').classList.remove('visible');$('mediaFileName').textContent='No image selected';}
     update();
