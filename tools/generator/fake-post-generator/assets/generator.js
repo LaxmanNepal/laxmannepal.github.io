@@ -20,16 +20,17 @@
   $('displayName').value='Laxman Nepal';$('username').value='@laxmannepal';$('message').value='your post show here ,';
   $('outName').textContent='Laxman Nepal';$('outUsername').textContent='@laxmannepal';$('outMessage').textContent='your post show here ,';
   $('outHandlePrefix').textContent='';
-  $('avatarImage').src=DEFAULT_AVATAR;$('avatarImage').hidden=false;$('avatarFallback').hidden=true;
+  $('avatarImage').crossOrigin='anonymous';$('avatarImage').src=DEFAULT_AVATAR;$('avatarImage').hidden=false;$('avatarFallback').hidden=true;
   $('fileName').textContent='Default profile picture loaded';
   $('post').classList.add(platform);$('post').dataset.platform=platform;
   $('messageCount').textContent=$('message').value.length+'/10000';
   document.querySelectorAll('.platforms a').forEach(a=>{if(a.dataset.platform===platform)a.setAttribute('aria-current','page');});
   const root=document.documentElement, frame=$('frame'), post=$('post'), message=$('outMessage');
-  const pairs=[['frameWidth','frameWidthOut',' px'],['framePadding','framePaddingOut',' px'],['frameRadius','frameRadiusOut',' px'],['cardPadding','cardPaddingOut',' px'],['cardRadius','cardRadiusOut',' px'],['cardWidth','cardWidthOut','%'],['fontSize','fontSizeOut',' px'],['avatarSize','avatarSizeOut',' px'],['nameSize','nameSizeOut',' px']];
+  const pairs=[['frameWidth','frameWidthOut',' px'],['frameHeight','frameHeightOut',' px'],['framePadding','framePaddingOut',' px'],['frameRadius','frameRadiusOut',' px'],['cardPadding','cardPaddingOut',' px'],['cardRadius','cardRadiusOut',' px'],['cardWidth','cardWidthOut','%'],['fontSize','fontSizeOut',' px'],['avatarSize','avatarSizeOut',' px'],['nameSize','nameSizeOut',' px']];
   function apply(){
     const ratio=$('frameRatio').value;
-    frame.style.aspectRatio=ratio==='auto'?'auto':ratio;
+    frame.style.aspectRatio=(ratio==='auto'||ratio==='custom')?'auto':ratio;
+    frame.style.height=ratio==='custom'?$('frameHeight').value+'px':'auto';
     frame.classList.toggle('no-frame-shadow',$('frameShadow').value==='off');
     frame.style.width='min('+ $('frameWidth').value+'px, 100%)';
     frame.style.padding=$('framePadding').value+'px';
@@ -88,19 +89,19 @@
     $('messageCount').textContent=$('message').value.length+'/10000';
     fitMessage();
   }));
-  const controlIds=['frameRatio','frameWidth','framePadding','frameRadius','frameColor','frameShadow','cardPadding','cardRadius','cardColor','cardTextColor','cardWidth','postHeight','fontSize','fitText','cardShadow','cardBorder','avatarSize','avatarShape','nameSize','handleColor','showBadge','showLabel'];
+  const controlIds=['frameRatio','frameWidth','frameHeight','framePadding','frameRadius','frameColor','frameShadow','cardPadding','cardRadius','cardColor','cardTextColor','cardWidth','postHeight','fontSize','fitText','cardShadow','cardBorder','avatarSize','avatarShape','nameSize','handleColor','showBadge','showLabel'];
   controlIds.forEach(id=>$(id).addEventListener('input',apply));
   controlIds.forEach(id=>$(id).addEventListener('change',apply));
   $('avatarInput').addEventListener('change',e=>{
     const file=e.target.files&&e.target.files[0];if(!file)return;
     if(!/^image\/(png|jpeg|webp)$/.test(file.type)){alert('Choose a PNG, JPG or WebP image.');e.target.value='';return;}
     if(file.size>5*1024*1024){alert('Choose an image under 5 MB.');e.target.value='';return;}
-    const reader=new FileReader();reader.onload=()=>{$('avatarImage').src=reader.result;$('avatarImage').hidden=false;$('avatarFallback').hidden=true;$('fileName').textContent=file.name;};reader.readAsDataURL(file);
+    const reader=new FileReader();reader.onload=()=>{$('avatarImage').removeAttribute('crossorigin');$('avatarImage').src=reader.result;$('avatarImage').hidden=false;$('avatarFallback').hidden=true;$('fileName').textContent=file.name;};reader.readAsDataURL(file);
   });
   $('resetBtn').addEventListener('click',()=>{
     $('displayName').value='Laxman Nepal';$('username').value='@laxmannepal';$('message').value='your post show here ,';
     $('avatarInput').value='';$('avatarImage').src=DEFAULT_AVATAR;$('avatarImage').hidden=false;$('avatarFallback').hidden=true;$('fileName').textContent='Default profile picture loaded';
-    const defaults={frameRatio:'1 / 1',frameWidth:520,framePadding:24,frameRadius:18,frameColor:'#eef2f7',frameShadow:'on',cardPadding:18,cardRadius:14,cardColor:'#ffffff',cardTextColor:'#17202b',cardWidth:100,postHeight:'auto',fontSize:16,fitText:'shrink',cardShadow:'off',cardBorder:'on',avatarSize:48,avatarShape:'50%',nameSize:16,handleColor:'#64748b',showBadge:'off',showLabel:'on'};
+    const defaults={frameRatio:'1 / 1',frameWidth:520,frameHeight:520,framePadding:24,frameRadius:18,frameColor:'#eef2f7',frameShadow:'on',cardPadding:18,cardRadius:14,cardColor:'#ffffff',cardTextColor:'#17202b',cardWidth:100,postHeight:'auto',fontSize:16,fitText:'shrink',cardShadow:'off',cardBorder:'on',avatarSize:48,avatarShape:'50%',nameSize:16,handleColor:'#64748b',showBadge:'off',showLabel:'on'};
     Object.entries(defaults).forEach(([id,value])=>$(id).value=value);
     $('nameCount').textContent='12/50';$('userCount').textContent='12/40';$('messageCount').textContent=$('message').value.length+'/10000';
     $('outName').textContent='Laxman Nepal';$('outUsername').textContent='@laxmannepal';$('outMessage').textContent='your post show here ,';apply();
