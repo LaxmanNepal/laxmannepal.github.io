@@ -1,3 +1,21 @@
+<link rel="stylesheet" href="/assets/css/shared-shell.css">
+<header class="shared-header" id="site-header">
+  <a class="shared-brand" href="/" aria-label="Laxman Nepal home"><span class="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Guides</small></span></a>
+  <nav class="shared-desktop-nav" aria-label="Primary navigation">
+    <a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI Tools</a><a href="/blog/">Blog</a>
+    <details class="nav-dropdown"><summary>Explore⌄</summary><div class="nav-dropdown-menu"><a href="/apps/">Apps</a><a href="/mobile/">Mobile</a><a href="/news/">News</a><a href="/contact/">Contact</a></div></details>
+  </nav>
+  <div class="shared-actions">
+    <label class="shared-search-box" aria-label="Search website"><span aria-hidden="true">⌕</span><input id="global-nav-search" type="search" placeholder="Search…" autocomplete="off"></label>
+    <button class="shared-menu-btn" id="shared-menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+<div class="shared-menu-backdrop" id="shared-menu-backdrop"></div>
+<nav class="shared-mobile-menu" id="shared-mobile-menu" aria-label="Mobile navigation">
+  <div class="shared-mobile-head"><strong>Navigation</strong><button id="shared-menu-close" type="button" aria-label="Close navigation">×</button></div>
+  <a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI Tools</a><a href="/blog/">Blog</a><a href="/apps/">Apps</a><a href="/mobile/">Mobile</a><a href="/news/">News</a><a href="/contact/">Contact</a>
+  <div class="shared-mobile-search"><span aria-hidden="true">⌕</span><input id="shared-mobile-search-input" type="search" placeholder="Search tools, guides & articles…" aria-label="Search website"></div>
+</nav>
  <style>
 @import url("./site-theme.css");
 
@@ -4285,6 +4303,93 @@ figcaption {
                 </div>
             </div>
         </div>
+<footer class="shared-footer" id="site-footer">
+  <div class="shared-footer-grid">
+    <div>
+      <div class="shared-footer-brand"><span class="shared-logo">LN</span><strong>Laxman Nepal</strong></div>
+      <p>Free online tools, practical AI resources and useful digital guides to help you get things done simply.</p>
+    </div>
+    <div><strong>Explore</strong><a href="/tools/">All Tools</a><a href="/ai-tools/">AI Tools</a><a href="/apps/">Apps</a><a href="/mobile/">Mobile Guides</a></div>
+    <div><strong>Resources</strong><a href="/blog/">Blog & Tutorials</a><a href="/news/">News</a><a href="/youtube-tools/">YouTube Tools</a><a href="/search/">Search Website</a></div>
+    <div><strong>About</strong><a href="/about/">About Laxman Nepal</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy Policy</a></div>
+  </div>
+  <div class="shared-footer-bottom"><span>© <span id="ln-footer-year">2026</span> Laxman Nepal</span><span>Useful tools. Practical knowledge. Made for everyone.</span></div>
+</footer>
+<style id="ln-generator-shell-responsive">
+body{padding-top:88px!important}
+.shared-header{font-family:inherit;gap:clamp(7px,1.4vw,18px);padding:8px 12px!important}
+.shared-brand strong{font-size:15px}
+.shared-brand small{font-size:10px}
+.shared-desktop-nav{min-width:0}
+.shared-search-box{min-width:0}
+.shared-menu-btn{flex:0 0 40px;cursor:pointer}
+.shared-mobile-menu{gap:2px}
+.shared-mobile-menu a{font-size:15px;line-height:1.4}
+.shared-mobile-search{display:flex;align-items:center;gap:8px;margin:8px 0 2px;padding:11px 12px;border:1px solid var(--ln-line);border-radius:13px;background:rgba(118,118,128,.08)}
+.shared-mobile-search input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:var(--ln-text);font:inherit;font-size:14px}
+.shared-footer{width:min(calc(100% - 24px),1240px);margin:48px auto 12px;padding:0}
+.shared-footer-grid{gap:clamp(18px,3vw,38px);min-width:0}
+.shared-footer-grid>div{min-width:0}
+.shared-footer-grid a{line-height:1.5;overflow-wrap:anywhere}
+.shared-footer-brand{flex-wrap:wrap}
+.shared-footer-bottom{line-height:1.6;overflow-wrap:anywhere}
+.section.center{overflow-wrap:anywhere}
+.section.center p,.section.center label,.section.center h1,.section.center h2,.section.center h3{line-height:1.5;overflow-wrap:anywhere}
+@media(max-width:900px){
+ body{padding-top:82px!important}
+ .shared-header{left:12px!important;right:12px!important;width:auto!important;justify-content:space-between}
+ .shared-desktop-nav{display:none!important}
+ .shared-menu-btn{display:block!important}
+ .shared-search-box{width:min(38vw,210px);height:38px}
+ .shared-mobile-menu{inset:80px 12px auto 12px!important;max-height:calc(100dvh - 96px);overflow-y:auto}
+ .shared-mobile-menu.open{display:flex!important}
+ .shared-menu-backdrop{position:fixed;inset:0;z-index:1001;background:rgba(0,0,0,.22);backdrop-filter:blur(3px)}
+}
+@media(max-width:600px){
+ body{padding-top:76px!important}
+ .shared-header{top:7px!important;left:8px!important;right:8px!important;min-height:58px;gap:6px!important;padding:7px 8px!important;border-radius:18px}
+ .shared-logo{width:34px;height:34px;flex:0 0 34px}
+ .shared-brand{gap:7px;min-width:0}
+ .shared-brand>span:last-child{min-width:0}
+ .shared-brand>span:last-child strong{font-size:13px;white-space:nowrap}
+ .shared-brand small{display:none}
+ .shared-actions{gap:5px;min-width:0}
+ .shared-search-box{width:min(37vw,150px);height:36px;padding:0 8px;gap:5px}
+ .shared-search-box span{display:inline;font-size:16px}
+ .shared-search-box input{display:block;min-width:0;font-size:12px}
+ .shared-menu-btn{width:36px;height:36px;flex-basis:36px;border-radius:11px;font-size:18px}
+ .shared-mobile-menu{inset:72px 8px auto 8px!important;padding:10px;border-radius:18px}
+ .shared-mobile-menu>a{padding:11px;font-size:14px}
+ .section.center{width:calc(100% - 16px)!important;margin:14px auto 24px!important;padding:20px 14px!important;border-radius:18px}
+ .heading,h1.heading{font-size:clamp(29px,8.5vw,38px)!important;line-height:1.12!important}
+ .subheading,h2.subheading{font-size:14px!important;line-height:1.55!important;margin-bottom:18px!important}
+ #controls,.controls{gap:10px}
+ .shared-footer{width:calc(100% - 16px);margin-top:30px}
+ .shared-footer-grid{grid-template-columns:1fr!important;padding:22px 18px!important;gap:22px;border-radius:20px}
+ .shared-footer-grid>div>strong:not(.shared-footer-brand strong){margin-bottom:9px}
+ .shared-footer-grid a{margin:8px 0;font-size:13px}
+ .shared-footer p{font-size:13px;line-height:1.65}
+ .shared-footer-bottom{gap:6px;font-size:11px;padding:14px 4px}
+}
+@media(prefers-reduced-motion:reduce){.shared-header,.shared-mobile-menu,.shared-footer *{transition:none!important}}
+</style>
+<script id="ln-generator-shell-script">
+(function(){
+ const btn=document.getElementById('shared-menu-btn'),menu=document.getElementById('shared-mobile-menu'),back=document.getElementById('shared-menu-backdrop'),close=document.getElementById('shared-menu-close');
+ const mobileSearch=document.getElementById('shared-mobile-search-input'),desktopSearch=document.getElementById('global-nav-search');
+ if(!btn||!menu||!back||!close)return;
+ function setOpen(open){menu.classList.toggle('open',open);back.style.display=open?'block':'none';btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'Close navigation':'Open navigation');document.body.style.overflow=open?'hidden':''}
+ btn.addEventListener('click',()=>setOpen(!menu.classList.contains('open')));
+ close.addEventListener('click',()=>setOpen(false));back.addEventListener('click',()=>setOpen(false));
+ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+ function search(input){if(input&&input.value.trim())location.href='/search/?q='+encodeURIComponent(input.value.trim())}
+ desktopSearch?.addEventListener('keydown',e=>{if(e.key==='Enter')search(desktopSearch)});
+ mobileSearch?.addEventListener('keydown',e=>{if(e.key==='Enter')search(mobileSearch)});
+ const year=document.getElementById('ln-footer-year');if(year)year.textContent=new Date().getFullYear();
+})();
+</script>
+
         <script>
             (function(a, b) {
     if ("function" == typeof define && define.amd)
