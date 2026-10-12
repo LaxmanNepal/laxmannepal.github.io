@@ -1,11 +1,11 @@
 (() => {
   const $ = id => document.getElementById(id);
   const cfg = {
-    twitter:{name:'X / Twitter',brand:'#1d9bf0',handle:'@',metrics:['Reposts','Replies','Likes'],placeholder:'What is happening?!',client:'X for Web',limit:280,context:'',actions:['Reply','Repost','Like','Views'],description:'Create an X-style post with its compact text-first layout, @handle, timestamp, source label, reply/repost/like metrics and optional media. Standard posts are limited to 280 characters.'},
-    facebook:{name:'Facebook',brand:'#0866ff',handle:'',metrics:['Reactions','Comments','Shares'],placeholder:'What’s on your mind?',client:'Facebook Web',limit:5000,context:'🌐 Public · Feed post',actions:['Like','Comment','Share'],description:'Build a Facebook feed-style post with reaction totals, comments, shares, an audience label and optional photo. Use the audience label as illustrative context only.'},
-    instagram:{name:'Instagram',brand:'#c13584',handle:'@',metrics:['Likes','Comments','Shares'],placeholder:'Write a caption…',client:'Instagram',limit:2200,context:'',actions:['Like','Comment','Share','Save'],description:'Create a photo-first Instagram feed mockup with a square media area, caption, likes, comments, share and save actions. Add a local image to make the preview feel like a real feed post.'},
-    linkedin:{name:'LinkedIn',brand:'#0a66c2',handle:'',metrics:['Reactions','Comments','Reposts'],placeholder:'What would you like to share with your network?',client:'LinkedIn',limit:3000,context:'🌐 Anyone · Professional update',actions:['Like','Comment','Repost','Send'],description:'Create a professional LinkedIn update with profile identity, professional context, reactions, comments and reposts. The audience line is illustrative, not a live privacy setting.'},
-    threads:{name:'Threads',brand:'#111111',handle:'@',metrics:['Likes','Replies','Reposts'],placeholder:'Start a thread…',client:'Threads',limit:500,context:'',actions:['Like','Reply','Repost','Share'],description:'Create a Threads-style text-first post with an @handle, short conversational copy, replies, reposts and likes. The standard post text field is set to 500 characters.'},
+    twitter:{name:'X / Twitter',brand:'#1d9bf0',handle:'@',metrics:['Reposts','Replies','Likes'],placeholder:'What is happening?!',client:'X for Web',limit:280,context:'',actions:['Reply','Repost','Like','Views'],description:'Create an X-style post with its compact text-first layout, @handle, timestamp, source label, reply/repost/like metrics and optional media. Standard posts are limited to 280 characters.',settingLabel:'Reply permissions',settingOptions:['Everyone can reply','Accounts you follow','Only accounts mentioned'],settingPrefix:'Replies: ',},
+    facebook:{name:'Facebook',brand:'#0866ff',handle:'',metrics:['Reactions','Comments','Shares'],placeholder:'What’s on your mind?',client:'Facebook Web',limit:5000,context:'🌐 Public · Feed post',actions:['Like','Comment','Share'],description:'Build a Facebook feed-style post with reaction totals, comments, shares, an audience label and optional photo. Use the audience label as illustrative context only.',settingLabel:'Post audience',settingOptions:['Public','Friends','Only me'],settingPrefix:'Audience: ',},
+    instagram:{name:'Instagram',brand:'#c13584',handle:'@',metrics:['Likes','Comments','Shares'],placeholder:'Write a caption…',client:'Instagram',limit:2200,context:'',actions:['Like','Comment','Share','Save'],description:'Create a photo-first Instagram feed mockup with a square media area, caption, likes, comments, share and save actions. Add a local image to make the preview feel like a real feed post.',settingLabel:'Post format',settingOptions:['Feed photo','Caption only'],settingPrefix:'Format: ',},
+    linkedin:{name:'LinkedIn',brand:'#0a66c2',handle:'',metrics:['Reactions','Comments','Reposts'],placeholder:'What would you like to share with your network?',client:'LinkedIn',limit:3000,context:'🌐 Anyone · Professional update',actions:['Like','Comment','Repost','Send'],description:'Create a professional LinkedIn update with profile identity, professional context, reactions, comments and reposts. The audience line is illustrative, not a live privacy setting.',settingLabel:'Post audience',settingOptions:['Anyone','Connections only','Group members'],settingPrefix:'Audience: ',},
+    threads:{name:'Threads',brand:'#111111',handle:'@',metrics:['Likes','Replies','Reposts'],placeholder:'Start a thread…',client:'Threads',limit:500,context:'',actions:['Like','Reply','Repost','Share'],description:'Create a Threads-style text-first post with an @handle, short conversational copy, replies, reposts and likes. The standard post text field is set to 500 characters.',settingLabel:'Reply controls',settingOptions:['Everyone','Followers only','Mentioned profiles only'],settingPrefix:'Replies: ',},
     youtube:{name:'YouTube Community',brand:'#ff0033',handle:'@',metrics:['Likes','Comments','Shares'],placeholder:'Share something with your community…',client:'YouTube',limit:5000,context:'Community post',actions:['Like','Comment','Share'],description:'Create a YouTube Community-style creator update with channel handle, optional image, likes, comments and shares. Community posts can include text or media; this mockup focuses on a single image or text post.'}
   };
   const platform=document.body.dataset.platform||'twitter', c=cfg[platform]||cfg.twitter;
@@ -29,7 +29,19 @@
   $('messageCount').previousElementSibling.textContent='Up to '+c.limit.toLocaleString()+' characters';
   let context=$('post').querySelector('.platform-context');
   if(!context){context=document.createElement('div');context.className='platform-context';$('outMessage').insertAdjacentElement('afterend',context);}
-  context.textContent=c.context;context.hidden=!c.context;
+  const settingValue=settingSelect.value;
+    context.textContent=platform==='instagram'?(settingValue==='Caption only'?'Caption-only post · no image required':'Photo feed post'):platform==='youtube'?(settingValue==='Poll'?'Community · Poll':settingValue==='Image post'?'Community · Image post':'Community · Text post'):c.settingPrefix+settingValue;
+    context.hidden=false;
+    poll.hidden=!(platform==='youtube'&&settingValue==='Poll');
+  const settingField=document.createElement('div');settingField.className='field platform-setting';
+  const settingLabel=document.createElement('label');settingLabel.htmlFor='platformSetting';settingLabel.textContent=c.settingLabel;
+  const settingSelect=document.createElement('select');settingSelect.id='platformSetting';settingSelect.className='platform-setting-select';
+  c.settingOptions.forEach((option,index)=>{const el=document.createElement('option');el.value=option;el.textContent=option;settingSelect.appendChild(el);});
+  settingField.append(settingLabel,settingSelect);
+  const themeField=document.querySelector('input[name=theme]')?.closest('.field');
+  if(themeField)themeField.parentNode.insertBefore(settingField,themeField);
+  const poll=document.createElement('div');poll.className='community-poll';poll.innerHTML='<strong>Sample community poll</strong><div>Which should we cover next?</div><span>AI tools <b>62%</b></span><span>Mobile tips <b>38%</b></span>';poll.hidden=true;
+  $('postMedia').insertAdjacentElement('afterend',poll);
   const actions=$('post').querySelector('.post-actions');
   actions.innerHTML=c.actions.map((label,i)=>'<span class="action action-'+i+'"><span class="action-glyph" aria-hidden="true">'+({Like:'♡',Reply:'↩',Replies:'↩',Repost:'⟳',Reposts:'⟳',Comment:'▢',Comments:'▢',Share:'↗',Send:'➤',Save:'⌑',Views:'◉'}[label]||'•')+'</span>'+label+'</span>').join('');
   document.querySelectorAll('.platforms a').forEach(a=>{if(a.dataset.platform===platform)a.setAttribute('aria-current','page');});
@@ -50,6 +62,7 @@
     $('verifiedBadge').classList.toggle('show',document.querySelector('input[name=verified]:checked')?.value==='show');
   }
   ['displayName','username','message','time','date','client','metricOne','metricTwo','metricThree'].forEach(id=>$(id).addEventListener('input',update));
+  settingSelect.addEventListener('change',update);
   document.querySelectorAll('input[name=theme],input[name=verified]').forEach(el=>el.addEventListener('change',update));
   $('avatarInput').addEventListener('change',e=>{
     const f=e.target.files&&e.target.files[0];if(!f)return;
@@ -80,4 +93,4 @@
     finally{b.disabled=false;b.textContent='Download PNG';}
   });
   update();
-})();
+})(),settingLabel:'Community format',settingOptions:['Text post','Image post','Poll'],settingPrefix:'Community · ';
