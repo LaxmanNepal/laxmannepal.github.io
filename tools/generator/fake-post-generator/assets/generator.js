@@ -29,14 +29,10 @@
   $('messageCount').previousElementSibling.textContent='Up to '+c.limit.toLocaleString()+' characters';
   let context=$('post').querySelector('.platform-context');
   if(!context){context=document.createElement('div');context.className='platform-context';$('outMessage').insertAdjacentElement('afterend',context);}
-  const settingValue=settingSelect.value;
-    context.textContent=platform==='instagram'?(settingValue==='Caption only'?'Caption-only post · no image required':'Photo feed post'):platform==='youtube'?(settingValue==='Poll'?'Community · Poll':settingValue==='Image post'?'Community · Image post':'Community · Text post'):c.settingPrefix+settingValue;
-    context.hidden=false;
-    poll.hidden=!(platform==='youtube'&&settingValue==='Poll');
   const settingField=document.createElement('div');settingField.className='field platform-setting';
   const settingLabel=document.createElement('label');settingLabel.htmlFor='platformSetting';settingLabel.textContent=c.settingLabel;
   const settingSelect=document.createElement('select');settingSelect.id='platformSetting';settingSelect.className='platform-setting-select';
-  c.settingOptions.forEach((option,index)=>{const el=document.createElement('option');el.value=option;el.textContent=option;settingSelect.appendChild(el);});
+  c.settingOptions.forEach(option=>{const el=document.createElement('option');el.value=option;el.textContent=option;settingSelect.appendChild(el);});
   settingField.append(settingLabel,settingSelect);
   const themeField=document.querySelector('input[name=theme]')?.closest('.field');
   if(themeField)themeField.parentNode.insertBefore(settingField,themeField);
@@ -56,6 +52,10 @@
     $('outClient').textContent=$('client').value.trim()||c.client;
     $('outMetricOne').textContent=formatCount($('metricOne').value);$('outMetricTwo').textContent=formatCount($('metricTwo').value);$('outMetricThree').textContent=formatCount($('metricThree').value);
     $('nameCount').textContent=$('displayName').value.length+'/50';$('userCount').textContent=user.length+'/40';$('messageCount').textContent=$('message').value.length+'/'+c.limit;
+    const settingValue=settingSelect.value;
+    context.textContent=platform==='instagram'?(settingValue==='Caption only'?'Caption-only post · no image required':'Photo feed post'):platform==='youtube'?(settingValue==='Poll'?'Community · Poll':settingValue==='Image post'?'Community · Image post':'Community · Text post'):c.settingPrefix+settingValue;
+    context.hidden=false;
+    poll.hidden=!(platform==='youtube'&&settingValue==='Poll');
     $('avatarFallback').textContent=[...name][0]?.toUpperCase()||'S';
     $('post').classList.remove('dim','dark');
     const theme=document.querySelector('input[name=theme]:checked')?.value||'light';if(theme!=='light')$('post').classList.add(theme);
