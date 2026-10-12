@@ -56,6 +56,9 @@
     context.textContent=platform==='instagram'?(settingValue==='Caption only'?'Caption-only post · no image required':'Photo feed post'):platform==='youtube'?(settingValue==='Poll'?'Community · Poll':settingValue==='Image post'?'Community · Image post':'Community · Text post'):c.settingPrefix+settingValue;
     context.hidden=false;
     poll.hidden=!(platform==='youtube'&&settingValue==='Poll');
+    const media=$('postMedia'),hasMedia=!!media.getAttribute('src');
+    const showMedia=hasMedia&&!(platform==='instagram'&&settingValue==='Caption only')&&!(platform==='youtube'&&settingValue!=='Image post')&&!(platform==='youtube'&&settingValue==='Poll');
+    media.hidden=!showMedia;media.classList.toggle('visible',showMedia);
     $('avatarFallback').textContent=[...name][0]?.toUpperCase()||'S';
     $('post').classList.remove('dim','dark');
     const theme=document.querySelector('input[name=theme]:checked')?.value||'light';if(theme!=='light')$('post').classList.add(theme);
@@ -74,7 +77,7 @@
     const f=e.target.files&&e.target.files[0];if(!f)return;
     if(!/^image\/(png|jpeg|webp)$/.test(f.type)){alert('Choose a PNG, JPG or WebP image.');e.target.value='';return}
     if(f.size>5*1024*1024){alert('Please choose an image under 5 MB.');e.target.value='';return}
-    const reader=new FileReader();reader.onload=()=>{$('postMedia').src=reader.result;$('postMedia').hidden=false;$('postMedia').classList.add('visible');$('mediaFileName').textContent=f.name};reader.readAsDataURL(f);
+    const reader=new FileReader();reader.onload=()=>{$('postMedia').src=reader.result;$('mediaFileName').textContent=f.name;if(platform==='youtube')settingSelect.value='Image post';update();};reader.readAsDataURL(f);
   });
   $('resetBtn').addEventListener('click',()=>{
     $('displayName').value='Sample Creator';$('username').value=platform==='facebook'?'Sample Creator':platform==='linkedin'?'Sample Creator · Product Designer':'sample_creator';
