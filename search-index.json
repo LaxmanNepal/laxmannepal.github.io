@@ -405,6 +405,15 @@
     "image": "${snippet.thumbnails.medium.url}"
   },
   {
+    "title": "Fictional Post Generator | Laxman Nepal",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/tools/generator/fake-post-generator/twitter/",
+    "description": "Create clearly labeled fictional social post mockups for demos, stories, presentations, and design practice. Customize the profile, message, metrics, theme, and download a PNG.",
+    "keywords": "fictional post generator laxman nepal create clearly labeled social mockups for demos stories presentations and design practice. customize the profile message metrics theme download png. tools fake twitter index.html",
+    "image": ""
+  },
+  {
     "title": "File Extension Changer - Blogger Tool",
     "category": "Tools",
     "type": "tool",
