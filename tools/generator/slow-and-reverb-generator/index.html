@@ -4319,6 +4319,11 @@ figcaption {
   </div>
   <div class="ln-preset-note"><span aria-hidden="true">ⓘ</span><p><strong>Tip:</strong> Upload your own audio first. Presets adjust the existing controls; they do not upload or process audio by themselves. Use Download in the player when you're happy with the result.</p></div>
   <p class="ln-preset-status" id="ln-preset-status" role="status" aria-live="polite">Choose a preset to get started.</p>
+  <section class="ln-ab-compare" aria-labelledby="ln-ab-title">
+    <div class="ln-ab-copy"><span class="ln-preset-kicker">REFERENCE LISTENING</span><h3 id="ln-ab-title">Compare your mix</h3><p>Save your current settings as A, then switch to a dry, normal-speed reference as B. Keep playback running to compare the difference.</p></div>
+    <div class="ln-ab-actions"><button type="button" id="ln-save-mix" class="ln-ab-button ln-ab-primary">A · Save current mix</button><button type="button" id="ln-ab-toggle" class="ln-ab-button" disabled>B · Compare dry reference</button></div>
+    <p class="ln-ab-status" id="ln-ab-status" role="status" aria-live="polite">Save your mix first to enable A/B comparison.</p>
+  </section>
 </section>
 <style id="ln-preset-studio-css">
 .ln-preset-studio{width:min(calc(100% - 32px),1040px);margin:24px auto 42px;padding:clamp(20px,3.6vw,36px);border:1px solid rgba(255,255,255,.9);border-radius:26px;background:rgba(255,255,255,.82);box-shadow:0 12px 40px rgba(0,0,0,.06);color:var(--ln-text,#111114)}
@@ -4342,6 +4347,15 @@ figcaption {
 .ln-preset-status{min-height:1em;margin:12px 0 0;color:var(--ln-muted,#6e6e73);font-size:12px;line-height:1.5}
 @media(max-width:760px){.ln-preset-studio{width:calc(100% - 20px);margin:18px auto 28px;padding:20px;border-radius:20px}.ln-preset-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ln-preset-card{padding:14px;border-radius:15px}.ln-preset-heading{gap:10px}.ln-reset-preset{padding:9px 10px;white-space:nowrap}}
 @media(max-width:430px){.ln-preset-studio{width:calc(100% - 16px);padding:17px}.ln-preset-heading{display:block}.ln-reset-preset{margin-top:13px}.ln-preset-card{padding:12px}.ln-preset-card strong{font-size:13px}.ln-preset-card small{font-size:11px}.ln-preset-values{font-size:10px}}
+.ln-ab-compare{margin-top:20px;padding:18px;border:1px solid rgba(60,60,67,.13);border-radius:17px;background:rgba(255,255,255,.7)}
+.ln-ab-copy h3{margin:6px 0;font-size:20px;letter-spacing:-.025em;line-height:1.25}
+.ln-ab-copy p{max-width:680px;margin:0;color:var(--ln-muted,#6e6e73);font-size:13px;line-height:1.65}
+.ln-ab-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.ln-ab-button{min-height:42px;padding:10px 14px;border:1px solid var(--ln-line,rgba(60,60,67,.14));border-radius:12px;background:#fff;color:var(--ln-text,#111114);font:inherit;font-size:12px;font-weight:750;cursor:pointer}
+.ln-ab-primary{background:var(--ln-accent,#007aff);border-color:var(--ln-accent,#007aff);color:#fff}
+.ln-ab-button:disabled{opacity:.45;cursor:not-allowed}
+.ln-ab-status{min-height:1em;margin:10px 0 0;color:var(--ln-muted,#6e6e73);font-size:12px;line-height:1.5}
+@media(max-width:430px){.ln-ab-compare{padding:14px}.ln-ab-actions{display:grid;grid-template-columns:1fr}.ln-ab-button{width:100%}}
 @media(prefers-reduced-motion:reduce){.ln-preset-card{transition:none}}
 </style>
 <script id="ln-preset-studio-script">
@@ -4372,6 +4386,35 @@ figcaption {
   if([...impulse.options].some(o=>o.value===defaultImpulse))setValue(impulse,defaultImpulse,'change');
   cards.forEach(c=>c.setAttribute('aria-pressed','false'));
   status.textContent='Controls reset to the default starting values.';
+ });
+})();
+</script>
+<script id="ln-ab-compare-script">
+(function(){
+ const speed=document.getElementById('tempoChangerSlider');
+ const reverb=document.getElementById('reverbSlider');
+ const impulse=document.getElementById('impulseSelect');
+ const save=document.getElementById('ln-save-mix');
+ const toggle=document.getElementById('ln-ab-toggle');
+ const status=document.getElementById('ln-ab-status');
+ if(!speed||!reverb||!impulse||!save||!toggle||!status)return;
+ let saved=null,showingDry=false;
+ function capture(){return {speed:Number(speed.value),reverb:Number(reverb.value),impulse:impulse.value};}
+ function setControl(el,value,eventName){el.value=String(value);el.dispatchEvent(new Event(eventName,{bubbles:true}));}
+ function apply(settings){
+   setControl(speed,settings.speed,'input');
+   setControl(reverb,settings.reverb,'input');
+   if(Array.from(impulse.options).some(o=>o.value===settings.impulse))setControl(impulse,settings.impulse,'change');
+ }
+ function showSaved(){if(!saved)return;apply(saved);showingDry=false;toggle.textContent='B · Compare dry reference';status.textContent='A · Your saved mix is active.';}
+ function showDry(){apply({speed:1,reverb:0,impulse:saved.impulse});showingDry=true;toggle.textContent='A · Return to your saved mix';status.textContent='B · Dry reference active (normal speed, 0% reverb).';}
+ save.addEventListener('click',function(){
+   saved=capture();showingDry=false;toggle.disabled=false;toggle.textContent='B · Compare dry reference';
+   status.textContent='A saved: '+saved.speed.toFixed(2)+'× speed and '+Math.round(saved.reverb*100)+'% reverb. Playback can continue while you switch.';
+ });
+ toggle.addEventListener('click',function(){
+   if(!saved)return;
+   if(showingDry)showSaved();else showDry();
  });
 })();
 </script>
