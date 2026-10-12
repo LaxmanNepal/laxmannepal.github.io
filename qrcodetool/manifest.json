@@ -1,0 +1,11 @@
+{
+  "name": "QR Studio — Laxman Nepal",
+  "short_name": "QR Studio",
+  "start_url": "/qrcodetool/",
+  "scope": "/qrcodetool/",
+  "display": "standalone",
+  "background_color": "#f6f8fb",
+  "theme_color": "#ffffff",
+  "description": "All-in-one QR generator, scanner and QR utilities.",
+  "icons": []
+}
