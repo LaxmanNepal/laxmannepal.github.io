@@ -101,7 +101,7 @@ def link_related_terms(content, current_slug, articles, limit=5):
  return content
 
 def add_heading_ids(content):
- used=set(re.findall(r'\bid=["']([^"']+)["']',content,re.I))
+ used=set(re.findall(r"\bid=['\"]([^'\"]+)['\"]",content,re.I))
  def repl(m):
   level,attrs,inner=m.group(1),m.group(2),m.group(3)
   if re.search(r'\bid\s*=',attrs,re.I): return m.group(0)
