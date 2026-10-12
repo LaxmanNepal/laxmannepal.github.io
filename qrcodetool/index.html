@@ -26,7 +26,7 @@
 <div class="qr-tabs" role="tablist" aria-label="QR tool mode"><button class="qr-tab active" id="tab-create" type="button" role="tab" aria-selected="true">✦ Create QR</button><button class="qr-tab" id="tab-scan" type="button" role="tab" aria-selected="false">▣ Scan QR</button></div>
 <div id="create-panel">
 <div class="qr-fields">
-<div class="qr-field full"><label for="qr-type">What should your QR contain?</label><select id="qr-type"><option value="url">Website / URL</option><option value="text">Plain text</option><option value="wifi">Wi-Fi access</option><option value="contact">Contact card (vCard)</option><option value="email">Email message</option><option value="sms">SMS message</option><option value="phone">Phone number</option><option value="location">Map location</option><option value="event">Calendar event</option></select></div>
+<div class="qr-field full"><label for="qr-type">What should your QR contain?</label><select id="qr-type"><option value="url">Website / URL</option><option value="image">Image URL → QR</option><option value="text">Plain text</option><option value="wifi">Wi-Fi access</option><option value="contact">Contact card (vCard)</option><option value="email">Email message</option><option value="sms">SMS message</option><option value="phone">Phone number</option><option value="location">Map location</option><option value="event">Calendar event</option></select></div>
 <div class="qr-field full" id="field-main"><label for="qr-main" id="main-label">Website URL</label><input id="qr-main" type="url" placeholder="https://example.com" autocomplete="url"><span class="qr-help" id="main-help">Include https:// for the most reliable results.</span></div>
 <div class="qr-field full qr-hidden" id="wifi-fields"><div class="qr-fields"><div class="qr-field"><label for="wifi-name">Network name (SSID)</label><input id="wifi-name" placeholder="Your Wi-Fi name"></div><div class="qr-field"><label for="wifi-password">Password</label><input id="wifi-password" type="text" placeholder="Wi-Fi password"></div><div class="qr-field"><label for="wifi-security">Security</label><select id="wifi-security"><option value="WPA">WPA/WPA2</option><option value="WEP">WEP</option><option value="nopass">No password</option></select></div><div class="qr-field"><label><input type="checkbox" id="wifi-hidden" style="width:auto;min-height:0"> Hidden network</label></div></div></div>
 <div class="qr-field qr-hidden" id="contact-name-field"><label for="contact-name">Full name</label><input id="contact-name" placeholder="Alex Morgan"></div><div class="qr-field qr-hidden" id="contact-phone-field"><label for="contact-phone">Phone</label><input id="contact-phone" type="tel" placeholder="+977 98…"></div><div class="qr-field qr-hidden" id="contact-email-field"><label for="contact-email">Email</label><input id="contact-email" type="email" placeholder="name@example.com"></div>
@@ -66,10 +66,10 @@ const hidden=id=>$(id).classList.add('qr-hidden'), shown=id=>$(id).classList.rem
 const fieldGroups=['wifi-fields','contact-name-field','contact-phone-field','contact-email-field','email-to-field','email-subject-field','email-body-field','sms-phone-field','sms-body-field','event-title-field','event-start-field','event-end-field','extra-field'];
 function setupFields(){
  fieldGroups.forEach(hidden); const t=type.value;
- $('main-label').textContent=({url:'Website URL',text:'Your text',location:'Place, address or coordinates',phone:'Phone number'})[t]||'Content';
- $('main-help').textContent=({url:'Include https:// for the most reliable results.',text:'Keep text concise for a simpler, easier-to-scan QR code.',location:'A Google Maps URL or a place/address works best.',phone:'Include country code if sharing internationally.'})[t]||'Enter the information to encode.';
+ $('main-label').textContent=({url:'Website URL',image:'Public image URL',text:'Your text',location:'Place, address or coordinates',phone:'Phone number'})[t]||'Content';
+ $('main-help').textContent=({url:'Include https:// for the most reliable results.',image:'Paste a publicly accessible image URL. The QR opens the image; it does not contain the image file itself.',text:'Keep text concise for a simpler, easier-to-scan QR code.',location:'A Google Maps URL or a place/address works best.',phone:'Include country code if sharing internationally.'})[t]||'Enter the information to encode.';
  $('qr-main').type=t==='url'?'url':t==='phone'?'tel':'text';
- $('qr-main').placeholder=({url:'https://example.com',text:'Write anything you want to share…',location:'Hetauda, Nepal or 27.428… , 85.032…',phone:'+977 98…'})[t]||'Enter content…';
+ $('qr-main').placeholder=({url:'https://example.com',image:'https://example.com/photo.jpg',text:'Write anything you want to share…',location:'Hetauda, Nepal or 27.428… , 85.032…',phone:'+977 98…'})[t]||'Enter content…';
  if(t==='wifi')shown('wifi-fields');
  if(t==='contact'){['contact-name-field','contact-phone-field','contact-email-field'].forEach(shown)}
  if(t==='email'){['email-to-field','email-subject-field','email-body-field'].forEach(shown)}
@@ -81,7 +81,7 @@ function setupFields(){
 function escV(s){return String(s||'').replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/:/g,'\\:').replace(/\n/g,'\\n')}
 function makeContent(){
  const t=type.value, main=$('qr-main').value.trim();
- if(t==='url'){if(!main)throw Error('Enter a website URL.');let u;try{u=new URL(main)}catch(e){throw Error('Enter a valid URL such as https://example.com.')}if(!['http:','https:','mailto:','tel:'].includes(u.protocol))throw Error('Use a valid http or https website URL.');return u.href}
+ if(t==='url'||t==='image'){if(!main)throw Error(t==='image'?'Enter a public image URL.':'Enter a website URL.');let u;try{u=new URL(main)}catch(e){throw Error('Enter a valid URL such as https://example.com.')}if(!['http:','https:'].includes(u.protocol))throw Error('Use a valid http or https URL.');return u.href}
  if(t==='text'){if(!main)throw Error('Enter some text first.');return main}
  if(t==='phone'){if(!main)throw Error('Enter a phone number.');return 'tel:'+main.replace(/\s+/g,'')}
  if(t==='location'){if(!main)throw Error('Enter a place or coordinates.');return /^https?:\/\//i.test(main)?main:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(main)}
