@@ -68,3 +68,44 @@ h1{font-size:clamp(2rem,5vw,3.1rem);letter-spacing:-.045em;line-height:1.08;marg
 .community-poll[hidden]{display:none}
 .community-poll span{display:flex;justify-content:space-between;gap:12px;border:1px solid color-mix(in srgb,var(--brand),white 45%);background:color-mix(in srgb,var(--brand),white 94%);border-radius:8px;padding:9px 10px}
 .community-poll span b{color:var(--brand)}
+
+
+/* Custom outer frame + inner post card designer */
+.frame{box-sizing:border-box;position:relative;display:flex;align-items:stretch;justify-content:center;gap:0;min-width:0;margin:12px auto 0;overflow:hidden;transition:width .15s ease,padding .15s ease,border-radius .15s ease,background .15s ease;isolation:isolate}
+.frame>.post{box-sizing:border-box;display:flex;flex-direction:column;min-width:0;min-height:0;flex-shrink:1;overflow:hidden;transition:width .12s ease,padding .12s ease,border-radius .12s ease,background .12s ease;position:relative}
+.post .post-top{flex:0 0 auto;min-width:0;gap:10px}
+.post .avatar{width:var(--custom-avatar-size,48px);height:var(--custom-avatar-size,48px);min-width:var(--custom-avatar-size,48px);border-radius:var(--custom-avatar-shape,50%);object-fit:cover;display:block;flex-shrink:0}
+.post .avatar[hidden]{display:none}
+.post .name-line{font-size:var(--custom-name-size,16px);color:inherit;font-weight:750;overflow-wrap:anywhere}
+.post .handle{font-size:12px;color:var(--custom-handle-color,#64748b);overflow-wrap:anywhere}
+.post .post-message{font-size:16px;line-height:1.4;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;min-width:0;min-height:0;flex:0 1 auto;margin:14px 0}
+.post .mock-label{margin-top:auto;padding-top:8px;font-size:9px;line-height:1.3;letter-spacing:.04em;opacity:.7;flex:0 0 auto}
+.post .mock-label[hidden]{display:none}
+.post .verified{display:none;width:15px;height:15px;fill:var(--brand);vertical-align:middle;margin-left:4px}
+.post .verified.show{display:inline-block}
+.post .more{margin-left:auto;flex-shrink:0}
+.control-section{border-top:1px solid #e6ebf1;padding-top:14px;margin-top:2px;display:grid;gap:12px}
+.control-section h3{font-size:.92rem;margin:0;color:#1e293b}
+.fields input[type=range]{width:100%;accent-color:var(--brand);padding:0}
+.fields input[type=color]{width:100%;height:40px;padding:3px;border:1px solid #cbd5df;border-radius:8px;background:#fff}
+.fields select{width:100%;min-width:0;max-width:100%;font:inherit;font-size:.88rem;color:#17202b;background:#fff;border:1px solid #cbd5df;border-radius:9px;padding:10px}
+.field output{font-weight:700;color:#64748b;font-size:.8rem;white-space:nowrap}
+.preview-wrap{min-width:0;display:flex;flex-direction:column;align-items:center;overflow:hidden;padding:14px}
+.preview-label{width:100%;max-width:760px}
+.post.twitter,.post.facebook,.post.instagram,.post.linkedin,.post.threads,.post.youtube{max-width:none;border-radius:inherit}
+.post .post-meta,.post .post-stats,.post .post-actions{display:none!important}
+.post .identity{min-width:0;overflow:hidden}
+.post .identity .name-line{display:flex;align-items:center;gap:2px;min-width:0}
+.post .identity .name-line>span{overflow-wrap:anywhere;min-width:0}
+.post .identity .handle{white-space:normal;overflow-wrap:anywhere}
+.post .post-message:empty:before{content:'your post show here ,';color:inherit;opacity:.6}
+@media(max-width:680px){
+ .workspace{grid-template-columns:minmax(0,1fr);gap:14px}
+ .page{width:min(100% - 18px,760px);padding-top:14px}
+ .fields{padding:13px;gap:11px}
+ .control-section{gap:10px}
+ .control-section .two{gap:9px}
+ .preview-wrap{padding:9px}
+ .frame{max-width:100%}
+ .post .post-message{margin:9px 0}
+}
