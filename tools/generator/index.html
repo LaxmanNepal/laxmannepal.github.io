@@ -35,7 +35,7 @@
 <script>
 (function(){
  const form=document.getElementById('generator-search'),input=document.getElementById('q'),grid=document.getElementById('grid'),empty=document.getElementById('empty'),count=document.getElementById('count');
- const known={'slow-and-reverb-generator':{title:'Slow + Reverb Generator',description:'Slow down a track and add a spacious reverb effect for a dreamy, atmospheric sound.',category:'Audio',icon:'♫',keywords:'slow reverb audio music sound effect pitch speed echo'}};
+ const known={'slow-and-reverb-generator':{title:'Slow + Reverb Generator',description:'Slow down a track and add a spacious reverb effect for a dreamy, atmospheric sound.',category:'Audio',icon:'♫',keywords:'slow reverb audio music sound effect pitch speed echo'},'fake-post-generator':{title:'Social Post Mockup Generator',description:'Create fictional X, Facebook, Instagram, LinkedIn, Threads and YouTube Community post mockups, then export PNGs.',category:'Social Media',icon:'▣',keywords:'fake post mockup facebook twitter instagram linkedin threads youtube social image png'}};
  function titleFromSlug(slug){return slug.split('-').map(w=>w?w[0].toUpperCase()+w.slice(1):'').join(' ');}
  function render(items){
   grid.replaceChildren();
