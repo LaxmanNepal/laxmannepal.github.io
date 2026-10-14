@@ -1,88 +1,178 @@
 {
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-14",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "nocobase",
-      "url": "https://github.com/nocobase/nocobase",
-      "description": "NocoBase is an open-source AI + no-code platform for building business systems fast. Instead of generating everything from scratch, AI works on top of production-proven infrastructure and a WYSIWYG no-code interface, so you get both speed and reliability.",
-      "language": "TypeScript",
-      "stars": 24565,
-      "updatedAt": "2026-10-13T09:23:52Z",
-      "fullName": "nocobase/nocobase"
-    },
-    {
-      "name": "pipeshub-ai",
-      "url": "https://github.com/pipeshub-ai/pipeshub-ai",
-      "description": "The open-source context layer for AI agents. PipesHub turns your company's knowledge (Slack, Drive, Jira, GitHub, Microsoft 365 and 40+ connectors) into a permission-aware workspace that agents can search, grep, navigate and cite. MCP, SDKs and built-in agents",
+      "name": "vllm-ascend",
+      "url": "https://github.com/vllm-project/vllm-ascend",
+      "description": "Community maintained hardware plugin for vLLM on Huawei Ascend",
       "language": "Python",
-      "stars": 3829,
-      "updatedAt": "2026-10-13T09:23:51Z",
-      "fullName": "pipeshub-ai/pipeshub-ai"
+      "stars": 2978,
+      "updatedAt": "2026-10-14T07:36:04Z",
+      "fullName": "vllm-project/vllm-ascend"
     },
     {
-      "name": "NovelAI-Image-MCP",
-      "url": "https://github.com/xinvxueyuan/NovelAI-Image-MCP",
-      "description": "MCP server for integrating NovelAI Image generation into AI agents.",
-      "language": "Python",
-      "stars": 9,
-      "updatedAt": "2026-10-13T09:23:49Z",
-      "fullName": "xinvxueyuan/NovelAI-Image-MCP"
+      "name": "flutter_agent_harness",
+      "url": "https://github.com/IstiN/flutter_agent_harness",
+      "description": "Fa - Factory Agent. Cross-platform AI agent harness for Dart and Flutter — streaming providers, agent loop with tools, session persistence, compaction; backend agent mode: fa behind product Go backends",
+      "language": "Dart",
+      "stars": 75,
+      "updatedAt": "2026-10-14T07:36:01Z",
+      "fullName": "IstiN/flutter_agent_harness"
     },
     {
-      "name": "ai",
-      "url": "https://github.com/TanStack/ai",
-      "description": "🤖 Type-safe, provider-agnostic TypeScript AI SDK for streaming chat, tool calling, agents, and multimodal apps across OpenAI, Anthropic, Gemini, React, Vue, Svelte, and Solid.",
+      "name": "harness",
+      "url": "https://github.com/minervacomputing/harness",
+      "description": "Governed AI agents for sensitive data and business-critical apps. Agents never hold credentials: a gateway checks every call against per-resource permissions, and each answer runs in a sealed container.",
       "language": "TypeScript",
-      "stars": 3187,
-      "updatedAt": "2026-10-13T09:23:48Z",
-      "fullName": "TanStack/ai"
+      "stars": 23,
+      "updatedAt": "2026-10-14T07:36:01Z",
+      "fullName": "minervacomputing/harness"
     },
     {
-      "name": "ClaudeCode-Workflow-Lab",
-      "url": "https://github.com/Frisher1/ClaudeCode-Workflow-Lab",
-      "description": "Complete Guide 2026: Claude Code Manual – Workflow Pipelines & Adversarial Budget Loops",
-      "language": "HTML",
+      "name": "nanocode",
+      "url": "https://github.com/gakonst/nanocode",
+      "description": "SDK for Frontier Embedded Agents.",
+      "language": "Rust",
+      "stars": 565,
+      "updatedAt": "2026-10-14T07:35:58Z",
+      "fullName": "gakonst/nanocode"
+    },
+    {
+      "name": "atris",
+      "url": "https://github.com/atrislabs/atris",
+      "description": "a self improving operating system for intelligence",
+      "language": "JavaScript",
+      "stars": 71,
+      "updatedAt": "2026-10-14T07:35:57Z",
+      "fullName": "atrislabs/atris"
+    },
+    {
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "stars": 28475,
+      "updatedAt": "2026-10-14T07:35:54Z",
+      "fullName": "QwenLM/qwen-code"
+    },
+    {
+      "name": "AI-SLOP-Detector",
+      "url": "https://github.com/flamehaven01/AI-SLOP-Detector",
+      "description": " Stop shipping AI slop. Detects empty functions, fake documentation, and inflated comments in AI-generated code. Production-ready.",
+      "language": "Python",
+      "stars": 101,
+      "updatedAt": "2026-10-14T07:35:53Z",
+      "fullName": "flamehaven01/AI-SLOP-Detector"
+    },
+    {
+      "name": "pi-goal-list-loop-audit",
+      "url": "https://github.com/DraconDev/pi-goal-list-loop-audit",
+      "description": "Long-running autonomy for Pi: draft goals, build projects from specs, run audited task queues, and recover interrupted work. Independent auditors verify completion.",
+      "language": "TypeScript",
+      "stars": 27,
+      "updatedAt": "2026-10-14T07:35:52Z",
+      "fullName": "DraconDev/pi-goal-list-loop-audit"
+    },
+    {
+      "name": "magpie",
+      "url": "https://github.com/yetone/magpie",
+      "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
+      "language": "Go",
+      "stars": 12135,
+      "updatedAt": "2026-10-14T07:35:51Z",
+      "fullName": "yetone/magpie"
+    },
+    {
+      "name": "apowerb",
+      "url": "https://github.com/apowerb/apowerb",
+      "description": "The open-source agentic framework to build, orchestrate, and operate production AI agents.",
+      "language": "Python",
+      "stars": 83,
+      "updatedAt": "2026-10-14T07:35:43Z",
+      "fullName": "apowerb/apowerb"
+    },
+    {
+      "name": "Dodaios",
+      "url": "https://github.com/Dodaios/Dodaios",
+      "description": "Your AI assistant, built for the agentic era. Open source and local: talk to it, and it runs your agents, your coding CLIs, your browser and your apps. Windows, macOS, Linux.",
+      "language": "Python",
+      "stars": 205,
+      "updatedAt": "2026-10-14T07:35:38Z",
+      "fullName": "Dodaios/Dodaios"
+    },
+    {
+      "name": "AReaL",
+      "url": "https://github.com/areal-project/AReaL",
+      "description": "The RL Bridge for LLM-based Agent Applications. Made Simple & Flexible.",
+      "language": "Python",
+      "stars": 5830,
+      "updatedAt": "2026-10-14T07:35:13Z",
+      "fullName": "areal-project/AReaL"
+    },
+    {
+      "name": "Awesome-Agent-Harness",
+      "url": "https://github.com/Gloriaameng/Awesome-Agent-Harness",
+      "description": "Official repository for Agent Harness for Large Language Model Agents: A Survey — 168 references, 34 evidence-coded systems, and 30 harness benchmarks.",
+      "language": "Open source",
+      "stars": 370,
+      "updatedAt": "2026-10-14T07:35:13Z",
+      "fullName": "Gloriaameng/Awesome-Agent-Harness"
+    },
+    {
+      "name": "ForgeDock",
+      "url": "https://github.com/RapierCraftStudios/ForgeDock",
+      "description": "ForgeDock — autonomous AI dev pipeline for Claude Code. GitHub as agent memory: issue in, PR out.",
+      "language": "JavaScript",
       "stars": 117,
-      "updatedAt": "2026-10-13T09:23:46Z",
-      "fullName": "Frisher1/ClaudeCode-Workflow-Lab"
+      "updatedAt": "2026-10-14T07:34:58Z",
+      "fullName": "RapierCraftStudios/ForgeDock"
     },
     {
-      "name": "llm-task-orchestrator",
-      "url": "https://github.com/naberbabammm34343/llm-task-orchestrator",
-      "description": "Top AI Router 2026: Split Codex for Quick Code & Claude for Complex Refactoring",
-      "language": "HTML",
-      "stars": 124,
-      "updatedAt": "2026-10-13T09:23:43Z",
-      "fullName": "naberbabammm34343/llm-task-orchestrator"
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": 219501,
+      "updatedAt": "2026-10-14T07:34:38Z",
+      "fullName": "morluto/rea"
     },
     {
-      "name": "opus-prompt-architect",
-      "url": "https://github.com/AgustiPuigserver/opus-prompt-architect",
-      "description": "Best Prompt Engineering Tools for 2026 AI Workflow Optimization",
-      "language": "HTML",
-      "stars": 126,
-      "updatedAt": "2026-10-13T09:23:42Z",
-      "fullName": "AgustiPuigserver/opus-prompt-architect"
+      "name": "bloomery",
+      "url": "https://github.com/midagedev/bloomery",
+      "description": "Hybrid GPU + CPU inference for mixture-of-experts models, written in Rust down to the CUDA kernels. A drop-in llama-server.",
+      "language": "Rust",
+      "stars": 25,
+      "updatedAt": "2026-10-14T07:34:30Z",
+      "fullName": "midagedev/bloomery"
     },
     {
-      "name": "codified-prompt-rule-engine",
-      "url": "https://github.com/heavenaruba/codified-prompt-rule-engine",
-      "description": "Top 10 Claude Prompt Optimization Frameworks 2026",
-      "language": "HTML",
-      "stars": 123,
-      "updatedAt": "2026-10-13T09:23:42Z",
-      "fullName": "heavenaruba/codified-prompt-rule-engine"
-    },
-    {
-      "name": "unsloth",
-      "url": "https://github.com/unslothai/unsloth",
-      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4, MiniMax-H3, Gemma 4, FLUX and more.",
+      "name": "litellm",
+      "url": "https://github.com/BerriAI/litellm",
+      "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
       "language": "Python",
-      "stars": 77918,
-      "updatedAt": "2026-10-13T09:23:40Z",
-      "fullName": "unslothai/unsloth"
+      "stars": 61207,
+      "updatedAt": "2026-10-14T07:34:24Z",
+      "fullName": "BerriAI/litellm"
+    },
+    {
+      "name": "bike4mind",
+      "url": "https://github.com/Bike4Mind/bike4mind",
+      "description": "The open-core AI workbench — notebooks, agents, RAG, voice, and images across any model: OpenAI, Anthropic, Google, xAI, or local via Ollama/vLLM. BSL 1.1,  auto-converting to Apache-2.0 on a two-year clock. Your AI keeps running when theirs doesn't.",
+      "language": "TypeScript",
+      "stars": 87,
+      "updatedAt": "2026-10-14T07:34:09Z",
+      "fullName": "Bike4Mind/bike4mind"
+    },
+    {
+      "name": "llamadart",
+      "url": "https://github.com/leehack/llamadart",
+      "description": "Cross-platform on-device LLM inference for Dart & Flutter: GGUF via llama.cpp and LiteRT-LM on Android, iOS, macOS, Windows, Linux and web.",
+      "language": "Dart",
+      "stars": 78,
+      "updatedAt": "2026-10-14T07:34:09Z",
+      "fullName": "leehack/llamadart"
     },
     {
       "name": "rftools-mcp",
@@ -90,134 +180,44 @@
       "description": "MCP server for rftools.io — 241 RF & electronics calculators + 13 simulation tools for AI agents",
       "language": "TypeScript",
       "stars": 7,
-      "updatedAt": "2026-10-13T09:23:30Z",
+      "updatedAt": "2026-10-14T07:34:05Z",
       "fullName": "antonpogrebenko-public/rftools-mcp"
     },
     {
-      "name": "awesome-claude-fable-5-prompt-vault",
-      "url": "https://github.com/thenicolas1894/awesome-claude-fable-5-prompt-vault",
-      "description": "Ultimate Claude Fable 5 Guide 2026: Use Cases, Integrations & Benchmarks",
-      "language": "HTML",
-      "stars": 141,
-      "updatedAt": "2026-10-13T09:23:23Z",
-      "fullName": "thenicolas1894/awesome-claude-fable-5-prompt-vault"
-    },
-    {
-      "name": "api-model-playground-cookbook",
-      "url": "https://github.com/09omerdgn-droid/api-model-playground-cookbook",
-      "description": "Ultimate LLM API Integration Cookbook 2026 for Cursor & AI Agents",
-      "language": "HTML",
-      "stars": 116,
-      "updatedAt": "2026-10-13T09:23:18Z",
-      "fullName": "09omerdgn-droid/api-model-playground-cookbook"
-    },
-    {
-      "name": "ghidra-cli",
-      "url": "https://github.com/toratako/ghidra-cli",
-      "description": "The agent-native Ghidra CLI — headless analysis, decompilation, and structured JSON built for AI agents.",
-      "language": "Rust",
-      "stars": 12,
-      "updatedAt": "2026-10-13T09:23:18Z",
-      "fullName": "toratako/ghidra-cli"
-    },
-    {
-      "name": "moli",
-      "url": "https://github.com/lexmount/moli",
-      "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
-      "language": "Rust",
-      "stars": 17626,
-      "updatedAt": "2026-10-13T09:23:17Z",
-      "fullName": "lexmount/moli"
-    },
-    {
-      "name": "Brokies-AI-Foundry",
-      "url": "https://github.com/Caplet1989/Brokies-AI-Foundry",
-      "description": "Top Free AI Developer Tools for 2026",
-      "language": "HTML",
-      "stars": 124,
-      "updatedAt": "2026-10-13T09:23:17Z",
-      "fullName": "Caplet1989/Brokies-AI-Foundry"
-    },
-    {
-      "name": "Ai-Pixel-Design-Archive",
-      "url": "https://github.com/abnormal-codex/Ai-Pixel-Design-Archive",
-      "description": "Best AI Image Generator for Professional Designs 2026",
-      "language": "HTML",
-      "stars": 116,
-      "updatedAt": "2026-10-13T09:23:16Z",
-      "fullName": "abnormal-codex/Ai-Pixel-Design-Archive"
-    },
-    {
-      "name": "tick-stock-panel",
-      "url": "https://github.com/shy3130/tick-stock-panel",
-      "description": "TSP自托管、零运维的 A 股「自建策略 + 监控 + 回测」量化工作台  | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方数据源与个性化扩展数据 | 个人开源",
+      "name": "vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
       "language": "Python",
-      "stars": 5814,
-      "updatedAt": "2026-10-13T09:23:15Z",
-      "fullName": "shy3130/tick-stock-panel"
+      "stars": 93746,
+      "updatedAt": "2026-10-14T07:33:55Z",
+      "fullName": "vllm-project/vllm"
     },
     {
-      "name": "claude-brewcode",
-      "url": "https://github.com/kochetkov-ma/claude-brewcode",
-      "description": "Claude Code plugin suite: brewcode (skill/agent/rule authoring, semble semantic search, superreview and teams setups), brewdoc (doc sync, PDF, publish), brewtools (text optimization, secrets scan, deploy, SSH, subagent guards)",
-      "language": "JavaScript",
-      "stars": 32,
-      "updatedAt": "2026-10-13T09:23:11Z",
-      "fullName": "kochetkov-ma/claude-brewcode"
-    },
-    {
-      "name": "Sentient",
-      "url": "https://github.com/existence-master/Sentient",
-      "description": "Your personal AI assistant, running on your own computer. Long-running tasks, real memory, proactive help, voice, phones and smart glasses. Any model, local or cloud. No account.",
+      "name": "Stat4ML",
+      "url": "https://github.com/Bellman281/Stat4ML",
+      "description": "Statistics and Mathematics for Machine Learning, Deep Learning , Deep NLP",
       "language": "Python",
-      "stars": 702,
-      "updatedAt": "2026-10-13T09:23:05Z",
-      "fullName": "existence-master/Sentient"
+      "stars": 83,
+      "updatedAt": "2026-10-14T07:33:51Z",
+      "fullName": "Bellman281/Stat4ML"
     },
     {
-      "name": "claude-router",
-      "url": "https://github.com/alexei-led/claude-router",
-      "description": "Claude Code plugin that picks the model and effort for each turn (micro, low, medium, or high tier), advised by Jev, Clef, OpenAI, or a local Ollama classifier.",
-      "language": "JavaScript",
-      "stars": 23,
-      "updatedAt": "2026-10-13T09:23:05Z",
-      "fullName": "alexei-led/claude-router"
-    },
-    {
-      "name": "obsidian-ai",
-      "url": "https://github.com/sup3rus3r/obsidian-ai",
-      "description": "Obsidian AI is an open-source platform that gives you a full visual interface for building, managing, and running AI agents — no SDKs, no boilerplate, no glue code required.",
+      "name": "kornia",
+      "url": "https://github.com/kornia/kornia",
+      "description": "🐍 Geometric Computer Vision Library for Spatial AI",
       "language": "Python",
-      "stars": 63,
-      "updatedAt": "2026-10-13T09:23:02Z",
-      "fullName": "sup3rus3r/obsidian-ai"
+      "stars": 11424,
+      "updatedAt": "2026-10-14T07:33:43Z",
+      "fullName": "kornia/kornia"
     },
     {
-      "name": "cap-evolve",
-      "url": "https://github.com/skillberry-ai/cap-evolve",
-      "description": "Optimize any AI agent’s skills, tools/MCP, and prompts against your own evals.",
-      "language": "Python",
-      "stars": 65,
-      "updatedAt": "2026-10-13T09:23:01Z",
-      "fullName": "skillberry-ai/cap-evolve"
-    },
-    {
-      "name": "Dodaios",
-      "url": "https://github.com/Dodaios/Dodaios",
-      "description": "Your AI assistant, built for the agentic era. Open source and local: talk to it, and it runs your agents, your coding CLIs, your browser and your apps. Windows, macOS, Linux.",
-      "language": "Python",
-      "stars": 192,
-      "updatedAt": "2026-10-13T09:22:59Z",
-      "fullName": "Dodaios/Dodaios"
-    },
-    {
-      "name": "rea",
-      "url": "https://github.com/morluto/rea",
-      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "name": "open-knowledge",
+      "url": "https://github.com/inkeep/open-knowledge",
+      "description": "Beautiful, AI-native markdown IDE and LLM wiki",
       "language": "TypeScript",
-      "stars": 180493,
-      "updatedAt": "2026-10-13T09:22:28Z",
-      "fullName": "morluto/rea"
+      "stars": 4569,
+      "updatedAt": "2026-10-14T07:33:27Z",
+      "fullName": "inkeep/open-knowledge"
     }
   ]
 }
