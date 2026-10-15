@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-14T21:45:38.954817+00:00",
-  "count": 148,
+  "updated_at": "2026-10-15T04:47:39.082336+00:00",
+  "count": 149,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -43,6 +43,23 @@
       ]
     },
     {
+      "id": "blackview-bv4800-se",
+      "name": "Blackview BV4800 SE",
+      "brand": "Blackview",
+      "variants": [
+        "4GB + 64GB"
+      ],
+      "price": 20999,
+      "max_price": 20999,
+      "original_price": null,
+      "rams": [
+        "4GB"
+      ],
+      "storages": [
+        "64GB"
+      ]
+    },
+    {
       "id": "blackview-fort-1",
       "name": "Blackview Fort 1",
       "brand": "Blackview",
@@ -57,6 +74,23 @@
       ],
       "storages": [
         "128GB"
+      ]
+    },
+    {
+      "id": "blackview-rock-1-pro",
+      "name": "Blackview Rock 1 Pro",
+      "brand": "Blackview",
+      "variants": [
+        "8GB + 256GB"
+      ],
+      "price": 39999,
+      "max_price": 39999,
+      "original_price": null,
+      "rams": [
+        "8GB"
+      ],
+      "storages": [
+        "256GB"
       ]
     },
     {
@@ -118,20 +152,16 @@
       "name": "HONOR CHOICE T10",
       "brand": "HONOR",
       "variants": [
-        "HONOR CHOICE T10 - 3GB - 32GB",
-        "HONOR CHOICE T10 - 4GB - 64GB"
+        "HONOR CHOICE T10 - 3GB - 32GB"
       ],
       "price": 16499,
-      "max_price": 19499,
+      "max_price": 16499,
       "original_price": null,
       "rams": [
         "3GB",
-        "4GB",
         "32GB"
       ],
-      "storages": [
-        "64GB"
-      ]
+      "storages": []
     },
     {
       "id": "honor-600",
@@ -227,19 +257,16 @@
       "name": "Honor Play 10",
       "brand": "Honor",
       "variants": [
-        "3GB+64GB",
-        "4GB+128GB"
+        "3GB+64GB"
       ],
       "price": 20999,
-      "max_price": 22999,
+      "max_price": 20999,
       "original_price": null,
       "rams": [
-        "3GB",
-        "4GB"
+        "3GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -315,18 +342,16 @@
       "name": "Honor X6C 4G",
       "brand": "Honor",
       "variants": [
-        "6GB+128GB",
-        "6GB+256GB"
+        "6GB+128GB"
       ],
       "price": 26999,
-      "max_price": 28999,
+      "max_price": 26999,
       "original_price": null,
       "rams": [
         "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -351,17 +376,15 @@
       "name": "Honor X6e",
       "brand": "Honor",
       "variants": [
-        "4GB +256GB",
-        "4GB +128GB"
+        "4GB +256GB"
       ],
-      "price": 32999,
+      "price": 34999,
       "max_price": 34999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "128GB",
         "256GB"
       ]
     },
@@ -404,18 +427,16 @@
       "name": "Honor X8d",
       "brand": "Honor",
       "variants": [
-        "8GB+128GB",
-        "8GB+256GB"
+        "8GB+128GB"
       ],
       "price": 39999,
-      "max_price": 43999,
+      "max_price": 39999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -423,15 +444,13 @@
       "name": "Honor X9d",
       "brand": "Honor",
       "variants": [
-        "8GB+256GB",
-        "12GB+256GB"
+        "8GB+256GB"
       ],
       "price": 54999,
-      "max_price": 59999,
+      "max_price": 54999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
         "256GB"
@@ -1222,25 +1241,6 @@
       ]
     },
     {
-      "id": "realme-c85-5g",
-      "name": "Realme C85 5G",
-      "brand": "Realme",
-      "variants": [
-        "Realme C85 5G - 8GB - 128GB",
-        "Realme C85 5G - 8GB - 256GB"
-      ],
-      "price": 39999,
-      "max_price": 44999,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "128GB",
-        "256GB"
-      ]
-    },
-    {
       "id": "realme-c85-pro",
       "name": "Realme C85 Pro",
       "brand": "Realme",
@@ -1279,20 +1279,16 @@
       "name": "Realme Note 60x",
       "brand": "Realme",
       "variants": [
-        "3GB+64GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "3GB+64GB"
       ],
       "price": 15999,
-      "max_price": 21999,
+      "max_price": 15999,
       "original_price": null,
       "rams": [
-        "3GB",
-        "4GB"
+        "3GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1300,19 +1296,15 @@
       "name": "Realme Note 70",
       "brand": "Realme",
       "variants": [
-        "6GB+128GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "6GB+128GB"
       ],
-      "price": 16999,
+      "price": 23999,
       "max_price": 23999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
-        "64GB",
         "128GB"
       ]
     },
@@ -2042,14 +2034,12 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB",
-        "4GB + 128GB"
+        "6GB + 128GB"
       ],
-      "price": 29999,
+      "price": 32999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
@@ -2078,17 +2068,15 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+128GB",
-        "4GB+64GB"
+        "4GB+128GB"
       ],
-      "price": 21999,
+      "price": 25999,
       "max_price": 25999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
         "128GB"
       ]
     },
@@ -2448,18 +2436,16 @@
       "name": "ZTE Nubia A57",
       "brand": "ZTE",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 21999,
-      "max_price": 24499,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
