@@ -1,223 +1,223 @@
 {
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-10-15",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "vllm-ascend",
-      "url": "https://github.com/vllm-project/vllm-ascend",
-      "description": "Community maintained hardware plugin for vLLM on Huawei Ascend",
-      "language": "Python",
-      "stars": 2978,
-      "updatedAt": "2026-10-14T07:36:04Z",
-      "fullName": "vllm-project/vllm-ascend"
-    },
-    {
-      "name": "flutter_agent_harness",
-      "url": "https://github.com/IstiN/flutter_agent_harness",
-      "description": "Fa - Factory Agent. Cross-platform AI agent harness for Dart and Flutter — streaming providers, agent loop with tools, session persistence, compaction; backend agent mode: fa behind product Go backends",
-      "language": "Dart",
-      "stars": 75,
-      "updatedAt": "2026-10-14T07:36:01Z",
-      "fullName": "IstiN/flutter_agent_harness"
-    },
-    {
-      "name": "harness",
-      "url": "https://github.com/minervacomputing/harness",
-      "description": "Governed AI agents for sensitive data and business-critical apps. Agents never hold credentials: a gateway checks every call against per-resource permissions, and each answer runs in a sealed container.",
-      "language": "TypeScript",
-      "stars": 23,
-      "updatedAt": "2026-10-14T07:36:01Z",
-      "fullName": "minervacomputing/harness"
-    },
-    {
-      "name": "nanocode",
-      "url": "https://github.com/gakonst/nanocode",
-      "description": "SDK for Frontier Embedded Agents.",
-      "language": "Rust",
-      "stars": 565,
-      "updatedAt": "2026-10-14T07:35:58Z",
-      "fullName": "gakonst/nanocode"
-    },
-    {
-      "name": "atris",
-      "url": "https://github.com/atrislabs/atris",
-      "description": "a self improving operating system for intelligence",
-      "language": "JavaScript",
-      "stars": 71,
-      "updatedAt": "2026-10-14T07:35:57Z",
-      "fullName": "atrislabs/atris"
-    },
-    {
-      "name": "qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "description": "An open-source AI coding agent that lives in your terminal.",
-      "language": "TypeScript",
-      "stars": 28475,
-      "updatedAt": "2026-10-14T07:35:54Z",
-      "fullName": "QwenLM/qwen-code"
-    },
-    {
-      "name": "AI-SLOP-Detector",
-      "url": "https://github.com/flamehaven01/AI-SLOP-Detector",
-      "description": " Stop shipping AI slop. Detects empty functions, fake documentation, and inflated comments in AI-generated code. Production-ready.",
-      "language": "Python",
-      "stars": 101,
-      "updatedAt": "2026-10-14T07:35:53Z",
-      "fullName": "flamehaven01/AI-SLOP-Detector"
-    },
-    {
-      "name": "pi-goal-list-loop-audit",
-      "url": "https://github.com/DraconDev/pi-goal-list-loop-audit",
-      "description": "Long-running autonomy for Pi: draft goals, build projects from specs, run audited task queues, and recover interrupted work. Independent auditors verify completion.",
-      "language": "TypeScript",
-      "stars": 27,
-      "updatedAt": "2026-10-14T07:35:52Z",
-      "fullName": "DraconDev/pi-goal-list-loop-audit"
-    },
-    {
-      "name": "magpie",
-      "url": "https://github.com/yetone/magpie",
-      "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
-      "language": "Go",
-      "stars": 12135,
-      "updatedAt": "2026-10-14T07:35:51Z",
-      "fullName": "yetone/magpie"
-    },
-    {
-      "name": "apowerb",
-      "url": "https://github.com/apowerb/apowerb",
-      "description": "The open-source agentic framework to build, orchestrate, and operate production AI agents.",
-      "language": "Python",
-      "stars": 83,
-      "updatedAt": "2026-10-14T07:35:43Z",
-      "fullName": "apowerb/apowerb"
-    },
-    {
-      "name": "Dodaios",
-      "url": "https://github.com/Dodaios/Dodaios",
-      "description": "Your AI assistant, built for the agentic era. Open source and local: talk to it, and it runs your agents, your coding CLIs, your browser and your apps. Windows, macOS, Linux.",
-      "language": "Python",
-      "stars": 205,
-      "updatedAt": "2026-10-14T07:35:38Z",
-      "fullName": "Dodaios/Dodaios"
-    },
-    {
-      "name": "AReaL",
-      "url": "https://github.com/areal-project/AReaL",
-      "description": "The RL Bridge for LLM-based Agent Applications. Made Simple & Flexible.",
-      "language": "Python",
-      "stars": 5830,
-      "updatedAt": "2026-10-14T07:35:13Z",
-      "fullName": "areal-project/AReaL"
-    },
-    {
-      "name": "Awesome-Agent-Harness",
-      "url": "https://github.com/Gloriaameng/Awesome-Agent-Harness",
-      "description": "Official repository for Agent Harness for Large Language Model Agents: A Survey — 168 references, 34 evidence-coded systems, and 30 harness benchmarks.",
+      "name": "Awesome-Multimodal-Reasoning",
+      "url": "https://github.com/The-Martyr/Awesome-Multimodal-Reasoning",
+      "description": "Latest Advances on (RL based) Multimodal Reasoning and Generation in Multimodal LLMs",
       "language": "Open source",
-      "stars": 370,
-      "updatedAt": "2026-10-14T07:35:13Z",
-      "fullName": "Gloriaameng/Awesome-Agent-Harness"
+      "stars": 105,
+      "updatedAt": "2026-10-15T07:24:03Z",
+      "fullName": "The-Martyr/Awesome-Multimodal-Reasoning"
     },
     {
-      "name": "ForgeDock",
-      "url": "https://github.com/RapierCraftStudios/ForgeDock",
-      "description": "ForgeDock — autonomous AI dev pipeline for Claude Code. GitHub as agent memory: issue in, PR out.",
-      "language": "JavaScript",
-      "stars": 117,
-      "updatedAt": "2026-10-14T07:34:58Z",
-      "fullName": "RapierCraftStudios/ForgeDock"
-    },
-    {
-      "name": "rea",
-      "url": "https://github.com/morluto/rea",
-      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "name": "dify",
+      "url": "https://github.com/langgenius/dify",
+      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
       "language": "TypeScript",
-      "stars": 219501,
-      "updatedAt": "2026-10-14T07:34:38Z",
-      "fullName": "morluto/rea"
+      "stars": 158515,
+      "updatedAt": "2026-10-15T07:23:52Z",
+      "fullName": "langgenius/dify"
     },
     {
-      "name": "bloomery",
-      "url": "https://github.com/midagedev/bloomery",
-      "description": "Hybrid GPU + CPU inference for mixture-of-experts models, written in Rust down to the CUDA kernels. A drop-in llama-server.",
-      "language": "Rust",
-      "stars": 25,
-      "updatedAt": "2026-10-14T07:34:30Z",
-      "fullName": "midagedev/bloomery"
-    },
-    {
-      "name": "litellm",
-      "url": "https://github.com/BerriAI/litellm",
-      "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
-      "language": "Python",
-      "stars": 61207,
-      "updatedAt": "2026-10-14T07:34:24Z",
-      "fullName": "BerriAI/litellm"
-    },
-    {
-      "name": "bike4mind",
-      "url": "https://github.com/Bike4Mind/bike4mind",
-      "description": "The open-core AI workbench — notebooks, agents, RAG, voice, and images across any model: OpenAI, Anthropic, Google, xAI, or local via Ollama/vLLM. BSL 1.1,  auto-converting to Apache-2.0 on a two-year clock. Your AI keeps running when theirs doesn't.",
-      "language": "TypeScript",
-      "stars": 87,
-      "updatedAt": "2026-10-14T07:34:09Z",
-      "fullName": "Bike4Mind/bike4mind"
-    },
-    {
-      "name": "llamadart",
-      "url": "https://github.com/leehack/llamadart",
-      "description": "Cross-platform on-device LLM inference for Dart & Flutter: GGUF via llama.cpp and LiteRT-LM on Android, iOS, macOS, Windows, Linux and web.",
-      "language": "Dart",
-      "stars": 78,
-      "updatedAt": "2026-10-14T07:34:09Z",
-      "fullName": "leehack/llamadart"
-    },
-    {
-      "name": "rftools-mcp",
-      "url": "https://github.com/antonpogrebenko-public/rftools-mcp",
-      "description": "MCP server for rftools.io — 241 RF & electronics calculators + 13 simulation tools for AI agents",
-      "language": "TypeScript",
-      "stars": 7,
-      "updatedAt": "2026-10-14T07:34:05Z",
-      "fullName": "antonpogrebenko-public/rftools-mcp"
+      "name": "project-maya",
+      "url": "https://github.com/mw00/project-maya",
+      "description": "Project Maya - run GLM-5.3-Flash (321B MoE) privately on your own GPU(s), from one card to 16, NVIDIA or AMD, Linux or Windows. Engine, server, dashboard, OpenAI- and Anthropic-compatible API, quant tools.",
+      "language": "C++",
+      "stars": 864,
+      "updatedAt": "2026-10-15T07:23:52Z",
+      "fullName": "mw00/project-maya"
     },
     {
       "name": "vllm",
       "url": "https://github.com/vllm-project/vllm",
       "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
       "language": "Python",
-      "stars": 93746,
-      "updatedAt": "2026-10-14T07:33:55Z",
+      "stars": 93820,
+      "updatedAt": "2026-10-15T07:23:51Z",
       "fullName": "vllm-project/vllm"
     },
     {
-      "name": "Stat4ML",
-      "url": "https://github.com/Bellman281/Stat4ML",
-      "description": "Statistics and Mathematics for Machine Learning, Deep Learning , Deep NLP",
-      "language": "Python",
-      "stars": 83,
-      "updatedAt": "2026-10-14T07:33:51Z",
-      "fullName": "Bellman281/Stat4ML"
-    },
-    {
-      "name": "kornia",
-      "url": "https://github.com/kornia/kornia",
-      "description": "🐍 Geometric Computer Vision Library for Spatial AI",
-      "language": "Python",
-      "stars": 11424,
-      "updatedAt": "2026-10-14T07:33:43Z",
-      "fullName": "kornia/kornia"
-    },
-    {
-      "name": "open-knowledge",
-      "url": "https://github.com/inkeep/open-knowledge",
-      "description": "Beautiful, AI-native markdown IDE and LLM wiki",
+      "name": "ax",
+      "url": "https://github.com/ax-llm/ax",
+      "description": "The pretty much \"official\" DSPy framework for Typescript",
       "language": "TypeScript",
-      "stars": 4569,
-      "updatedAt": "2026-10-14T07:33:27Z",
-      "fullName": "inkeep/open-knowledge"
+      "stars": 2967,
+      "updatedAt": "2026-10-15T07:23:51Z",
+      "fullName": "ax-llm/ax"
+    },
+    {
+      "name": "awesome-ai-agent-stack",
+      "url": "https://github.com/tayyabimam1/awesome-ai-agent-stack",
+      "description": "Curated map of 3,000+ open-source AI agent tools: coding agents, agent frameworks, MCP servers, RAG, memory and local LLMs, sorted by layer and ranked by GitHub stars.",
+      "language": "TypeScript",
+      "stars": 29,
+      "updatedAt": "2026-10-15T07:23:50Z",
+      "fullName": "tayyabimam1/awesome-ai-agent-stack"
+    },
+    {
+      "name": "omlx",
+      "url": "https://github.com/jundot/omlx",
+      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+      "language": "Python",
+      "stars": 22819,
+      "updatedAt": "2026-10-15T07:23:48Z",
+      "fullName": "jundot/omlx"
+    },
+    {
+      "name": "paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "description": "The open-source app everyone uses to manage agents at work",
+      "language": "TypeScript",
+      "stars": 102307,
+      "updatedAt": "2026-10-15T07:23:43Z",
+      "fullName": "paperclipai/paperclip"
+    },
+    {
+      "name": "CoWork-OS",
+      "url": "https://github.com/CoWork-OS/CoWork-OS",
+      "description": "Local-first personal agentic OS and everything app for coding, knowledge work, web design, automations, and artifacts.",
+      "language": "TypeScript",
+      "stars": 485,
+      "updatedAt": "2026-10-15T07:23:43Z",
+      "fullName": "CoWork-OS/CoWork-OS"
+    },
+    {
+      "name": "DEEIX-Chat",
+      "url": "https://github.com/DEEIX-AI/DEEIX-Chat",
+      "description": "An enterprise AI workspace for model routing, multimodal chat, files, tools, billing, identity, and operations.",
+      "language": "Go",
+      "stars": 1583,
+      "updatedAt": "2026-10-15T07:23:42Z",
+      "fullName": "DEEIX-AI/DEEIX-Chat"
+    },
+    {
+      "name": "Adelie",
+      "url": "https://github.com/lmliheng/Adelie",
+      "description": "A local-first multi-agent app development platform, built on PenguinHarness",
+      "language": "TypeScript",
+      "stars": 35,
+      "updatedAt": "2026-10-15T07:23:39Z",
+      "fullName": "lmliheng/Adelie"
+    },
+    {
+      "name": "langfuse",
+      "url": "https://github.com/langfuse/langfuse",
+      "description": "🪢 Open source agent evals & observability: Trace, evaluate, and improve LLM applications with one open platform.",
+      "language": "TypeScript",
+      "stars": 35845,
+      "updatedAt": "2026-10-15T07:23:30Z",
+      "fullName": "langfuse/langfuse"
+    },
+    {
+      "name": "cora-code",
+      "url": "https://github.com/codecoradev/cora-code",
+      "description": "CLI-first AI code review — BYOK, diff/scan/branch, pre-commit hooks. 100% open source (MIT).",
+      "language": "Rust",
+      "stars": 28,
+      "updatedAt": "2026-10-15T07:23:29Z",
+      "fullName": "codecoradev/cora-code"
+    },
+    {
+      "name": "nimblebrain",
+      "url": "https://github.com/NimbleBrainInc/nimblebrain",
+      "description": "Self-hosted platform for MCP Apps and agent automations — tools, interactive UIs, scheduled runs, multi-agent delegation.",
+      "language": "TypeScript",
+      "stars": 25,
+      "updatedAt": "2026-10-15T07:23:27Z",
+      "fullName": "NimbleBrainInc/nimblebrain"
+    },
+    {
+      "name": "ghidra-cli",
+      "url": "https://github.com/toratako/ghidra-cli",
+      "description": "The agent-native Ghidra CLI — headless analysis, decompilation, and structured JSON built for AI agents.",
+      "language": "Rust",
+      "stars": 12,
+      "updatedAt": "2026-10-15T07:23:20Z",
+      "fullName": "toratako/ghidra-cli"
+    },
+    {
+      "name": "statgpt-backend",
+      "url": "https://github.com/epam/statgpt-backend",
+      "description": "StatGPT Backend",
+      "language": "Python",
+      "stars": 26,
+      "updatedAt": "2026-10-15T07:23:15Z",
+      "fullName": "epam/statgpt-backend"
+    },
+    {
+      "name": "donethat-electron",
+      "url": "https://github.com/donethatai/donethat-electron",
+      "description": "Desktop client for productivity app DoneThat. DoneThat automatically tracks all work and uses this context to boost your productivity: Automated timesheets, long-term memory for AIs, proactive coaching, and social sharing for accountability and remote trust. D",
+      "language": "JavaScript",
+      "stars": 12,
+      "updatedAt": "2026-10-15T07:23:14Z",
+      "fullName": "donethatai/donethat-electron"
+    },
+    {
+      "name": "carla",
+      "url": "https://github.com/carla-simulator/carla",
+      "description": "Open-source simulator for autonomous driving research.",
+      "language": "C++",
+      "stars": 14491,
+      "updatedAt": "2026-10-15T07:23:03Z",
+      "fullName": "carla-simulator/carla"
+    },
+    {
+      "name": "tt-metal",
+      "url": "https://github.com/tenstorrent/tt-metal",
+      "description": ":metal: TT-NN operator library, and TT-Metalium low level kernel programming model.",
+      "language": "Python",
+      "stars": 1705,
+      "updatedAt": "2026-10-15T07:22:59Z",
+      "fullName": "tenstorrent/tt-metal"
+    },
+    {
+      "name": "nextclaw",
+      "url": "https://github.com/Peiiii/nextclaw",
+      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
+      "language": "TypeScript",
+      "stars": 261,
+      "updatedAt": "2026-10-15T07:22:58Z",
+      "fullName": "Peiiii/nextclaw"
+    },
+    {
+      "name": "zero2Leetcode",
+      "url": "https://github.com/ranxi2001/zero2Leetcode",
+      "description": "从零基础 Python 到企业笔试机试的系统性LeetCode100刷题指南-配置免费AI刷题助手",
+      "language": "JavaScript",
+      "stars": 238,
+      "updatedAt": "2026-10-15T07:22:57Z",
+      "fullName": "ranxi2001/zero2Leetcode"
+    },
+    {
+      "name": "antigravity-add-model",
+      "url": "https://github.com/vahapogut/antigravity-add-model",
+      "description": "Proxy patch for Google Antigravity that intercepts internal Cloud Code API and adds support for OpenAI, Claude, Ollama, Gemini and any custom LLM provider.",
+      "language": "TypeScript",
+      "stars": 93,
+      "updatedAt": "2026-10-15T07:22:50Z",
+      "fullName": "vahapogut/antigravity-add-model"
+    },
+    {
+      "name": "sail",
+      "url": "https://github.com/lakehq/sail",
+      "description": "Drop-in Apache Spark replacement written in Rust, unifying batch processing, stream processing, and compute-intensive AI workloads.",
+      "language": "Rust",
+      "stars": 3438,
+      "updatedAt": "2026-10-15T07:22:32Z",
+      "fullName": "lakehq/sail"
+    },
+    {
+      "name": "prism-insight",
+      "url": "https://github.com/dragon1086/prism-insight",
+      "description": "AI-based stock analysis and trading system",
+      "language": "Python",
+      "stars": 776,
+      "updatedAt": "2026-10-15T07:22:32Z",
+      "fullName": "dragon1086/prism-insight"
     }
   ]
 }
