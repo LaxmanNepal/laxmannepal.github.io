@@ -1,178 +1,214 @@
 {
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-16",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "Awesome-Multimodal-Reasoning",
-      "url": "https://github.com/The-Martyr/Awesome-Multimodal-Reasoning",
-      "description": "Latest Advances on (RL based) Multimodal Reasoning and Generation in Multimodal LLMs",
-      "language": "Open source",
-      "stars": 105,
-      "updatedAt": "2026-10-15T07:24:03Z",
-      "fullName": "The-Martyr/Awesome-Multimodal-Reasoning"
-    },
-    {
-      "name": "dify",
-      "url": "https://github.com/langgenius/dify",
-      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+      "name": "openagentskill",
+      "url": "https://github.com/Leon-Drq/openagentskill",
+      "description": "The skill layer for AI agents: npm for AI Agent Skills.",
       "language": "TypeScript",
-      "stars": 158515,
-      "updatedAt": "2026-10-15T07:23:52Z",
-      "fullName": "langgenius/dify"
+      "stars": 360,
+      "updatedAt": "2026-10-16T07:07:45Z",
+      "fullName": "Leon-Drq/openagentskill"
     },
     {
-      "name": "project-maya",
-      "url": "https://github.com/mw00/project-maya",
-      "description": "Project Maya - run GLM-5.3-Flash (321B MoE) privately on your own GPU(s), from one card to 16, NVIDIA or AMD, Linux or Windows. Engine, server, dashboard, OpenAI- and Anthropic-compatible API, quant tools.",
-      "language": "C++",
-      "stars": 864,
-      "updatedAt": "2026-10-15T07:23:52Z",
-      "fullName": "mw00/project-maya"
-    },
-    {
-      "name": "vllm",
-      "url": "https://github.com/vllm-project/vllm",
-      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "name": "pydantic-ai",
+      "url": "https://github.com/pydantic/pydantic-ai",
+      "description": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
       "language": "Python",
-      "stars": 93820,
-      "updatedAt": "2026-10-15T07:23:51Z",
-      "fullName": "vllm-project/vllm"
+      "stars": 20654,
+      "updatedAt": "2026-10-16T07:07:44Z",
+      "fullName": "pydantic/pydantic-ai"
     },
     {
-      "name": "ax",
-      "url": "https://github.com/ax-llm/ax",
-      "description": "The pretty much \"official\" DSPy framework for Typescript",
-      "language": "TypeScript",
-      "stars": 2967,
-      "updatedAt": "2026-10-15T07:23:51Z",
-      "fullName": "ax-llm/ax"
-    },
-    {
-      "name": "awesome-ai-agent-stack",
-      "url": "https://github.com/tayyabimam1/awesome-ai-agent-stack",
-      "description": "Curated map of 3,000+ open-source AI agent tools: coding agents, agent frameworks, MCP servers, RAG, memory and local LLMs, sorted by layer and ranked by GitHub stars.",
-      "language": "TypeScript",
-      "stars": 29,
-      "updatedAt": "2026-10-15T07:23:50Z",
-      "fullName": "tayyabimam1/awesome-ai-agent-stack"
-    },
-    {
-      "name": "omlx",
-      "url": "https://github.com/jundot/omlx",
-      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
-      "language": "Python",
-      "stars": 22819,
-      "updatedAt": "2026-10-15T07:23:48Z",
-      "fullName": "jundot/omlx"
-    },
-    {
-      "name": "paperclip",
-      "url": "https://github.com/paperclipai/paperclip",
-      "description": "The open-source app everyone uses to manage agents at work",
-      "language": "TypeScript",
-      "stars": 102307,
-      "updatedAt": "2026-10-15T07:23:43Z",
-      "fullName": "paperclipai/paperclip"
-    },
-    {
-      "name": "CoWork-OS",
-      "url": "https://github.com/CoWork-OS/CoWork-OS",
-      "description": "Local-first personal agentic OS and everything app for coding, knowledge work, web design, automations, and artifacts.",
-      "language": "TypeScript",
-      "stars": 485,
-      "updatedAt": "2026-10-15T07:23:43Z",
-      "fullName": "CoWork-OS/CoWork-OS"
-    },
-    {
-      "name": "DEEIX-Chat",
-      "url": "https://github.com/DEEIX-AI/DEEIX-Chat",
-      "description": "An enterprise AI workspace for model routing, multimodal chat, files, tools, billing, identity, and operations.",
-      "language": "Go",
-      "stars": 1583,
-      "updatedAt": "2026-10-15T07:23:42Z",
-      "fullName": "DEEIX-AI/DEEIX-Chat"
-    },
-    {
-      "name": "Adelie",
-      "url": "https://github.com/lmliheng/Adelie",
-      "description": "A local-first multi-agent app development platform, built on PenguinHarness",
-      "language": "TypeScript",
-      "stars": 35,
-      "updatedAt": "2026-10-15T07:23:39Z",
-      "fullName": "lmliheng/Adelie"
-    },
-    {
-      "name": "langfuse",
-      "url": "https://github.com/langfuse/langfuse",
-      "description": "🪢 Open source agent evals & observability: Trace, evaluate, and improve LLM applications with one open platform.",
-      "language": "TypeScript",
-      "stars": 35845,
-      "updatedAt": "2026-10-15T07:23:30Z",
-      "fullName": "langfuse/langfuse"
-    },
-    {
-      "name": "cora-code",
-      "url": "https://github.com/codecoradev/cora-code",
-      "description": "CLI-first AI code review — BYOK, diff/scan/branch, pre-commit hooks. 100% open source (MIT).",
-      "language": "Rust",
-      "stars": 28,
-      "updatedAt": "2026-10-15T07:23:29Z",
-      "fullName": "codecoradev/cora-code"
-    },
-    {
-      "name": "nimblebrain",
-      "url": "https://github.com/NimbleBrainInc/nimblebrain",
-      "description": "Self-hosted platform for MCP Apps and agent automations — tools, interactive UIs, scheduled runs, multi-agent delegation.",
-      "language": "TypeScript",
-      "stars": 25,
-      "updatedAt": "2026-10-15T07:23:27Z",
-      "fullName": "NimbleBrainInc/nimblebrain"
-    },
-    {
-      "name": "ghidra-cli",
-      "url": "https://github.com/toratako/ghidra-cli",
-      "description": "The agent-native Ghidra CLI — headless analysis, decompilation, and structured JSON built for AI agents.",
-      "language": "Rust",
-      "stars": 12,
-      "updatedAt": "2026-10-15T07:23:20Z",
-      "fullName": "toratako/ghidra-cli"
-    },
-    {
-      "name": "statgpt-backend",
-      "url": "https://github.com/epam/statgpt-backend",
-      "description": "StatGPT Backend",
-      "language": "Python",
-      "stars": 26,
-      "updatedAt": "2026-10-15T07:23:15Z",
-      "fullName": "epam/statgpt-backend"
-    },
-    {
-      "name": "donethat-electron",
-      "url": "https://github.com/donethatai/donethat-electron",
-      "description": "Desktop client for productivity app DoneThat. DoneThat automatically tracks all work and uses this context to boost your productivity: Automated timesheets, long-term memory for AIs, proactive coaching, and social sharing for accountability and remote trust. D",
-      "language": "JavaScript",
-      "stars": 12,
-      "updatedAt": "2026-10-15T07:23:14Z",
-      "fullName": "donethatai/donethat-electron"
-    },
-    {
-      "name": "carla",
-      "url": "https://github.com/carla-simulator/carla",
-      "description": "Open-source simulator for autonomous driving research.",
-      "language": "C++",
-      "stars": 14491,
-      "updatedAt": "2026-10-15T07:23:03Z",
-      "fullName": "carla-simulator/carla"
+      "name": "Artemis",
+      "url": "https://github.com/ls1intum/Artemis",
+      "description": "Artemis - Interactive Learning with Automated Feedback",
+      "language": "Java",
+      "stars": 819,
+      "updatedAt": "2026-10-16T07:07:17Z",
+      "fullName": "ls1intum/Artemis"
     },
     {
       "name": "tt-metal",
       "url": "https://github.com/tenstorrent/tt-metal",
       "description": ":metal: TT-NN operator library, and TT-Metalium low level kernel programming model.",
       "language": "Python",
-      "stars": 1705,
-      "updatedAt": "2026-10-15T07:22:59Z",
+      "stars": 1708,
+      "updatedAt": "2026-10-16T07:07:08Z",
       "fullName": "tenstorrent/tt-metal"
+    },
+    {
+      "name": "nanocode",
+      "url": "https://github.com/gakonst/nanocode",
+      "description": "SDK for Frontier Embedded Agents.",
+      "language": "Rust",
+      "stars": 571,
+      "updatedAt": "2026-10-16T07:07:07Z",
+      "fullName": "gakonst/nanocode"
+    },
+    {
+      "name": "unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4, MiniMax-H3, Gemma 4, FLUX and more.",
+      "language": "Python",
+      "stars": 78096,
+      "updatedAt": "2026-10-16T07:07:06Z",
+      "fullName": "unslothai/unsloth"
+    },
+    {
+      "name": "MFQ",
+      "url": "https://github.com/Tylogi/MFQ",
+      "description": "Get more intelligence from every bit. Better quantization formats and smarter calibration let larger, stronger models run smoothly on the hardware you already own.",
+      "language": "C++",
+      "stars": 81,
+      "updatedAt": "2026-10-16T07:06:52Z",
+      "fullName": "Tylogi/MFQ"
+    },
+    {
+      "name": "javis-os",
+      "url": "https://github.com/blogminhquy/javis-os",
+      "description": "Open-source AI project on GitHub.",
+      "language": "Python",
+      "stars": 268,
+      "updatedAt": "2026-10-16T07:06:46Z",
+      "fullName": "blogminhquy/javis-os"
+    },
+    {
+      "name": "openhuman",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "description": "The fastest, cheapest, most efficient open-source agent harness. Run more than 500 agents on a $10 VPS.",
+      "language": "Rust",
+      "stars": 42098,
+      "updatedAt": "2026-10-16T07:06:44Z",
+      "fullName": "tinyhumansai/openhuman"
+    },
+    {
+      "name": "awesome-jev-gallery",
+      "url": "https://github.com/OmniJev/awesome-jev-gallery",
+      "description": "🔥🔥 Awesome Jev:  open-source models, projects, benchmarks, and independent evaluations for Jev and System One models.",
+      "language": "JavaScript",
+      "stars": 507,
+      "updatedAt": "2026-10-16T07:06:43Z",
+      "fullName": "OmniJev/awesome-jev-gallery"
+    },
+    {
+      "name": "suna",
+      "url": "https://github.com/kortix-ai/suna",
+      "description": "The open-source AI Operating System",
+      "language": "TypeScript",
+      "stars": 20276,
+      "updatedAt": "2026-10-16T07:06:41Z",
+      "fullName": "kortix-ai/suna"
+    },
+    {
+      "name": "orchestkit",
+      "url": "https://github.com/yonatangross/orchestkit",
+      "description": "The Complete AI Development Toolkit for Claude Code. 106 skills, 36 agents, 171 hooks. Install `ork` for stable (v9.x), or `ork-alpha` for the v10 line, which ships daily.",
+      "language": "TypeScript",
+      "stars": 295,
+      "updatedAt": "2026-10-16T07:06:39Z",
+      "fullName": "yonatangross/orchestkit"
+    },
+    {
+      "name": "AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "language": "Python",
+      "stars": 187605,
+      "updatedAt": "2026-10-16T07:06:38Z",
+      "fullName": "Significant-Gravitas/AutoGPT"
+    },
+    {
+      "name": "KiroCrew",
+      "url": "https://github.com/kirodotdev/KiroCrew",
+      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
+      "language": "Python",
+      "stars": 4452,
+      "updatedAt": "2026-10-16T07:06:36Z",
+      "fullName": "kirodotdev/KiroCrew"
+    },
+    {
+      "name": "OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "description": "🙌 OpenHands: AI-Driven Development",
+      "language": "TypeScript",
+      "stars": 91021,
+      "updatedAt": "2026-10-16T07:06:35Z",
+      "fullName": "OpenHands/OpenHands"
+    },
+    {
+      "name": "awesome-ai-agent-governance",
+      "url": "https://github.com/systempromptio/awesome-ai-agent-governance",
+      "description": "The curated list of tools, standards, and resources for governing AI agents in production: policy enforcement, audit trails, EU AI Act compliance, MCP and Claude Code security.",
+      "language": "Open source",
+      "stars": 52,
+      "updatedAt": "2026-10-16T07:06:30Z",
+      "fullName": "systempromptio/awesome-ai-agent-governance"
+    },
+    {
+      "name": "veyyon",
+      "url": "https://github.com/santhreal/veyyon",
+      "description": "Local terminal coding agent: CLI + TUI. Bring your own key/sub. Fork of oh-my-pi. Determined to end Human Slop",
+      "language": "TypeScript",
+      "stars": 27,
+      "updatedAt": "2026-10-16T07:06:30Z",
+      "fullName": "santhreal/veyyon"
+    },
+    {
+      "name": "nimaaksoy.com",
+      "url": "https://github.com/nimaaksoy/nimaaksoy.com",
+      "description": "Curated AI and open-source projects, Chrome extensions, and useful web experiments",
+      "language": "TypeScript",
+      "stars": 6,
+      "updatedAt": "2026-10-16T07:06:27Z",
+      "fullName": "nimaaksoy/nimaaksoy.com"
+    },
+    {
+      "name": "haystack",
+      "url": "https://github.com/deepset-ai/haystack",
+      "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multi",
+      "language": "Python",
+      "stars": 26743,
+      "updatedAt": "2026-10-16T07:06:17Z",
+      "fullName": "deepset-ai/haystack"
+    },
+    {
+      "name": "amux",
+      "url": "https://github.com/mixpeek/amux",
+      "description": "Open-source control plane for AI coding agents. Run an AI engineering team: parallel Claude Code, Codex, and Gemini workers with a shared board, atomic tasks, schedules, loops, origin-stamped messaging, model switching, and self-healing recovery. One dashboard",
+      "language": "Rust",
+      "stars": 535,
+      "updatedAt": "2026-10-16T07:06:16Z",
+      "fullName": "mixpeek/amux"
+    },
+    {
+      "name": "sglang",
+      "url": "https://github.com/sgl-project/sglang",
+      "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+      "language": "Python",
+      "stars": 37199,
+      "updatedAt": "2026-10-16T07:06:14Z",
+      "fullName": "sgl-project/sglang"
+    },
+    {
+      "name": "LightLLM",
+      "url": "https://github.com/ModelTC/LightLLM",
+      "description": "LightLLM is a Python-based LLM (Large Language Model) inference and serving framework, notable for its lightweight design, easy scalability, and high-speed performance.",
+      "language": "Python",
+      "stars": 4324,
+      "updatedAt": "2026-10-16T07:06:09Z",
+      "fullName": "ModelTC/LightLLM"
+    },
+    {
+      "name": "DeepSeek-Reasonix",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "description": "A reliable coding agent for complex software engineering tasks.",
+      "language": "Go",
+      "stars": 35814,
+      "updatedAt": "2026-10-16T07:06:07Z",
+      "fullName": "esengine/DeepSeek-Reasonix"
     },
     {
       "name": "nextclaw",
@@ -180,44 +216,8 @@
       "description": "A human-centered long-term AI partner—not a task-centered assistant.",
       "language": "TypeScript",
       "stars": 261,
-      "updatedAt": "2026-10-15T07:22:58Z",
+      "updatedAt": "2026-10-16T07:06:04Z",
       "fullName": "Peiiii/nextclaw"
-    },
-    {
-      "name": "zero2Leetcode",
-      "url": "https://github.com/ranxi2001/zero2Leetcode",
-      "description": "从零基础 Python 到企业笔试机试的系统性LeetCode100刷题指南-配置免费AI刷题助手",
-      "language": "JavaScript",
-      "stars": 238,
-      "updatedAt": "2026-10-15T07:22:57Z",
-      "fullName": "ranxi2001/zero2Leetcode"
-    },
-    {
-      "name": "antigravity-add-model",
-      "url": "https://github.com/vahapogut/antigravity-add-model",
-      "description": "Proxy patch for Google Antigravity that intercepts internal Cloud Code API and adds support for OpenAI, Claude, Ollama, Gemini and any custom LLM provider.",
-      "language": "TypeScript",
-      "stars": 93,
-      "updatedAt": "2026-10-15T07:22:50Z",
-      "fullName": "vahapogut/antigravity-add-model"
-    },
-    {
-      "name": "sail",
-      "url": "https://github.com/lakehq/sail",
-      "description": "Drop-in Apache Spark replacement written in Rust, unifying batch processing, stream processing, and compute-intensive AI workloads.",
-      "language": "Rust",
-      "stars": 3438,
-      "updatedAt": "2026-10-15T07:22:32Z",
-      "fullName": "lakehq/sail"
-    },
-    {
-      "name": "prism-insight",
-      "url": "https://github.com/dragon1086/prism-insight",
-      "description": "AI-based stock analysis and trading system",
-      "language": "Python",
-      "stars": 776,
-      "updatedAt": "2026-10-15T07:22:32Z",
-      "fullName": "dragon1086/prism-insight"
     }
   ]
 }
