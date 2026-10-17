@@ -118,6 +118,23 @@
 @media(prefers-reduced-motion:reduce){.home-scroll-reveal,.home-scroll-reveal.reveal-stagger>*,.home-scroll-reveal.is-visible,.home-scroll-reveal.reveal-stagger.is-visible>*{opacity:1!important;transform:none!important;transition:none!important;will-change:auto!important}}
 </style>
 
+
+<style id="moviehub-feature-styles">
+.moviehub-feature{padding:18px 0 28px}
+.moviehub-panel{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:24px;overflow:hidden;padding:clamp(24px,4vw,42px);border:1px solid #263449;border-radius:24px;background:radial-gradient(ellipse at 90% 15%,rgba(99,102,241,.24),transparent 35%),linear-gradient(125deg,#0b1220,#111c30 62%,#172554);color:#f8fafc;box-shadow:0 18px 42px rgba(15,23,42,.12)}
+.moviehub-panel:after{content:"";position:absolute;z-index:-1;right:8%;top:-55px;width:210px;height:210px;border:1px solid rgba(255,255,255,.09);border-radius:50%;box-shadow:0 0 0 28px rgba(255,255,255,.025),0 0 0 58px rgba(255,255,255,.02)}
+.moviehub-copy{position:relative;z-index:1}
+.moviehub-eyebrow{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.06);color:#c7d2fe;font-size:10px;font-weight:850;letter-spacing:.09em;text-transform:uppercase}
+.moviehub-copy h2{margin:13px 0 9px;font-size:clamp(27px,4vw,38px);line-height:1.08;letter-spacing:-.04em;color:#fff}
+.moviehub-copy p{max-width:610px;margin:0;color:#cbd5e1;font-size:14px;line-height:1.7}
+.moviehub-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}
+.moviehub-tags span{padding:6px 9px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.05);color:#e2e8f0;font-size:11px}
+.moviehub-action{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;padding:13px 17px;border:1px solid #fff;border-radius:12px;background:#fff;color:#111827;text-decoration:none;font-size:13px;font-weight:850;box-shadow:0 8px 20px rgba(0,0,0,.14);transition:transform .18s ease,background .18s ease}
+.moviehub-action:hover{transform:translateY(-2px);background:#eef2ff}
+@media(max-width:650px){.moviehub-panel{grid-template-columns:1fr;gap:20px;padding:24px 20px}.moviehub-action{justify-self:start}.moviehub-panel:after{right:-70px;top:-75px}}
+@media(prefers-reduced-motion:reduce){.moviehub-action{transition:none}}
+</style>
+
 </head>
 <body data-home-v2="true">
 <header class="shared-header" id="site-header">
@@ -187,6 +204,7 @@
 <a href="/blog/" class="home-tool-card portal-card portal-purple" data-cat="media"><span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3h16v18H4zM8 7h8M8 11h8M8 15h5"/></svg></span><h3>All Blogs</h3><p>Read articles, tutorials and practical guides</p></a>
 <a href="/tools/" class="home-tool-card portal-card portal-slate" data-cat="all"><span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><h3>All Tools</h3><p>Explore the complete tools directory</p></a>
 </div></section>
+<section class="moviehub-feature" id="moviehub-feature" aria-labelledby="moviehub-feature-title"><div class="home-wrap"><div class="moviehub-panel"><div class="moviehub-copy"><span class="moviehub-eyebrow">🎬 Discover MovieHub</span><h2 id="moviehub-feature-title">Your next watch starts here.</h2><p>Explore MovieHub, a dedicated directory for movies and shows, anime, manga, live TV and sports, apps, downloads, and games—all in one easy-to-browse place.</p><div class="moviehub-tags" aria-label="MovieHub categories"><span>Movies &amp; Shows</span><span>Anime &amp; Manga</span><span>Live TV &amp; Sports</span><span>Apps &amp; Games</span></div></div><a class="moviehub-action" href="https://laxmannepal.com.np/Movies/" aria-label="Open MovieHub directory">Explore MovieHub <span aria-hidden="true">→</span></a></div></div></section>
 <section class="home-section"><div class="home-wrap"><div class="home-section-head"><h2>Latest from the blog</h2><a href="/blog/">View all articles →</a></div><div id="home-blog-grid" class="home-blog-grid"><article class="home-post"><p class="eyebrow">Blog</p><h3>Loading latest articles…</h3><p>Articles will appear automatically from the repository content.</p></article></div></div></section>
 <section class="home-wrap"><div class="home-cta"><h2>Built for people who want useful things.</h2><p>No unnecessary complexity. Open a tool, solve the task, learn something practical, and move on.</p><a href="/tools/">Explore free tools →</a></div></section>
 </main>
