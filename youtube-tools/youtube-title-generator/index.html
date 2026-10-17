@@ -313,75 +313,54 @@
 
     <script>
         function generateTitles() {
-            const keyword = document.getElementById('keyword').value;
-            const numTitles = document.getElementById('numTitles').value;
+            const keyword = document.getElementById('keyword').value.trim().replace(/\s+/g, ' ');
+            const numTitles = Number.parseInt(document.getElementById('numTitles').value, 10);
             const resultContainer = document.getElementById('resultContainer');
             const emptyState = document.getElementById('emptyState');
             const loader = document.getElementById('loader');
             const titlesList = document.getElementById('titlesList');
             const resultCount = document.getElementById('resultCount');
 
-            if (!keyword || numTitles < 1 || numTitles > 10) {
-                alert('Please enter a valid keyword and a number between 1 and 10 for titles');
+            if (!keyword || !Number.isInteger(numTitles) || numTitles < 1 || numTitles > 10) {
+                alert('Enter a topic and choose between 1 and 10 title ideas.');
                 return;
             }
 
-            // Show loader, hide empty state
-            loader.style.display = 'block';
+            // Generate original title structures locally; no API key or network request is needed.
+            const patterns = [
+                \`How to \${keyword}: A Step-by-Step Guide\`,
+                \`\${keyword}: 7 Things Beginners Should Know\`,
+                \`I Tried \${keyword} — Here's What to Know\`,
+                \`The Beginner's Guide to \${keyword}\`,
+                \`5 \${keyword} Mistakes to Avoid\`,
+                \`Is \${keyword} Worth It? An Honest Breakdown\`,
+                \`\${keyword} Explained in Simple Terms\`,
+                \`Before You Try \${keyword}, Watch This\`,
+                \`\${keyword}: Tips That Can Save You Time\`,
+                \`What I Wish I Knew Before \${keyword}\`
+            ];
+
+            const titles = patterns.slice(0, numTitles);
+            loader.style.display = 'none';
             emptyState.style.display = 'none';
-            resultContainer.style.display = 'none';
+            titlesList.innerHTML = '';
 
-            // Replace 'YOUR_API_KEY' with your actual YouTube API key
-            const apiKey = '';
-            const apiUrl = `https://api.laxmannepal.com.np/youtube/search?q=${encodeURIComponent(keyword)}&part=snippet&maxResults=${numTitles}&type=video&key=${apiKey}`;
+            titles.forEach((title, index) => {
+                const titleItem = document.createElement('div');
+                titleItem.className = 'title-item';
+                const number = document.createElement('div');
+                number.className = 'title-number';
+                number.textContent = String(index + 1);
+                const text = document.createElement('div');
+                text.className = 'title-text';
+                text.textContent = title;
+                titleItem.appendChild(number);
+                titleItem.appendChild(text);
+                titlesList.appendChild(titleItem);
+            });
 
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    // Hide loader
-                    loader.style.display = 'none';
-                    
-                    if (data.items && data.items.length > 0) {
-                        const titles = data.items.map(item => item.snippet.title);
-                        
-                        // Update result count
-                        resultCount.textContent = `${titles.length} title${titles.length > 1 ? 's' : ''}`;
-                        
-                        // Clear previous results
-                        titlesList.innerHTML = '';
-                        
-                        // Add titles to the list
-                        titles.forEach((title, index) => {
-                            const titleItem = document.createElement('div');
-                            titleItem.className = 'title-item';
-                            titleItem.innerHTML = `
-                                <div class="title-number">${index + 1}</div>
-                                <div class="title-text">${title}</div>
-                            `;
-                            titlesList.appendChild(titleItem);
-                        });
-                        
-                        // Show result container
-                        resultContainer.style.display = 'block';
-                    } else {
-                        emptyState.innerHTML = `
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <h3>No Titles Found</h3>
-                            <p>Try a different keyword or check your internet connection</p>
-                        `;
-                        emptyState.style.display = 'block';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching data:', error);
-                    loader.style.display = 'none';
-                    emptyState.innerHTML = `
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <h3>Error Fetching Data</h3>
-                        <p>An error occurred while fetching data. Please try again.</p>
-                    `;
-                    emptyState.style.display = 'block';
-                });
+            resultCount.textContent = \`\${titles.length} title idea\${titles.length === 1 ? '' : 's'}\`;
+            resultContainer.style.display = 'block';
         }
 
         function copyTitles() {
@@ -423,5 +402,23 @@
             }
         });
     </script>
+<section aria-labelledby="title-generator-guide" style="max-width:800px;margin:24px auto 32px;padding:0 20px;line-height:1.7;color:#475467">
+  <h2 id="title-generator-guide" style="color:#222">How these title ideas are generated</h2>
+  <p>Enter the main subject of your video and choose how many suggestions you want. This tool combines your topic with different title structures for tutorials, beginner explainers, mistakes to avoid, reviews and personal-experience videos. Ideas are generated in your browser, so no API key is required.</p>
+  <h2 style="color:#222">Example: topic “Excel formulas”</h2>
+  <ul>
+    <li>How to Excel formulas: A Step-by-Step Guide</li>
+    <li>Excel formulas: 7 Things Beginners Should Know</li>
+    <li>5 Excel formulas Mistakes to Avoid</li>
+  </ul>
+  <p>These are starting points, not performance predictions or verified search trends. Edit awkward wording, make sure the title accurately reflects the video, and avoid promising results the video does not deliver. Search ranking and click-through rate depend on many factors; a title generator cannot guarantee views.</p>
+  <h2 style="color:#222">Tips for choosing a stronger YouTube title</h2>
+  <ul>
+    <li>Put the clearest topic or viewer benefit near the beginning.</li>
+    <li>Be specific about the audience, task, result or comparison.</li>
+    <li>Keep the wording natural and avoid repeating the same keyword unnaturally.</li>
+    <li>Check the title against the actual video and thumbnail before publishing.</li>
+  </ul>
+</section>
 <section id="yt-related-tools" class="yt-related"><h2>Related YouTube tools</h2><p>Continue your creator workflow with these tools from the YouTube toolkit.</p><div class="yt-related-grid"><a class="yt-related-card" href="/youtube-tools/youtube-trending-keywords/"><img src="/youtube-tools/youtube-trending-keywords/logo.webp" alt="" width="40" height="40" loading="lazy"><span><strong>YouTube Keyword Explorer</strong><small>Research & Trends</small></span></a><a class="yt-related-card" href="/youtube-tools/youtube-video-analytics/"><img src="/youtube-tools/youtube-video-analytics/logo.webp" alt="" width="40" height="40" loading="lazy"><span><strong>YouTube Video Analytics</strong><small>Analytics</small></span></a><a class="yt-related-card" href="/youtube-tools/youtube-video-download/"><img src="/youtube-tools/youtube-video-download/logo.webp" alt="" width="40" height="40" loading="lazy"><span><strong>YouTube Video Downloader</strong><small>Download</small></span></a><a class="yt-related-card" href="/youtube-tools/youtube-video-seo-analyzer/"><img src="/youtube-tools/youtube-video-seo-analyzer/logo.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Advanced YouTube Video SEO Analyzer</strong><small>SEO & Metadata</small></span></a></div></section></body>
 </html>
