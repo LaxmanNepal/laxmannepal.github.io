@@ -34,6 +34,22 @@
     .fpg-note{max-width:680px;margin:24px auto 0;text-align:center;color:#777;font-size:12px;line-height:1.6}
     @media(max-width:560px){.fpg-page{padding:18px 10px 4px}.fpg-card{padding:16px;border-radius:19px}.fpg-password{font-size:15px}.fpg-options{gap:4px}.fpg-option{padding:10px 6px}.fpg-hero{margin-top:4px}}
     @media(prefers-reduced-motion:reduce){.fpg-toast{transition:none}}
+
+    .fpg-extra{margin-top:18px;padding:15px;border:1px solid #ededf0;border-radius:14px;background:rgba(250,250,252,.8)}
+    .fpg-extra-title{font-size:13px;font-weight:800;margin:0 0 12px;color:#303036}
+    .fpg-select,.fpg-custom{width:100%;min-width:0;padding:11px 12px;border:1px solid #d8d8df;border-radius:10px;background:#fff;color:#222;font:inherit;font-size:14px}
+    .fpg-checkline{display:flex;align-items:center;gap:9px;margin:10px 0;color:#424248;font-size:13px;line-height:1.4}
+    .fpg-checkline input{width:17px;height:17px;accent-color:#007aff;flex:0 0 auto}
+    .fpg-custom-wrap{margin-top:12px}.fpg-subtle{margin:7px 0 0;color:#777;font-size:11px;line-height:1.5}
+    .fpg-entropy{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:9px;color:#777;font-size:12px}
+    .fpg-history{display:grid;gap:8px}.fpg-history-row{display:flex;align-items:center;gap:8px;min-width:0;padding:9px 10px;border:1px solid #e7e7eb;border-radius:10px;background:#fff}
+    .fpg-history-value{flex:1;min-width:0;overflow-wrap:anywhere;font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;color:#444}
+    .fpg-mini-btn{flex:0 0 auto;border:1px solid #dddde3;border-radius:8px;background:#fff;padding:7px 9px;font-size:12px;font-weight:700;cursor:pointer;color:#333}
+    .fpg-mini-btn:hover{background:#f1f1f5}.fpg-bulk-actions{display:flex;gap:8px;margin-top:10px}.fpg-bulk-actions button{flex:1}
+    .fpg-bulk-output{display:block;width:100%;min-height:130px;margin-top:12px;padding:11px;border:1px solid #d8d8df;border-radius:10px;background:#fff;color:#333;font:12px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;resize:vertical}
+    .fpg-muted{color:#85858d;font-size:12px;line-height:1.5;margin:6px 0 0}
+    @media(max-width:560px){.fpg-extra{padding:12px}.fpg-bulk-actions{flex-direction:column}.fpg-history-row{align-items:flex-start}.fpg-mini-btn{padding:8px}}
+
   </style>
 </head>
 <body>
@@ -83,6 +99,41 @@
 
       <button class="fpg-generate" id="generate" type="button">Generate Password</button>
 
+      <div class="fpg-extra">
+        <h2 class="fpg-extra-title">Quick presets</h2>
+        <label for="preset" class="fpg-subtle">Choose a setup, then customize it if needed.</label>
+        <select class="fpg-select" id="preset">
+          <option value="custom">Custom settings</option>
+          <option value="everyday">Everyday (16 characters)</option>
+          <option value="strong">Strong (24 characters)</option>
+          <option value="maximum">Maximum (32 characters)</option>
+          <option value="pin">Numeric PIN (6 digits)</option>
+        </select>
+        <label class="fpg-checkline"><input id="excludeSimilar" type="checkbox"> Exclude look-alike characters (O, 0, I, l, 1)</label>
+        <label class="fpg-checkline"><input id="noRepeat" type="checkbox"> Never repeat a character</label>
+        <div class="fpg-custom-wrap">
+          <label class="fpg-subtle" for="customSymbols">Custom symbols (optional)</label>
+          <input class="fpg-custom" id="customSymbols" type="text" maxlength="40" placeholder="e.g. !@#$%">
+        </div>
+        <div class="fpg-entropy"><span>Estimated entropy</span><strong id="entropy">—</strong></div>
+        <p class="fpg-subtle">Entropy is an estimate based on the available character pool and length, not a guarantee of account security.</p>
+      </div>
+      <div class="fpg-extra">
+        <h2 class="fpg-extra-title">Password history <span id="historyCount">(0)</span></h2>
+        <div class="fpg-history" id="history"><p class="fpg-muted">Newly generated passwords will appear here for this session only.</p></div>
+        <p class="fpg-subtle">History stays only in this page session and is cleared when you reload or close the page.</p>
+      </div>
+      <div class="fpg-extra">
+        <h2 class="fpg-extra-title">Generate multiple passwords</h2>
+        <label class="fpg-subtle" for="bulkCount">Number to generate (1–20)</label>
+        <input class="fpg-slider" id="bulkCount" type="range" min="1" max="20" value="5">
+        <div class="fpg-row"><span>Batch size</span><span class="fpg-value" id="bulkCountValue">5</span></div>
+        <div class="fpg-bulk-actions"><button class="fpg-mini-btn" id="bulkGenerate" type="button">Generate batch</button><button class="fpg-mini-btn" id="bulkCopy" type="button">Copy batch</button></div>
+        <textarea class="fpg-bulk-output" id="bulkOutput" aria-label="Generated password batch" readonly placeholder="Your batch will appear here."></textarea>
+        <p class="fpg-subtle">Generate a batch to compare options. Treat every password as sensitive and do not share it.</p>
+      </div>
+
+
       <div class="fpg-mobile">
         <button class="fpg-mobile-toggle" id="mobileToggle" type="button" aria-expanded="false"><span>Mobile Features</span><span>⌄</span></button>
         <div class="fpg-mobile-content" id="mobileContent">
@@ -107,20 +158,35 @@
 
   <script>
   (()=>{
-    const pools={upper:'ABCDEFGHIJKLMNOPQRSTUVWXYZ',lower:'abcdefghijklmnopqrstuvwxyz',numbers:'0123456789',symbols:'!@#$%^&*()_+~`|}{[]:;?><,./-='};
+    const basePools={upper:'ABCDEFGHIJKLMNOPQRSTUVWXYZ',lower:'abcdefghijklmnopqrstuvwxyz',numbers:'0123456789',symbols:'!@#$%^&*()_+~`|}{[]:;?><,./-='};
+    const similar='O0Il1';
     const $=id=>document.getElementById(id);
-    const els={password:$('password'),copy:$('copy'),generate:$('generate'),length:$('length'),lengthValue:$('lengthValue'),upper:$('upper'),lower:$('lower'),numbers:$('numbers'),symbols:$('symbols'),strength:$('strength'),bars:[$('bar1'),$('bar2'),$('bar3'),$('bar4')],toast:$('toast'),mobileToggle:$('mobileToggle'),mobileContent:$('mobileContent'),shake:$('shake')};
-    function secureIndex(max){if(!crypto||!crypto.getRandomValues)throw new Error('Secure randomness unavailable');const limit=0x100000000-(0x100000000%max),v=new Uint32Array(1);do{crypto.getRandomValues(v)}while(v[0]>=limit);return v[0]%max}
-    function generate(){const selected=Object.keys(pools).filter(k=>els[k].checked);if(!selected.length){els.password.textContent='Select at least one type';els.password.classList.add('placeholder');return}if(Number(els.length.value)<selected.length){els.length.value=selected.length;els.lengthValue.textContent=selected.length}try{const all=selected.map(k=>pools[k]).join('');const out=selected.map(k=>pools[k][secureIndex(pools[k].length)]);while(out.length<Number(els.length.value))out.push(all[secureIndex(all.length)]);for(let i=out.length-1;i>0;i--){const j=secureIndex(i+1);[out[i],out[j]]=[out[j],out[i]]}const pass=out.join('');els.password.textContent=pass;els.password.classList.remove('placeholder');updateStrength(pass)}catch(e){els.password.textContent=e.message;els.password.classList.add('placeholder');els.strength.textContent='—'}}
-    function updateStrength(p){let score=0;if(p.length>=8)score++;if(p.length>=12)score++;if(p.length>=16)score++;if(/[A-Z]/.test(p))score++;if(/[0-9]/.test(p))score++;if(/[^A-Za-z0-9]/.test(p))score++;let level=score>=6?4:score>=5?3:score>=3?2:score?1:0;const name=['','Weak','Fair','Good','Strong'][level];els.strength.textContent=name;els.strength.className='fpg-meter-value '+name.toLowerCase();els.bars.forEach((b,i)=>{b.className='fpg-bar';if(i<level)b.classList.add('active',name.toLowerCase())})}
-    function toast(msg){els.toast.textContent=msg;els.toast.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>els.toast.classList.remove('show'),1800)}
-    async function copy(){const p=els.password.textContent;if(!p||els.password.classList.contains('placeholder'))return;try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(p);else{const t=document.createElement('textarea');t.value=p;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();if(!document.execCommand('copy'))throw 0;t.remove()}toast('Password copied')}catch(e){toast('Copy blocked — select the password manually')}}
-    els.generate.onclick=()=>{generate();toast('New password generated')};els.copy.onclick=copy;els.length.oninput=()=>{els.lengthValue.textContent=els.length.value;generate()};['upper','lower','numbers','symbols'].forEach(k=>els[k].onchange=()=>{if(!els.upper.checked&&!els.lower.checked&&!els.numbers.checked&&!els.symbols.checked){els[k].checked=true;toast('At least one type is required')}generate()});
-    els.mobileToggle.onclick=()=>{const open=els.mobileContent.classList.toggle('open');els.mobileToggle.setAttribute('aria-expanded',open)};
-    let sx=0,sy=0;document.querySelector('.fpg-card').addEventListener('touchstart',e=>{sx=e.changedTouches[0].screenX;sy=e.changedTouches[0].screenY},{passive:true});document.querySelector('.fpg-card').addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-sx,dy=e.changedTouches[0].screenY-sy;if(Math.abs(dx)>80&&Math.abs(dy)<50){if(dx<0){generate();toast('New password generated')}else copy()}});
-    let last=0;function motion(e){if(!els.shake.checked||!e.accelerationIncludingGravity)return;const a=e.accelerationIncludingGravity,n=Math.abs((a.x||0)+(a.y||0)+(a.z||0));if(n>35&&Date.now()-last>1200){last=Date.now();generate();toast('New password generated')}}if('DeviceMotionEvent'in window)window.addEventListener('devicemotion',motion,{passive:true});
-    const menu=$('shared-mobile-menu'),backdrop=$('shared-menu-backdrop');$('shared-menu-btn')?.addEventListener('click',()=>{menu?.classList.add('open');backdrop?.style.setProperty('display','block');$('shared-menu-btn').setAttribute('aria-expanded','true')});$('shared-menu-close')?.addEventListener('click',()=>{menu?.classList.remove('open');backdrop?.style.setProperty('display','none');$('shared-menu-btn').setAttribute('aria-expanded','false')});backdrop?.addEventListener('click',()=>{$('shared-menu-close')?.click()});
-    $('footerYear').textContent=new Date().getFullYear();generate();
+    const els={password:$('password'),copy:$('copy'),generate:$('generate'),length:$('length'),lengthValue:$('lengthValue'),upper:$('upper'),lower:$('lower'),numbers:$('numbers'),symbols:$('symbols'),strength:$('strength'),bars:[$('bar1'),$('bar2'),$('bar3'),$('bar4')],toast:$('toast'),mobileToggle:$('mobileToggle'),mobileContent:$('mobileContent'),shake:$('shake'),preset:$('preset'),excludeSimilar:$('excludeSimilar'),noRepeat:$('noRepeat'),customSymbols:$('customSymbols'),entropy:$('entropy'),history:$('history'),historyCount:$('historyCount'),bulkCount:$('bulkCount'),bulkCountValue:$('bulkCountValue'),bulkGenerate:$('bulkGenerate'),bulkCopy:$('bulkCopy'),bulkOutput:$('bulkOutput')};
+    let history=[];
+    function secureIndex(max){if(!window.crypto||!crypto.getRandomValues)throw new Error('Secure randomness unavailable');const limit=0x100000000-(0x100000000%max),v=new Uint32Array(1);do{crypto.getRandomValues(v)}while(v[0]>=limit);return v[0]%max}
+    function getPools(){const p={...basePools};p.symbols=els.customSymbols.value.trim()||basePools.symbols;if(els.excludeSimilar.checked){for(const k of Object.keys(p))p[k]=[...p[k]].filter(ch=>!similar.includes(ch)).join('')}return p}
+    function selectedPools(){const p=getPools();return Object.keys(p).filter(k=>els[k].checked).map(k=>({key:k,chars:[...new Set(p[k])].join('')})).filter(x=>x.chars.length)}
+    function makePassword(){const chosen=selectedPools();if(!chosen.length)throw new Error('Select at least one character type');const len=Number(els.length.value),all=[...new Set(chosen.map(x=>x.chars).join(''))].join('');if(els.noRepeat.checked&&len>all.length)throw new Error('No-repeat mode has only '+all.length+' unique characters available. Shorten the password or allow repeats.');const out=chosen.map(x=>x.chars[secureIndex(x.chars.length)]);if(els.noRepeat.checked){const remaining=[...all].filter(ch=>!out.includes(ch));while(out.length<len){const i=secureIndex(remaining.length);out.push(remaining.splice(i,1)[0])}}else{while(out.length<len)out.push(all[secureIndex(all.length)])}for(let i=out.length-1;i>0;i--){const j=secureIndex(i+1);[out[i],out[j]]=[out[j],out[i]]}return out.join('')}
+    function updateStrength(p){const pool=selectedPools().reduce((n,x)=>n+x.chars.length,0);const bits=p.length&&pool?Math.floor(p.length*Math.log2(pool)):0;let level=bits<28?1:bits<45?2:bits<70?3:4;const name=['','Weak','Fair','Good','Strong'][level];els.strength.textContent=name;els.strength.className='fpg-meter-value '+name.toLowerCase();els.bars.forEach((b,i)=>{b.className='fpg-bar';if(i<level)b.classList.add('active',name.toLowerCase())});els.entropy.textContent=bits+' bits (approx.)'}
+    function addHistory(p){history=[p,...history.filter(x=>x!==p)].slice(0,5);renderHistory()}
+    function renderHistory(){els.historyCount.textContent='('+history.length+')';if(!history.length){els.history.innerHTML='<p class="fpg-muted">Newly generated passwords will appear here for this session only.</p>';return}els.history.replaceChildren();history.forEach(p=>{const row=document.createElement('div');row.className='fpg-history-row';const value=document.createElement('span');value.className='fpg-history-value';value.textContent=p;const button=document.createElement('button');button.className='fpg-mini-btn';button.type='button';button.textContent='Copy';button.setAttribute('aria-label','Copy password from history');button.addEventListener('click',()=>copyText(p));row.append(value,button);els.history.append(row)})}
+    function generate(announce=false){try{const p=makePassword();els.password.textContent=p;els.password.classList.remove('placeholder');updateStrength(p);addHistory(p);if(announce)toast('New password generated');return p}catch(e){els.password.textContent=e.message;els.password.classList.add('placeholder');els.strength.textContent='—';els.entropy.textContent='—';if(announce)toast(e.message);return ''}}
+    function toast(msg){els.toast.textContent=msg;els.toast.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>els.toast.classList.remove('show'),2200)}
+    async function copyText(p){try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(p);else{const t=document.createElement('textarea');t.value=p;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();const ok=document.execCommand('copy');t.remove();if(!ok)throw new Error('copy failed')}toast('Copied to clipboard')}catch(e){toast('Copy blocked — select the text manually')}}
+    async function copy(){const p=els.password.textContent;if(!p||els.password.classList.contains('placeholder'))return;await copyText(p)}
+    function applyPreset(v){if(v==='custom')return;const config={everyday:{len:16,upper:true,lower:true,numbers:true,symbols:true},strong:{len:24,upper:true,lower:true,numbers:true,symbols:true},maximum:{len:32,upper:true,lower:true,numbers:true,symbols:true},pin:{len:6,upper:false,lower:false,numbers:true,symbols:false}}[v];if(!config)return;els.length.value=config.len;els.lengthValue.textContent=config.len;['upper','lower','numbers','symbols'].forEach(k=>els[k].checked=config[k]);if(v==='pin'){els.noRepeat.checked=false;els.customSymbols.value=''}generate()}
+    els.generate.addEventListener('click',()=>generate(true));els.copy.addEventListener('click',copy);
+    els.length.addEventListener('input',()=>{els.lengthValue.textContent=els.length.value;els.preset.value='custom';generate()});
+    ['upper','lower','numbers','symbols','excludeSimilar','noRepeat'].forEach(k=>els[k].addEventListener('change',()=>{if(['upper','lower','numbers','symbols'].includes(k)&&!['upper','lower','numbers','symbols'].some(x=>els[x].checked)){els[k].checked=true;toast('At least one type is required')}els.preset.value='custom';generate()}));
+    els.customSymbols.addEventListener('input',()=>{els.preset.value='custom';generate()});els.preset.addEventListener('change',()=>applyPreset(els.preset.value));
+    els.bulkCount.addEventListener('input',()=>els.bulkCountValue.textContent=els.bulkCount.value);
+    els.bulkGenerate.addEventListener('click',()=>{const batch=[];for(let i=0;i<Number(els.bulkCount.value);i++){try{batch.push(makePassword())}catch(e){toast(e.message);return}}els.bulkOutput.value=batch.join('\n');toast('Generated '+batch.length+' passwords')});
+    els.bulkCopy.addEventListener('click',()=>{if(!els.bulkOutput.value){toast('Generate a batch first');return}copyText(els.bulkOutput.value)});
+    els.mobileToggle.addEventListener('click',()=>{const open=els.mobileContent.classList.toggle('open');els.mobileToggle.setAttribute('aria-expanded',String(open))});
+    let sx=0,sy=0;const card=document.querySelector('.fpg-card');card.addEventListener('touchstart',e=>{sx=e.changedTouches[0].screenX;sy=e.changedTouches[0].screenY},{passive:true});card.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-sx,dy=e.changedTouches[0].screenY-sy;if(Math.abs(dx)>80&&Math.abs(dy)<50){if(dx<0)generate(true);else copy()}});
+    let last=0;function motion(e){if(!els.shake.checked||!e.accelerationIncludingGravity)return;const a=e.accelerationIncludingGravity,n=Math.abs((a.x||0)+(a.y||0)+(a.z||0));if(n>35&&Date.now()-last>1200){last=Date.now();generate(true)}}if('DeviceMotionEvent'in window)window.addEventListener('devicemotion',motion,{passive:true});
+    const menu=$('shared-mobile-menu'),backdrop=$('shared-menu-backdrop');$('shared-menu-btn')?.addEventListener('click',()=>{menu?.classList.add('open');backdrop?.style.setProperty('display','block');$('shared-menu-btn').setAttribute('aria-expanded','true')});$('shared-menu-close')?.addEventListener('click',()=>{menu?.classList.remove('open');backdrop?.style.setProperty('display','none');$('shared-menu-btn').setAttribute('aria-expanded','false')});backdrop?.addEventListener('click',()=>$('shared-menu-close')?.click());
+    $('footerYear').textContent=new Date().getFullYear();renderHistory();generate();
   })();
   </script>
 </body>
