@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-17T15:40:24.067532+00:00",
-  "count": 146,
+  "updated_at": "2026-10-17T20:40:18.988480+00:00",
+  "count": 147,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -128,22 +128,6 @@
       "storages": [
         "128GB"
       ]
-    },
-    {
-      "id": "blackview-wave-2c",
-      "name": "Blackview Wave 2C",
-      "brand": "Blackview",
-      "variants": [
-        "3GB + 32GB"
-      ],
-      "price": 9999,
-      "max_price": 9999,
-      "original_price": null,
-      "rams": [
-        "3GB",
-        "32GB"
-      ],
-      "storages": []
     },
     {
       "id": "blackview-wave-7c",
@@ -514,13 +498,15 @@
       "name": "Infinix Hot 70",
       "brand": "Infinix",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "8GB + 128GB"
       ],
       "price": 33999,
-      "max_price": 33999,
+      "max_price": 36999,
       "original_price": null,
       "rams": [
-        "6GB"
+        "6GB",
+        "8GB"
       ],
       "storages": [
         "128GB"
@@ -584,20 +570,43 @@
       ]
     },
     {
+      "id": "infinix-note-edge",
+      "name": "Infinix Note Edge",
+      "brand": "Infinix",
+      "variants": [
+        "8GB+128GB",
+        "Infinix Note Edge - 6GB - 128GB",
+        "8GB+256GB"
+      ],
+      "price": 41999,
+      "max_price": 47999,
+      "original_price": null,
+      "rams": [
+        "6GB",
+        "8GB"
+      ],
+      "storages": [
+        "128GB",
+        "256GB"
+      ]
+    },
+    {
       "id": "infinix-smart-20",
       "name": "Infinix Smart 20",
       "brand": "Infinix",
       "variants": [
-        "4GB + 64GB"
+        "4GB + 64GB",
+        "4GB + 128GB"
       ],
       "price": 21999,
-      "max_price": 21999,
+      "max_price": 23999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -1560,16 +1569,20 @@
       "name": "Samsung Galaxy A07",
       "brand": "Samsung",
       "variants": [
-        "4GB+64GB"
+        "4GB+64GB",
+        "4GB+128GB",
+        "6GB+128GB"
       ],
       "price": 25499,
-      "max_price": 25499,
+      "max_price": 33499,
       "original_price": null,
       "rams": [
-        "4GB"
+        "4GB",
+        "6GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -1594,15 +1607,19 @@
       "name": "Samsung Galaxy A08",
       "brand": "Samsung",
       "variants": [
-        "Samsung Galaxy A08 - 4GB - 128GB"
+        "Samsung Galaxy A08 - 4GB - 128GB",
+        "Samsung Galaxy A08 - 4GB - 64GB",
+        "Samsung Galaxy A08 - 6GB - 128GB"
       ],
-      "price": 40999,
-      "max_price": 40999,
+      "price": 34499,
+      "max_price": 47499,
       "original_price": null,
       "rams": [
-        "4GB"
+        "4GB",
+        "6GB"
       ],
       "storages": [
+        "64GB",
         "128GB"
       ]
     },
@@ -1611,16 +1628,20 @@
       "name": "Samsung Galaxy A17 5G",
       "brand": "Samsung",
       "variants": [
-        "6GB+128GB"
+        "6GB+128GB",
+        "8GB+128GB",
+        "8GB+256GB"
       ],
       "price": 44999,
-      "max_price": 44999,
+      "max_price": 56999,
       "original_price": null,
       "rams": [
-        "6GB"
+        "6GB",
+        "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -1628,16 +1649,19 @@
       "name": "Samsung Galaxy A27 5G",
       "brand": "Samsung",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "8GB + 256GB"
       ],
       "price": 51999,
-      "max_price": 51999,
-      "original_price": 55999,
+      "max_price": 65999,
+      "original_price": 69999,
       "rams": [
-        "6GB"
+        "6GB",
+        "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -1645,15 +1669,19 @@
       "name": "Samsung Galaxy A37 5G",
       "brand": "Samsung",
       "variants": [
-        "8GB+256GB"
+        "8GB+256GB",
+        "12GB+256GB",
+        "8GB+128GB"
       ],
-      "price": 86999,
-      "max_price": 86999,
+      "price": 74999,
+      "max_price": 96999,
       "original_price": null,
       "rams": [
-        "8GB"
+        "8GB",
+        "12GB"
       ],
       "storages": [
+        "128GB",
         "256GB"
       ]
     },
@@ -1662,12 +1690,14 @@
       "name": "Samsung Galaxy A57 5G",
       "brand": "Samsung",
       "variants": [
-        "12GB+256GB"
+        "12GB+256GB",
+        "8GB+256GB"
       ],
-      "price": 107999,
+      "price": 96999,
       "max_price": 107999,
       "original_price": null,
       "rams": [
+        "8GB",
         "12GB"
       ],
       "storages": [
@@ -1757,6 +1787,23 @@
       "price": 123999,
       "max_price": 159999,
       "original_price": 182999,
+      "rams": [
+        "12GB"
+      ],
+      "storages": [
+        "256GB"
+      ]
+    },
+    {
+      "id": "samsung-galaxy-z-flip-8",
+      "name": "Samsung Galaxy Z Flip 8",
+      "brand": "Samsung",
+      "variants": [
+        "12GB+256GB"
+      ],
+      "price": 194999,
+      "max_price": 194999,
+      "original_price": null,
       "rams": [
         "12GB"
       ],
