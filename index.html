@@ -224,7 +224,16 @@
 <div class="home-tools-empty" id="home-tools-empty"><strong>No matching tools found</strong>Try another search or choose a different category.</div>
 </div></section>
 <section class="home-section"><div class="home-wrap"><div class="home-section-head"><h2>Latest from the blog</h2><a href="/blog/">View all articles →</a></div><div id="home-blog-grid" class="home-blog-grid"><article class="home-post"><p class="eyebrow">Blog</p><h3>Loading latest articles…</h3><p>Articles will appear automatically from the repository content.</p></article></div></div></section>
-<section class="home-wrap"><div class="home-cta"><h2>Built for people who want useful things.</h2><p>No unnecessary complexity. Open a tool, solve the task, learn something practical, and move on.</p><a href="/tools/">Explore free tools →</a></div></section>
+<section class="home-wrap" aria-labelledby="site-info-heading" style="margin:28px auto 0;padding-bottom:10px">
+<div style="padding:24px;border:1px solid #e5e7eb;border-radius:20px;background:#fff">
+<h2 id="site-info-heading" style="margin:0 0 8px;font-size:22px;letter-spacing:-.03em">About Laxman Nepal</h2>
+<p style="max-width:800px;margin:0;color:#667085;line-height:1.7">An independent technology project by Laxman Nepal, bringing together practical browser tools, technology tutorials and digital guides. Learn about the project, send feedback, or review how the site handles privacy.</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:15px">
+<a href="/about/" style="padding:9px 12px;border:1px solid #d0d5dd;border-radius:10px;color:#101828;text-decoration:none;font-weight:700">About</a>
+<a href="/contact/" style="padding:9px 12px;border:1px solid #d0d5dd;border-radius:10px;color:#101828;text-decoration:none;font-weight:700">Contact</a>
+<a href="/privacy/" style="padding:9px 12px;border:1px solid #d0d5dd;border-radius:10px;color:#101828;text-decoration:none;font-weight:700">Privacy policy</a>
+<a href="/terms/" style="padding:9px 12px;border:1px solid #d0d5dd;border-radius:10px;color:#101828;text-decoration:none;font-weight:700">Terms of use</a>
+</div></div></section>
 </main>
 <script>
 (async()=>{try{const r=await fetch('/search-index.json');if(!r.ok)throw new Error('Search index returned '+r.status);const items=await r.json();const posts=items.filter(x=>x.type==='article').slice(0,6);const bg=document.getElementById('home-blog-grid');const renderPost=x=>`<article class="home-post">${x.image?'<img class="home-post-thumb" src="'+x.image+'" alt="'+String(x.image_alt||x.title).replace(/"/g,'&quot;')+'" loading="lazy" decoding="async">':''}<div class="home-post-body"><p class="eyebrow">Article</p><h3>${x.title}</h3><p>${x.description||''}</p><a href="${x.url}">Read article →</a></div></article>`;if(bg)bg.innerHTML=posts.length?posts.map(renderPost).join(''):'<article class="home-post"><h3>No articles yet</h3><p>Publish an article in content/blog/ to see it here.</p></article>';}catch(e){const bg=document.getElementById('home-blog-grid');if(bg)bg.innerHTML='<article class="home-post"><h3>Articles temporarily unavailable</h3><p>Please try again later.</p></article>';console.warn('Home content index unavailable',e)}})();
