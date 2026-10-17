@@ -135,6 +135,23 @@
 @media(prefers-reduced-motion:reduce){.moviehub-action{transition:none}}
 </style>
 
+
+<style id="homepage-interactive-directory">
+.home-directory-intro{max-width:1040px;margin:0 auto 18px;padding:0 18px}
+.home-directory-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:13px}
+.home-directory-heading .eyebrow{margin:0;color:#667085;font-size:10px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+.home-directory-heading h2{margin:5px 0 0;font-size:clamp(24px,4vw,34px);letter-spacing:-.04em;color:#101828}
+.home-directory-count{white-space:nowrap;color:#667085;font-size:12px;font-weight:750}
+.home-filter-row{display:flex;gap:8px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:thin}
+.home-filter-chip{flex:0 0 auto;border:1px solid #e4e7ec;border-radius:999px;background:#fff;color:#475467;padding:9px 13px;font:inherit;font-size:12px;font-weight:800;cursor:pointer;transition:background .16s,color .16s,border-color .16s}
+.home-filter-chip:hover,.home-filter-chip[aria-pressed="true"]{background:#111827;color:#fff;border-color:#111827}
+.home-filter-chip:focus-visible{outline:3px solid #93c5fd;outline-offset:2px}
+.home-tools-empty{display:none;margin:10px 0;padding:24px;border:1px dashed #cbd5e1;border-radius:16px;background:#fff;text-align:center;color:#475467}
+.home-tools-empty.show{display:block}
+.home-tools-empty strong{display:block;color:#101828;margin-bottom:5px}
+.home-tool-card[hidden]{display:none!important}
+@media(max-width:560px){.home-directory-intro{padding:0 12px}.home-directory-heading{align-items:flex-start;flex-direction:column;gap:7px}.home-directory-count{font-size:11px}}
+</style>
 </head>
 <body data-home-v2="true">
 <header class="shared-header" id="site-header">
@@ -171,6 +188,20 @@
 </nav>
 
 <main>
+
+<div class="home-directory-intro" id="home-directory-controls">
+  <div class="home-directory-heading">
+    <div><p class="eyebrow">Find your next useful tool</p><h2 id="all-tools-title">Explore the directory</h2></div>
+    <span class="home-directory-count" id="home-tool-count" aria-live="polite">Showing all categories</span>
+  </div>
+  <div class="home-filter-row" role="group" aria-label="Filter tools by category">
+    <button class="home-filter-chip" type="button" data-filter="all" aria-pressed="true">All</button>
+    <button class="home-filter-chip" type="button" data-filter="documents" aria-pressed="false">PDF &amp; Documents</button>
+    <button class="home-filter-chip" type="button" data-filter="media" aria-pressed="false">Media &amp; YouTube</button>
+    <button class="home-filter-chip" type="button" data-filter="ai" aria-pressed="false">AI</button>
+    <button class="home-filter-chip" type="button" data-filter="nepal" aria-pressed="false">Nepal &amp; Data</button>
+  </div>
+</div>
 <section class="home-tools-directory premium-directory category-results technical-dashboard" aria-labelledby="all-tools-title">
 <style>
 .technical-dashboard{padding-top:28px;padding-bottom:36px}
@@ -192,6 +223,7 @@
 <a href="/pdf-tools/" class="home-tool-card portal-card portal-red" data-cat="documents"><span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M9 14h6M9 17h4"/></svg></span><h3>PDF Tools</h3><p>Merge, compress, convert and edit PDFs</p></a>
 <a href="/image-tools/" class="home-tool-card portal-card portal-pink" data-cat="media"><span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></span><h3>Image Tools</h3><p>Resize, convert and edit images online</p></a>
 <a href="/ai-tools/" class="home-tool-card portal-card portal-indigo" data-cat="ai"><span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2 1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8zM19 16l1 3 3 1-3 1-1 2-1-2-3-1 3-1z"/></svg></span><h3>AI Tools</h3><p>Discover useful AI tools and utilities</p></a>
+<a href="/tools/generator/strong-password-generator/" class="home-tool-card portal-card portal-slate" data-cat="documents"><span class="portal-icon" aria-hidden="true">🔐</span><h3>Password Generator</h3><p>Create strong random passwords securely</p></a>
 <a href="/qrcodetool/" class="home-tool-card portal-card portal-green" data-cat="documents"><span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v2M14 20h2M18 18h3v3h-3z"/></svg></span><h3>QR Tools</h3><p>Generate and scan QR codes</p></a>
 <a href="/p/data-tools.html" class="home-tool-card portal-card portal-teal" data-cat="nepal"><span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 9h18M8 13h3M8 17h7"/></svg></span><h3>Date Converter</h3><p>Explore date and data utilities</p></a>
 <a href="/youtube-tools/" class="home-tool-card portal-card portal-red" data-cat="media"><div class="portal-icon"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" style="display:block;fill:currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg></div><h3>YouTube Tools</h3><p>Creator tools, growth and video resources</p></a>
@@ -203,6 +235,7 @@
 <a href="/tools/" class="home-tool-card portal-card portal-purple" data-cat="media"><span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 19v2h16v-2"/></svg></span><h3>Download Tools</h3><p>Browse available download utilities</p></a>
 <a href="/blog/" class="home-tool-card portal-card portal-purple" data-cat="media"><span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3h16v18H4zM8 7h8M8 11h8M8 15h5"/></svg></span><h3>All Blogs</h3><p>Read articles, tutorials and practical guides</p></a>
 <a href="/tools/" class="home-tool-card portal-card portal-slate" data-cat="all"><span class="portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><h3>All Tools</h3><p>Explore the complete tools directory</p></a>
+<div class="home-tools-empty" id="home-tools-empty"><strong>No matching tools found</strong>Try another search or choose a different category.</div>
 </div></section>
 <section class="moviehub-feature" id="moviehub-feature" aria-labelledby="moviehub-feature-title"><div class="home-wrap"><div class="moviehub-panel"><div class="moviehub-copy"><span class="moviehub-eyebrow">🎬 Discover MovieHub</span><h2 id="moviehub-feature-title">Your next watch starts here.</h2><p>Explore MovieHub, a dedicated directory for movies and shows, anime, manga, live TV and sports, apps, downloads, and games—all in one easy-to-browse place.</p><div class="moviehub-tags" aria-label="MovieHub categories"><span>Movies &amp; Shows</span><span>Anime &amp; Manga</span><span>Live TV &amp; Sports</span><span>Apps &amp; Games</span></div></div><a class="moviehub-action" href="https://laxmannepal.com.np/Movies/" aria-label="Open MovieHub directory">Explore MovieHub <span aria-hidden="true">→</span></a></div></div></section>
 <section class="home-section"><div class="home-wrap"><div class="home-section-head"><h2>Latest from the blog</h2><a href="/blog/">View all articles →</a></div><div id="home-blog-grid" class="home-blog-grid"><article class="home-post"><p class="eyebrow">Blog</p><h3>Loading latest articles…</h3><p>Articles will appear automatically from the repository content.</p></article></div></div></section>
@@ -258,5 +291,46 @@ const input=document.getElementById('global-nav-search');input?.addEventListener
 })();
 </script>
 
+
+<script id="homepage-directory-interactions">
+(function(){
+  const grid=document.getElementById('home-tools-grid');
+  if(!grid)return;
+  const cards=Array.from(grid.querySelectorAll('.home-tool-card'));
+  const search=document.getElementById('directory-search');
+  const chips=Array.from(document.querySelectorAll('.home-filter-chip'));
+  const count=document.getElementById('home-tool-count');
+  const empty=document.getElementById('home-tools-empty');
+  let active='all';
+  function update(){
+    const q=(search?.value||'').trim().toLocaleLowerCase();
+    let shown=0;
+    cards.forEach(card=>{
+      const category=(card.dataset.cat||'').toLowerCase();
+      const text=(card.innerText||'').toLocaleLowerCase();
+      const matchCategory=active==='all'||category===active;
+      const matchText=!q||text.includes(q);
+      const visible=matchCategory&&matchText;
+      card.hidden=!visible;
+      if(visible)shown++;
+    });
+    if(count)count.textContent=q||active!=='all'?shown+' tool'+(shown===1?'':'s')+' found':shown+' destinations';
+    if(empty)empty.classList.toggle('show',shown===0);
+  }
+  chips.forEach(chip=>chip.addEventListener('click',()=>{
+    active=chip.dataset.filter||'all';
+    chips.forEach(item=>item.setAttribute('aria-pressed',String(item===chip)));
+    update();
+  }));
+  search?.addEventListener('input',update);
+  search?.addEventListener('search',update);
+  const globalSearch=document.getElementById('global-nav-search');
+  globalSearch?.addEventListener('input',()=>{
+    if(!globalSearch.value.trim())return;
+    if(search){search.value=globalSearch.value;update();document.getElementById('home-directory-controls')?.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+  update();
+})();
+</script>
 </body>
 </html>
