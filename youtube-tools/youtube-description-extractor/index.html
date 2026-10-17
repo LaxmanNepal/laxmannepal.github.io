@@ -205,8 +205,28 @@
     </div>
     
     <div class="youtube-extractor-footer">
-      <p>YouTube Description Extractor Tool | Replace API key with your own</p>
+      <p>Automatic extraction depends on the site's YouTube data service. You can also paste a description you are permitted to use below and clean or copy it here.</p>
     </div>
+    <section aria-labelledby="paste-description-title" style="margin-top:24px;padding:20px;background:#fff;border:1px solid #e5e7eb;border-radius:12px">
+      <h2 id="paste-description-title" style="margin:0 0 8px;font-size:20px">Clean a description you already have</h2>
+      <p style="line-height:1.6;color:#555;margin:0 0 12px">If automatic extraction is unavailable, open the public YouTube video, expand its description, and copy the text. Paste it here to remove timestamps or links, normalize spacing, and copy the cleaned result.</p>
+      <label for="youtube-description-paste" style="display:block;font-weight:700;margin-bottom:7px">Paste description text</label>
+      <textarea id="youtube-description-paste" rows="6" style="width:100%;box-sizing:border-box;padding:12px;border:1px solid #d0d5dd;border-radius:8px;font:inherit;resize:vertical" placeholder="Paste the description text here…"></textarea>
+      <button type="button" id="youtube-description-use-paste" class="youtube-extractor-btn youtube-extractor-btn-primary" style="margin-top:10px;max-width:280px">Load text into cleaner</button>
+      <p style="color:#667085;font-size:13px;line-height:1.5;margin:12px 0 0">Use descriptions for research, attribution checks, or your own content workflow. Respect the creator's rights and YouTube's terms; copying text does not grant permission to republish it.</p>
+    </section>
+    <section aria-labelledby="description-help-title" style="max-width:850px;margin:28px auto;padding:0 4px;line-height:1.7;color:#344054">
+      <h2 id="description-help-title" style="color:#101828">How to use this description cleaner</h2>
+      <ol>
+        <li>Paste a supported public YouTube video URL and select <strong>Extract Description</strong>, if the automatic service is available.</li>
+        <li>If extraction fails, open the video on YouTube, expand the description, and copy the text into the manual field above.</li>
+        <li>Select <strong>Load text into cleaner</strong>. The result panel will become available for copying and text cleanup.</li>
+        <li>Use <strong>Remove Timestamps</strong> for chapter-style time markers, <strong>Remove Links</strong> to strip web addresses, or <strong>Format Text</strong> to tidy excess blank lines.</li>
+      </ol>
+      <h2 style="color:#101828">What this tool can and cannot do</h2>
+      <p>This page cleans description text; it does not reveal private, deleted, members-only, or otherwise restricted video information. Automatic retrieval depends on an external data service and may fail because of availability, access limits, or unsupported links. Manual paste mode provides the cleanup features without an API key.</p>
+      <p><strong>Tip:</strong> Keep the original text before cleaning it. Removing timestamps or URLs is irreversible within the result panel, and chapter timestamps or links may be useful to viewers.</p>
+    </section>
   </div>
 
   <script>
@@ -232,6 +252,25 @@
       
       // Event Listeners
       extractBtn.addEventListener('click', extractDescription);
+      const pasteInput = document.getElementById('youtube-description-paste');
+      const usePasteBtn = document.getElementById('youtube-description-use-paste');
+      if (usePasteBtn && pasteInput) {
+        usePasteBtn.addEventListener('click', function() {
+          const pastedText = pasteInput.value.trim();
+          if (!pastedText) {
+            showError('Paste a description first, then load it into the cleaner.');
+            return;
+          }
+          resultContent.textContent = pastedText;
+          charCount.textContent = \`\${pastedText.length} characters\`;
+          resultContainer.style.display = 'block';
+          copyBtn.disabled = false;
+          errorDiv.style.display = 'none';
+          successDiv.style.display = 'none';
+          showSuccess('Pasted description loaded. You can now clean or copy it.');
+          resultContainer.scrollIntoView({behavior:'smooth', block:'nearest'});
+        });
+      }
       copyBtn.addEventListener('click', copyDescription);
       clearBtn.addEventListener('click', clearAll);
       removeTimestampsBtn.addEventListener('click', removeTimestamps);
@@ -340,7 +379,9 @@
         errorDiv.style.display = 'none';
         successDiv.style.display = 'none';
         copyBtn.disabled = true;
-        extractBtn.disabled = true;
+        extractBtn.disabled = false;
+        const pasteInput = document.getElementById('youtube-description-paste');
+        if (pasteInput) pasteInput.value = '';
       }
       
       // Remove timestamps from description
