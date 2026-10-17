@@ -328,16 +328,16 @@
 
             // Generate original title structures locally; no API key or network request is needed.
             const patterns = [
-                \`How to \${keyword}: A Step-by-Step Guide\`,
-                \`\${keyword}: 7 Things Beginners Should Know\`,
-                \`I Tried \${keyword} — Here's What to Know\`,
-                \`The Beginner's Guide to \${keyword}\`,
-                \`5 \${keyword} Mistakes to Avoid\`,
-                \`Is \${keyword} Worth It? An Honest Breakdown\`,
-                \`\${keyword} Explained in Simple Terms\`,
-                \`Before You Try \${keyword}, Watch This\`,
-                \`\${keyword}: Tips That Can Save You Time\`,
-                \`What I Wish I Knew Before \${keyword}\`
+                "A Step-by-Step Guide to " + keyword,
+                keyword + ": 7 Things Beginners Should Know",
+                "I Tried " + keyword + " — Here's What to Know",
+                "The Beginner's Guide to " + keyword,
+                "5 " + keyword + " Mistakes to Avoid",
+                "Is " + keyword + " Worth It? An Honest Breakdown",
+                keyword + " Explained in Simple Terms",
+                "What to Know Before Trying " + keyword,
+                keyword + ": Tips That Can Save You Time",
+                "What I Wish I Knew About " + keyword
             ];
 
             const titles = patterns.slice(0, numTitles);
@@ -359,7 +359,7 @@
                 titlesList.appendChild(titleItem);
             });
 
-            resultCount.textContent = \`\${titles.length} title idea\${titles.length === 1 ? '' : 's'}\`;
+            resultCount.textContent = titles.length + ' title idea' + (titles.length === 1 ? '' : 's');
             resultContainer.style.display = 'block';
         }
 
