@@ -20,8 +20,21 @@
   $('displayName').value='Laxman Nepal';$('username').value='@laxmannepal';$('message').value='your post show here ,';
   $('outName').textContent='Laxman Nepal';$('outUsername').textContent='@laxmannepal';$('outMessage').textContent='your post show here ,';
   $('outHandlePrefix').textContent='';
-  $('avatarImage').crossOrigin='anonymous';$('avatarImage').src=DEFAULT_AVATAR;$('avatarImage').hidden=false;$('avatarFallback').hidden=true;
-  $('fileName').textContent='Default profile picture loaded';
+  function loadDefaultAvatar(){
+    const avatar=$('avatarImage');
+    avatar.hidden=false;
+    $('avatarFallback').hidden=true;
+    // Set CORS before src so the image can be included in PNG exports when allowed.
+    avatar.crossOrigin='anonymous';
+    avatar.src=DEFAULT_AVATAR;
+    $('fileName').textContent='Default profile picture loaded';
+  }
+  $('avatarImage').addEventListener('error',()=>{
+    $('avatarImage').hidden=true;
+    $('avatarFallback').hidden=false;
+    if($('fileName').textContent==='Default profile picture loaded')$('fileName').textContent='Default image unavailable · initials shown';
+  });
+  loadDefaultAvatar();
   $('post').classList.add(platform);$('post').dataset.platform=platform;
   $('messageCount').textContent=$('message').value.length+'/10000';
   document.querySelectorAll('.platforms a').forEach(a=>{if(a.dataset.platform===platform)a.setAttribute('aria-current','page');});
@@ -126,7 +139,7 @@
   });
   $('resetBtn').addEventListener('click',()=>{
     $('displayName').value='Laxman Nepal';$('username').value='@laxmannepal';$('message').value='your post show here ,';
-    $('avatarInput').value='';$('avatarImage').src=DEFAULT_AVATAR;$('avatarImage').hidden=false;$('avatarFallback').hidden=true;$('fileName').textContent='Default profile picture loaded';
+    $('avatarInput').value='';loadDefaultAvatar();
     const defaults={frameRatio:'1 / 1',frameWidth:520,frameHeight:520,framePadding:24,frameRadius:18,frameColor:'#eef2f7',frameShadow:'on',cardPadding:18,cardRadius:14,cardColor:'#ffffff',cardTextColor:'#17202b',cardWidth:100,postHeight:'auto',fontSize:16,fitText:'shrink',cardShadow:'off',cardBorder:'on',avatarSize:48,avatarShape:'50%',nameSize:16,handleColor:'#64748b',showBadge:'off',showLabel:'on'};
     Object.entries(defaults).forEach(([id,value])=>$(id).value=value);
     $('nameCount').textContent='12/50';$('userCount').textContent='12/40';$('messageCount').textContent=$('message').value.length+'/10000';
