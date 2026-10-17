@@ -1,223 +1,223 @@
 {
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-17",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
-    {
-      "name": "openagentskill",
-      "url": "https://github.com/Leon-Drq/openagentskill",
-      "description": "The skill layer for AI agents: npm for AI Agent Skills.",
-      "language": "TypeScript",
-      "stars": 360,
-      "updatedAt": "2026-10-16T07:07:45Z",
-      "fullName": "Leon-Drq/openagentskill"
-    },
-    {
-      "name": "pydantic-ai",
-      "url": "https://github.com/pydantic/pydantic-ai",
-      "description": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
-      "language": "Python",
-      "stars": 20654,
-      "updatedAt": "2026-10-16T07:07:44Z",
-      "fullName": "pydantic/pydantic-ai"
-    },
-    {
-      "name": "Artemis",
-      "url": "https://github.com/ls1intum/Artemis",
-      "description": "Artemis - Interactive Learning with Automated Feedback",
-      "language": "Java",
-      "stars": 819,
-      "updatedAt": "2026-10-16T07:07:17Z",
-      "fullName": "ls1intum/Artemis"
-    },
-    {
-      "name": "tt-metal",
-      "url": "https://github.com/tenstorrent/tt-metal",
-      "description": ":metal: TT-NN operator library, and TT-Metalium low level kernel programming model.",
-      "language": "Python",
-      "stars": 1708,
-      "updatedAt": "2026-10-16T07:07:08Z",
-      "fullName": "tenstorrent/tt-metal"
-    },
-    {
-      "name": "nanocode",
-      "url": "https://github.com/gakonst/nanocode",
-      "description": "SDK for Frontier Embedded Agents.",
-      "language": "Rust",
-      "stars": 571,
-      "updatedAt": "2026-10-16T07:07:07Z",
-      "fullName": "gakonst/nanocode"
-    },
-    {
-      "name": "unsloth",
-      "url": "https://github.com/unslothai/unsloth",
-      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4, MiniMax-H3, Gemma 4, FLUX and more.",
-      "language": "Python",
-      "stars": 78096,
-      "updatedAt": "2026-10-16T07:07:06Z",
-      "fullName": "unslothai/unsloth"
-    },
-    {
-      "name": "MFQ",
-      "url": "https://github.com/Tylogi/MFQ",
-      "description": "Get more intelligence from every bit. Better quantization formats and smarter calibration let larger, stronger models run smoothly on the hardware you already own.",
-      "language": "C++",
-      "stars": 81,
-      "updatedAt": "2026-10-16T07:06:52Z",
-      "fullName": "Tylogi/MFQ"
-    },
-    {
-      "name": "javis-os",
-      "url": "https://github.com/blogminhquy/javis-os",
-      "description": "Open-source AI project on GitHub.",
-      "language": "Python",
-      "stars": 268,
-      "updatedAt": "2026-10-16T07:06:46Z",
-      "fullName": "blogminhquy/javis-os"
-    },
-    {
-      "name": "openhuman",
-      "url": "https://github.com/tinyhumansai/openhuman",
-      "description": "The fastest, cheapest, most efficient open-source agent harness. Run more than 500 agents on a $10 VPS.",
-      "language": "Rust",
-      "stars": 42098,
-      "updatedAt": "2026-10-16T07:06:44Z",
-      "fullName": "tinyhumansai/openhuman"
-    },
-    {
-      "name": "awesome-jev-gallery",
-      "url": "https://github.com/OmniJev/awesome-jev-gallery",
-      "description": "🔥🔥 Awesome Jev:  open-source models, projects, benchmarks, and independent evaluations for Jev and System One models.",
-      "language": "JavaScript",
-      "stars": 507,
-      "updatedAt": "2026-10-16T07:06:43Z",
-      "fullName": "OmniJev/awesome-jev-gallery"
-    },
-    {
-      "name": "suna",
-      "url": "https://github.com/kortix-ai/suna",
-      "description": "The open-source AI Operating System",
-      "language": "TypeScript",
-      "stars": 20276,
-      "updatedAt": "2026-10-16T07:06:41Z",
-      "fullName": "kortix-ai/suna"
-    },
-    {
-      "name": "orchestkit",
-      "url": "https://github.com/yonatangross/orchestkit",
-      "description": "The Complete AI Development Toolkit for Claude Code. 106 skills, 36 agents, 171 hooks. Install `ork` for stable (v9.x), or `ork-alpha` for the v10 line, which ships daily.",
-      "language": "TypeScript",
-      "stars": 295,
-      "updatedAt": "2026-10-16T07:06:39Z",
-      "fullName": "yonatangross/orchestkit"
-    },
-    {
-      "name": "AutoGPT",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "language": "Python",
-      "stars": 187605,
-      "updatedAt": "2026-10-16T07:06:38Z",
-      "fullName": "Significant-Gravitas/AutoGPT"
-    },
     {
       "name": "KiroCrew",
       "url": "https://github.com/kirodotdev/KiroCrew",
       "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
       "language": "Python",
-      "stars": 4452,
-      "updatedAt": "2026-10-16T07:06:36Z",
+      "stars": 4469,
+      "updatedAt": "2026-10-17T06:54:35Z",
       "fullName": "kirodotdev/KiroCrew"
     },
     {
-      "name": "OpenHands",
-      "url": "https://github.com/OpenHands/OpenHands",
-      "description": "🙌 OpenHands: AI-Driven Development",
-      "language": "TypeScript",
-      "stars": 91021,
-      "updatedAt": "2026-10-16T07:06:35Z",
-      "fullName": "OpenHands/OpenHands"
+      "name": "flutter_agent_harness",
+      "url": "https://github.com/IstiN/flutter_agent_harness",
+      "description": "Fa - Factory Agent. Cross-platform AI agent harness for Dart and Flutter — streaming providers, agent loop with tools, session persistence, compaction; backend agent mode: fa behind product Go backends",
+      "language": "Dart",
+      "stars": 77,
+      "updatedAt": "2026-10-17T06:54:32Z",
+      "fullName": "IstiN/flutter_agent_harness"
     },
     {
-      "name": "awesome-ai-agent-governance",
-      "url": "https://github.com/systempromptio/awesome-ai-agent-governance",
-      "description": "The curated list of tools, standards, and resources for governing AI agents in production: policy enforcement, audit trails, EU AI Act compliance, MCP and Claude Code security.",
-      "language": "Open source",
-      "stars": 52,
-      "updatedAt": "2026-10-16T07:06:30Z",
-      "fullName": "systempromptio/awesome-ai-agent-governance"
-    },
-    {
-      "name": "veyyon",
-      "url": "https://github.com/santhreal/veyyon",
-      "description": "Local terminal coding agent: CLI + TUI. Bring your own key/sub. Fork of oh-my-pi. Determined to end Human Slop",
-      "language": "TypeScript",
-      "stars": 27,
-      "updatedAt": "2026-10-16T07:06:30Z",
-      "fullName": "santhreal/veyyon"
-    },
-    {
-      "name": "nimaaksoy.com",
-      "url": "https://github.com/nimaaksoy/nimaaksoy.com",
-      "description": "Curated AI and open-source projects, Chrome extensions, and useful web experiments",
-      "language": "TypeScript",
-      "stars": 6,
-      "updatedAt": "2026-10-16T07:06:27Z",
-      "fullName": "nimaaksoy/nimaaksoy.com"
-    },
-    {
-      "name": "haystack",
-      "url": "https://github.com/deepset-ai/haystack",
-      "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multi",
+      "name": "lionagi",
+      "url": "https://github.com/ohdearquant/lionagi",
+      "description": "An intelligence orchestra",
       "language": "Python",
-      "stars": 26743,
-      "updatedAt": "2026-10-16T07:06:17Z",
-      "fullName": "deepset-ai/haystack"
+      "stars": 412,
+      "updatedAt": "2026-10-17T06:54:29Z",
+      "fullName": "ohdearquant/lionagi"
     },
     {
-      "name": "amux",
-      "url": "https://github.com/mixpeek/amux",
-      "description": "Open-source control plane for AI coding agents. Run an AI engineering team: parallel Claude Code, Codex, and Gemini workers with a shared board, atomic tasks, schedules, loops, origin-stamped messaging, model switching, and self-healing recovery. One dashboard",
-      "language": "Rust",
-      "stars": 535,
-      "updatedAt": "2026-10-16T07:06:16Z",
-      "fullName": "mixpeek/amux"
-    },
-    {
-      "name": "sglang",
-      "url": "https://github.com/sgl-project/sglang",
-      "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+      "name": "mini-ork",
+      "url": "https://github.com/SourceShift/mini-ork",
+      "description": "Prove an AI-written fix actually fixes the bug. mini-ork certify reproduces the bug against your repo's own code, attacks the patch with generated invariants in a Docker sandbox, and returns PROVEN / REFUTED / UNVERIFIED with a JSON certificate. Part of a veri",
       "language": "Python",
-      "stars": 37199,
-      "updatedAt": "2026-10-16T07:06:14Z",
-      "fullName": "sgl-project/sglang"
+      "stars": 32,
+      "updatedAt": "2026-10-17T06:54:18Z",
+      "fullName": "SourceShift/mini-ork"
     },
     {
-      "name": "LightLLM",
-      "url": "https://github.com/ModelTC/LightLLM",
-      "description": "LightLLM is a Python-based LLM (Large Language Model) inference and serving framework, notable for its lightweight design, easy scalability, and high-speed performance.",
+      "name": "VLA-Handbook",
+      "url": "https://github.com/sou350121/VLA-Handbook",
+      "description": "本项目旨在为致力于进入VLA(Vision-Language-Action)领域的算法工程师提供一份全中文、实战导向的学习/面试手册。  不同于通用的 CV/NLP 面试指南，本项目聚焦于 Robotics 特有的挑战",
+      "language": "HTML",
+      "stars": 714,
+      "updatedAt": "2026-10-17T06:54:04Z",
+      "fullName": "sou350121/VLA-Handbook"
+    },
+    {
+      "name": "openaccountants",
+      "url": "https://github.com/openaccountants/openaccountants",
+      "description": "Free AI skills (tax rules your AI follows) for 190+ countries, with sources and review status. Need the work done? Hire us for bookkeeping and tax help.",
       "language": "Python",
-      "stars": 4324,
-      "updatedAt": "2026-10-16T07:06:09Z",
-      "fullName": "ModelTC/LightLLM"
+      "stars": 446,
+      "updatedAt": "2026-10-17T06:53:58Z",
+      "fullName": "openaccountants/openaccountants"
+    },
+    {
+      "name": "claude-code-plugins",
+      "url": "https://github.com/melodic-software/claude-code-plugins",
+      "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
+      "language": "Shell",
+      "stars": 26,
+      "updatedAt": "2026-10-17T06:53:57Z",
+      "fullName": "melodic-software/claude-code-plugins"
+    },
+    {
+      "name": "runtime",
+      "url": "https://github.com/e2b-dev/runtime",
+      "description": "The runtime behind every E2B stack: Cloud, Enterprise, and your own machine.",
+      "language": "Go",
+      "stars": 1736,
+      "updatedAt": "2026-10-17T06:53:50Z",
+      "fullName": "e2b-dev/runtime"
     },
     {
       "name": "DeepSeek-Reasonix",
       "url": "https://github.com/esengine/DeepSeek-Reasonix",
       "description": "A reliable coding agent for complex software engineering tasks.",
       "language": "Go",
-      "stars": 35814,
-      "updatedAt": "2026-10-16T07:06:07Z",
+      "stars": 35820,
+      "updatedAt": "2026-10-17T06:53:44Z",
       "fullName": "esengine/DeepSeek-Reasonix"
+    },
+    {
+      "name": "fastapi-langgraph-agent-production-ready-template",
+      "url": "https://github.com/wassim249/fastapi-langgraph-agent-production-ready-template",
+      "description": "A production-ready FastAPI template for building AI agent applications with LangGraph integration. This template provides a robust foundation for building scalable, secure, and maintainable AI agent services.",
+      "language": "Python",
+      "stars": 2704,
+      "updatedAt": "2026-10-17T06:53:31Z",
+      "fullName": "wassim249/fastapi-langgraph-agent-production-ready-template"
+    },
+    {
+      "name": "plasmate",
+      "url": "https://github.com/plasmate-labs/plasmate",
+      "description": "Browser engine for agents. HTML in, structured Semantic Object Model out. Native MCP and AWP with a supported CDP subset. Apache-2.0.",
+      "language": "Rust",
+      "stars": 38,
+      "updatedAt": "2026-10-17T06:53:26Z",
+      "fullName": "plasmate-labs/plasmate"
     },
     {
       "name": "nextclaw",
       "url": "https://github.com/Peiiii/nextclaw",
       "description": "A human-centered long-term AI partner—not a task-centered assistant.",
       "language": "TypeScript",
-      "stars": 261,
-      "updatedAt": "2026-10-16T07:06:04Z",
+      "stars": 262,
+      "updatedAt": "2026-10-17T06:53:00Z",
       "fullName": "Peiiii/nextclaw"
+    },
+    {
+      "name": "ebi-agent-chat-relay",
+      "url": "https://github.com/ebibibi/ebi-agent-chat-relay",
+      "description": "One cockpit for all your coding agents: a web console (plus Discord & Teams) to run Claude Code, Codex, local models, pi and AG-UI agents in parallel, with manager/worker delegation.",
+      "language": "Python",
+      "stars": 62,
+      "updatedAt": "2026-10-17T06:52:41Z",
+      "fullName": "ebibibi/ebi-agent-chat-relay"
+    },
+    {
+      "name": "Genexus18MCP",
+      "url": "https://github.com/lennix1337/Genexus18MCP",
+      "description": "GeneXus MCP server with native SDK support for GeneXus 16–18 plus basic legacy compatibility for GeneXus 8, 9, 10.1–10.3, and 15 via reflection/COM drivers.",
+      "language": "C#",
+      "stars": 37,
+      "updatedAt": "2026-10-17T06:52:29Z",
+      "fullName": "lennix1337/Genexus18MCP"
+    },
+    {
+      "name": "browser-debugger-cli",
+      "url": "https://github.com/szymdzum/browser-debugger-cli",
+      "description": "Let Claude Code and other coding agents drive and debug Chrome from the shell. DOM, network, console and raw CDP as short commands, no screenshots and no MCP needed.",
+      "language": "TypeScript",
+      "stars": 176,
+      "updatedAt": "2026-10-17T06:52:01Z",
+      "fullName": "szymdzum/browser-debugger-cli"
+    },
+    {
+      "name": "Android-Guru-Agent",
+      "url": "https://github.com/Ultra-Guru/Android-Guru-Agent",
+      "description": "🤖 An autonomous AI agent that lives entirely on your Android device — 109 tools · PRoot Ubuntu terminal · bionic memory (cs-mem) · BYO-LLM. No server. No PC.",
+      "language": "Kotlin",
+      "stars": 11,
+      "updatedAt": "2026-10-17T06:51:57Z",
+      "fullName": "Ultra-Guru/Android-Guru-Agent"
+    },
+    {
+      "name": "openchart",
+      "url": "https://github.com/longsurf-ai/openchart",
+      "description": "OSS trading workspace with your favorite agents",
+      "language": "TypeScript",
+      "stars": 238,
+      "updatedAt": "2026-10-17T06:51:27Z",
+      "fullName": "longsurf-ai/openchart"
+    },
+    {
+      "name": "archetype",
+      "url": "https://github.com/1arry1iu/archetype",
+      "description": "A curated library of reusable LLM prompts for domain experts, personas, creative practice, structured workflows, and archetype generation.",
+      "language": "Python",
+      "stars": 57,
+      "updatedAt": "2026-10-17T06:51:15Z",
+      "fullName": "1arry1iu/archetype"
+    },
+    {
+      "name": "nix-ai",
+      "url": "https://github.com/dryvist/nix-ai",
+      "description": "Your AI coding toolkit, declared in Nix — Claude, Gemini, Copilot, 15+ MCP servers, one flake",
+      "language": "Nix",
+      "stars": 11,
+      "updatedAt": "2026-10-17T06:51:15Z",
+      "fullName": "dryvist/nix-ai"
+    },
+    {
+      "name": "vpipe",
+      "url": "https://github.com/tgo-app-dev/vpipe",
+      "description": "Real-time multimodal AI pipelines on Apple Silicon",
+      "language": "C++",
+      "stars": 210,
+      "updatedAt": "2026-10-17T06:51:06Z",
+      "fullName": "tgo-app-dev/vpipe"
+    },
+    {
+      "name": "quodeq",
+      "url": "https://github.com/quodeq/quodeq",
+      "description": "AI-powered code quality and security scanner. Open source, MIT, runs locally. <🧭>",
+      "language": "Python",
+      "stars": 24,
+      "updatedAt": "2026-10-17T06:50:59Z",
+      "fullName": "quodeq/quodeq"
+    },
+    {
+      "name": "javis-os",
+      "url": "https://github.com/blogminhquy/javis-os",
+      "description": "Open-source AI project on GitHub.",
+      "language": "Python",
+      "stars": 269,
+      "updatedAt": "2026-10-17T06:50:57Z",
+      "fullName": "blogminhquy/javis-os"
+    },
+    {
+      "name": "seatunnel",
+      "url": "https://github.com/apache/seatunnel",
+      "description": "SeaTunnel is a multimodal, high-performance, distributed, massive data integration tool.",
+      "language": "Java",
+      "stars": 9733,
+      "updatedAt": "2026-10-17T06:50:44Z",
+      "fullName": "apache/seatunnel"
+    },
+    {
+      "name": "ag2",
+      "url": "https://github.com/ag2ai/ag2",
+      "description": "AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x",
+      "language": "Python",
+      "stars": 4999,
+      "updatedAt": "2026-10-17T06:50:24Z",
+      "fullName": "ag2ai/ag2"
     }
   ]
 }
