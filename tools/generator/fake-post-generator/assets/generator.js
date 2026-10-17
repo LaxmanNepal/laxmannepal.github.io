@@ -31,6 +31,7 @@
     const ratio=$('frameRatio').value;
     frame.style.aspectRatio=(ratio==='auto'||ratio==='custom')?'auto':ratio;
     frame.style.height=ratio==='custom'?$('frameHeight').value+'px':'auto';
+    frame.style.overflow='hidden';
     frame.classList.toggle('no-frame-shadow',$('frameShadow').value==='off');
     frame.style.width='min('+ $('frameWidth').value+'px, 100%)';
     frame.style.padding=$('framePadding').value+'px';
@@ -59,23 +60,48 @@
   }
   function fitMessage(){
     const behavior=$('fitText').value, requested=Number($('fontSize').value);
-    message.style.fontSize=requested+'px';message.style.overflow='hidden';
+    message.style.fontSize=requested+'px';
+    message.style.overflow='hidden';
+    message.style.flex='0 1 auto';
+    message.style.minHeight='0';
     post.style.overflow='hidden';
-    if($('postHeight').value==='auto' && $('frameRatio').value==='auto'){
-      post.style.height='auto';post.style.minHeight='0';message.style.overflow='visible';
+
+    if(behavior==='grow'){
+      // Grow mode must release the fixed-ratio frame; otherwise long text is clipped
+      // by the frame even though the inner card itself is allowed to grow.
+      frame.style.aspectRatio='auto';
+      frame.style.height='auto';
+      frame.style.overflow='visible';
+      post.style.height='auto';
+      post.style.minHeight='0';
+      post.style.overflow='visible';
+      message.style.overflow='visible';
+      message.style.flex='0 0 auto';
       return;
     }
-    if(behavior==='grow'){
-      post.style.height='auto';post.style.minHeight='100%';message.style.overflow='visible';return;
+
+    if($('postHeight').value==='auto' && $('frameRatio').value==='auto'){
+      post.style.height='auto';
+      post.style.minHeight='0';
+      message.style.overflow='visible';
+      message.style.flex='0 0 auto';
+      return;
     }
+
     if(behavior==='scroll'){
-      message.style.overflow='auto';message.style.flex='1 1 auto';message.style.minHeight='0';return;
+      message.style.overflow='auto';
+      message.style.flex='1 1 auto';
+      message.style.minHeight='0';
+      return;
     }
-    message.style.flex='1 1 auto';message.style.minHeight='0';
+
+    message.style.flex='1 1 auto';
+    message.style.minHeight='0';
     let size=requested;
-    for(let i=0;i<36;i++){
+    for(let i=0;i<48;i++){
       message.style.fontSize=size+'px';
       if(message.scrollHeight<=message.clientHeight+1)break;
+      if(size<=7)break;
       size=Math.max(7,size-.5);
     }
   }
