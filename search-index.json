@@ -54,6 +54,15 @@
     "image": ""
   },
   {
+    "title": "About Laxman Nepal — Practical Tools & Guides",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/about/",
+    "description": "Learn who builds Laxman Nepal, how this website",
+    "keywords": "about laxman nepal practical tools guides learn who builds how this website index.html",
+    "image": ""
+  },
+  {
     "title": "Advanced YouTube Keyword Explorer",
     "category": "YouTube",
     "type": "resource",
@@ -1053,12 +1062,12 @@
     "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    "title": "Privacy — Laxman Nepal",
+    "title": "Privacy Policy — Laxman Nepal",
     "category": "Nepali",
     "type": "resource",
     "url": "/privacy/",
-    "description": "Privacy information for apps.laxmannepal.com.np.",
-    "keywords": "privacy laxman nepal information for apps.laxmannepal.com.np. index.html",
+    "description": "Privacy policy for LaxmanNepal.com.np, including cookies, analytics, advertising and external services.",
+    "keywords": "privacy policy laxman nepal for laxmannepal.com.np including cookies analytics advertising and external services. index.html",
     "image": ""
   },
   {
