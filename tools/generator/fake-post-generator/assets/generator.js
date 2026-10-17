@@ -17,6 +17,10 @@
   $('pageTitle').textContent=c.name+' Post Card Designer';
   $('pageDescription').textContent='Design a customizable fictional '+c.name+'-inspired post card inside your own frame. Adjust proportions, spacing, colors, shadows and text fit, then export a PNG.';
   $('usernameLabel').textContent=c.usernameLabel;
+  const defaultContext={twitter:'· 2h',facebook:'2h · 🌐 Public',instagram:'2h · 🌐',linkedin:'Creator • Tech & AI · 2h · 🌐',threads:'· 2h',youtube:'2 hours ago · Public'};
+  $('postContext').value=defaultContext[platform]||'2h · Public';
+  $('outContext').textContent=$('postContext').value;
+  $('contextCount').textContent=$('postContext').value.length+'/100';
   $('displayName').value='Laxman Nepal';$('username').value='@laxmannepal';$('message').value='your post show here ,';
   $('outName').textContent='Laxman Nepal';$('outUsername').textContent='@laxmannepal';$('outMessage').textContent='your post show here ,';
   $('outHandlePrefix').textContent='';
@@ -67,7 +71,7 @@
     post.style.setProperty('--custom-name-size',$('nameSize').value+'px');
     post.style.setProperty('--custom-handle-color',$('handleColor').value);
     $('verifiedBadge').classList.toggle('show',$('showBadge').value==='on');
-    $('post').querySelector('.mock-label').hidden=$('showLabel').value==='off';
+    const media=$('postMedia');if(media&&!media.hidden)media.classList.add('visible');
     pairs.forEach(([id,out,suffix])=>$(out).textContent=$(id).value+suffix);
     fitMessage();
   }
@@ -79,6 +83,8 @@
     message.style.minHeight='0';
     post.style.overflow='hidden';
 
+    const media=$('postMedia');
+    if(media&&!media.hidden){media.style.maxHeight=$('postHeight').value==='auto'?'none':Math.max(100,Number($('postHeight').value)*0.48)+'px';}
     if(behavior==='grow'){
       // Grow mode must release the fixed-ratio frame; otherwise long text is clipped
       // by the frame even though the inner card itself is allowed to grow.
@@ -128,7 +134,14 @@
     $('messageCount').textContent=$('message').value.length+'/10000';
     fitMessage();
   }));
-  const controlIds=['frameRatio','frameWidth','frameHeight','framePadding','frameRadius','frameColor','frameShadow','cardPadding','cardRadius','cardColor','cardTextColor','cardWidth','postHeight','fontSize','fitText','cardShadow','cardBorder','avatarSize','avatarShape','nameSize','handleColor','showBadge','showLabel'];
+  $('postContext').addEventListener('input',()=>{$('outContext').textContent=$('postContext').value;$('contextCount').textContent=$('postContext').value.length+'/100';});
+  $('mediaInput').addEventListener('change',e=>{
+    const file=e.target.files&&e.target.files[0];if(!file)return;
+    if(!/^image\/(png|jpeg|webp)$/.test(file.type)){alert('Choose a PNG, JPG or WebP image.');e.target.value='';return;}
+    if(file.size>5*1024*1024){alert('Choose an image under 5 MB.');e.target.value='';return;}
+    const reader=new FileReader();reader.onload=()=>{$('postMedia').src=reader.result;$('postMedia').hidden=false;$('postMedia').classList.add('visible');$('mediaFileName').textContent=file.name;};reader.readAsDataURL(file);
+  });
+  const controlIds=['frameRatio','frameWidth','frameHeight','framePadding','frameRadius','frameColor','frameShadow','cardPadding','cardRadius','cardColor','cardTextColor','cardWidth','postHeight','fontSize','fitText','cardShadow','cardBorder','avatarSize','avatarShape','nameSize','handleColor','showBadge'];
   controlIds.forEach(id=>$(id).addEventListener('input',apply));
   controlIds.forEach(id=>$(id).addEventListener('change',apply));
   $('avatarInput').addEventListener('change',e=>{
@@ -140,7 +153,9 @@
   $('resetBtn').addEventListener('click',()=>{
     $('displayName').value='Laxman Nepal';$('username').value='@laxmannepal';$('message').value='your post show here ,';
     $('avatarInput').value='';loadDefaultAvatar();
-    const defaults={frameRatio:'1 / 1',frameWidth:520,frameHeight:520,framePadding:24,frameRadius:18,frameColor:'#eef2f7',frameShadow:'on',cardPadding:18,cardRadius:14,cardColor:'#ffffff',cardTextColor:'#17202b',cardWidth:100,postHeight:'auto',fontSize:16,fitText:'shrink',cardShadow:'off',cardBorder:'on',avatarSize:48,avatarShape:'50%',nameSize:16,handleColor:'#64748b',showBadge:'off',showLabel:'on'};
+    $('mediaInput').value='';$('postMedia').removeAttribute('src');$('postMedia').hidden=true;$('postMedia').classList.remove('visible');$('mediaFileName').textContent='No image selected';
+    $('postContext').value=defaultContext[platform]||'2h · Public';$('outContext').textContent=$('postContext').value;$('contextCount').textContent=$('postContext').value.length+'/100';
+    const defaults={frameRatio:'1 / 1',frameWidth:520,frameHeight:520,framePadding:24,frameRadius:18,frameColor:'#eef2f7',frameShadow:'on',cardPadding:18,cardRadius:14,cardColor:'#ffffff',cardTextColor:'#17202b',cardWidth:100,postHeight:'auto',fontSize:16,fitText:'shrink',cardShadow:'off',cardBorder:'on',avatarSize:48,avatarShape:'50%',nameSize:16,handleColor:'#64748b',showBadge:'off'};
     Object.entries(defaults).forEach(([id,value])=>$(id).value=value);
     $('nameCount').textContent='12/50';$('userCount').textContent='12/40';$('messageCount').textContent=$('message').value.length+'/10000';
     $('outName').textContent='Laxman Nepal';$('outUsername').textContent='@laxmannepal';$('outMessage').textContent='your post show here ,';apply();
