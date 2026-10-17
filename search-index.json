@@ -441,15 +441,6 @@
     "image": ""
   },
   {
-    "title": "FortressKey - Strong Password Generator",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/tools/generator/strong-password-generator/",
-    "description": "FortressKey - Strong Password Generator",
-    "keywords": "fortresskey strong password generator tools index.html",
-    "image": ""
-  },
-  {
     "title": "Free Generators — Laxman Nepal",
     "category": "Tools",
     "type": "tool",
@@ -1185,6 +1176,15 @@
     "url": "/pdf-tools/split/",
     "description": "Extract selected PDF pages into a new document locally in your browser.",
     "keywords": "split pdf laxman nepal extract selected pages into new document locally in your browser. tools index.html",
+    "image": ""
+  },
+  {
+    "title": "Strong Password Generator — Laxman Nepal",
+    "category": "Tools",
+    "type": "tool",
+    "url": "/tools/generator/strong-password-generator/",
+    "description": "Generate strong, secure passwords locally in your browser with the Laxman Nepal Strong Password Generator.",
+    "keywords": "strong password generator laxman nepal generate secure passwords locally in your browser with the generator. tools index.html",
     "image": ""
   },
   {
