@@ -15,7 +15,7 @@
   document.title=c.name+' Post Card Designer | Laxman Nepal';
   $('platformName').textContent=c.name;$('eyebrow').textContent='✦ '+c.name.toUpperCase()+' CARD DESIGNER';
   $('pageTitle').textContent=c.name+' Post Card Designer';
-  $('pageDescription').textContent='Design a customizable fictional '+c.name+'-inspired post card inside your own frame. Adjust proportions, spacing, colors, shadows and text fit, then export a PNG.';
+  $('pageDescription').textContent='Design a customizable '+c.name+'-inspired post card inside your own frame. Adjust proportions, spacing, colors, shadows and text fit, then export a PNG.';
   $('usernameLabel').textContent=c.usernameLabel;
   const defaultContext={twitter:'· 2h',facebook:'2h · 🌐 Public',instagram:'2h · 🌐',linkedin:'Creator • Tech & AI · 2h · 🌐',threads:'· 2h',youtube:'2 hours ago · Public'};
   $('postContext').value=defaultContext[platform]||'2h · Public';
