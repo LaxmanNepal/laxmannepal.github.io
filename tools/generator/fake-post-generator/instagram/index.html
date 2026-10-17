@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Create a clearly labeled fictional Instagram post mockup for presentations, stories, UI demos, and design practice. Customize it and export a PNG.">
+  <meta name="description" content="Create a responsive, customizable instagram-style social post card. Edit identity, text, context, optional image, frame and export a PNG.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://laxmannepal.com.np/tools/generator/fake-post-generator/instagram/">
@@ -16,7 +16,7 @@
       <span class="eyebrow" id="eyebrow">✦ INSTAGRAM MOCKUP TOOL</span>
       <h1 id="pageTitle">Instagram Mockup Generator</h1>
       <p id="pageDescription">An Instagram-style photo-first feed post with a square image area, caption, likes, comments and shares. Build a clearly labeled fictional mockup and export a PNG.</p>
-      <div class="notice"><strong>Transparency note:</strong> These are fictional social-post mockups, not real posts. The “FICTIONAL MOCKUP · NOT A REAL POST” label is included in the preview and downloaded image. Don’t use mockups to impersonate people or mislead others.</div>
+      <div class="notice"><strong>Creator note:</strong> Build custom post designs for concepts, presentations and storytelling. Make sure viewers are not misled about whether a post is authentic.</div>
       <nav class="platforms" aria-label="Choose a social mockup">
         <a data-platform="twitter" href="../twitter/">X / Twitter</a>
         <a data-platform="facebook" href="../facebook/">Facebook</a>
@@ -34,6 +34,10 @@
           <div class="field"><label for="displayName">Name</label><input id="displayName" type="text" maxlength="50" value="Laxman Nepal"><div class="hint"><span>Editable display name</span><span id="nameCount">12/50</span></div></div>
  <div class="field"><label id="usernameLabel" for="username">Username</label><input id="username" type="text" maxlength="40" value="@laxmannepal" autocomplete="off"><div class="hint"><span>Editable username</span><span id="userCount">12/40</span></div></div></div>
           <div class="field"><label for="message">Post text</label><textarea id="message" maxlength="10000" placeholder="your post show here ,">your post show here ,</textarea><div class="hint"><span>Long text can shrink to fit the card</span><span id="messageCount">21/10000</span></div></div>
+          <div class="control-section"><h3>Post details</h3>
+            <div class="field"><label for="postContext">Post context (time, audience or headline)</label><input id="postContext" type="text" maxlength="100" value="2h · Public"><div class="hint"><span>Shown below the profile identity</span><span id="contextCount">12/100</span></div></div>
+            <div class="field"><label for="mediaInput">Optional post image</label><input id="mediaInput" type="file" accept="image/png,image/jpeg,image/webp"><div class="hint"><span>PNG, JPG or WebP · max 5 MB</span><span id="mediaFileName">No image selected</span></div></div>
+          </div>
           <div class="control-section"><h3>Main frame controls</h3>
             <div class="two"><div class="field"><label for="frameRatio">Frame aspect ratio</label><select id="frameRatio"><option value="1 / 1" selected>1:1 Square</option><option value="4 / 5">4:5 Portrait</option><option value="5 / 4">5:4 Landscape</option><option value="16 / 9">16:9 Widescreen</option><option value="9 / 16">9:16 Story</option><option value="auto">Fit content</option><option value="custom">Custom height</option></select></div><div class="field"><label for="frameWidth">Frame width <output id="frameWidthOut">520 px</output></label><input id="frameWidth" type="range" min="280" max="760" value="520"></div></div>
             <div class="field"><label for="frameHeight">Custom frame height <output id="frameHeightOut">520 px</output></label><input id="frameHeight" type="range" min="280" max="1000" value="520"></div>
@@ -50,7 +54,7 @@
           <div class="control-section"><h3>Identity and styling</h3>
             <div class="two"><div class="field"><label for="avatarSize">Profile picture size <output id="avatarSizeOut">48 px</output></label><input id="avatarSize" type="range" min="24" max="120" value="48"></div><div class="field"><label for="avatarShape">Picture shape</label><select id="avatarShape"><option value="50%">Circle</option><option value="12px">Rounded square</option><option value="0">Square</option></select></div></div>
             <div class="two"><div class="field"><label for="nameSize">Name size <output id="nameSizeOut">16 px</output></label><input id="nameSize" type="range" min="10" max="32" value="16"></div><div class="field"><label for="handleColor">Username color</label><input id="handleColor" type="color" value="#64748b"></div></div>
-            <div class="two"><div class="field"><label for="showBadge">Decorative badge</label><select id="showBadge"><option value="off" selected>Off</option><option value="on">On</option></select></div><div class="field"><label for="showLabel">Fictional label</label><select id="showLabel"><option value="on" selected>Show</option><option value="off">Hide in preview</option></select></div></div>
+            <div class="two"><div class="field"><label for="showBadge">Decorative badge</label><select id="showBadge"><option value="off" selected>Off</option><option value="on">On</option></select></div></div>
           </div>
 <div class="btn-row"><button class="primary" id="downloadBtn" type="button">Download PNG</button><button class="secondary" id="resetBtn" type="button">Reset example</button></div>
         </div>
@@ -62,17 +66,17 @@
           <div class="frame" id="frame"><article class="post instagram" id="post" aria-label="Fictional social post preview">
             <div class="post-top">
               <div class="avatar" id="avatarFallback" aria-hidden="true" hidden>LN</div><img class="avatar" id="avatarImage" alt="Laxman Nepal profile picture" hidden>
-              <div class="identity"><div class="name-line"><span id="outName">Laxman Nepal</span><svg class="verified" id="verifiedBadge" viewBox="0 0 24 24" role="img" aria-label="Decorative verified-style badge"><path d="M12 1.5 14.8 3l3.2-.1 1.3 2.9 2.5 2-1 3.1.4 3.1-2.7 1.8-1.5 2.8-3.1-.4L12 20l-1.9-1.8-3.1.4-1.5-2.8-2.7-1.8.4-3.1-1-3.1 2.5-2L6 2.9l3.2.1zM10.5 14.8l-3-3 1.4-1.4 1.6 1.6 4.4-4.4 1.4 1.4z"/></svg></div><div class="handle"><span id="outHandlePrefix"></span><span id="outUsername">@laxmannepal</span></div></div><span class="more" aria-hidden="true">•••</span>
+              <div class="identity"><div class="name-line"><span id="outName">Laxman Nepal</span><svg class="verified" id="verifiedBadge" viewBox="0 0 24 24" role="img" aria-label="Decorative verified-style badge"><path d="M12 1.5 14.8 3l3.2-.1 1.3 2.9 2.5 2-1 3.1.4 3.1-2.7 1.8-1.5 2.8-3.1-.4L12 20l-1.9-1.8-3.1.4-1.5-2.8-2.7-1.8.4-3.1-1-3.1 2.5-2L6 2.9l3.2.1zM10.5 14.8l-3-3 1.4-1.4 1.6 1.6 4.4-4.4 1.4 1.4z"/></svg></div><div class="handle"><span id="outHandlePrefix"></span><span id="outUsername">@laxmannepal</span></div><div class="platform-context" id="outContext">2h · Public</div></div><span class="more" aria-hidden="true">•••</span>
             </div>
-            <div class="post-message" id="outMessage"></div>
+            <div class="post-message" id="outMessage"></div><img class="post-media" id="postMedia" alt="Post attachment" hidden>
             
-            <div class="mock-label">FICTIONAL MOCKUP · NOT A REAL POST</div>
+            
           </article></div>
-          <p class="download-note">The transparency label is embedded in the exported image.</p>
+          <p class="download-note">Export the current design as a high-resolution PNG.</p>
         </div>
       </section>
     </div>
-    <p class="footer-note">A Laxman Nepal creator tool · For fictional mockups and design practice only.</p>
+    <p class="footer-note">A Laxman Nepal creator tool · Custom social post design and PNG export.</p>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
   <script src="../assets/generator.js" defer></script>
