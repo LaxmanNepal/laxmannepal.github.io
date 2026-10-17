@@ -1,1024 +1,127 @@
-
+<!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/assets/css/shared-shell.css">
-    <meta charset="UTF-8"></meta>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
-    <title>FortressKey - Strong Password Generator</title>
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"></link>
-    
-    <style>
-        /* 
-           PREFIX: fpg- (Fortress Password Generator)
-           THEME: Bright / Light
-        */
-
-        .fpg-wrapper {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            background-color: transparent; 
-            color: #1e293b;
-            box-sizing: border-box;
-            /* Disable pull-to-refresh on mobile to improve swipe experience */
-            overscroll-behavior-y: contain; 
-        }
-
-        .fpg-card {
-            background-color: #ffffff;
-            color: #1e293b;
-            width: 100%;
-            max-width: 450px;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
-            position: relative;
-            overflow: hidden; /* Important for swipe overlay */
-            touch-action: pan-y; /* Allow vertical scroll, handle horizontal swipe manually */
-        }
-
-        /* Swipe Feedback Overlay */
-        .fpg-overlay {
-            position: absolute;
-            inset: 0;
-            background-color: transparent;
-            pointer-events: none;
-            z-index: 10;
-            transition: background-color 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .fpg-overlay-icon {
-            opacity: 0;
-            transform: scale(0.5);
-            transition: all 0.3s ease;
-            color: white;
-            background: rgba(0,0,0,0.2);
-            padding: 20px;
-            border-radius: 50%;
-        }
-
-        .fpg-overlay.swipe-left { background-color: rgba(99, 102, 241, 0.1); } /* Blue for Gen */
-        .fpg-overlay.swipe-right { background-color: rgba(16, 185, 129, 0.1); } /* Green for Copy */
-
-        .fpg-overlay.swipe-left .fpg-icon-gen,
-        .fpg-overlay.swipe-right .fpg-icon-copy {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .fpg-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .fpg-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 0 0 0.5rem 0;
-            line-height: 1.2;
-        }
-
-        .fpg-subtitle {
-            font-size: 0.875rem;
-            color: #64748b;
-            margin: 0;
-        }
-
-        /* Password Display */
-        .fpg-display-container {
-            background-color: #f8fafc;
-            border: 1px solid #cbd5e1;
-            border-radius: 12px;
-            padding: 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-            position: relative;
-            transition: all 0.2s;
-            user-select: none; /* Better for gestures */
-        }
-
-        .fpg-display-container:hover {
-            border-color: #6366f1;
-            background-color: #fff;
-            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
-        }
-
-        .fpg-password-text {
-            font-family: 'Monaco', 'Consolas', monospace;
-            font-size: 1.25rem;
-            color: #334155;
-            word-break: break-all;
-            margin-right: 1rem;
-            line-height: 1.5;
-            letter-spacing: 0.5px;
-            font-weight: 600;
-        }
-
-        .fpg-password-text.placeholder {
-            color: #94a3b8;
-            font-weight: 400;
-        }
-
-        .fpg-btn-icon {
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            cursor: pointer;
-            color: #64748b;
-            padding: 10px; /* Larger touch target */
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s;
-        }
-
-        .fpg-btn-icon:hover {
-            background-color: #f1f5f9;
-            color: #334155;
-            border-color: #cbd5e1;
-        }
-
-        /* Strength Meter */
-        .fpg-meter-container {
-            margin-bottom: 2rem;
-            background: #f8fafc;
-            padding: 1rem;
-            border-radius: 10px;
-            border: 1px solid #f1f5f9;
-        }
-
-        .fpg-meter-header {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .fpg-meter-label, .fpg-meter-value { color: #64748b; }
-        .fpg-meter-value.weak { color: #ef4444; }
-        .fpg-meter-value.fair { color: #eab308; }
-        .fpg-meter-value.good { color: #3b82f6; }
-        .fpg-meter-value.strong { color: #10b981; }
-
-        .fpg-bars { display: flex; gap: 6px; height: 8px; }
-        .fpg-bar {
-            flex: 1;
-            background-color: #e2e8f0;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-        .fpg-bar.active.weak { background-color: #ef4444; }
-        .fpg-bar.active.fair { background-color: #eab308; }
-        .fpg-bar.active.good { background-color: #3b82f6; }
-        .fpg-bar.active.strong { background-color: #10b981; }
-
-        /* Controls */
-        .fpg-control-group { margin-bottom: 1.5rem; }
-        .fpg-label-row {
-            display: flex;
-            justify-content: space-between;
-            color: #334155;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-
-        .fpg-slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 8px;
-            background: #e2e8f0;
-            border-radius: 4px;
-            outline: none;
-            cursor: pointer;
-            touch-action: pan-y; /* Ensure slider works without triggering swipes */
-        }
-        .fpg-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 28px; /* Larger for touch */
-            height: 28px;
-            background: #6366f1;
-            border-radius: 50%;
-            border: 3px solid #ffffff;
-            box-shadow: 0 2px 6px rgba(99, 102, 241, 0.4);
-            cursor: pointer;
-            transition: transform 0.1s;
-        }
-        .fpg-slider::-webkit-slider-thumb:hover { transform: scale(1.1); }
-
-        /* Checkboxes */
-        .fpg-options-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .fpg-checkbox-wrapper {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            user-select: none;
-            padding: 0.75rem; /* Larger touch area */
-            border-radius: 8px;
-            transition: background-color 0.2s;
-        }
-        .fpg-checkbox-wrapper:hover { background-color: #f8fafc; }
-        .fpg-checkbox-input { display: none; }
-        .fpg-checkbox-custom {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #cbd5e1;
-            background-color: #fff;
-            border-radius: 6px;
-            margin-right: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s;
-        }
-        .fpg-checkbox-input:checked + .fpg-checkbox-custom {
-            background-color: #6366f1;
-            border-color: #6366f1;
-        }
-        .fpg-checkbox-icon {
-            color: white;
-            opacity: 0;
-            transform: scale(0.5);
-            transition: all 0.2s;
-        }
-        .fpg-checkbox-input:checked + .fpg-checkbox-custom .fpg-checkbox-icon {
-            opacity: 1;
-            transform: scale(1);
-        }
-        .fpg-checkbox-label {
-            color: #334155;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        /* Buttons */
-        .fpg-btn-primary {
-            width: 100%;
-            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
-            color: white;
-            border: none;
-            padding: 16px;
-            font-size: 1rem;
-            font-weight: 700;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.2s;
-            margin-top: 1.5rem;
-            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .fpg-btn-primary:active { transform: scale(0.98); }
-
-        /* Floating Action Button (FAB) */
-        .fpg-fab {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: #6366f1;
-            color: white;
-            border: none;
-            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 20;
-            transition: transform 0.2s, background-color 0.2s;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .fpg-fab:hover { background: #4f46e5; transform: scale(1.05); }
-        .fpg-fab:active { transform: scale(0.9); }
-        .fpg-fab svg { width: 24px; height: 24px; }
-
-        /* Mobile Settings / Instructions */
-        .fpg-mobile-section {
-            margin-top: 1.5rem;
-            border-top: 1px solid #f1f5f9;
-            padding-top: 1rem;
-        }
-        .fpg-mobile-toggle {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            color: #64748b;
-            font-size: 0.875rem;
-            font-weight: 600;
-            padding: 0.5rem;
-            border-radius: 8px;
-        }
-        .fpg-mobile-toggle:hover { background: #f8fafc; }
-        .fpg-mobile-content {
-            display: none;
-            padding: 0.5rem;
-            margin-top: 0.5rem;
-            animation: fpgSlideDown 0.3s ease;
-        }
-        .fpg-mobile-content.open { display: block; }
-        .fpg-hint {
-            font-size: 0.75rem;
-            color: #94a3b8;
-            margin-top: 0.5rem;
-            text-align: center;
-        }
-
-        @keyframes fpgSlideDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Toast */
-        .fpg-toast {
-            position: absolute;
-            top: 1rem;
-            left: 50%;
-            transform: translateX(-50%) translateY(-20px);
-            background-color: #10b981;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            z-index: 30;
-        }
-        .fpg-toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
-        
-        .fpg-toast-gen { background-color: #6366f1; }
-        .fpg-toast-copy { background-color: #10b981; }
-
-        .fpg-wrapper, .fpg-wrapper * { box-sizing: border-box; }
-        .fpg-wrapper { width: 100%; padding: clamp(10px, 3vw, 24px); }
-        .fpg-card { min-width: 0; }
-        .fpg-display-container { min-width: 0; gap: 10px; }
-        .fpg-password-text { min-width: 0; overflow-wrap: anywhere; }
-        .fpg-btn-icon, .fpg-fab, .fpg-btn-primary { touch-action: manipulation; }
-        .fpg-checkbox-input:focus-visible + .fpg-checkbox-custom,
-        .fpg-btn-icon:focus-visible, .fpg-btn-primary:focus-visible,
-        .fpg-fab:focus-visible, .fpg-mobile-toggle:focus-visible {
-            outline: 3px solid #818cf8; outline-offset: 3px;
-        }
-        @media (max-width: 420px) {
-            .fpg-wrapper { padding: 8px; }
-            .fpg-card { padding: 1.1rem; border-radius: 12px; }
-            .fpg-header { margin-bottom: 1.25rem; }
-            .fpg-title { font-size: 1.3rem; }
-            .fpg-password-text { font-size: 1rem; margin-right: 0; }
-            .fpg-display-container { padding: .8rem; }
-            .fpg-options-grid { grid-template-columns: 1fr 1fr; gap: .25rem; }
-            .fpg-checkbox-wrapper { padding: .6rem .35rem; }
-            .fpg-checkbox-custom { flex: 0 0 20px; margin-right: 8px; }
-            .fpg-fab { width: 46px; height: 46px; right: 12px; bottom: 12px; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .fpg-wrapper *, .fpg-wrapper *::before, .fpg-wrapper *::after {
-                animation-duration: .01ms !important; transition-duration: .01ms !important;
-            }
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate strong, secure passwords locally in your browser with the Laxman Nepal Strong Password Generator.">
+  <meta name="theme-color" content="#f5f5f7">
+  <title>Strong Password Generator — Laxman Nepal</title>
+  <link rel="stylesheet" href="/assets/css/shared-shell.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .fpg-page{max-width:900px;margin:0 auto;padding:28px 16px 10px;font-family:Inter,system-ui,sans-serif}
+    .fpg-hero{text-align:center;margin:12px auto 24px;max-width:680px}
+    .fpg-hero h1{margin:0;font-size:clamp(30px,6vw,48px);letter-spacing:-.045em;line-height:1.05;color:#111114}
+    .fpg-hero p{margin:10px 0 0;color:#6e6e73;line-height:1.6}
+    .fpg-card{max-width:520px;margin:0 auto;padding:24px;background:rgba(255,255,255,.82);border:1px solid rgba(60,60,67,.12);border-radius:24px;box-shadow:0 18px 55px rgba(0,0,0,.08);position:relative}
+    .fpg-display{display:flex;align-items:center;gap:10px;padding:16px;background:#f7f7f8;border:1px solid #d9d9de;border-radius:14px}
+    .fpg-password{min-width:0;flex:1;font:700 18px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;color:#222;overflow-wrap:anywhere}
+    .fpg-password.placeholder{color:#8e8e93;font-weight:500}
+    .fpg-copy{flex:0 0 auto;border:1px solid #d8d8dd;background:#fff;border-radius:10px;width:44px;height:44px;cursor:pointer;display:grid;place-items:center;color:#555}
+    .fpg-copy:hover{background:#f2f2f5}
+    .fpg-meter{margin:16px 0 22px;padding:14px;border:1px solid #ededf0;border-radius:14px;background:#fafafa}
+    .fpg-meter-head{display:flex;justify-content:space-between;gap:10px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#777;margin-bottom:9px}
+    .fpg-meter-value.weak{color:#e5484d}.fpg-meter-value.fair{color:#b7791f}.fpg-meter-value.good{color:#3578d4}.fpg-meter-value.strong{color:#16865b}
+    .fpg-bars{display:flex;gap:5px}.fpg-bar{height:7px;flex:1;border-radius:99px;background:#dddde2}.fpg-bar.active.weak{background:#e5484d}.fpg-bar.active.fair{background:#d69e2e}.fpg-bar.active.good{background:#3578d4}.fpg-bar.active.strong{background:#16865b}
+    .fpg-field{margin:20px 0}.fpg-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:9px;color:#333;font-size:14px;font-weight:700}.fpg-value{padding:3px 8px;border-radius:7px;background:#e8e8ed;font:700 13px ui-monospace,monospace}
+    .fpg-slider{width:100%;height:7px;accent-color:#007aff;cursor:pointer}
+    .fpg-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}.fpg-option{display:flex;align-items:center;gap:10px;padding:11px;border-radius:11px;cursor:pointer;color:#333;font-size:14px}.fpg-option:hover{background:#f4f4f6}.fpg-option input{width:18px;height:18px;accent-color:#007aff}
+    .fpg-generate{width:100%;margin-top:20px;border:0;border-radius:13px;padding:15px;background:linear-gradient(135deg,#007aff,#5856d6);color:#fff;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 10px 25px rgba(0,122,255,.22)}.fpg-generate:active{transform:scale(.99)}
+    .fpg-mobile{margin-top:20px;padding-top:15px;border-top:1px solid #ededf0}.fpg-mobile-toggle{width:100%;border:0;background:none;padding:8px 0;display:flex;justify-content:space-between;color:#666;font-weight:700;cursor:pointer}.fpg-mobile-content{display:none}.fpg-mobile-content.open{display:block}.fpg-hint{text-align:center;color:#929298;font-size:12px;line-height:1.5}
+    .fpg-toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;pointer-events:none;padding:10px 15px;border-radius:999px;background:#111;color:#fff;font-size:13px;font-weight:700;z-index:3000;transition:.2s}.fpg-toast.show{opacity:1;transform:translate(-50%,0)}
+    .fpg-note{max-width:680px;margin:24px auto 0;text-align:center;color:#777;font-size:12px;line-height:1.6}
+    @media(max-width:560px){.fpg-page{padding:18px 10px 4px}.fpg-card{padding:16px;border-radius:19px}.fpg-password{font-size:15px}.fpg-options{gap:4px}.fpg-option{padding:10px 6px}.fpg-hero{margin-top:4px}}
+    @media(prefers-reduced-motion:reduce){.fpg-toast{transition:none}}
+  </style>
 </head>
-<body style="background-color: #f1f5f9; margin: 0;">
+<body>
+  <header class="shared-header" id="site-header">
+    <a class="shared-brand" href="/" aria-label="Laxman Nepal home"><span class="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Guides</small></span></a>
+    <nav class="shared-desktop-nav" aria-label="Primary navigation">
+      <a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI Tools</a><a href="/blog/">Blog</a>
+      <details class="nav-dropdown"><summary>Explore⌄</summary><div class="nav-dropdown-menu"><a href="/apps/">Apps</a><a href="/mobile/">Mobile</a><a href="/news/">News</a><a href="/contact/">Contact</a></div></details>
+    </nav>
+    <div class="shared-actions"><label class="shared-search-box" aria-label="Search website"><span aria-hidden="true">⌕</span><input id="global-nav-search" type="search" placeholder="Search…" autocomplete="off"></label><button class="shared-menu-btn" id="shared-menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">☰</button></div>
+  </header>
+  <div class="shared-menu-backdrop" id="shared-menu-backdrop"></div>
+  <nav class="shared-mobile-menu" id="shared-mobile-menu" aria-label="Mobile navigation">
+    <div class="shared-mobile-head"><strong>Navigation</strong><button id="shared-menu-close" type="button" aria-label="Close navigation">×</button></div>
+    <a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI Tools</a><a href="/blog/">Blog</a><a href="/apps/">Apps</a><a href="/mobile/">Mobile</a><a href="/news/">News</a><a href="/contact/">Contact</a>
+    <div class="shared-mobile-search"><span aria-hidden="true">⌕</span><input id="shared-mobile-search-input" type="search" placeholder="Search tools, guides & articles…" aria-label="Search website"></div>
+  </nav>
 
-    <div class="fpg-wrapper">
-        <div class="fpg-card" id="fpgCard">
-            
-            <!-- Swipe Overlay -->
-            <div class="fpg-overlay" id="fpgOverlay">
-                <div class="fpg-overlay-icon fpg-icon-gen">
-                    <svg fill="none" height="40" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" width="40"><path d="M23 4v6h-6"><path d="M1 20v-6h6"><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></path></path></svg>
-                </div>
-                <div class="fpg-overlay-icon fpg-icon-copy">
-                    <svg fill="none" height="40" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" width="40"><rect height="13" rx="2" ry="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                </div>
-            </div>
+  <main class="fpg-page">
+    <section class="fpg-hero">
+      <h1>Strong Password Generator</h1>
+      <p>Create strong, random passwords instantly. Passwords are generated locally in your browser and are not sent to a server.</p>
+    </section>
 
-            <!-- Toast -->
-            <div class="fpg-toast" id="fpgToast">Action Successful</div>
+    <section class="fpg-card" aria-label="Password generator">
+      <div class="fpg-display">
+        <div class="fpg-password placeholder" id="password">Generating…</div>
+        <button class="fpg-copy" id="copy" type="button" aria-label="Copy password" title="Copy password">⧉</button>
+      </div>
 
-            <!-- Header -->
-            <div class="fpg-header">
-                <h2 class="fpg-title">FortressKey</h2>
-                <p class="fpg-subtitle">Secure Password Generator</p>
-            </div>
+      <div class="fpg-meter">
+        <div class="fpg-meter-head"><span>Security Strength</span><span id="strength" class="fpg-meter-value">—</span></div>
+        <div class="fpg-bars"><span class="fpg-bar" id="bar1"></span><span class="fpg-bar" id="bar2"></span><span class="fpg-bar" id="bar3"></span><span class="fpg-bar" id="bar4"></span></div>
+      </div>
 
-            <!-- Display -->
-            <div class="fpg-display-container">
-                <div class="fpg-password-text" id="fpgPassword"></div>
-                <button aria-label="Copy Password" class="fpg-btn-icon" id="fpgBtnCopy">
-                    <svg fill="none" height="20" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" width="20"><rect height="13" rx="2" ry="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                </button>
-            </div>
+      <div class="fpg-field">
+        <div class="fpg-row"><label for="length">Password Length</label><span class="fpg-value" id="lengthValue">16</span></div>
+        <input class="fpg-slider" id="length" type="range" min="6" max="64" value="16">
+      </div>
 
-            <!-- Strength -->
-            <div class="fpg-meter-container">
-                <div class="fpg-meter-header">
-                    <span class="fpg-meter-label">Security Strength</span>
-                    <span class="fpg-meter-value" id="fpgStrengthValue">Weak</span>
-                </div>
-                <div class="fpg-bars">
-                    <div class="fpg-bar" id="fpgBar1"></div>
-                    <div class="fpg-bar" id="fpgBar2"></div>
-                    <div class="fpg-bar" id="fpgBar3"></div>
-                    <div class="fpg-bar" id="fpgBar4"></div>
-                </div>
-            </div>
+      <div class="fpg-options">
+        <label class="fpg-option"><input id="upper" type="checkbox" checked> Uppercase</label>
+        <label class="fpg-option"><input id="lower" type="checkbox" checked> Lowercase</label>
+        <label class="fpg-option"><input id="numbers" type="checkbox" checked> Numbers</label>
+        <label class="fpg-option"><input id="symbols" type="checkbox" checked> Symbols</label>
+      </div>
 
-            <!-- Length Slider -->
-            <div class="fpg-control-group">
-                <div class="fpg-label-row">
-                    <label for="fpgLength">Password Length</label>
-                    <span id="fpgLengthValue" style="background: #e2e8f0; border-radius: 6px; color: #334155; font-family: monospace; padding: 2px 8px;">16</span>
-                </div>
-                <input class="fpg-slider" id="fpgLength" max="64" min="6" type="range" value="16" />
-            </div>
+      <button class="fpg-generate" id="generate" type="button">Generate Password</button>
 
-            <!-- Checkboxes -->
-            <div class="fpg-options-grid">
-                <label class="fpg-checkbox-wrapper">
-                    <input checked="" class="fpg-checkbox-input" id="fpgUpper" type="checkbox" />
-                    <div class="fpg-checkbox-custom">
-                        <svg class="fpg-checkbox-icon" fill="none" height="12" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" width="12"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    </div>
-                    <span class="fpg-checkbox-label">Uppercase</span>
-                </label>
-                <label class="fpg-checkbox-wrapper">
-                    <input checked="" class="fpg-checkbox-input" id="fpgLower" type="checkbox" />
-                    <div class="fpg-checkbox-custom">
-                        <svg class="fpg-checkbox-icon" fill="none" height="12" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" width="12"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    </div>
-                    <span class="fpg-checkbox-label">Lowercase</span>
-                </label>
-                <label class="fpg-checkbox-wrapper">
-                    <input checked="" class="fpg-checkbox-input" id="fpgNumbers" type="checkbox" />
-                    <div class="fpg-checkbox-custom">
-                        <svg class="fpg-checkbox-icon" fill="none" height="12" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" width="12"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    </div>
-                    <span class="fpg-checkbox-label">Numbers</span>
-                </label>
-                <label class="fpg-checkbox-wrapper">
-                    <input checked="" class="fpg-checkbox-input" id="fpgSymbols" type="checkbox" />
-                    <div class="fpg-checkbox-custom">
-                        <svg class="fpg-checkbox-icon" fill="none" height="12" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" width="12"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    </div>
-                    <span class="fpg-checkbox-label">Symbols</span>
-                </label>
-            </div>
-
-            <button class="fpg-btn-primary" id="fpgGenerateBtn">Generate Password</button>
-
-            <!-- Mobile Features -->
-            <div class="fpg-mobile-section">
-                <div class="fpg-mobile-toggle" id="fpgMobileToggle">
-                    <span>Mobile Features</span>
-                    <svg fill="none" height="16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </div>
-                <div class="fpg-mobile-content" id="fpgMobileContent">
-                    <label class="fpg-checkbox-wrapper">
-                        <input class="fpg-checkbox-input" id="fpgShakeToggle" type="checkbox" />
-                        <div class="fpg-checkbox-custom">
-                            <svg class="fpg-checkbox-icon" fill="none" height="12" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" width="12"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        </div>
-                        <span class="fpg-checkbox-label">Shake to Generate</span>
-                    </label>
-                    <p class="fpg-hint">Gestures: Swipe Left to Generate • Swipe Right to Copy</p>
-                </div>
-            </div>
-
-            <!-- FAB -->
-            <button aria-label="Quick Generate" class="fpg-fab" id="fpgFab">
-                <svg fill="none" height="24" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" width="24"><path d="M23 4v6h-6"><path d="M1 20v-6h6"><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></path></path></svg>
-            </button>
-
+      <div class="fpg-mobile">
+        <button class="fpg-mobile-toggle" id="mobileToggle" type="button" aria-expanded="false"><span>Mobile Features</span><span>⌄</span></button>
+        <div class="fpg-mobile-content" id="mobileContent">
+          <label class="fpg-option"><input id="shake" type="checkbox"> Shake to Generate</label>
+          <p class="fpg-hint">Swipe left to generate a new password. Swipe right to copy.</p>
         </div>
+      </div>
+    </section>
+    <p class="fpg-note">For important accounts, use a password manager and a unique password for every service.</p>
+  </main>
+
+  <footer class="shared-footer" id="site-footer">
+    <div class="shared-footer-grid">
+      <div><div class="shared-footer-brand"><span class="shared-logo">LN</span><strong>Laxman Nepal</strong></div><p>Free online tools, practical AI resources and useful digital guides to help you get things done simply.</p></div>
+      <div><strong>Explore</strong><a href="/tools/">All Tools</a><a href="/ai-tools/">AI Tools</a><a href="/apps/">Apps</a><a href="/mobile/">Mobile Guides</a></div>
+      <div><strong>Resources</strong><a href="/blog/">Blog &amp; Tutorials</a><a href="/news/">News</a><a href="/youtube-tools/">YouTube Tools</a><a href="/search/">Search Website</a></div>
+      <div><strong>About</strong><a href="/about/">About Laxman Nepal</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy Policy</a></div>
     </div>
+    <div class="shared-footer-bottom"><span>© <span id="footerYear"></span> Laxman Nepal</span><span>Useful tools. Practical knowledge. Made for everyone.</span></div>
+  </footer>
+  <div class="fpg-toast" id="toast" role="status" aria-live="polite"></div>
 
-    <script>
-        (function() {
-            // Configuration
-            const CHARS = {
-                upper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-                lower: 'abcdefghijklmnopqrstuvwxyz',
-                nums: '0123456789',
-                syms: '!@#$%^&*()_+~`|}{[]:;?><,./-='
-            };
-
-            // Elements
-            const els = {
-                card: document.getElementById('fpgCard'),
-                pass: document.getElementById('fpgPassword'),
-                copy: document.getElementById('fpgBtnCopy'),
-                gen: document.getElementById('fpgGenerateBtn'),
-                fab: document.getElementById('fpgFab'),
-                len: document.getElementById('fpgLength'),
-                lenVal: document.getElementById('fpgLengthValue'),
-                upper: document.getElementById('fpgUpper'),
-                lower: document.getElementById('fpgLower'),
-                nums: document.getElementById('fpgNumbers'),
-                syms: document.getElementById('fpgSymbols'),
-                toast: document.getElementById('fpgToast'),
-                overlay: document.getElementById('fpgOverlay'),
-                strengthVal: document.getElementById('fpgStrengthValue'),
-                bars: [
-                    document.getElementById('fpgBar1'), document.getElementById('fpgBar2'),
-                    document.getElementById('fpgBar3'), document.getElementById('fpgBar4')
-                ],
-                mobileToggle: document.getElementById('fpgMobileToggle'),
-                mobileContent: document.getElementById('fpgMobileContent'),
-                shakeToggle: document.getElementById('fpgShakeToggle')
-            };
-
-            // ---- Logic: Generation ----
-            function generate() {
-                const len = parseInt(els.len.value);
-                let chars = '';
-                if (els.upper.checked) chars += CHARS.upper;
-                if (els.lower.checked) chars += CHARS.lower;
-                if (els.nums.checked) chars += CHARS.nums;
-                if (els.syms.checked) chars += CHARS.syms;
-
-                if (!chars) {
-                    els.pass.textContent = 'Select Options';
-                    els.pass.classList.add('placeholder');
-                    updateStrength('');
-                    return;
-                }
-
-                // Never silently downgrade to Math.random for passwords.
-                if (!window.crypto || typeof window.crypto.getRandomValues !== 'function') {
-                    els.pass.textContent = 'Secure randomness unavailable';
-                    els.pass.classList.add('placeholder');
-                    updateStrength('');
-                    return;
-                }
-
-                // Rejection sampling avoids modulo bias, and guarantee every selected
-                // character class is represented at least once.
-                const pools = [];
-                if (els.upper.checked) pools.push(CHARS.upper);
-                if (els.lower.checked) pools.push(CHARS.lower);
-                if (els.nums.checked) pools.push(CHARS.nums);
-                if (els.syms.checked) pools.push(CHARS.syms);
-
-                function secureIndex(max) {
-                    const range = 0x100000000;
-                    const limit = range - (range % max);
-                    const value = new Uint32Array(1);
-                    do { window.crypto.getRandomValues(value); } while (value[0] >= limit);
-                    return value[0] % max;
-                }
-
-                const allChars = pools.join('');
-                const result = pools.map(pool => pool[secureIndex(pool.length)]);
-                while (result.length < len) result.push(allChars[secureIndex(allChars.length)]);
-                // Fisher–Yates shuffle with cryptographically secure random indices.
-                for (let i = result.length - 1; i > 0; i--) {
-                    const j = secureIndex(i + 1);
-                    [result[i], result[j]] = [result[j], result[i]];
-                }
-                const password = result.join('');
-
-                els.pass.textContent = password;
-                els.pass.classList.remove('placeholder');
-                updateStrength(password);
-            }
-
-            // ---- Logic: Strength ----
-            function updateStrength(password) {
-                let score = 0;
-                if (password.length > 0) {
-                    if (password.length >= 8) score++;
-                    if (password.length >= 12) score++;
-                    if (password.length >= 16) score++;
-                    if (/[A-Z]/.test(password)) score++;
-                    if (/[0-9]/.test(password)) score++;
-                    if (/[^A-Za-z0-9]/.test(password)) score++;
-                }
-
-                let level = 0, label = '', className = '';
-                if (!password) { level = 0; }
-                else if (score < 3) { level = 1; label = 'Weak'; className = 'weak'; }
-                else if (score < 5) { level = 2; label = 'Fair'; className = 'fair'; }
-                else if (score < 6) { level = 3; label = 'Good'; className = 'good'; }
-                else { level = 4; label = 'Strong'; className = 'strong'; }
-
-                els.strengthVal.textContent = label;
-                els.strengthVal.className = 'fpg-meter-value ' + className;
-                els.bars.forEach((bar, idx) => {
-                    bar.className = 'fpg-bar';
-                    if (idx < level) bar.classList.add('active', className);
-                });
-            }
-
-            // ---- Logic: Copy ----
-            async function copy() {
-                const text = els.pass.textContent;
-                if (!text || els.pass.classList.contains('placeholder')) return;
-                try {
-                    if (navigator.clipboard && window.isSecureContext) {
-                        await navigator.clipboard.writeText(text);
-                    } else {
-                        const field = document.createElement('textarea');
-                        field.value = text;
-                        field.setAttribute('readonly', '');
-                        field.style.position = 'fixed';
-                        field.style.opacity = '0';
-                        document.body.appendChild(field);
-                        field.select();
-                        const copied = document.execCommand('copy');
-                        field.remove();
-                        if (!copied) throw new Error('Clipboard unavailable');
-                    }
-                    showToast('Password Copied!', 'copy');
-                } catch (error) {
-                    showToast('Copy blocked — select the password manually', 'gen');
-                }
-            }
-
-            function showToast(msg, type) {
-                els.toast.textContent = msg;
-                els.toast.className = 'fpg-toast visible';
-                if(type === 'gen') els.toast.classList.add('fpg-toast-gen');
-                else els.toast.classList.add('fpg-toast-copy');
-                setTimeout(() => els.toast.classList.remove('visible'), 2000);
-            }
-
-            // ---- Mobile: Swipe ----
-            let touchStartX = 0;
-            let touchStartY = 0;
-            const SWIPE_THRESHOLD = 80;
-
-            els.card.addEventListener('touchstart', (e) => {
-                // Ignore swipes on slider to prevent conflict
-                if (e.target.closest('.fpg-slider')) return;
-                touchStartX = e.changedTouches[0].screenX;
-                touchStartY = e.changedTouches[0].screenY;
-            }, { passive: true });
-
-            els.card.addEventListener('touchmove', (e) => {
-                if (e.target.closest('.fpg-slider')) return;
-                const touchX = e.changedTouches[0].screenX;
-                const diffX = touchX - touchStartX;
-                
-                // Visual feedback during swipe
-                if (Math.abs(diffX) > 30) {
-                    if (diffX > 0) els.overlay.classList.add('swipe-right');
-                    else els.overlay.classList.add('swipe-left');
-                } else {
-                    els.overlay.classList.remove('swipe-right', 'swipe-left');
-                }
-            }, { passive: true });
-
-            els.card.addEventListener('touchend', (e) => {
-                if (e.target.closest('.fpg-slider')) return;
-                const touchEndX = e.changedTouches[0].screenX;
-                const touchEndY = e.changedTouches[0].screenY;
-                const diffX = touchEndX - touchStartX;
-                const diffY = touchEndY - touchStartY;
-
-                // Reset overlay
-                els.overlay.classList.remove('swipe-right', 'swipe-left');
-
-                // Horizontal swipe only (ignore scrolling)
-                if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(diffY) < 50) {
-                    if (diffX > 0) {
-                        copy();
-                    } else {
-                        generate();
-                        showToast('New Password!', 'gen');
-                    }
-                }
-            });
-
-            // ---- Mobile: Shake ----
-            let lastX = 0, lastY = 0, lastZ = 0;
-            let lastUpdate = 0;
-            const SHAKE_THRESHOLD = 15;
-
-            function handleMotion(e) {
-                if (!els.shakeToggle.checked) return;
-                
-                const current = e.accelerationIncludingGravity;
-                if (!current) return;
-
-                const curTime = Date.now();
-                if ((curTime - lastUpdate) > 100) {
-                    const diffTime = curTime - lastUpdate;
-                    lastUpdate = curTime;
-
-                    const speed = Math.abs(current.x + current.y + current.z - lastX - lastY - lastZ) / diffTime * 10000;
-
-                    if (speed > SHAKE_THRESHOLD * 100) { // Scaled logic
-                         generate();
-                         showToast('Shaken & Generated!', 'gen');
-                    }
-
-                    lastX = current.x;
-                    lastY = current.y;
-                    lastZ = current.z;
-                }
-            }
-
-            if (window.DeviceMotionEvent) {
-                window.addEventListener('devicemotion', handleMotion, false);
-            }
-
-            // ---- Listeners ----
-            els.gen.addEventListener('click', () => { generate(); showToast('Generated!', 'gen'); });
-            els.fab.addEventListener('click', () => { generate(); showToast('Generated!', 'gen'); });
-            els.copy.addEventListener('click', copy);
-            
-            [els.len, els.upper, els.lower, els.nums, els.syms].forEach(el => {
-                el.addEventListener('input', () => {
-                    if (el === els.len) els.lenVal.textContent = el.value;
-                    // Keep at least one character class enabled.
-                    const selected = [els.upper, els.lower, els.nums, els.syms].filter(box => box.checked);
-                    if (!selected.length && el.type === 'checkbox') {
-                        el.checked = true;
-                        showToast('Choose at least one character type', 'gen');
-                    }
-                    generate();
-                });
-            });
-
-            els.mobileToggle.setAttribute('role', 'button');
-            els.mobileToggle.setAttribute('tabindex', '0');
-            els.mobileToggle.setAttribute('aria-expanded', 'false');
-            function toggleMobileFeatures() {
-                const open = els.mobileContent.classList.toggle('open');
-                els.mobileToggle.setAttribute('aria-expanded', String(open));
-            }
-            els.mobileToggle.addEventListener('click', toggleMobileFeatures);
-            els.mobileToggle.addEventListener('keydown', (event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    toggleMobileFeatures();
-                }
-            });
-
-            // Init
-            generate();
-        })();
-    </script>
-
-<footer class="shared-footer" id="site-footer">
-  <div class="shared-footer-grid">
-    <div>
-      <div class="shared-footer-brand"><span class="shared-logo">LN</span><strong>Laxman Nepal</strong></div>
-      <p>Free online tools, practical AI resources and useful digital guides to help you get things done simply.</p>
-    </div>
-    <div><strong>Explore</strong><a href="/tools/">All Tools</a><a href="/ai-tools/">AI Tools</a><a href="/apps/">Apps</a><a href="/mobile/">Mobile Guides</a></div>
-    <div><strong>Resources</strong><a href="/blog/">Blog &amp; Tutorials</a><a href="/news/">News</a><a href="/youtube-tools/">YouTube Tools</a><a href="/search/">Search Website</a></div>
-    <div><strong>About</strong><a href="/about/">About Laxman Nepal</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy Policy</a></div>
-  </div>
-  <div class="shared-footer-bottom"><span>© <span id="ln-footer-year">2026</span> Laxman Nepal</span><span>Useful tools. Practical knowledge. Made for everyone.</span></div>
-</footer>
-<script>
-(function(){var y=document.getElementById('ln-footer-year');if(y)y.textContent=new Date().getFullYear();})();
-</script>
-
+  <script>
+  (()=>{
+    const pools={upper:'ABCDEFGHIJKLMNOPQRSTUVWXYZ',lower:'abcdefghijklmnopqrstuvwxyz',numbers:'0123456789',symbols:'!@#$%^&*()_+~`|}{[]:;?><,./-='};
+    const $=id=>document.getElementById(id);
+    const els={password:$('password'),copy:$('copy'),generate:$('generate'),length:$('length'),lengthValue:$('lengthValue'),upper:$('upper'),lower:$('lower'),numbers:$('numbers'),symbols:$('symbols'),strength:$('strength'),bars:[$('bar1'),$('bar2'),$('bar3'),$('bar4')],toast:$('toast'),mobileToggle:$('mobileToggle'),mobileContent:$('mobileContent'),shake:$('shake')};
+    function secureIndex(max){if(!crypto||!crypto.getRandomValues)throw new Error('Secure randomness unavailable');const limit=0x100000000-(0x100000000%max),v=new Uint32Array(1);do{crypto.getRandomValues(v)}while(v[0]>=limit);return v[0]%max}
+    function generate(){const selected=Object.keys(pools).filter(k=>els[k].checked);if(!selected.length){els.password.textContent='Select at least one type';els.password.classList.add('placeholder');return}if(Number(els.length.value)<selected.length){els.length.value=selected.length;els.lengthValue.textContent=selected.length}try{const all=selected.map(k=>pools[k]).join('');const out=selected.map(k=>pools[k][secureIndex(pools[k].length)]);while(out.length<Number(els.length.value))out.push(all[secureIndex(all.length)]);for(let i=out.length-1;i>0;i--){const j=secureIndex(i+1);[out[i],out[j]]=[out[j],out[i]]}const pass=out.join('');els.password.textContent=pass;els.password.classList.remove('placeholder');updateStrength(pass)}catch(e){els.password.textContent=e.message;els.password.classList.add('placeholder');els.strength.textContent='—'}}
+    function updateStrength(p){let score=0;if(p.length>=8)score++;if(p.length>=12)score++;if(p.length>=16)score++;if(/[A-Z]/.test(p))score++;if(/[0-9]/.test(p))score++;if(/[^A-Za-z0-9]/.test(p))score++;let level=score>=6?4:score>=5?3:score>=3?2:score?1:0;const name=['','Weak','Fair','Good','Strong'][level];els.strength.textContent=name;els.strength.className='fpg-meter-value '+name.toLowerCase();els.bars.forEach((b,i)=>{b.className='fpg-bar';if(i<level)b.classList.add('active',name.toLowerCase())})}
+    function toast(msg){els.toast.textContent=msg;els.toast.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>els.toast.classList.remove('show'),1800)}
+    async function copy(){const p=els.password.textContent;if(!p||els.password.classList.contains('placeholder'))return;try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(p);else{const t=document.createElement('textarea');t.value=p;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();if(!document.execCommand('copy'))throw 0;t.remove()}toast('Password copied')}catch(e){toast('Copy blocked — select the password manually')}}
+    els.generate.onclick=()=>{generate();toast('New password generated')};els.copy.onclick=copy;els.length.oninput=()=>{els.lengthValue.textContent=els.length.value;generate()};['upper','lower','numbers','symbols'].forEach(k=>els[k].onchange=()=>{if(!els.upper.checked&&!els.lower.checked&&!els.numbers.checked&&!els.symbols.checked){els[k].checked=true;toast('At least one type is required')}generate()});
+    els.mobileToggle.onclick=()=>{const open=els.mobileContent.classList.toggle('open');els.mobileToggle.setAttribute('aria-expanded',open)};
+    let sx=0,sy=0;document.querySelector('.fpg-card').addEventListener('touchstart',e=>{sx=e.changedTouches[0].screenX;sy=e.changedTouches[0].screenY},{passive:true});document.querySelector('.fpg-card').addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-sx,dy=e.changedTouches[0].screenY-sy;if(Math.abs(dx)>80&&Math.abs(dy)<50){if(dx<0){generate();toast('New password generated')}else copy()}});
+    let last=0;function motion(e){if(!els.shake.checked||!e.accelerationIncludingGravity)return;const a=e.accelerationIncludingGravity,n=Math.abs((a.x||0)+(a.y||0)+(a.z||0));if(n>35&&Date.now()-last>1200){last=Date.now();generate();toast('New password generated')}}if('DeviceMotionEvent'in window)window.addEventListener('devicemotion',motion,{passive:true});
+    const menu=$('shared-mobile-menu'),backdrop=$('shared-menu-backdrop');$('shared-menu-btn')?.addEventListener('click',()=>{menu?.classList.add('open');backdrop?.style.setProperty('display','block');$('shared-menu-btn').setAttribute('aria-expanded','true')});$('shared-menu-close')?.addEventListener('click',()=>{menu?.classList.remove('open');backdrop?.style.setProperty('display','none');$('shared-menu-btn').setAttribute('aria-expanded','false')});backdrop?.addEventListener('click',()=>{$('shared-menu-close')?.click()});
+    $('footerYear').textContent=new Date().getFullYear();generate();
+  })();
+  </script>
 </body>
 </html>
-
-
-
-
-<div><br /></div><div><br /></div><div><p class="MsoNormal" style="line-height: 25.5pt; margin-bottom: 12.0pt; mso-margin-top-alt: auto; mso-outline-level: 1;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 18.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 18.0pt; mso-themecolor: text1;">Free Strong Password Generator: Create Secure Passwords Instantly with
-FortressKey<o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Meta Description:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;Generate
-uncrackable passwords instantly &amp; for free with FortressKey. This secure
-password generator runs 100% in your browser—no server logs, maximum privacy.
-Features mobile-friendly swipe controls &amp; shake-to-generate.<o:p></o:p></span></p>
-
-<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 24.0pt; margin-left: 0in; margin-right: 0in; margin-top: 24.0pt; text-align: center;"><span style="color: black; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">
-
-<hr align="center" size="1" width="100%" />
-
-</span></div>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">In an era where our
-digital lives are under constant threat, the strength of your first line of
-defense—your password—can mean the difference between safety and catastrophe. A
-weak password is like using a flimsy lock on a vault; it invites trouble. With
-cyberattacks and data breaches surging, relying on predictable passwords such
-as “123456” or your pet’s name is a risk you simply cannot afford. Hackers deploy
-automated “brute-force” attacks that can crack simple passwords in seconds.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">This is where a
-dedicated&nbsp;<b>strong password generator</b>&nbsp;becomes non-negotiable. To
-truly protect your online banking, email, social media, and sensitive data, you
-need a tool that creates complex, random strings of characters. These passwords
-are mathematically improbable to guess and computationally intensive to crack.
-Welcome to FortressKey: your ultimate, free solution for generating secure
-passwords instantly, with privacy at its core.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: 24.0pt; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 24.0pt; mso-outline-level: 2;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 16.5pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Generate
-Your Secure Password Now<o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Use the interactive tool
-below to create a high-strength password in seconds. Customize it to your needs
-and copy it safely.</span><span style="background: #151517; color: black; font-family: Consolas; font-size: 12.0pt; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;"><o:p></o:p></span></p>
-
-<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt; text-align: center;"><span style="color: black; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">
-
-<hr align="center" size="1" width="100%" />
-
-</span></div>
-
-<p class="MsoNormal" style="line-height: 24.0pt; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 24.0pt; mso-outline-level: 2;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 16.5pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Why
-Choose FortressKey as Your Secure Password Generator?<o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">While many online tools
-claim to generate strong passwords, FortressKey is engineered differently. We
-built it from the ground up with a&nbsp;<b>"Privacy-First"</b>&nbsp;philosophy,
-ensuring your security never comes at the expense of your privacy.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: 22.5pt; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 24.0pt; mso-outline-level: 3;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 15.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">1.
-Unmatched Privacy: 100% Client-Side Generation<o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">A critical flaw of many
-online password generators is that they process your request on a remote
-server. This creates a log and a potential point of interception.&nbsp;<b>FortressKey
-is a client-side password generator.</b>&nbsp;It runs entirely within your
-browser using advanced JavaScript. The password is created on your device—your
-computer, phone, or tablet—and never transmitted over the internet. We never
-see it, and neither does anyone else. Your secrets stay yours.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: 22.5pt; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 24.0pt; mso-outline-level: 3;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 15.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">2.
-Designed for the Modern User: Mobile-Optimized &amp; Intuitive<o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Security shouldn’t be
-cumbersome, especially on mobile. FortressKey delivers an app-like experience
-right in your browser:<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l1 level1 lfo1; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: Symbol; font-size: 10.0pt; mso-bidi-font-family: Symbol; mso-bidi-font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: Symbol; mso-themecolor: text1;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><!--[endif]--><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Swipe Controls:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;Swipe
-left to generate a new password instantly. Swipe right to copy the current one
-to your clipboard—no tapping required.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l1 level1 lfo1; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: Symbol; font-size: 10.0pt; mso-bidi-font-family: Symbol; mso-bidi-font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: Symbol; mso-themecolor: text1;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><!--[endif]--><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Shake-to-Regenerate:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;Need
-a new password? Just give your phone a quick shake (feature can be
-enabled/disabled in settings).<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l1 level1 lfo1; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: Symbol; font-size: 10.0pt; mso-bidi-font-family: Symbol; mso-bidi-font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: Symbol; mso-themecolor: text1;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><!--[endif]--><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Haptic &amp; Visual Feedback:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;Immediate,
-clear confirmations let you know when a password is generated or copied.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: 22.5pt; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 24.0pt; mso-outline-level: 3;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 15.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">3.
-Complete Customization for Any Website’s Rules<o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Different services have
-different password requirements. Our&nbsp;<b>free password generator tool</b>&nbsp;gives
-you full control:<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l3 level1 lfo2; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: Symbol; font-size: 10.0pt; mso-bidi-font-family: Symbol; mso-bidi-font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: Symbol; mso-themecolor: text1;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><!--[endif]--><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Adjust password length with a slider (from 8 up to 64
-characters).<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l3 level1 lfo2; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: Symbol; font-size: 10.0pt; mso-bidi-font-family: Symbol; mso-bidi-font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: Symbol; mso-themecolor: text1;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><!--[endif]--><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Toggle character types: Uppercase (A-Z), Lowercase (a-z),
-Numbers (0-9), and Special Symbols (!@#$%).<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l3 level1 lfo2; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: Symbol; font-size: 10.0pt; mso-bidi-font-family: Symbol; mso-bidi-font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: Symbol; mso-themecolor: text1;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><!--[endif]--><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Real-time security meter visually shows the strength of
-your generated password.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: 24.0pt; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 24.0pt; mso-outline-level: 2;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 16.5pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">What
-Actually Makes a Password "Strong" and Secure?<o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">If you're not using a
-generator, understanding these core principles is essential for creating a
-secure password manually:<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l0 level1 lfo3; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Segoe UI&quot;; mso-themecolor: text1;"><span style="mso-list: Ignore;">1.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Length
-Over Complexity:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;While complexity matters,&nbsp;<b>length is the
-most critical factor</b>. A 16-character password is exponentially harder to
-crack than an 8-character one, even with fewer symbol types. Aim for a minimum
-of 12 characters.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l0 level1 lfo3; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Segoe UI&quot;; mso-themecolor: text1;"><span style="mso-list: Ignore;">2.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Eliminate
-Predictability:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;Avoid using dictionary words, common phrases, or
-personal information (birthdays, names). These are the first entries in a
-hacker’s attack dictionary.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l0 level1 lfo3; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Segoe UI&quot;; mso-themecolor: text1;"><span style="mso-list: Ignore;">3.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Embrace
-True Randomness:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;A strong password uses an unpredictable mix of
-character types. This "entropy" makes brute-force attacks
-computationally unfeasible.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l0 level1 lfo3; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Segoe UI&quot;; mso-themecolor: text1;"><span style="mso-list: Ignore;">4.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Uniqueness
-is Mandatory:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;<b>Never reuse passwords.</b>&nbsp;If one site
-suffers a data breach, hackers will try that same email/password combination
-everywhere else. Each account needs its own unique key.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: 24.0pt; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 24.0pt; mso-outline-level: 2;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 16.5pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">How to
-Use This Free Strong Password Generator<o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Getting your secure
-password is a simple, four-step process:<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l2 level1 lfo4; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Segoe UI&quot;; mso-themecolor: text1;"><span style="mso-list: Ignore;">1.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Customize
-Your Criteria:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;Use the checkboxes to select which character sets
-you need (e.g., include symbols for sites that require them).<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l2 level1 lfo4; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Segoe UI&quot;; mso-themecolor: text1;"><span style="mso-list: Ignore;">2.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Set
-Your Length:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;Drag the slider to your desired password length.
-For high-security accounts, we recommend 16 characters or more.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l2 level1 lfo4; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Segoe UI&quot;; mso-themecolor: text1;"><span style="mso-list: Ignore;">3.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Generate:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;Click
-the "Generate" button, swipe left on the widget, or simply shake your
-mobile device.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0in; margin-left: 0in; mso-list: l2 level1 lfo4; mso-margin-top-alt: auto; tab-stops: list .5in; text-indent: -.25in;"><!--[if !supportLists]--><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Segoe UI&quot;; mso-themecolor: text1;"><span style="mso-list: Ignore;">4.<span style="font: 7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Copy
-&amp; Save:</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;Click the copy icon or swipe right, then
-immediately paste the password into your sign-up form.&nbsp;<b>Crucially, save
-it in a trusted password manager</b>&nbsp;like Bitwarden, 1Password, or
-LastPass.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><b><i><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Pro Tip:</span></i></b><i><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">&nbsp;Bookmark
-this page! Having immediate access to a reliable, private, and free strong
-password generator ensures you’re never tempted to create a weak password when
-signing up for a new service.</span></i><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;"><o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: 24.0pt; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 24.0pt; mso-outline-level: 2;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 16.5pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Frequently
-Asked Questions (FAQ)<o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Q: Is FortressKey really
-free?</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;"><br />
-A: Yes, absolutely. FortressKey is a 100% free strong password generator with
-no hidden fees, upsells, or account required.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Q: Are the passwords
-stored or logged anywhere?</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;"><br />
-A: No. Because the tool runs client-side in your browser, passwords are
-generated and exist only on your local device at the moment you create them.
-They are never sent to our or any other server.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Q: Can I use this on my
-iPhone or Android device?</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;"><br />
-A: Yes! FortressKey is fully responsive and mobile-optimized. The swipe
-gestures and shake-to-generate features are specifically designed for a
-seamless mobile experience.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Q: What’s the best
-practice after generating a password?</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;"><br />
-A: Always use a dedicated password manager. It will store your strong, unique
-passwords securely, auto-fill them for you, and help you audit your existing
-passwords for weaknesses.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Q: Why shouldn’t I just
-create my own password?</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;"><br />
-A: Humans are inherently bad at creating randomness. We tend to create patterns
-that are easy to remember but also easy for machines to guess. A tool like
-FortressKey removes human bias, creating mathematically superior passwords.<o:p></o:p></span></p>
-
-<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 24.0pt; margin-left: 0in; margin-right: 0in; margin-top: 24.0pt; text-align: center;"><span style="color: black; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">
-
-<hr align="center" size="1" width="100%" />
-
-</span></div>
-
-<p class="MsoNormal" style="line-height: 22.5pt; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 24.0pt; mso-outline-level: 3;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 15.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Final
-Thoughts: Take Control of Your Digital Security Today<o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Don’t let a weak
-password be the vulnerability that compromises your online identity. In just a
-few seconds, you can create a fortress-like defense for any account.
-FortressKey provides that power—freely, privately, and conveniently.<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-bottom: 12.0pt; margin-left: 0in; margin-right: 0in; margin-top: 12.0pt;"><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Start generating your
-secure passwords now. Use the tool above, integrate it into your security
-routine, and browse the web with confidence. For more tips on digital security,
-consider exploring our guides on [how to choose a password manager] and
-[setting up two-factor authentication].<o:p></o:p></span></p>
-
-<p class="MsoNormal" style="line-height: normal; margin-top: 12.0pt; mso-margin-bottom-alt: auto;"><b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;">Generate. Secure. Browse Safely.</span></b><span style="color: black; font-family: &quot;Segoe UI&quot;,&quot;sans-serif&quot;; font-size: 12.0pt; mso-bidi-language: NE; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-themecolor: text1;"><o:p></o:p></span></p>
-
-<p class="MsoNormal"><span style="color: black; mso-themecolor: text1;"><o:p>&nbsp;</o:p></span></p><br /></div>
