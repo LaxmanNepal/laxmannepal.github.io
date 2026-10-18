@@ -41,6 +41,10 @@
   function draw() {
     const q = search.value.trim().toLowerCase();
     const shown = items.filter(x => (x.name + " " + x.title + " " + (x.description || "")).toLowerCase().includes(q));
+    const heroCopy = root.querySelector(".td-hero p");
+    if (heroCopy) heroCopy.textContent = (!items.length && relatedResources[category])
+      ? "This category is being expanded. Explore related resources below while dedicated tools for this topic are developed."
+      : "Browse every tool in this category. Each tool has a dedicated page with information about its purpose and limitations.";
     if (!items.length && !q && relatedResources[category]) {
       grid.innerHTML = relatedResources[category].map(x => `<a class="td-card td-related-card" href="${x.url}"><span class="td-logo" style="--td-icon-color:${meta.color};--td-icon-bg:${meta.bg}">${icon}</span><h2>${x.title}</h2><p>${x.description}</p><span class="td-open">Explore resource →</span></a>`).join("");
       count.textContent = "Related resources";
