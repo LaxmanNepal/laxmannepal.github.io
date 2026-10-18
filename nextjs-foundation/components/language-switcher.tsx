@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { locales, type Locale } from "@/lib/content";
+import { locales, type Locale } from "@/lib/locales";
 
 const localizedPrefixes = ["/en", "/ne", "/hi"];
 
