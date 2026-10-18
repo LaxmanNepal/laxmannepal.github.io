@@ -6,24 +6,23 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "search-index.json"
-SITE_ORIGIN = "https://laxmannepal.com.np"
 SKIP = {"search/index.html", "search.html", "404.html"}
 SKIP_PREFIXES = ("old/", "youtube-tools/archive/")
 
 def clean(value):
-    return html.unescape(re.sub(r"\\s+", " ", value or "")).strip()
+    return html.unescape(re.sub(r"\s+", " ", value or "")).strip()
 
 def meta(content, name):
-    m = re.search(r'<meta[^>]+name=["\\']' + re.escape(name) + r'["\\'][^>]+content=["\\']([^"\\']*)["\\']', content, re.I)
+    m = re.search(r'<meta[^>]+name=["\']' + re.escape(name) + r'["\'][^>]+content=["\']([^"\']*)["\']', content, re.I)
     if not m:
-        m = re.search(r'<meta[^>]+content=["\\']([^"\\']*)["\\'][^>]+name=["\\']' + re.escape(name) + r'["\\']', content, re.I)
+        m = re.search(r'<meta[^>]+content=["\']([^"\']*)["\'][^>]+name=["\']' + re.escape(name) + r'["\']', content, re.I)
     return clean(m.group(1)) if m else ""
 
 def image_meta(content):
     for pattern in (
-        r'<meta[^>]+property=["\\']og:image["\\'][^>]+content=["\\']([^"\\']+)["\\']',
-        r'<meta[^>]+name=["\\']twitter:image["\\'][^>]+content=["\\']([^"\\']+)["\\']',
-        r'<img[^>]+src=["\\']([^"\\']+)["\\']',
+        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<img[^>]+src=["\']([^"\']+)["\']',
     ):
         m = re.search(pattern, content, re.I)
         if m:
@@ -36,8 +35,8 @@ def title(content):
 
 def canonical_url(content):
     patterns = (
-        r'<link[^>]+rel=["\\']canonical["\\'][^>]+href=["\\']([^"\\']+)',
-        r'<link[^>]+href=["\\']([^"\\']+)["\\'][^>]+rel=["\\']canonical["\\']',
+        r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)',
+        r'<link[^>]+href=["\']([^"\']+)["\'][^>]+rel=["\']canonical["\']',
     )
     for pattern in patterns:
         m = re.search(pattern, content, re.I)
@@ -76,22 +75,22 @@ for file in ROOT.rglob("*.html"):
     except OSError:
         continue
     t = title(content)
-    if not t or re.search(r"\\b(redirecting|article moved)\\b", t, re.I):
+    if not t or re.search(r"\b(redirecting|article moved)\b", t, re.I):
         continue
     robots = meta(content, "robots").lower()
-    if "noindex" in robots or re.search(r'<meta[^>]+http-equiv=["\\']refresh["\\']', content, re.I):
+    if "noindex" in robots or re.search(r'<meta[^>]+http-equiv=["\']refresh["\']', content, re.I):
         continue
     desc = meta(content, "description") or t
     cat = category(rel, t)
     image = image_meta(content)
     if rel.startswith("blogs/") and (file.parent / "thumbnail.jpg").is_file():
         image = "/" + (file.parent / "thumbnail.jpg").relative_to(ROOT).as_posix()
-    if image and (re.search(r"\\$\\{|\\$\\(|example\\.com|undefined|null", image, re.I) or image.startswith("data:")):
+    if image and (re.search(r"\$\{|\$\(|example\.com|undefined|null", image, re.I) or image.startswith("data:")):
         image = ""
     canonical = canonical_url(content)
     page_url = canonical or url_for(rel)
     source = " ".join((t, desc, rel.replace("/", " ").replace("-", " ").replace("_", " ")))
-    keywords = " ".join(dict.fromkeys(re.findall(r"[\\w][\\w+.-]{1,}", source.lower(), re.UNICODE)))
+    keywords = " ".join(dict.fromkeys(re.findall(r"[\w][\w+.-]{1,}", source.lower(), re.UNICODE)))
     items.append({"title": t, "category": cat, "type": "article" if cat == "Article" else "tool" if cat == "Tools" else "resource", "url": page_url, "description": desc[:220], "keywords": keywords[:500], "image": image})
 
 # Collapse files that resolve to the same canonical URL.
@@ -102,5 +101,5 @@ for item in items:
     if current is None or len(item["description"]) > len(current["description"]):
         unique[key] = item
 items = sorted(unique.values(), key=lambda x: (x["title"].lower(), x["url"]))
-OUT.write_text(json.dumps(items, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+OUT.write_text(json.dumps(items, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(f"Generated {len(items)} searchable resources.")
