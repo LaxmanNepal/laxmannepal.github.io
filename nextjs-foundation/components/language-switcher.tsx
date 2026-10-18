@@ -5,11 +5,9 @@ import { locales, type Locale } from "@/lib/locales";
 
 const localizedPrefixes = ["/en", "/ne", "/hi"];
 
-function switchPath(pathname: string, locale: Locale) {
-  const normalized = pathname || "/";
-  const source = localizedPrefixes.find((prefix) => normalized === prefix || normalized.startsWith(prefix + "/"));
-  const basePath = source ? normalized.slice(source.length) || "/" : normalized;
-  return locale === "en" ? basePath : `/${locale}${basePath === "/" ? "/" : basePath}`;
+function switchPath(locale: Locale) {
+  // Only the localized home pages are guaranteed to exist; do not create broken translated deep links.
+  return locale === "en" ? "/en/" : `/${locale}/`;
 }
 
 export default function LanguageSwitcher() {
@@ -21,7 +19,7 @@ export default function LanguageSwitcher() {
     <summary aria-label="Choose language">🌐 {active.toUpperCase()}</summary>
     <div className="language-menu">
       {Object.entries(locales).map(([code, locale]) => (
-        <a href={switchPath(pathname, code as Locale)} key={code} aria-current={code === active ? "page" : undefined}>
+        <a href={switchPath(code as Locale)} key={code} aria-current={code === active ? "page" : undefined}>
           <strong>{locale.nativeLabel}</strong><small>{locale.label}</small>
         </a>
       ))}
