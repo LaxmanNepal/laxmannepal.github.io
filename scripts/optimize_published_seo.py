@@ -87,8 +87,8 @@ def url_for(path: Path) -> str:
 
 def canonical_for(path: Path, doc: str) -> str:
     patterns = (
-        r'<link[^>]+rel=["\\']canonical["\\'][^>]+href=["\\']([^"\\']+)',
-        r'<link[^>]+href=["\\']([^"\\']+)["\\'][^>]+rel=["\\']canonical["\\']',
+        r"""<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)""",
+        r"""<link[^>]+href=["']([^"']+)["'][^>]+rel=["']canonical["']""",
     )
     for pattern in patterns:
         m = re.search(pattern, doc, re.I)
@@ -110,9 +110,9 @@ def optimize(path: Path) -> bool:
     title = title_from(path, doc)
     desc = description_from(title, doc)
     canonical = canonical_for(path, doc)
-    existing_robots = re.search(r'<meta[^>]+name=["\\']robots["\\'][^>]*content=["\\']([^"\\']*)["\\']', doc, re.I)
+    existing_robots = re.search(r"""<meta[^>]+name=["']robots["'][^>]*content=["']([^"']*)["']""", doc, re.I)
     has_noindex = bool(existing_robots and "noindex" in existing_robots.group(1).lower())
-    is_redirect = bool(re.search(r'<meta[^>]+http-equiv=["\\']refresh["\\']', doc, re.I) or re.search(r"\\b(redirecting|article moved)\\b", title, re.I))
+    is_redirect = bool(re.search(r"""<meta[^>]+http-equiv=["']refresh["']""", doc, re.I) or re.search(r"\b(redirecting|article moved)\b", title, re.I))
     noindex = any(part in canonical for part in NOINDEX_PARTS) or has_noindex or is_redirect
 
     doc = re.sub(r"<title[^>]*>.*?</title>", f"<title>{html.escape(title)}</title>", doc, count=1, flags=re.I|re.S)
@@ -164,12 +164,12 @@ def main():
         except OSError:
             continue
         u = canonical_for(p, doc)
-        robots = re.search(r'<meta[^>]+name=["\\']robots["\\'][^>]*content=["\\']([^"\\']*)["\\']', doc, re.I)
+        robots = re.search(r"""<meta[^>]+name=["']robots["'][^>]*content=["']([^"']*)["']""", doc, re.I)
         if robots and "noindex" in robots.group(1).lower():
             continue
-        if re.search(r'<meta[^>]+http-equiv=["\\']refresh["\\']', doc, re.I):
+        if re.search(r"""<meta[^>]+http-equiv=["']refresh["']""", doc, re.I):
             continue
-        if re.search(r"\\b(redirecting|article moved)\\b", title_from(p, doc), re.I):
+        if re.search(r"\b(redirecting|article moved)\b", title_from(p, doc), re.I):
             continue
         if any(x in u for x in NOINDEX_PARTS):
             continue
