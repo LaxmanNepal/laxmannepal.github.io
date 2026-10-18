@@ -23,7 +23,7 @@ def check_file(p):
     descriptions = meta(doc, name='description')
     if len(descriptions) != 1 or not content_value(descriptions[0]): errors.append((rel,'missing/duplicate meta description'))
     canon = re.findall(r'<link[^>]+rel=["\']canonical["\'][^>]*>', doc, re.I)
-    if len(canon) != 1 or not re.search(r'href=["\']https://laxmannepal\\.com\\.np/', canon[0], re.I): errors.append((rel,'missing/invalid canonical'))
+    if len(canon) != 1 or not re.search(r'href=["\']https://laxmannepal\.com\.np/', canon[0], re.I): errors.append((rel,'missing/invalid canonical'))
     for kind in ('og:title','og:description','og:url'):
         tags = meta(doc, prop=kind)
         if len(tags) != 1 or not content_value(tags[0]): errors.append((rel,f'missing/duplicate {kind}'))
