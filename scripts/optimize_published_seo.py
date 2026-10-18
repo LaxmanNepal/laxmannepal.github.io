@@ -103,15 +103,44 @@ def canonical_for(path: Path, doc: str) -> str:
                 return value
     return url_for(path)
 
+def ensure_document(path: Path, doc: str) -> str:
+    if "<html" in doc.lower() and "</head>" in doc.lower():
+        return doc
+    title = title_from(path, doc)
+    desc = description_from(title, doc)
+    canonical = canonical_for(path, doc)
+    lang_match = re.search(r"""<html[^>]+lang=["']([^"']+)""", doc, re.I)
+    lang = lang_match.group(1) if lang_match else "en"
+    robots_match = re.search(r"""<meta[^>]+name=["']robots["'][^>]*content=["']([^"']*)["']""", doc, re.I)
+    robots = f'<meta name="robots" content="{html.escape(robots_match.group(1), quote=True)}">' if robots_match else ""
+    refresh_match = re.search(r"""<meta[^>]+http-equiv=["']refresh["'][^>]*>""", doc, re.I)
+    refresh = refresh_match.group(0) if refresh_match else ""
+    links = re.findall(r"<link\\b[^>]*>", doc, re.I)
+    links = [x for x in links if not re.search(r"""rel=["']canonical["']""", x, re.I)]
+    body = re.sub(r"<!doctype[^>]*>", "", doc, flags=re.I)
+    body = re.sub(r"<title[^>]*>.*?</title>", "", body, flags=re.I | re.S)
+    body = re.sub(r"<meta\\b[^>]*>", "", body, flags=re.I)
+    body = re.sub(r"<link\\b[^>]*>", "", body, flags=re.I)
+    body = re.sub(r"</?(?:html|head|body)\\b[^>]*>", "", body, flags=re.I)
+    head = (
+        '<!doctype html>\\n'
+        f'<html lang="{html.escape(lang, quote=True)}"><head>'
+        '<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+        f'<title>{html.escape(title)}</title>'
+        f'<meta name="description" content="{html.escape(desc, quote=True)}">'
+        f'<link rel="canonical" href="{html.escape(canonical, quote=True)}">'
+        + "".join(links) + robots + refresh + '</head><body>'
+    )
+    return head + body + '</body></html>'
+
 def replace_or_insert(doc: str, pattern: str, tag: str) -> str:
     if re.search(pattern, doc, re.I):
         return re.sub(pattern, tag, doc, count=1, flags=re.I)
     return doc.replace("</head>", tag + "\n</head>", 1)
 
 def optimize(path: Path) -> bool:
-    doc = path.read_text(encoding="utf-8", errors="ignore")
-    if "<html" not in doc.lower() or "</head>" not in doc.lower():
-        return False
+    original = path.read_text(encoding="utf-8", errors="ignore")
+    doc = ensure_document(path, original)
     title = title_from(path, doc)
     desc = description_from(title, doc)
     canonical = canonical_for(path, doc)
@@ -151,7 +180,6 @@ def optimize(path: Path) -> bool:
     if "googletagmanager.com/gtag/js" not in doc and "G-VG1MHSYGQ0" not in doc:
         doc = doc.replace("</head>", ANALYTICS + "\n</head>", 1)
 
-    original = path.read_text(encoding="utf-8", errors="ignore")
     if doc != original:
         path.write_text(doc, encoding="utf-8")
         return True
