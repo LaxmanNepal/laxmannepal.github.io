@@ -95,6 +95,11 @@ def canonical_for(path: Path, doc: str) -> str:
         if m:
             value = html.unescape(m.group(1)).strip()
             if value.startswith(SITE + "/"):
+                path_part = value[len(SITE):]
+                if path_part == "/index.html":
+                    return SITE + "/"
+                if path_part.endswith("/index.html"):
+                    return SITE + path_part[:-10]
                 return value
     return url_for(path)
 
