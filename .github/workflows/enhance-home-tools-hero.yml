@@ -37,6 +37,9 @@ jobs:
               <div class="free-tools-rotator" aria-label="More tool categories"><span>New tools added regularly</span><span>Everything is free to use</span><span>Built for speed & simplicity</span></div>
             </div>
           </section>'''
+          if 'class="tools-hero-showcase"' in s:
+              print('Hero already installed; no changes needed.')
+              raise SystemExit(0)
           if old not in s:
               raise SystemExit('Hero banner markup not found')
           s = s.replace(old, new, 1)
