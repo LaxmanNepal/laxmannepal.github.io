@@ -33,7 +33,7 @@
     "url": "/2025/08/20-free-ai-tools-to-skyrocket-your.html",
     "description": "Discover the 20 best free AI tools websites for content creation, productivity, and design in 2025. Boost your workflow with these AI-powered platforms.",
     "keywords": "20 best free ai tools websites for content productivity 2025 discover the creation and design in 2025. boost your workflow with these ai-powered platforms. 08 to skyrocket your.html",
-    "image": "https://example.com/chatgpt.jpg"
+    "image": ""
   },
   {
     "title": "7 Genuine Ways to Earn Free USDT Without Investing Money (2025 Guide)",
@@ -42,15 +42,6 @@
     "url": "/2025/10/7-genuine-ways-to-earn-free-usdt.html",
     "description": "Learn 7 trusted, 100% free ways to earn USDT without any investment. Includes Learn & Earn programs, faucets, freelance sites, and more — all real and verified for 2025.",
     "keywords": "genuine ways to earn free usdt without investing money 2025 guide learn trusted 100 any investment. includes programs faucets freelance sites and more all real verified for 2025. 10 usdt.html",
-    "image": ""
-  },
-  {
-    "title": "About Laxman Nepal — Developer, Creator & App Builder",
-    "category": "Apps",
-    "type": "resource",
-    "url": "/old/about/",
-    "description": "About Laxman Nepal, a technology creator and web app builder behind practical digital tools, Nepali technology projects and the Laxman Nepal YouTube channel.",
-    "keywords": "about laxman nepal developer creator app builder technology and web behind practical digital tools nepali projects the youtube channel. old index.html",
     "image": ""
   },
   {
@@ -69,16 +60,7 @@
     "url": "/2025/11/youtube-trending-keywords.html",
     "description": "Advanced YouTube Keyword Explorer",
     "keywords": "advanced youtube keyword explorer 2025 11 trending keywords.html",
-    "image": "${video.thumbnail}"
-  },
-  {
-    "title": "Advanced YouTube Keyword Explorer",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-trending-keywords.html",
-    "description": "Advanced YouTube Keyword Explorer",
-    "keywords": "advanced youtube keyword explorer tools archive trending keywords.html",
-    "image": "${video.thumbnail}"
+    "image": ""
   },
   {
     "title": "Advanced YouTube Tag Extractor",
@@ -87,16 +69,7 @@
     "url": "/2025/11/youtube-tag-extractor.html",
     "description": "Advanced YouTube Tag Extractor",
     "keywords": "advanced youtube tag extractor 2025 11 extractor.html",
-    "image": "${videoData.thumbnails.medium.url}"
-  },
-  {
-    "title": "Advanced YouTube Tag Extractor",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-tag-extractor.html",
-    "description": "Advanced YouTube Tag Extractor",
-    "keywords": "advanced youtube tag extractor tools archive extractor.html",
-    "image": "${videoData.thumbnails.medium.url}"
+    "image": ""
   },
   {
     "title": "Advanced YouTube Tag Extractor — Free SEO Tool | Laxman Nepal",
@@ -114,16 +87,7 @@
     "url": "/2025/11/youtube-thumbnail-downloader.html",
     "description": "Advanced YouTube Thumbnail Generator",
     "keywords": "advanced youtube thumbnail generator 2025 11 downloader.html",
-    "image": "${item.thumbnailUrl}"
-  },
-  {
-    "title": "Advanced YouTube Thumbnail Generator",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-thuwembnail-downloader.html",
-    "description": "Advanced YouTube Thumbnail Generator",
-    "keywords": "advanced youtube thumbnail generator tools archive thuwembnail downloader.html",
-    "image": "${item.thumbnailUrl}"
+    "image": ""
   },
   {
     "title": "Advanced YouTube Video SEO Analyzer",
@@ -132,16 +96,7 @@
     "url": "/2025/11/youtube-video-seo-analyzer.html",
     "description": "Advanced YouTube Video SEO Analyzer",
     "keywords": "advanced youtube video seo analyzer 2025 11 analyzer.html",
-    "image": "${thumbnail.url}"
-  },
-  {
-    "title": "Advanced YouTube Video SEO Analyzer",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-video-seo-analyzer.html",
-    "description": "Advanced YouTube Video SEO Analyzer",
-    "keywords": "advanced youtube video seo analyzer tools archive analyzer.html",
-    "image": "${thumbnail.url}"
+    "image": ""
   },
   {
     "title": "Advanced YouTube Video SEO Analyzer — Free Tool | Laxman Nepal",
@@ -207,15 +162,6 @@
     "image": "https://laxmannepal.com.np/youtube-tools/ai-powered-youtube-seo-deep-analyzer/logo.webp"
   },
   {
-    "title": "AI YouTube SEO Analyzer — Free YouTube SEO Tool | Laxman Nepal",
-    "category": "AI",
-    "type": "resource",
-    "url": "/youtube-tools/archive/ai-powered-youtube-seo-deep-analyzer.html",
-    "description": "AI YouTube SEO Analyzer — Free YouTube SEO Tool | Laxman Nepal",
-    "keywords": "ai youtube seo analyzer free tool laxman nepal tools archive powered deep analyzer.html",
-    "image": ""
-  },
-  {
     "title": "AI-Powered YouTube SEO Deep Analyzer",
     "category": "Article",
     "type": "article",
@@ -232,15 +178,6 @@
     "description": "Alibaba has unveiled the Zhenwu V900 AI chip and outlined an ambitious plan for larger AI models and data-center capacity. Here is the technology context.",
     "keywords": "alibaba zhenwu v900 ai chip and qwen ambitions what the new hardware push means laxman nepal has unveiled outlined an ambitious plan for larger models data-center capacity. here is technology context. tech news max index.html",
     "image": "https://laxmannepal.com.np/tech-news/images/alibaba.svg"
-  },
-  {
-    "title": "All Apps — Laxman Nepal",
-    "category": "Apps",
-    "type": "resource",
-    "url": "/old/apps/",
-    "description": "Explore all web apps, tools and digital projects built by Laxman Nepal.",
-    "keywords": "all apps laxman nepal explore web tools and digital projects built by nepal. old index.html",
-    "image": ""
   },
   {
     "title": "All Free Online Tools — Laxman Nepal",
@@ -261,15 +198,6 @@
     "image": ""
   },
   {
-    "title": "App — Laxman Nepal",
-    "category": "Apps",
-    "type": "resource",
-    "url": "/old/apps/app.html",
-    "description": "Explore an app from the Laxman Nepal digital ecosystem.",
-    "keywords": "app laxman nepal explore an from the digital ecosystem. old apps app.html",
-    "image": ""
-  },
-  {
     "title": "Apps & Tools — Laxman Nepal",
     "category": "Tools",
     "type": "tool",
@@ -285,7 +213,7 @@
     "url": "/2025/09/best-online-typing-jobs-in-2025-work.html",
     "description": "Discover the best online typing jobs in 2025. Learn where to apply, how to get paid in Nepal & Kuwait, realistic earnings, scam alerts, and step-by-step tips to start today.",
     "keywords": "best online typing jobs in 2025 work from home earn real money discover the 2025. learn where to apply how get paid nepal kuwait realistic earnings scam alerts and step-by-step tips start today. 09 work.html",
-    "image": "https://example.com/og-image-typing-jobs.jpg"
+    "image": ""
   },
   {
     "title": "Blog — Laxman Nepal",
@@ -402,16 +330,7 @@
     "url": "/2025/11/youtube-channel-info-extractor.html",
     "description": "Enhanced YouTube Channel Analytics | laxmannepal.com.np",
     "keywords": "enhanced youtube channel analytics laxmannepal.com.np 2025 11 info extractor.html",
-    "image": "${snippet.thumbnails.medium.url}"
-  },
-  {
-    "title": "Enhanced YouTube Channel Analytics | laxmannepal.com.np",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-channel-info-extractor.html",
-    "description": "Enhanced YouTube Channel Analytics | laxmannepal.com.np",
-    "keywords": "enhanced youtube channel analytics laxmannepal.com.np tools archive info extractor.html",
-    "image": "${snippet.thumbnails.medium.url}"
+    "image": ""
   },
   {
     "title": "Facebook Mockup Generator | Laxman Nepal",
@@ -513,15 +432,6 @@
     "image": ""
   },
   {
-    "title": "Hindu — Laxman Nepal Apps",
-    "category": "Apps",
-    "type": "resource",
-    "url": "/old/apps/hindu/",
-    "description": "A searchable collection of Hindu scriptures and related information.",
-    "keywords": "hindu laxman nepal apps searchable collection of scriptures and related information. old index.html",
-    "image": ""
-  },
-  {
     "title": "How to Create a Google Play Store Developer Account in 2026",
     "category": "Article",
     "type": "article",
@@ -546,15 +456,6 @@
     "url": "/2025/11/youtube-thumbnail-downloader_24.html",
     "description": "Learn how to download high-quality YouTube thumbnails in seconds. Our free tool helps you extract thumbnails from any YouTube video in multiple resolutions.",
     "keywords": "how to download youtube thumbnails in high quality free tool learn high-quality seconds. our helps you extract from any video multiple resolutions. 2025 11 thumbnail downloader 24.html",
-    "image": ""
-  },
-  {
-    "title": "How to Download YouTube Thumbnails in High Quality - Free Tool",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-thumbnail-downloader-24.html",
-    "description": "Free YouTube tool from Laxman Nepal: How to Download YouTube Thumbnails in High Quality - Free Tool. Analyze, research, optimize and grow your YouTube channel or videos.",
-    "keywords": "how to download youtube thumbnails in high quality free tool from laxman nepal tool. analyze research optimize and grow your channel or videos. tools archive thumbnail downloader 24.html",
     "image": ""
   },
   {
@@ -756,33 +657,6 @@
     "image": ""
   },
   {
-    "title": "Laxman Nepal - YouTube Thumbnail Downloader",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/laxman-nepal-youtube-thumbnail.html",
-    "description": "Laxman Nepal - YouTube Thumbnail Downloader",
-    "keywords": "laxman nepal youtube thumbnail downloader tools archive thumbnail.html",
-    "image": ""
-  },
-  {
-    "title": "Laxman Nepal YouTube — Growth Dashboard",
-    "category": "YouTube",
-    "type": "resource",
-    "url": "/old/youtube/",
-    "description": "Laxman Nepal YouTube growth dashboard — subscribers, views, uploads, growth trends, popular videos and channel insights.",
-    "keywords": "laxman nepal youtube growth dashboard subscribers views uploads trends popular videos and channel insights. old index.html",
-    "image": "${E(c.thumbnail)}"
-  },
-  {
-    "title": "Laxman Nepal — Developer, Creator & Builder",
-    "category": "Nepali",
-    "type": "resource",
-    "url": "/old/",
-    "description": "Laxman Nepal — technology creator, developer and app builder. Explore free web apps, Nepali tools, YouTube videos, AI tools, automation, NEPSE projects and digital products.",
-    "keywords": "laxman nepal developer creator builder technology and app builder. explore free web apps nepali tools youtube videos ai automation nepse projects digital products. old index.html",
-    "image": "https://avatars.githubusercontent.com/u/84069546?v=4"
-  },
-  {
     "title": "Laxman Nepal — Free Tools, AI Tools & Practical Guides",
     "category": "AI",
     "type": "resource",
@@ -816,15 +690,6 @@
     "url": "/tools/generator/fake-post-generator/linkedin/",
     "description": "Create a responsive, customizable linkedin-style social post card. Edit identity, text, context, optional image, frame and export a PNG.",
     "keywords": "linkedin mockup generator laxman nepal create responsive customizable linkedin-style social post card. edit identity text context optional image frame and export png. tools fake index.html",
-    "image": ""
-  },
-  {
-    "title": "Live TV — Laxman Nepal Apps",
-    "category": "Apps",
-    "type": "resource",
-    "url": "/old/apps/live-tv/",
-    "description": "A web interface for discovering available live television streams.",
-    "keywords": "live tv laxman nepal apps web interface for discovering available television streams. old index.html",
     "image": ""
   },
   {
@@ -891,24 +756,6 @@
     "image": ""
   },
   {
-    "title": "Nepali Movies — Laxman Nepal Apps",
-    "category": "Apps",
-    "type": "resource",
-    "url": "/old/apps/nepali-movies/",
-    "description": "A Nepali cinema discovery project.",
-    "keywords": "nepali movies laxman nepal apps cinema discovery project. old index.html",
-    "image": ""
-  },
-  {
-    "title": "Nepali News — Laxman Nepal Apps",
-    "category": "News",
-    "type": "resource",
-    "url": "/old/apps/nepali-news/",
-    "description": "A Nepali news application and digital news experience.",
-    "keywords": "nepali news laxman nepal apps application and digital experience. old index.html",
-    "image": ""
-  },
-  {
     "title": "Nepali OSINT Resources",
     "category": "Nepali",
     "type": "resource",
@@ -918,30 +765,12 @@
     "image": ""
   },
   {
-    "title": "Nepali Patro — Laxman Nepal Apps",
-    "category": "Apps",
-    "type": "resource",
-    "url": "/old/apps/nepali-patro/",
-    "description": "Nepali calendar with date, festival and cultural information.",
-    "keywords": "nepali patro laxman nepal apps calendar with date festival and cultural information. old index.html",
-    "image": ""
-  },
-  {
     "title": "Nepali-English Date Converter",
     "category": "Tools",
     "type": "tool",
     "url": "/2025/08/nepali-date-converter.html",
     "description": "Nepali-English Date Converter",
     "keywords": "nepali-english date converter 2025 08 nepali converter.html",
-    "image": ""
-  },
-  {
-    "title": "NEPSE Pulse — Laxman Nepal Apps",
-    "category": "Apps",
-    "type": "resource",
-    "url": "/old/apps/nepse-pulse/",
-    "description": "Nepal stock-market intelligence, company research and finance tools.",
-    "keywords": "nepse pulse laxman nepal apps stock-market intelligence company research and finance tools. old index.html",
     "image": ""
   },
   {
@@ -960,15 +789,6 @@
     "url": "/news/",
     "description": "Latest technology, AI, apps, gadgets and practical digital updates from Laxman Nepal.",
     "keywords": "news updates laxman nepal latest technology ai apps gadgets and practical digital from nepal. index.html",
-    "image": ""
-  },
-  {
-    "title": "Nisulka Tools — Laxman Nepal Apps",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/old/apps/nisulka-tools/",
-    "description": "Free browser-based tools for everyday productivity and creators.",
-    "keywords": "nisulka tools laxman nepal apps free browser-based for everyday productivity and creators. old index.html",
     "image": ""
   },
   {
@@ -1089,15 +909,6 @@
     "image": ""
   },
   {
-    "title": "Progress Bar of the Year — Laxman Nepal Apps",
-    "category": "Apps",
-    "type": "resource",
-    "url": "/old/apps/progress-bar-year/",
-    "description": "Track how much of the current year has passed.",
-    "keywords": "progress bar of the year laxman nepal apps track how much current has passed. old index.html",
-    "image": ""
-  },
-  {
     "title": "QR Code Generator Pro - Laxman Nepal",
     "category": "Tools",
     "type": "tool",
@@ -1113,7 +924,7 @@
     "url": "/qrcodetool/",
     "description": "QR Studio: advanced QR generator, scanner, designer, secure QR, image QR, bulk QR, history, templates and QR analyzer.",
     "keywords": "qr studio all-in-one generator scanner laxman nepal advanced designer secure image bulk history templates and analyzer. qrcodetool index.html",
-    "image": "${currentQR.toDataURL()}"
+    "image": ""
   },
   {
     "title": "Rotate PDF — Laxman Nepal",
@@ -1170,15 +981,6 @@
     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGHaSO1wWf8K8GPmA-JDZXvu2HBTYFGamQLlYogAvtVt3ZZScH3EoFi0en9SD85HREgsCrMrJWUfIm3x05xyREDab8BOEcU6kYIZfj00zYURGxpsXUrXlEVj0FPVnwGQlQBI-NqycN3kIqfxHv64EXOxS7NSlUPtj7BdHrx0at3kqdMYJO8zCvB2SIfGQD/s1600/picofme%20%282%29.png"
   },
   {
-    "title": "South Movies — Laxman Nepal Apps",
-    "category": "Apps",
-    "type": "resource",
-    "url": "/old/apps/south-movies/",
-    "description": "South Indian movie discovery and streaming information.",
-    "keywords": "south movies laxman nepal apps indian movie discovery and streaming information. old index.html",
-    "image": ""
-  },
-  {
     "title": "Split PDF — Laxman Nepal",
     "category": "Tools",
     "type": "tool",
@@ -1233,15 +1035,6 @@
     "image": ""
   },
   {
-    "title": "Text to Handwriting — Laxman Nepal Apps",
-    "category": "Apps",
-    "type": "resource",
-    "url": "/old/apps/text-to-handwriting/",
-    "description": "Convert typed text into handwriting-style output.",
-    "keywords": "text to handwriting laxman nepal apps convert typed into handwriting-style output. old index.html",
-    "image": ""
-  },
-  {
     "title": "Threads Mockup Generator | Laxman Nepal",
     "category": "Tools",
     "type": "tool",
@@ -1257,15 +1050,6 @@
     "url": "/vacation/",
     "description": "Laxman Nepal Vacation Countdown — कात्तिक २८, २०८३।",
     "keywords": "vacation command center laxman nepal countdown २८ २०८३ index.html",
-    "image": ""
-  },
-  {
-    "title": "Video — Laxman Nepal YouTube",
-    "category": "YouTube",
-    "type": "resource",
-    "url": "/old/youtube/video/",
-    "description": "Watch and explore a Laxman Nepal YouTube video with detailed public statistics.",
-    "keywords": "video laxman nepal youtube watch and explore with detailed public statistics. old index.html",
     "image": ""
   },
   {
@@ -1323,30 +1107,12 @@
     "image": "https://laxmannepal.com.np/tech-news/images/mimo-v2-6.svg"
   },
   {
-    "title": "YouTube Analytics Pro Dashboard",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-analytics-dec-2025.html",
-    "description": "YouTube Analytics Pro Dashboard",
-    "keywords": "youtube analytics pro dashboard tools archive dec 2025.html",
-    "image": ""
-  },
-  {
     "title": "YouTube Analytics Pro Dashboard | Free YouTube Channel Analytics",
     "category": "YouTube",
     "type": "resource",
     "url": "/youtube-analytics.html",
     "description": "Analyze a public YouTube channel with subscriber, view and video statistics using the YouTube Data API. Free YouTube analytics tool by Laxman Nepal.",
     "keywords": "youtube analytics pro dashboard free channel analyze public with subscriber view and video statistics using the data api. tool by laxman nepal. analytics.html",
-    "image": ""
-  },
-  {
-    "title": "YouTube Analytics Pro Dashboard | Free YouTube Channel Analytics",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-analytics.html",
-    "description": "Analyze a public YouTube channel with subscriber, view and video statistics using the YouTube Data API. Free YouTube analytics tool by Laxman Nepal.",
-    "keywords": "youtube analytics pro dashboard free channel analyze public with subscriber view and video statistics using the data api. tool by laxman nepal. tools archive analytics.html",
     "image": ""
   },
   {
@@ -1359,31 +1125,13 @@
     "image": "https://laxmannepal.com.np/youtube-tools/youtube-analytics/logo.webp"
   },
   {
-    "title": "YouTube Analytics — Redirecting",
-    "category": "YouTube",
-    "type": "resource",
-    "url": "/2025/11/youtube-analytics.html",
-    "description": "YouTube Analytics — Redirecting",
-    "keywords": "youtube analytics redirecting 2025 11 analytics.html",
-    "image": ""
-  },
-  {
     "title": "YouTube Channel Analytics",
     "category": "YouTube",
     "type": "resource",
     "url": "/2025/11/youtube-channel-id-finder-analytics.html",
     "description": "YouTube Channel Analytics",
     "keywords": "youtube channel analytics 2025 11 id finder analytics.html",
-    "image": "${video.snippet.thumbnails.medium.url}"
-  },
-  {
-    "title": "YouTube Channel Analytics",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-channel-id-finder-analytics.html",
-    "description": "YouTube Channel Analytics",
-    "keywords": "youtube channel analytics tools archive id finder analytics.html",
-    "image": "${video.snippet.thumbnails.medium.url}"
+    "image": ""
   },
   {
     "title": "YouTube Channel Analytics Tool – Free Channel & Video Insights | Laxman Nepal",
@@ -1392,15 +1140,6 @@
     "url": "/youtube-channel-analytics-pro.html",
     "description": "Analyze a public YouTube channel with recent video views, likes, comments, keywords and practical SEO insights. Free YouTube analytics tool by Laxman Nepal.",
     "keywords": "youtube channel analytics tool free video insights laxman nepal analyze public with recent views likes comments keywords and practical seo insights. by nepal. pro.html",
-    "image": "https://laxmannepal.com.np/assets/images/laxman-nepal-og.jpg"
-  },
-  {
-    "title": "YouTube Channel Analytics Tool – Free Channel & Video Insights | Laxman Nepal",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-channel-analytics-pro.html",
-    "description": "Analyze a public YouTube channel with recent video views, likes, comments, keywords and practical SEO insights. Free YouTube analytics tool by Laxman Nepal.",
-    "keywords": "youtube channel analytics tool free video insights laxman nepal analyze public with recent views likes comments keywords and practical seo insights. by nepal. tools archive pro.html",
     "image": "https://laxmannepal.com.np/assets/images/laxman-nepal-og.jpg"
   },
   {
@@ -1449,15 +1188,6 @@
     "image": ""
   },
   {
-    "title": "YouTube Content Suite - Complete Toolkit",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-video-title-description-tag.html",
-    "description": "YouTube Content Suite - Complete Toolkit",
-    "keywords": "youtube content suite complete toolkit tools archive video title description tag.html",
-    "image": ""
-  },
-  {
     "title": "YouTube Content Suite — Title, Description & Tags Tool | Laxman Nepal",
     "category": "Tools",
     "type": "tool",
@@ -1473,15 +1203,6 @@
     "url": "/2025/11/youtube-description-extractor.html",
     "description": "YouTube Description Extractor",
     "keywords": "youtube description extractor 2025 11 extractor.html",
-    "image": ""
-  },
-  {
-    "title": "YouTube Description Extractor",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-description-extractor.html",
-    "description": "YouTube Description Extractor",
-    "keywords": "youtube description extractor tools archive extractor.html",
     "image": ""
   },
   {
@@ -1503,15 +1224,6 @@
     "image": ""
   },
   {
-    "title": "YouTube Hashtag Extractor",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-hashtag-extractor.html",
-    "description": "YouTube Hashtag Extractor",
-    "keywords": "youtube hashtag extractor tools archive extractor.html",
-    "image": ""
-  },
-  {
     "title": "YouTube Hashtag Extractor — Free YouTube SEO Tool | Laxman Nepal",
     "category": "Tools",
     "type": "tool",
@@ -1530,15 +1242,6 @@
     "image": "https://laxmannepal.com.np/youtube-tools/youtube-trending-keywords/logo.webp"
   },
   {
-    "title": "YouTube Tag Generator — Free YouTube SEO Tool | Laxman Nepal",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-tag-generator.html",
-    "description": "YouTube Tag Generator — Free YouTube SEO Tool | Laxman Nepal",
-    "keywords": "youtube tag generator free seo tool laxman nepal tools archive generator.html",
-    "image": ""
-  },
-  {
     "title": "YouTube Tag Suggestion Generator | Laxman Nepal",
     "category": "Tools",
     "type": "tool",
@@ -1546,15 +1249,6 @@
     "description": "Find YouTube and Google autocomplete keyword ideas for your video topic, review suggestions, remove irrelevant tags, and copy your shortlist. Free browser tool.",
     "keywords": "youtube tag suggestion generator laxman nepal find and google autocomplete keyword ideas for your video topic review suggestions remove irrelevant tags copy shortlist. free browser tool. tools index.html",
     "image": "https://laxmannepal.com.np/youtube-tools/youtube-tag-generator/logo.webp"
-  },
-  {
-    "title": "YouTube Thumbnail Downloader - Extract HD & 4K Thumbnails Free | Laxman Nepal",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-thumbnail-downloader.html",
-    "description": "Free online YouTube Thumbnail Downloader tool by Laxman Nepal. Download high-resolution YouTube video thumbnails in 4K, 1080p HD, SD, and Medium quality instantly.",
-    "keywords": "youtube thumbnail downloader extract hd 4k thumbnails free laxman nepal online tool by nepal. download high-resolution video in 1080p sd and medium quality instantly. tools archive downloader.html",
-    "image": "https://laxmannepal.com.np/assets/images/youtube-thumbnail-downloader-og.jpg"
   },
   {
     "title": "YouTube Thumbnail Downloader — Free HD Thumbnail Tool | Laxman Nepal",
@@ -1587,15 +1281,6 @@
     "title": "YouTube Title Generator — Free YouTube Tool | Laxman Nepal",
     "category": "Tools",
     "type": "tool",
-    "url": "/youtube-tools/archive/youtube-title-generator.html",
-    "description": "YouTube Title Generator — Free YouTube Tool | Laxman Nepal",
-    "keywords": "youtube title generator free tool laxman nepal tools archive generator.html",
-    "image": ""
-  },
-  {
-    "title": "YouTube Title Generator — Free YouTube Tool | Laxman Nepal",
-    "category": "Tools",
-    "type": "tool",
     "url": "/youtube-tools/youtube-title-generator/",
     "description": "Generate YouTube title ideas from your topic and improve your publishing workflow with a fast browser tool.",
     "keywords": "youtube title generator free tool laxman nepal generate ideas from your topic and improve publishing workflow with fast browser tool. tools index.html",
@@ -1617,16 +1302,7 @@
     "url": "/2025/11/youtube-nepal-trend-explorer.html",
     "description": "YouTube Trend Explorer",
     "keywords": "youtube trend explorer 2025 11 nepal explorer.html",
-    "image": "${thumbnailUrl}"
-  },
-  {
-    "title": "YouTube Trend Explorer",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-nepal-trend-explorer.html",
-    "description": "YouTube Trend Explorer",
-    "keywords": "youtube trend explorer tools archive nepal explorer.html",
-    "image": "${thumbnailUrl}"
+    "image": ""
   },
   {
     "title": "YouTube Trend Explorer — Nepal Trends & Research Tool | Laxman Nepal",
@@ -1644,15 +1320,6 @@
     "url": "/2025/11/youtube-video-analytics.html",
     "description": "YouTube Video Analytics | Blog Analytics",
     "keywords": "youtube video analytics blog 2025 11 analytics.html",
-    "image": ""
-  },
-  {
-    "title": "YouTube Video Analytics | Blog Analytics",
-    "category": "Tools",
-    "type": "tool",
-    "url": "/youtube-tools/archive/youtube-video-analytics.html",
-    "description": "YouTube Video Analytics | Blog Analytics",
-    "keywords": "youtube video analytics blog tools archive analytics.html",
     "image": ""
   },
   {
@@ -1680,24 +1347,6 @@
     "url": "/youtube-video-seo-analyzer.html",
     "description": "Analyze any YouTube video with title, description, tags, engagement, metadata, performance and related-video SEO insights using Laxman Nepal",
     "keywords": "youtube video seo analyzer free tool laxman nepal analyze any with title description tags engagement metadata performance and related-video insights using analyzer.html",
-    "image": "${thumbnail.url}"
-  },
-  {
-    "title": "YouTube Video | Laxman Nepal",
-    "category": "YouTube",
-    "type": "resource",
-    "url": "/old/youtube/video/[id]/",
-    "description": "Watch a YouTube video from Laxman Nepal and explore its statistics and related content.",
-    "keywords": "youtube video laxman nepal watch from and explore its statistics related content. old id index.html",
-    "image": ""
-  },
-  {
-    "title": "नेपाली समाचार संग्रह - सबै स्रोतहरू",
-    "category": "News",
-    "type": "resource",
-    "url": "/old/apps/NepaliNews.html",
-    "description": "नेपाली समाचार संग्रह - सबै स्रोतहरू",
-    "keywords": "सम रह सब तहर old apps nepalinews.html",
     "image": ""
   }
 ]
