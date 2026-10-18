@@ -16,11 +16,38 @@
   root.innerHTML = `<section class="td-hero"><span class="td-badge">LAXMAN NEPAL · ${label.toUpperCase()} TOOLS</span><h1>Free <span>${label}</span> tools.</h1><p>Browse every tool in this category. Each tool lives in its own folder with a dedicated page and helpful information.</p></section><div class="td-toolsbar"><input class="td-search" type="search" placeholder="Search ${label} tools…" aria-label="Search tools"><span class="td-count" aria-live="polite">Loading tools…</span></div><div class="td-grid"></div><div class="td-empty" hidden>No tools are listed in this category yet.</div><div class="td-error" hidden></div>`;
   const grid = root.querySelector(".td-grid"), search = root.querySelector(".td-search"), count = root.querySelector(".td-count"), empty = root.querySelector(".td-empty"), error = root.querySelector(".td-error");
   let items = [];
+  const relatedResources = {
+    "image-tools": [
+      {url:"/image-prompt/",title:"AI Image Prompt Library",description:"Search and copy prompts to plan original images for your own creative projects."},
+      {url:"/qrcodetool/",title:"QR Studio",description:"Create and export QR codes for links, text and other supported content."},
+      {url:"/tools/generator/fake-post-generator/facebook/",title:"Social Post Mockup",description:"Create a visual social-post mockup and export it as an image."},
+      {url:"/youtube-tools/laxman-nepal-youtube-thumbnail/",title:"YouTube Thumbnail Utility",description:"Retrieve available thumbnail images from public YouTube video URLs."}
+    ],
+    "data-tools": [
+      {url:"/kalimati-format/",title:"Kalimati Market Format",description:"Use the Nepali market-format resource for structured price information."},
+      {url:"/gold-price-in-nepal-today/",title:"Gold Price in Nepal",description:"Check published gold and silver rates, units and source information."},
+      {url:"/gold-price-history-nepal/",title:"Gold Price History",description:"Explore historical gold-price information for context and comparison."},
+      {url:"/silver-price-in-nepal-today/",title:"Silver Price in Nepal",description:"Review the available silver-rate information and its date."}
+    ],
+    "nepal-tools": [
+      {url:"/gold-price-in-nepal-today/",title:"Gold Price in Nepal",description:"Review published rates and check the source and update time before relying on them."},
+      {url:"/silver-price-in-nepal-today/",title:"Silver Price in Nepal",description:"Find the available silver-rate information and verify the date and units."},
+      {url:"/gold-price-history-nepal/",title:"Gold Price History",description:"Use historical figures as context, not as a forecast of future prices."},
+      {url:"/kalimati-format/",title:"Kalimati Market Format",description:"Open the Nepal-focused market information and formatting resource."}
+    ]
+  };
   const pretty = s => s.replace(/[-_]+/g, " ").replace(/\b\w/g, m => m.toUpperCase()).replace(/Youtube/g, "YouTube").replace(/Pdf/g, "PDF");
   const icon = `<svg class="td-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${meta.icon}</svg>`;
   function draw() {
     const q = search.value.trim().toLowerCase();
     const shown = items.filter(x => (x.name + " " + x.title + " " + (x.description || "")).toLowerCase().includes(q));
+    if (!items.length && !q && relatedResources[category]) {
+      grid.innerHTML = relatedResources[category].map(x => `<a class="td-card td-related-card" href="${x.url}"><span class="td-logo" style="--td-icon-color:${meta.color};--td-icon-bg:${meta.bg}">${icon}</span><h2>${x.title}</h2><p>${x.description}</p><span class="td-open">Explore resource →</span></a>`).join("");
+      count.textContent = "Related resources";
+      empty.hidden = true;
+      error.hidden = true;
+      return;
+    }
     grid.innerHTML = shown.map(x => {
       const name = String(x.name || "");
       const title = String(x.title || pretty(name));
