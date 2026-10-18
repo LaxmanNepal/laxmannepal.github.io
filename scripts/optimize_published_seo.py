@@ -146,6 +146,18 @@ def replace_or_insert(doc: str, pattern: str, tag: str) -> str:
 def optimize(path: Path) -> bool:
     original = path.read_text(encoding="utf-8", errors="ignore")
     doc = ensure_document(path, original)
+    legacy_links = {
+        "/youtube-tools/youtube-tag-generator.html": "/youtube-tools/youtube-tag-generator/",
+        "/youtube-tools/youtube-title-generator.html": "/youtube-tools/youtube-title-generator/",
+        "/youtube-tools/youtube-seo-analyzer.html": "/youtube-tools/youtube-video-seo-analyzer/",
+        "/youtube-tools/youtube-channel-analytics.html": "/youtube-tools/youtube-channel-analytics-pro/",
+        "/p/data-tools.html": "/data-tools/",
+        "/p/ai-tools.html": "/ai-tools/",
+        "/p/sitemap.html": "/sitemap.xml",
+        "/2025/07/image-prompt.html": "/image-prompt/",
+    }
+    for old_url, new_url in legacy_links.items():
+        doc = doc.replace(old_url, new_url)
     title = title_from(path, doc)
     desc = description_from(title, doc)
     canonical = canonical_for(path, doc)
