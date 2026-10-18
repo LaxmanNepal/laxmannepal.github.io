@@ -115,15 +115,15 @@ def ensure_document(path: Path, doc: str) -> str:
     robots = f'<meta name="robots" content="{html.escape(robots_match.group(1), quote=True)}">' if robots_match else ""
     refresh_match = re.search(r"""<meta[^>]+http-equiv=["']refresh["'][^>]*>""", doc, re.I)
     refresh = refresh_match.group(0) if refresh_match else ""
-    links = re.findall(r"<link\\b[^>]*>", doc, re.I)
+    links = re.findall(r"<link\b[^>]*>", doc, re.I)
     links = [x for x in links if not re.search(r"""rel=["']canonical["']""", x, re.I)]
     body = re.sub(r"<!doctype[^>]*>", "", doc, flags=re.I)
     body = re.sub(r"<title[^>]*>.*?</title>", "", body, flags=re.I | re.S)
-    body = re.sub(r"<meta\\b[^>]*>", "", body, flags=re.I)
-    body = re.sub(r"<link\\b[^>]*>", "", body, flags=re.I)
-    body = re.sub(r"</?(?:html|head|body)\\b[^>]*>", "", body, flags=re.I)
+    body = re.sub(r"<meta\b[^>]*>", "", body, flags=re.I)
+    body = re.sub(r"<link\b[^>]*>", "", body, flags=re.I)
+    body = re.sub(r"</?(?:html|head|body)\b[^>]*>", "", body, flags=re.I)
     head = (
-        '<!doctype html>\\n'
+        '<!doctype html>\n'
         f'<html lang="{html.escape(lang, quote=True)}"><head>'
         '<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
         f'<title>{html.escape(title)}</title>'
