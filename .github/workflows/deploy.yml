@@ -76,7 +76,6 @@ jobs:
           python3 scripts/generate_search_index.py
       - name: Build Next.js static site
         id: next_build
-        continue-on-error: true
         working-directory: nextjs-foundation
         run: |
           rm -rf out
@@ -114,12 +113,6 @@ jobs:
           touch .pages/.nojekyll
       - name: Apply shared shell to final Pages artifact
         run: SHELL_ROOT=.pages python3 scripts/apply_laxman_shared_shell.py
-      - name: Audit final Pages layout
-        continue-on-error: true
-        run: python3 scripts/audit_site_layout.py .pages
-      - name: Audit final Pages links and assets
-        continue-on-error: true
-        run: python3 scripts/audit_site_links.py .pages
       - name: Verify published homepage and Nepal Jobs
         continue-on-error: true
         run: |
@@ -147,6 +140,14 @@ jobs:
           grep -q 'name="description" content="Laxman Nepal — free online tools, AI tools, practical tutorials, apps and useful digital resources\."' .pages/index.html
       - name: Optimize every published page for SEO
         run: python3 scripts/optimize_published_seo.py
+      - name: Apply shared shell to normalized legacy pages
+        run: SHELL_ROOT=.pages python3 scripts/apply_laxman_shared_shell.py
+      - name: Audit final Pages layout
+        continue-on-error: true
+        run: python3 scripts/audit_site_layout.py .pages
+      - name: Audit final Pages links and assets
+        continue-on-error: true
+        run: python3 scripts/audit_site_links.py .pages
       - name: Audit published SEO health
         continue-on-error: true
         run: python3 scripts/audit_seo_health.py .pages
@@ -177,18 +178,17 @@ jobs:
           PY
       - name: Verify Next.js routes when exported
         run: |
-          if [ -d nextjs-foundation/out ]; then
-            test -f .pages/news/index.html
-            test -f .pages/reviews/index.html
-            test -f .pages/guides/index.html
-            test -f .pages/phones/index.html
-            test -f .pages/laptops/index.html
-            test -f .pages/compare/index.html
-            test -f .pages/tools/index.html
-            test -f .pages/ai/index.html
-            test -f .pages/youtube/index.html
-            test -f .pages/search/index.html
-          fi
+          test -d nextjs-foundation/out
+          test -f .pages/news/index.html
+          test -f .pages/reviews/index.html
+          test -f .pages/guides/index.html
+          test -f .pages/phones/index.html
+          test -f .pages/laptops/index.html
+          test -f .pages/compare/index.html
+          test -f .pages/tools/index.html
+          test -f .pages/ai/index.html
+          test -f .pages/youtube/index.html
+          test -f .pages/search/index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
