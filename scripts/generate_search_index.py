@@ -44,7 +44,12 @@ def canonical_url(content):
             value = clean(m.group(1))
             parsed = urlparse(value)
             if parsed.scheme == "https" and parsed.netloc == "laxmannepal.com.np":
-                return parsed.path or "/"
+                page_path = parsed.path or "/"
+                if page_path == "/index.html":
+                    return "/"
+                if page_path.endswith("/index.html"):
+                    return page_path[:-10]
+                return page_path
     return ""
 
 def category(path, title_text):
