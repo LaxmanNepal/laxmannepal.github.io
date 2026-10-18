@@ -10,6 +10,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: search-index-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   index:
     runs-on: ubuntu-latest
@@ -22,12 +26,23 @@ jobs:
 
       - name: Commit index when changed
         run: |
-          if git diff --quiet -- search-index.json; then
-            echo "Search index is already up to date."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add search-index.json
-          git commit -m "chore: refresh search index"
-          git push
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/generate_search_index.py
+            if git diff --quiet -- search-index.json; then
+              echo "Search index is already up to date."
+              exit 0
+            fi
+            git add search-index.json
+            git commit -m "chore: refresh search index"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push raced with another update; retrying from latest main (attempt $attempt)."
+            git reset --hard origin/main
+          done
+          echo "Unable to publish search index after three attempts."
+          exit 1
