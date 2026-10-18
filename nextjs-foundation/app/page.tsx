@@ -30,6 +30,7 @@ export default function HomePage() {
   const allContent = getAllContent();
   const latest = [...allContent].sort((a,b)=>new Date(b.published||b.updated||0).getTime()-new Date(a.published||a.updated||0).getTime()).slice(0,6);
   const recentCutoff = Date.now() - 1000*60*60*24*120;
+  const topicRoutes: Record<string,string> = { technology:"/news/", ai:"/ai/", mobile:"/mobile/", apps:"/apps/", productivity:"/tools/", nepal:"/nepal-tools/", creator:"/youtube/", guides:"/guides/" };
   const trendingTopics = ["technology","ai","mobile","apps","productivity","nepal","creator","guides"].map(slug => {
     const items = allContent.filter(item => (item.sections||[]).includes(slug as never));
     const recent = items.filter(item => new Date(item.published||item.updated||0).getTime() >= recentCutoff).length;
@@ -123,7 +124,7 @@ export default function HomePage() {
       <section className="container home-section home-intelligence">
         <div className="section-head">
           <div><p className="eyebrow">CONTENT INTELLIGENCE</p><h2>What to explore next.</h2><p className="section-note">A static editorial layer generated from your article dataset — no fake views or engagement numbers.</p></div>
-          <a href="/topics/">Browse topics →</a>
+          <a href="/guides/">Browse topics →</a>
         </div>
         <div className="intelligence-grid">
           <div className="intelligence-panel glass">
@@ -131,8 +132,8 @@ export default function HomePage() {
             <div className="intel-list">{latest.map((p,i)=><a className="intel-item" href={p.path} key={p.id}><span>{String(i+1).padStart(2,"0")}</span><div><b>{p.title}</b><small>{p.published || p.updated || "Archive"} · {(p.sections||[]).slice(0,2).join(" · ")}</small></div><strong>→</strong></a>)}</div>
           </div>
           <div className="intelligence-panel glass">
-            <div className="feed-heading"><div><span className="tag">TRENDING TOPICS</span><h3>What’s active</h3></div><a href="/topics/">Topics →</a></div>
-            <div className="trend-list">{trendingTopics.map((t,i)=><a className="trend-item" href={"/topics/"+t.slug+"/"} key={t.slug}><span className="trend-rank">{String(i+1).padStart(2,"0")}</span><div><b>{t.slug[0].toUpperCase()+t.slug.slice(1)}</b><small>{t.recent} recent · {t.count} total articles</small></div><strong>↗</strong></a>)}</div>
+            <div className="feed-heading"><div><span className="tag">TRENDING TOPICS</span><h3>What’s active</h3></div><a href="/guides/">Topics →</a></div>
+            <div className="trend-list">{trendingTopics.map((t,i)=><a className="trend-item" href={topicRoutes[t.slug] || "/search/"} key={t.slug}><span className="trend-rank">{String(i+1).padStart(2,"0")}</span><div><b>{t.slug[0].toUpperCase()+t.slug.slice(1)}</b><small>{t.recent} recent · {t.count} total articles</small></div><strong>↗</strong></a>)}</div>
           </div>
         </div>
         <div className="intelligence-recommended glass">
