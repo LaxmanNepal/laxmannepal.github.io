@@ -3,6 +3,7 @@ name: Enhance home tools hero
 on:
   push:
     branches: [main]
+    paths: ["index.html"]
 
 permissions:
   contents: write
