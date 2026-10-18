@@ -9,7 +9,7 @@ SITE = "https://laxmannepal.com.np"
 GA4_ID = "G-VG1MHSYGQ0"
 PAGES = ROOT / ".pages"
 
-NOINDEX_PARTS = ("/old/", "/scripts/", "/search/", "/analytics/")
+NOINDEX_PARTS = ("/old/", "/scripts/", "/search/", "/analytics/", "/youtube-tools/archive/")
 
 ANALYTICS = f"""<!-- Laxman Nepal GA4 analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>
@@ -85,6 +85,19 @@ def url_for(path: Path) -> str:
         return SITE + "/" + rel[:-10].rstrip("/") + "/"
     return SITE + "/" + rel
 
+def canonical_for(path: Path, doc: str) -> str:
+    patterns = (
+        r'<link[^>]+rel=["\\']canonical["\\'][^>]+href=["\\']([^"\\']+)',
+        r'<link[^>]+href=["\\']([^"\\']+)["\\'][^>]+rel=["\\']canonical["\\']',
+    )
+    for pattern in patterns:
+        m = re.search(pattern, doc, re.I)
+        if m:
+            value = html.unescape(m.group(1)).strip()
+            if value.startswith(SITE + "/"):
+                return value
+    return url_for(path)
+
 def replace_or_insert(doc: str, pattern: str, tag: str) -> str:
     if re.search(pattern, doc, re.I):
         return re.sub(pattern, tag, doc, count=1, flags=re.I)
@@ -96,8 +109,11 @@ def optimize(path: Path) -> bool:
         return False
     title = title_from(path, doc)
     desc = description_from(title, doc)
-    canonical = url_for(path)
-    noindex = any(part in canonical for part in NOINDEX_PARTS)
+    canonical = canonical_for(path, doc)
+    existing_robots = re.search(r'<meta[^>]+name=["\\']robots["\\'][^>]*content=["\\']([^"\\']*)["\\']', doc, re.I)
+    has_noindex = bool(existing_robots and "noindex" in existing_robots.group(1).lower())
+    is_redirect = bool(re.search(r'<meta[^>]+http-equiv=["\\']refresh["\\']', doc, re.I) or re.search(r"\\b(redirecting|article moved)\\b", title, re.I))
+    noindex = any(part in canonical for part in NOINDEX_PARTS) or has_noindex or is_redirect
 
     doc = re.sub(r"<title[^>]*>.*?</title>", f"<title>{html.escape(title)}</title>", doc, count=1, flags=re.I|re.S)
     if "<title" not in doc.lower():
@@ -143,8 +159,22 @@ def main():
     changed = sum(optimize(p) for p in files)
     urls = []
     for p in files:
-        u = url_for(p)
+        try:
+            doc = p.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            continue
+        u = canonical_for(p, doc)
+        robots = re.search(r'<meta[^>]+name=["\\']robots["\\'][^>]*content=["\\']([^"\\']*)["\\']', doc, re.I)
+        if robots and "noindex" in robots.group(1).lower():
+            continue
+        if re.search(r'<meta[^>]+http-equiv=["\\']refresh["\\']', doc, re.I):
+            continue
+        if re.search(r"\\b(redirecting|article moved)\\b", title_from(p, doc), re.I):
+            continue
         if any(x in u for x in NOINDEX_PARTS):
+            continue
+        # A file whose canonical points to another URL is an alias, not a sitemap entry.
+        if u.rstrip("/") != url_for(p).rstrip("/"):
             continue
         urls.append(u)
     urls = sorted(set(urls))
