@@ -15,9 +15,9 @@ for p in sorted(files):
     rel=p.relative_to(TARGET)
     if not re.search(r'<meta[^>]+name=["\']viewport["\']',s,re.I):
         issues.append((str(rel),"missing viewport"))
-    if len(re.findall(r'data-shared-shell=["\']header["\']',s,re.I)) != 1:
+    if len(re.findall(r'<header\b[^>]*data-shared-shell=["\']header["\'][^>]*>',s,re.I)) != 1:
         issues.append((str(rel),"shared header count != 1"))
-    if len(re.findall(r'data-shared-shell=["\']footer["\']',s,re.I)) != 1:
+    if len(re.findall(r'<footer\b[^>]*data-shared-shell=["\']footer["\'][^>]*>',s,re.I)) != 1:
         issues.append((str(rel),"shared footer count != 1"))
     if not re.search(r'href=["\']/assets/css/shared-shell\.css["\']',s,re.I):
         issues.append((str(rel),"missing shared shell CSS"))
