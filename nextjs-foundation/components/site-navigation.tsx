@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import LanguageSwitcher from "@/components/language-switcher";
 
 const nav = [
   ["News","/news/"],["Phones","/phones/"],["Laptops","/laptops/"],["Mobile Prices","/mobile-prices-in-nepal/"],
