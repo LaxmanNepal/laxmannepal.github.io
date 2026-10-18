@@ -22,7 +22,7 @@ function description(title:string) {
 }
 
 function Card({item,locale}:{item:ReturnType<typeof getAllContent>[number];locale:Locale}) {
-  return <a className="card" href={locale==="en"?item.path:`/${locale}${item.path}`}>
+  return <a className="card" href={item.path}>
     <span className="tag">{item.type.toUpperCase()}</span><h3>{item.title}</h3>
     <p>{description(item.title)}</p><small>{item.published ? new Intl.DateTimeFormat("en",{year:"numeric",month:"short",day:"numeric"}).format(new Date(item.published)) : "Published"}</small>
   </a>;
@@ -53,6 +53,7 @@ export default async function CategoryPage({params}:{params:Promise<{locale:stri
     <p className="eyebrow">{labels[loc][route.type].toUpperCase()}</p>
     <h1>{labels[loc][route.type]}</h1>
     <p className="muted">{visible.length} content items · automatically generated from the central content engine.</p>
+    {loc !== "en" && <p className="muted">Individual articles may open in English until translations are available.</p>}
     <section className="listing">{visible.map(item=><Card key={item.id} item={item} locale={loc}/>)}</section>
     {!visible.length && <div className="card"><h3>Coming soon</h3><p>This section is ready for native {labels[loc][route.type].toLowerCase()} content.</p></div>}
   </main>;
