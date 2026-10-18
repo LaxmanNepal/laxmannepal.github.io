@@ -113,7 +113,7 @@ def optimize(path: Path) -> bool:
     existing_robots = re.search(r"""<meta[^>]+name=["']robots["'][^>]*content=["']([^"']*)["']""", doc, re.I)
     has_noindex = bool(existing_robots and "noindex" in existing_robots.group(1).lower())
     is_redirect = bool(re.search(r"""<meta[^>]+http-equiv=["']refresh["']""", doc, re.I) or re.search(r"\b(redirecting|article moved)\b", title, re.I))
-    noindex = any(part in canonical for part in NOINDEX_PARTS) or has_noindex or is_redirect
+    noindex = any(part in canonical or part in url_for(path) for part in NOINDEX_PARTS) or has_noindex or is_redirect
 
     doc = re.sub(r"<title[^>]*>.*?</title>", f"<title>{html.escape(title)}</title>", doc, count=1, flags=re.I|re.S)
     if "<title" not in doc.lower():
