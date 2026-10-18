@@ -134,8 +134,13 @@ def ensure_document(path: Path, doc: str) -> str:
     return head + body + '</body></html>'
 
 def replace_or_insert(doc: str, pattern: str, tag: str) -> str:
-    if re.search(pattern, doc, re.I):
-        return re.sub(pattern, tag, doc, count=1, flags=re.I)
+    matches = list(re.finditer(pattern, doc, re.I | re.S))
+    if matches:
+        for match in reversed(matches[1:]):
+            doc = doc[:match.start()] + doc[match.end():]
+        match = re.search(pattern, doc, re.I | re.S)
+        if match:
+            return doc[:match.start()] + tag + doc[match.end():]
     return doc.replace("</head>", tag + "\n</head>", 1)
 
 def optimize(path: Path) -> bool:
@@ -149,9 +154,8 @@ def optimize(path: Path) -> bool:
     is_redirect = bool(re.search(r"""<meta[^>]+http-equiv=["']refresh["']""", doc, re.I) or re.search(r"\b(redirecting|article moved)\b", title, re.I))
     noindex = any(part in canonical or part in url_for(path) for part in NOINDEX_PARTS) or has_noindex or is_redirect
 
-    doc = re.sub(r"<title[^>]*>.*?</title>", f"<title>{html.escape(title)}</title>", doc, count=1, flags=re.I|re.S)
-    if "<title" not in doc.lower():
-        doc = doc.replace("</head>", f"<title>{html.escape(title)}</title>\n</head>", 1)
+    doc = re.sub(r"<title[^>]*>.*?</title>", "", doc, flags=re.I | re.S)
+    doc = doc.replace("</head>", f"<title>{html.escape(title)}</title>\n</head>", 1)
 
     tags = [
         (r'<meta[^>]+name=["\']description["\'][^>]*>', f'<meta name="description" content="{html.escape(desc, quote=True)}">'),
