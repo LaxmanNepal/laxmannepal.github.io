@@ -36,7 +36,7 @@ const SECTION_RULES:Array<{section:ContentSection;terms:string[]}>= [
 {section:"news",terms:["news","technology update","launch","announced","announcement","latest","report","release"]},
 {section:"products",terms:["product","specification","specs","gadget","device","buying"]}
 ];
-const norm=(v:string)=>v.toLowerCase().replace(/[–—]/g,"-").replace(/\\s+/g," ").trim();
+const norm=(v:string)=>v.toLowerCase().replace(/[–—]/g,"-").replace(/\s+/g," ").trim();
 export function classifyPost(post:BloggerPost):ContentSection[]{
  const text=[norm(post.title||""),...(post.tags||[]).map(norm),norm(post.path)].join(" ");
  const found:ContentSection[]=[];
