@@ -6,6 +6,7 @@ on:
       - ".github/workflows/gold-rate.yml"
       - "scripts/fetch_gold_rates.py"
       - "scripts/validate_gold_rate_seo.py"
+      - "sitemap.xml"
   schedule:
     - cron: "30 5 * * *"
   workflow_dispatch:
