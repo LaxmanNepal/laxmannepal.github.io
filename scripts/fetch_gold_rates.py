@@ -8,6 +8,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "gold-nepal.json"
+LIVE_DATA = ROOT / "data" / "gold-nepal-live.json"
 PAGE = ROOT / "gold-price-in-nepal-today" / "index.html"
 HISTORY_PAGE = ROOT / "gold-price-history-nepal" / "index.html"
 SILVER_PAGE = ROOT / "silver-price-in-nepal-today" / "index.html"
@@ -119,7 +120,9 @@ def main():
         payload["status"] = "stale"
         payload["last_attempted_at"] = stamp
         payload["errors"] = errors
-        DATA.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        serialized = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+        DATA.write_text(serialized, encoding="utf-8")
+        LIVE_DATA.write_text(serialized, encoding="utf-8")
         raise SystemExit("No rate source could be parsed: " + " | ".join(errors))
 
     fine = found["fine_tola"]
@@ -153,7 +156,9 @@ def main():
         "conversion": {"tola_grams": 11.6638125, "aana_per_tola": 16, "lal_per_tola": 100},
         "errors": errors,
     }
-    DATA.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    serialized = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+    DATA.write_text(serialized, encoding="utf-8")
+    LIVE_DATA.write_text(serialized, encoding="utf-8")
     page = PAGE.read_text(encoding="utf-8")
     page = update_seo_snapshot(page, record)
     PAGE.write_text(update_schema_date(page, record["date"]), encoding="utf-8")
