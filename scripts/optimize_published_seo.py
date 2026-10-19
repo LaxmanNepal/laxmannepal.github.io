@@ -143,6 +143,32 @@ def replace_or_insert(doc: str, pattern: str, tag: str) -> str:
             return doc[:match.start()] + tag + doc[match.end():]
     return doc.replace("</head>", tag + "\n</head>", 1)
 
+def normalize_h1(doc: str, title: str) -> str:
+    """Give each published HTML page one meaningful H1 without deleting heading text."""
+    matches = list(re.finditer(r"<h1\\b[^>]*>.*?</h1>", doc, re.I | re.S))
+    if not matches:
+        heading = (
+            '<h1 class="seo-generated-h1" '
+            'style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;'
+            'margin:1.25rem auto;max-width:1100px;padding:0 1rem">'
+            + html.escape(title) + '</h1>'
+        )
+        main = re.search(r"<main\\b[^>]*>", doc, re.I)
+        body = re.search(r"<body\\b[^>]*>", doc, re.I)
+        target = main or body
+        if target:
+            return doc[:target.end()] + "\\n" + heading + doc[target.end():]
+        return doc + heading
+    if len(matches) < 2:
+        return doc
+    # Keep the first page-level heading and demote subsequent H1s to H2s.
+    for match in reversed(matches[1:]):
+        block = match.group(0)
+        block = re.sub(r"^<h1\\b", "<h2", block, count=1, flags=re.I)
+        block = re.sub(r"</h1>$", "</h2>", block, count=1, flags=re.I)
+        doc = doc[:match.start()] + block + doc[match.end():]
+    return doc
+
 def optimize(path: Path) -> bool:
     original = path.read_text(encoding="utf-8", errors="ignore")
     doc = ensure_document(path, original)
@@ -195,6 +221,8 @@ def optimize(path: Path) -> bool:
 
     if "googletagmanager.com/gtag/js" not in doc and "G-VG1MHSYGQ0" not in doc:
         doc = doc.replace("</head>", ANALYTICS + "\n</head>", 1)
+
+    doc = normalize_h1(doc, title)
 
     if doc != original:
         path.write_text(doc, encoding="utf-8")
