@@ -41,7 +41,7 @@ def parse_rates(html):
             for raw in nums:
                 value = int(raw.replace(",", ""))
                 # Ignore purity labels (9999), dates/years and unrelated counts.
-                if low <= value <= high:
+                if low <= value <= high and not 1900 <= value <= 2100:
                     return value
         return None
     fine = near(r"(?:Gold Hallmark|Fine gold 9999|Fine Gold)", 200000, 500000)
