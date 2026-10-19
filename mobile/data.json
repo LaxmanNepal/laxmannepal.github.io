@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-18T20:50:16.727323+00:00",
-  "count": 144,
+  "updated_at": "2026-10-19T04:48:27.905955+00:00",
+  "count": 145,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -128,6 +128,22 @@
       "storages": [
         "128GB"
       ]
+    },
+    {
+      "id": "blackview-wave-2c",
+      "name": "Blackview Wave 2C",
+      "brand": "Blackview",
+      "variants": [
+        "3GB + 32GB"
+      ],
+      "price": 9999,
+      "max_price": 9999,
+      "original_price": null,
+      "rams": [
+        "3GB",
+        "32GB"
+      ],
+      "storages": []
     },
     {
       "id": "blackview-wave-7c",
@@ -1885,12 +1901,14 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "4GB + 128GB"
       ],
-      "price": 32999,
+      "price": 29999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
+        "4GB",
         "6GB"
       ],
       "storages": [
@@ -1919,15 +1937,17 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+128GB"
+        "4GB+128GB",
+        "4GB+64GB"
       ],
-      "price": 25999,
+      "price": 21999,
       "max_price": 25999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
+        "64GB",
         "128GB"
       ]
     },
@@ -2425,15 +2445,17 @@
       "name": "iPhone 17",
       "brand": "Apple",
       "variants": [
-        "8GB+512GB"
+        "8GB+512GB",
+        "8GB+256GB"
       ],
-      "price": 215699,
+      "price": 164999,
       "max_price": 215699,
-      "original_price": null,
+      "original_price": 173499,
       "rams": [
         "8GB"
       ],
       "storages": [
+        "256GB",
         "512GB"
       ]
     },
@@ -2442,30 +2464,13 @@
       "name": "iPhone 17 Pro",
       "brand": "Apple",
       "variants": [
-        "12GB+256GB"
-      ],
-      "price": 221299,
-      "max_price": 221299,
-      "original_price": 236899,
-      "rams": [
-        "12GB"
-      ],
-      "storages": [
-        "256GB"
-      ]
-    },
-    {
-      "id": "iphone-17-pro-max",
-      "name": "iPhone 17 Pro Max",
-      "brand": "Apple",
-      "variants": [
         "12GB+256GB",
         "12GB+512GB",
         "12GB+1TB"
       ],
-      "price": 242499,
-      "max_price": 327099,
-      "original_price": 342499,
+      "price": 221299,
+      "max_price": 305699,
+      "original_price": 321299,
       "rams": [
         "12GB"
       ],
@@ -2476,19 +2481,44 @@
       ]
     },
     {
+      "id": "iphone-17-pro-max",
+      "name": "iPhone 17 Pro Max",
+      "brand": "Apple",
+      "variants": [
+        "12GB+256GB",
+        "12GB+512GB",
+        "12GB+1TB",
+        "12GB+2TB"
+      ],
+      "price": 242499,
+      "max_price": 411399,
+      "original_price": 426999,
+      "rams": [
+        "12GB"
+      ],
+      "storages": [
+        "256GB",
+        "512GB",
+        "1TB",
+        "2TB"
+      ]
+    },
+    {
       "id": "iphone-17e",
       "name": "iPhone 17e",
       "brand": "Apple",
       "variants": [
-        "8GB+512GB"
+        "8GB+512GB",
+        "8GB+256GB"
       ],
-      "price": 175099,
+      "price": 132499,
       "max_price": 175099,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
+        "256GB",
         "512GB"
       ]
     },
@@ -2543,16 +2573,20 @@
       "name": "iPhone Air",
       "brand": "Apple",
       "variants": [
-        "12GB+256GB"
+        "12GB+256GB",
+        "12GB+512GB",
+        "12GB+1TB"
       ],
       "price": 190699,
-      "max_price": 190699,
+      "max_price": 275099,
       "original_price": null,
       "rams": [
         "12GB"
       ],
       "storages": [
-        "256GB"
+        "256GB",
+        "512GB",
+        "1TB"
       ]
     }
   ]
