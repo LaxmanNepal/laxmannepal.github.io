@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 import json, re
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
@@ -24,9 +24,14 @@ def fetch(url):
         return r.read().decode("utf-8", "ignore")
 
 def parse_rates(html):
+    # Require a source-published date so cached data is never labelled as today's rate.
     text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", html, flags=re.I|re.S)
     text = re.sub(r"<[^>]+>", " ", text)
     text = re.sub(r"\s+", " ", text)
+    date_match = re.search(r"\b(\d{1,2})[-/ ](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[-/ ](\d{4})\b", text, re.I)
+    if not date_match:
+        raise RuntimeError("Source-published date not detected; refusing to label unverified rates as current")
+    source_date = datetime.strptime(date_match.group(0).replace("/", "-").replace(" ", "-"), "%d-%b-%Y").date()
     def near(label, window=260):
         m = re.search(label, text, re.I)
         if not m: return None
@@ -35,7 +40,7 @@ def parse_rates(html):
     fine = near(r"(?:Gold Hallmark|Fine gold 9999|Fine Gold)")
     tejabi = near(r"(?:Gold Tajabi|22\s*KT|22K)")
     silver = near(r"Silver")
-    return fine, tejabi, silver
+    return source_date, fine, tejabi, silver
 
 def load():
     if DATA.exists():
@@ -95,9 +100,13 @@ def main():
     for name, url in SOURCES:
         try:
             html = fetch(url)
-            fine, tejabi, silver = parse_rates(html)
+            source_date, fine, tejabi, silver = parse_rates(html)
+            age_days = (datetime.now(ZoneInfo("Asia/Kathmandu")).date() - source_date).days
+            if age_days < 0 or age_days > 3:
+                errors.append(f"{name}: source date {source_date} is outside the allowed freshness window ({age_days} days old)")
+                continue
             if fine and silver:
-                found = {"source": name, "url": url, "fine_tola": fine, "tejabi_tola": tejabi, "silver_tola": silver}
+                found = {"source": name, "url": url, "date": source_date.isoformat(), "fine_tola": fine, "tejabi_tola": tejabi, "silver_tola": silver}
                 break
             errors.append(f"{name}: rates not detected")
         except Exception as e:
@@ -121,7 +130,7 @@ def main():
 
     local_now = now.astimezone(ZoneInfo("Asia/Kathmandu"))
     record = {
-        "date": local_now.strftime("%Y-%m-%d"),
+        "date": found["date"],
         "updated_at": stamp,
         "fine_gold_tola": fine,
         "tejabi_gold_tola": tejabi,
@@ -130,6 +139,9 @@ def main():
         "source_url": found["url"],
         "unit": "NPR per tola",
     }
+    old_date = (old.get("latest") or {}).get("date", "")
+    if old_date and record["date"] < old_date:
+        raise SystemExit(f"Refusing to replace newer stored rate {old_date} with older source date {record['date']}")
     history = [x for x in old.get("history", []) if x.get("date") != record["date"]]
     history.append(record)
     history = history[-60:]
