@@ -34,14 +34,15 @@ def parse_rates(html):
         raise RuntimeError("Source-published date not detected; refusing to label unverified rates as current")
     source_date = datetime.strptime(date_match.group(0).replace("/", "-").replace(" ", "-"), "%d-%b-%Y").date()
     def near(label, low, high, window=360):
-        m = re.search(label, text, re.I)
-        if not m: return None
-        nums = re.findall(r"(?:Rs\.?\s*)?([0-9][0-9,]{3,})", text[m.end():m.end()+window])
-        for raw in nums:
-            value = int(raw.replace(",", ""))
-            # Ignore purity labels (9999), dates/years and unrelated counts.
-            if low <= value <= high:
-                return value
+        # A page may mention a metal in its title before its actual rate card.
+        # Inspect each label occurrence and accept only a value in the plausible rate range.
+        for m in re.finditer(label, text, re.I):
+            nums = re.findall(r"(?:Rs\.?\s*)?([0-9][0-9,]{3,})", text[m.end():m.end()+window])
+            for raw in nums:
+                value = int(raw.replace(",", ""))
+                # Ignore purity labels (9999), dates/years and unrelated counts.
+                if low <= value <= high:
+                    return value
         return None
     fine = near(r"(?:Gold Hallmark|Fine gold 9999|Fine Gold)", 200000, 500000)
     tejabi = near(r"(?:Gold Tajabi|Tejabi Gold|22\s*KT|22K)", 200000, 500000)
@@ -92,7 +93,7 @@ def update_cluster_snapshots(record):
     ten=f'{round(record["silver_tola"]*10/11.6638125):,}'
     history=HISTORY_PAGE.read_text(encoding="utf-8")
     hs="<!-- LATEST_GOLD_HISTORY_SNAPSHOT_START -->"; he="<!-- LATEST_GOLD_HISTORY_SNAPSHOT_END -->"
-    hb=f'''{hs}<h2>Latest published gold rate in Nepal</h2><p><strong>Fine Gold: Rs {fine} per tola</strong> · <strong>Tejabi Gold: Rs {tejabi} per tola</strong> · <strong>Silver: Rs {silver} per tola</strong> ({display}).</p><p class="muted">This snapshot is updated automatically from the stored daily rate record.</p>{he}'''
+    hb=f'''{hs}<h2>Latest published gold rate in Nepal</h2><p><strong>Fine Gold: Rs {fine} per tola</strong> · <strong>Tejabi Gold: Rs {tejabi} per tola</strong> · <strong>Silver: Rs {silver} per tola</strong> (<time datetime="{date}">{display}</time>).</p><p class="muted">This snapshot is updated automatically from the stored daily rate record.</p>{he}'''
     HISTORY_PAGE.write_text(replace_marked(history,hs,he,hb),encoding="utf-8")
     silver_page=SILVER_PAGE.read_text(encoding="utf-8")
     ss="<!-- SILVER_SEO_SNAPSHOT_START -->"; se="<!-- SILVER_SEO_SNAPSHOT_END -->"
