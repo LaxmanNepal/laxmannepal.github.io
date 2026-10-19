@@ -78,8 +78,8 @@ filters.addEventListener('click',e=>{const b=e.target.closest('.tool-filter');if
   const data = await response.json();
   if(!Array.isArray(data.tree)) return;
   const paths = data.tree.filter(item=>item.type==='blob').map(item=>item.path);
-  const indexPaths = paths.filter(path=>/^tools\\/.+\\/index\\.html$/i.test(path));
-  const known = new Set(tools.map(item=>item[3].replace(/^\\//,'').replace(/\\/$/,'').toLowerCase()));
+  const indexPaths = paths.filter(path=>/^tools\/.+\/index\.html$/i.test(path));
+  const known = new Set(tools.map(item=>item[3].replace(/^\//,'').replace(/\/$/,'').toLowerCase()));
   const iconRules = [
    ['password','fa-key'],['fake-post','fa-comments'],['slow-and-reverb','fa-music'],
    ['generator','fa-wand-magic-sparkles'],['image','fa-image'],['pdf','fa-file-pdf'],
@@ -92,20 +92,20 @@ filters.addEventListener('click',e=>{const b=e.target.closest('.tool-filter');if
    const folder=indexPath.slice(0,-11);
    const relative=folder.slice('tools/'.length);
    const url='/'+folder+'/';
-   if(known.has(folder.toLowerCase()) || known.has(url.replace(/^\\//,'').replace(/\\/$/,'').toLowerCase())) return;
+   if(known.has(folder.toLowerCase()) || known.has(url.replace(/^\//,'').replace(/\/$/,'').toLowerCase())) return;
    const leaf=relative.split('/').pop();
-   const title=leaf.replace(/[-_]+/g,' ').replace(/\\b\\w/g,ch=>ch.toUpperCase());
+   const title=leaf.replace(/[-_]+/g,' ').replace(/\b\w/g,ch=>ch.toUpperCase());
    const lower=relative.toLowerCase();
    const iconRule=iconRules.find(rule=>lower.includes(rule[0]));
    const parent=relative.includes('/')?relative.split('/').slice(0,-1).join(' / ').replace(/[-_]+/g,' '):'';
-   const category=parent?parent.replace(/\\b\\w/g,ch=>ch.toUpperCase()):'Tools';
+   const category=parent?parent.replace(/\b\w/g,ch=>ch.toUpperCase()):'Tools';
    const base='https://laxmannepal.com.np/'+folder+'/';
-   const logoFile=paths.find(path=>path.startsWith(folder+'/') && /(^|\\/)(logo|icon|favicon|apple-touch-icon)\\.(webp|png|svg|jpe?g)$/i.test(path.slice(folder.length+1)));
+   const logoFile=paths.find(path=>path.startsWith(folder+'/') && /(^|\/)(logo|icon|favicon|apple-touch-icon)\.(webp|png|svg|jpe?g)$/i.test(path.slice(folder.length+1)));
    const logo=logoFile?'https://laxmannepal.com.np/'+logoFile:'';
    tools.push([title,iconRule?iconRule[1]:'fa-screwdriver-wrench',category,url,logo]);
    known.add(folder.toLowerCase());
   });
-  tools.sort((a,b)=>a[0].localeCompare(b[0],undefined,{sensitivity:'base'}) || a[3].localeCompare(b[3]));
+  tools.sort((a,b)=>a[3].localeCompare(b[3],undefined,{sensitivity:'base'}));
   filters.innerHTML=['All',...new Set(tools.map(t=>t[2]))].map(category=>'<button type="button" class="tool-filter'+(category==='All'?' active':'')+'" data-cat="'+category+'">'+category+'</button>').join('');
   render();
   updateRecent();
