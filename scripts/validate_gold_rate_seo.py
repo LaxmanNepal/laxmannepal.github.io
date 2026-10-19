@@ -64,6 +64,17 @@ def main():
         print(f"ERROR: cannot load gold data: {exc}")
         return 1
 
+    # Reject obvious parser mistakes before any rate snapshot is published.
+    fine = int(latest.get("fine_gold_tola", 0))
+    tejabi = int(latest.get("tejabi_gold_tola", 0))
+    silver = int(latest.get("silver_tola", 0))
+    if not 200000 <= fine <= 500000:
+        fail(errors, f"fine gold rate is implausible: {fine}")
+    if not 200000 <= tejabi <= 500000:
+        fail(errors, f"tejabi gold rate is implausible: {tejabi}")
+    if not 3000 <= silver <= 7000 or silver == 9999:
+        fail(errors, f"silver rate is implausible: {silver}")
+
     for path, rules in CLUSTER.items():
         doc = read(root, path)
         if doc is None:
