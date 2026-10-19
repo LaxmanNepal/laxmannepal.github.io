@@ -69,5 +69,34 @@ function track(name){try{let r=JSON.parse(localStorage.getItem('laxmanRecentTool
 function updateRecent(){try{const r=JSON.parse(localStorage.getItem('laxmanRecentTools')||'[]');const box=document.getElementById('recent-tools');const wrap=document.getElementById('recent-tools-grid');if(!r.length){box.hidden=true;return}box.hidden=false;wrap.innerHTML=r.map(n=>{const t=tools.find(x=>x[0]===n);return t?`<a class="recent-tool" href="${t[3]}">${t[0]}</a>`:''}).join('')}catch(e){}}
 filters.addEventListener('click',e=>{const b=e.target.closest('.tool-filter');if(!b)return;active=b.dataset.cat;filters.querySelectorAll('.tool-filter').forEach(x=>x.classList.toggle('active',x===b));render()});search.addEventListener('input',render);render();updateRecent();
 
+// Discover folder-based tools from the repository tree on every page visit.
+// Folder names become titles; logo.webp/logo.png/icon.svg are used automatically.
+(async function discoverFolderTools(){
+ try {
+  const response = await fetch('https://api.github.com/repos/LaxmanNepal/laxmannepal.github.io/git/trees/main?recursive=1');
+  if(!response.ok) return;
+  const data = await response.json();
+  if(data.truncated || !Array.isArray(data.tree)) return;
+  const paths = data.tree.map(item=>item.path);
+  const files = new Set(paths);
+  const folders = paths.filter(path=>path.endsWith('/index.html'))
+   .map(path=>path.slice(0,-11))
+   .filter(path=>path && !path.includes('/') && !['tools','assets','admin'].includes(path.toLowerCase()));
+  const known = new Set(tools.map(item=>item[3].replace(/^\\//,'').replace(/\\/$/, '').toLowerCase()));
+  const icons = {generator:'fa-wand-magic-sparkles',image:'fa-image',pdf:'fa-file-pdf',text:'fa-font',password:'fa-key',converter:'fa-right-left',qr:'fa-qrcode',youtube:'fa-youtube',audio:'fa-file-audio',video:'fa-film',calculator:'fa-calculator',nepali:'fa-language',date:'fa-calendar-days',json:'fa-code',color:'fa-palette',seo:'fa-magnifying-glass-chart'};
+  folders.forEach(folder=>{
+   const key=folder.toLowerCase();
+   if(known.has(key) || !files.has(folder+'/index.html')) return;
+   const title=folder.replace(/[-_]+/g,' ').replace(/\\b\\w/g,c=>c.toUpperCase());
+   const match=paths.find(path=>path.startsWith(folder+'/') && /^(logo|icon|favicon)\\.(webp|png|svg|jpe?g)$/i.test(path.slice(folder.length+1)));
+   const icon=Object.keys(icons).find(word=>key.includes(word));
+   tools.push([title,icon?icons[icon]:'fa-screwdriver-wrench','Folder tools','/'+folder+'/',match?'https://laxmannepal.com.np/'+match:'']);
+   known.add(key);
+  });
+  tools.sort((a,b)=>a[0].localeCompare(b[0],undefined,{sensitivity:'base'}));
+  render();
+ } catch(error) { console.info('Folder-based tool discovery unavailable; showing existing tools.',error); }
+})(); 
+
 </script>
 </body></html>
