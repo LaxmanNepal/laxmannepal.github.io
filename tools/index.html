@@ -64,38 +64,52 @@ const tools=[
 const descriptions={AI:'Practical AI resources and experiments.','YouTube Tools':'Utilities for YouTube creators.','AI Tools':'AI tools for everyday work.','PDF Tools':'Useful PDF utilities.','Image Tools':'Common image editing utilities.','NEPSE Pulse':'Nepal stock-market intelligence.','Nepali Patro':'Nepali calendar and festivals.','Nisulka Tools':'Free browser productivity tools.','Text to Handwriting':'Turn typed text into handwriting style.','Progress Bar of the Year':'Track the year in real time.','Hindu Calendar':'Hindu calendar and cultural dates.'};
 const grid=document.getElementById('tools-grid'),filters=document.getElementById('tool-filters'),search=document.getElementById('tool-search'),empty=document.getElementById('tool-empty');let active='All';
 const cats=['All',...new Set(tools.map(t=>t[2]))];filters.innerHTML=cats.map(c=>`<button type="button" class="tool-filter${c==='All'?' active':''}" data-cat="${c}">${c}</button>`).join('');
-function render(){const q=search.value.trim().toLowerCase();const list=tools.filter(t=>(active==='All'||t[2]===active)&&(!q||(t[0]+' '+t[2]).toLowerCase().includes(q)));grid.innerHTML=list.map(t=>`<a class="tool-card" href="${t[3]}" data-tool="${t[0]}"><span class="tool-icon"><i class="${(t[1].includes("youtube")||t[1].includes("facebook")||t[1].includes("blogger"))?"fa-brands":"fa-solid"} ${t[1]}"></i></span><span class="tool-category">${t[2]}</span><h2>${t[0]}</h2><p>${descriptions[t[0]]||'Useful digital resource from Laxman Nepal.'}</p><span class="tool-open">Open tool →</span></a>`).join('');empty.style.display=list.length?'none':'block';grid.style.display=list.length?'grid':'none';grid.querySelectorAll('.tool-card').forEach(a=>a.addEventListener('click',()=>track(a.dataset.tool)));}
+function render(){const q=search.value.trim().toLowerCase();const list=tools.filter(t=>(active==='All'||t[2]===active)&&(!q||(t[0]+' '+t[2]).toLowerCase().includes(q)));grid.innerHTML=list.map(t=>`<a class="tool-card" href="${t[3]}" data-tool="${t[0]}"><span class="tool-icon">${t[4]?`<img src="${t[4]}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:contain;border-radius:10px" onerror="this.remove()">`:`<i class="${(t[1].includes("youtube")||t[1].includes("facebook")||t[1].includes("blogger")||t[1].includes("instagram")||t[1].includes("linkedin"))?"fa-brands":"fa-solid"} ${t[1]}"></i>`}</span><span class="tool-category">${t[2]}</span><h2>${t[0]}</h2><p>${descriptions[t[0]]||'Useful digital resource from Laxman Nepal.'}</p><span class="tool-open">Open tool →</span></a>`).join('');empty.style.display=list.length?'none':'block';grid.style.display=list.length?'grid':'none';grid.querySelectorAll('.tool-card').forEach(a=>a.addEventListener('click',()=>track(a.dataset.tool)));}
 function track(name){try{let r=JSON.parse(localStorage.getItem('laxmanRecentTools')||'[]').filter(x=>x!==name);r.unshift(name);localStorage.setItem('laxmanRecentTools',JSON.stringify(r.slice(0,6)));updateRecent()}catch(e){}}
 function updateRecent(){try{const r=JSON.parse(localStorage.getItem('laxmanRecentTools')||'[]');const box=document.getElementById('recent-tools');const wrap=document.getElementById('recent-tools-grid');if(!r.length){box.hidden=true;return}box.hidden=false;wrap.innerHTML=r.map(n=>{const t=tools.find(x=>x[0]===n);return t?`<a class="recent-tool" href="${t[3]}">${t[0]}</a>`:''}).join('')}catch(e){}}
 filters.addEventListener('click',e=>{const b=e.target.closest('.tool-filter');if(!b)return;active=b.dataset.cat;filters.querySelectorAll('.tool-filter').forEach(x=>x.classList.toggle('active',x===b));render()});search.addEventListener('input',render);render();updateRecent();
 
-// Discover folder-based tools from the repository tree on every page visit.
-// Folder names become titles; logo.webp/logo.png/icon.svg are used automatically.
-(async function discoverFolderTools(){
+// Discover every tool page located anywhere inside /tools/.
+// Nested tools are included (for example generator/platform sub-tools).
+(async function discoverToolsDirectory(){
  try {
   const response = await fetch('https://api.github.com/repos/LaxmanNepal/laxmannepal.github.io/git/trees/main?recursive=1');
   if(!response.ok) return;
   const data = await response.json();
-  if(data.truncated || !Array.isArray(data.tree)) return;
-  const paths = data.tree.map(item=>item.path);
-  const files = new Set(paths);
-  const folders = paths.filter(path=>path.endsWith('/index.html'))
-   .map(path=>path.slice(0,-11))
-   .filter(path=>path && !path.includes('/') && !['tools','assets','admin'].includes(path.toLowerCase()));
-  const known = new Set(tools.map(item=>item[3].replace(/^\\//,'').replace(/\\/$/, '').toLowerCase()));
-  const icons = {generator:'fa-wand-magic-sparkles',image:'fa-image',pdf:'fa-file-pdf',text:'fa-font',password:'fa-key',converter:'fa-right-left',qr:'fa-qrcode',youtube:'fa-youtube',audio:'fa-file-audio',video:'fa-film',calculator:'fa-calculator',nepali:'fa-language',date:'fa-calendar-days',json:'fa-code',color:'fa-palette',seo:'fa-magnifying-glass-chart'};
-  folders.forEach(folder=>{
-   const key=folder.toLowerCase();
-   if(known.has(key) || !files.has(folder+'/index.html')) return;
-   const title=folder.replace(/[-_]+/g,' ').replace(/\\b\\w/g,c=>c.toUpperCase());
-   const match=paths.find(path=>path.startsWith(folder+'/') && /^(logo|icon|favicon)\\.(webp|png|svg|jpe?g)$/i.test(path.slice(folder.length+1)));
-   const icon=Object.keys(icons).find(word=>key.includes(word));
-   tools.push([title,icon?icons[icon]:'fa-screwdriver-wrench','Folder tools','/'+folder+'/',match?'https://laxmannepal.com.np/'+match:'']);
-   known.add(key);
+  if(!Array.isArray(data.tree)) return;
+  const paths = data.tree.filter(item=>item.type==='blob').map(item=>item.path);
+  const indexPaths = paths.filter(path=>/^tools\\/.+\\/index\\.html$/i.test(path));
+  const known = new Set(tools.map(item=>item[3].replace(/^\\//,'').replace(/\\/$/,'').toLowerCase()));
+  const iconRules = [
+   ['password','fa-key'],['fake-post','fa-comments'],['slow-and-reverb','fa-music'],
+   ['generator','fa-wand-magic-sparkles'],['image','fa-image'],['pdf','fa-file-pdf'],
+   ['text','fa-font'],['converter','fa-right-left'],['qr','fa-qrcode'],
+   ['youtube','fa-youtube'],['audio','fa-file-audio'],['video','fa-film'],
+   ['calculator','fa-calculator'],['instagram','fa-instagram'],['facebook','fa-facebook'],
+   ['linkedin','fa-linkedin'],['threads','fa-at'],['twitter','fa-x-twitter']
+  ];
+  indexPaths.forEach(indexPath=>{
+   const folder=indexPath.slice(0,-11);
+   const relative=folder.slice('tools/'.length);
+   const url='/'+folder+'/';
+   if(known.has(folder.toLowerCase()) || known.has(url.replace(/^\\//,'').replace(/\\/$/,'').toLowerCase())) return;
+   const leaf=relative.split('/').pop();
+   const title=leaf.replace(/[-_]+/g,' ').replace(/\\b\\w/g,ch=>ch.toUpperCase());
+   const lower=relative.toLowerCase();
+   const iconRule=iconRules.find(rule=>lower.includes(rule[0]));
+   const parent=relative.includes('/')?relative.split('/').slice(0,-1).join(' / ').replace(/[-_]+/g,' '):'';
+   const category=parent?parent.replace(/\\b\\w/g,ch=>ch.toUpperCase()):'Tools';
+   const base='https://laxmannepal.com.np/'+folder+'/';
+   const logoFile=paths.find(path=>path.startsWith(folder+'/') && /(^|\\/)(logo|icon|favicon|apple-touch-icon)\\.(webp|png|svg|jpe?g)$/i.test(path.slice(folder.length+1)));
+   const logo=logoFile?'https://laxmannepal.com.np/'+logoFile:'';
+   tools.push([title,iconRule?iconRule[1]:'fa-screwdriver-wrench',category,url,logo]);
+   known.add(folder.toLowerCase());
   });
-  tools.sort((a,b)=>a[0].localeCompare(b[0],undefined,{sensitivity:'base'}));
+  tools.sort((a,b)=>a[0].localeCompare(b[0],undefined,{sensitivity:'base'}) || a[3].localeCompare(b[3]));
+  filters.innerHTML=['All',...new Set(tools.map(t=>t[2]))].map(category=>'<button type="button" class="tool-filter'+(category==='All'?' active':'')+'" data-cat="'+category+'">'+category+'</button>').join('');
   render();
- } catch(error) { console.info('Folder-based tool discovery unavailable; showing existing tools.',error); }
+  updateRecent();
+ } catch(error) { console.info('Tools directory discovery unavailable; showing existing tools.',error); }
 })(); 
 
 </script>
