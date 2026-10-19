@@ -147,6 +147,13 @@ def normalize_h1(doc: str, title: str) -> str:
     """Give each published HTML page one meaningful H1 without deleting heading text."""
     matches = list(re.finditer(r"<h1\b[^>]*>.*?</h1>", doc, re.I | re.S))
     if not matches:
+        # Prefer promoting the existing page title when it is marked as H2;
+        # this avoids displaying a second copy of the title.
+        existing_h2 = re.search(r"<h2\b[^>]*>.*?</h2>", doc, re.I | re.S)
+        if existing_h2:
+            block = re.sub(r"^<h2\b", "<h1", existing_h2.group(0), count=1, flags=re.I)
+            block = re.sub(r"</h2>$", "</h1>", block, count=1, flags=re.I)
+            return doc[:existing_h2.start()] + block + doc[existing_h2.end():]
         heading = (
             '<h1 class="seo-generated-h1" '
             'style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;'
