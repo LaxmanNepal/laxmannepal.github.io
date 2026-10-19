@@ -33,14 +33,19 @@ def parse_rates(html):
     if not date_match:
         raise RuntimeError("Source-published date not detected; refusing to label unverified rates as current")
     source_date = datetime.strptime(date_match.group(0).replace("/", "-").replace(" ", "-"), "%d-%b-%Y").date()
-    def near(label, window=260):
+    def near(label, low, high, window=360):
         m = re.search(label, text, re.I)
         if not m: return None
         nums = re.findall(r"(?:Rs\.?\s*)?([0-9][0-9,]{3,})", text[m.end():m.end()+window])
-        return int(nums[0].replace(",","")) if nums else None
-    fine = near(r"(?:Gold Hallmark|Fine gold 9999|Fine Gold)")
-    tejabi = near(r"(?:Gold Tajabi|22\s*KT|22K)")
-    silver = near(r"Silver")
+        for raw in nums:
+            value = int(raw.replace(",", ""))
+            # Ignore purity labels (9999), dates/years and unrelated counts.
+            if low <= value <= high:
+                return value
+        return None
+    fine = near(r"(?:Gold Hallmark|Fine gold 9999|Fine Gold)", 200000, 500000)
+    tejabi = near(r"(?:Gold Tajabi|Tejabi Gold|22\s*KT|22K)", 200000, 500000)
+    silver = near(r"Silver", 2000, 10000)
     return source_date, fine, tejabi, silver
 
 def load():
@@ -106,10 +111,11 @@ def main():
             if age_days < 0 or age_days > 3:
                 errors.append(f"{name}: source date {source_date} is outside the allowed freshness window ({age_days} days old)")
                 continue
-            if fine and silver:
-                found = {"source": name, "url": url, "date": source_date.isoformat(), "fine_tola": fine, "tejabi_tola": tejabi, "silver_tola": silver}
-                break
-            errors.append(f"{name}: rates not detected")
+            if not fine or not silver or not (200000 <= fine <= 500000 and 200000 <= (tejabi or fine) <= 500000 and 2000 <= silver <= 10000):
+                errors.append(f"{name}: parsed values failed plausibility checks (fine={fine}, tejabi={tejabi}, silver={silver})")
+                continue
+            found = {"source": name, "url": url, "date": source_date.isoformat(), "fine_tola": fine, "tejabi_tola": tejabi, "silver_tola": silver}
+            break
         except Exception as e:
             errors.append(f"{name}: {e}")
 
