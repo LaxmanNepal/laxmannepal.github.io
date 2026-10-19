@@ -23,7 +23,7 @@ for p in sorted(files):
         issues.append((str(rel),"missing shared shell CSS"))
     if not re.search(r'href=["\']/assets/css/legacy-normalizer\.css["\']',s,re.I):
         issues.append((str(rel),"missing legacy normalizer CSS"))
-    fixed=re.findall(r'(?<![\w-])width\s*:\s*(?:9\d\d|1\d{3,})px|(?<![\w-])min-width\s*:\s*(?:9\d\d|1\d{3,})px',s,re.I)
+    fixed=re.findall(r'(?<![\w-])width\s*:\s*(?:9\d\d|1\d{3,})px|(?<![\w(-])min-width\s*:\s*(?:9\d\d|1\d{3,})px',s,re.I)
     if fixed:
         issues.append((str(rel),f"fixed width declarations: {len(fixed)}"))
 
