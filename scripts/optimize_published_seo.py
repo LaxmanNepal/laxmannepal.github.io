@@ -145,7 +145,7 @@ def replace_or_insert(doc: str, pattern: str, tag: str) -> str:
 
 def normalize_h1(doc: str, title: str) -> str:
     """Give each published HTML page one meaningful H1 without deleting heading text."""
-    matches = list(re.finditer(r"<h1\\b[^>]*>.*?</h1>", doc, re.I | re.S))
+    matches = list(re.finditer(r"<h1\b[^>]*>.*?</h1>", doc, re.I | re.S))
     if not matches:
         heading = (
             '<h1 class="seo-generated-h1" '
@@ -153,18 +153,18 @@ def normalize_h1(doc: str, title: str) -> str:
             'margin:1.25rem auto;max-width:1100px;padding:0 1rem">'
             + html.escape(title) + '</h1>'
         )
-        main = re.search(r"<main\\b[^>]*>", doc, re.I)
-        body = re.search(r"<body\\b[^>]*>", doc, re.I)
+        main = re.search(r"<main\b[^>]*>", doc, re.I)
+        body = re.search(r"<body\b[^>]*>", doc, re.I)
         target = main or body
         if target:
-            return doc[:target.end()] + "\\n" + heading + doc[target.end():]
+            return doc[:target.end()] + "\n" + heading + doc[target.end():]
         return doc + heading
     if len(matches) < 2:
         return doc
     # Keep the first page-level heading and demote subsequent H1s to H2s.
     for match in reversed(matches[1:]):
         block = match.group(0)
-        block = re.sub(r"^<h1\\b", "<h2", block, count=1, flags=re.I)
+        block = re.sub(r"^<h1\b", "<h2", block, count=1, flags=re.I)
         block = re.sub(r"</h1>$", "</h2>", block, count=1, flags=re.I)
         doc = doc[:match.start()] + block + doc[match.end():]
     return doc
