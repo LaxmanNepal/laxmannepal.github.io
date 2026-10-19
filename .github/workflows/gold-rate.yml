@@ -16,11 +16,13 @@ jobs:
         uses: actions/checkout@v6
       - name: Fetch daily rates
         run: python3 scripts/fetch_gold_rates.py
+      - name: Validate rate freshness and SEO snapshots
+        run: python3 scripts/validate_gold_rate_seo.py . --allow-stale-days 3
       - name: Commit updated rate data
         run: |
           git config user.name "laxmannepal-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/gold-nepal.json gold-price-in-nepal-today/index.html gold-price-history-nepal/index.html silver-price-in-nepal-today/index.html
+          git add data/gold-nepal.json data/gold-nepal-live.json gold-price-in-nepal-today/index.html gold-price-history-nepal/index.html silver-price-in-nepal-today/index.html
           if git diff --cached --quiet; then
             echo "No rate-data change."
             exit 0
