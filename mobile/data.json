@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20T04:56:59.813103+00:00",
+  "updated_at": "2026-10-20T11:45:35.738044+00:00",
   "count": 151,
   "products": [
     {
@@ -2609,9 +2609,9 @@
       "variants": [
         "128GB"
       ],
-      "price": 119499,
-      "max_price": 119499,
-      "original_price": 127499,
+      "price": 127499,
+      "max_price": 127499,
+      "original_price": null,
       "rams": [],
       "storages": [
         "128GB"
@@ -2642,9 +2642,9 @@
         "8GB+512GB",
         "8GB+256GB"
       ],
-      "price": 164999,
+      "price": 173499,
       "max_price": 215699,
-      "original_price": 173499,
+      "original_price": null,
       "rams": [
         "8GB"
       ],
