@@ -1,142 +1,214 @@
 {
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-20",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "chat-js",
-      "url": "https://github.com/FranciscoMoretti/chat-js",
-      "description": "Production-ready AI chat. Start here and make it your own. Formerly Sparka AI",
-      "language": "TypeScript",
-      "stars": 1201,
-      "updatedAt": "2026-10-19T07:44:30Z",
-      "fullName": "FranciscoMoretti/chat-js"
+      "name": "agent-framework-radar",
+      "url": "https://github.com/linny006/agent-framework-radar",
+      "description": "Live index of the newest agent frameworks shipping on GitHub, sorted by recency not stars",
+      "language": "Python",
+      "stars": 8,
+      "updatedAt": "2026-10-20T07:30:25Z",
+      "fullName": "linny006/agent-framework-radar"
     },
     {
-      "name": "qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "description": "An open-source AI coding agent that lives in your terminal.",
-      "language": "TypeScript",
-      "stars": 28571,
-      "updatedAt": "2026-10-19T07:44:28Z",
-      "fullName": "QwenLM/qwen-code"
+      "name": "llm-eval-tracker",
+      "url": "https://github.com/linny006/llm-eval-tracker",
+      "description": "Live index of LLM evaluation tools and benchmarks, refreshed every 15 minutes from GitHub",
+      "language": "Python",
+      "stars": 6,
+      "updatedAt": "2026-10-20T07:30:24Z",
+      "fullName": "linny006/llm-eval-tracker"
     },
     {
-      "name": "anythingmcp",
-      "url": "https://github.com/HelpCode-ai/anythingmcp",
-      "description": "MCP gateway for AI agents: turn any REST/OpenAPI, GraphQL, SOAP or SQL API into MCP tools. 475 ready-made connectors (SAP, ERP, e-commerce) with RBAC, SSO, audit logs and a knowledge graph.",
-      "language": "TypeScript",
-      "stars": 760,
-      "updatedAt": "2026-10-19T07:44:21Z",
-      "fullName": "HelpCode-ai/anythingmcp"
+      "name": "unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4, MiniMax-H3, Gemma 4, FLUX and more.",
+      "language": "Python",
+      "stars": 78293,
+      "updatedAt": "2026-10-20T07:30:18Z",
+      "fullName": "unslothai/unsloth"
     },
     {
-      "name": "mloda",
-      "url": "https://github.com/mloda-ai/mloda",
-      "description": "mloda.ai - Open Data Access for AI and ML. Plugin-based. Traceable. Framework-agnostic.",
+      "name": "llm-agents-radar",
+      "url": "https://github.com/linny006/llm-agents-radar",
+      "description": "Live-updating index of LLM agent frameworks shipping on GitHub, refreshed every 15 minutes",
+      "language": "Python",
+      "stars": 14,
+      "updatedAt": "2026-10-20T07:30:18Z",
+      "fullName": "linny006/llm-agents-radar"
+    },
+    {
+      "name": "claude-code-plugin-tracker",
+      "url": "https://github.com/linny006/claude-code-plugin-tracker",
+      "description": "Live index of Claude Code extensions, hooks, and plugins — refreshed every 15 minutes from GitHub",
+      "language": "Python",
+      "stars": 6,
+      "updatedAt": "2026-10-20T07:30:18Z",
+      "fullName": "linny006/claude-code-plugin-tracker"
+    },
+    {
+      "name": "semantic-router",
+      "url": "https://github.com/vllm-project/semantic-router",
+      "description": "An open, programmable decision layer for models and compute.",
+      "language": "Go",
+      "stars": 6223,
+      "updatedAt": "2026-10-20T07:30:11Z",
+      "fullName": "vllm-project/semantic-router"
+    },
+    {
+      "name": "trending-claude-skills",
+      "url": "https://github.com/linny006/trending-claude-skills",
+      "description": "Auto-updated leaderboard of trending claude-skills and AI agent repos, refreshed every 15 minutes",
+      "language": "Python",
+      "stars": 129,
+      "updatedAt": "2026-10-20T07:30:11Z",
+      "fullName": "linny006/trending-claude-skills"
+    },
+    {
+      "name": "langchain4j",
+      "url": "https://github.com/langchain4j/langchain4j",
+      "description": "LangChain4j is an idiomatic, open-source Java library for building LLM-powered applications on the JVM. It offers a unified API over popular LLM providers and vector stores, and makes implementing tool calling (including MCP support), agents and RAG easy. It i",
+      "language": "Java",
+      "stars": 13266,
+      "updatedAt": "2026-10-20T07:30:04Z",
+      "fullName": "langchain4j/langchain4j"
+    },
+    {
+      "name": "evalscope",
+      "url": "https://github.com/modelscope/evalscope",
+      "description": "A streamlined and customizable framework for efficient large model (LLM, VLM, AIGC) evaluation and performance benchmarking.",
+      "language": "Python",
+      "stars": 3565,
+      "updatedAt": "2026-10-20T07:30:03Z",
+      "fullName": "modelscope/evalscope"
+    },
+    {
+      "name": "bike4mind",
+      "url": "https://github.com/Bike4Mind/bike4mind",
+      "description": "The open-core AI workbench — notebooks, agents, RAG, voice, and images across any model: OpenAI, Anthropic, Google, xAI, or local via Ollama/vLLM. BSL 1.1,  auto-converting to Apache-2.0 on a two-year clock. Your AI keeps running when theirs doesn't.",
+      "language": "TypeScript",
+      "stars": 87,
+      "updatedAt": "2026-10-20T07:30:01Z",
+      "fullName": "Bike4Mind/bike4mind"
+    },
+    {
+      "name": "TrustEval-toolkit",
+      "url": "https://github.com/TrustGen/TrustEval-toolkit",
+      "description": "[ICLR'26, NAACL'25 Demo] Toolkit & Benchmark for evaluating the trustworthiness of generative foundation models.",
+      "language": "Python",
+      "stars": 136,
+      "updatedAt": "2026-10-20T07:29:57Z",
+      "fullName": "TrustGen/TrustEval-toolkit"
+    },
+    {
+      "name": "NeverD",
+      "url": "https://github.com/NeverSight/NeverD",
+      "description": "The AI-friendly binary analysis & decompilation engine — 1:1 lift, built on LLVM [WIP]",
+      "language": "C++",
+      "stars": 95,
+      "updatedAt": "2026-10-20T07:29:56Z",
+      "fullName": "NeverSight/NeverD"
+    },
+    {
+      "name": "claude-code-plugins",
+      "url": "https://github.com/melodic-software/claude-code-plugins",
+      "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
+      "language": "Shell",
+      "stars": 26,
+      "updatedAt": "2026-10-20T07:29:55Z",
+      "fullName": "melodic-software/claude-code-plugins"
+    },
+    {
+      "name": "ampere",
+      "url": "https://github.com/socket-link/ampere",
+      "description": "Observable AI cognition in Kotlin Multiplatform. Every agent decision emits a structured event — peer into the glass brain.",
+      "language": "Kotlin",
+      "stars": 40,
+      "updatedAt": "2026-10-20T07:29:51Z",
+      "fullName": "socket-link/ampere"
+    },
+    {
+      "name": "ailmanac",
+      "url": "https://github.com/derob98/ailmanac",
+      "description": "Claude has never seen 68% of the Claude Code docs: research, interactive charts and a plugin that tells it what it missed. Plus a field guide to Claude and AI tools that says when each page was last checked, in 12 languages.",
+      "language": "MDX",
+      "stars": 8,
+      "updatedAt": "2026-10-20T07:29:51Z",
+      "fullName": "derob98/ailmanac"
+    },
+    {
+      "name": "rove",
+      "url": "https://github.com/Sma1lboy/rove",
+      "description": "Rove — the agent multiplexer for your terminal. Run coding agents on parallel tasks with isolated worktrees and persistent sessions.",
+      "language": "TypeScript",
+      "stars": 177,
+      "updatedAt": "2026-10-20T07:29:49Z",
+      "fullName": "Sma1lboy/rove"
+    },
+    {
+      "name": "StatsPAI",
+      "url": "https://github.com/brycewang-stanford/StatsPAI",
+      "description": "StatsPAI is the first Agent-native Python library for causal inference and applied econometrics — unified API, broad cross-method coverage, structured result objects, machine-readable schemas, Skills, an MCP server, and R/Stata parity validation.",
+      "language": "Python",
+      "stars": 342,
+      "updatedAt": "2026-10-20T07:29:41Z",
+      "fullName": "brycewang-stanford/StatsPAI"
+    },
+    {
+      "name": "cromford",
+      "url": "https://github.com/cromford-ai/cromford",
+      "description": "Cromford: the open-source software factory. Tickets in, reviewed, merged and production-checked changes out.",
+      "language": "Shell",
+      "stars": 23,
+      "updatedAt": "2026-10-20T07:29:38Z",
+      "fullName": "cromford-ai/cromford"
+    },
+    {
+      "name": "dust",
+      "url": "https://github.com/dust-tt/dust",
+      "description": "Custom AI agent platform to speed up your work.",
+      "language": "TypeScript",
+      "stars": 1490,
+      "updatedAt": "2026-10-20T07:29:32Z",
+      "fullName": "dust-tt/dust"
+    },
+    {
+      "name": "moose",
+      "url": "https://github.com/moooossee/moose",
+      "description": "Chat with local and cloud AI",
+      "language": "Rust",
+      "stars": 43,
+      "updatedAt": "2026-10-20T07:29:13Z",
+      "fullName": "moooossee/moose"
+    },
+    {
+      "name": "ai-berkshire",
+      "url": "https://github.com/xbtlin/ai-berkshire",
+      "description": "AI 时代的伯克希尔：基于 Claude Code / Codex 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework built for Claude Code / Codex. 4 masters' methodologies + multi-agent adversarial analysis.",
+      "language": "HTML",
+      "stars": 16809,
+      "updatedAt": "2026-10-20T07:29:12Z",
+      "fullName": "xbtlin/ai-berkshire"
+    },
+    {
+      "name": "hawk",
+      "url": "https://github.com/METR/hawk",
+      "description": "Run Inspect AI evals in the cloud",
       "language": "Python",
       "stars": 96,
-      "updatedAt": "2026-10-19T07:44:17Z",
-      "fullName": "mloda-ai/mloda"
+      "updatedAt": "2026-10-20T07:29:08Z",
+      "fullName": "METR/hawk"
     },
     {
-      "name": "meridian",
-      "url": "https://github.com/rynfar/meridian",
-      "description": "Use Claude and Antigravity with Pi, OpenCode and other coding clients. Local API bridge, usage dashboard and Mac app. Antigravity preview available in 1.74.0.",
-      "language": "TypeScript",
-      "stars": 2131,
-      "updatedAt": "2026-10-19T07:44:05Z",
-      "fullName": "rynfar/meridian"
-    },
-    {
-      "name": "lemoncrow",
-      "url": "https://github.com/lemoncrow-lab/lemoncrow",
-      "description": "A Complete faster runtime for coding agents. Optimize the journey, not the hop. Make coding agents 25% faster and 30% cheaper on average while keeping the quality same or more.  Same Task, Same Quality, Faster and Cheaper.",
+      "name": "DaoCloud-docs",
+      "url": "https://github.com/DaoCloud/DaoCloud-docs",
+      "description": "DaoCloud Documentation",
       "language": "Python",
-      "stars": 72,
-      "updatedAt": "2026-10-19T07:44:03Z",
-      "fullName": "lemoncrow-lab/lemoncrow"
-    },
-    {
-      "name": "token-monitor",
-      "url": "https://github.com/Javis603/token-monitor",
-      "description": "Local-first desktop widget for tracking token usage, costs, limits, and session activity across 46+ AI coding tools—including Claude Code, Codex, Cursor, OpenCode, OpenClaw, and more—with multi-device sync.",
-      "language": "JavaScript",
-      "stars": 3191,
-      "updatedAt": "2026-10-19T07:43:59Z",
-      "fullName": "Javis603/token-monitor"
-    },
-    {
-      "name": "omnigent",
-      "url": "https://github.com/omnigent-ai/omnigent",
-      "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
-      "language": "Python",
-      "stars": 10889,
-      "updatedAt": "2026-10-19T07:43:58Z",
-      "fullName": "omnigent-ai/omnigent"
-    },
-    {
-      "name": "Mooncake",
-      "url": "https://github.com/kvcache-ai/Mooncake",
-      "description": "Mooncake is the serving platform for Kimi, a leading LLM service provided by Moonshot AI.",
-      "language": "C++",
-      "stars": 6830,
-      "updatedAt": "2026-10-19T07:43:52Z",
-      "fullName": "kvcache-ai/Mooncake"
-    },
-    {
-      "name": "haystack-core-integrations",
-      "url": "https://github.com/deepset-ai/haystack-core-integrations",
-      "description": "Additional packages (components, document stores and the likes) to extend the capabilities of Haystack",
-      "language": "Python",
-      "stars": 209,
-      "updatedAt": "2026-10-19T07:43:40Z",
-      "fullName": "deepset-ai/haystack-core-integrations"
-    },
-    {
-      "name": "SpotAsk",
-      "url": "https://github.com/shiquda/SpotAsk",
-      "description": "Native macOS menu-bar AI assistant & query router. Ask with a hotkey — answer in-app (BYOK), or route to web AI and local CLI agents automatically or in 1 click.",
-      "language": "Swift",
-      "stars": 21,
-      "updatedAt": "2026-10-19T07:43:39Z",
-      "fullName": "shiquda/SpotAsk"
-    },
-    {
-      "name": "smithers",
-      "url": "https://github.com/smithersai/smithers",
-      "description": "Smithers is an agentic workflow framework for defining workflows in simple TypeScript configuration files and executing them quickly, durably, and reliably",
-      "language": "TypeScript",
-      "stars": 439,
-      "updatedAt": "2026-10-19T07:43:36Z",
-      "fullName": "smithersai/smithers"
-    },
-    {
-      "name": "academic-commercialization-agent",
-      "url": "https://github.com/shuxiachai/academic-commercialization-agent",
-      "description": "AI multi-agent tool that turns research papers into cited commercialization and tech-transfer assessments: TRL, patent landscape, market and risks. CrewAI + FastAPI, with a reproducible benchmark.",
-      "language": "Python",
-      "stars": 631,
-      "updatedAt": "2026-10-19T07:43:34Z",
-      "fullName": "shuxiachai/academic-commercialization-agent"
-    },
-    {
-      "name": "nanocode",
-      "url": "https://github.com/gakonst/nanocode",
-      "description": "SDK for Frontier Embedded Agents.",
-      "language": "Rust",
-      "stars": 575,
-      "updatedAt": "2026-10-19T07:43:30Z",
-      "fullName": "gakonst/nanocode"
-    },
-    {
-      "name": "opencodex",
-      "url": "https://github.com/lidge-jun/opencodex",
-      "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
-      "language": "TypeScript",
-      "stars": 17588,
-      "updatedAt": "2026-10-19T07:43:27Z",
-      "fullName": "lidge-jun/opencodex"
+      "stars": 203,
+      "updatedAt": "2026-10-20T07:29:00Z",
+      "fullName": "DaoCloud/DaoCloud-docs"
     },
     {
       "name": "nextclaw",
@@ -144,80 +216,8 @@
       "description": "A human-centered long-term AI partner—not a task-centered assistant.",
       "language": "TypeScript",
       "stars": 262,
-      "updatedAt": "2026-10-19T07:43:07Z",
+      "updatedAt": "2026-10-20T07:28:59Z",
       "fullName": "Peiiii/nextclaw"
-    },
-    {
-      "name": "AstrAI",
-      "url": "https://github.com/ViperEkura/AstrAI",
-      "description": "A lightweight Transformer training & inference framework",
-      "language": "Python",
-      "stars": 113,
-      "updatedAt": "2026-10-19T07:43:02Z",
-      "fullName": "ViperEkura/AstrAI"
-    },
-    {
-      "name": "liter-llm",
-      "url": "https://github.com/xberg-io/liter-llm",
-      "description": "Universal LLM API client — 163 providers, 14 native language bindings, powered by a Rust core",
-      "language": "Rust",
-      "stars": 261,
-      "updatedAt": "2026-10-19T07:42:55Z",
-      "fullName": "xberg-io/liter-llm"
-    },
-    {
-      "name": "DeepSeek-Reasonix",
-      "url": "https://github.com/esengine/DeepSeek-Reasonix",
-      "description": "A reliable coding agent for complex software engineering tasks.",
-      "language": "Go",
-      "stars": 35858,
-      "updatedAt": "2026-10-19T07:42:34Z",
-      "fullName": "esengine/DeepSeek-Reasonix"
-    },
-    {
-      "name": "ace",
-      "url": "https://github.com/Covai-Labs/ace",
-      "description": "ACE (AI Chat Exporter) · Privacy-focused opensource browser extension to export AI chats from ChatGPT, Claude, Gemini, DeepSeek, and more to Markdown, JSON, PDF, or PNG.",
-      "language": "JavaScript",
-      "stars": 63,
-      "updatedAt": "2026-10-19T07:42:28Z",
-      "fullName": "Covai-Labs/ace"
-    },
-    {
-      "name": "medusa",
-      "url": "https://github.com/medusajs/medusa",
-      "description": "The world's most flexible commerce platform for agents and developers",
-      "language": "TypeScript",
-      "stars": 36796,
-      "updatedAt": "2026-10-19T07:42:25Z",
-      "fullName": "medusajs/medusa"
-    },
-    {
-      "name": "haystack",
-      "url": "https://github.com/deepset-ai/haystack",
-      "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multi",
-      "language": "Python",
-      "stars": 26773,
-      "updatedAt": "2026-10-19T07:42:17Z",
-      "fullName": "deepset-ai/haystack"
-    },
-    {
-      "name": "future-os",
-      "url": "https://github.com/futuregene/future-os",
-      "description": "One AI agent, everywhere you work — terminal, desktop, mobile, and your chat apps. Rust core.",
-      "language": "Rust",
-      "stars": 111,
-      "updatedAt": "2026-10-19T07:42:13Z",
-      "fullName": "futuregene/future-os"
-    },
-    {
-      "name": "unified-kg-rag-on-aws",
-      "url": "https://github.com/awslabs/unified-kg-rag-on-aws",
-      "description": "AWS-native knowledge graph RAG framework unifying two graph-retrieval methodologies — Microsoft GraphRAG community summarization and LightRAG dual-level keyword search — on Amazon Bedrock, Neptune, and OpenSearch. Multi-hop QA over document corpora, with incre",
-      "language": "Python",
-      "stars": 36,
-      "updatedAt": "2026-10-19T07:42:13Z",
-      "fullName": "awslabs/unified-kg-rag-on-aws"
     }
   ]
 }
