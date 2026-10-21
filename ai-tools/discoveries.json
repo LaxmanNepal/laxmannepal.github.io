@@ -1,43 +1,151 @@
 {
-  "updatedAt": "2026-10-20",
+  "updatedAt": "2026-10-21",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "agent-framework-radar",
-      "url": "https://github.com/linny006/agent-framework-radar",
-      "description": "Live index of the newest agent frameworks shipping on GitHub, sorted by recency not stars",
+      "name": "AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
       "language": "Python",
-      "stars": 8,
-      "updatedAt": "2026-10-20T07:30:25Z",
-      "fullName": "linny006/agent-framework-radar"
+      "stars": 187687,
+      "updatedAt": "2026-10-21T07:36:28Z",
+      "fullName": "Significant-Gravitas/AutoGPT"
     },
     {
-      "name": "llm-eval-tracker",
-      "url": "https://github.com/linny006/llm-eval-tracker",
-      "description": "Live index of LLM evaluation tools and benchmarks, refreshed every 15 minutes from GitHub",
+      "name": "nocobase",
+      "url": "https://github.com/nocobase/nocobase",
+      "description": "NocoBase is an open-source AI + no-code platform for building business systems fast. Instead of generating everything from scratch, AI works on top of production-proven infrastructure and a WYSIWYG no-code interface, so you get both speed and reliability.",
+      "language": "TypeScript",
+      "stars": 24651,
+      "updatedAt": "2026-10-21T07:36:28Z",
+      "fullName": "nocobase/nocobase"
+    },
+    {
+      "name": "omlx",
+      "url": "https://github.com/jundot/omlx",
+      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
       "language": "Python",
+      "stars": 22971,
+      "updatedAt": "2026-10-21T07:36:26Z",
+      "fullName": "jundot/omlx"
+    },
+    {
+      "name": "kujo",
+      "url": "https://github.com/kujolang/kujo",
+      "description": "Kujo is the programming language for AI-native software",
+      "language": "Rust",
       "stars": 6,
-      "updatedAt": "2026-10-20T07:30:24Z",
-      "fullName": "linny006/llm-eval-tracker"
+      "updatedAt": "2026-10-21T07:36:21Z",
+      "fullName": "kujolang/kujo"
+    },
+    {
+      "name": "kyojin",
+      "url": "https://github.com/Yamz-Labs/kyojin",
+      "description": "Kyojin: the Yamz inference engine for AMD Strix Halo (ROCm, gfx1151), built on ExLlamaV3. Runs 300B-class MoE models on one 128 GB mini PC.",
+      "language": "Python",
+      "stars": 194,
+      "updatedAt": "2026-10-21T07:36:16Z",
+      "fullName": "Yamz-Labs/kyojin"
+    },
+    {
+      "name": "Soup",
+      "url": "https://github.com/MakazhanAlpamys/Soup",
+      "description": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
+      "language": "Python",
+      "stars": 9492,
+      "updatedAt": "2026-10-21T07:36:05Z",
+      "fullName": "MakazhanAlpamys/Soup"
+    },
+    {
+      "name": "KiroCrew",
+      "url": "https://github.com/kirodotdev/KiroCrew",
+      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
+      "language": "Python",
+      "stars": 4521,
+      "updatedAt": "2026-10-21T07:36:00Z",
+      "fullName": "kirodotdev/KiroCrew"
+    },
+    {
+      "name": "ciso-assistant-community",
+      "url": "https://github.com/intuitem/ciso-assistant-community",
+      "description": "CISO Assistant is a one-stop-shop GRC platform for Risk Management, AppSec, Compliance & Audit, TPRM, BIA, Privacy, and Reporting. It supports 200+ global frameworks with automatic control mapping, including ISO 27001, NIST CSF, SOC 2, CIS, PCI DSS, NIS2, DORA",
+      "language": "Python",
+      "stars": 4531,
+      "updatedAt": "2026-10-21T07:35:53Z",
+      "fullName": "intuitem/ciso-assistant-community"
+    },
+    {
+      "name": "Librechat-Mobile",
+      "url": "https://github.com/garfiec/Librechat-Mobile",
+      "description": "Native Android & iOS client for LibreChat, built with Kotlin Multiplatform and Compose Multiplatform",
+      "language": "Kotlin",
+      "stars": 117,
+      "updatedAt": "2026-10-21T07:35:53Z",
+      "fullName": "garfiec/Librechat-Mobile"
+    },
+    {
+      "name": "lorekit",
+      "url": "https://github.com/mthines/lorekit",
+      "description": "Free, open source, local & remote, persistent memory for your AI coding agents. ",
+      "language": "TypeScript",
+      "stars": 20,
+      "updatedAt": "2026-10-21T07:35:49Z",
+      "fullName": "mthines/lorekit"
+    },
+    {
+      "name": "Aura",
+      "url": "https://github.com/chetto1983/Aura",
+      "description": "Self-hosted AI agent in Go with temporal graph memory, scheduled jobs, MCP tools and Telegram/WhatsApp channels. Docker Compose appliance, MIT.",
+      "language": "Go",
+      "stars": 33,
+      "updatedAt": "2026-10-21T07:35:41Z",
+      "fullName": "chetto1983/Aura"
+    },
+    {
+      "name": "xyne-spaces",
+      "url": "https://github.com/juspay/xyne-spaces",
+      "description": "The AI Org-OS — a collaborative platform for humans and agents. Explore: https://spaces.xyne.ai",
+      "language": "TypeScript",
+      "stars": 820,
+      "updatedAt": "2026-10-21T07:35:37Z",
+      "fullName": "juspay/xyne-spaces"
+    },
+    {
+      "name": "opengeni",
+      "url": "https://github.com/Cloudgeni-ai/opengeni",
+      "description": "Open, self-hostable agentic service for organizations — durable, replayable agent sessions, human approvals, governed credentials and memory, running in managed sandboxes or on your own hardware. Apache-2.0.",
+      "language": "TypeScript",
+      "stars": 204,
+      "updatedAt": "2026-10-21T07:35:32Z",
+      "fullName": "Cloudgeni-ai/opengeni"
     },
     {
       "name": "unsloth",
       "url": "https://github.com/unslothai/unsloth",
       "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4, MiniMax-H3, Gemma 4, FLUX and more.",
       "language": "Python",
-      "stars": 78293,
-      "updatedAt": "2026-10-20T07:30:18Z",
+      "stars": 78340,
+      "updatedAt": "2026-10-21T07:35:25Z",
       "fullName": "unslothai/unsloth"
     },
     {
-      "name": "llm-agents-radar",
-      "url": "https://github.com/linny006/llm-agents-radar",
-      "description": "Live-updating index of LLM agent frameworks shipping on GitHub, refreshed every 15 minutes",
-      "language": "Python",
-      "stars": 14,
-      "updatedAt": "2026-10-20T07:30:18Z",
-      "fullName": "linny006/llm-agents-radar"
+      "name": "uzu",
+      "url": "https://github.com/trymirai/uzu",
+      "description": "A high-performance inference engine for AI models",
+      "language": "Rust",
+      "stars": 2461,
+      "updatedAt": "2026-10-21T07:35:20Z",
+      "fullName": "trymirai/uzu"
+    },
+    {
+      "name": "respan-gateway",
+      "url": "https://github.com/respanai/respan-gateway",
+      "description": "One endpoint for every LLM vendor. Any SDK, any model, any tool. One Rust binary.",
+      "language": "Rust",
+      "stars": 87,
+      "updatedAt": "2026-10-21T07:35:10Z",
+      "fullName": "respanai/respan-gateway"
     },
     {
       "name": "claude-code-plugin-tracker",
@@ -45,179 +153,71 @@
       "description": "Live index of Claude Code extensions, hooks, and plugins — refreshed every 15 minutes from GitHub",
       "language": "Python",
       "stars": 6,
-      "updatedAt": "2026-10-20T07:30:18Z",
+      "updatedAt": "2026-10-21T07:35:06Z",
       "fullName": "linny006/claude-code-plugin-tracker"
     },
     {
-      "name": "semantic-router",
-      "url": "https://github.com/vllm-project/semantic-router",
-      "description": "An open, programmable decision layer for models and compute.",
-      "language": "Go",
-      "stars": 6223,
-      "updatedAt": "2026-10-20T07:30:11Z",
-      "fullName": "vllm-project/semantic-router"
-    },
-    {
-      "name": "trending-claude-skills",
-      "url": "https://github.com/linny006/trending-claude-skills",
-      "description": "Auto-updated leaderboard of trending claude-skills and AI agent repos, refreshed every 15 minutes",
-      "language": "Python",
-      "stars": 129,
-      "updatedAt": "2026-10-20T07:30:11Z",
-      "fullName": "linny006/trending-claude-skills"
-    },
-    {
-      "name": "langchain4j",
-      "url": "https://github.com/langchain4j/langchain4j",
-      "description": "LangChain4j is an idiomatic, open-source Java library for building LLM-powered applications on the JVM. It offers a unified API over popular LLM providers and vector stores, and makes implementing tool calling (including MCP support), agents and RAG easy. It i",
-      "language": "Java",
-      "stars": 13266,
-      "updatedAt": "2026-10-20T07:30:04Z",
-      "fullName": "langchain4j/langchain4j"
-    },
-    {
-      "name": "evalscope",
-      "url": "https://github.com/modelscope/evalscope",
-      "description": "A streamlined and customizable framework for efficient large model (LLM, VLM, AIGC) evaluation and performance benchmarking.",
-      "language": "Python",
-      "stars": 3565,
-      "updatedAt": "2026-10-20T07:30:03Z",
-      "fullName": "modelscope/evalscope"
-    },
-    {
-      "name": "bike4mind",
-      "url": "https://github.com/Bike4Mind/bike4mind",
-      "description": "The open-core AI workbench — notebooks, agents, RAG, voice, and images across any model: OpenAI, Anthropic, Google, xAI, or local via Ollama/vLLM. BSL 1.1,  auto-converting to Apache-2.0 on a two-year clock. Your AI keeps running when theirs doesn't.",
+      "name": "promptscript",
+      "url": "https://github.com/mrwogu/promptscript",
+      "description": "Prompt-as-Code for Enterprise AI. Standardize, audit, and deploy instructions across any AI coding assistant.",
       "language": "TypeScript",
-      "stars": 87,
-      "updatedAt": "2026-10-20T07:30:01Z",
-      "fullName": "Bike4Mind/bike4mind"
+      "stars": 387,
+      "updatedAt": "2026-10-21T07:35:04Z",
+      "fullName": "mrwogu/promptscript"
     },
     {
-      "name": "TrustEval-toolkit",
-      "url": "https://github.com/TrustGen/TrustEval-toolkit",
-      "description": "[ICLR'26, NAACL'25 Demo] Toolkit & Benchmark for evaluating the trustworthiness of generative foundation models.",
+      "name": "openvort",
+      "url": "https://github.com/openvort/openvort",
+      "description": "Open-source AI Employee Platform — Create AI employees that collaborate with your real team in WeCom, DingTalk, and Feishu, just like hiring a few more colleagues.",
       "language": "Python",
-      "stars": 136,
-      "updatedAt": "2026-10-20T07:29:57Z",
-      "fullName": "TrustGen/TrustEval-toolkit"
+      "stars": 385,
+      "updatedAt": "2026-10-21T07:34:58Z",
+      "fullName": "openvort/openvort"
     },
     {
-      "name": "NeverD",
-      "url": "https://github.com/NeverSight/NeverD",
-      "description": "The AI-friendly binary analysis & decompilation engine — 1:1 lift, built on LLVM [WIP]",
-      "language": "C++",
-      "stars": 95,
-      "updatedAt": "2026-10-20T07:29:56Z",
-      "fullName": "NeverSight/NeverD"
-    },
-    {
-      "name": "claude-code-plugins",
-      "url": "https://github.com/melodic-software/claude-code-plugins",
-      "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
-      "language": "Shell",
-      "stars": 26,
-      "updatedAt": "2026-10-20T07:29:55Z",
-      "fullName": "melodic-software/claude-code-plugins"
-    },
-    {
-      "name": "ampere",
-      "url": "https://github.com/socket-link/ampere",
-      "description": "Observable AI cognition in Kotlin Multiplatform. Every agent decision emits a structured event — peer into the glass brain.",
-      "language": "Kotlin",
-      "stars": 40,
-      "updatedAt": "2026-10-20T07:29:51Z",
-      "fullName": "socket-link/ampere"
-    },
-    {
-      "name": "ailmanac",
-      "url": "https://github.com/derob98/ailmanac",
-      "description": "Claude has never seen 68% of the Claude Code docs: research, interactive charts and a plugin that tells it what it missed. Plus a field guide to Claude and AI tools that says when each page was last checked, in 12 languages.",
-      "language": "MDX",
-      "stars": 8,
-      "updatedAt": "2026-10-20T07:29:51Z",
-      "fullName": "derob98/ailmanac"
-    },
-    {
-      "name": "rove",
-      "url": "https://github.com/Sma1lboy/rove",
-      "description": "Rove — the agent multiplexer for your terminal. Run coding agents on parallel tasks with isolated worktrees and persistent sessions.",
-      "language": "TypeScript",
-      "stars": 177,
-      "updatedAt": "2026-10-20T07:29:49Z",
-      "fullName": "Sma1lboy/rove"
-    },
-    {
-      "name": "StatsPAI",
-      "url": "https://github.com/brycewang-stanford/StatsPAI",
-      "description": "StatsPAI is the first Agent-native Python library for causal inference and applied econometrics — unified API, broad cross-method coverage, structured result objects, machine-readable schemas, Skills, an MCP server, and R/Stata parity validation.",
+      "name": "hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
       "language": "Python",
-      "stars": 342,
-      "updatedAt": "2026-10-20T07:29:41Z",
-      "fullName": "brycewang-stanford/StatsPAI"
+      "stars": 255681,
+      "updatedAt": "2026-10-21T07:34:45Z",
+      "fullName": "NousResearch/hermes-agent"
     },
     {
-      "name": "cromford",
-      "url": "https://github.com/cromford-ai/cromford",
-      "description": "Cromford: the open-source software factory. Tickets in, reviewed, merged and production-checked changes out.",
-      "language": "Shell",
-      "stars": 23,
-      "updatedAt": "2026-10-20T07:29:38Z",
-      "fullName": "cromford-ai/cromford"
-    },
-    {
-      "name": "dust",
-      "url": "https://github.com/dust-tt/dust",
-      "description": "Custom AI agent platform to speed up your work.",
-      "language": "TypeScript",
-      "stars": 1490,
-      "updatedAt": "2026-10-20T07:29:32Z",
-      "fullName": "dust-tt/dust"
-    },
-    {
-      "name": "moose",
-      "url": "https://github.com/moooossee/moose",
-      "description": "Chat with local and cloud AI",
-      "language": "Rust",
-      "stars": 43,
-      "updatedAt": "2026-10-20T07:29:13Z",
-      "fullName": "moooossee/moose"
-    },
-    {
-      "name": "ai-berkshire",
-      "url": "https://github.com/xbtlin/ai-berkshire",
-      "description": "AI 时代的伯克希尔：基于 Claude Code / Codex 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework built for Claude Code / Codex. 4 masters' methodologies + multi-agent adversarial analysis.",
+      "name": "rl-gym-orchestrator",
+      "url": "https://github.com/raamonp/rl-gym-orchestrator",
+      "description": "Ultimate LLM Gym Trainer Guide 2026: Reinforcement Learning Fine-Tuning Framework",
       "language": "HTML",
-      "stars": 16809,
-      "updatedAt": "2026-10-20T07:29:12Z",
-      "fullName": "xbtlin/ai-berkshire"
+      "stars": 55,
+      "updatedAt": "2026-10-21T07:34:42Z",
+      "fullName": "raamonp/rl-gym-orchestrator"
     },
     {
-      "name": "hawk",
-      "url": "https://github.com/METR/hawk",
-      "description": "Run Inspect AI evals in the cloud",
+      "name": "atris",
+      "url": "https://github.com/atrislabs/atris",
+      "description": "Say what you want in plain words. Atris plans it, builds it, checks it, and shows proof. CLI plus MCP server for AI agents.",
+      "language": "JavaScript",
+      "stars": 71,
+      "updatedAt": "2026-10-21T07:34:37Z",
+      "fullName": "atrislabs/atris"
+    },
+    {
+      "name": "Long-Trainer",
+      "url": "https://github.com/ENDEVSOLS/Long-Trainer",
+      "description": "Production-ready RAG framework for Python — multi-tenant chatbots with streaming, tool calling, agent mode (LangGraph), vector search (FAISS), and persistent MongoDB memory. Built on LangChain.",
       "language": "Python",
-      "stars": 96,
-      "updatedAt": "2026-10-20T07:29:08Z",
-      "fullName": "METR/hawk"
+      "stars": 30,
+      "updatedAt": "2026-10-21T07:34:33Z",
+      "fullName": "ENDEVSOLS/Long-Trainer"
     },
     {
-      "name": "DaoCloud-docs",
-      "url": "https://github.com/DaoCloud/DaoCloud-docs",
-      "description": "DaoCloud Documentation",
+      "name": "mcptoon",
+      "url": "https://github.com/activeing123/mcptoon",
+      "description": "One zero-dependency CLI for every MCP server and agent skill. Token optimization, tool discovery and context compression: 71,929 -> 581 tokens (-99.2%, measured), schemas stay out of context. One config for Claude Code, Codex, Cursor, every agent. 341KB, pure ",
       "language": "Python",
-      "stars": 203,
-      "updatedAt": "2026-10-20T07:29:00Z",
-      "fullName": "DaoCloud/DaoCloud-docs"
-    },
-    {
-      "name": "nextclaw",
-      "url": "https://github.com/Peiiii/nextclaw",
-      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
-      "language": "TypeScript",
-      "stars": 262,
-      "updatedAt": "2026-10-20T07:28:59Z",
-      "fullName": "Peiiii/nextclaw"
+      "stars": 361,
+      "updatedAt": "2026-10-21T07:34:30Z",
+      "fullName": "activeing123/mcptoon"
     }
   ]
 }
