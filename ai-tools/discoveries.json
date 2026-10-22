@@ -1,223 +1,223 @@
 {
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-22",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "AutoGPT",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "language": "Python",
-      "stars": 187687,
-      "updatedAt": "2026-10-21T07:36:28Z",
-      "fullName": "Significant-Gravitas/AutoGPT"
+      "name": "TensorSharp",
+      "url": "https://github.com/zhongkaifu/TensorSharp",
+      "description": "A native .NET LLM inference engine and agent runtime for GGUF models. TensorSharp provides a console application, a web-based chatbot interface, iPhone App, and Ollama/OpenAI-compatible HTTP APIs for programmatic access. It supports Windows/MacOS/iOS/Linux wit",
+      "language": "C#",
+      "stars": 598,
+      "updatedAt": "2026-10-22T07:32:17Z",
+      "fullName": "zhongkaifu/TensorSharp"
     },
     {
-      "name": "nocobase",
-      "url": "https://github.com/nocobase/nocobase",
-      "description": "NocoBase is an open-source AI + no-code platform for building business systems fast. Instead of generating everything from scratch, AI works on top of production-proven infrastructure and a WYSIWYG no-code interface, so you get both speed and reliability.",
+      "name": "rulesync",
+      "url": "https://github.com/dyoshikawa/rulesync",
+      "description": "A Utility CLI for AI Coding Agents",
       "language": "TypeScript",
-      "stars": 24651,
-      "updatedAt": "2026-10-21T07:36:28Z",
-      "fullName": "nocobase/nocobase"
+      "stars": 1541,
+      "updatedAt": "2026-10-22T07:32:16Z",
+      "fullName": "dyoshikawa/rulesync"
     },
     {
-      "name": "omlx",
-      "url": "https://github.com/jundot/omlx",
-      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+      "name": "marimo",
+      "url": "https://github.com/marimo-team/marimo",
+      "description": "A reactive notebook for Python — run reproducible experiments, query with SQL, execute as a script, deploy as an app, and version with git. Stored as pure Python. All in a modern, AI-native editor.",
       "language": "Python",
-      "stars": 22971,
-      "updatedAt": "2026-10-21T07:36:26Z",
-      "fullName": "jundot/omlx"
+      "stars": 23285,
+      "updatedAt": "2026-10-22T07:32:05Z",
+      "fullName": "marimo-team/marimo"
     },
     {
-      "name": "kujo",
-      "url": "https://github.com/kujolang/kujo",
-      "description": "Kujo is the programming language for AI-native software",
-      "language": "Rust",
-      "stars": 6,
-      "updatedAt": "2026-10-21T07:36:21Z",
-      "fullName": "kujolang/kujo"
-    },
-    {
-      "name": "kyojin",
-      "url": "https://github.com/Yamz-Labs/kyojin",
-      "description": "Kyojin: the Yamz inference engine for AMD Strix Halo (ROCm, gfx1151), built on ExLlamaV3. Runs 300B-class MoE models on one 128 GB mini PC.",
-      "language": "Python",
-      "stars": 194,
-      "updatedAt": "2026-10-21T07:36:16Z",
-      "fullName": "Yamz-Labs/kyojin"
-    },
-    {
-      "name": "Soup",
-      "url": "https://github.com/MakazhanAlpamys/Soup",
-      "description": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
-      "language": "Python",
-      "stars": 9492,
-      "updatedAt": "2026-10-21T07:36:05Z",
-      "fullName": "MakazhanAlpamys/Soup"
-    },
-    {
-      "name": "KiroCrew",
-      "url": "https://github.com/kirodotdev/KiroCrew",
-      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
-      "language": "Python",
-      "stars": 4521,
-      "updatedAt": "2026-10-21T07:36:00Z",
-      "fullName": "kirodotdev/KiroCrew"
-    },
-    {
-      "name": "ciso-assistant-community",
-      "url": "https://github.com/intuitem/ciso-assistant-community",
-      "description": "CISO Assistant is a one-stop-shop GRC platform for Risk Management, AppSec, Compliance & Audit, TPRM, BIA, Privacy, and Reporting. It supports 200+ global frameworks with automatic control mapping, including ISO 27001, NIST CSF, SOC 2, CIS, PCI DSS, NIS2, DORA",
-      "language": "Python",
-      "stars": 4531,
-      "updatedAt": "2026-10-21T07:35:53Z",
-      "fullName": "intuitem/ciso-assistant-community"
-    },
-    {
-      "name": "Librechat-Mobile",
-      "url": "https://github.com/garfiec/Librechat-Mobile",
-      "description": "Native Android & iOS client for LibreChat, built with Kotlin Multiplatform and Compose Multiplatform",
-      "language": "Kotlin",
-      "stars": 117,
-      "updatedAt": "2026-10-21T07:35:53Z",
-      "fullName": "garfiec/Librechat-Mobile"
-    },
-    {
-      "name": "lorekit",
-      "url": "https://github.com/mthines/lorekit",
-      "description": "Free, open source, local & remote, persistent memory for your AI coding agents. ",
+      "name": "agent-comms",
+      "url": "https://github.com/ExaDev/agent-comms",
+      "description": "Cross-harness communication mesh for LLM agents. Rooms, DMs, presence, and visibility.",
       "language": "TypeScript",
-      "stars": 20,
-      "updatedAt": "2026-10-21T07:35:49Z",
-      "fullName": "mthines/lorekit"
-    },
-    {
-      "name": "Aura",
-      "url": "https://github.com/chetto1983/Aura",
-      "description": "Self-hosted AI agent in Go with temporal graph memory, scheduled jobs, MCP tools and Telegram/WhatsApp channels. Docker Compose appliance, MIT.",
-      "language": "Go",
       "stars": 33,
-      "updatedAt": "2026-10-21T07:35:41Z",
-      "fullName": "chetto1983/Aura"
+      "updatedAt": "2026-10-22T07:31:59Z",
+      "fullName": "ExaDev/agent-comms"
     },
     {
-      "name": "xyne-spaces",
-      "url": "https://github.com/juspay/xyne-spaces",
-      "description": "The AI Org-OS — a collaborative platform for humans and agents. Explore: https://spaces.xyne.ai",
-      "language": "TypeScript",
-      "stars": 820,
-      "updatedAt": "2026-10-21T07:35:37Z",
-      "fullName": "juspay/xyne-spaces"
-    },
-    {
-      "name": "opengeni",
-      "url": "https://github.com/Cloudgeni-ai/opengeni",
-      "description": "Open, self-hostable agentic service for organizations — durable, replayable agent sessions, human approvals, governed credentials and memory, running in managed sandboxes or on your own hardware. Apache-2.0.",
-      "language": "TypeScript",
-      "stars": 204,
-      "updatedAt": "2026-10-21T07:35:32Z",
-      "fullName": "Cloudgeni-ai/opengeni"
-    },
-    {
-      "name": "unsloth",
-      "url": "https://github.com/unslothai/unsloth",
-      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4, MiniMax-H3, Gemma 4, FLUX and more.",
+      "name": "omnigent",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
       "language": "Python",
-      "stars": 78340,
-      "updatedAt": "2026-10-21T07:35:25Z",
-      "fullName": "unslothai/unsloth"
+      "stars": 10977,
+      "updatedAt": "2026-10-22T07:31:58Z",
+      "fullName": "omnigent-ai/omnigent"
     },
     {
-      "name": "uzu",
-      "url": "https://github.com/trymirai/uzu",
-      "description": "A high-performance inference engine for AI models",
-      "language": "Rust",
-      "stars": 2461,
-      "updatedAt": "2026-10-21T07:35:20Z",
-      "fullName": "trymirai/uzu"
-    },
-    {
-      "name": "respan-gateway",
-      "url": "https://github.com/respanai/respan-gateway",
-      "description": "One endpoint for every LLM vendor. Any SDK, any model, any tool. One Rust binary.",
-      "language": "Rust",
-      "stars": 87,
-      "updatedAt": "2026-10-21T07:35:10Z",
-      "fullName": "respanai/respan-gateway"
-    },
-    {
-      "name": "claude-code-plugin-tracker",
-      "url": "https://github.com/linny006/claude-code-plugin-tracker",
-      "description": "Live index of Claude Code extensions, hooks, and plugins — refreshed every 15 minutes from GitHub",
-      "language": "Python",
-      "stars": 6,
-      "updatedAt": "2026-10-21T07:35:06Z",
-      "fullName": "linny006/claude-code-plugin-tracker"
-    },
-    {
-      "name": "promptscript",
-      "url": "https://github.com/mrwogu/promptscript",
-      "description": "Prompt-as-Code for Enterprise AI. Standardize, audit, and deploy instructions across any AI coding assistant.",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
-      "stars": 387,
-      "updatedAt": "2026-10-21T07:35:04Z",
-      "fullName": "mrwogu/promptscript"
+      "stars": 360398,
+      "updatedAt": "2026-10-22T07:31:55Z",
+      "fullName": "morluto/rea"
     },
     {
-      "name": "openvort",
-      "url": "https://github.com/openvort/openvort",
-      "description": "Open-source AI Employee Platform — Create AI employees that collaborate with your real team in WeCom, DingTalk, and Feishu, just like hiring a few more colleagues.",
+      "name": "harnessrouter",
+      "url": "https://github.com/HarnessRouter/harnessrouter",
+      "description": "HarnessRouter Community Edition: the self-hosted, Apache-2.0 edition of the unified interface for agent harnesses. Run Codex, Claude Code, Hermes, PI, DSH, and more through one API, with sessions, streaming, files, cancellation, and failure handling. Implement",
       "language": "Python",
-      "stars": 385,
-      "updatedAt": "2026-10-21T07:34:58Z",
-      "fullName": "openvort/openvort"
+      "stars": 3207,
+      "updatedAt": "2026-10-22T07:31:54Z",
+      "fullName": "HarnessRouter/harnessrouter"
     },
     {
       "name": "hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "language": "Python",
-      "stars": 255681,
-      "updatedAt": "2026-10-21T07:34:45Z",
+      "stars": 256049,
+      "updatedAt": "2026-10-22T07:31:49Z",
       "fullName": "NousResearch/hermes-agent"
     },
     {
-      "name": "rl-gym-orchestrator",
-      "url": "https://github.com/raamonp/rl-gym-orchestrator",
-      "description": "Ultimate LLM Gym Trainer Guide 2026: Reinforcement Learning Fine-Tuning Framework",
+      "name": "9router-go",
+      "url": "https://github.com/luqman-v1/9router-go",
+      "description": "High-performance Go proxy gateway for 9Router LLM routing — 32K RPS, 42MB RAM, CGO-free",
+      "language": "Go",
+      "stars": 218,
+      "updatedAt": "2026-10-22T07:31:44Z",
+      "fullName": "luqman-v1/9router-go"
+    },
+    {
+      "name": "bloomery",
+      "url": "https://github.com/midagedev/bloomery",
+      "description": "Hybrid GPU + CPU inference for mixture-of-experts models, written in Rust down to the CUDA kernels. A drop-in llama-server.",
+      "language": "Rust",
+      "stars": 50,
+      "updatedAt": "2026-10-22T07:31:41Z",
+      "fullName": "midagedev/bloomery"
+    },
+    {
+      "name": "agoracosmica",
+      "url": "https://github.com/chipmates/agoracosmica",
+      "description": "A Living Library You Can Talk To. Thirty historical figures, their lives narrated, their ideas open to conversation, in English and German. Nonprofit, open source.",
+      "language": "TypeScript",
+      "stars": 149,
+      "updatedAt": "2026-10-22T07:31:09Z",
+      "fullName": "chipmates/agoracosmica"
+    },
+    {
+      "name": "fletch",
+      "url": "https://github.com/fwdai/fletch",
+      "description": "A new kind of IDE for agentic engineering",
+      "language": "Rust",
+      "stars": 32,
+      "updatedAt": "2026-10-22T07:31:08Z",
+      "fullName": "fwdai/fletch"
+    },
+    {
+      "name": "Adelie",
+      "url": "https://github.com/lmliheng/Adelie",
+      "description": "A local-first multi-agent app development platform, built on PenguinHarness",
+      "language": "TypeScript",
+      "stars": 119,
+      "updatedAt": "2026-10-22T07:30:56Z",
+      "fullName": "lmliheng/Adelie"
+    },
+    {
+      "name": "mcp-servers-live",
+      "url": "https://github.com/linny006/mcp-servers-live",
+      "description": "Auto-updated index of MCP servers shipping on GitHub, refreshed every 15 minutes",
       "language": "HTML",
-      "stars": 55,
-      "updatedAt": "2026-10-21T07:34:42Z",
-      "fullName": "raamonp/rl-gym-orchestrator"
+      "stars": 13,
+      "updatedAt": "2026-10-22T07:30:55Z",
+      "fullName": "linny006/mcp-servers-live"
     },
     {
-      "name": "atris",
-      "url": "https://github.com/atrislabs/atris",
-      "description": "Say what you want in plain words. Atris plans it, builds it, checks it, and shows proof. CLI plus MCP server for AI agents.",
-      "language": "JavaScript",
-      "stars": 71,
-      "updatedAt": "2026-10-21T07:34:37Z",
-      "fullName": "atrislabs/atris"
-    },
-    {
-      "name": "Long-Trainer",
-      "url": "https://github.com/ENDEVSOLS/Long-Trainer",
-      "description": "Production-ready RAG framework for Python — multi-tenant chatbots with streaming, tool calling, agent mode (LangGraph), vector search (FAISS), and persistent MongoDB memory. Built on LangChain.",
+      "name": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "description": "Tamper-evident tracing, policy gates and cross-checks for AI agents: see what the agent did, and why.",
       "language": "Python",
-      "stars": 30,
-      "updatedAt": "2026-10-21T07:34:33Z",
-      "fullName": "ENDEVSOLS/Long-Trainer"
+      "stars": 149,
+      "updatedAt": "2026-10-22T07:30:51Z",
+      "fullName": "Cygnux-Labs/Tracekit"
     },
     {
-      "name": "mcptoon",
-      "url": "https://github.com/activeing123/mcptoon",
-      "description": "One zero-dependency CLI for every MCP server and agent skill. Token optimization, tool discovery and context compression: 71,929 -> 581 tokens (-99.2%, measured), schemas stay out of context. One config for Claude Code, Codex, Cursor, every agent. 341KB, pure ",
+      "name": "lollms",
+      "url": "https://github.com/ParisNeo/lollms",
+      "description": "An all in one AI solution compatible with any known AI service on the planet",
+      "language": "Vue",
+      "stars": 101,
+      "updatedAt": "2026-10-22T07:30:51Z",
+      "fullName": "ParisNeo/lollms"
+    },
+    {
+      "name": "nextclaw",
+      "url": "https://github.com/Peiiii/nextclaw",
+      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
+      "language": "TypeScript",
+      "stars": 262,
+      "updatedAt": "2026-10-22T07:30:50Z",
+      "fullName": "Peiiii/nextclaw"
+    },
+    {
+      "name": "respan-gateway",
+      "url": "https://github.com/respanai/respan-gateway",
+      "description": "One endpoint for every LLM vendor. Any SDK, any model, any tool. One Rust binary.",
+      "language": "Rust",
+      "stars": 129,
+      "updatedAt": "2026-10-22T07:30:45Z",
+      "fullName": "respanai/respan-gateway"
+    },
+    {
+      "name": "Mirrai",
+      "url": "https://github.com/Ch1rpy2613/Mirrai",
+      "description": "不在身边的时候，TA 还在这里。Upload real chat logs, rebuild a digital persona — open-source AI companion with persona distillation, an emotion engine, 11 LLM providers, and a graduation mechanism.",
+      "language": "TypeScript",
+      "stars": 1271,
+      "updatedAt": "2026-10-22T07:30:40Z",
+      "fullName": "Ch1rpy2613/Mirrai"
+    },
+    {
+      "name": "awesome-agent-skills",
+      "url": "https://github.com/linny006/awesome-agent-skills",
+      "description": "Curated, auto-updated awesome-list of vetted AI agent skills with quality ratings for Claude, GPT, a",
       "language": "Python",
-      "stars": 361,
-      "updatedAt": "2026-10-21T07:34:30Z",
-      "fullName": "activeing123/mcptoon"
+      "stars": 42,
+      "updatedAt": "2026-10-22T07:30:30Z",
+      "fullName": "linny006/awesome-agent-skills"
+    },
+    {
+      "name": "skills-tracker",
+      "url": "https://github.com/linny006/skills-tracker",
+      "description": "Real-time tracking of every new GitHub 'skills' repo to capture the AI agent skill ecosystem trend",
+      "language": "Python",
+      "stars": 26,
+      "updatedAt": "2026-10-22T07:30:30Z",
+      "fullName": "linny006/skills-tracker"
+    },
+    {
+      "name": "agent-eval-harness",
+      "url": "https://github.com/linny006/agent-eval-harness",
+      "description": "Live, open-source benchmark for comparing AI coding agents on real GitHub issues",
+      "language": "Python",
+      "stars": 6,
+      "updatedAt": "2026-10-22T07:30:30Z",
+      "fullName": "linny006/agent-eval-harness"
+    },
+    {
+      "name": "rove",
+      "url": "https://github.com/Sma1lboy/rove",
+      "description": "Rove — the agent multiplexer for your terminal. Run coding agents on parallel tasks with isolated worktrees and persistent sessions.",
+      "language": "TypeScript",
+      "stars": 177,
+      "updatedAt": "2026-10-22T07:30:29Z",
+      "fullName": "Sma1lboy/rove"
+    },
+    {
+      "name": "prompt-tools-live",
+      "url": "https://github.com/linny006/prompt-tools-live",
+      "description": "Live-updating tracker of prompt engineering tools, libraries, and techniques — refreshed every 15 mi",
+      "language": "Python",
+      "stars": 11,
+      "updatedAt": "2026-10-22T07:30:25Z",
+      "fullName": "linny006/prompt-tools-live"
     }
   ]
 }
