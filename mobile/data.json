@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T17:15:30.958903+00:00",
+  "updated_at": "2026-10-22T21:41:33.529232+00:00",
   "count": 145,
   "products": [
     {
@@ -128,22 +128,6 @@
       "storages": [
         "128GB"
       ]
-    },
-    {
-      "id": "blackview-wave-2c",
-      "name": "Blackview Wave 2C",
-      "brand": "Blackview",
-      "variants": [
-        "3GB + 32GB"
-      ],
-      "price": 9999,
-      "max_price": 9999,
-      "original_price": null,
-      "rams": [
-        "3GB",
-        "32GB"
-      ],
-      "storages": []
     },
     {
       "id": "blackview-wave-7c",
@@ -634,6 +618,23 @@
       "storages": [
         "256GB",
         "512GB"
+      ]
+    },
+    {
+      "id": "motorola-moto-g06-power",
+      "name": "Motorola Moto G06 Power",
+      "brand": "Motorola",
+      "variants": [
+        "4GB + 64GB"
+      ],
+      "price": 26499,
+      "max_price": 26499,
+      "original_price": null,
+      "rams": [
+        "4GB"
+      ],
+      "storages": [
+        "64GB"
       ]
     },
     {
