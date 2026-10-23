@@ -2,12 +2,21 @@
   "status": "failed",
   "stage": "search_console",
   "message": "\"code\": 403,",
-  "details": "STAGE: credentials\nCHECK: credentials=ok\nSTAGE: ga4\nCHECK: ga4=ok\nSTAGE: search_console\nCHECK: ga4=ok\nERROR: Search Console 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Google Search Console API has not been used in project 687968222575 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/searchconsole.googleapis.com/overview?project=687968222575 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\",\n    \"errors\": [\n      {\n        \"message\": \"Google Search Console API has not been used in project 687968222575 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/se",
+  "details": "STAGE: credentials\nCHECK: credentials=ok\nSTAGE: ga4\nCHECK: ga4=ok\nSTAGE: search_console\nCHECK: ga4=ok\nERROR: Search Console 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"User does not have sufficient permission for site 'https://laxmannepal.com.np/'. See also: https://support.google.com/webmasters/answer/2451999.\",\n    \"errors\": [\n      {\n        \"message\": \"User does not have sufficient permission for site 'https://laxmannepal.com.np/'. See also: https://support.google.com/webmasters/answer/2451999.\",\n        \"domain\": \"global\",\n        \"reason\": \"forbidden\"\n      }\n    ]\n  }\n}",
   "checks": {
     "credentials": "ok"
   },
-  "updatedAt": "2026-10-23T22:31:34.988219+00:00",
+  "updatedAt": "2026-10-23T22:35:16.244707+00:00",
   "history": [
+    {
+      "status": "failed",
+      "stage": "search_console",
+      "message": "\"code\": 403,",
+      "checks": {
+        "credentials": "ok"
+      },
+      "updatedAt": "2026-10-23T22:35:16.244707+00:00"
+    },
     {
       "status": "failed",
       "stage": "search_console",
@@ -90,13 +99,6 @@
       "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
       "checks": {},
       "updatedAt": "2026-10-22T04:58:19.927745+00:00"
-    },
-    {
-      "status": "failed",
-      "stage": "credentials",
-      "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
-      "checks": {},
-      "updatedAt": "2026-10-21T21:47:38.430593+00:00"
     }
   ]
 }
