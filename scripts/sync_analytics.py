@@ -111,8 +111,8 @@ previous_end=current_start-timedelta(days=1); previous_start=previous_end-timede
 
 try:
     print("STAGE: ga4", flush=True)
-    overview_rows=rows(ga4_report([],["activeUsers","sessions","screenPageViews","engagementRate"],1)); overview=overview_rows[0]["metrics"] if overview_rows else {}
-    sources=rows(ga4_report(["sessionDefaultChannelGroup"],["sessions"],10,order_metric="sessions"))
+    overview_rows=rows(ga4_report([],["activeUsers","newUsers","sessions","engagedSessions","screenPageViews","engagementRate","bounceRate"],1)); overview=overview_rows[0]["metrics"] if overview_rows else {}
+    sources=rows(ga4_report(["sessionDefaultChannelGroup"],["sessions","activeUsers","engagedSessions","engagementRate"],10,order_metric="sessions"))
     pages=rows(ga4_report(["pagePath"],["screenPageViews"],1000,order_metric="screenPageViews"))
     countries=rows(ga4_report(["country"],["activeUsers"],15,order_metric="activeUsers"))
     devices=rows(ga4_report(["deviceCategory"],["activeUsers","sessions","screenPageViews","engagedSessions"],10,order_metric="activeUsers"))
@@ -124,7 +124,7 @@ try:
     daily=rows(ga4_report(["date"],["activeUsers","sessions","screenPageViews","engagedSessions","engagementRate"],1000,order_dimension="date"))
     print("CHECK: ga4=ok", flush=True)
     print("STAGE: search_console", flush=True)
-    previous_overview_rows=rows(ga4_report([],["activeUsers","sessions","screenPageViews","engagementRate"],1,start="181daysAgo",end="91daysAgo")); previous_overview=previous_overview_rows[0]["metrics"] if previous_overview_rows else {}
+    previous_overview_rows=rows(ga4_report([],["activeUsers","newUsers","sessions","engagedSessions","screenPageViews","engagementRate","bounceRate"],1,start="181daysAgo",end="91daysAgo")); previous_overview=previous_overview_rows[0]["metrics"] if previous_overview_rows else {}
     cs=current_start.isoformat(); ce=end.isoformat(); ps=previous_start.isoformat(); pe=previous_end.isoformat()
     print("CHECK: ga4=ok", flush=True)
     current_summary=gsc_rows(gsc_query([],start=cs,end=ce)); previous_summary=gsc_rows(gsc_query([],start=ps,end=pe))
