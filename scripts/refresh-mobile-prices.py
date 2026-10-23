@@ -227,7 +227,7 @@ def main():
         image=detail.get("image") or item.get("image")
         # Keep image only when it's a real HTTP URL.
         if image and not str(image).startswith("http"): image=urljoin(item["url"],str(image))
-        specs=extract_specs(title,detail.get("text",""),detail.get("specs",{}))
+        specs={**detail.get("specs",{}), **extract_specs(title,detail.get("text",""),detail.get("specs",{}))}
         enriched.append({"store":item["store"],"title":title,"model":normalize_model(title),"variant":variant_key(title),"price":price,"url":item["url"],"image":image,"specs":specs,"description":detail.get("description"),"checked_at":TODAY,"warranty":None})
         time.sleep(.12)
     # Group exact model/variant only; avoid merging different storage versions.
@@ -235,8 +235,8 @@ def main():
     for x in enriched:
         model=x["model"]
         if not model: continue
-        key=slugify(model+" "+x["variant"])
-        p=groups.setdefault(key,{"slug":key,"brand":brand_for(model),"model":(model+" "+x["variant"]).strip(),"title":(model+" "+x["variant"]).strip(),"variant":x["variant"],"prices":[],"image":None,"description":None,"ram":None,"storage":None,"display":None,"battery":None,"chipset":None,"camera":None,"updated_at":TODAY})
+        key=slugify((model+" "+x["variant"]) if x["variant"] else x["title"])
+        p=groups.setdefault(key,{"slug":key,"brand":brand_for(model),"model":(model+" "+x["variant"]).strip(),"title":(model+" "+x["variant"]).strip(),"variant":x["variant"],"prices":[],"image":None,"description":None,"ram":None,"storage":None,"display":None,"battery":None,"chipset":None,"camera":None,"specifications":{},"updated_at":TODAY})
         if x["price"] and int(x["price"])>1000 and int(x["price"])<3000000:
             if not any(pr["store"]==x["store"] and pr["url"]==x["url"] for pr in p["prices"]):
                 p["prices"].append({"store":x["store"],"price":int(x["price"]),"url":x["url"],"checked_at":TODAY,"warranty":x["warranty"]})
@@ -244,6 +244,7 @@ def main():
         if not p["description"] and x["description"]: p["description"]=x["description"]
         for k,v in x["specs"].items():
             if v and not p.get(k): p[k]=v
+            if v and len(str(v))<160: p["specifications"].setdefault(k,v)
         vm=re.search(r"(\d{1,2})GB/(\d{2,4})GB",x["variant"])
         if vm:
             p["ram"]=p["ram"] or vm.group(1)+"GB"
