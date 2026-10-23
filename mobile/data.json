@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-23T04:58:30.845479+00:00",
-  "count": 144,
+  "updated_at": "2026-10-23T11:45:31.131156+00:00",
+  "count": 147,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -128,6 +128,22 @@
       "storages": [
         "128GB"
       ]
+    },
+    {
+      "id": "blackview-wave-2c",
+      "name": "Blackview Wave 2C",
+      "brand": "Blackview",
+      "variants": [
+        "3GB + 32GB"
+      ],
+      "price": 9999,
+      "max_price": 9999,
+      "original_price": null,
+      "rams": [
+        "3GB",
+        "32GB"
+      ],
+      "storages": []
     },
     {
       "id": "blackview-wave-7c",
@@ -618,6 +634,23 @@
       "storages": [
         "256GB",
         "512GB"
+      ]
+    },
+    {
+      "id": "motorola-moto-g06-power",
+      "name": "Motorola Moto G06 Power",
+      "brand": "Motorola",
+      "variants": [
+        "4GB + 64GB"
+      ],
+      "price": 26499,
+      "max_price": 26499,
+      "original_price": null,
+      "rams": [
+        "4GB"
+      ],
+      "storages": [
+        "64GB"
       ]
     },
     {
@@ -1170,6 +1203,25 @@
       ]
     },
     {
+      "id": "realme-c85-5g",
+      "name": "Realme C85 5G",
+      "brand": "Realme",
+      "variants": [
+        "Realme C85 5G - 8GB - 128GB",
+        "Realme C85 5G - 8GB - 256GB"
+      ],
+      "price": 39999,
+      "max_price": 44999,
+      "original_price": null,
+      "rams": [
+        "8GB"
+      ],
+      "storages": [
+        "128GB",
+        "256GB"
+      ]
+    },
+    {
       "id": "realme-c85-pro",
       "name": "Realme C85 Pro",
       "brand": "Realme",
@@ -1208,16 +1260,20 @@
       "name": "Realme Note 60x",
       "brand": "Realme",
       "variants": [
-        "3GB+64GB"
+        "3GB+64GB",
+        "4GB+128GB",
+        "4GB+64GB"
       ],
       "price": 15999,
-      "max_price": 15999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
-        "3GB"
+        "3GB",
+        "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -1225,15 +1281,19 @@
       "name": "Realme Note 70",
       "brand": "Realme",
       "variants": [
-        "6GB+128GB"
+        "6GB+128GB",
+        "4GB+128GB",
+        "4GB+64GB"
       ],
-      "price": 23999,
+      "price": 16999,
       "max_price": 23999,
       "original_price": null,
       "rams": [
+        "4GB",
         "6GB"
       ],
       "storages": [
+        "64GB",
         "128GB"
       ]
     },
@@ -1885,12 +1945,14 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "4GB + 128GB"
       ],
-      "price": 32999,
+      "price": 29999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
+        "4GB",
         "6GB"
       ],
       "storages": [
@@ -1919,15 +1981,17 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+128GB"
+        "4GB+128GB",
+        "4GB+64GB"
       ],
-      "price": 25999,
+      "price": 21999,
       "max_price": 25999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
+        "64GB",
         "128GB"
       ]
     },
@@ -2269,16 +2333,18 @@
       "name": "ZTE Nubia A57",
       "brand": "ZTE",
       "variants": [
-        "4GB + 64GB"
+        "4GB + 64GB",
+        "4GB + 128GB"
       ],
       "price": 21999,
-      "max_price": 21999,
+      "max_price": 24499,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
