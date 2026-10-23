@@ -1,128 +1,275 @@
 #!/usr/bin/env python3
-"""Refresh phone listings from the public GadgetByte Nepal mobile-price category.
-Only publish values actually found in the source; never invent prices/specifications.
+"""Build a conservative Nepal phone catalogue from public retailer/product listings.
+
+Only prices and specifications actually found on a page are published. A retailer
+price is kept separate by store and variant; failed or ambiguous matches are omitted.
 """
 from __future__ import annotations
-import json, re, time
+import json, re, time, hashlib, html
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
-BASE = "https://www.gadgetbytenepal.com/category/mobile-price-in-nepal/"
 OUT = Path("data/mobile-prices.json")
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; LaxmanNepalPriceDirectory/1.0; +https://laxmannepal.com.np/)"}
-PRICE_RE = re.compile(r"(?:NPR|Rs\.?|रु\.?|रु)\s*([\d,]{4,})", re.I)
-RAM_RE = re.compile(r"\b(\d{1,2})\s*GB\s*(?:RAM)?\b", re.I)
-STORAGE_RE = re.compile(r"\b(\d{2,4})\s*GB\s*(?:ROM|storage|internal)?\b|\b(1|2)\s*TB\b", re.I)
-BRANDS = ["Apple","Samsung","Xiaomi","Redmi","Poco","OnePlus","Vivo","OPPO","Oppo","Realme","Motorola","Nothing","Honor","Huawei","Tecno","Infinix","Nokia","Google","iQOO","Itel","ZTE","Lava","CMF","Lenovo"]
+DETAIL_ROOT = Path("mobile-price-in-nepal/phones")
+TODAY = datetime.now(timezone.utc).date().isoformat()
+HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
 
-def clean(s: str) -> str:
-    return re.sub(r"\s+", " ", s or "").strip()
+# Public store category pages. The store label is what readers see; source provenance
+# is kept in each price record as a direct product/listing URL for price verification.
+SOURCES = [
+    {"store":"Oliz Store","url":"https://www.olizstore.com/collections/phone","kind":"shop"},
+    {"store":"Neo Store","url":"https://www.neostore.com.np/product-category/mobile-brands","kind":"shop"},
+    {"store":"National Mobile","url":"https://store.nationalmobile.com.np/Mobile-Price-in-Nepal","kind":"shop"},
+    {"store":"GadgetByte Nepal","url":"https://www.gadgetbytenepal.com/category/mobile-price-in-nepal/","kind":"guide"},
+]
+BRANDS = ["Apple","Samsung","Xiaomi","Redmi","Poco","OnePlus","Vivo","OPPO","Realme","Motorola","Nothing","Honor","Huawei","Tecno","Infinix","Nokia","Google","iQOO","Itel","ZTE","Lava","CMF","Lenovo"]
+PRICE_RE = re.compile(r"(?:NPR|Rs\.?|रु\.?|रु)\s*([\d,]{4,7})", re.I)
+VARIANT_RE = re.compile(r"\b(\d{1,2})\s*(?:GB)?\s*(?:\+|/|RAM)\s*(\d{2,4})\s*GB\b", re.I)
 
-def fetch(url: str):
-    r = requests.get(url, headers=HEADERS, timeout=25)
-    r.raise_for_status()
-    return BeautifulSoup(r.text, "html.parser")
-
-def find_brand(title: str) -> str:
-    low = title.lower()
-    for b in sorted(BRANDS, key=len, reverse=True):
-        if re.search(r"\b" + re.escape(b.lower()) + r"\b", low):
-            return "OPPO" if b.lower() == "oppo" else b
+def clean(v): return re.sub(r"\s+", " ", str(v or "")).strip()
+def fetch(url):
+    r=requests.get(url,headers=HEADERS,timeout=25); r.raise_for_status()
+    return BeautifulSoup(r.text,"html.parser")
+def money(text):
+    m=PRICE_RE.search(clean(text))
+    return int(m.group(1).replace(",","")) if m else None
+def brand_for(name):
+    for b in sorted(BRANDS,key=len,reverse=True):
+        if re.search(r"\b"+re.escape(b)+r"\b",name,re.I):
+            return "OPPO" if b.lower()=="oppo" else b
     return "Other"
-
-def first_price(text: str):
-    # Prefer explicitly labelled phone price lines, not arbitrary specs or dates.
-    for line in text.splitlines():
-        if re.search(r"\b(price|priced|cost|नेपालमा मूल्य|मूल्य)\b", line, re.I):
-            m = PRICE_RE.search(line)
-            if m:
-                return int(m.group(1).replace(",", ""))
-    m = PRICE_RE.search(text)
-    return int(m.group(1).replace(",", "")) if m else None
-
-def specs_from(text: str):
-    ram = storage = display = battery = None
-    # Keep RAM/storage conservative: only parse near explicit labels.
-    for line in text.splitlines():
-        if not ram and re.search(r"\bRAM\b", line, re.I):
-            m = re.search(r"\b(\d{1,2})\s*GB\s*RAM\b", line, re.I)
-            if m: ram = m.group(1) + "GB"
-        if not storage and re.search(r"\b(ROM|storage|internal storage)\b", line, re.I):
-            m = re.search(r"\b(\d{2,4})\s*GB\b|\b(1|2)\s*TB\b", line, re.I)
-            if m: storage = (m.group(1) + "GB") if m.group(1) else (m.group(2) + "TB")
-        if not display:
-            m = re.search(r"(\d(?:\.\d{1,2})?)\s*(?:-inch|inch|inches|″)", line, re.I)
-            if m: display = m.group(1) + " inch"
-        if not battery:
-            m = re.search(r"\b(\d{3,5})\s*mAh\b", line, re.I)
-            if m: battery = m.group(1) + "mAh"
-    return ram, storage, display, battery
+def slugify(text):
+    s=re.sub(r"[^a-z0-9]+","-",text.lower()).strip("-")
+    return s[:90] or hashlib.sha1(text.encode()).hexdigest()[:12]
+def jsonld_objects(soup):
+    out=[]
+    for tag in soup.select('script[type="application/ld+json"]'):
+        try:
+            val=json.loads(tag.string or tag.get_text())
+            stack=val if isinstance(val,list) else [val]
+            while stack:
+                obj=stack.pop()
+                if isinstance(obj,dict):
+                    if isinstance(obj.get("@graph"),list): stack.extend(obj["@graph"])
+                    out.append(obj)
+                elif isinstance(obj,list): stack.extend(obj)
+        except Exception: pass
+    return out
+def product_meta(soup, fallback_name):
+    title=fallback_name; image=None; price=None; desc=None; specs={}
+    for obj in jsonld_objects(soup):
+        typ=obj.get("@type",[])
+        if isinstance(typ,str): typ=[typ]
+        if "Product" not in typ: continue
+        title=clean(obj.get("name") or title)
+        desc=clean(obj.get("description"))
+        im=obj.get("image")
+        if isinstance(im,list): im=im[0] if im else None
+        if isinstance(im,dict): im=im.get("url")
+        if im: image=urljoin(str(soup.base.get("href")) if soup.base else "",str(im))
+        offers=obj.get("offers",{})
+        if isinstance(offers,list): offers=offers[0] if offers else {}
+        if isinstance(offers,dict):
+            try: price=int(float(offers.get("price") or offers.get("lowPrice") or 0)) or None
+            except Exception: pass
+        break
+    if not image:
+        tag=soup.select_one('meta[property="og:image"],meta[name="twitter:image"]')
+        if tag: image=tag.get("content")
+    if not desc:
+        tag=soup.select_one('meta[name="description"]')
+        if tag: desc=clean(tag.get("content"))
+    if not price:
+        for tag in soup.select('meta[property="product:price:amount"],meta[itemprop="price"],meta[property="og:price:amount"]'):
+            price=money(tag.get("content",""))
+            if price: break
+    text=clean(soup.get_text(" ",strip=True))
+    if not price: price=money(text)
+    # Structured feature tables and explicit label/value rows only.
+    for row in soup.select("tr, .woocommerce-product-attributes-item, .product-info-item, li"):
+        bits=[clean(x.get_text(" ",strip=True)) for x in row.select("th,td,.label,.value,strong,b")]
+        if len(bits)>=2:
+            k=bits[0].lower().rstrip(":")
+            v=bits[-1]
+            if k and v and len(v)<120: specs[k]=v
+    return {"title":title,"image":image,"price":price,"description":desc,"specs":specs,"text":text}
+def parse_listing(source):
+    soup=fetch(source["url"])
+    found=[]
+    # Prefer cards/product links. Restrict to links with a visible price in the same card.
+    selectors=[".product","li.product",".product-item",".product-card","article",".jeg_post","tr"]
+    nodes=[]
+    for sel in selectors:
+        nodes=soup.select(sel)
+        if len(nodes)>=3: break
+    for node in nodes:
+        text=clean(node.get_text(" ",strip=True))
+        if len(text)<8: continue
+        price=money(text)
+        anchors=node.select('a[href]')
+        if not anchors: continue
+        # Choose the longest plausible product title link, avoiding category/navigation links.
+        choices=[]
+        for a in anchors:
+            title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True))
+            href=urljoin(source["url"],a.get("href",""))
+            path=urlparse(href).path.lower()
+            if len(title)<5 or href==source["url"] or any(x in path for x in ["/cart","/account","/category/","/collections/","/product-category/","/tag/"]): continue
+            if not re.search(r"iphone|galaxy|redmi|poco|pixel|oneplus|vivo|oppo|realme|motorola|nothing|honor|infinix|tecno|nokia|phone|mobile|samsung|xiaomi|cmf|nubia|zte",title,re.I): continue
+            choices.append((len(title),title,href,a))
+        if not choices: continue
+        _,title,href,a=max(choices,key=lambda x:x[0])
+        # Prefer the product image inside this card.
+        img=node.select_one("img")
+        image=None
+        if img:
+            image=img.get("data-src") or img.get("data-lazy-src") or img.get("src") or img.get("srcset","").split(",")[0].split(" ")[0]
+            if image: image=urljoin(source["url"],image)
+        # If a listing price exists, it's evidence for that store. If absent, fetch product page.
+        found.append({"store":source["store"],"title":title,"url":href,"price":price,"image":image,"kind":source["kind"]})
+    # Product cards are often rendered differently; fall back to visible links then inspect pages.
+    if not found:
+        for a in soup.select('a[href]'):
+            title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True))
+            href=urljoin(source["url"],a.get("href",""))
+            if len(title)<7 or not re.search(r"iphone|galaxy|redmi|poco|pixel|oneplus|vivo|oppo|realme|motorola|nothing|honor|infinix|tecno|phone|mobile|samsung|xiaomi|cmf|nubia|zte",title,re.I): continue
+            if urlparse(href).netloc!=urlparse(source["url"]).netloc: continue
+            found.append({"store":source["store"],"title":title,"url":href,"price":None,"image":None,"kind":source["kind"]})
+    # De-dupe listing candidates by URL.
+    unique={}
+    for item in found: unique.setdefault(item["url"],item)
+    return list(unique.values())
+def variant_key(title):
+    m=VARIANT_RE.search(title)
+    if m: return f"{m.group(1)}GB/{m.group(2)}GB"
+    m=re.search(r"\b(\d{1,2})\s*GB\s*\+\s*(\d{2,4})\s*GB\b",title,re.I)
+    return f"{m.group(1)}GB/{m.group(2)}GB" if m else ""
+def normalize_model(title):
+    # Remove price, store tags and memory variant so same handset can be grouped.
+    s=re.sub(r"\b\d{1,2}\s*GB\s*(?:\+|/)\s*\d{2,4}\s*GB\b"," ",title,flags=re.I)
+    s=re.sub(r"\b\d{1,2}\s*\+\s*\d{2,4}\s*GB\b"," ",s,flags=re.I)
+    s=re.sub(r"\([^)]*(?:GB|RAM|ROM|storage)[^)]*\)"," ",s,flags=re.I)
+    s=re.sub(r"\s+"," ",s).strip(" -|·")
+    return s
+def extract_specs(title, text, specs_map):
+    blob=title+" "+text
+    ram=storage=display=battery=chipset=camera=None
+    # Prefer explicit row labels from the product page.
+    def labelled(keys):
+        for k,v in specs_map.items():
+            if any(x in k for x in keys) and v and len(v)<80: return v
+        return None
+    ram=labelled(["ram","memory"])
+    storage=labelled(["storage","rom","internal"])
+    display=labelled(["display","screen"])
+    battery=labelled(["battery","capacity"])
+    chipset=labelled(["processor","chipset","cpu"])
+    camera=labelled(["camera"])
+    if not ram:
+        m=re.search(r"\b(\d{1,2})\s*GB\s*RAM\b",blob,re.I); ram=m.group(1)+"GB" if m else None
+    if not storage:
+        m=re.search(r"\b(\d{2,4})\s*GB\s*(?:ROM|storage|internal storage)\b",blob,re.I); storage=m.group(1)+"GB" if m else None
+    if not display:
+        m=re.search(r"(\d(?:\.\d{1,2})?)\s*(?:-inch|inch|inches|″)",blob,re.I); display=m.group(1)+" inch" if m else None
+    if not battery:
+        m=re.search(r"\b(\d{3,5})\s*mAh\b",blob,re.I); battery=m.group(1)+"mAh" if m else None
+    if not chipset:
+        m=re.search(r"(?:Snapdragon|Dimensity|Helio|Exynos|Tensor|A\d+ Bionic)[^,.;]{0,45}",blob,re.I); chipset=clean(m.group(0)) if m else None
+    if not camera:
+        m=re.search(r"\b(\d{2,3})\s*MP\b",blob,re.I); camera=m.group(0) if m else None
+    return {"ram":clean(ram) or None,"storage":clean(storage) or None,"display":clean(display) or None,"battery":clean(battery) or None,"chipset":clean(chipset) or None,"camera":clean(camera) or None}
+def page_template(p):
+    title=p["model"]; prices=p.get("prices",[])
+    best=min((x for x in prices if x.get("price")),key=lambda x:x["price"],default=None)
+    esc=lambda x:html.escape(str(x or ""),quote=True)
+    canonical="https://laxmannepal.com.np/mobile-price-in-nepal/phones/"+p["slug"]+"/"
+    price_rows="".join(f'<tr><td><a href="{esc(x["url"])}" target="_blank" rel="nofollow sponsored noopener">{esc(x["store"])}</a></td><td>Rs. {int(x["price"]):,}</td><td>{esc(x.get("warranty") or "Check with store")}</td><td>{esc(x.get("checked_at") or TODAY)}</td><td><a href="{esc(x["url"])}" target="_blank" rel="nofollow sponsored noopener">View offer ↗</a></td></tr>' for x in sorted(prices,key=lambda x:x.get("price") or 10**12))
+    specs=[("Brand",p.get("brand")),("RAM",p.get("ram")),("Storage",p.get("storage")),("Display",p.get("display")),("Battery",p.get("battery")),("Chipset",p.get("chipset")),("Camera",p.get("camera"))]
+    spec_rows="".join(f'<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>' for k,v in specs if v)
+    image=p.get("image") or ""
+    jsonld={"@context":"https://schema.org","@type":"Product","name":title,"image":[image] if image else [],"brand":{"@type":"Brand","name":p.get("brand","Other")},"description":f"{title} Nepal price comparison, specifications and retailer offers.","url":canonical}
+    if best: jsonld["offers"]={"@type":"AggregateOffer","priceCurrency":"NPR","lowPrice":best["price"],"offerCount":len(prices),"availability":"https://schema.org/InStock","url":best["url"]}
+    structured=json.dumps(jsonld,ensure_ascii=False).replace("</","<\\/")
+    image_html=f'<img src="{esc(image)}" alt="{esc(title)} smartphone" loading="eager">' if image else '<div class="placeholder">📱</div>'
+    best_html=f'Rs. {best["price"]:,}' if best else 'No verified retailer price yet'
+    body=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} Price in Nepal, Specs & Store Offers | Laxman Nepal</title><meta name="description" content="Compare {esc(title)} price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images."><link rel="canonical" href="{canonical}"><meta property="og:title" content="{esc(title)} Price in Nepal & Full Specifications"><meta property="og:description" content="Compare retailer prices and specifications for {esc(title)} in Nepal."><meta property="og:type" content="product"><meta property="og:image" content="{esc(image)}"><script type="application/ld+json">{structured}</script><style>*{{box-sizing:border-box}}body{{margin:0;background:#f7f8fb;color:#101828;font:16px system-ui,sans-serif}}main{{max-width:1100px;margin:auto;padding:24px 16px 60px}}a{{color:#2563eb}}.back{{display:inline-block;margin:6px 0 22px}}.hero,.panel{{background:#fff;border:1px solid #e4e7ec;border-radius:20px;padding:clamp(18px,4vw,34px);margin-bottom:18px}}.hero{{display:grid;grid-template-columns:minmax(200px, .8fr) 1.2fr;gap:28px;align-items:center}}.photo{{min-height:250px;display:grid;place-items:center;background:#f8fafc;border-radius:16px;padding:15px}}.photo img{{width:100%;height:280px;object-fit:contain}}.placeholder{{font-size:80px}}.brand{{font-size:12px;font-weight:800;letter-spacing:.1em;color:#2563eb;text-transform:uppercase}}h1{{font-size:clamp(30px,5vw,48px);line-height:1.05;letter-spacing:-.04em;margin:10px 0}}.best{{font-size:clamp(24px,4vw,38px);font-weight:900;margin:14px 0}}.muted{{color:#667085;line-height:1.65}}h2{{margin-top:0}}.table-wrap{{overflow-x:auto}}table{{width:100%;border-collapse:collapse;min-width:600px}}td,th{{text-align:left;padding:13px 10px;border-bottom:1px solid #eaecf0}}th{{font-size:12px;color:#667085}}.specs th{{width:35%}}.empty{{padding:18px;background:#f9fafb;border-radius:12px;color:#667085}}.cta{{display:inline-block;background:#111827;color:white;padding:11px 15px;border-radius:10px;text-decoration:none;font-weight:750}}@media(max-width:650px){{.hero{{grid-template-columns:1fr}}.photo{{min-height:180px}}.photo img{{height:220px}}}}</style></head><body><main><a class="back" href="/mobile-price-in-nepal/">← All mobile prices in Nepal</a><section class="hero"><div class="photo">{image_html}</div><div><div class="brand">{esc(p.get("brand"))}</div><h1>{esc(title)} Price in Nepal</h1><p class="muted">Compare store prices for this exact listing. Check the RAM/storage variant, stock and warranty with the seller before ordering.</p><div class="best">{best_html}</div><p class="muted">Lowest listed offer · Checked {TODAY}</p>{f'<a class="cta" href="{esc(best["url"])}" target="_blank" rel="nofollow sponsored noopener">View cheapest store ↗</a>' if best else ''}</div></section><section class="panel"><h2>Compare prices by store</h2><p class="muted">Offers are shown separately so you can find the lowest available price. Retailer prices and stock can change; confirm the final amount before paying.</p>{('<div class="table-wrap"><table><thead><tr><th>Store</th><th>Price</th><th>Warranty</th><th>Checked</th><th>Link</th></tr></thead><tbody>'+price_rows+'</tbody></table></div>') if prices else '<div class="empty">No current store offer could be confirmed for this model. Check back after the next refresh.</div>'}</section><section class="panel"><h2>{esc(title)} specifications</h2>{('<div class="table-wrap"><table class="specs">'+spec_rows+'</table></div>') if spec_rows else '<div class="empty">Full specifications are not yet confirmed. We publish only specifications found in product information.</div>'}<p class="muted">Specifications may vary by regional model and RAM/storage variant. Verify the model number and box details with the store.</p></section><section class="panel"><h2>Frequently asked questions</h2><h3>What is the lowest {esc(title)} price in Nepal?</h3><p class="muted">The lowest recorded retailer offer on this page is <strong>{best_html}</strong>{' at '+esc(best["store"]) if best else ''}. Offers may change after the displayed check date.</p><h3>Are these prices for the same variant?</h3><p class="muted">Compare the listed configuration and confirm RAM, storage, warranty and availability with the retailer before purchase.</p><h3>How do I buy this phone?</h3><p class="muted">Open the store offer from the table above and confirm final price, delivery, warranty and stock directly with that store.</p></section><p class="muted">Last checked: {TODAY}. Laxman Nepal is an independent comparison directory; store names and product marks belong to their respective owners.</p></main></body></html>'''
+    return body
 
 def main():
-    soup = fetch(BASE)
-    candidates = []
-    seen = set()
-    # WordPress category cards; deliberately avoid navigation/sidebar links.
-    for a in soup.select("article a[href], .post a[href], .jeg_post_title a[href], h2 a[href], h3 a[href]"):
-        href = urljoin(BASE, a.get("href", "").strip())
-        title = clean(a.get_text(" ", strip=True))
-        if not title or len(title) < 7 or not href.startswith("https://www.gadgetbytenepal.com/"):
-            continue
-        if "/category/" in urlparse(href).path or urlparse(href).path in ("/", ""):
-            continue
-        if href in seen: continue
-        seen.add(href)
-        parent = a.find_parent("article") or a.find_parent(class_=re.compile(r"post|item|article", re.I)) or a.parent
-        img = parent.select_one("img") if parent else None
-        image = None
-        if img:
-            image = img.get("data-src") or img.get("data-lazy-src") or img.get("src")
-            if image and image.startswith("//"): image = "https:" + image
-            if image and not image.startswith("http"): image = urljoin(BASE, image)
-        candidates.append({"title": title, "url": href, "image": image})
-    # Fetch individual article pages to extract real values, with a polite delay.
-    phones = []
-    for item in candidates[:180]:
+    raw=[]
+    for source in SOURCES:
         try:
-            detail = fetch(item["url"])
-            article = detail.select_one("article .entry-content, .entry-content, .jeg_post_content, article")
-            text = clean(article.get_text("\n", strip=True) if article else detail.get_text("\n", strip=True))
-            # Keep likely phone/list articles, not unrelated category noise.
-            title = item["title"]
-            if not re.search(r"\b(price|mobile|phone|smartphone|series|iphone|galaxy|redmi|pixel|oneplus|vivo|oppo|realme|poco|motorola|nothing|honor|infinix|tecno|nokia|iqoo)\b", title, re.I):
-                continue
-            price = first_price(text)
-            ram, storage, display, battery = specs_from(text)
-            phones.append({
-                "brand": find_brand(title), "model": title, "title": title,
-                "price": price, "price_text": None if price else "Price not confirmed",
-                "ram": ram, "storage": storage, "display": display, "battery": battery,
-                "image": item["image"], "url": item["url"],
-                "updated_at": datetime.now(timezone.utc).date().isoformat()
-            })
-            time.sleep(0.35)
+            items=parse_listing(source)
+            print(f'{source["store"]}: found {len(items)} candidates')
+            raw.extend(items)
         except Exception as exc:
-            print(f"Skipping {item['url']}: {exc}")
-    # Stable de-duplication by canonical article URL.
-    unique, final = set(), []
+            print(f'Unable to read {source["store"]}: {exc}')
+    # Visit each candidate product page for price/image/specs when the listing card is incomplete.
+    enriched=[]
+    seen=set()
+    for item in raw:
+        if item["url"] in seen: continue
+        seen.add(item["url"])
+        detail={"title":item["title"],"image":item.get("image"),"price":item.get("price"),"description":None,"specs":{},"text":""}
+        try:
+            soup=fetch(item["url"])
+            meta=product_meta(soup,item["title"])
+            detail.update({k:v for k,v in meta.items() if v not in (None,"",{})})
+        except Exception as exc: print(f'Skip detail {item["url"]}: {exc}')
+        price=detail.get("price") or item.get("price")
+        # Do not publish non-phone categories or pages without a plausible product name.
+        title=clean(detail.get("title") or item["title"])
+        if not re.search(r"iphone|galaxy|redmi|poco|pixel|oneplus|vivo|oppo|realme|motorola|nothing|honor|infinix|tecno|nokia|phone|mobile|samsung|xiaomi|cmf|nubia|zte",title,re.I): continue
+        image=detail.get("image") or item.get("image")
+        # Keep image only when it's a real HTTP URL.
+        if image and not str(image).startswith("http"): image=urljoin(item["url"],str(image))
+        specs=extract_specs(title,detail.get("text",""),detail.get("specs",{}))
+        enriched.append({"store":item["store"],"title":title,"model":normalize_model(title),"variant":variant_key(title),"price":price,"url":item["url"],"image":image,"specs":specs,"description":detail.get("description"),"checked_at":TODAY,"warranty":None})
+        time.sleep(.12)
+    # Group exact model/variant only; avoid merging different storage versions.
+    groups={}
+    for x in enriched:
+        model=x["model"]
+        if not model: continue
+        key=slugify(model+" "+x["variant"])
+        p=groups.setdefault(key,{"slug":key,"brand":brand_for(model),"model":(model+" "+x["variant"]).strip(),"title":(model+" "+x["variant"]).strip(),"variant":x["variant"],"prices":[],"image":None,"description":None,"ram":None,"storage":None,"display":None,"battery":None,"chipset":None,"camera":None,"updated_at":TODAY})
+        if x["price"] and int(x["price"])>1000 and int(x["price"])<3000000:
+            if not any(pr["store"]==x["store"] and pr["url"]==x["url"] for pr in p["prices"]):
+                p["prices"].append({"store":x["store"],"price":int(x["price"]),"url":x["url"],"checked_at":TODAY,"warranty":x["warranty"]})
+        if not p["image"] and x["image"]: p["image"]=x["image"]
+        if not p["description"] and x["description"]: p["description"]=x["description"]
+        for k,v in x["specs"].items():
+            if v and not p.get(k): p[k]=v
+        vm=re.search(r"(\d{1,2})GB/(\d{2,4})GB",x["variant"])
+        if vm:
+            p["ram"]=p["ram"] or vm.group(1)+"GB"
+            p["storage"]=p["storage"] or vm.group(2)+"GB"
+    phones=[]
+    for p in groups.values():
+        p["prices"].sort(key=lambda x:x["price"])
+        p["price"]=p["prices"][0]["price"] if p["prices"] else None
+        p["best_store"]=p["prices"][0]["store"] if p["prices"] else None
+        p["best_url"]=p["prices"][0]["url"] if p["prices"] else None
+        p["price_count"]=len(p["prices"])
+        phones.append(p)
+    phones.sort(key=lambda p:(p["brand"],p["model"]))
+    # Generate search-indexable detail pages, one per model/variant.
+    DETAIL_ROOT.mkdir(parents=True,exist_ok=True)
+    keep=set()
     for p in phones:
-        if p["url"] not in unique:
-            unique.add(p["url"]); final.append(p)
-    payload = {
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-        "source": "GadgetByte Nepal",
-        "source_url": BASE,
-        "status": "Daily automated refresh; extracted fields may be incomplete",
-        "phones": final
-    }
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {len(final)} listings to {OUT}")
-    if not final:
-        raise SystemExit("No listings were extracted; refusing to publish an empty refresh.")
-
-if __name__ == "__main__":
-    main()
+        folder=DETAIL_ROOT/p["slug"]; folder.mkdir(parents=True,exist_ok=True)
+        (folder/"index.html").write_text(page_template(p),encoding="utf-8")
+        keep.add(p["slug"])
+    # Remove stale generated pages after a model disappears from the catalogue.
+    for folder in DETAIL_ROOT.iterdir():
+        if folder.is_dir() and folder.name not in keep:
+            import shutil; shutil.rmtree(folder)
+    payload={"updated_at":datetime.now(timezone.utc).isoformat(),"status":"Daily retailer refresh; prices shown only when extracted from a public listing","phones":phones,"store_count":len({pr["store"] for p in phones for pr in p["prices"]}),"price_count":sum(len(p["prices"]) for p in phones)}
+    OUT.parent.mkdir(parents=True,exist_ok=True)
+    OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print(f'Wrote {len(phones)} model variants and {payload["price_count"]} store prices')
+    if not phones: raise SystemExit("No product variants extracted; refusing to overwrite the catalogue.")
+if __name__=="__main__": main()
