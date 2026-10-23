@@ -113,7 +113,7 @@ try:
     print("STAGE: ga4", flush=True)
     overview_rows=rows(ga4_report([],["activeUsers","sessions","screenPageViews","engagementRate"],1)); overview=overview_rows[0]["metrics"] if overview_rows else {}
     sources=rows(ga4_report(["sessionDefaultChannelGroup"],["sessions"],10,order_metric="sessions"))
-    pages=rows(ga4_report(["pagePath"],["screenPageViews"],20,order_metric="screenPageViews"))
+    pages=rows(ga4_report(["pagePath"],["screenPageViews"],1000,order_metric="screenPageViews"))
     countries=rows(ga4_report(["country"],["activeUsers"],15,order_metric="activeUsers"))
     devices=rows(ga4_report(["deviceCategory"],["activeUsers"],10,order_metric="activeUsers"))
     events=rows(ga4_report(["eventName"],["eventCount"],50,order_metric="eventCount"))
