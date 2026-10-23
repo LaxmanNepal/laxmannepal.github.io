@@ -1,13 +1,22 @@
 {
   "status": "failed",
   "stage": "ga4",
-  "message": "\"code\": 403,",
-  "details": "STAGE: credentials\nCHECK: credentials=ok\nSTAGE: ga4\nERROR: GA4 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Google Analytics Data API has not been used in project 687968222575 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/analyticsdata.googleapis.com/overview?project=687968222575 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"SERVICE_DISABLED\",\n        \"domain\": \"googleapis.com\",\n        \"metad",
+  "message": "\"code\": 400,",
+  "details": "STAGE: credentials\nCHECK: credentials=ok\nSTAGE: ga4\nERROR: GA4 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid JSON payload received. Unknown name \\\"dimension\\\" at 'order_bys[0].dimension': Cannot find field.\",\n    \"status\": \"INVALID_ARGUMENT\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.BadRequest\",\n        \"fieldViolations\": [\n          {\n            \"field\": \"order_bys[0].dimension\",\n            \"description\": \"Invalid JSON payload received. Unknown name \\\"dimension\\\" at 'order_bys[0].dimension': Cannot find field.\"\n          }\n        ]\n      }\n    ]\n  }\n}",
   "checks": {
     "credentials": "ok"
   },
-  "updatedAt": "2026-10-23T22:20:49.608556+00:00",
+  "updatedAt": "2026-10-23T22:28:53.815434+00:00",
   "history": [
+    {
+      "status": "failed",
+      "stage": "ga4",
+      "message": "\"code\": 400,",
+      "checks": {
+        "credentials": "ok"
+      },
+      "updatedAt": "2026-10-23T22:28:53.815434+00:00"
+    },
     {
       "status": "failed",
       "stage": "ga4",
@@ -86,13 +95,6 @@
       "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
       "checks": {},
       "updatedAt": "2026-10-21T17:18:55.708269+00:00"
-    },
-    {
-      "status": "failed",
-      "stage": "credentials",
-      "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
-      "checks": {},
-      "updatedAt": "2026-10-21T11:58:54.444540+00:00"
     }
   ]
 }
