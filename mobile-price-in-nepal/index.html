@@ -37,8 +37,7 @@
 </div>
 <div class="mp-footer">
 <h2>About mobile prices in Nepal</h2>
-Prices and specifications can change by retailer, memory variant, official warranty and promotions. This directory displays information extracted from linked public listings; an unavailable price or specification is left unconfirmed rather than guessed. Always check the source listing and confirm the exact RAM/storage variant with the seller before purchasing.
-<p>Data source: <a href="https://www.gadgetbytenepal.com/category/mobile-price-in-nepal/" target="_blank" rel="noopener noreferrer">GadgetByte Nepal — Mobile Price in Nepal</a>. Laxman Nepal is an independent directory and is not affiliated with GadgetByte Nepal.</p>
+Prices and specifications can change by retailer, memory variant, official warranty and promotions. Compare store-wise offers, confirm the exact RAM/storage variant, and verify stock and warranty with the seller before purchasing. Prices that cannot be be confirmed are not guessed.
 </div>
 </section>
 </main>
@@ -77,18 +76,23 @@ function update(){
 function card(p){
  const title=p.model||p.title||'Unnamed phone',brand=brandOf(p),specs=[];
  if(p.ram)specs.push(p.ram+' RAM');if(p.storage)specs.push(p.storage+' storage');if(p.display)specs.push(p.display);if(p.battery)specs.push(p.battery);
- const photo=p.image?'<img src="'+esc(p.image)+'" alt="'+esc(title)+'" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentElement.innerHTML=\'<span class=&quot;mp-no-photo&quot; aria-hidden=&quot;true&quot;>📱</span>\'">':'<span class="mp-no-photo" aria-hidden="true">📱</span>';
- return '<article class="mp-card"><div class="mp-photo">'+photo+'</div><div class="mp-card-body"><span class="mp-brand-name">'+esc(brand)+'</span><h3>'+esc(title)+'</h3><div class="mp-price'+(p.price?'':' unknown')+'">'+esc(p.price?fmt(p.price):p.price_text||'Price not confirmed')+'</div><div class="mp-specs">'+(specs.length?specs.map(s=>'<span>'+esc(s)+'</span>').join(''):'<span>Specs not confirmed</span>')+'</div><p class="mp-note">Verify exact variant and current retailer price.</p><a class="mp-source" href="'+esc(p.url||'https://www.gadgetbytenepal.com/category/mobile-price-in-nepal/')+'" target="_blank" rel="noopener noreferrer">View source listing ↗</a></div></article>';
+ const offers=Array.isArray(p.prices)?p.prices.filter(x=>Number(x.price)>0).sort((a,b)=>Number(a.price)-Number(b.price)):[];
+ const cheapest=offers[0],price=cheapest?Number(cheapest.price):Number(p.price);
+ const photo=p.image?'<img src="'+esc(p.image)+'" alt="'+esc(title)+' phone image" loading="lazy" decoding="async" referrerpolicy="no-referrer">':'<span class="mp-no-photo" aria-hidden="true">📱</span>';
+ const href='/mobile-price-in-nepal/phones/'+esc(p.slug||'')+'/';
+ const priceLabel=Number.isFinite(price)&&price>0?fmt(price):'Price not confirmed';
+ const storeLine=cheapest?'Lowest at '+esc(cheapest.store||p.best_store||'Store'):'No current store offer';
+ return '<article class="mp-card"><a href="'+href+'" style="color:inherit;text-decoration:none"><div class="mp-photo">'+photo+'</div><div class="mp-card-body"><span class="mp-brand-name">'+esc(brand)+'</span><h3>'+esc(title)+'</h3><div class="mp-price'+(price?'':' unknown')+'">'+esc(priceLabel)+'</div><div style="font-size:11px;color:#067647;font-weight:800;margin-top:4px">'+storeLine+'</div><div class="mp-specs">'+(specs.length?specs.map(s=>'<span>'+esc(s)+'</span>').join(''):'<span>Specs not confirmed</span>')+'</div><p class="mp-note">'+offers.length+' store offer'+(offers.length===1?'':'s')+' · Compare prices, specifications and warranty.</p><span class="mp-source">Compare stores & full specs →</span></div></a></article>';
 }
 async function init(){
  try{
   const res=await fetch(DATA_URL+'?v='+encodeURIComponent(new Date().toISOString().slice(0,10)),{cache:'no-store'});if(!res.ok)throw new Error('Catalogue returned '+res.status);
   const data=await res.json();phones=Array.isArray(data.phones)?data.phones:[];
   $('mp-updated').textContent=data.updated_at?new Date(data.updated_at).toLocaleDateString(undefined,{month:'short',day:'numeric'}):'Unknown';
-  $('mp-status').textContent=(data.source?'Source: '+data.source:'Source unavailable')+' · '+(data.status||'Data feed');
+  $('mp-status').textContent=(data.store_count||0)+' stores · '+(data.price_count||0)+' store prices · '+(data.status||'Data feed');
   renderFilters();update();
   if(!phones.length)$('mp-list').innerHTML='<div class="mp-empty"><strong>No listings available yet</strong>The daily catalogue has not collected any listings. Please check the source directory.</div>';
- }catch(e){$('mp-status').textContent='Data feed unavailable';$('mp-list').innerHTML='<div class="mp-error"><strong>Could not load the phone catalogue</strong>Please refresh later or browse the original <a href="https://www.gadgetbytenepal.com/category/mobile-price-in-nepal/" target="_blank" rel="noopener noreferrer">GadgetByte Nepal mobile price list</a>.</div>';console.error(e)}
+ }catch(e){$('mp-status').textContent='Data feed unavailable';$('mp-list').innerHTML='<div class="mp-error"><strong>Could not load the phone catalogue</strong>Please refresh later or browse the original <a href="https://www.gadgetbytenepal.com/category/mobile-price-in-nepal/" target="_blank" rel="noopener noreferrer">mobile price list</a>.</div>';console.error(e)}
 }
 $('mp-search').addEventListener('input',()=>{page=1;update()});
 $('mp-brand-select').addEventListener('change',()=>{activeChip=$('mp-brand-select').value;page=1;renderFilters();update()});
