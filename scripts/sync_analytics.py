@@ -84,15 +84,27 @@ def inspect_page(path):
     except Exception as exc: return {"path":path,"status":0,"score":0,"issues":[f"Audit error: {type(exc).__name__}"]}
 
 def build_seo_health(pages,queries):
+    # Audit every URL published in sitemap.xml, including pages with zero GA4 traffic.
     paths=[]
+    try:
+        sitemap=requests.get(urljoin(BASE_URL,"/sitemap.xml"),timeout=25,headers={"User-Agent":"LaxmanNepal-SEO-Audit/1.0"})
+        sitemap.raise_for_status()
+        for loc in re.findall(r"<loc>\\s*(.*?)\\s*</loc>",sitemap.text,re.I|re.S):
+            from urllib.parse import urlparse
+            parsed=urlparse(loc.strip())
+            if parsed.netloc.lower() in ("laxmannepal.com.np","www.laxmannepal.com.np"):
+                p=parsed.path or "/"
+                if p not in paths and not p.startswith(("/analytics","/search","/old","/scripts")): paths.append(p)
+    except Exception as exc:
+        print(f"WARNING: sitemap inventory unavailable: {type(exc).__name__}",flush=True)
     for x in pages:
         p=x.get("pagePath","/")
         if p and p not in paths and not p.startswith(("/analytics","/search","/old","/scripts")): paths.append(p)
-    paths=paths[:20]; audits=[inspect_page(p) for p in paths]
+    audits=[inspect_page(p) for p in paths]
     avg=round(sum(x["score"] for x in audits)/len(audits)) if audits else 0; issues={}
     for a in audits:
         for issue in a["issues"]: issues[issue]=issues.get(issue,0)+1
-    return {"score":avg,"audited":len(audits),"issues":[{"issue":k,"count":v} for k,v in sorted(issues.items(),key=lambda z:-z[1])],"pages":audits}
+    return {"score":avg,"audited":len(audits),"inventorySource":"sitemap.xml + GA4 pages","issues":[{"issue":k,"count":v} for k,v in sorted(issues.items(),key=lambda z:-z[1])],"pages":audits}
 
 today=datetime.now(timezone.utc).date(); end=today-timedelta(days=1); current_start=today-timedelta(days=90)
 previous_end=current_start-timedelta(days=1); previous_start=previous_end-timedelta(days=89)
