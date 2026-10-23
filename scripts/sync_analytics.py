@@ -25,7 +25,7 @@ except Exception as exc: fail(f"Could not load service-account credentials: {exc
 def ga4_report(dimensions,metrics,limit=10,start="90daysAgo",end="yesterday",order_metric=None,order_dimension=None):
     body={"dateRanges":[{"startDate":start,"endDate":end}],"dimensions":[{"name":d} for d in dimensions],"metrics":[{"name":m} for m in metrics],"limit":limit}
     if order_metric: body["orderBys"]=[{"metric":{"metricName":order_metric},"desc":True}]
-    elif order_dimension: body["orderBys"]=[{"dimension":{"dimension":{"name":order_dimension}},"desc":False}]
+    elif order_dimension: body["orderBys"]=[{"dimension":{"dimensionName":order_dimension},"desc":False}]
     url=f"https://analyticsdata.googleapis.com/v1beta/properties/{quote(GA4_PROPERTY_ID,safe='')}:runReport"
     r=session.post(url,json=body,timeout=45)
     if not r.ok: raise RuntimeError(f"GA4 {r.status_code}: {r.text[:600]}")
@@ -89,7 +89,7 @@ def build_seo_health(pages,queries):
     try:
         sitemap=requests.get(urljoin(BASE_URL,"/sitemap.xml"),timeout=25,headers={"User-Agent":"LaxmanNepal-SEO-Audit/1.0"})
         sitemap.raise_for_status()
-        for loc in re.findall(r"<loc>\\s*(.*?)\\s*</loc>",sitemap.text,re.I|re.S):
+        for loc in re.findall(r"<loc>\s*(.*?)\s*</loc>",sitemap.text,re.I|re.S):
             from urllib.parse import urlparse
             parsed=urlparse(loc.strip())
             if parsed.netloc.lower() in ("laxmannepal.com.np","www.laxmannepal.com.np"):
