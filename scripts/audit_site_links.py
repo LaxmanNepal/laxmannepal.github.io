@@ -42,8 +42,12 @@ checked = 0
 for page in sorted(pages):
     try: text = page.read_text(encoding='utf-8')
     except (UnicodeDecodeError, OSError): continue
-    refs = ATTR_RE.findall(text)
-    for srcset in SRCSET_RE.findall(text):
+    # Only audit markup, not JavaScript/CSS string literals. The regex-only
+    # scan otherwise mistakes values assigned in scripts (for example SEO
+    # recommendation text) for href/src attributes.
+    markup = re.sub(r'<(script|style)\b[^>]*>.*?</\1\s*>', '', text, flags=re.I | re.S)
+    refs = ATTR_RE.findall(markup)
+    for srcset in SRCSET_RE.findall(markup):
         refs.extend(part.strip().split()[0] for part in srcset.split(',') if part.strip())
     for raw in refs:
         value = raw.strip()
