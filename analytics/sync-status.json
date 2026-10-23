@@ -1,13 +1,30 @@
 {
-  "status": "failed",
-  "stage": "search_console",
-  "message": "\"code\": 403,",
-  "details": "STAGE: credentials\nCHECK: credentials=ok\nSTAGE: ga4\nCHECK: ga4=ok\nSTAGE: search_console\nCHECK: ga4=ok\nERROR: Search Console 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"User does not have sufficient permission for site 'https://laxmannepal.com.np/'. See also: https://support.google.com/webmasters/answer/2451999.\",\n    \"errors\": [\n      {\n        \"message\": \"User does not have sufficient permission for site 'https://laxmannepal.com.np/'. See also: https://support.google.com/webmasters/answer/2451999.\",\n        \"domain\": \"global\",\n        \"reason\": \"forbidden\"\n      }\n    ]\n  }\n}",
+  "status": "success",
+  "stage": "complete",
+  "message": "GA4 + Search Console sync completed successfully.",
+  "details": "",
   "checks": {
-    "credentials": "ok"
+    "credentials": "ok",
+    "ga4": "ok",
+    "search_console": "ok",
+    "seo_audit": "ok",
+    "snapshot": "ok"
   },
-  "updatedAt": "2026-10-23T22:42:30.332162+00:00",
+  "updatedAt": "2026-10-23T22:56:51.691374+00:00",
   "history": [
+    {
+      "status": "success",
+      "stage": "complete",
+      "message": "GA4 + Search Console sync completed successfully.",
+      "checks": {
+        "credentials": "ok",
+        "ga4": "ok",
+        "search_console": "ok",
+        "seo_audit": "ok",
+        "snapshot": "ok"
+      },
+      "updatedAt": "2026-10-23T22:56:51.691374+00:00"
+    },
     {
       "status": "failed",
       "stage": "search_console",
@@ -98,13 +115,6 @@
       "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
       "checks": {},
       "updatedAt": "2026-10-23T04:59:46.441367+00:00"
-    },
-    {
-      "status": "failed",
-      "stage": "credentials",
-      "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
-      "checks": {},
-      "updatedAt": "2026-10-22T21:42:17.923919+00:00"
     }
   ]
 }
