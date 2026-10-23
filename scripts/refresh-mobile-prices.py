@@ -190,6 +190,8 @@ def page_template(p):
     price_rows="".join(f'<tr><td><a href="{esc(x["url"])}" target="_blank" rel="nofollow sponsored noopener">{esc(x["store"])}</a></td><td>Rs. {int(x["price"]):,}</td><td>{esc(x.get("warranty") or "Check with store")}</td><td>{esc(x.get("checked_at") or TODAY)}</td><td><a href="{esc(x["url"])}" target="_blank" rel="nofollow sponsored noopener">View offer ↗</a></td></tr>' for x in sorted(prices,key=lambda x:x.get("price") or 10**12))
     specs=[("Brand",p.get("brand")),("RAM",p.get("ram")),("Storage",p.get("storage")),("Display",p.get("display")),("Battery",p.get("battery")),("Chipset",p.get("chipset")),("Camera",p.get("camera"))]
     spec_rows="".join(f'<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>' for k,v in specs if v)
+    seen_labels={k.lower() for k,v in specs if v}
+    spec_rows += "".join(f'<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>' for k,v in (p.get("specifications") or {}).items() if v and k.lower() not in seen_labels)
     image=p.get("image") or ""
     jsonld={"@context":"https://schema.org","@type":"Product","name":title,"image":[image] if image else [],"brand":{"@type":"Brand","name":p.get("brand","Other")},"description":f"{title} Nepal price comparison, specifications and retailer offers.","url":canonical}
     if best: jsonld["offers"]={"@type":"AggregateOffer","priceCurrency":"NPR","lowPrice":best["price"],"offerCount":len(prices),"availability":"https://schema.org/InStock","url":best["url"]}
