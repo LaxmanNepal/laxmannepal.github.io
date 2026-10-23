@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-22T21:41:33.529232+00:00",
-  "count": 145,
+  "updated_at": "2026-10-23T04:58:30.845479+00:00",
+  "count": 144,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -618,23 +618,6 @@
       "storages": [
         "256GB",
         "512GB"
-      ]
-    },
-    {
-      "id": "motorola-moto-g06-power",
-      "name": "Motorola Moto G06 Power",
-      "brand": "Motorola",
-      "variants": [
-        "4GB + 64GB"
-      ],
-      "price": 26499,
-      "max_price": 26499,
-      "original_price": null,
-      "rams": [
-        "4GB"
-      ],
-      "storages": [
-        "64GB"
       ]
     },
     {
@@ -2027,15 +2010,13 @@
       "name": "Vivo V70 FE",
       "brand": "Vivo",
       "variants": [
-        "8GB + 256GB",
-        "12GB + 256GB"
+        "8GB + 256GB"
       ],
       "price": 62999,
-      "max_price": 72999,
+      "max_price": 62999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
         "256GB"
@@ -2082,18 +2063,16 @@
       "name": "Vivo Y05",
       "brand": "Vivo",
       "variants": [
-        "4GB+64GB",
-        "4GB+128GB"
+        "4GB+64GB"
       ],
       "price": 21999,
-      "max_price": 24999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -2118,15 +2097,13 @@
       "name": "Vivo Y11d",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB",
-        "6GB + 128GB"
+        "4GB + 128GB"
       ],
       "price": 27999,
-      "max_price": 33999,
+      "max_price": 27999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
         "128GB"
@@ -2154,22 +2131,16 @@
       "name": "Vivo Y31d",
       "brand": "Vivo",
       "variants": [
-        "6GB+128GB",
-        "8GB+128GB",
-        "8GB+256GB",
-        "4GB+128GB"
+        "6GB+128GB"
       ],
-      "price": 32999,
-      "max_price": 51999,
+      "price": 37999,
+      "max_price": 37999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2177,20 +2148,16 @@
       "name": "Vivo Y32",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB",
-        "6GB + 128GB",
-        "6GB + 256GB"
+        "4GB + 128GB"
       ],
       "price": 39999,
-      "max_price": 52999,
+      "max_price": 39999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2198,18 +2165,16 @@
       "name": "Vivo Y500",
       "brand": "Vivo",
       "variants": [
-        "8GB + 128GB",
-        "8GB + 256GB"
+        "8GB + 128GB"
       ],
       "price": 54999,
-      "max_price": 61999,
+      "max_price": 54999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2442,15 +2407,17 @@
       "name": "iPhone 17",
       "brand": "Apple",
       "variants": [
-        "8GB+512GB"
+        "8GB+512GB",
+        "8GB+256GB"
       ],
-      "price": 215699,
+      "price": 173499,
       "max_price": 215699,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
+        "256GB",
         "512GB"
       ]
     },
@@ -2459,30 +2426,13 @@
       "name": "iPhone 17 Pro",
       "brand": "Apple",
       "variants": [
-        "12GB+256GB"
-      ],
-      "price": 221299,
-      "max_price": 221299,
-      "original_price": 236899,
-      "rams": [
-        "12GB"
-      ],
-      "storages": [
-        "256GB"
-      ]
-    },
-    {
-      "id": "iphone-17-pro-max",
-      "name": "iPhone 17 Pro Max",
-      "brand": "Apple",
-      "variants": [
         "12GB+256GB",
         "12GB+512GB",
         "12GB+1TB"
       ],
-      "price": 242499,
-      "max_price": 327099,
-      "original_price": 342499,
+      "price": 221299,
+      "max_price": 305699,
+      "original_price": 321299,
       "rams": [
         "12GB"
       ],
@@ -2493,19 +2443,44 @@
       ]
     },
     {
+      "id": "iphone-17-pro-max",
+      "name": "iPhone 17 Pro Max",
+      "brand": "Apple",
+      "variants": [
+        "12GB+256GB",
+        "12GB+512GB",
+        "12GB+1TB",
+        "12GB+2TB"
+      ],
+      "price": 242499,
+      "max_price": 411399,
+      "original_price": 426999,
+      "rams": [
+        "12GB"
+      ],
+      "storages": [
+        "256GB",
+        "512GB",
+        "1TB",
+        "2TB"
+      ]
+    },
+    {
       "id": "iphone-17e",
       "name": "iPhone 17e",
       "brand": "Apple",
       "variants": [
-        "8GB+512GB"
+        "8GB+512GB",
+        "8GB+256GB"
       ],
-      "price": 175099,
+      "price": 132499,
       "max_price": 175099,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
+        "256GB",
         "512GB"
       ]
     },
@@ -2560,16 +2535,20 @@
       "name": "iPhone Air",
       "brand": "Apple",
       "variants": [
-        "12GB+256GB"
+        "12GB+256GB",
+        "12GB+512GB",
+        "12GB+1TB"
       ],
       "price": 190699,
-      "max_price": 190699,
+      "max_price": 275099,
       "original_price": null,
       "rams": [
         "12GB"
       ],
       "storages": [
-        "256GB"
+        "256GB",
+        "512GB",
+        "1TB"
       ]
     }
   ]
