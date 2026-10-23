@@ -106,6 +106,45 @@ def build_seo_health(pages,queries):
         for issue in a["issues"]: issues[issue]=issues.get(issue,0)+1
     return {"score":avg,"audited":len(audits),"inventorySource":"sitemap.xml + GA4 pages","issues":[{"issue":k,"count":v} for k,v in sorted(issues.items(),key=lambda z:-z[1])],"pages":audits}
 
+def technical_health(paths):
+    """Best-effort technical checks; API failures are reported, never fabricated."""
+    out={"checkedAt":datetime.now(timezone.utc).isoformat(),"sitemap":{"url":BASE_URL+"/sitemap.xml","status":None,"urlCount":0},"robots":{"url":BASE_URL+"/robots.txt","status":None},"pageSpeed":{"status":"not_checked","pages":[]}}
+    try:
+        r=requests.get(out["sitemap"]["url"],timeout=15,headers={"User-Agent":"LaxmanNepal-SEO-Audit/1.0"})
+        out["sitemap"]["status"]=r.status_code
+        if r.ok: out["sitemap"]["urlCount"]=len(re.findall(r"<loc>\\s*.*?\\s*</loc>",r.text,re.I|re.S))
+    except Exception as exc: out["sitemap"]["error"]=type(exc).__name__
+    try:
+        r=requests.get(out["robots"]["url"],timeout=12,headers={"User-Agent":"LaxmanNepal-SEO-Audit/1.0"})
+        out["robots"]["status"]=r.status_code
+        out["robots"]["hasSitemap"]="sitemap:" in r.text.lower()
+    except Exception as exc: out["robots"]["error"]=type(exc).__name__
+    candidates=[]
+    for path in paths:
+        if path and path not in candidates and not path.startswith(("/analytics","/search","/old")): candidates.append(path)
+    out["pageSpeed"]["pages"]=[]
+    for path in candidates[:3]:
+        entry={"path":path,"mobile":None,"desktop":None}
+        for strategy in ("mobile","desktop"):
+            try:
+                response=requests.get("https://www.googleapis.com/pagespeedonline/v5/runPagespeed",params={"url":urljoin(BASE_URL,path),"strategy":strategy,"category":"PERFORMANCE"},timeout=35)
+                if not response.ok:
+                    entry[strategy]={"status":"unavailable","httpStatus":response.status_code}
+                    continue
+                payload=response.json(); lighthouse=payload.get("lighthouseResult",{}); cats=lighthouse.get("categories",{}); audits=lighthouse.get("audits",{})
+                score=cats.get("performance",{}).get("score")
+                entry[strategy]={"status":"ok","performanceScore":round(score*100) if isinstance(score,(int,float)) else None,
+                    "lcpMs":audits.get("largest-contentful-paint",{}).get("numericValue"),
+                    "cls":audits.get("cumulative-layout-shift",{}).get("numericValue"),
+                    "inpMs":audits.get("interaction-to-next-paint",{}).get("numericValue"),
+                    "fcpMs":audits.get("first-contentful-paint",{}).get("numericValue"),
+                    "checkedAt":datetime.now(timezone.utc).isoformat()}
+            except Exception as exc:
+                entry[strategy]={"status":"unavailable","error":type(exc).__name__}
+        out["pageSpeed"]["pages"].append(entry)
+    out["pageSpeed"]["status"]="checked" if out["pageSpeed"]["pages"] else "unavailable"
+    return out
+
 today=datetime.now(timezone.utc).date(); end=today-timedelta(days=1); current_start=today-timedelta(days=90)
 previous_end=current_start-timedelta(days=1); previous_start=previous_end-timedelta(days=89)
 
@@ -138,11 +177,14 @@ try:
     print("STAGE: seo_audit", flush=True)
     seo_health=build_seo_health(pages,search_queries)
     print("CHECK: seo_audit=ok", flush=True)
+    print("STAGE: technical_health", flush=True)
+    tech_health=technical_health([x.get("path","/") for x in seo_health.get("pages",[])])
+    print("CHECK: technical_health=ok", flush=True)
     data={"schemaVersion":8,"generatedAt":datetime.now(timezone.utc).isoformat(),"range":"90 days ending yesterday",
           "comparison":{"current":{"start":cs,"end":ce},"previous":{"start":ps,"end":pe},"ga4":{"current":overview,"previous":previous_overview},"searchConsole":{"current":current_summary,"previous":previous_summary}},
           "ga4":{"propertyId":GA4_PROPERTY_ID,"overview":overview,"sources":sources,"pages":pages,"landingPages":landing_pages,"countries":countries,"cities":cities,"devices":devices,"browsers":browsers,"operatingSystems":operating_systems,"events":events,"daily":daily},
           "searchConsole":{"site":GSC_SITE_URL,"startDate":cs,"endDate":ce,"summary":current_summary,"previousSummary":previous_summary,"daily":search_daily,"devices":search_devices,"countries":search_countries,"queries":search_queries,"previousQueries":previous_queries,"pages":search_pages,"previousPages":previous_pages,"pageQueries":page_queries,"previousPageQueries":previous_page_queries},
-          "seoHealth":seo_health}
+          "seoHealth":seo_health,"technicalHealth":tech_health}
 except Exception as exc: fail(str(exc))
 os.makedirs(os.path.dirname(OUT),exist_ok=True)
 with open(OUT,"w",encoding="utf-8") as f: json.dump(data,f,ensure_ascii=False,separators=(",",":"))
