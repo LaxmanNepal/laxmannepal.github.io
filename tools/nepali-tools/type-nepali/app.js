@@ -8,28 +8,36 @@ const SPECIAL={'om':'ॐ','aum':'ॐ','namaste':'नमस्ते','namaskar':
 const DIRECT={q:'त्र',w:'ध',e:'भ',r:'च',t:'त',y:'थ',u:'ग',i:'ष',o:'य',p:'उ',a:'ब',s:'क',d:'म',f:'ा',g:'न',h:'ज',j:'व',k:'प',l:'ि',';':'स',"'":'ु',z:'श',x:'ह',c:'अ',v:'ख',b:'द',n:'ल',m:'म',',':'ं','.':'।','/':'र'};
 function normalizeWord(s){return s.toLowerCase().replace(/[^a-zA-Z]/g,'')}
 function transliterate(input){
- let out='', i=0, s=input;
- while(i<s.length){
-  let matched=null;
-  for(const key of ['ksh','chh','sh','Sh','kh','gh','ng','ch','jh','ny','Th','Dh','th','dh','ph','bh','aa','ii','ee','uu','oo','ai','au','ri','tr','gy','gn']){
-   if(s.slice(i,i+key.length).toLowerCase()===key.toLowerCase() && (CONS[key]||MATRA[key]!==undefined||VOWELS[key])){matched=key;break}
+ // Local phonetic transliteration used by Romanized mode and as an offline fallback.
+ const tokens=['ksh','chh','sh','kh','gh','ng','ch','jh','ny','Th','Dh','th','dh','ph','bh','aa','ii','ee','uu','oo','ai','au','ri','tr','gy','gn'];
+ const tokenAt=(s,i)=>tokens.find(t=>s.slice(i,i+t.length).toLowerCase()===t.toLowerCase())||s[i];
+ const parts=[]; for(let i=0;i<input.length;){const t=tokenAt(input,i);parts.push(t);i+=t.length}
+ let out='';
+ for(let i=0;i<parts.length;i++){
+  const raw=parts[i], key=raw.length===1?raw:raw.toLowerCase(), lower=key.toLowerCase();
+  if(!/[a-z]/i.test(raw)){out+=raw;continue}
+  const consonant=CONS[key]||CONS[lower];
+  if(consonant){
+   out+=consonant;
+   const next=parts[i+1], nextKey=next&&(next.length===1?next:next.toLowerCase()).toLowerCase();
+   if(next && MATRA[nextKey]!==undefined){out+=MATRA[nextKey];i++}
+   else if(next && (CONS[next]||CONS[nextKey]))out+='्';
+   continue;
   }
-  if(!matched){const c=s[i]; if(/[a-zA-Z]/.test(c)){const key=c; if(VOWELS[key.toLowerCase()])out+=VOWELS[key.toLowerCase()];else if(CONS[key]||CONS[key.toLowerCase()])out+=(CONS[key]||CONS[key.toLowerCase()])+'्';else out+=c;}else out+=c;i++;continue}
-  if(CONS[matched])out+=CONS[matched]+'्';else if(VOWELS[matched])out+=VOWELS[matched];else out+=matched;
-  i+=matched.length;
+  const vowelKey=lower;
+  if(VOWELS[vowelKey])out+=VOWELS[vowelKey];
+  else out+=raw;
  }
- // Attach following vowel signs to a consonant virama, otherwise leave standalone vowels intact.
- out=out.replace(/्(अ|आ|इ|ई|उ|ऊ|ए|ऐ|ओ|औ|ऋ)/g,(_,v)=>({'अ':'','आ':'ा','इ':'ि','ई':'ी','उ':'ु','ऊ':'ू','ए':'े','ऐ':'ै','ओ':'ो','औ':'ौ','ऋ':'ृ'}[v]));
- return out.replace(/्(?=[\s।,!?])/g,'').replace(/्$/,'');
+ return out;
 }
 function convertWord(word){const lower=word.toLowerCase();return SPECIAL[lower]||transliterate(word)}
 function getCurrentWord(){const pos=editor.selectionStart, before=editor.value.slice(0,pos);const m=before.match(/([^\s{}]+)$/);if(!m)return null;const start=pos-m[1].length;const endMatch=editor.value.slice(pos).match(/^([^\s{}]*)/);return {word:m[1],start,end:start+(endMatch?endMatch[1].length:0),pos}}
 function getUnfinished(){const w=getCurrentWord();if(!w||!/[a-z]/i.test(w.word)||(mode==='traditional'||mode==='voice'))return null;const before=editor.value.slice(0,w.start);if(before.lastIndexOf('{')>before.lastIndexOf('}'))return null;return w}
 function updateCounts(){const text=editor.value.trim();counts.textContent=(text?text.split(/\s+/).length:0)+' words · '+editor.value.length+' characters'}
 function showCandidates(items,remote=false){candidates=[...new Set(items.filter(Boolean))].slice(0,6);candidateIndex=0;suggestions.innerHTML='';if(!candidates.length){suggestions.innerHTML='<span class="suggestion-empty">No suggestions yet — keep typing</span>';status.textContent='';return}candidates.forEach((item,i)=>{const b=document.createElement('button');b.type='button';b.className='suggestion';b.role='option';b.setAttribute('aria-selected',String(i===candidateIndex));b.innerHTML='';b.append(document.createTextNode(item));const n=document.createElement('span');n.className='number';n.textContent=String(i+1);b.append(n);b.addEventListener('mousedown',e=>e.preventDefault());b.addEventListener('click',()=>acceptCandidate(i));suggestions.append(b)});status.textContent=remote?'Smart suggestions':'Local suggestions'}
-function localCandidates(word){const lower=word.toLowerCase(), converted=convertWord(word);const list=[SPECIAL[lower],converted];if(lower==='k')list.push('क','ख','का','कि');if(lower==='ma')list.push('म');if(lower==='ne')list.push('ने','नि');return list.filter(Boolean)}
-async function fetchRemote(word,id){try{const url='https://inputtools.google.com/request?text='+encodeURIComponent(word)+'&itc=ne-t-i0-und&num=6&cp=0&cs=1&ie=utf-8&oe=utf-8&app=demopage';const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),1800);const res=await fetch(url,{signal:controller.signal,mode:'cors'});clearTimeout(timer);if(!res.ok)return;const data=await res.json();if(mode!=='google'||id!==requestId||!Array.isArray(data)||data[0]!=='SUCCESS')return;const words=data[1]?.[0]?.[1];if(Array.isArray(words)&&words.length){const current=getUnfinished();if(current&&current.word===word)showCandidates([...words,...localCandidates(word)],true)}}catch(_){/* Offline/local typing continues without remote suggestions. */}}
-function refreshSuggestions(){const current=getUnfinished();const id=++requestId;if(!current){showCandidates([]);status.textContent=mode==='traditional'?'Traditional keyboard mode':mode==='voice'?'Voice input mode':'Type a word to begin';return}showCandidates(localCandidates(current.word));if(mode==='google'&&current.word.length>=2)fetchRemote(current.word,id)}
+function localCandidates(word){const lower=word.toLowerCase(), converted=transliterate(word);const list=[SPECIAL[lower],converted];if(lower==='k')list.push('क','ख','का','कि');if(lower==='ma')list.push('म');if(lower==='ne')list.push('ने','नि');return list.filter(Boolean)}
+async function fetchRemote(word,id){try{const url='https://inputtools.google.com/request?text='+encodeURIComponent(word)+'&itc=ne-t-i0-und&num=6&cp=0&cs=1&ie=utf-8&oe=utf-8&app=demopage';const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),1800);const res=await fetch(url,{signal:controller.signal,mode:'cors'});clearTimeout(timer);if(!res.ok)throw new Error('Google Input unavailable');const data=await res.json();if(mode!=='google'||id!==requestId||!Array.isArray(data)||data[0]!=='SUCCESS')return;const words=data[1]?.[0]?.[1];if(Array.isArray(words)&&words.length){const current=getUnfinished();if(current&&current.word===word)showCandidates([...words,...localCandidates(word)],true)}}catch(_){if(mode==='google'&&id===requestId){status.textContent='Google suggestions unavailable · local fallback';showCandidates(localCandidates(word));}}}
+function refreshSuggestions(){const current=getUnfinished();const id=++requestId;if(!current){showCandidates([]);status.textContent=mode==='traditional'?'Traditional keyboard mode':mode==='voice'?'Voice input mode':'Type a word to begin';return}showCandidates(localCandidates(current.word));if(mode==='google'&&current.word.length>=2){status.textContent='Checking Google Input…';fetchRemote(current.word,id)}}
 function replaceRange(start,end,text,caretAtEnd=true){const before=editor.value.slice(0,start),after=editor.value.slice(end);editor.value=before+text+after;const p=caretAtEnd?start+text.length:start;editor.setSelectionRange(p,p);updateCounts();saveDraft();pushHistory();refreshSuggestions()}
 function acceptCandidate(index=0,addSpace=false){const w=getUnfinished();const candidate=candidates[index];if(!w||!candidate)return false;replaceRange(w.start,w.end,candidate+(addSpace?' ':''));return true}
 function commitWord(){const w=getUnfinished();if(!w)return false;return acceptCandidate(0,true)}
