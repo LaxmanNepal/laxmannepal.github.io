@@ -115,9 +115,13 @@ try:
     sources=rows(ga4_report(["sessionDefaultChannelGroup"],["sessions"],10,order_metric="sessions"))
     pages=rows(ga4_report(["pagePath"],["screenPageViews"],1000,order_metric="screenPageViews"))
     countries=rows(ga4_report(["country"],["activeUsers"],15,order_metric="activeUsers"))
-    devices=rows(ga4_report(["deviceCategory"],["activeUsers"],10,order_metric="activeUsers"))
-    events=rows(ga4_report(["eventName"],["eventCount"],50,order_metric="eventCount"))
-    daily=rows(ga4_report(["date"],["activeUsers","sessions","screenPageViews","engagementRate"],1000,order_dimension="date"))
+    devices=rows(ga4_report(["deviceCategory"],["activeUsers","sessions","screenPageViews","engagedSessions"],10,order_metric="activeUsers"))
+    browsers=rows(ga4_report(["browser"],["activeUsers","sessions"],20,order_metric="activeUsers"))
+    operating_systems=rows(ga4_report(["operatingSystem"],["activeUsers","sessions"],15,order_metric="activeUsers"))
+    cities=rows(ga4_report(["city"],["activeUsers","sessions"],20,order_metric="activeUsers"))
+    landing_pages=rows(ga4_report(["landingPagePlusQueryString"],["sessions","activeUsers","screenPageViews","engagedSessions","engagementRate"],100,order_metric="sessions"))
+    events=rows(ga4_report(["eventName"],["eventCount","totalUsers"],50,order_metric="eventCount"))
+    daily=rows(ga4_report(["date"],["activeUsers","sessions","screenPageViews","engagedSessions","engagementRate"],1000,order_dimension="date"))
     print("CHECK: ga4=ok", flush=True)
     print("STAGE: search_console", flush=True)
     previous_overview_rows=rows(ga4_report([],["activeUsers","sessions","screenPageViews","engagementRate"],1,start="181daysAgo",end="91daysAgo")); previous_overview=previous_overview_rows[0]["metrics"] if previous_overview_rows else {}
@@ -125,6 +129,8 @@ try:
     print("CHECK: ga4=ok", flush=True)
     current_summary=gsc_rows(gsc_query([],start=cs,end=ce)); previous_summary=gsc_rows(gsc_query([],start=ps,end=pe))
     search_daily=gsc_rows(gsc_query(["date"],100,start=cs,end=ce))
+    search_devices=gsc_rows(gsc_query(["device"],10,start=cs,end=ce))
+    search_countries=gsc_rows(gsc_query(["country"],30,start=cs,end=ce))
     search_queries=gsc_rows(gsc_query(["query"],50,start=cs,end=ce)); previous_queries=gsc_rows(gsc_query(["query"],50,start=ps,end=pe))
     search_pages=gsc_rows(gsc_query(["page"],50,start=cs,end=ce)); previous_pages=gsc_rows(gsc_query(["page"],50,start=ps,end=pe))
     page_queries=gsc_rows(gsc_query(["page","query"],200,start=cs,end=ce)); previous_page_queries=gsc_rows(gsc_query(["page","query"],200,start=ps,end=pe))
@@ -132,10 +138,10 @@ try:
     print("STAGE: seo_audit", flush=True)
     seo_health=build_seo_health(pages,search_queries)
     print("CHECK: seo_audit=ok", flush=True)
-    data={"schemaVersion":7,"generatedAt":datetime.now(timezone.utc).isoformat(),"range":"90 days ending yesterday",
+    data={"schemaVersion":8,"generatedAt":datetime.now(timezone.utc).isoformat(),"range":"90 days ending yesterday",
           "comparison":{"current":{"start":cs,"end":ce},"previous":{"start":ps,"end":pe},"ga4":{"current":overview,"previous":previous_overview},"searchConsole":{"current":current_summary,"previous":previous_summary}},
-          "ga4":{"propertyId":GA4_PROPERTY_ID,"overview":overview,"sources":sources,"pages":pages,"countries":countries,"devices":devices,"events":events,"daily":daily},
-          "searchConsole":{"site":GSC_SITE_URL,"startDate":cs,"endDate":ce,"summary":current_summary,"previousSummary":previous_summary,"daily":search_daily,"queries":search_queries,"previousQueries":previous_queries,"pages":search_pages,"previousPages":previous_pages,"pageQueries":page_queries,"previousPageQueries":previous_page_queries},
+          "ga4":{"propertyId":GA4_PROPERTY_ID,"overview":overview,"sources":sources,"pages":pages,"landingPages":landing_pages,"countries":countries,"cities":cities,"devices":devices,"browsers":browsers,"operatingSystems":operating_systems,"events":events,"daily":daily},
+          "searchConsole":{"site":GSC_SITE_URL,"startDate":cs,"endDate":ce,"summary":current_summary,"previousSummary":previous_summary,"daily":search_daily,"devices":search_devices,"countries":search_countries,"queries":search_queries,"previousQueries":previous_queries,"pages":search_pages,"previousPages":previous_pages,"pageQueries":page_queries,"previousPageQueries":previous_page_queries},
           "seoHealth":seo_health}
 except Exception as exc: fail(str(exc))
 os.makedirs(os.path.dirname(OUT),exist_ok=True)
