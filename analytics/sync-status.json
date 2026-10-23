@@ -6,8 +6,17 @@
   "checks": {
     "credentials": "ok"
   },
-  "updatedAt": "2026-10-23T22:35:16.244707+00:00",
+  "updatedAt": "2026-10-23T22:38:19.908578+00:00",
   "history": [
+    {
+      "status": "failed",
+      "stage": "search_console",
+      "message": "\"code\": 403,",
+      "checks": {
+        "credentials": "ok"
+      },
+      "updatedAt": "2026-10-23T22:38:19.908578+00:00"
+    },
     {
       "status": "failed",
       "stage": "search_console",
@@ -92,13 +101,6 @@
       "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
       "checks": {},
       "updatedAt": "2026-10-22T12:01:18.924071+00:00"
-    },
-    {
-      "status": "failed",
-      "stage": "credentials",
-      "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
-      "checks": {},
-      "updatedAt": "2026-10-22T04:58:19.927745+00:00"
     }
   ]
 }
