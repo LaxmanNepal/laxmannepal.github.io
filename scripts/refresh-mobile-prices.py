@@ -286,7 +286,7 @@ def main():
     history_doc={"updated_at":datetime.now(timezone.utc).isoformat(),"days":days}
     for p in phones:
         p["history"]=[{"date":d["date"],"price":next((x.get("best_price") for x in d.get("phones",[]) if x.get("slug")==p["slug"]),None)} for d in days if any(x.get("slug")==p["slug"] and x.get("best_price") for x in d.get("phones",[]))]
-    HISTORY_OUT.write_text(json.dumps(history_doc,ensure_ascii=False,separators=(",",":"))+"\\n",encoding="utf-8")
+    HISTORY_OUT.write_text(json.dumps(history_doc,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
     # Generate search-indexable detail pages, one per model/variant.
     DETAIL_ROOT.mkdir(parents=True,exist_ok=True)
     keep=set()
