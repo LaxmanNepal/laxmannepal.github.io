@@ -207,7 +207,7 @@ def main():
         try:
             items=parse_listing(source)
             print(f'{source["store"]}: found {len(items)} candidates')
-            raw.extend(items)
+            raw.extend(items[:90])
         except Exception as exc:
             print(f'Unable to read {source["store"]}: {exc}')
     # Visit each candidate product page for price/image/specs when the listing card is incomplete.
