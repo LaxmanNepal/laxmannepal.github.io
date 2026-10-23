@@ -23,7 +23,8 @@ SOURCES = [
     {"store":"Oliz Store","url":"https://www.olizstore.com/collections/phone","kind":"shop"},
     {"store":"Neo Store","url":"https://www.neostore.com.np/product-category/mobile-brands","kind":"shop"},
     {"store":"National Mobile","url":"https://store.nationalmobile.com.np/Mobile-Price-in-Nepal","kind":"shop"},
-    {"store":"GadgetByte Nepal","url":"https://www.gadgetbytenepal.com/category/mobile-price-in-nepal/","kind":"guide"},
+    {"store":"Hukut","url":"https://www.hukut.com/laptops/mobile-phones","kind":"shop"},
+    {"store":"Daraz","url":"https://www.daraz.com.np/smartphones/","kind":"marketplace"},
 ]
 BRANDS = ["Apple","Samsung","Xiaomi","Redmi","Poco","OnePlus","Vivo","OPPO","Realme","Motorola","Nothing","Honor","Huawei","Tecno","Infinix","Nokia","Google","iQOO","Itel","ZTE","Lava","CMF","Lenovo"]
 PRICE_RE = re.compile(r"(?:NPR|Rs\.?|रु\.?|रु)\s*([\d,]{4,7})", re.I)
