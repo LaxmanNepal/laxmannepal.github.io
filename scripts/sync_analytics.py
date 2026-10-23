@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 from urllib.parse import quote, urljoin
 import requests
-from google.auth import transport
+from google.auth.transport.requests import Request
 from google.oauth2 import service_account
 
 OUT="analytics/data.json"; BASE_URL="https://laxmannepal.com.np"
@@ -17,7 +17,7 @@ if not SERVICE_JSON or not GA4_PROPERTY_ID or not GSC_SITE_URL: fail("Set GOOGLE
 try:
     print("STAGE: credentials", flush=True)
     info=json.loads(SERVICE_JSON); credentials=service_account.Credentials.from_service_account_info(info,scopes=SCOPES)
-    credentials.refresh(transport.requests.Request()); session=requests.Session()
+    credentials.refresh(Request()); session=requests.Session()
     print("CHECK: credentials=ok", flush=True)
     session.headers.update({"Authorization":f"Bearer {credentials.token}"})
 except Exception as exc: fail(f"Could not load service-account credentials: {exc}")
