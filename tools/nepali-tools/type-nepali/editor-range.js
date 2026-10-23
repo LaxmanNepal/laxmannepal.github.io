@@ -12,7 +12,7 @@
   function getCurrentWord(value, pos) {
     if (typeof value !== 'string' || !Number.isInteger(pos)) return null;
     const caret = Math.max(0, Math.min(pos, value.length));
-    if (caret < value.length && /\\s/.test(value[caret])) return null;
+    if (caret < value.length && /\s/.test(value[caret])) return null;
     let start = caret;
     let end = caret;
 
