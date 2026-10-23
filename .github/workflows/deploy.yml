@@ -92,6 +92,12 @@ jobs:
           if [ -f nextjs-foundation/out/index.html ]; then
             cp -R nextjs-foundation/out/. .pages/
           fi
+          # Preserve the hand-authored Nepali typing tool after the Next.js export.
+          # The export can contain overlapping paths and must not replace this standalone tool.
+          if [ -d tools/nepali-tools/type-nepali ]; then
+            mkdir -p .pages/tools/nepali-tools
+            cp -R tools/nepali-tools/type-nepali .pages/tools/nepali-tools/
+          fi
           cp /tmp/laxman-root-homepage.html .pages/index.html
           python3 - <<'PY'
           import json, shutil
@@ -187,6 +193,14 @@ jobs:
           test -f .pages/ai/index.html
           test -f .pages/youtube/index.html
           test -f .pages/search/index.html
+      - name: Verify Nepali typing tool artifact
+        run: |
+          test -s .pages/tools/nepali-tools/type-nepali/index.html
+          test -s .pages/tools/nepali-tools/type-nepali/app.js
+          test -s .pages/tools/nepali-tools/type-nepali/style.css
+          grep -q 'Type Nepali Online' .pages/tools/nepali-tools/type-nepali/index.html
+          grep -q 'id="editor"' .pages/tools/nepali-tools/type-nepali/index.html
+          grep -q "restoreDraft();" .pages/tools/nepali-tools/type-nepali/app.js
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
