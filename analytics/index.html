@@ -38,7 +38,7 @@ function renderGrowthFeatures(d){
  try{
   const saved=JSON.parse(localStorage.getItem('lnAnalyticsGoal')||'null');
   if(saved&&gm&&!gm.dataset.loaded){gm.value=saved.metric||'screenPageViews';gt.value=saved.target||'';gm.dataset.loaded='1';}
-  document.getElementById('saveGoal')?.addEventListener('click',()=>{const target=Number(gt.value),metric=gm.value;if(!Number.isFinite(target)||target<1){gp.textContent='Enter a target greater than zero.';return}localStorage.setItem('lnAnalyticsGoal',JSON.stringify({metric,target}));renderGrowthFeatures(d);});
+  document.getElementById('saveGoal').onclick=()=>{const target=Number(gt.value),metric=gm.value;if(!Number.isFinite(target)||target<1){gp.textContent='Enter a target greater than zero.';return}localStorage.setItem('lnAnalyticsGoal',JSON.stringify({metric,target}));renderGrowthFeatures(d)};
   const goal=JSON.parse(localStorage.getItem('lnAnalyticsGoal')||'null');
   if(goal&&gp){const actual=val(goal.metric),progress=Math.min(100,Math.round(actual/goal.target*100));gp.innerHTML='<b>'+esc(labels[goal.metric]||goal.metric)+': '+fmt(actual)+' / '+fmt(goal.target)+'</b><div class="bar"><i style="width:'+progress+'%"></i></div><div class="hint small">'+progress+'% of target · reporting window '+esc(d.range||'')+'</div>'}else if(gp)gp.textContent='Choose a metric and target to start tracking.';
  }catch(e){if(gp)gp.textContent='Goal storage is unavailable in this browser.'}
