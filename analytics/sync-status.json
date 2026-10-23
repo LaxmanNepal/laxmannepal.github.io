@@ -1,11 +1,22 @@
 {
   "status": "failed",
-  "stage": "credentials",
-  "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
-  "details": "STAGE: credentials\nERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
-  "checks": {},
-  "updatedAt": "2026-10-23T21:29:00.243830+00:00",
+  "stage": "ga4",
+  "message": "\"code\": 403,",
+  "details": "STAGE: credentials\nCHECK: credentials=ok\nSTAGE: ga4\nERROR: GA4 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Google Analytics Data API has not been used in project 687968222575 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/analyticsdata.googleapis.com/overview?project=687968222575 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"SERVICE_DISABLED\",\n        \"domain\": \"googleapis.com\",\n        \"metad",
+  "checks": {
+    "credentials": "ok"
+  },
+  "updatedAt": "2026-10-23T22:20:49.608556+00:00",
   "history": [
+    {
+      "status": "failed",
+      "stage": "ga4",
+      "message": "\"code\": 403,",
+      "checks": {
+        "credentials": "ok"
+      },
+      "updatedAt": "2026-10-23T22:20:49.608556+00:00"
+    },
     {
       "status": "failed",
       "stage": "credentials",
@@ -82,13 +93,6 @@
       "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
       "checks": {},
       "updatedAt": "2026-10-21T11:58:54.444540+00:00"
-    },
-    {
-      "status": "failed",
-      "stage": "credentials",
-      "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
-      "checks": {},
-      "updatedAt": "2026-10-21T04:57:40.472464+00:00"
     }
   ]
 }
