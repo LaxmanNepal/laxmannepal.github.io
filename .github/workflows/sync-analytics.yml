@@ -93,7 +93,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           rm -f analytics/sync.log
+          # Preserve one immutable analytics snapshot per UTC day for historical trend analysis.
+          if [ -f analytics/data.json ]; then
+            mkdir -p analytics/history
+            SNAPSHOT_DATE=$(python -c "import json,datetime; d=json.load(open('analytics/data.json')); print(d.get('generatedAt',datetime.datetime.now(datetime.timezone.utc).isoformat())[:10])")
+            if [ ! -f "analytics/history/${SNAPSHOT_DATE}.json" ]; then cp analytics/data.json "analytics/history/${SNAPSHOT_DATE}.json"; fi
+          fi
           git add analytics/sync-status.json
+          if [ -d analytics/history ]; then git add analytics/history; fi
           if [ -f analytics/data.json ]; then git add analytics/data.json; fi
           if [ -f analytics/seo-fix-report.md ]; then git add analytics/seo-fix-report.md; fi
           if git diff --cached --quiet; then
