@@ -35,6 +35,6 @@ test('does not treat brace-protected English as an unfinished token', () => {
 });
 
 test('returns null when the caret is at whitespace or has no token before it', () => {
-  assert.equal(getCurrentWord('hello world', 6), null);
+  assert.equal(getCurrentWord('hello world', 5), null);
   assert.equal(getCurrentWord(' hello', 0), null);
 });
