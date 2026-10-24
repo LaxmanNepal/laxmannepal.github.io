@@ -88,23 +88,38 @@ def regenerate_detail_pages(phones):
 
 
 def refresh_metadata(data, phones):
-    """Recompute catalogue counters after validation may remove or repair offers."""
-    stores = {
-        str(item.get("store", "")).strip()
-        for phone in phones
-        if isinstance(phone, dict)
-        for item in phone.get("prices", [])
-        if isinstance(item, dict) and is_num(item.get("price")) and float(item["price"]) > 0 and item.get("store")
-    }
-    data["price_count"] = sum(
-        1 for phone in phones if isinstance(phone, dict)
-        for item in phone.get("prices", [])
-        if isinstance(item, dict) and is_num(item.get("price")) and float(item["price"]) > 0 and item.get("store")
-    )
-    data["store_count"] = len(stores)
+    """Normalize offer arrays and recompute per-phone and catalogue metadata."""
+    valid_stores = set()
+    valid_count = 0
+    for phone in phones:
+        if not isinstance(phone, dict):
+            continue
+        prices = phone.get("prices")
+        if not isinstance(prices, list):
+            prices = []
+        prices = [
+            item for item in prices
+            if isinstance(item, dict)
+            and is_num(item.get("price"))
+            and float(item["price"]) > 0
+            and str(item.get("store", "")).strip()
+        ]
+        prices.sort(key=lambda item: float(item["price"]))
+        phone["prices"] = prices
+        phone["price_count"] = len(prices)
+        if prices:
+            phone["price"] = int(round(float(prices[0]["price"])))
+            phone["best_store"] = prices[0]["store"]
+            phone["best_url"] = prices[0].get("url")
+            valid_stores.update(str(item["store"]).strip() for item in prices)
+            valid_count += len(prices)
+        else:
+            phone["price"] = None
+            phone["best_store"] = None
+            phone["best_url"] = None
+    data["price_count"] = valid_count
+    data["store_count"] = len(valid_stores)
     data["variant_count"] = len(phones)
-
-
 
 def sync_today_history(phones, history_path=HISTORY_OUT):
     """Replace today's pre-validation snapshot with the validated catalogue."""
