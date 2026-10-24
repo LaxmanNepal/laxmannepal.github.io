@@ -166,3 +166,29 @@ test('local documents, templates, find/replace and delete-all work', async () =>
     assert.equal(saved.docs, null);
   } finally { await context.close(); }
 });
+
+test('Preeti converter converts both directions locally', async () => {
+  const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const page = await context.newPage();
+  try {
+    await page.goto('http://127.0.0.1:4173/tools/nepali-tools/preeti-unicode-converter/', { waitUntil: 'domcontentloaded' });
+    const source = page.locator('#source-text');
+    const result = page.locator('#result-text');
+    await source.fill("g]kfn ;/sf/sf k|wfgdGqLn] cfly{s ;'wf/sf] 3f]if0ff ug'{eof] .");
+    assert.equal(await result.inputValue(), 'नेपाल सरकारका प्रधानमन्त्रीले आर्थिक सुधारको घोषणा गर्नुभयो ।');
+    await page.locator('#direction').selectOption('unicode-to-preeti');
+    await source.fill('नेपाल');
+    assert.equal(await result.inputValue(), 'g]kfn');
+    assert.match(await page.locator('#conversion-status').textContent(), /Preeti font/);
+  } finally { await context.close(); }
+});
+
+test('Preeti converter fits a narrow mobile viewport', async () => {
+  const context = await browser.newContext({ viewport: { width: 375, height: 812 } });
+  const page = await context.newPage();
+  try {
+    await page.goto('http://127.0.0.1:4173/tools/nepali-tools/preeti-unicode-converter/', { waitUntil: 'domcontentloaded' });
+    const dimensions = await page.evaluate(() => ({ viewport: document.documentElement.clientWidth, page: document.documentElement.scrollWidth }));
+    assert.ok(dimensions.page <= dimensions.viewport + 1, `horizontal overflow: ${JSON.stringify(dimensions)}`);
+  } finally { await context.close(); }
+});
