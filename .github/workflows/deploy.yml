@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths-ignore:
       - 'old/**'
+  pull_request:
+    paths:
+      - 'laptop-price-in-nepal/**'
+      - 'tests/laptop-marketplace.test.cjs'
+      - '.github/workflows/deploy.yml'
   workflow_run:
     workflows: ["Build and validate native blogs", "Sync Analytics Data"]
     types: [completed]
@@ -22,8 +27,27 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  laptop-regression:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Validate laptop catalogue
+        run: |
+          python -m json.tool laptop-price-in-nepal/data/laptops.json > /dev/null
+          python -m json.tool laptop-price-in-nepal/data/laptop-price-history.json > /dev/null
+      - name: Run laptop marketplace regression tests
+        run: node --test tests/laptop-marketplace.test.cjs
+      - name: Compile price refresh script
+        run: python -m py_compile laptop-price-in-nepal/scripts/refresh_prices.py
   deploy:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name != 'pull_request' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success') }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
