@@ -297,6 +297,56 @@ document.addEventListener('click', function(event) {
 </script>""" % json.dumps(title)
     return body.replace("</body>", tracking + "</body>")
 
+def write_category_pages(phones):
+    root=Path("mobile-price-in-nepal")
+    brands_root=root/"brands"
+    budgets_root=root/"budgets"
+    brands_root.mkdir(parents=True,exist_ok=True)
+    budgets_root.mkdir(parents=True,exist_ok=True)
+    esc=lambda x:html.escape(str(x or ""),quote=True)
+    def render_page(title,description,slug,entries,kind):
+        canonical="https://laxmannepal.com.np/mobile-price-in-nepal/"+kind+"/"+slug+"/"
+        cards=[]
+        for p in sorted(entries,key=lambda x:(x.get("price") or 10**12,x.get("model",""))):
+            price=p.get("price")
+            image=p.get("image")
+            photo=f'<img src="{esc(image)}" alt="{esc(p.get("model"))}" loading="lazy">' if image else '<span>📱</span>'
+            price_html=f'Rs. {int(price):,}' if price else "Price not confirmed"
+            cards.append(f'<article class="card"><a href="/mobile-price-in-nepal/phones/{esc(p["slug"])}/"><div class="photo">{photo}</div><div class="brand">{esc(p.get("brand"))}</div><h2>{esc(p.get("model"))}</h2><strong>{price_html}</strong><p>Lowest at {esc(p.get("best_store") or "No confirmed store")}</p><span>Compare offers and specifications →</span></a></article>')
+        item_list={"@context":"https://schema.org","@type":"ItemList","name":title,"itemListElement":[{"@type":"ListItem","position":i+1,"url":"https://laxmannepal.com.np/mobile-price-in-nepal/phones/"+p["slug"]+"/","name":p.get("model")} for i,p in enumerate(entries)]}
+        body=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Laxman Nepal</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:type" content="website"><script type="application/ld+json">{json.dumps(item_list,ensure_ascii=False).replace("</","<\\/")}</script><style>*{{box-sizing:border-box}}body{{margin:0;background:#f7f8fb;color:#101828;font:16px system-ui,sans-serif}}main{{max-width:1180px;margin:auto;padding:24px 16px 60px}}a{{color:inherit;text-decoration:none}}.back{{color:#2563eb;font-weight:800}}.hero,.panel{{background:white;border:1px solid #e4e7ec;border-radius:20px;padding:clamp(18px,4vw,34px);margin:18px 0}}h1{{font-size:clamp(30px,5vw,48px);letter-spacing:-.04em;margin:14px 0}}p{{color:#667085;line-height:1.65}}.grid{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}}.card{{background:#fff;border:1px solid #e4e7ec;border-radius:16px;overflow:hidden}}.card a{{display:block;padding:12px}}.photo{{height:170px;background:#f8fafc;border-radius:10px;display:grid;place-items:center;margin-bottom:12px}}.photo img{{width:100%;height:100%;object-fit:contain}}.brand{{font-size:11px;color:#2563eb;font-weight:900;text-transform:uppercase}}h2{{font-size:15px;line-height:1.4}}.card strong{{font-size:20px}}.card p,.card span{{font-size:12px}}.card span{{color:#2563eb;font-weight:800}}.empty{{padding:24px;background:white;border-radius:12px}}@media(max-width:850px){{.grid{{grid-template-columns:repeat(3,minmax(0,1fr))}}}}@media(max-width:600px){{.grid{{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}}.photo{{height:135px}}}}</style></head><body><main><a class="back" href="/mobile-price-in-nepal/">← All mobile prices in Nepal</a><section class="hero"><h1>{esc(title)}</h1><p>{esc(description)}</p><p>{len(entries)} phone models with a recorded offer. Prices can change; confirm stock, warranty and exact RAM/storage with the retailer.</p></section>{'<section class="grid">'+''.join(cards)+'</section>' if cards else '<section class="empty">No current verified offers are available in this category. Check back after a successful retailer refresh.</section>'}<section class="panel"><h2>Compare phone prices in Nepal</h2><p>Browse brand pages and model details to compare available store offers. Only recorded prices are shown; unavailable or ambiguous prices are not guessed.</p><a class="back" href="/mobile-price-in-nepal/">Browse all mobile prices →</a></section></main></body></html>'''
+        folder=(brands_root if kind=="brands" else budgets_root)/slug
+        folder.mkdir(parents=True,exist_ok=True)
+        (folder/"index.html").write_text(body,encoding="utf-8")
+    keep_brands=set()
+    grouped={}
+    for p in phones:
+        if p.get("brand") and p["brand"]!="Other":
+            grouped.setdefault(p["brand"],[]).append(p)
+    for brand,entries in grouped.items():
+        slug=slugify(brand)
+        keep_brands.add(slug)
+        render_page(f"{brand} Mobile Prices in Nepal",f"Compare {brand} phone prices in Nepal, including lowest recorded store offers, available specifications and individual model pages.",slug,entries,"brands")
+    for folder in brands_root.iterdir():
+        if folder.is_dir() and folder.name not in keep_brands:
+            import shutil; shutil.rmtree(folder)
+    ranges=[
+        ("under-15000","Phones Under Rs. 15,000 in Nepal",lambda v:0<v<15000),
+        ("15000-25000","Phones Rs. 15,000–25,000 in Nepal",lambda v:15000<=v<25000),
+        ("25000-40000","Phones Rs. 25,000–40,000 in Nepal",lambda v:25000<=v<40000),
+        ("40000-70000","Phones Rs. 40,000–70,000 in Nepal",lambda v:40000<=v<70000),
+        ("70000-plus","Phones Above Rs. 70,000 in Nepal",lambda v:v>=70000),
+    ]
+    keep_budgets=set()
+    for slug,title,predicate in ranges:
+        entries=[p for p in phones if p.get("price") and predicate(int(p["price"]))]
+        if not entries: continue
+        keep_budgets.add(slug)
+        render_page(title,f"Find smartphones in Nepal in this budget, compare current recorded store offers, and view each model's specifications.",slug,entries,"budgets")
+    for folder in budgets_root.iterdir():
+        if folder.is_dir() and folder.name not in keep_budgets:
+            import shutil; shutil.rmtree(folder)
+
 def main():
     raw=[]
     for source in SOURCES:
@@ -374,6 +424,7 @@ def main():
     for p in phones:
         p["history"]=[{"date":d["date"],"price":next((x.get("best_price") for x in d.get("phones",[]) if x.get("slug")==p["slug"]),None)} for d in days if any(x.get("slug")==p["slug"] and x.get("best_price") for x in d.get("phones",[]))]
     HISTORY_OUT.write_text(json.dumps(history_doc,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
+    write_category_pages(phones)
     # Generate search-indexable detail pages, one per model/variant.
     DETAIL_ROOT.mkdir(parents=True,exist_ok=True)
     keep=set()
