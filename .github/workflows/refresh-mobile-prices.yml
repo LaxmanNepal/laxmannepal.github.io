@@ -5,6 +5,8 @@ on:
     - cron: "17 1 * * *"
   workflow_dispatch:
   push:
+    branches:
+      - "main"
     paths:
       - "scripts/refresh-mobile-prices.py"
       - "scripts/validate-mobile-prices.py"
@@ -50,10 +52,34 @@ jobs:
           assert mod.normalize_model('Apple iPhone 15 6.1" A16 Bionic 48MP Dual Rear Camera Black 128GB') == "Apple iPhone 15"
           print("Scraper syntax and conservative parser checks passed.")
           PY
+      - name: Clear prior run status before this refresh attempt
+        run: rm -f data/mobile-price-refresh-status.json
+      - name: Test source-health merge safeguards
+        run: python -m unittest discover -s tests -p "test_mobile_price_refresh.py"
       - name: Refresh phone listings
         run: python scripts/refresh-mobile-prices.py
       - name: Validate and repair suspicious prices
         run: python scripts/validate-mobile-prices.py
+      - name: Report daily source health and update totals
+        if: always()
+        run: |
+          if [ -f data/mobile-price-refresh-status.json ]; then
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          d=json.load(open("data/mobile-price-refresh-status.json",encoding="utf-8"))
+          print("## Mobile catalogue refresh")
+          print(f'- Date: {d.get("date")}')
+          print(f'- Model variants: {d.get("model_variants")}')
+          print(f'- Fresh offers: {d.get("fresh_offers")}')
+          print(f'- Last-known stale offers: {d.get("stale_offers")}')
+          print("| Store | Status | Fresh offers | Previous offers |")
+          print("|---|---|---:|---:|")
+          for name, item in d.get("stores",{}).items():
+              print(f'| {name} | {item.get("status")} | {item.get("priced_offers_found")} | {item.get("previous_offers")} |')
+          PY
+          else
+            echo "No refresh status was written; inspect the scraper step logs." >> "$GITHUB_STEP_SUMMARY"
+          fi
       - name: Publish refreshed catalogue without rebase conflicts
         run: |
           git config user.name "github-actions[bot]"
@@ -61,7 +87,7 @@ jobs:
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --mixed origin/main
-            git add -A data/mobile-prices.json data/mobile-price-history.json mobile-price-in-nepal/phones mobile-price-in-nepal/brands mobile-price-in-nepal/budgets
+            git add -A data/mobile-prices.json data/mobile-price-history.json data/mobile-price-refresh-status.json mobile-price-in-nepal/phones mobile-price-in-nepal/brands mobile-price-in-nepal/budgets
             if git diff --cached --quiet; then
               echo "Catalogue unchanged; no commit needed."
               exit 0
