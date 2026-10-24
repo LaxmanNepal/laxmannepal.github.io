@@ -25,6 +25,7 @@ on:
       - "scripts/audit_mobile_price_catalogue.py"
       - "tests/test_mobile_price_validation.py"
       - ".github/workflows/mobile-price-quality.yml"
+      - "tests/test_mobile_price_refresh.py"
   workflow_dispatch:
 permissions:
   contents: read
