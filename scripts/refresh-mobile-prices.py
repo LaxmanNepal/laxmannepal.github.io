@@ -37,7 +37,17 @@ def fetch(url):
 def money(text):
     m=PRICE_RE.search(clean(text))
     return int(m.group(1).replace(",","")) if m else None
+def is_phone_title(title):
+    t=clean(title)
+    if len(t)>110 or len(t.split())<2: return False
+    if re.search(r"\\b(accessories|accessory|headphones|earphones|earbuds|tablet|tablets|mobile brands|phone brands|mobile accessories|phone cases|charger|charging cable|power bank|buy a phone|mobile price|phones list)\\b",t,re.I): return False
+    family=bool(re.search(r"\\b(iphone|galaxy|redmi|poco|pixel|oneplus|vivo|oppo|realme|motorola|nothing|honor|infinix|tecno|nokia|samsung|xiaomi|cmf|nubia|zte|magic|spark|camon|hot)\\b",t,re.I))
+    has_brand=any(re.search(r"\\b"+re.escape(b)+r"\\b",t,re.I) for b in BRANDS)
+    has_model=bool(re.search(r"\\b(\\d{1,4}|SE|Fold|Flip|Ultra|Pro|Plus|Lite|Note|Edge|Neo|Air|Max|Play|Spark|Camon|Hot|Smart)\\b",t,re.I))
+    return (family or has_brand) and has_model
+
 def brand_for(name):
+    if re.search(r"\\biphone\\b",name,re.I): return "Apple"
     for b in sorted(BRANDS,key=len,reverse=True):
         if re.search(r"\b"+re.escape(b)+r"\b",name,re.I):
             return "OPPO" if b.lower()=="oppo" else b
@@ -119,7 +129,7 @@ def parse_listing(source):
             href=urljoin(source["url"],a.get("href",""))
             path=urlparse(href).path.lower()
             if len(title)<5 or href==source["url"] or any(x in path for x in ["/cart","/account","/category/","/collections/","/product-category/","/tag/"]): continue
-            if not re.search(r"iphone|galaxy|redmi|poco|pixel|oneplus|vivo|oppo|realme|motorola|nothing|honor|infinix|tecno|nokia|phone|mobile|samsung|xiaomi|cmf|nubia|zte",title,re.I): continue
+            if not is_phone_title(title): continue
             choices.append((len(title),title,href,a))
         if not choices: continue
         _,title,href,a=max(choices,key=lambda x:x[0])
@@ -136,7 +146,7 @@ def parse_listing(source):
         for a in soup.select('a[href]'):
             title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True))
             href=urljoin(source["url"],a.get("href",""))
-            if len(title)<7 or not re.search(r"iphone|galaxy|redmi|poco|pixel|oneplus|vivo|oppo|realme|motorola|nothing|honor|infinix|tecno|phone|mobile|samsung|xiaomi|cmf|nubia|zte",title,re.I): continue
+            if len(title)<7 or not is_phone_title(title): continue
             if urlparse(href).netloc!=urlparse(source["url"]).netloc: continue
             found.append({"store":source["store"],"title":title,"url":href,"price":None,"image":None,"kind":source["kind"]})
     # De-dupe listing candidates by URL.
@@ -247,7 +257,7 @@ def main():
         price=detail.get("price") or item.get("price")
         # Do not publish non-phone categories or pages without a plausible product name.
         title=clean(detail.get("title") or item["title"])
-        if not re.search(r"iphone|galaxy|redmi|poco|pixel|oneplus|vivo|oppo|realme|motorola|nothing|honor|infinix|tecno|nokia|phone|mobile|samsung|xiaomi|cmf|nubia|zte",title,re.I): continue
+        if not is_phone_title(title): continue
         image=detail.get("image") or item.get("image")
         # Keep image only when it's a real HTTP URL.
         if image and not str(image).startswith("http"): image=urljoin(item["url"],str(image))
