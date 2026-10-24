@@ -1,0 +1,66 @@
+{
+  "updated_at": "2026-10-24T22:49:44.714628+00:00",
+  "date": "2026-10-24",
+  "schedule": "daily",
+  "model_variants": 282,
+  "fresh_offers": 241,
+  "stale_offers": 0,
+  "stores": {
+    "Brother Mart": {
+      "candidates": 420,
+      "priced_offers_found": 169,
+      "previous_offers": 169,
+      "minimum_expected_offers": 60,
+      "status": "complete",
+      "errors": []
+    },
+    "Daraz": {
+      "candidates": 0,
+      "priced_offers_found": 0,
+      "previous_offers": 0,
+      "minimum_expected_offers": 1,
+      "status": "stale",
+      "errors": []
+    },
+    "GBN Store": {
+      "candidates": 204,
+      "priced_offers_found": 59,
+      "previous_offers": 53,
+      "minimum_expected_offers": 19,
+      "status": "complete",
+      "errors": []
+    },
+    "National Mobile": {
+      "candidates": 0,
+      "priced_offers_found": 0,
+      "previous_offers": 0,
+      "minimum_expected_offers": 1,
+      "status": "stale",
+      "errors": []
+    },
+    "Neo Store": {
+      "candidates": 12,
+      "priced_offers_found": 5,
+      "previous_offers": 5,
+      "minimum_expected_offers": 3,
+      "status": "complete",
+      "errors": []
+    },
+    "Oliz Store": {
+      "candidates": 0,
+      "priced_offers_found": 0,
+      "previous_offers": 0,
+      "minimum_expected_offers": 1,
+      "status": "stale",
+      "errors": []
+    },
+    "Quality Computer": {
+      "candidates": 8,
+      "priced_offers_found": 8,
+      "previous_offers": 8,
+      "minimum_expected_offers": 3,
+      "status": "complete",
+      "errors": []
+    }
+  }
+}
