@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-24T16:01:05.603671+00:00",
-  "count": 151,
+  "updated_at": "2026-10-24T20:54:31.507788+00:00",
+  "count": 150,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -128,22 +128,6 @@
       "storages": [
         "128GB"
       ]
-    },
-    {
-      "id": "blackview-wave-2c",
-      "name": "Blackview Wave 2C",
-      "brand": "Blackview",
-      "variants": [
-        "3GB + 32GB"
-      ],
-      "price": 9999,
-      "max_price": 9999,
-      "original_price": null,
-      "rams": [
-        "3GB",
-        "32GB"
-      ],
-      "storages": []
     },
     {
       "id": "blackview-wave-7c",
