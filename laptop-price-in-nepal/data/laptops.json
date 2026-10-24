@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2026-10-24",
+  "currency": "NPR",
+  "stores": [
+    {"id":"bt-planet","name":"BT Planet","url":"https://www.btplanet.com.np/category/laptops","note":"Catalogue pricing; confirm exact configuration, stock and warranty."},
+    {"id":"multronics","name":"Multronics International","url":"https://www.multronics.com.np/","note":"Catalogue pricing; confirm exact configuration, stock and warranty."},
+    {"id":"tech-chautari","name":"Tech Chautari","url":"https://shop.techchautari.com/categories/laptops","note":"Catalogue pricing; confirm exact configuration, stock and warranty."},
+    {"id":"gadgetbyte","name":"GadgetByte Nepal","url":"https://www.gadgetbytenepal.com/category/laptop-price-in-nepal/","note":"Editorial price reference; use retailer links for purchase."}
+  ],
+  "products": [
+    {
+      "id":"lenovo-ideapad-slim-3-i5-12450h-16-512",
+      "brand":"Lenovo","name":"IdeaPad Slim 3 15","variant":"Intel Core i5-12450H / 16GB / 512GB SSD",
+      "category":"office","useCases":["office","student","programming"],"priceFrom":72000,
+      "image":"https://p1-ofp.static.pub/ShareResource/na/products/2023/lenovo-ideapad-slim-3-15-inch-gen-8-202304181255.png",
+      "specs":{"processor":"Intel Core i5-12450H","ram":"16GB","storage":"512GB SSD","display":"15.6-inch FHD","gpu":"Integrated Intel UHD","weight":"Approx. 1.62 kg","os":"Windows 11"},
+      "offers":[
+        {"storeId":"bt-planet","price":72000,"availability":"Confirm stock","url":"https://www.btplanet.com.np/category/laptops","checked":"2026-10-16"},
+        {"storeId":"multronics","price":72000,"availability":"Confirm stock","url":"https://www.multronics.com.np/","checked":"2026-10-16"}
+      ]
+    },
+    {
+      "id":"asus-vivobook-14-i5-1335u-8-512",
+      "brand":"ASUS","name":"Vivobook 14 (2024)","variant":"Intel Core i5-1335U / 8GB / 512GB SSD",
+      "category":"office","useCases":["office","student"],"priceFrom":87000,
+      "image":"https://dlcdnwebimgs.asus.com/gain/0A4B5D77-3A5B-4C25-9D67-2D6A7D4A3B9B",
+      "specs":{"processor":"Intel Core i5-1335U","ram":"8GB","storage":"512GB SSD","display":"14-inch FHD IPS","gpu":"Intel Iris Xe","weight":"Approx. 1.4 kg","os":"Windows 11"},
+      "offers":[
+        {"storeId":"bt-planet","price":87000,"availability":"In stock","url":"https://www.btplanet.com.np/category/laptops","checked":"2026-10-16"},
+        {"storeId":"multronics","price":87000,"availability":"In stock","url":"https://www.multronics.com.np/","checked":"2026-10-16"}
+      ]
+    },
+    {
+      "id":"dell-inspiron-3535-ryzen7-16-512",
+      "brand":"Dell","name":"Inspiron 3535","variant":"Ryzen 7 7520U / 16GB / 512GB SSD / Touch",
+      "category":"office","useCases":["office","student","programming"],"priceFrom":90200,
+      "image":"https://i.dell.com/sites/csimages/Product_Imagery/all/laptop-inspiron-15-3535nt-fpr-gallery-504x350.png",
+      "specs":{"processor":"AMD Ryzen 7 7520U","ram":"16GB","storage":"512GB SSD","display":"15.6-inch FHD Touch","gpu":"AMD Radeon 610M","weight":"Approx. 1.63 kg","os":"Windows 11"},
+      "offers":[
+        {"storeId":"bt-planet","price":90200,"availability":"In stock","url":"https://www.btplanet.com.np/category/laptops","checked":"2026-10-16"},
+        {"storeId":"multronics","price":90200,"availability":"In stock","url":"https://www.multronics.com.np/","checked":"2026-10-16"}
+      ]
+    },
+    {
+      "id":"dell-dc15250-i5-13th-8-512",
+      "brand":"Dell","name":"Laptop 15 DC15250","variant":"Intel Core i5 13th Gen / 8GB / 512GB SSD",
+      "category":"office","useCases":["office","student"],"priceFrom":92000,
+      "image":"https://i.dell.com/sites/csimages/Product_Imagery/all/laptop-dell-15-dc15250nt-fpr-gallery-504x350.png",
+      "specs":{"processor":"Intel Core i5 13th Gen","ram":"8GB","storage":"512GB SSD","display":"15.6-inch FHD","gpu":"Integrated Intel Graphics","weight":"Approx. 1.9 kg","os":"Windows 11"},
+      "offers":[
+        {"storeId":"bt-planet","price":92000,"availability":"In stock","url":"https://www.btplanet.com.np/category/laptops","checked":"2026-10-16"},
+        {"storeId":"multronics","price":99600,"availability":"In stock","url":"https://www.multronics.com.np/","checked":"2026-10-16"}
+      ]
+    },
+    {
+      "id":"acer-aspire-5-i5-1235u-rtx2050",
+      "brand":"Acer","name":"Aspire 5 A515-57G","variant":"Core i5-1235U / RTX 2050 / 8GB / 512GB SSD",
+      "category":"creator","useCases":["editing","programming","gaming"],"priceFrom":88800,
+      "image":"https://static.acer.com/up/Resource/Acer/Laptops/Aspire_5/Images/20220525/Aspire5_A515-57G_Black_modelmain.png",
+      "specs":{"processor":"Intel Core i5-1235U","ram":"8GB","storage":"512GB SSD","display":"15.6-inch FHD","gpu":"NVIDIA GeForce RTX 2050","weight":"Approx. 1.8 kg","os":"Windows 11"},
+      "offers":[
+        {"storeId":"bt-planet","price":88800,"availability":"In stock","url":"https://www.btplanet.com.np/category/laptops","checked":"2026-10-24"}
+      ]
+    },
+    {
+      "id":"hp-pavilion-15-i5-1335u-16-512",
+      "brand":"HP","name":"Pavilion 15 (2024)","variant":"Intel Core i5-1335U / 16GB / 512GB SSD",
+      "category":"office","useCases":["office","student","programming"],"priceFrom":98000,
+      "image":"https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08493564.png",
+      "specs":{"processor":"Intel Core i5-1335U","ram":"16GB","storage":"512GB SSD","display":"15.6-inch FHD IPS","gpu":"Intel Iris Xe","weight":"Approx. 1.75 kg","os":"Windows 11"},
+      "offers":[
+        {"storeId":"bt-planet","price":98000,"availability":"In stock","url":"https://www.btplanet.com.np/category/laptops","checked":"2026-10-24"},
+        {"storeId":"multronics","price":105000,"availability":"Confirm stock","url":"https://www.multronics.com.np/","checked":"2026-10-16"}
+      ]
+    },
+    {
+      "id":"acer-nitro-v15-rtx4050",
+      "brand":"Acer","name":"Nitro V15 ANV15-52","variant":"Core 7 240H / RTX 4050 / 16GB / 512GB SSD",
+      "category":"gaming","useCases":["gaming","editing","3d"],"priceFrom":170000,
+      "image":"https://static.acer.com/up/Resource/Acer/Laptops/Nitro_V_15/Images/20240409/NitroV15_ANV15-52_Black_modelmain.png",
+      "specs":{"processor":"Intel Core 7 240H","ram":"16GB","storage":"512GB SSD","display":"15.6-inch FHD 144Hz","gpu":"NVIDIA GeForce RTX 4050","weight":"Approx. 2.1 kg","os":"Windows 11"},
+      "offers":[
+        {"storeId":"gadgetbyte","price":170000,"availability":"Price reference","url":"https://www.gadgetbytenepal.com/category/laptop-price-in-nepal/","checked":"2026-10-24"}
+      ]
+    }
+  ]
+}
