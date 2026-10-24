@@ -1,13 +1,13 @@
 'use strict';
 
-const CACHE_NAME = 'ln-nepali-typing-v2';
+const CACHE_NAME = 'ln-nepali-typing-v3';
 const PRECACHE_URLS = [
   './',
   './index.html',
   './style.css',
   './editor-range.js?v=20261025-2',
   './engines/romanized.js?v=20261025-2',
-  './app.js?v=20261025-3',
+  './app.js?v=20261025-4',
   './workspace-tools.js?v=20261025-1',
   './pwa.js?v=20261025-1',
   './manifest.webmanifest',
