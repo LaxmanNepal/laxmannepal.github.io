@@ -111,3 +111,58 @@ test('practice page fits a narrow mobile viewport', async () => {
     assert.ok(dimensions.page <= dimensions.viewport + 1, `horizontal overflow: ${JSON.stringify(dimensions)}`);
   } finally { await context.close(); }
 });
+
+test('Google suggestions are opt-in and local suggestions work by default', async () => {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  let remoteRequests = 0;
+  await page.route('https://inputtools.google.com/**', route => { remoteRequests++; return route.abort(); });
+  try {
+    await page.goto('http://127.0.0.1:4173/tools/nepali-tools/type-nepali/', { waitUntil: 'domcontentloaded' });
+    const editor = page.locator('#editor');
+    await editor.fill('namaste');
+    await page.locator('.suggestion').filter({ hasText: 'नमस्ते' }).first().waitFor();
+    assert.equal(await page.locator('#remote-suggestions').isChecked(), false);
+    assert.equal(remoteRequests, 0);
+    await page.locator('#remote-suggestions').check();
+    await editor.fill('nepal');
+    await page.waitForTimeout(250);
+    assert.ok(remoteRequests > 0);
+  } finally { await context.close(); }
+});
+
+test('local documents, templates, find/replace and delete-all work', async () => {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  page.on('dialog', dialog => dialog.accept());
+  try {
+    await page.goto('http://127.0.0.1:4173/tools/nepali-tools/type-nepali/', { waitUntil: 'domcontentloaded' });
+    await page.locator('.workspace-tools > summary').click();
+    const editor = page.locator('#editor');
+    await editor.fill('First draft नेपाल');
+    await page.locator('#new-document').click();
+    assert.equal(await editor.inputValue(), '');
+    assert.equal(await page.locator('#document-select option').count(), 2);
+    await editor.fill('Second document');
+    await page.locator('#document-select').selectOption({ index: 0 });
+    assert.equal(await editor.inputValue(), 'First draft नेपाल');
+    await page.locator('#document-name').fill('First notes');
+    await page.locator('#rename-document').click();
+    assert.equal(await page.locator('#document-select option').nth(0).textContent(), 'First notes');
+    await page.locator('#template-select').selectOption('leave');
+    await page.locator('#insert-template').click();
+    assert.match(await editor.inputValue(), /बिदा पाऊँ/);
+    await editor.fill('नेपाल नेपाल');
+    await page.locator('#find-text').fill('नेपाल');
+    await page.locator('#replace-text').fill('देश');
+    await page.locator('#replace-all').click();
+    assert.equal(await editor.inputValue(), 'देश देश');
+    await page.locator('#delete-local-data').click();
+    const saved = await page.evaluate(() => ({
+      draft: localStorage.getItem('ln-nepali-typing-draft'),
+      docs: localStorage.getItem('ln-nepali-typing-documents-v1')
+    }));
+    assert.equal(saved.draft, null);
+    assert.equal(saved.docs, null);
+  } finally { await context.close(); }
+});

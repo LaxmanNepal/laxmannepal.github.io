@@ -274,8 +274,13 @@ jobs:
           test -s .pages/tools/nepali-tools/type-nepali/index.html
           test -s .pages/tools/nepali-tools/type-nepali/app.js
           test -s .pages/tools/nepali-tools/type-nepali/style.css
+          test -s .pages/tools/nepali-tools/type-nepali/engines/romanized.js
+          test -s .pages/tools/nepali-tools/type-nepali/workspace-tools.js
+          test -s .pages/tools/nepali-tools/type-nepali/manifest.webmanifest
+          test -s .pages/tools/nepali-tools/type-nepali/sw.js
           grep -q 'Type Nepali Online' .pages/tools/nepali-tools/type-nepali/index.html
           grep -q 'id="editor"' .pages/tools/nepali-tools/type-nepali/index.html
+          grep -q 'id="remote-suggestions"' .pages/tools/nepali-tools/type-nepali/index.html
           grep -q "restoreDraft();" .pages/tools/nepali-tools/type-nepali/app.js
       - name: Verify Nepali typing practice artifact
         run: |
