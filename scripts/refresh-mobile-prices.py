@@ -37,7 +37,7 @@ VARIANT_RE = re.compile(r"\b(\d{1,2})\s*(?:GB)?\s*(?:\+|/|RAM)\s*(\d{2,4})\s*GB\
 
 def clean(v): return re.sub(r"\s+", " ", str(v or "")).strip()
 def fetch(url):
-    r=requests.get(url,headers=HEADERS,timeout=25); r.raise_for_status()
+    r=requests.get(url,headers=HEADERS,timeout=(4,10)); r.raise_for_status()
     return BeautifulSoup(r.text,"html.parser")
 def money(text):
     """Only accept text with one distinct currency amount."""
