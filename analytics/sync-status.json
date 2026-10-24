@@ -10,8 +10,21 @@
     "seo_audit": "ok",
     "snapshot": "ok"
   },
-  "updatedAt": "2026-10-24T11:13:53.896998+00:00",
+  "updatedAt": "2026-10-24T16:03:32.252033+00:00",
   "history": [
+    {
+      "status": "success",
+      "stage": "complete",
+      "message": "GA4 + Search Console sync completed successfully.",
+      "checks": {
+        "credentials": "ok",
+        "ga4": "ok",
+        "search_console": "ok",
+        "seo_audit": "ok",
+        "snapshot": "ok"
+      },
+      "updatedAt": "2026-10-24T16:03:32.252033+00:00"
+    },
     {
       "status": "success",
       "stage": "complete",
@@ -120,13 +133,6 @@
       "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
       "checks": {},
       "updatedAt": "2026-10-23T21:29:00.243830+00:00"
-    },
-    {
-      "status": "failed",
-      "stage": "credentials",
-      "message": "ERROR: Could not load service-account credentials: module 'google.auth.transport' has no attribute 'requests'",
-      "checks": {},
-      "updatedAt": "2026-10-23T17:14:27.208476+00:00"
     }
   ]
 }
