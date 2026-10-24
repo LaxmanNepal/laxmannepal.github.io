@@ -1,0 +1,51 @@
+name: Nepali Typing Browser Tests
+
+on:
+  pull_request:
+    paths:
+      - 'tools/nepali-tools/type-nepali/**'
+      - 'tests/nepali-typing-*.test.cjs'
+      - '.github/workflows/nepali-typing-tests.yml'
+      - '.github/workflows/deploy.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/nepali-tools/type-nepali/**'
+      - 'tests/nepali-typing-*.test.cjs'
+      - '.github/workflows/nepali-typing-tests.yml'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nepali-typing-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  browser-regressions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: Run range regression tests
+        run: node --test tests/nepali-typing-range.test.cjs
+      - name: Install browser-test dependency
+        run: npm install --prefix /tmp/typing-browser playwright
+      - name: Install Chromium
+        run: /tmp/typing-browser/node_modules/.bin/playwright install --with-deps chromium
+      - name: Run browser interaction tests
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/nepali-typing-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --silent --fail http://127.0.0.1:4173/tools/nepali-tools/type-nepali/ > /dev/null; then break; fi
+            sleep 1
+          done
+          NODE_PATH=/tmp/typing-browser/node_modules node --test tests/nepali-typing-browser.test.cjs
