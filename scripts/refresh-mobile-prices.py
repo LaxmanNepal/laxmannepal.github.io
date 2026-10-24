@@ -35,8 +35,31 @@ def fetch(url):
     r=requests.get(url,headers=HEADERS,timeout=25); r.raise_for_status()
     return BeautifulSoup(r.text,"html.parser")
 def money(text):
-    m=PRICE_RE.search(clean(text))
-    return int(m.group(1).replace(",","")) if m else None
+    """Only accept text with one distinct currency amount."""
+    matches=PRICE_RE.findall(clean(text))
+    values=list(dict.fromkeys(int(v.replace(",","")) for v in matches))
+    return values[0] if len(values)==1 and 1000 < values[0] < 3000000 else None
+
+def current_price(root):
+    """Prefer explicit current/sale price fields, never guess among crossed-out prices."""
+    selectors=(
+        'meta[itemprop="price"]','meta[property="product:price:amount"]',
+        'meta[property="og:price:amount"]','ins .amount','ins .woocommerce-Price-amount',
+        '.price ins','[class*="current-price"]','[class*="special-price"]',
+        '.price .amount','.woocommerce-Price-amount','[itemprop="price"]'
+    )
+    for selector in selectors:
+        for tag in root.select(selector):
+            raw=tag.get("content") or tag.get("value") or tag.get("data-price") or tag.get_text(" ",strip=True)
+            match=PRICE_RE.search(str(raw))
+            if match:
+                value=int(match.group(1).replace(",",""))
+            else:
+                digits=re.sub(r"[^0-9.]","",str(raw))
+                try: value=int(float(digits)) if digits else None
+                except Exception: value=None
+            if value and 1000 < value < 3000000: return value
+    return money(root.get_text(" ",strip=True))
 def is_phone_title(title):
     t=clean(title)
     if len(t)>110 or len(t.split())<2: return False
@@ -98,7 +121,7 @@ def product_meta(soup, fallback_name):
             price=money(tag.get("content",""))
             if price: break
     text=clean(soup.get_text(" ",strip=True))
-    if not price: price=money(text)
+    if not price: price=current_price(soup)
     # Structured feature tables and explicit label/value rows only.
     for row in soup.select("tr, .woocommerce-product-attributes-item, .product-info-item, li"):
         bits=[clean(x.get_text(" ",strip=True)) for x in row.select("th,td,.label,.value,strong,b")]
@@ -119,7 +142,7 @@ def parse_listing(source):
     for node in nodes:
         text=clean(node.get_text(" ",strip=True))
         if len(text)<8: continue
-        price=money(text)
+        price=current_price(node)
         anchors=node.select('a[href]')
         if not anchors: continue
         # Choose the longest plausible product title link, avoiding category/navigation links.
