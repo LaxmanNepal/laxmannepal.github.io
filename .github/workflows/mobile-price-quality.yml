@@ -10,6 +10,7 @@ on:
       - ".github/workflows/refresh-mobile-prices.yml"
       - "scripts/audit_mobile_price_catalogue.py"
       - "tests/test_mobile_price_validation.py"
+      - "tests/test_mobile_price_refresh.py"
       - ".github/workflows/mobile-price-quality.yml"
   push:
     branches:
@@ -19,6 +20,8 @@ on:
       - "data/mobile-price-history.json"
       - "mobile-price-in-nepal/**"
       - "scripts/validate-mobile-prices.py"
+      - "scripts/refresh-mobile-prices.py"
+      - ".github/workflows/refresh-mobile-prices.yml"
       - "scripts/audit_mobile_price_catalogue.py"
       - "tests/test_mobile_price_validation.py"
       - ".github/workflows/mobile-price-quality.yml"
@@ -26,7 +29,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: mobile-price-quality-\${{ github.ref }}
+  group: mobile-price-quality-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   validate:
