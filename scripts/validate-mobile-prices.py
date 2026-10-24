@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
-"""Validate and repair obvious mobile-price parsing errors before publication.
-
-The scraper keeps retailer prices separate. This pass only changes a price when
-there is strong internal evidence that a decimal/zero was lost (for example
-12,000 vs 120,000): a 10x correction must land close to the other stores' price.
-Apple/iPhone prices also get a conservative floor so a malformed five-digit price
-cannot become the cheapest offer without verification.
-"""
+"""Validate and repair obvious mobile-price parsing errors before publication."""
 from __future__ import annotations
 
 import importlib.util
@@ -49,7 +42,6 @@ def repair_phone(phone):
         peers = [v for v in values if v != price]
         reference = median(peers) if peers else None
 
-        # Strong tenfold-error signal: corrected price is close to the peer median.
         if reference and price < reference / 5:
             candidate = price * 10
             if 1000 < candidate < MAX_REASONABLE_NPR and abs(candidate - reference) / reference <= 0.30:
@@ -58,8 +50,6 @@ def repair_phone(phone):
                 changes += 1
                 continue
 
-        # iPhone listings below NPR 50k are treated as malformed unless the
-        # 10x correction is strongly supported by peer-store evidence.
         if is_iphone(phone) and price < APPLE_MIN_NPR:
             if reference:
                 candidate = price * 10
@@ -95,6 +85,24 @@ def regenerate_detail_pages(phones):
     print(f"Regenerated {count} phone detail pages after price validation.")
 
 
+def refresh_metadata(data, phones):
+    """Recompute catalogue counters after validation may remove or repair offers."""
+    stores = {
+        str(item.get("store", "")).strip()
+        for phone in phones
+        if isinstance(phone, dict)
+        for item in phone.get("prices", [])
+        if isinstance(item, dict) and is_num(item.get("price")) and item.get("store")
+    }
+    data["price_count"] = sum(
+        1 for phone in phones if isinstance(phone, dict)
+        for item in phone.get("prices", [])
+        if isinstance(item, dict) and is_num(item.get("price"))
+    )
+    data["store_count"] = len(stores)
+    data["variant_count"] = len(phones)
+
+
 def main():
     data = json.loads(OUT.read_text(encoding="utf-8"))
     phones = data.get("phones") if isinstance(data, dict) else data
@@ -116,9 +124,11 @@ def main():
     if suspicious:
         raise SystemExit(f"Suspicious published prices remain: {suspicious[:10]}")
 
+    refresh_metadata(data, phones)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     regenerate_detail_pages(phones)
     print(f"Price validation complete: {changed} corrected, {removed} suspicious offers removed.")
+    print(f"Catalogue metadata: {data['variant_count']} variants, {data['price_count']} offers, {data['store_count']} stores.")
 
 
 if __name__ == "__main__":
