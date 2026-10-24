@@ -119,12 +119,13 @@
   });
   $('#print-document').addEventListener('click', () => window.print());
   $('#delete-local-data').addEventListener('click', () => {
-    if (!window.confirm('Delete all saved documents and the current draft from this browser? This cannot be undone.')) return;
+    if (!window.confirm('Delete all saved documents, the current draft and learned typing choices from this browser? This cannot be undone.')) return;
     documents = []; currentId = null;
-    try { localStorage.removeItem(STORAGE_KEY); localStorage.removeItem(DRAFT_KEY); } catch (_) {}
+    try { localStorage.removeItem(STORAGE_KEY); localStorage.removeItem(DRAFT_KEY); localStorage.removeItem('ln-nepali-typing-learned-v1'); } catch (_) {}
     renderDocuments(); syncEditor('');
     try { localStorage.removeItem(STORAGE_KEY); localStorage.removeItem(DRAFT_KEY); } catch (_) {}
-    setStatus('All saved typing data was deleted from this browser');
+    window.dispatchEvent(new Event('ln:clear-local-typing-data'));
+    setStatus('Saved text and learned typing choices deleted from this browser');
   });
 
   try {
