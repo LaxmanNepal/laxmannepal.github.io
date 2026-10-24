@@ -376,7 +376,8 @@ def main():
             meta=product_meta(soup,item["title"])
             detail.update({k:v for k,v in meta.items() if v not in (None,"",{})})
         except Exception as exc: print(f'Skip detail {item["url"]}: {exc}')
-        unavailable=bool(re.search(r"outofstock|discontinued|soldout",clean(detail.get("availability")).lower()))\n        price=None if unavailable else ((item.get("price") or detail.get("price")) if item.get("kind")=="shopify" else (detail.get("price") or item.get("price")))
+        unavailable=bool(re.search(r"outofstock|discontinued|soldout",clean(detail.get("availability")).lower()))
+        price=None if unavailable else ((item.get("price") or detail.get("price")) if item.get("kind")=="shopify" else (detail.get("price") or item.get("price")))
         # Do not publish non-phone categories or pages without a plausible product name.
         title=clean(item["title"] if item.get("kind")=="shopify" else (detail.get("title") or item["title"]))
         if not is_phone_title(title): continue
