@@ -222,9 +222,14 @@ def variant_key(title):
     m=VARIANT_RE.search(title)
     if m: return f"{m.group(1)}GB/{m.group(2)}GB"
     m=re.search(r"\b(\d{1,2})\s*GB\s*\+\s*(\d{2,4})\s*GB\b",title,re.I)
-    return f"{m.group(1)}GB/{m.group(2)}GB" if m else ""
+    if m: return f"{m.group(1)}GB/{m.group(2)}GB"
+    m=re.search(r"\b(\d{1,2})\s*GB\s+(?:RAM\s*)?(\d{2,4})\s*GB\b",title,re.I)
+    if m: return f"{m.group(1)}GB/{m.group(2)}GB"
+    storage=re.findall(r"\b(32|64|128|256|512|1024)\s*GB\b",title,re.I)
+    return (storage[-1]+"GB") if storage else ""
+
 def normalize_model(title):
-    # Remove retailer SEO slogans before matching models across stores.
+    # Strip retailer SEO copy, camera/processor marketing and colour names before matching stores.
     s=clean(title)
     s=re.split(r"\s*[|–—]\s*",s)[0]
     s=re.sub(r"\s*(?:price\s+in\s+nepal|price\s+nepal).*$","",s,flags=re.I)
@@ -232,10 +237,14 @@ def normalize_model(title):
     s=re.sub(r"\s+(?:with|featuring)\b.*$","",s,flags=re.I)
     s=re.sub(r"\s+smartphone\b.*$","",s,flags=re.I)
     s=re.sub(r"\s*:\s*.*$","",s)
-    # Remove memory variants only after the model name is clean.
-    s=re.sub(r"\b\d{1,2}\s*GB\s*(?:\+|/)\s*\d{2,4}\s*GB\b"," ",s,flags=re.I)
+    s=re.sub(r"\s+\d{1,2}(?:\.\d+)?\s*(?:inch(?:es)?|[\"″]).*$","",s,flags=re.I)
+    s=re.sub(r"\s+\d{2,3}\s*MP\b.*$","",s,flags=re.I)
+    s=re.sub(r"\s+(?:A\d{1,2}\s+Bionic|Snapdragon\b|Dimensity\b|MediaTek\b|Helio\b|Exynos\b).*$","",s,flags=re.I)
+    s=re.sub(r"\s+(?:32|64|128|256|512|1024)\s*GB(?:\s*(?:storage|rom))?$","",s,flags=re.I)
+    s=re.sub(r"\b\d{1,2}\s*GB\s*(?:\+|/|RAM|\s+)\s*\d{2,4}\s*GB\b"," ",s,flags=re.I)
     s=re.sub(r"\b\d{1,2}\s*\+\s*\d{2,4}\s*GB\b"," ",s,flags=re.I)
     s=re.sub(r"\([^)]*(?:GB|RAM|ROM|storage)[^)]*\)"," ",s,flags=re.I)
+    s=re.sub(r"\s+(?:awesome\s+\w+|midnight\s+black|sunrise\s+gold|ocean\s+blue|forest\s+green|diary\s+white|aston\s+martin\s+green|black|blue|pink|green|silver|white|orange|purple|gray|grey|gold|yellow|cream|teal|ultramarine|titanium|brown|lavender)\s*$","",s,flags=re.I)
     s=re.sub(r"\s+"," ",s).strip(" -|·")
     return s
 def extract_specs(title, text, specs_map):
@@ -399,8 +408,12 @@ def main():
         key=slugify((model+" "+x["variant"]) if x["variant"] else model)
         p=groups.setdefault(key,{"slug":key,"brand":brand_for(model),"model":(model+" "+x["variant"]).strip(),"title":(model+" "+x["variant"]).strip(),"variant":x["variant"],"prices":[],"image":None,"description":None,"ram":None,"storage":None,"display":None,"battery":None,"chipset":None,"camera":None,"specifications":{},"updated_at":TODAY})
         if x["price"] and int(x["price"])>1000 and int(x["price"])<3000000:
-            if not any(pr["store"]==x["store"] and pr["url"]==x["url"] for pr in p["prices"]):
-                p["prices"].append({"store":x["store"],"price":int(x["price"]),"url":x["url"],"checked_at":TODAY,"warranty":x["warranty"]})
+            offer={"store":x["store"],"price":int(x["price"]),"url":x["url"],"checked_at":TODAY,"warranty":x["warranty"]}
+            existing=next((pr for pr in p["prices"] if pr["store"]==x["store"]),None)
+            if existing is None:
+                p["prices"].append(offer)
+            elif offer["price"]<existing["price"]:
+                existing.update(offer)
         if not p["image"] and x["image"]: p["image"]=x["image"]
         if not p["description"] and x["description"]: p["description"]=x["description"]
         for k,v in x["specs"].items():
