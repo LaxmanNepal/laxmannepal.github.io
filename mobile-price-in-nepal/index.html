@@ -54,7 +54,7 @@ const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,
 let phones=[],filtered=[],page=1,active='';const selected=new Set();let watches={};const WATCH_KEY='laxman-mobile-price-watchlist-v1';
 const money=n=>Number(n)>0?'Rs. '+Number(n).toLocaleString('en-IN'):'Price not confirmed';
 const brand=p=>(p.brand||'Other').trim()||'Other';
-const offers=p=>(Array.isArray(p.prices)?p.prices:[]).filter(x=>Number(x.price)>0).sort((a,b)=>Number(a.price)-Number(b.price));
+const offers=p=>(Array.isArray(p.prices)?p.prices:[]).filter(x=>Number(x.price)>0&&!x.stale).sort((a,b)=>Number(a.price)-Number(b.price));
 const cheapest=p=>offers(p)[0];
 function seoLinks(){
  const slug=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
@@ -75,14 +75,14 @@ function filters(){
  $('chips').querySelectorAll('button').forEach(b=>b.onclick=()=>{active=b.dataset.b||'';$('brand').value=active;page=1;filters();render()});
 }
 function card(p){
- const best=cheapest(p),price=best?Number(best.price):Number(p.price),name=p.model||p.title||'Phone';
+ const best=cheapest(p),price=best?Number(best.price):Number(p.price),isStale=!!p.price_is_stale,name=p.model||p.title||'Phone';
  const image=p.image?'<img src="'+esc(p.image)+'" alt="'+esc(name)+' phone" loading="lazy" decoding="async">':'<span class="placeholder">📱</span>';
  const specs=[p.ram&&p.ram+' RAM',p.storage&&p.storage+' storage',p.display,p.battery].filter(Boolean);
- const store=best?'Lowest at '+esc(best.store):'No confirmed store price';
+ const store=best?'Lowest at '+esc(best.store):(isStale?'Last known offer · refresh incomplete':'No confirmed store price');
  const link='/mobile-price-in-nepal/phones/'+esc(p.slug||'')+'/';
  const checked=selected.has(p.slug);
  const disabled=!checked&&selected.size>=3?'disabled':'';
- return '<article class="card"><a href="'+link+'"><div class="photo">'+image+'</div><div class="body"><span class="brand">'+esc(brand(p))+'</span><h2>'+esc(name)+'</h2><div class="price">'+esc(money(price))+'</div><div class="store">'+store+'</div><div class="specs">'+(specs.length?specs.map(s=>'<span>'+esc(s)+'</span>').join(''):'<span>Specs pending verification</span>')+'</div><div class="foot">'+offers(p).length+' store price'+(offers(p).length===1?'':'s')+' · Checked '+esc(p.updated_at||'—')+'</div><div class="link">View store prices & full specs →</div></div></a><label class="compare-option"><input type="checkbox" class="compare-pick" data-slug="'+esc(p.slug||'')+'" '+(checked?'checked':'')+' '+disabled+'> Compare</label><button type="button" class="watch-btn" data-watch-slug="'+esc(p.slug||'')+'">'+(watches[p.slug]?'Watching · Target Rs. '+Number(watches[p.slug].target).toLocaleString('en-IN'):'Set price alert')+'</button></article>';
+ return '<article class="card"><a href="'+link+'"><div class="photo">'+image+'</div><div class="body"><span class="brand">'+esc(brand(p))+'</span><h2>'+esc(name)+'</h2><div class="price">'+(isStale?'Last known · ':'')+esc(money(price))+'</div><div class="store">'+store+'</div><div class="specs">'+(specs.length?specs.map(s=>'<span>'+esc(s)+'</span>').join(''):'<span>Specs pending verification</span>')+'</div><div class="foot">'+offers(p).length+' fresh store price'+(offers(p).length===1?'':'s')+(Number(p.stale_offer_count)>0?' · '+Number(p.stale_offer_count)+' stale offer'+(Number(p.stale_offer_count)===1?'':'s'):'')+' · Checked '+esc(p.updated_at||'—')+'</div><div class="link">View store prices & full specs →</div></div></a><label class="compare-option"><input type="checkbox" class="compare-pick" data-slug="'+esc(p.slug||'')+'" '+(checked?'checked':'')+' '+disabled+'> Compare</label><button type="button" class="watch-btn" data-watch-slug="'+esc(p.slug||'')+'">'+(watches[p.slug]?'Watching · Target Rs. '+Number(watches[p.slug].target).toLocaleString('en-IN'):'Set price alert')+'</button></article>';
 }
 function saveWatches(){try{localStorage.setItem(WATCH_KEY,JSON.stringify(watches))}catch(e){}}
 function renderWatchAlerts(){

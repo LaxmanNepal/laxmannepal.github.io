@@ -12,6 +12,7 @@ from statistics import median
 OUT = Path("data/mobile-prices.json")
 DETAIL_ROOT = Path("mobile-price-in-nepal/phones")
 HISTORY_OUT = Path("data/mobile-price-history.json")
+STATUS_OUT = Path("data/mobile-price-refresh-status.json")
 APPLE_MIN_NPR = 50_000
 MAX_REASONABLE_NPR = 3_000_000
 
@@ -104,13 +105,18 @@ def refresh_metadata(data, phones):
             and float(item["price"]) > 0
             and str(item.get("store", "")).strip()
         ]
-        prices.sort(key=lambda item: float(item["price"]))
+        prices.sort(key=lambda item: (bool(item.get("stale")), float(item["price"])))
         phone["prices"] = prices
         phone["price_count"] = len(prices)
-        if prices:
-            phone["price"] = int(round(float(prices[0]["price"])))
-            phone["best_store"] = prices[0]["store"]
-            phone["best_url"] = prices[0].get("url")
+        current_prices = [item for item in prices if not item.get("stale")]
+        best = current_prices[0] if current_prices else (prices[0] if prices else None)
+        phone["price_is_stale"] = bool(prices) and not bool(current_prices)
+        phone["fresh_offer_count"] = len(current_prices)
+        phone["stale_offer_count"] = len(prices) - len(current_prices)
+        if best:
+            phone["price"] = int(round(float(best["price"])))
+            phone["best_store"] = best["store"]
+            phone["best_url"] = best.get("url")
             valid_stores.update(str(item["store"]).strip() for item in prices)
             valid_count += len(prices)
         else:
@@ -139,7 +145,7 @@ def sync_today_history(phones, history_path=HISTORY_OUT):
             continue
         valid = [
             item for item in phone.get("prices", [])
-            if isinstance(item, dict) and is_num(item.get("price")) and float(item["price"]) > 0 and item.get("store")
+            if isinstance(item, dict) and is_num(item.get("price")) and float(item["price"]) > 0 and item.get("store") and not item.get("stale")
         ]
         if not valid:
             continue
@@ -203,6 +209,21 @@ def main():
     refresh_metadata(data, phones)
     sync_today_history(phones)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if STATUS_OUT.exists():
+        try:
+            status_doc = json.loads(STATUS_OUT.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise SystemExit(f"Unable to update mobile refresh status: {exc}")
+        status_doc["model_variants"] = len(phones)
+        status_doc["fresh_offers"] = sum(
+            1 for phone in phones for offer in phone.get("prices", [])
+            if isinstance(offer, dict) and is_num(offer.get("price")) and not offer.get("stale")
+        )
+        status_doc["stale_offers"] = sum(
+            1 for phone in phones for offer in phone.get("prices", [])
+            if isinstance(offer, dict) and is_num(offer.get("price")) and offer.get("stale")
+        )
+        STATUS_OUT.write_text(json.dumps(status_doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     regenerate_detail_pages(phones)
     print(f"Price validation complete: {changed} corrected, {removed} suspicious offers removed.")
     print(f"Catalogue metadata: {data['variant_count']} variants, {data['price_count']} offers, {data['store_count']} stores.")
