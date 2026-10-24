@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-10-24T16:03:32.179894+00:00.
+Generated from the latest analytics snapshot: 2026-10-24T20:57:06.832418+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -75,6 +75,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/contact us.html
 - Top queries: No page-query rows
 
+### /p/link-shortner-generator.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/link shortner generator.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/link shortner generator.html
+- Top queries: No page-query rows
+
 ### /2025/07/image-prompt.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -93,16 +103,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/about.html
-- Top queries: No page-query rows
-
-### /p/link-shortner-generator.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/link shortner generator.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/link shortner generator.html
 - Top queries: No page-query rows
 
 ### /p/cookies-policy.html — SEO score 0/100
@@ -943,6 +943,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about jobs/roster of field technicians for nwash data collection and verification with practical steps, useful tips and clear guidance from Laxman N…
 - Recommended H1: jobs/roster of field technicians for nwash data collection and verifi…
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: laptop price in nepal | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about laptop price in nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: laptop price in nepal
+- Top queries: No page-query rows
+
+### /news/khabardhara-premium.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: news/khabardhara premium.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about news/khabardhara premium.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: news/khabardhara premium.html
 - Top queries: No page-query rows
 
 ### /p/aajako-patro.html — SEO score 0/100
