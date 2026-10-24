@@ -9,12 +9,14 @@ cannot become the cheapest offer without verification.
 """
 from __future__ import annotations
 
+import importlib.util
 import json
 import math
 from pathlib import Path
 from statistics import median
 
 OUT = Path("data/mobile-prices.json")
+DETAIL_ROOT = Path("mobile-price-in-nepal/phones")
 APPLE_MIN_NPR = 50_000
 MAX_REASONABLE_NPR = 3_000_000
 
@@ -74,6 +76,25 @@ def repair_phone(phone):
     return changes, removed
 
 
+def regenerate_detail_pages(phones):
+    """Regenerate generated phone pages so JSON and visible detail prices cannot diverge."""
+    spec = importlib.util.spec_from_file_location("mobile_prices_scraper", "scripts/refresh-mobile-prices.py")
+    if spec is None or spec.loader is None:
+        raise SystemExit("Unable to load mobile price scraper for page regeneration")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    count = 0
+    for phone in phones:
+        slug = phone.get("slug")
+        if not slug:
+            continue
+        target = DETAIL_ROOT / slug / "index.html"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(mod.page_template(phone), encoding="utf-8")
+        count += 1
+    print(f"Regenerated {count} phone detail pages after price validation.")
+
+
 def main():
     data = json.loads(OUT.read_text(encoding="utf-8"))
     phones = data.get("phones") if isinstance(data, dict) else data
@@ -96,6 +117,7 @@ def main():
         raise SystemExit(f"Suspicious published prices remain: {suspicious[:10]}")
 
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    regenerate_detail_pages(phones)
     print(f"Price validation complete: {changed} corrected, {removed} suspicious offers removed.")
 
 
