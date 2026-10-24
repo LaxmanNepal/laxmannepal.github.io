@@ -225,7 +225,7 @@ function createTyper(options = {}) {
     const raw = roman.trim();
     if (!raw) return [];
     const scored = new Map();
-    const put = (w, s) => { if (!scored.has(w) || scored.get(w)! > s) scored.set(w, s); };
+    const put = (w, s) => { if (!scored.has(w) || scored.get(w) > s) scored.set(w, s); };
     const picks = learned.get(raw.toLowerCase());
     if (picks) for (const [w, c] of picks) put(w, -10 - c);
     const loan = LOANS[raw.toLowerCase()];
