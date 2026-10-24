@@ -40,7 +40,7 @@ const WORDS = `
 कोशी मधेश बागमती गण्डकी लुम्बिनी कर्णाली सुदूरपश्चिम हिमाल पहाड तराई सगरमाथा भारत चीन अमेरिका जापान कतार मलेसिया साउदी कोरिया बेलायत अष्ट्रेलिया दिल्ली विदेश वैदेशिक रोजगार
 `;
 
-export const BASE_WORDS: string[] = [...new Set(WORDS.split(/\s+/).filter(Boolean))];
+const BASE_WORDS = [...new Set(WORDS.split(/\s+/).filter(Boolean))];
 
 /** English loanwords as Nepali writes them (checked before the phonetic engine). */
 const LOANS = {
