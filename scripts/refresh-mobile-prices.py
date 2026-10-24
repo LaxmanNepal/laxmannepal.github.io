@@ -70,7 +70,7 @@ def is_phone_title(title):
     if re.search(r"\b(accessories|accessory|headphones|earphones|earbuds|tablet|tablets|tab|choice\s+t\d+|mobile brands|phone brands|mobile accessories|phone cases|charger|charging cable|power bank|buy a phone|mobile price|phones list)\b",t,re.I): return False
     family=bool(re.search(r"\b(iphone|galaxy|redmi|poco|pixel|oneplus|vivo|oppo|realme|motorola|nothing|honor|infinix|tecno|nokia|samsung|xiaomi|cmf|nubia|zte|magic|spark|camon|hot|blackview)\b|\bai\+",t,re.I))
     has_brand=any(re.search(r"\b"+re.escape(b)+r"\b",t,re.I) for b in BRANDS)
-    has_model=bool(re.search(r"\b(\d{1,4}|[A-Z]\d{1,4}|SE|Fold|Flip|Ultra|Pro|Plus|Lite|Note|Edge|Neo|Air|Max|Play|Spark|Camon|Hot|Smart)\b",t,re.I))
+    has_model=bool(re.search(r"\b(\d{1,4}[a-z]?|[A-Z]\d{1,4}|SE|Fold|Flip|Ultra|Pro|Plus|Lite|Note|Edge|Neo|Air|Max|Play|Spark|Camon|Hot|Smart)\b",t,re.I))
     return (family or has_brand) and has_model
 
 def brand_for(name):
@@ -418,6 +418,7 @@ def main():
         p["price_count"]=len(p["prices"])
         phones.append(p)
     phones.sort(key=lambda p:(p["brand"],p["model"]))
+    for p in phones: p["updated_at"]=TODAY
     # Never replace a populated catalogue with a failed/empty retailer scrape.
     if not phones or not any(p["prices"] for p in phones):
         raise SystemExit("No confirmed phone prices extracted; preserving the last published catalogue.")
