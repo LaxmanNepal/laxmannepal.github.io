@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T00:03:23.604640+00:00",
+  "updated_at": "2026-10-24T00:04:56.386774+00:00",
   "status": "Daily retailer refresh; only unambiguous recorded prices are shown",
   "phones": [
     {
@@ -151,123 +151,10 @@
       ]
     },
     {
-      "slug": "honor-choice-t10-price-in-nepal-ai-translation-buy-now",
-      "brand": "Honor",
-      "model": "HONOR CHOICE T10 Price in Nepal | AI Translation | Buy Now",
-      "title": "HONOR CHOICE T10 Price in Nepal | AI Translation | Buy Now",
-      "variant": "",
-      "prices": [
-        {
-          "store": "Brother Mart",
-          "price": 16499,
-          "url": "https://brother-mart.com/products/honor-choice-t10-smartphone-price-in-nepal",
-          "checked_at": "2026-10-24",
-          "warranty": null
-        }
-      ],
-      "image": "https://brother-mart.com/cdn/shop/files/HONOR_CHOICE_T10_Get_Free_Earbuds.png?v=1791134367",
-      "description": "Buy the official HONOR CHOICE T10 in Nepal at Brother-mart with 78-language AI translation, 6.75\" 90Hz screen, UNISOC T615, 5,000mAh, with 40% off & EMI",
-      "ram": "3 GB / 4 GB RAM (with HONOR RAM Turbo Virtual Expansion)",
-      "storage": "32 GB / 64 GB Storage",
-      "display": "6.75-inch (6.745\") IPS LCD Display",
-      "battery": "5200mAh",
-      "chipset": "UNISOC T615 (12nm, Octa-Core: 2x 1.8 GHz Cortex-A75 + 6x 1.6 GHz Cortex-A55)",
-      "camera": "13 MP ( f/2.2 , Autofocus, LED Flash, 1080p Video Recording)",
-      "specifications": {
-        "feature": "Xiaomi Redmi A7",
-        "brand / manufacturer": "HONOR (HONOR CHOICE Series)",
-        "model name": "HONOR CHOICE T10",
-        "display panel": "6.75-inch (6.745\") IPS LCD Display",
-        "resolution & refresh rate": "HD+ ( 1600 \\times 720\\text{ Pixels} , 20:9 Aspect Ratio) | 90 Hz Refresh Rate",
-        "processor (soc)": "UNISOC T615 (12nm, Octa-Core: 2x 1.8 GHz Cortex-A75 + 6x 1.6 GHz Cortex-A55)",
-        "graphics (gpu)": "ARM Mali-G57 MP1",
-        "system memory (ram)": "3 GB / 4 GB RAM (with HONOR RAM Turbo Virtual Expansion)",
-        "internal storage": "32 GB / 64 GB Storage",
-        "storage expansion": "Hybrid SIM / TF MicroSD Card Slot (Expandable up to 512GB / 1 TB)",
-        "ai translation suite": "78 Languages AI Simultaneous Interpretation, 58 Languages Offline Text, 32 Languages Image Translation",
-        "ai processing model": "1-Billion Parameter On-Device AI Engine (98% Speech Accuracy up to 200 WPM)",
-        "rear main camera": "13 MP ( f/2.2 , Autofocus, LED Flash, 1080p Video Recording)",
-        "front selfie camera": "5 MP (Fixed Focus, AI Beauty, 720p Video)",
-        "battery capacity": "5200mAh",
-        "charging interface & speed": "USB Type-C (5V/2A, 10W Standard Charging)",
-        "durability & ingress": "IP52 Dust & Splash Resistant | 1-Meter Drop Resistance Tested",
-        "microphone hardware": "Dual-Microphone Array with AI Noise Cancellation",
-        "audio hardware": "Built-in Loudspeaker + 3.5mm Headphone Jack",
-        "wireless connectivity": "4G LTE Dual Nano-SIM, Dual-Band Wi-Fi (2.4GHz + 5GHz, 802.11 a/b/g/n/ac), Bluetooth 5.0, GPS",
-        "operating system": "Android 15 (Go Edition)",
-        "dimensions / weight": "192 grams",
-        "color options": "Black, Silver",
-        "display size": "6.88 inches IPS LCD",
-        "refresh rate": "120Hz",
-        "peak brightness": "600 nits",
-        "resolution": "HD+ (1640 × 720)",
-        "processor": "Unisoc Tiger T7250 (12nm)",
-        "base memory (ram)": "3GB LPDDR4X",
-        "storage options": "64GB eMMC 5.1 (Expandable)",
-        "rear camera": "13MP Main + Auxiliary Lens",
-        "front camera": "8MP Selfie, f/2.0",
-        "charging speed": "15W Fast Charging",
-        "bluetooth version": "Bluetooth 5.2",
-        "durability / build": "IP52 rating",
-        "ram": "3 GB / 4 GB RAM (with HONOR RAM Turbo Virtual Expansion)",
-        "storage": "32 GB / 64 GB Storage",
-        "display": "6.75-inch (6.745\") IPS LCD Display",
-        "battery": "5200mAh",
-        "chipset": "UNISOC T615 (12nm, Octa-Core: 2x 1.8 GHz Cortex-A75 + 6x 1.6 GHz Cortex-A55)",
-        "camera": "13 MP ( f/2.2 , Autofocus, LED Flash, 1080p Video Recording)"
-      },
-      "updated_at": "2026-10-24",
-      "feature": "Xiaomi Redmi A7",
-      "brand / manufacturer": "HONOR (HONOR CHOICE Series)",
-      "model name": "HONOR CHOICE T10",
-      "display panel": "6.75-inch (6.745\") IPS LCD Display",
-      "resolution & refresh rate": "HD+ ( 1600 \\times 720\\text{ Pixels} , 20:9 Aspect Ratio) | 90 Hz Refresh Rate",
-      "processor (soc)": "UNISOC T615 (12nm, Octa-Core: 2x 1.8 GHz Cortex-A75 + 6x 1.6 GHz Cortex-A55)",
-      "graphics (gpu)": "ARM Mali-G57 MP1",
-      "system memory (ram)": "3 GB / 4 GB RAM (with HONOR RAM Turbo Virtual Expansion)",
-      "internal storage": "32 GB / 64 GB Storage",
-      "storage expansion": "Hybrid SIM / TF MicroSD Card Slot (Expandable up to 512GB / 1 TB)",
-      "ai translation suite": "78 Languages AI Simultaneous Interpretation, 58 Languages Offline Text, 32 Languages Image Translation",
-      "ai processing model": "1-Billion Parameter On-Device AI Engine (98% Speech Accuracy up to 200 WPM)",
-      "rear main camera": "13 MP ( f/2.2 , Autofocus, LED Flash, 1080p Video Recording)",
-      "front selfie camera": "5 MP (Fixed Focus, AI Beauty, 720p Video)",
-      "battery capacity": "5200mAh",
-      "charging interface & speed": "USB Type-C (5V/2A, 10W Standard Charging)",
-      "durability & ingress": "IP52 Dust & Splash Resistant | 1-Meter Drop Resistance Tested",
-      "microphone hardware": "Dual-Microphone Array with AI Noise Cancellation",
-      "audio hardware": "Built-in Loudspeaker + 3.5mm Headphone Jack",
-      "wireless connectivity": "4G LTE Dual Nano-SIM, Dual-Band Wi-Fi (2.4GHz + 5GHz, 802.11 a/b/g/n/ac), Bluetooth 5.0, GPS",
-      "operating system": "Android 15 (Go Edition)",
-      "dimensions / weight": "192 grams",
-      "color options": "Black, Silver",
-      "display size": "6.88 inches IPS LCD",
-      "refresh rate": "120Hz",
-      "peak brightness": "600 nits",
-      "resolution": "HD+ (1640 × 720)",
-      "processor": "Unisoc Tiger T7250 (12nm)",
-      "base memory (ram)": "3GB LPDDR4X",
-      "storage options": "64GB eMMC 5.1 (Expandable)",
-      "rear camera": "13MP Main + Auxiliary Lens",
-      "front camera": "8MP Selfie, f/2.0",
-      "charging speed": "15W Fast Charging",
-      "bluetooth version": "Bluetooth 5.2",
-      "durability / build": "IP52 rating",
-      "price": 16499,
-      "best_store": "Brother Mart",
-      "best_url": "https://brother-mart.com/products/honor-choice-t10-smartphone-price-in-nepal",
-      "price_count": 1,
-      "history": [
-        {
-          "date": "2026-10-24",
-          "price": 16499
-        }
-      ]
-    },
-    {
       "slug": "honor-x5d-plus-price-in-nepal-2026-shop-now",
       "brand": "Honor",
-      "model": "HONOR X5d Plus Price in Nepal(2026) | Shop Now",
-      "title": "HONOR X5d Plus Price in Nepal(2026) | Shop Now",
+      "model": "HONOR X5d Plus",
+      "title": "HONOR X5d Plus",
       "variant": "",
       "prices": [
         {
@@ -367,8 +254,8 @@
     {
       "slug": "infinix-gt-50-pro-price-in-nepal-2026-buy-now",
       "brand": "Infinix",
-      "model": "Infinix GT 50 Pro Price in Nepal(2026) | Buy Now",
-      "title": "Infinix GT 50 Pro Price in Nepal(2026) | Buy Now",
+      "model": "Infinix GT 50 Pro",
+      "title": "Infinix GT 50 Pro",
       "variant": "",
       "prices": [
         {
@@ -491,8 +378,8 @@
     {
       "slug": "infinix-hot-70-pro-5g-price-in-nepal-2026-buy-now",
       "brand": "Infinix",
-      "model": "Infinix Hot 70 Pro 5G Price in Nepal (2026) | Buy Now",
-      "title": "Infinix Hot 70 Pro 5G Price in Nepal (2026) | Buy Now",
+      "model": "Infinix Hot 70 Pro 5G",
+      "title": "Infinix Hot 70 Pro 5G",
       "variant": "",
       "prices": [
         {
@@ -597,8 +484,8 @@
     {
       "slug": "oneplus-nord-ce-6-5g-7-500mah-battery-price-in-nepal-buy-now",
       "brand": "OnePlus",
-      "model": "OnePlus Nord CE 6 5G 7,500mAh Battery Price in Nepal | Buy Now",
-      "title": "OnePlus Nord CE 6 5G 7,500mAh Battery Price in Nepal | Buy Now",
+      "model": "OnePlus Nord CE 6 5G",
+      "title": "OnePlus Nord CE 6 5G",
       "variant": "",
       "prices": [
         {
@@ -695,8 +582,8 @@
     {
       "slug": "realme-16-5g-price-in-nepal-7000mah-50mp-selfie-buy-now",
       "brand": "Realme",
-      "model": "Realme 16 5G Price in Nepal | 7000mAh & 50MP Selfie | Buy Now",
-      "title": "Realme 16 5G Price in Nepal | 7000mAh & 50MP Selfie | Buy Now",
+      "model": "Realme 16 5G",
+      "title": "Realme 16 5G",
       "variant": "",
       "prices": [
         {
@@ -819,8 +706,8 @@
     {
       "slug": "realme-c100i-price-in-nepal-with-emi-2026-buy-now",
       "brand": "Realme",
-      "model": "Realme C100i Price in Nepal with EMI (2026) | Buy Now",
-      "title": "Realme C100i Price in Nepal with EMI (2026) | Buy Now",
+      "model": "Realme C100i",
+      "title": "Realme C100i",
       "variant": "",
       "prices": [
         {
@@ -932,8 +819,8 @@
     {
       "slug": "realme-c85-5g-price-in-nepal-2026-buy-now",
       "brand": "Realme",
-      "model": "Realme C85 5G Price in Nepal (2026) | Buy Now",
-      "title": "Realme C85 5G Price in Nepal (2026) | Buy Now",
+      "model": "Realme C85 5G",
+      "title": "Realme C85 5G",
       "variant": "",
       "prices": [
         {
@@ -1049,8 +936,8 @@
     {
       "slug": "realme-note-80-price-in-nepal-2026-buy-now",
       "brand": "Realme",
-      "model": "Realme Note 80 Price in Nepal (2026) | Buy Now",
-      "title": "Realme Note 80 Price in Nepal (2026) | Buy Now",
+      "model": "Realme Note 80",
+      "title": "Realme Note 80",
       "variant": "",
       "prices": [
         {
@@ -1152,8 +1039,8 @@
     {
       "slug": "realme-p4-power-5g-10-001mah-battery-price-in-nepal-buy-now",
       "brand": "Realme",
-      "model": "Realme P4 Power 5G 10,001mAh Battery Price in Nepal | Buy Now",
-      "title": "Realme P4 Power 5G 10,001mAh Battery Price in Nepal | Buy Now",
+      "model": "Realme P4 Power 5G",
+      "title": "Realme P4 Power 5G",
       "variant": "",
       "prices": [
         {
@@ -1266,8 +1153,8 @@
     {
       "slug": "redmi-note-17-4g-price-in-nepal-2026-buy-now",
       "brand": "Redmi",
-      "model": "Redmi Note 17 4G Price in Nepal(2026) | Buy Now",
-      "title": "Redmi Note 17 4G Price in Nepal(2026) | Buy Now",
+      "model": "Redmi Note 17 4G",
+      "title": "Redmi Note 17 4G",
       "variant": "",
       "prices": [
         {
@@ -1377,8 +1264,8 @@
     {
       "slug": "redmi-note-17-5g-price-in-nepal-2026-buy-now",
       "brand": "Redmi",
-      "model": "Redmi Note 17 5G Price in Nepal (2026) | Buy Now",
-      "title": "Redmi Note 17 5G Price in Nepal (2026) | Buy Now",
+      "model": "Redmi Note 17 5G",
+      "title": "Redmi Note 17 5G",
       "variant": "",
       "prices": [
         {
@@ -1492,8 +1379,8 @@
     {
       "slug": "redmi-note-17-pro-5g-price-in-nepal-2026-buy-now",
       "brand": "Redmi",
-      "model": "Redmi Note 17 Pro 5G Price in Nepal(2026) | Buy Now",
-      "title": "Redmi Note 17 Pro 5G Price in Nepal(2026) | Buy Now",
+      "model": "Redmi Note 17 Pro 5G",
+      "title": "Redmi Note 17 Pro 5G",
       "variant": "",
       "prices": [
         {
@@ -1589,8 +1476,8 @@
     {
       "slug": "redmi-note-17-pro-max-5g-price-in-nepal-2026-buy-now",
       "brand": "Redmi",
-      "model": "Redmi Note 17 Pro Max 5G Price in Nepal(2026) | Buy Now",
-      "title": "Redmi Note 17 Pro Max 5G Price in Nepal(2026) | Buy Now",
+      "model": "Redmi Note 17 Pro Max 5G",
+      "title": "Redmi Note 17 Pro Max 5G",
       "variant": "",
       "prices": [
         {
@@ -2116,8 +2003,8 @@
     {
       "slug": "samsung-galaxy-s26-fe-price-in-nepal-2026-buy-now",
       "brand": "Samsung",
-      "model": "Samsung Galaxy S26 FE Price in Nepal(2026) | Buy Now",
-      "title": "Samsung Galaxy S26 FE Price in Nepal(2026) | Buy Now",
+      "model": "Samsung Galaxy S26 FE",
+      "title": "Samsung Galaxy S26 FE",
       "variant": "",
       "prices": [
         {
@@ -2418,80 +2305,6 @@
       "history": []
     },
     {
-      "slug": "samsung-galaxy-tab-a9-5g-model-x216b",
-      "brand": "Samsung",
-      "model": "Samsung Galaxy Tab A9+ 5G (Model: X216B)",
-      "title": "Samsung Galaxy Tab A9+ 5G (Model: X216B)",
-      "variant": "",
-      "prices": [
-        {
-          "store": "Neo Store",
-          "price": 44999,
-          "url": "https://www.neostore.com.np/product/samsung-galaxy-tab-a9-5g-model-x216b-",
-          "checked_at": "2026-10-24",
-          "warranty": null
-        }
-      ],
-      "image": null,
-      "description": "Buy Samsung Galaxy Tab A9+ 5G in Nepal at unbeatable price & enjoy exchange offers, genuine warranty, COD. Big screen, Big performance - Limited stock!",
-      "ram": "8GB RAM",
-      "storage": "128GB Internal",
-      "display": "11 Inches",
-      "battery": "Li-Po 7040 mAh, non-removable",
-      "chipset": "Qualcomm SM6375 Snapdragon 695 5G (6 nm)",
-      "camera": "8 MP, AF",
-      "specifications": {
-        "basic information": "Basic Information",
-        "brand": "Samsung",
-        "product": "Tab A9+ 5G (Model: X216B)",
-        "category": "Tablet",
-        "hardware": "Hardware",
-        "display size": "11 Inches",
-        "display type": "TFT LCD, 90Hz",
-        "resolution": "1200 x 1920 pixels, 16:10 ratio (~206 ppi density)",
-        "chipset": "Qualcomm SM6375 Snapdragon 695 5G (6 nm)",
-        "cpu": "Octa-core (2x2.2 GHz Kryo 660 Gold & 6x1.8 GHz Kryo 660 Silver)",
-        "gpu": "Adreno 619",
-        "ram": "8GB RAM",
-        "storage": "128GB Internal",
-        "primary camera": "8 MP, AF",
-        "secondary camera": "5 MP",
-        "battery": "Li-Po 7040 mAh, non-removable",
-        "software & features": "Software & Features",
-        "operating system": "Android 13, upgradable to Android 14, One UI 6.1",
-        "features": "Accelerometer, gyro, proximity (accessories only), compass",
-        "warranty": "1 year warranty",
-        "display": "11 Inches",
-        "camera": "8 MP, AF"
-      },
-      "updated_at": "2026-10-24",
-      "basic information": "Basic Information",
-      "product": "Tab A9+ 5G (Model: X216B)",
-      "category": "Tablet",
-      "hardware": "Hardware",
-      "display size": "11 Inches",
-      "display type": "TFT LCD, 90Hz",
-      "resolution": "1200 x 1920 pixels, 16:10 ratio (~206 ppi density)",
-      "cpu": "Octa-core (2x2.2 GHz Kryo 660 Gold & 6x1.8 GHz Kryo 660 Silver)",
-      "gpu": "Adreno 619",
-      "primary camera": "8 MP, AF",
-      "secondary camera": "5 MP",
-      "software & features": "Software & Features",
-      "operating system": "Android 13, upgradable to Android 14, One UI 6.1",
-      "features": "Accelerometer, gyro, proximity (accessories only), compass",
-      "warranty": "1 year warranty",
-      "price": 44999,
-      "best_store": "Neo Store",
-      "best_url": "https://www.neostore.com.np/product/samsung-galaxy-tab-a9-5g-model-x216b-",
-      "price_count": 1,
-      "history": [
-        {
-          "date": "2026-10-24",
-          "price": 44999
-        }
-      ]
-    },
-    {
       "slug": "xiaomi-mi-11-lite-6gb-128gb",
       "brand": "Xiaomi",
       "model": "Xiaomi Mi 11 Lite ( ) 6GB/128GB",
@@ -2588,5 +2401,5 @@
     }
   ],
   "store_count": 2,
-  "price_count": 21
+  "price_count": 19
 }
