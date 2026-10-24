@@ -1,223 +1,223 @@
 {
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-10-24",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "openaccountants",
-      "url": "https://github.com/openaccountants/openaccountants",
-      "description": "Free AI skills (tax rules your AI follows) for 190+ countries, with sources and review status. Written by AI-first accountants in many countries. Need cross-border work done? Hire us.",
-      "language": "Python",
-      "stars": 458,
-      "updatedAt": "2026-10-23T07:28:57Z",
-      "fullName": "openaccountants/openaccountants"
+      "name": "awesome-ai-prompts",
+      "url": "https://github.com/shauryagangrade/awesome-ai-prompts",
+      "description": "Curated copy-paste AI prompts for developers - disciplined workflows for AI coding agents that verify, don't guess",
+      "language": "HTML",
+      "stars": 76,
+      "updatedAt": "2026-10-24T07:16:04Z",
+      "fullName": "shauryagangrade/awesome-ai-prompts"
     },
     {
-      "name": "opencodex",
-      "url": "https://github.com/lidge-jun/opencodex",
-      "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
+      "name": "runtime",
+      "url": "https://github.com/BeOnAuto/runtime",
+      "description": "The playbook runtime for business automation: composable primitives, with every step recorded on one ledger.",
       "language": "TypeScript",
-      "stars": 17798,
-      "updatedAt": "2026-10-23T07:28:56Z",
-      "fullName": "lidge-jun/opencodex"
+      "stars": 113,
+      "updatedAt": "2026-10-24T07:15:58Z",
+      "fullName": "BeOnAuto/runtime"
     },
     {
-      "name": "omnigent",
-      "url": "https://github.com/omnigent-ai/omnigent",
-      "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
-      "language": "Python",
-      "stars": 10999,
-      "updatedAt": "2026-10-23T07:28:47Z",
-      "fullName": "omnigent-ai/omnigent"
+      "name": "cromford",
+      "url": "https://github.com/cromford-ai/cromford",
+      "description": "Cromford: the open-source software factory. Tickets in, reviewed, merged and production-checked changes out.",
+      "language": "Shell",
+      "stars": 27,
+      "updatedAt": "2026-10-24T07:15:58Z",
+      "fullName": "cromford-ai/cromford"
     },
     {
-      "name": "smg",
-      "url": "https://github.com/smg-project/smg",
-      "description": "Engine-agnostic LLM gateway in Rust. Full OpenAI & Anthropic API compatibility across vLLM, TRT-LLM, TokenSpeed, SGLang, OpenAI, Gemini & more. Industry-first gRPC pipeline, KV cache-aware routing, chat history, tokenization caching, Responses API, embeddings,",
-      "language": "Rust",
-      "stars": 665,
-      "updatedAt": "2026-10-23T07:28:47Z",
-      "fullName": "smg-project/smg"
-    },
-    {
-      "name": "birdnet-go",
-      "url": "https://github.com/tphakala/birdnet-go",
-      "description": "Self-hosted realtime soundscape analyser for birds, bats and other wildlife. Multi-model local AI inference, runs 24/7 on a Raspberry Pi.",
-      "language": "Go",
-      "stars": 2338,
-      "updatedAt": "2026-10-23T07:28:46Z",
-      "fullName": "tphakala/birdnet-go"
-    },
-    {
-      "name": "astrbot_plugin_qq_group_daily_analysis",
-      "url": "https://github.com/SXP-Simon/astrbot_plugin_qq_group_daily_analysis",
-      "description": "✨ AstrBot 群日常分析总结插件 —— 自动总结群聊提取有趣信息并生成精美海报或网页链接，还能制作群趣味连环漫画；自带管理后台，可查看运行链路、历史报告、异常日志和数据审计；支持 QQ 官方机器人、OneBot (NapCat / LLOneBot / SnowLuma)、Telegram 与 Discord 等消息平台。",
-      "language": "Python",
-      "stars": 522,
-      "updatedAt": "2026-10-23T07:28:41Z",
-      "fullName": "SXP-Simon/astrbot_plugin_qq_group_daily_analysis"
-    },
-    {
-      "name": "atris",
-      "url": "https://github.com/atrislabs/atris",
-      "description": "Say what you want in plain words. Atris plans it, builds it, checks it, and shows proof. CLI plus MCP server for AI agents.",
-      "language": "JavaScript",
-      "stars": 71,
-      "updatedAt": "2026-10-23T07:28:35Z",
-      "fullName": "atrislabs/atris"
-    },
-    {
-      "name": "xagent",
-      "url": "https://github.com/xorbitsai/xagent",
-      "description": "Build personal agents and enterprise AI workforces that plan, delegate, use tools, and deliver real work — without brittle workflows.",
-      "language": "Python",
-      "stars": 305,
-      "updatedAt": "2026-10-23T07:28:34Z",
-      "fullName": "xorbitsai/xagent"
-    },
-    {
-      "name": "Containarium",
-      "url": "https://github.com/FootprintAI/Containarium",
-      "description": "Open-source agent runtime — SSH-native isolation, eBPF egress policy, Kubernetes + LXC backends, GPU passthrough, MCP-native CLI",
-      "language": "Go",
-      "stars": 310,
-      "updatedAt": "2026-10-23T07:28:31Z",
-      "fullName": "FootprintAI/Containarium"
-    },
-    {
-      "name": "TemporalStore",
-      "url": "https://github.com/matrixarkai/TemporalStore",
-      "description": "Open-source Rust TemporalStore for LLM context management, temporal features, and risk control",
-      "language": "Rust",
-      "stars": 212,
-      "updatedAt": "2026-10-23T07:28:30Z",
-      "fullName": "matrixarkai/TemporalStore"
-    },
-    {
-      "name": "xyne-spaces",
-      "url": "https://github.com/juspay/xyne-spaces",
-      "description": "The AI Org-OS — a collaborative platform for humans and agents. Explore: https://spaces.xyne.ai",
+      "name": "rome",
+      "url": "https://github.com/rome-os/rome",
+      "description": "A compounding agent OS for recursive agents. Also an open source alternative to Grok Bot and Meta's Muse.",
       "language": "TypeScript",
-      "stars": 820,
-      "updatedAt": "2026-10-23T07:28:25Z",
-      "fullName": "juspay/xyne-spaces"
-    },
-    {
-      "name": "prism-insight",
-      "url": "https://github.com/dragon1086/prism-insight",
-      "description": "AI-based stock analysis and trading system",
-      "language": "Python",
-      "stars": 783,
-      "updatedAt": "2026-10-23T07:28:25Z",
-      "fullName": "dragon1086/prism-insight"
-    },
-    {
-      "name": "oneDNN",
-      "url": "https://github.com/uxlfoundation/oneDNN",
-      "description": "Open-source library of optimized deep learning operations (matmul, convolution, attention) for CPUs (x64, AArch64, RISC-V) and Intel GPUs. Used by PyTorch, TensorFlow, OpenVINO, and ONNX Runtime.",
-      "language": "C++",
-      "stars": 4073,
-      "updatedAt": "2026-10-23T07:28:22Z",
-      "fullName": "uxlfoundation/oneDNN"
-    },
-    {
-      "name": "openagentskill",
-      "url": "https://github.com/Leon-Drq/openagentskill",
-      "description": "The skill layer for AI agents: npm for AI Agent Skills.",
-      "language": "TypeScript",
-      "stars": 364,
-      "updatedAt": "2026-10-23T07:28:22Z",
-      "fullName": "Leon-Drq/openagentskill"
-    },
-    {
-      "name": "KiroCrew",
-      "url": "https://github.com/kirodotdev/KiroCrew",
-      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
-      "language": "Python",
-      "stars": 4547,
-      "updatedAt": "2026-10-23T07:28:12Z",
-      "fullName": "kirodotdev/KiroCrew"
-    },
-    {
-      "name": "radicalbit-ai-gateway",
-      "url": "https://github.com/radicalbit/radicalbit-ai-gateway",
-      "description": "Radicalbit AI Gateway",
-      "language": "Python",
-      "stars": 71,
-      "updatedAt": "2026-10-23T07:28:08Z",
-      "fullName": "radicalbit/radicalbit-ai-gateway"
-    },
-    {
-      "name": "lmdeploy",
-      "url": "https://github.com/InternLM/lmdeploy",
-      "description": "LMDeploy is a toolkit for compressing, deploying, and serving LLMs.",
-      "language": "Python",
-      "stars": 8114,
-      "updatedAt": "2026-10-23T07:28:04Z",
-      "fullName": "InternLM/lmdeploy"
+      "stars": 853,
+      "updatedAt": "2026-10-24T07:15:56Z",
+      "fullName": "rome-os/rome"
     },
     {
       "name": "agent-network",
       "url": "https://github.com/sleep2agi/agent-network",
       "description": "助力搭建你的数字 AI 员工军团 — 多 Agent 一行命令组网协作。Claude Code / Claude Agent SDK / Codex / Grok Build 4 runtime + 8+ 家 LLM（Anthropic / OpenAI / xAI / MiniMax / DeepSeek / GLM / Kimi / 书生 / 小米 MiMo），自带 Web Dashboard，Apache 2.0 开源。",
       "language": "TypeScript",
-      "stars": 101,
-      "updatedAt": "2026-10-23T07:28:02Z",
+      "stars": 104,
+      "updatedAt": "2026-10-24T07:15:52Z",
       "fullName": "sleep2agi/agent-network"
     },
     {
-      "name": "claude-code-plugins",
-      "url": "https://github.com/melodic-software/claude-code-plugins",
-      "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
-      "language": "Shell",
-      "stars": 27,
-      "updatedAt": "2026-10-23T07:27:48Z",
-      "fullName": "melodic-software/claude-code-plugins"
-    },
-    {
-      "name": "unstract",
-      "url": "https://github.com/Zipstack/unstract",
-      "description": "LLM-Driven Extraction of Unstructured Data — Built for API Deployments & ETL Pipeline Workflows",
-      "language": "Python",
-      "stars": 7296,
-      "updatedAt": "2026-10-23T07:27:45Z",
-      "fullName": "Zipstack/unstract"
-    },
-    {
-      "name": "skills",
-      "url": "https://github.com/agentskillexchange/skills",
-      "description": "Curated, trusted open catalog of AI agent skills for OpenClaw, Claude Code, Codex, GitHub Copilot, Gemini, Cursor, MCP, LangChain, and more. Browse, install, and verify reusable agent workflows.",
-      "language": "Python",
-      "stars": 57,
-      "updatedAt": "2026-10-23T07:27:38Z",
-      "fullName": "agentskillexchange/skills"
-    },
-    {
-      "name": "rl-gym-orchestrator",
-      "url": "https://github.com/raamonp/rl-gym-orchestrator",
-      "description": "Ultimate LLM Gym Trainer Guide 2026: Reinforcement Learning Fine-Tuning Framework",
+      "name": "mcp-servers-live",
+      "url": "https://github.com/linny006/mcp-servers-live",
+      "description": "Auto-updated index of MCP servers shipping on GitHub, refreshed every 15 minutes",
       "language": "HTML",
-      "stars": 55,
-      "updatedAt": "2026-10-23T07:27:29Z",
-      "fullName": "raamonp/rl-gym-orchestrator"
+      "stars": 13,
+      "updatedAt": "2026-10-24T07:15:52Z",
+      "fullName": "linny006/mcp-servers-live"
     },
     {
-      "name": "AI-Studio",
-      "url": "https://github.com/MindWorkAI/AI-Studio",
-      "description": "MindWork AI Studio is a free, independent cross-platform desktop app for local and cloud LLMs across providers, built to democratize AI access.",
-      "language": "C#",
-      "stars": 577,
-      "updatedAt": "2026-10-23T07:27:23Z",
-      "fullName": "MindWorkAI/AI-Studio"
-    },
-    {
-      "name": "hermes-agent",
-      "url": "https://github.com/NousResearch/hermes-agent",
-      "description": "The agent that grows with you",
+      "name": "AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
       "language": "Python",
-      "stars": 256327,
-      "updatedAt": "2026-10-23T07:27:18Z",
-      "fullName": "NousResearch/hermes-agent"
+      "stars": 187722,
+      "updatedAt": "2026-10-24T07:15:51Z",
+      "fullName": "Significant-Gravitas/AutoGPT"
+    },
+    {
+      "name": "awesome-agent-skills",
+      "url": "https://github.com/linny006/awesome-agent-skills",
+      "description": "Curated, auto-updated awesome-list of vetted AI agent skills with quality ratings for Claude, GPT, a",
+      "language": "Python",
+      "stars": 42,
+      "updatedAt": "2026-10-24T07:15:32Z",
+      "fullName": "linny006/awesome-agent-skills"
+    },
+    {
+      "name": "skills-tracker",
+      "url": "https://github.com/linny006/skills-tracker",
+      "description": "Real-time tracking of every new GitHub 'skills' repo to capture the AI agent skill ecosystem trend",
+      "language": "Python",
+      "stars": 26,
+      "updatedAt": "2026-10-24T07:15:31Z",
+      "fullName": "linny006/skills-tracker"
+    },
+    {
+      "name": "prompt-tools-live",
+      "url": "https://github.com/linny006/prompt-tools-live",
+      "description": "Live-updating tracker of prompt engineering tools, libraries, and techniques — refreshed every 15 mi",
+      "language": "Python",
+      "stars": 11,
+      "updatedAt": "2026-10-24T07:15:31Z",
+      "fullName": "linny006/prompt-tools-live"
+    },
+    {
+      "name": "agent-eval-harness",
+      "url": "https://github.com/linny006/agent-eval-harness",
+      "description": "Live, open-source benchmark for comparing AI coding agents on real GitHub issues",
+      "language": "Python",
+      "stars": 6,
+      "updatedAt": "2026-10-24T07:15:31Z",
+      "fullName": "linny006/agent-eval-harness"
+    },
+    {
+      "name": "agent-framework-radar",
+      "url": "https://github.com/linny006/agent-framework-radar",
+      "description": "Live index of the newest agent frameworks shipping on GitHub, sorted by recency not stars",
+      "language": "Python",
+      "stars": 8,
+      "updatedAt": "2026-10-24T07:15:23Z",
+      "fullName": "linny006/agent-framework-radar"
+    },
+    {
+      "name": "smithers",
+      "url": "https://github.com/smithersai/smithers",
+      "description": "Smithers is an agentic workflow framework for defining workflows in simple TypeScript configuration files and executing them quickly, durably, and reliably",
+      "language": "TypeScript",
+      "stars": 440,
+      "updatedAt": "2026-10-24T07:15:21Z",
+      "fullName": "smithersai/smithers"
+    },
+    {
+      "name": "llm-eval-tracker",
+      "url": "https://github.com/linny006/llm-eval-tracker",
+      "description": "Live index of LLM evaluation tools and benchmarks, refreshed every 15 minutes from GitHub",
+      "language": "Python",
+      "stars": 6,
+      "updatedAt": "2026-10-24T07:15:21Z",
+      "fullName": "linny006/llm-eval-tracker"
+    },
+    {
+      "name": "claude-code-plugin-tracker",
+      "url": "https://github.com/linny006/claude-code-plugin-tracker",
+      "description": "Live index of Claude Code extensions, hooks, and plugins — refreshed every 15 minutes from GitHub",
+      "language": "Python",
+      "stars": 6,
+      "updatedAt": "2026-10-24T07:15:20Z",
+      "fullName": "linny006/claude-code-plugin-tracker"
+    },
+    {
+      "name": "llm-agents-radar",
+      "url": "https://github.com/linny006/llm-agents-radar",
+      "description": "Live-updating index of LLM agent frameworks shipping on GitHub, refreshed every 15 minutes",
+      "language": "Python",
+      "stars": 14,
+      "updatedAt": "2026-10-24T07:15:19Z",
+      "fullName": "linny006/llm-agents-radar"
+    },
+    {
+      "name": "trending-claude-skills",
+      "url": "https://github.com/linny006/trending-claude-skills",
+      "description": "Auto-updated leaderboard of trending claude-skills and AI agent repos, refreshed every 15 minutes",
+      "language": "Python",
+      "stars": 133,
+      "updatedAt": "2026-10-24T07:15:12Z",
+      "fullName": "linny006/trending-claude-skills"
+    },
+    {
+      "name": "spiceai",
+      "url": "https://github.com/spiceai/spiceai",
+      "description": "Add a real-time analytics node to your operational database. Spice is a portable, accelerated SQL query, search, and LLM-inference engine in Rust for data-grounded AI apps and agents.",
+      "language": "Rust",
+      "stars": 3104,
+      "updatedAt": "2026-10-24T07:14:52Z",
+      "fullName": "spiceai/spiceai"
+    },
+    {
+      "name": "nextclaw",
+      "url": "https://github.com/Peiiii/nextclaw",
+      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
+      "language": "TypeScript",
+      "stars": 262,
+      "updatedAt": "2026-10-24T07:14:47Z",
+      "fullName": "Peiiii/nextclaw"
+    },
+    {
+      "name": "LoongPort",
+      "url": "https://github.com/SailingLoong/LoongPort",
+      "description": "cc-switch 中转站的专用增强版（cc-switch for API relay providers），免去配置各种 密钥 endpoint 的烦恼。",
+      "language": "Rust",
+      "stars": 139,
+      "updatedAt": "2026-10-24T07:14:45Z",
+      "fullName": "SailingLoong/LoongPort"
+    },
+    {
+      "name": "cronicle",
+      "url": "https://github.com/jshiv/cronicle",
+      "description": "AI agents and shell tasks on a cron schedule. Declarative HCL workflows, DAG dependencies, budget-capped runs, per-run transcripts.",
+      "language": "Go",
+      "stars": 23,
+      "updatedAt": "2026-10-24T07:14:41Z",
+      "fullName": "jshiv/cronicle"
+    },
+    {
+      "name": "deplo",
+      "url": "https://github.com/DeploCloud/deplo",
+      "description": "Application hosting made easy. Push a repo, pick a server, get a deployment - on any hosting, with any price.",
+      "language": "TypeScript",
+      "stars": 79,
+      "updatedAt": "2026-10-24T07:14:33Z",
+      "fullName": "DeploCloud/deplo"
+    },
+    {
+      "name": "opengeni",
+      "url": "https://github.com/Cloudgeni-ai/opengeni",
+      "description": "Open, self-hostable agentic service for organizations — durable, replayable agent sessions, human approvals, governed credentials and memory, running in managed sandboxes or on your own hardware. Apache-2.0.",
+      "language": "TypeScript",
+      "stars": 207,
+      "updatedAt": "2026-10-24T07:14:29Z",
+      "fullName": "Cloudgeni-ai/opengeni"
+    },
+    {
+      "name": "magic",
+      "url": "https://github.com/polterguy/magic",
+      "description": "Instant SECURE Full Stack Apps and AI Agents",
+      "language": "C#",
+      "stars": 1204,
+      "updatedAt": "2026-10-24T07:14:24Z",
+      "fullName": "polterguy/magic"
     }
   ]
 }
