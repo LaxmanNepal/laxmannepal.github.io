@@ -401,7 +401,7 @@ def main():
         if image and not str(image).startswith("http"): image=urljoin(item["url"],str(image))
         specs={**detail.get("specs",{}), **extract_specs(title,detail.get("text",""),detail.get("specs",{}))}
         enriched.append({"store":item["store"],"title":title,"model":normalize_model(title),"variant":variant_key(title),"price":price,"url":item["url"],"image":image,"specs":specs,"description":detail.get("description"),"checked_at":TODAY,"warranty":None})
-        time.sleep(.25)
+        if item.get("kind") not in ("shopify","catalog"): time.sleep(.25)
     # Group exact model/variant only; avoid merging different storage versions.
     groups={}
     for x in enriched:
