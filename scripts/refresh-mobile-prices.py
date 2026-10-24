@@ -206,7 +206,7 @@ def parse_listing(source):
             title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True) or (img_tag.get("alt") if img_tag else ""))
             href=urljoin(source["url"],a.get("href",""))
             parent_text=clean(a.parent.get_text(" ",strip=True) if a.parent else "")
-            if re.search(r"\\b(out of stock|sold out|unavailable)\\b",parent_text,re.I): continue
+            if re.search(r"\b(out of stock|sold out|unavailable)\b",parent_text,re.I): continue
             if len(title)<7 or not is_phone_title(title): continue
             if urlparse(href).netloc!=urlparse(source["url"]).netloc: continue
             found.append({"store":source["store"],"title":title,"url":href,"price":None,"image":None,"kind":source["kind"]})
