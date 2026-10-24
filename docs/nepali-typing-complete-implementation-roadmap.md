@@ -6,7 +6,29 @@
 **Scope:** Complete end-to-end upgrade; all audiences; offline-first and local privacy by default; AI optional and opt-in.  
 **Architecture rule:** Keep the site static and lightweight. Reuse the existing shared shell, CSS conventions, GitHub Pages deployment, and plain HTML/CSS/JavaScript where practical. No account system, mandatory backend, paid API, or large framework.
 
-> This is a plan only. It does not change the live typing tool or claim that the reported bug is fixed.
+> **Status update (25 October 2026):** This document began as a plan. The implementation has since been delivered in multiple PRs, with Chromium browser tests and GitHub Pages deployment checks. The status below distinguishes completed work from remaining limitations.
+
+## 0. Implementation status (25 October 2026)
+
+### Implemented and merged
+- [x] Fixed the mid-word suggestion range bug and added range regression tests.
+- [x] Added a Chromium browser-test workflow and deployment-time regression checks.
+- [x] Added a larger local Nepali lexicon and ranked Romanized candidates, with the earlier converter as a fallback.
+- [x] Made Google suggestions opt-in and off by default; stale remote requests are aborted and range-checked.
+- [x] Added offline-first PWA caching for the typing workspace and local conversion.
+- [x] Added local named documents, templates, find/replace, print, delete-saved-text and local learned suggestions.
+- [x] Added native share support with a copy fallback.
+- [x] Added a separate Nepali typing practice page with WPM, CPM, accuracy and error metrics.
+- [x] Added a separate Preeti ↔ Unicode converter with upstream licence and attribution.
+- [x] Improved voice error handling, listening-state accessibility and saving voice transcripts to local documents.
+- [x] Added responsive layout checks, FAQ content, Open Graph metadata and SoftwareApplication/FAQPage structured data.
+
+### Remaining / deliberately not claimed complete
+- [ ] **Traditional direct-key layout:** the current mapping is still partial. It must remain labelled partial until checked against an authoritative keyboard layout and tested end-to-end.
+- [ ] **Real-device validation:** automated browser tests run in Chromium. Manual testing on iOS Safari, Android browsers, native IMEs, assistive technologies and real microphones remains outstanding.
+- [ ] **Romanization coverage:** the local lexicon improves ranking, but dialects, names and ambiguous spellings still need a broader test corpus. Suggestions are candidates, not guaranteed translations.
+- [ ] **Legacy font coverage:** the converter targets Preeti. It does not claim support for Kantipur, PCS Nepali or custom legacy fonts, and mixed English inside Preeti input needs careful review.
+- [ ] **Cross-browser offline validation:** the service worker is tested in Chromium; Safari and Firefox offline/update behavior should be checked on real devices.
 
 ## 1. Current implementation inspected
 
