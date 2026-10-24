@@ -70,7 +70,7 @@
   input.addEventListener('input', () => {
     updateMetrics();
     const result = window.NepaliTypingMetrics.calculateMetrics(target.value, input.value, currentElapsed());
-    if (target.value && input.value === target.value) {
+    if (running && target.value && input.value === target.value) {
       stopTimer('Passage completed · well done!');
       startButton.disabled = true;
     }
