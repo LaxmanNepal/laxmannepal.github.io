@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'ln-nepali-typing-v7';
+const CACHE_NAME = 'ln-nepali-typing-v8';
 const PRECACHE_URLS = [
   './',
   './index.html',
@@ -9,8 +9,8 @@ const PRECACHE_URLS = [
   './engines/romanized.js?v=20261025-2',
   './engines/typing-lexicon.js?v=20261025-1',
   './engines/smart-typing.js?v=20261025-1',
-  './app.js?v=20261025-8',
-  './workspace-tools.js?v=20261025-3',
+  './app.js?v=20261025-9',
+  './workspace-tools.js?v=20261025-4',
   './pwa.js?v=20261025-1',
   './manifest.webmanifest',
   '/assets/css/style.css',
