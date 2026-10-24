@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T22:55:55.067898+00:00",
+  "updated_at": "2026-10-24T22:58:54.477851+00:00",
   "status": "Daily retailer refresh; last-known offers are marked stale when a source refresh is incomplete",
   "source_status": {
     "Brother Mart": {
@@ -20,7 +20,7 @@
     },
     "GBN Store": {
       "candidates": 204,
-      "priced_offers_found": 59,
+      "priced_offers_found": 100,
       "previous_offers": 53,
       "minimum_expected_offers": 19,
       "status": "complete",
@@ -59,7 +59,7 @@
       "errors": []
     }
   },
-  "fresh_offer_count": 241,
+  "fresh_offer_count": 282,
   "stale_offer_count": 0,
   "phones": [
     {
@@ -1675,7 +1675,15 @@
       "model": "iPhone 15",
       "title": "iPhone 15",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 127499,
+          "url": "https://gbnstore.com/product/iphone-15",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2023%2F09%2FiPhone-15-Black.jpg&w=1920&q=75",
       "description": "Apple iPhone 15 128GB Rs 1,27,499 In stock Buy now",
       "ram": null,
@@ -1686,14 +1694,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 127499,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/iphone-15",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 127499
+        }
+      ]
     },
     {
       "slug": "iphone-16",
@@ -1701,7 +1714,15 @@
       "model": "iPhone 16",
       "title": "iPhone 16",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 146599,
+          "url": "https://gbnstore.com/product/iphone-16",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2024%2F09%2FiPhone-16-Black.jpg&w=1920&q=75",
       "description": "Apple 13 % OFF iPhone 16 8GB + 128GB Rs 1,46,599 Rs 1,70,099 In stock Buy now",
       "ram": null,
@@ -1712,14 +1733,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 146599,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/iphone-16",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 146599
+        }
+      ]
     },
     {
       "slug": "iphone-17",
@@ -1727,7 +1753,15 @@
       "model": "iPhone 17",
       "title": "iPhone 17",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 173499,
+          "url": "https://gbnstore.com/product/iphone-17",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F09%2F1757591894_0.jpg&w=1920&q=75",
       "description": "Apple iPhone 17 8GB + 256GB Rs 1,73,499 In stock Buy now",
       "ram": null,
@@ -1738,14 +1772,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 173499,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/iphone-17",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 173499
+        }
+      ]
     },
     {
       "slug": "iphone-17-pro",
@@ -1753,7 +1792,15 @@
       "model": "iPhone 17 Pro",
       "title": "iPhone 17 Pro",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 221299,
+          "url": "https://gbnstore.com/product/iphone-17-pro",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F09%2F1757575327_0.jpg&w=1920&q=75",
       "description": "Apple iPhone 17 Pro 12GB + 256GB Rs 2,21,299 In stock Gift Buy now",
       "ram": null,
@@ -1764,14 +1811,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 221299,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/iphone-17-pro",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 221299
+        }
+      ]
     },
     {
       "slug": "iphone-17-pro-max",
@@ -1779,7 +1831,15 @@
       "model": "iPhone 17 Pro Max",
       "title": "iPhone 17 Pro Max",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 242499,
+          "url": "https://gbnstore.com/product/iphone-17-pro-max",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F09%2FiPhone-17-Pro-Max-Cosmic-Orange.jpg&w=1920&q=75",
       "description": "Apple 6 % OFF iPhone 17 Pro Max 12GB + 256GB Rs 2,42,499 Rs 2,57,999 In stock Gift Buy now",
       "ram": null,
@@ -1790,14 +1850,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 242499,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/iphone-17-pro-max",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 242499
+        }
+      ]
     },
     {
       "slug": "iphone-17e",
@@ -1805,7 +1870,15 @@
       "model": "iPhone 17e",
       "title": "iPhone 17e",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 132499,
+          "url": "https://gbnstore.com/product/iphone-17e",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F07%2FiPhone-17e-Soft-Pink.webp&w=1920&q=75",
       "description": "Apple iPhone 17e 8GB+256GB Rs 1,32,499 In stock Buy now",
       "ram": null,
@@ -1816,14 +1889,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 132499,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/iphone-17e",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 132499
+        }
+      ]
     },
     {
       "slug": "iphone-18-pro",
@@ -1831,7 +1909,15 @@
       "model": "iPhone 18 Pro",
       "title": "iPhone 18 Pro",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 259900,
+          "url": "https://gbnstore.com/product/iphone-18-pro",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F09%2FiPhone-18-Pro-burgundy.png&w=1920&q=75",
       "description": "Apple iPhone 18 Pro 12GB + 256GB Rs 2,59,900 In stock EMI Buy now",
       "ram": null,
@@ -1842,14 +1928,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 259900,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/iphone-18-pro",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 259900
+        }
+      ]
     },
     {
       "slug": "iphone-18-pro-max",
@@ -1857,7 +1948,15 @@
       "model": "iPhone 18 Pro Max",
       "title": "iPhone 18 Pro Max",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 279900,
+          "url": "https://gbnstore.com/product/iphone-18-pro-max",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F09%2FiPhone-18-Pro-Max-silver.png&w=1920&q=75",
       "description": "Apple iPhone 18 Pro Max 12GB + 256GB Rs 2,79,900 In stock EMI Buy now",
       "ram": null,
@@ -1868,14 +1967,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 279900,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/iphone-18-pro-max",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 279900
+        }
+      ]
     },
     {
       "slug": "iphone-air",
@@ -1883,7 +1987,15 @@
       "model": "iPhone Air",
       "title": "iPhone Air",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 190699,
+          "url": "https://gbnstore.com/product/iphone-air",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F09%2F1757592778_0.jpg&w=1920&q=75",
       "description": "Apple 14 % OFF iPhone Air 12GB + 256GB Rs 1,90,699 Rs 2,23,199 In stock EMI Buy now",
       "ram": null,
@@ -1894,14 +2006,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 190699,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/iphone-air",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 190699
+        }
+      ]
     },
     {
       "slug": "blackview-fort-1",
@@ -2338,7 +2455,15 @@
       "model": "Honor 600",
       "title": "Honor 600",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 89999,
+          "url": "https://gbnstore.com/product/honor-600",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F05%2FHonor-600-Golden-White.webp&w=1920&q=75",
       "description": "Honor 7 % OFF Honor 600 12GB + 256GB Rs 89,999 Rs 1,05,299 In stock EMI Buy now",
       "ram": null,
@@ -2349,14 +2474,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 89999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/honor-600",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 89999
+        }
+      ]
     },
     {
       "slug": "honor-600-lite",
@@ -2364,7 +2494,15 @@
       "model": "Honor 600 Lite",
       "title": "Honor 600 Lite",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 59999,
+          "url": "https://gbnstore.com/product/honor-600-lite",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F05%2FHonor-600-Lite-Desert-Gold.png&w=1920&q=75",
       "description": "Honor 10 % OFF Honor 600 Lite 8GB + 256GB Rs 59,999 Rs 66,599 In stock EMI Buy now",
       "ram": null,
@@ -2375,14 +2513,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 59999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/honor-600-lite",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 59999
+        }
+      ]
     },
     {
       "slug": "honor-600-lite-5g-8gb-256gb",
@@ -2433,7 +2576,15 @@
       "model": "Honor 600 Pro",
       "title": "Honor 600 Pro",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 129999,
+          "url": "https://gbnstore.com/product/honor-600-pro",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F05%2FHonor-600-Pro-Orange.webp&w=1920&q=75",
       "description": "Honor 13 % OFF Honor 600 Pro 12GB + 256GB Rs 1,29,999 Rs 1,52,099 In stock EMI Buy now",
       "ram": null,
@@ -2444,14 +2595,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 129999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/honor-600-pro",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 129999
+        }
+      ]
     },
     {
       "slug": "honor-90-5g",
@@ -2505,7 +2661,15 @@
       "model": "Honor Magic 8 Pro",
       "title": "Honor Magic 8 Pro",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 179999,
+          "url": "https://gbnstore.com/product/honor-magic-8-pro",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F12%2FHonor-Magic-8-Pro--Sunrise-Gold.png&w=1920&q=75",
       "description": "Honor 10 % OFF Honor Magic 8 Pro 12GB + 512GB Rs 1,79,999 Rs 1,99,999 In stock EMI Buy now",
       "ram": null,
@@ -2516,14 +2680,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 179999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/honor-magic-8-pro",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 179999
+        }
+      ]
     },
     {
       "slug": "honor-magic-v5",
@@ -2534,7 +2703,7 @@
       "prices": [
         {
           "store": "GBN Store",
-          "price": 26699,
+          "price": 266999,
           "url": "https://gbnstore.com/product/honor-magic-v5",
           "checked_at": "2026-10-24",
           "warranty": null
@@ -2550,7 +2719,7 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": 26699,
+      "price": 266999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-magic-v5",
       "price_count": 1,
@@ -2560,7 +2729,7 @@
       "history": [
         {
           "date": "2026-10-24",
-          "price": 26699
+          "price": 266999
         }
       ]
     },
@@ -2744,7 +2913,15 @@
       "model": "Honor X5c Plus",
       "title": "Honor X5c Plus",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 22499,
+          "url": "https://gbnstore.com/product/honor-x5c-plus",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F02%2Fhonor-x5c-plus.png&w=1920&q=75",
       "description": "Honor 13 % OFF Honor X5c Plus 4GB + 128GB Rs 22,499 Rs 25,699 In stock EMI Buy now",
       "ram": null,
@@ -2755,14 +2932,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 22499,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/honor-x5c-plus",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 22499
+        }
+      ]
     },
     {
       "slug": "honor-x5d-plus",
@@ -4363,7 +4545,15 @@
       "model": "Motorola Moto G57 Power",
       "title": "Motorola Moto G57 Power",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 37499,
+          "url": "https://gbnstore.com/product/motorola-moto-g57-power",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F05%2FMotorola-Moto-G57-Power-Pantone-Corsair.png&w=1920&q=75",
       "description": "Motorola 7 % OFF Motorola Moto G57 Power 8GB + 128GB Rs 37,499 Rs 41,699 In stock EMI Buy now",
       "ram": null,
@@ -4374,14 +4564,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 37499,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/motorola-moto-g57-power",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 37499
+        }
+      ]
     },
     {
       "slug": "motorola-moto-g96-5g",
@@ -4389,7 +4584,15 @@
       "model": "Motorola Moto G96 5G",
       "title": "Motorola Moto G96 5G",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 44999,
+          "url": "https://gbnstore.com/product/motorola-g96-5g",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F12%2FMotorola-G96-5g-Green-pastures.png&w=1920&q=75",
       "description": "Motorola 10 % OFF Motorola Moto G96 5G 8GB + 256GB Rs 44,999 Rs 52,699 In stock EMI Buy now",
       "ram": null,
@@ -4400,14 +4603,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 44999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/motorola-g96-5g",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 44999
+        }
+      ]
     },
     {
       "slug": "nothing-phone-4a",
@@ -4698,7 +4906,15 @@
       "model": "Nothing Phone 3a Lite",
       "title": "Nothing Phone 3a Lite",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 43999,
+          "url": "https://gbnstore.com/product/nothing-phone-3a-lite",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F11%2FNothing-Phone-3a-Lite--Black.jpg&w=1920&q=75",
       "description": "Nothing 2 % OFF Nothing Phone 3a Lite 8 + 128GB Rs 43,999 Rs 45,999 In stock EMI Buy now",
       "ram": null,
@@ -4709,14 +4925,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 43999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/nothing-phone-3a-lite",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 43999
+        }
+      ]
     },
     {
       "slug": "nothing-phone-4a-pro",
@@ -4724,7 +4945,15 @@
       "model": "Nothing Phone 4a Pro",
       "title": "Nothing Phone 4a Pro",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 99999,
+          "url": "https://gbnstore.com/product/nothing-phone-4a-pro",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F03%2FNothing-Phone-(4a)-Pro-Black.png&w=1920&q=75",
       "description": "Nothing 2 % OFF Nothing Phone 4a Pro 12GB + 256GB Rs 99,999 Rs 1,00,999 In stock EMI Buy now",
       "ram": null,
@@ -4735,14 +4964,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 99999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/nothing-phone-4a-pro",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 99999
+        }
+      ]
     },
     {
       "slug": "nothing-phone-4a-pro-5g-pink-12gb-256gb",
@@ -4877,7 +5111,15 @@
       "model": "OPPO A6",
       "title": "OPPO A6",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 40999,
+          "url": "https://gbnstore.com/product/oppo-a6",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F04%2FOPPO-A6-Aurora-Gold.png&w=1920&q=75",
       "description": "Oppo 10 % OFF OPPO A6 8GB + 128GB Rs 40,999 Rs 45,099 In stock EMI Buy now",
       "ram": null,
@@ -4888,14 +5130,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 40999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/oppo-a6",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 40999
+        }
+      ]
     },
     {
       "slug": "oppo-a6-pro-4g",
@@ -4903,7 +5150,15 @@
       "model": "OPPO A6 Pro 4G",
       "title": "OPPO A6 Pro 4G",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 51999,
+          "url": "https://gbnstore.com/product/oppo-a6-pro-4g",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F11%2FOppo-A6-Pro-.jpg&w=1920&q=75",
       "description": "Oppo 4 % OFF OPPO A6 Pro 4G 8GB + 256GB Rs 51,999 Rs 54,899 In stock EMI Buy now",
       "ram": null,
@@ -4914,14 +5169,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 51999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/oppo-a6-pro-4g",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 51999
+        }
+      ]
     },
     {
       "slug": "oppo-a6s-pro",
@@ -4968,7 +5228,15 @@
       "model": "OPPO Reno 15",
       "title": "OPPO Reno 15",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 89999,
+          "url": "https://gbnstore.com/product/oppo-reno-15",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F02%2FOppo-Reno-15-white.png&w=1920&q=75",
       "description": "Oppo 15 % OFF OPPO Reno 15 12GB + 512GB Rs 89,999 Rs 1,02,599 In stock EMI Buy now",
       "ram": null,
@@ -4979,14 +5247,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 89999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/oppo-reno-15",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 89999
+        }
+      ]
     },
     {
       "slug": "oppo-reno-15f",
@@ -4994,7 +5267,15 @@
       "model": "OPPO Reno 15F",
       "title": "OPPO Reno 15F",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 69999,
+          "url": "https://gbnstore.com/product/oppo-reno-15f",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F02%2FOPPO-Reno-15-.png&w=1920&q=75",
       "description": "Oppo 11 % OFF OPPO Reno 15F 12GB + 512GB Rs 69,999 Rs 79,099 In stock EMI Buy now",
       "ram": null,
@@ -5005,14 +5286,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 69999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/oppo-reno-15f",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 69999
+        }
+      ]
     },
     {
       "slug": "oppo-reno-16",
@@ -5023,7 +5309,7 @@
       "prices": [
         {
           "store": "GBN Store",
-          "price": 10999,
+          "price": 109999,
           "url": "https://gbnstore.com/product/oppo-reno-16",
           "checked_at": "2026-10-24",
           "warranty": null
@@ -5039,7 +5325,7 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": 10999,
+      "price": 109999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-16",
       "price_count": 1,
@@ -5049,7 +5335,7 @@
       "history": [
         {
           "date": "2026-10-24",
-          "price": 10999
+          "price": 109999
         }
       ]
     },
@@ -5415,7 +5701,15 @@
       "model": "OnePlus 15R",
       "title": "OnePlus 15R",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 98499,
+          "url": "https://gbnstore.com/product/oneplus-15r",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F12%2FOnePlus-15r-mint-breeze.png&w=1920&q=75",
       "description": "OnePlus 9 % OFF OnePlus 15R 12GB + 256GB Rs 98,499 Rs 1,06,399 In stock EMI Buy now",
       "ram": null,
@@ -5426,14 +5720,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 98499,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/oneplus-15r",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 98499
+        }
+      ]
     },
     {
       "slug": "oneplus-15r-5g-mobile-phone-12gb-256gb",
@@ -5836,6 +6135,13 @@
           "url": "https://brother-mart.com/products/poco-f8-pro-price-in-nepal",
           "checked_at": "2026-10-24",
           "warranty": null
+        },
+        {
+          "store": "GBN Store",
+          "price": 104999,
+          "url": "https://gbnstore.com/product/poco-f8-pro",
+          "checked_at": "2026-10-24",
+          "warranty": null
         }
       ],
       "image": "https://cdn.shopify.com/s/files/1/0258/7862/6349/files/poco-f8-pro-price-in-nepal_jpg.png?v=1771822218",
@@ -5856,9 +6162,9 @@
       "price": 104999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/poco-f8-pro-price-in-nepal",
-      "price_count": 1,
+      "price_count": 2,
       "price_is_stale": false,
-      "fresh_offer_count": 1,
+      "fresh_offer_count": 2,
       "stale_offer_count": 0,
       "history": [
         {
@@ -6266,7 +6572,15 @@
       "model": "Poco X8 Pro",
       "title": "Poco X8 Pro",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 76999,
+          "url": "https://gbnstore.com/product/poco-x8-pro",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F04%2FPoco-X8-Pro-Mint-Green.png&w=1920&q=75",
       "description": "POCO 4 % OFF Poco X8 Pro 12GB + 512GB Rs 76,999 Rs 79,999 In stock EMI Buy now",
       "ram": null,
@@ -6277,14 +6591,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 76999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/poco-x8-pro",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 76999
+        }
+      ]
     },
     {
       "slug": "poco-x8-pro-max",
@@ -6331,7 +6650,15 @@
       "model": "Realme 15 Pro",
       "title": "Realme 15 Pro",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 66999,
+          "url": "https://gbnstore.com/product/realme-15-pro",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F11%2FRealme-15-Pro-.jpg&w=1920&q=75",
       "description": "Realme 14 % OFF Realme 15 Pro 12GB + 256GB Rs 66,999 Rs 76,399 In stock EMI Buy now",
       "ram": null,
@@ -6342,14 +6669,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 66999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/realme-15-pro",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 66999
+        }
+      ]
     },
     {
       "slug": "realme-15-pro-5g-12gb-256gb",
@@ -6537,7 +6869,15 @@
       "model": "Realme C85",
       "title": "Realme C85",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 39999,
+          "url": "https://gbnstore.com/product/realme-c85",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F05%2FRealme-C85-Parrot-Purple.webp&w=1920&q=75",
       "description": "Realme 14 % OFF Realme C85 8GB + 256GB Rs 39,999 Rs 45,999 In stock EMI Buy now",
       "ram": null,
@@ -6548,14 +6888,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 39999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/realme-c85",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 39999
+        }
+      ]
     },
     {
       "slug": "realme-c85-5g",
@@ -6692,7 +7037,15 @@
       "model": "Realme C85 Pro",
       "title": "Realme C85 Pro",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 36999,
+          "url": "https://gbnstore.com/product/realme-c85-pro",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F05%2FRealme-C85-Pro--Peacock-Green.webp&w=1920&q=75",
       "description": "Realme 9 % OFF Realme C85 Pro 8GB + 128GB Rs 36,999 Rs 41,899 In stock EMI Buy now",
       "ram": null,
@@ -6703,14 +7056,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 36999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/realme-c85-pro",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 36999
+        }
+      ]
     },
     {
       "slug": "realme-gt-8-pro",
@@ -6718,7 +7076,15 @@
       "model": "Realme GT 8 Pro",
       "title": "Realme GT 8 Pro",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 149999,
+          "url": "https://gbnstore.com/product/realme-gt-8-pro",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F03%2FRealme-GT-8-Pro--White-.png&w=1920&q=75",
       "description": "Realme 9 % OFF Realme GT 8 Pro 16GB + 512GB Rs 1,49,999 Rs 1,67,999 In stock EMI Buy now",
       "ram": null,
@@ -6729,14 +7095,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 149999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/realme-gt-8-pro",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 149999
+        }
+      ]
     },
     {
       "slug": "realme-gt-8-pro-5g-16gb-512gb",
@@ -6788,7 +7159,15 @@
       "model": "Realme Note 60x",
       "title": "Realme Note 60x",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 16999,
+          "url": "https://gbnstore.com/product/realme-note-60x",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F03%2FRealme-Note-60x-Wilderness-Green.jpg&w=1920&q=75",
       "description": "Realme 3 % OFF Realme Note 60x 4GB + 64GB Rs 16,999 Rs 19,599 In stock Buy now",
       "ram": null,
@@ -6799,14 +7178,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 16999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/realme-note-60x",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 16999
+        }
+      ]
     },
     {
       "slug": "realme-note-70",
@@ -6814,7 +7198,15 @@
       "model": "Realme Note 70",
       "title": "Realme Note 70",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 16999,
+          "url": "https://gbnstore.com/product/realme-note-70",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F09%2F1756976237_1.jpg&w=1920&q=75",
       "description": "Realme 14 % OFF Realme Note 70 4GB + 64GB Rs 16,999 Rs 19,599 In stock Buy now",
       "ram": null,
@@ -6825,14 +7217,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 16999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/realme-note-70",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 16999
+        }
+      ]
     },
     {
       "slug": "realme-note-80",
@@ -6923,7 +7320,15 @@
       "model": "Realme P3",
       "title": "Realme P3",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 44999,
+          "url": "https://gbnstore.com/product/realme-p3",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F06%2FRealme-P3-Space-Silver-Color.png&w=1920&q=75",
       "description": "Realme 12 % OFF Realme P3 8GB + 256GB Rs 44,999 Rs 50,899 In stock EMI Buy now",
       "ram": null,
@@ -6934,14 +7339,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 44999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/realme-p3",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 44999
+        }
+      ]
     },
     {
       "slug": "realme-p3-ultra",
@@ -6949,7 +7359,15 @@
       "model": "Realme P3 Ultra",
       "title": "Realme P3 Ultra",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 65999,
+          "url": "https://gbnstore.com/product/realme-p3-ultra",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F06%2Frealme-P3-Ultra--Glowing-Lunar-White.jpg&w=1920&q=75",
       "description": "Realme 11 % OFF Realme P3 Ultra 12GB + 256GB Rs 65,999 Rs 73,999 In stock EMI Buy now",
       "ram": null,
@@ -6960,14 +7378,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 65999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/realme-p3-ultra",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 65999
+        }
+      ]
     },
     {
       "slug": "realme-p4-power",
@@ -8300,7 +8723,15 @@
       "model": "Samsung Galaxy A07",
       "title": "Samsung Galaxy A07",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 25499,
+          "url": "https://gbnstore.com/product/samsung-galaxy-a07",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F09%2F1756970963_0.jpg&w=1920&q=75",
       "description": "Samsung Galaxy A07",
       "ram": "microSDXC (dedicated slot)",
@@ -8370,14 +8801,19 @@
       "usb": "USB Type-C 2.0",
       "charging": "25W wired",
       "sar eu": "0.19 W/kg (head) 1.33 W/kg (body)",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 25499,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/samsung-galaxy-a07",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 25499
+        }
+      ]
     },
     {
       "slug": "samsung-galaxy-a07-4gb-128gb",
@@ -8566,7 +9002,15 @@
       "model": "Samsung Galaxy A17 5G",
       "title": "Samsung Galaxy A17 5G",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 44999,
+          "url": "https://gbnstore.com/product/samsung-galaxy-a17-5g",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F09%2F1756967819_0.jpg&w=1920&q=75",
       "description": "Samsung 10 % OFF Samsung Galaxy A17 5G 6GB + 128GB Rs 44,999 Rs 49,999 In stock EMI Buy now",
       "ram": null,
@@ -8577,14 +9021,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 44999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/samsung-galaxy-a17-5g",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 44999
+        }
+      ]
     },
     {
       "slug": "samsung-galaxy-a17-5g-6gb-128gb",
@@ -9003,7 +9452,15 @@
       "model": "Samsung Galaxy A27 5G",
       "title": "Samsung Galaxy A27 5G",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 51999,
+          "url": "https://gbnstore.com/product/samsung-galaxy-a27-5g",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F07%2FSamsung-Galaxy-A27-5G-Light-Pink.webp&w=1920&q=75",
       "description": "Samsung 7 % OFF Samsung Galaxy A27 5G 6GB + 128GB Rs 51,999 Rs 55,999 In stock Buy now",
       "ram": null,
@@ -9014,14 +9471,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 51999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/samsung-galaxy-a27-5g",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 51999
+        }
+      ]
     },
     {
       "slug": "samsung-galaxy-a27-5g-6gb-128gb",
@@ -9561,7 +10023,15 @@
       "model": "Samsung Galaxy A57 5G",
       "title": "Samsung Galaxy A57 5G",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 96999,
+          "url": "https://gbnstore.com/product/samsung-galaxy-a57-5g",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F03%2FSamsung-galaxy-A57-Icyblue.webp&w=1920&q=75",
       "description": "Samsung 3 % OFF Samsung Galaxy A57 5G 8GB + 256GB Rs 96,999 Rs 99,999 In stock EMI Buy now",
       "ram": null,
@@ -9572,14 +10042,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 96999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/samsung-galaxy-a57-5g",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 96999
+        }
+      ]
     },
     {
       "slug": "samsung-galaxy-a57-5g-6-9mm-ultra-slim-12gb-256gb",
@@ -9673,7 +10148,15 @@
       "model": "Samsung Galaxy M17 5G",
       "title": "Samsung Galaxy M17 5G",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 43999,
+          "url": "https://gbnstore.com/product/samsung-galaxy-m17",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F10%2F1761728353_0.jpg&w=1920&q=75",
       "description": "Samsung 10 % OFF Samsung Galaxy M17 5G 6GB + 128GB Rs 43,999 Rs 48,999 In stock EMI Buy now",
       "ram": null,
@@ -9684,14 +10167,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 43999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/samsung-galaxy-m17",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 43999
+        }
+      ]
     },
     {
       "slug": "samsung-galaxy-s25-fe-5g-8gb-256gb",
@@ -9748,8 +10236,8 @@
       "prices": [
         {
           "store": "GBN Store",
-          "price": 18299,
-          "url": "https://gbnstore.com/product/samsung-galaxy-s26-plus",
+          "price": 139999,
+          "url": "https://gbnstore.com/product/samsung-galaxy-s26",
           "checked_at": "2026-10-24",
           "warranty": null
         },
@@ -9830,9 +10318,9 @@
       "radio": "No",
       "usb": "USB Type-C 3.2, DisplayPort 1.2, OTG",
       "charging": "25W wired, PD3.0, 55% in 30 min",
-      "price": 18299,
+      "price": 139999,
       "best_store": "GBN Store",
-      "best_url": "https://gbnstore.com/product/samsung-galaxy-s26-plus",
+      "best_url": "https://gbnstore.com/product/samsung-galaxy-s26",
       "price_count": 2,
       "price_is_stale": false,
       "fresh_offer_count": 2,
@@ -9840,7 +10328,7 @@
       "history": [
         {
           "date": "2026-10-24",
-          "price": 18299
+          "price": 139999
         }
       ]
     },
@@ -9899,7 +10387,7 @@
       "prices": [
         {
           "store": "GBN Store",
-          "price": 12499,
+          "price": 124999,
           "url": "https://gbnstore.com/product/samsung-galaxy-s26-fe",
           "checked_at": "2026-10-24",
           "warranty": null
@@ -9915,7 +10403,7 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": 12499,
+      "price": 124999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-s26-fe",
       "price_count": 1,
@@ -9925,7 +10413,7 @@
       "history": [
         {
           "date": "2026-10-24",
-          "price": 12499
+          "price": 124999
         }
       ]
     },
@@ -10163,7 +10651,15 @@
       "model": "Samsung Galaxy S26 Ultra",
       "title": "Samsung Galaxy S26 Ultra",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 224999,
+          "url": "https://gbnstore.com/product/samsung-galaxy-s26-ultra",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F02%2FSmsung-Galaxy-S26-Ultra-Sky-Blue.png&w=1920&q=75",
       "description": "Samsung Galaxy S26 Ultra",
       "ram": "No",
@@ -10237,14 +10733,19 @@
       "usb": "USB Type-C 3.2, DisplayPort 1.2, OTG",
       "charging": "60W wired, PD3.0, 75% in 30 min",
       "misc": "Cobalt Violet, Sky Blue, Black,",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 224999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/samsung-galaxy-s26-ultra",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 224999
+        }
+      ]
     },
     {
       "slug": "samsung-galaxy-s26-ultra-5g",
@@ -10387,7 +10888,7 @@
       "prices": [
         {
           "store": "GBN Store",
-          "price": 19499,
+          "price": 194999,
           "url": "https://gbnstore.com/product/samsung-galaxy-z-flip-8",
           "checked_at": "2026-10-24",
           "warranty": null
@@ -10403,7 +10904,7 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": 19499,
+      "price": 194999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-z-flip-8",
       "price_count": 1,
@@ -10413,7 +10914,7 @@
       "history": [
         {
           "date": "2026-10-24",
-          "price": 19499
+          "price": 194999
         }
       ]
     },
@@ -10555,7 +11056,15 @@
       "model": "Samsung Galaxy Z Fold 7",
       "title": "Samsung Galaxy Z Fold 7",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 279999,
+          "url": "https://gbnstore.com/product/samsung-galaxy-z-fold-7",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2024%2F07%2Fgalaxy-Z-fold-7-.jpg&w=1920&q=75",
       "description": "Samsung 10 % OFF Samsung Galaxy Z Fold 7 12GB + 256GB Rs 2,79,999 Rs 3,05,199 In stock EMI Buy now",
       "ram": null,
@@ -10566,14 +11075,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 279999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/samsung-galaxy-z-fold-7",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 279999
+        }
+      ]
     },
     {
       "slug": "samsung-galaxy-z-fold-8",
@@ -10584,7 +11098,7 @@
       "prices": [
         {
           "store": "GBN Store",
-          "price": 27499,
+          "price": 274999,
           "url": "https://gbnstore.com/product/samsung-galaxy-z-fold-8",
           "checked_at": "2026-10-24",
           "warranty": null
@@ -10600,7 +11114,7 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": 27499,
+      "price": 274999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-z-fold-8",
       "price_count": 1,
@@ -10610,7 +11124,7 @@
       "history": [
         {
           "date": "2026-10-24",
-          "price": 27499
+          "price": 274999
         }
       ]
     },
@@ -10958,7 +11472,15 @@
       "model": "Vivo V70",
       "title": "Vivo V70",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 84999,
+          "url": "https://gbnstore.com/product/vivo-v70",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F02%2Fvivo-v70-red.png&w=1920&q=75",
       "description": "Vivo 24 % OFF Vivo V70 8GB + 256GB Rs 84,999 Rs 89,999 In stock EMI Gift Buy now",
       "ram": null,
@@ -10969,14 +11491,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 84999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/vivo-v70",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 84999
+        }
+      ]
     },
     {
       "slug": "vivo-v70-5g-12gb-256gb",
@@ -11070,7 +11597,15 @@
       "model": "Vivo V70 FE",
       "title": "Vivo V70 FE",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 62999,
+          "url": "https://gbnstore.com/product/vivo-v70-fe",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F05%2FVivo-V70-FE-Blue.png&w=1920&q=75",
       "description": "Vivo 8 % OFF Vivo V70 FE 8GB + 256GB Rs 62,999 Rs 68,699 In stock EMI Buy now",
       "ram": null,
@@ -11081,14 +11616,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 62999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/vivo-v70-fe",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 62999
+        }
+      ]
     },
     {
       "slug": "vivo-v70-fe-5g-features-8gb-256gb",
@@ -11262,7 +11802,15 @@
       "model": "Vivo X300 Pro",
       "title": "Vivo X300 Pro",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 199999,
+          "url": "https://gbnstore.com/product/vivo-x300-pro",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2025%2F11%2FVivo-X300-Pro--Dune-Brown.jpg&w=1920&q=75",
       "description": "Vivo 2 % OFF Vivo X300 Pro 16GB + 512GB Rs 1,99,999 Rs 2,03,399 In stock EMI Buy now",
       "ram": null,
@@ -11273,14 +11821,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 199999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/vivo-x300-pro",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 199999
+        }
+      ]
     },
     {
       "slug": "vivo-x300-pro-16gb-512gb",
@@ -11333,7 +11886,15 @@
       "model": "Vivo Y05",
       "title": "Vivo Y05",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 21999,
+          "url": "https://gbnstore.com/product/vivo-y05",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F03%2FVivo-Y05--Voyage-Black.webp&w=1920&q=75",
       "description": "Vivo 15 % OFF Vivo Y05 4GB + 64GB Rs 21,999 Rs 25,299 In stock Buy now",
       "ram": null,
@@ -11344,14 +11905,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 21999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/vivo-y05",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 21999
+        }
+      ]
     },
     {
       "slug": "vivo-y21-5g",
@@ -11359,7 +11925,15 @@
       "model": "Vivo Y21 5G",
       "title": "Vivo Y21 5G",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 40999,
+          "url": "https://gbnstore.com/product/vivo-y21-5g",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F05%2FVivo-Y21-5G-Champagne-Gold.png&w=1920&q=75",
       "description": "Vivo 15 % OFF Vivo Y21 5G 6GB + 128GB Rs 40,999 Rs 48,399 In stock EMI Buy now",
       "ram": null,
@@ -11370,14 +11944,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 40999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/vivo-y21-5g",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 40999
+        }
+      ]
     },
     {
       "slug": "vivo-y31d-6gb-128gb",
@@ -11650,7 +12229,15 @@
       "model": "Xiaomi 17 Ultra",
       "title": "Xiaomi 17 Ultra",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 200000,
+          "url": "https://gbnstore.com/product/xiaomi-17-ultra",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F03%2FXiaomi-17-Ultra.jpg&w=1920&q=75",
       "description": "Xiaomi 14 % OFF Xiaomi 17 Ultra 16GB + 512GB Rs 2,00,000 Rs 2,31,999 In stock EMI Buy now",
       "ram": null,
@@ -11661,14 +12248,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 200000,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/xiaomi-17-ultra",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 200000
+        }
+      ]
     },
     {
       "slug": "xiaomi-17-ultra-2026-16gb-512gb",
@@ -11720,7 +12312,15 @@
       "model": "Xiaomi 17T",
       "title": "Xiaomi 17T",
       "variant": "",
-      "prices": [],
+      "prices": [
+        {
+          "store": "GBN Store",
+          "price": 99999,
+          "url": "https://gbnstore.com/product/xiaomi-17t",
+          "checked_at": "2026-10-24",
+          "warranty": null
+        }
+      ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F05%2FXiaomi-17T-Blue.webp&w=1920&q=75",
       "description": "Xiaomi 6 % OFF Xiaomi 17T 12GB + 512GB Rs 99,999 Rs 1,05,999 In stock EMI Gift Buy now",
       "ram": null,
@@ -11731,14 +12331,19 @@
       "camera": null,
       "specifications": {},
       "updated_at": "2026-10-24",
-      "price": null,
-      "best_store": null,
-      "best_url": null,
-      "price_count": 0,
+      "price": 99999,
+      "best_store": "GBN Store",
+      "best_url": "https://gbnstore.com/product/xiaomi-17t",
+      "price_count": 1,
       "price_is_stale": false,
-      "fresh_offer_count": 0,
+      "fresh_offer_count": 1,
       "stale_offer_count": 0,
-      "history": []
+      "history": [
+        {
+          "date": "2026-10-24",
+          "price": 99999
+        }
+      ]
     },
     {
       "slug": "xiaomi-17t-5g-leica-telephoto-12gb-256gb",
@@ -12291,6 +12896,6 @@
     }
   ],
   "store_count": 4,
-  "price_count": 235,
+  "price_count": 282,
   "variant_count": 282
 }
