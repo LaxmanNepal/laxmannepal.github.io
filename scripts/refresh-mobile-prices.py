@@ -13,6 +13,7 @@ import requests
 from bs4 import BeautifulSoup
 
 OUT = Path("data/mobile-prices.json")
+HISTORY_OUT = Path("data/mobile-price-history.json")
 DETAIL_ROOT = Path("mobile-price-in-nepal/phones")
 TODAY = datetime.now(timezone.utc).date().isoformat()
 HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
@@ -21,9 +22,10 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chr
 # is kept in each price record as a direct product/listing URL for price verification.
 SOURCES = [
     {"store":"Oliz Store","url":"https://www.olizstore.com/collections/phone","kind":"shop"},
+    {"store":"Brother Mart","url":"https://brother-mart.com/collections/smartphones-mobilephones-price-in-nepal","kind":"shop"},
     {"store":"Neo Store","url":"https://www.neostore.com.np/product-category/mobile-brands","kind":"shop"},
     {"store":"National Mobile","url":"https://store.nationalmobile.com.np/Mobile-Price-in-Nepal","kind":"shop"},
-    {"store":"Hukut","url":"https://www.hukut.com/laptops/mobile-phones","kind":"shop"},
+
     {"store":"Daraz","url":"https://www.daraz.com.np/smartphones/","kind":"marketplace"},
 ]
 BRANDS = ["Apple","Samsung","Xiaomi","Redmi","Poco","OnePlus","Vivo","OPPO","Realme","Motorola","Nothing","Honor","Huawei","Tecno","Infinix","Nokia","Google","iQOO","Itel","ZTE","Lava","CMF","Lenovo"]
