@@ -11,6 +11,7 @@ on:
       - "scripts/audit_mobile_price_catalogue.py"
       - "tests/test_mobile_price_validation.py"
       - "tests/test_mobile_price_refresh.py"
+      - "tests/test_mobile_price_scraper_parsing.py"
       - ".github/workflows/mobile-price-quality.yml"
   push:
     branches:
@@ -49,6 +50,8 @@ jobs:
         run: python -m unittest discover -s tests -p "test_mobile_price_validation.py"
       - name: Test daily refresh completeness and stale-offer safeguards
         run: python -m unittest discover -s tests -p "test_mobile_price_refresh.py"
+      - name: Test retailer price parsing
+        run: python -m unittest discover -s tests -p "test_mobile_price_scraper_parsing.py"
       - name: Validate JSON and generated phone pages
         run: |
           python -m json.tool data/mobile-prices.json > /dev/null

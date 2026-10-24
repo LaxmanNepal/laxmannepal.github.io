@@ -22,18 +22,18 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chr
 # Public store category pages. The store label is what readers see; source provenance
 # is kept in each price record as a direct product/listing URL for price verification.
 SOURCES = [
-    {"store":"Oliz Store","url":"https://www.olizstore.com/collections/phone","kind":"shopify"},
+    {"store":"Oliz Store","url":"https://cdn.olizstore.com/collections/phone","kind":"shopify"},
     {"store":"Brother Mart","url":"https://brother-mart.com/collections/smartphones-mobilephones-price-in-nepal","kind":"shopify"},
     {"store":"Neo Store","url":"https://www.neostore.com.np/product-category/mobile-brands","kind":"shop"},
     {"store":"GBN Store","url":"https://gbnstore.com/category/smartphones","kind":"catalog"},
     {"store":"Quality Computer","url":"https://qualitycomputer.com.np/shop?category=833&order=create_date+desc","kind":"shop"},
-    {"store":"National Mobile","url":"https://store.nationalmobile.com.np/Mobile-Price-in-Nepal","kind":"shop"},
+    {"store":"National Mobile","url":"https://store.nationalmobile.com.np/mobile-price-nepal/","kind":"shop"},
 
     {"store":"Daraz","url":"https://www.daraz.com.np/smartphones/","kind":"marketplace"},
 ]
 SOURCES += [{"store":"GBN Store","url":f"https://gbnstore.com/category/smartphones?page={page}","kind":"catalog"} for page in range(2,9)]
 BRANDS = ["Apple","Samsung","Xiaomi","Redmi","Poco","OnePlus","Vivo","OPPO","Realme","Motorola","Nothing","Honor","Huawei","Tecno","Infinix","Nokia","Google","iQOO","Itel","ZTE","Lava","CMF","Lenovo","Blackview"]
-PRICE_RE = re.compile(r"(?:NPR|Rs\.?|रु\.?|रु)\s*([\d,]{4,7})", re.I)
+PRICE_RE = re.compile(r"(?:NPR|Rs\s*\.?|रु\s*\.?|रु)\s*([\d,]{4,10})", re.I)
 VARIANT_RE = re.compile(r"\b(\d{1,2})\s*(?:GB)?\s*(?:\+|/|RAM)\s*(\d{2,4})\s*GB\b", re.I)
 
 def clean(v): return re.sub(r"\s+", " ", str(v or "")).strip()
@@ -71,6 +71,10 @@ def current_price(root):
         for tag in root.select(selector):
             raw=tag.get("content") or tag.get("value") or tag.get("data-price") or tag.get_text(" ",strip=True)
             match=PRICE_RE.search(str(raw))
+            classes=" ".join(tag.get("class",[]))
+            old_parent=tag.find_parent(["del","s"]) or tag.find_parent(class_=re.compile(r"old|compare|strike|regular-price",re.I))
+            if old_parent or re.search(r"old|compare|strike|regular-price",classes,re.I):
+                continue
             if match:
                 value=int(match.group(1).replace(",",""))
             else:
@@ -78,7 +82,12 @@ def current_price(root):
                 try: value=int(float(digits)) if digits else None
                 except Exception: value=None
             if value and 1000 < value < 3000000: return value
-    return money(root.get_text(" ",strip=True))
+    # When the retailer uses crossed-out and sale prices without standard classes,
+    # remove old-price markup before accepting the single remaining amount.
+    clean_root=BeautifulSoup(str(root),"html.parser")
+    for old_tag in clean_root.select("del,s,.old-price,[class*='old-price'],[class*='compare-at'],[class*='regular-price']"):
+        old_tag.decompose()
+    return money(clean_root.get_text(" ",strip=True))
 def is_phone_title(title):
     t=clean(title)
     if len(t)>110 or len(t.split())<2: return False
@@ -225,7 +234,7 @@ def parse_listing(source):
             image=img.get("data-src") or img.get("data-lazy-src") or img.get("src") or img.get("srcset","").split(",")[0].split(" ")[0]
             if image: image=urljoin(source["url"],image)
         # If a listing price exists, it's evidence for that store. If absent, fetch product page.
-        found.append({"store":source["store"],"title":title,"url":href,"price":price,"image":image,"description":text,"text":text,"kind":fallback_kind})
+        found.append({"store":source["store"],"title":title,"url":href,"source_url":source["url"],"price":price,"image":image,"description":text,"text":text,"kind":fallback_kind})
     # Product cards are often rendered differently; fall back to visible links then inspect pages.
     if not found:
         for a in soup.select('a[href]'):
@@ -237,7 +246,7 @@ def parse_listing(source):
             if re.search(r"\b(out of stock|sold out|unavailable)\b",parent_text,re.I): continue
             if len(title)<7 or not is_phone_title(title): continue
             if urlparse(href).netloc!=urlparse(source["url"]).netloc: continue
-            found.append({"store":source["store"],"title":title,"url":href,"price":None,"image":None,"kind":source["kind"]})
+            found.append({"store":source["store"],"title":title,"url":href,"source_url":source["url"],"price":None,"image":None,"kind":source["kind"]})
     # De-dupe listing candidates by URL.
     unique={}
     for item in found: unique.setdefault(item["url"],item)
@@ -505,7 +514,8 @@ def main():
         if dedupe_key in seen: continue
         seen.add(dedupe_key)
         detail={"title":item["title"],"image":item.get("image"),"price":item.get("price"),"description":item.get("description"),"specs":{},"text":item.get("text") or ""}
-        if item.get("kind") not in ("shopify","catalog"):
+        same_listing = bool(item.get("source_url")) and urlparse(item["url"]).path.rstrip("/") == urlparse(item["source_url"]).path.rstrip("/")
+        if item.get("kind") not in ("shopify","catalog") and not same_listing:
             try:
                 soup=fetch(item["url"])
                 meta=product_meta(soup,item["title"])
