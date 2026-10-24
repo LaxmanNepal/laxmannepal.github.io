@@ -159,13 +159,15 @@ def parse_listing(source):
                     variant_title=clean(variant.get("public_title") or variant.get("title"))
                     full_title=title if not variant_title or variant_title.lower()=="default title" else title+" "+variant_title
                     if price and not (1000 < price < 3000000): price=None
-                    items.append({"store":source["store"],"title":full_title,"url":href,"price":price,"image":image,"kind":"shopify"})
+                    description=clean(BeautifulSoup(product.get("body_html") or "", "html.parser").get_text(" ",strip=True))
+                    items.append({"store":source["store"],"title":full_title,"url":href,"price":price,"image":image,"description":description,"text":description,"kind":"shopify"})
             if items:
                 print(f'{source["store"]}: Shopify feed returned {len(items)} phone variants')
                 return items
             print(f'{source["store"]}: Shopify feed had no available phone variants; falling back to page parser')
         except Exception as exc:
             print(f'{source["store"]}: Shopify feed unavailable ({exc}); falling back to page parser')
+    fallback_kind="shop" if source.get("kind")=="shopify" else source["kind"]
     soup=fetch(source["url"])
     found=[]
     # Prefer cards/product links. Restrict to links with a visible price in the same card.
@@ -199,7 +201,7 @@ def parse_listing(source):
             image=img.get("data-src") or img.get("data-lazy-src") or img.get("src") or img.get("srcset","").split(",")[0].split(" ")[0]
             if image: image=urljoin(source["url"],image)
         # If a listing price exists, it's evidence for that store. If absent, fetch product page.
-        found.append({"store":source["store"],"title":title,"url":href,"price":price,"image":image,"kind":source["kind"]})
+        found.append({"store":source["store"],"title":title,"url":href,"price":price,"image":image,"kind":fallback_kind})
     # Product cards are often rendered differently; fall back to visible links then inspect pages.
     if not found:
         for a in soup.select('a[href]'):
@@ -360,7 +362,7 @@ def main():
         try:
             items=parse_listing(source)
             print(f'{source["store"]}: found {len(items)} candidates')
-            raw.extend(items[:25])
+            raw.extend(items[:500] if any(x.get("kind")=="shopify" for x in items) else items[:25])
         except Exception as exc:
             print(f'Unable to read {source["store"]}: {exc}')
     # Visit each candidate product page for price/image/specs when the listing card is incomplete.
@@ -370,12 +372,13 @@ def main():
         dedupe_key=(item["url"],item["title"])
         if dedupe_key in seen: continue
         seen.add(dedupe_key)
-        detail={"title":item["title"],"image":item.get("image"),"price":item.get("price"),"description":None,"specs":{},"text":""}
-        try:
-            soup=fetch(item["url"])
-            meta=product_meta(soup,item["title"])
-            detail.update({k:v for k,v in meta.items() if v not in (None,"",{})})
-        except Exception as exc: print(f'Skip detail {item["url"]}: {exc}')
+        detail={"title":item["title"],"image":item.get("image"),"price":item.get("price"),"description":item.get("description"),"specs":{},"text":item.get("text") or ""}
+        if item.get("kind")!="shopify":
+            try:
+                soup=fetch(item["url"])
+                meta=product_meta(soup,item["title"])
+                detail.update({k:v for k,v in meta.items() if v not in (None,"",{})})
+            except Exception as exc: print(f'Skip detail {item["url"]}: {exc}')
         unavailable=bool(re.search(r"outofstock|discontinued|soldout",clean(detail.get("availability")).lower()))
         price=None if unavailable else ((item.get("price") or detail.get("price")) if item.get("kind")=="shopify" else (detail.get("price") or item.get("price")))
         # Do not publish non-phone categories or pages without a plausible product name.
