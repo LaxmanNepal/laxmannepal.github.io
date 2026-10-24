@@ -288,6 +288,8 @@ jobs:
           grep -q 'Type Nepali Online' .pages/tools/nepali-tools/type-nepali/index.html
           grep -q 'id="editor"' .pages/tools/nepali-tools/type-nepali/index.html
           grep -q 'id="remote-suggestions"' .pages/tools/nepali-tools/type-nepali/index.html
+          grep -q 'id="share-text"' .pages/tools/nepali-tools/type-nepali/index.html
+          grep -q 'function shareText' .pages/tools/nepali-tools/type-nepali/app.js
           grep -q 'FAQPage' .pages/tools/nepali-tools/type-nepali/index.html
           grep -q 'Microphone permission was denied' .pages/tools/nepali-tools/type-nepali/app.js
           grep -q 'LEARNED_KEY' .pages/tools/nepali-tools/type-nepali/app.js
