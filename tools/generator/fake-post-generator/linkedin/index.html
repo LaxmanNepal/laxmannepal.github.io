@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Create a responsive, customizable linkedin-style social post card. Edit identity, text, context, optional image, frame and export a PNG.">
+  <meta name="description" content="Create a responsive, customizable linkedin-style social post card. Edit identity, text, context, optional image, frame and export a high-resolution image.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://laxmannepal.com.np/tools/generator/fake-post-generator/linkedin/">
@@ -15,7 +15,7 @@
     <section class="intro">
       <span class="eyebrow" id="eyebrow">✦ LINKEDIN MOCKUP TOOL</span>
       <h1 id="pageTitle">LinkedIn Mockup Generator</h1>
-      <p id="pageDescription">Build a LinkedIn-inspired professional update with profile identity, headline-style context, optional image and custom frame controls. Preview live and export a PNG.</p>
+      <p id="pageDescription">Build a LinkedIn-inspired professional update with profile identity, headline-style context, optional image and custom frame controls. Preview live and export a high-resolution image.</p>
       <div class="notice"><strong>Creator note:</strong> Build custom post designs for concepts, presentations and storytelling. Make sure viewers are not misled about whether a post is authentic.</div>
       <nav class="platforms" aria-label="Choose a social mockup">
         <a data-platform="twitter" href="../twitter/">X / Twitter</a>
@@ -56,7 +56,7 @@
             <div class="two"><div class="field"><label for="nameSize">Name size <output id="nameSizeOut">16 px</output></label><input id="nameSize" type="range" min="10" max="32" value="16"></div><div class="field"><label for="handleColor">Username color</label><input id="handleColor" type="color" value="#64748b"></div></div>
             <div class="two"><div class="field"><label for="showBadge">Decorative badge</label><select id="showBadge"><option value="off" selected>Off</option><option value="on">On</option></select></div></div>
           </div>
-<div class="btn-row"><button class="primary" id="downloadBtn" type="button">Download PNG</button><button class="secondary" id="resetBtn" type="button">Reset example</button></div>
+<div class="field export-format"><label for="exportFormat">Export format</label><select id="exportFormat" aria-label="Choose image export format"><option value="jpeg" selected>JPG · high quality</option><option value="png">PNG · lossless</option><option value="webp">WebP · smaller file</option></select><div class="hint"><span>High-resolution export · 3× render</span><span>Saved locally</span></div></div><div class="btn-row"><button class="primary" id="downloadBtn" type="button">Download JPG</button><button class="secondary" id="resetBtn" type="button">Reset example</button></div>
         </div>
       </section>
       <section class="panel" aria-labelledby="preview-title">
@@ -72,11 +72,11 @@
             
             
           </article></div>
-          <p class="download-note">Export the current design as a high-resolution PNG.</p>
+          <p class="download-note">Export the current design as a high-resolution JPG, PNG or WebP.</p>
         </div>
       </section>
     </div>
-    <p class="footer-note">A Laxman Nepal creator tool · Custom social post design and PNG export.</p>
+    <p class="footer-note">A Laxman Nepal creator tool · Custom social post design and image export.</p>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
   <script src="../assets/generator.js" defer></script>
