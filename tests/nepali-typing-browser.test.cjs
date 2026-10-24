@@ -256,3 +256,24 @@ test('smart local lexicon ranks common suffix forms in the typing UI', async () 
     assert.ok(learned.netaharulai);
   } finally { await context.close(); }
 });
+
+test('share button passes the current text to the native share sheet', async () => {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, 'share', {
+      configurable: true,
+      value: async data => { window.__shareData = data; }
+    });
+  });
+  try {
+    await page.goto('http://127.0.0.1:4173/tools/nepali-tools/type-nepali/', { waitUntil: 'domcontentloaded' });
+    await page.locator('#editor').fill('नेपाल सुन्दर छ।');
+    await page.locator('#share-text').click();
+    await page.waitForFunction(() => Boolean(window.__shareData));
+    const payload = await page.evaluate(() => window.__shareData);
+    assert.equal(payload.text, 'नेपाल सुन्दर छ।');
+    assert.match(payload.title, /Nepali text/);
+    assert.match(payload.url, /type-nepali/);
+  } finally { await context.close(); }
+});
