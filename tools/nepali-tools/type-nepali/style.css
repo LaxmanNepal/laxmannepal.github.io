@@ -56,3 +56,28 @@ body{background:var(--type-bg);color:var(--type-ink)}
 
 /* Offline/PWA status */
 .network-status{color:#667085;font-size:12px;white-space:normal}.update-button{padding:5px 9px;font-size:12px;min-height:30px}.update-button[hidden]{display:none}.editor-footer .network-status{max-width:100%}
+
+/* Privacy-first online suggestions and local document workspace */
+.remote-toggle{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;margin:8px 0 12px;border:1px solid var(--type-line);border-radius:10px;background:#f8fafc;color:#344054;font-size:13px;cursor:pointer}
+.remote-toggle input{width:17px;height:17px;flex:0 0 auto;margin-top:2px;accent-color:#2563eb}
+.remote-toggle span{display:grid;gap:3px}.remote-toggle strong{font-size:13px}.remote-toggle small{font-size:12px;color:#667085;line-height:1.45}
+.workspace-tools{margin:0 0 14px;border:1px solid var(--type-line);border-radius:14px;background:#fff;overflow:hidden}
+.workspace-tools>summary{padding:14px 16px;cursor:pointer;font-weight:750;color:#344054;background:#f8fafc}
+.workspace-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:16px}
+.workspace-grid section{display:flex;flex-direction:column;gap:8px;min-width:0;padding:13px;border:1px solid #eaecf0;border-radius:12px}
+.workspace-grid h3{margin:0 0 4px;font-size:15px;color:#101828}
+.workspace-grid label{font-size:12px;font-weight:750;color:#475467}
+.workspace-grid input,.workspace-grid select{width:100%;min-width:0;padding:9px 10px;border:1px solid #d0d5dd;border-radius:8px;background:#fff;color:#101828;font:inherit;font-size:13px}
+.workspace-buttons{display:flex;flex-wrap:wrap;gap:6px}
+.workspace-grid button{min-height:36px;padding:7px 10px;border:1px solid #d0d5dd;border-radius:8px;background:#fff;color:#344054;font-size:12px;font-weight:700;cursor:pointer}
+.workspace-grid .workspace-wide{width:100%}
+.workspace-grid .workspace-danger{color:#b42318;border-color:#fecdca}
+.workspace-grid p{margin:3px 0 0;color:#667085;font-size:12px;line-height:1.5}
+@media(max-width:620px){.workspace-grid{grid-template-columns:1fr;padding:10px}.workspace-tools>summary{padding:12px}.workspace-grid section{padding:11px}}
+@media print{
+  .shared-header,.shared-mobile-menu,.shared-menu-backdrop,.breadcrumbs,.tool-heading,.keyboard-reference,.about-tool,.type-footer,.toolbar,.mode-description,.voice-panel,.suggestion-area,.editor-footer,.action-row,.workspace-tools{display:none!important}
+  .type-page{width:100%;margin:0;padding:0}
+  .typing-card{border:0;box-shadow:none;padding:0}
+  #editor{display:block;width:100%;min-height:0;height:auto;border:0;padding:0;resize:none;overflow:visible;color:#000;font-size:12pt;line-height:1.6}
+  body{background:#fff}
+}
