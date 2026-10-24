@@ -3,14 +3,14 @@ name: Nepali Typing Browser Tests
 on:
   pull_request:
     paths:
-      - 'tools/nepali-tools/type-nepali/**'
+      - 'tools/nepali-tools/**'
       - 'tests/nepali-typing-*.test.cjs'
       - '.github/workflows/nepali-typing-tests.yml'
       - '.github/workflows/deploy.yml'
   push:
     branches: [main]
     paths:
-      - 'tools/nepali-tools/type-nepali/**'
+      - 'tools/nepali-tools/**'
       - 'tests/nepali-typing-*.test.cjs'
       - '.github/workflows/nepali-typing-tests.yml'
       - '.github/workflows/deploy.yml'
@@ -37,6 +37,8 @@ jobs:
         run: node --test tests/nepali-typing-range.test.cjs
       - name: Run Romanized engine unit tests
         run: node --test tests/nepali-romanized.test.cjs
+      - name: Run typing-practice metric tests
+        run: node --test tests/nepali-typing-practice.test.cjs
       - name: Install browser-test dependency
         run: npm install --prefix /tmp/typing-browser playwright
       - name: Install Chromium

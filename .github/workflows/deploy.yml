@@ -78,6 +78,8 @@ jobs:
         run: node --test tests/nepali-typing-range.test.cjs
       - name: Test offline Romanized engine
         run: node --test tests/nepali-romanized.test.cjs
+      - name: Test typing-practice metrics
+        run: node --test tests/nepali-typing-practice.test.cjs
       - name: Install browser-test dependency
         run: npm install --prefix /tmp/typing-browser playwright
       - name: Install Chromium for browser tests
@@ -272,6 +274,12 @@ jobs:
           grep -q 'Type Nepali Online' .pages/tools/nepali-tools/type-nepali/index.html
           grep -q 'id="editor"' .pages/tools/nepali-tools/type-nepali/index.html
           grep -q "restoreDraft();" .pages/tools/nepali-tools/type-nepali/app.js
+      - name: Verify Nepali typing practice artifact
+        run: |
+          test -s .pages/tools/nepali-tools/nepali-typing-practice/index.html
+          test -s .pages/tools/nepali-tools/nepali-typing-practice/app.js
+          test -s .pages/tools/nepali-tools/nepali-typing-practice/metrics.js
+          grep -q 'Practice Nepali Typing' .pages/tools/nepali-tools/nepali-typing-practice/index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
