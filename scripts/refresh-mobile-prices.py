@@ -24,11 +24,13 @@ SOURCES = [
     {"store":"Oliz Store","url":"https://www.olizstore.com/collections/phone","kind":"shopify"},
     {"store":"Brother Mart","url":"https://brother-mart.com/collections/smartphones-mobilephones-price-in-nepal","kind":"shopify"},
     {"store":"Neo Store","url":"https://www.neostore.com.np/product-category/mobile-brands","kind":"shop"},
+    {"store":"GBN Store","url":"https://gbnstore.com/category/smartphones","kind":"shop"},
+    {"store":"Quality Computer","url":"https://qualitycomputer.com.np/shop?category=833&order=create_date+desc&search=iPhone","kind":"shop"},
     {"store":"National Mobile","url":"https://store.nationalmobile.com.np/Mobile-Price-in-Nepal","kind":"shop"},
 
     {"store":"Daraz","url":"https://www.daraz.com.np/smartphones/","kind":"marketplace"},
 ]
-BRANDS = ["Apple","Samsung","Xiaomi","Redmi","Poco","OnePlus","Vivo","OPPO","Realme","Motorola","Nothing","Honor","Huawei","Tecno","Infinix","Nokia","Google","iQOO","Itel","ZTE","Lava","CMF","Lenovo"]
+BRANDS = ["Apple","Samsung","Xiaomi","Redmi","Poco","OnePlus","Vivo","OPPO","Realme","Motorola","Nothing","Honor","Huawei","Tecno","Infinix","Nokia","Google","iQOO","Itel","ZTE","Lava","CMF","Lenovo","Blackview"]
 PRICE_RE = re.compile(r"(?:NPR|Rs\.?|रु\.?|रु)\s*([\d,]{4,7})", re.I)
 VARIANT_RE = re.compile(r"\b(\d{1,2})\s*(?:GB)?\s*(?:\+|/|RAM)\s*(\d{2,4})\s*GB\b", re.I)
 
@@ -66,13 +68,14 @@ def is_phone_title(title):
     t=clean(title)
     if len(t)>110 or len(t.split())<2: return False
     if re.search(r"\b(accessories|accessory|headphones|earphones|earbuds|tablet|tablets|tab|choice\s+t\d+|mobile brands|phone brands|mobile accessories|phone cases|charger|charging cable|power bank|buy a phone|mobile price|phones list)\b",t,re.I): return False
-    family=bool(re.search(r"\b(iphone|galaxy|redmi|poco|pixel|oneplus|vivo|oppo|realme|motorola|nothing|honor|infinix|tecno|nokia|samsung|xiaomi|cmf|nubia|zte|magic|spark|camon|hot)\b",t,re.I))
+    family=bool(re.search(r"\b(iphone|galaxy|redmi|poco|pixel|oneplus|vivo|oppo|realme|motorola|nothing|honor|infinix|tecno|nokia|samsung|xiaomi|cmf|nubia|zte|magic|spark|camon|hot|blackview)\b|\bai\+",t,re.I))
     has_brand=any(re.search(r"\b"+re.escape(b)+r"\b",t,re.I) for b in BRANDS)
     has_model=bool(re.search(r"\b(\d{1,4}|[A-Z]\d{1,4}|SE|Fold|Flip|Ultra|Pro|Plus|Lite|Note|Edge|Neo|Air|Max|Play|Spark|Camon|Hot|Smart)\b",t,re.I))
     return (family or has_brand) and has_model
 
 def brand_for(name):
     if re.search(r"\biphone\b",name,re.I): return "Apple"
+    if re.search(r"\bai\+",name,re.I): return "Ai+"
     for b in sorted(BRANDS,key=len,reverse=True):
         if re.search(r"\b"+re.escape(b)+r"\b",name,re.I):
             return "OPPO" if b.lower()=="oppo" else b
@@ -172,7 +175,7 @@ def parse_listing(source):
         if len(nodes)>=3: break
     for node in nodes:
         text=clean(node.get_text(" ",strip=True))
-        if len(text)<8: continue
+        if len(text)<8 or re.search(r"\\b(out of stock|sold out|unavailable)\\b",text,re.I): continue
         price=current_price(node)
         anchors=node.select('a[href]')
         if not anchors: continue
@@ -202,6 +205,8 @@ def parse_listing(source):
             img_tag=a.select_one("img")
             title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True) or (img_tag.get("alt") if img_tag else ""))
             href=urljoin(source["url"],a.get("href",""))
+            parent_text=clean(a.parent.get_text(" ",strip=True) if a.parent else "")
+            if re.search(r"\\b(out of stock|sold out|unavailable)\\b",parent_text,re.I): continue
             if len(title)<7 or not is_phone_title(title): continue
             if urlparse(href).netloc!=urlparse(source["url"]).netloc: continue
             found.append({"store":source["store"],"title":title,"url":href,"price":None,"image":None,"kind":source["kind"]})
@@ -354,7 +359,7 @@ def main():
         try:
             items=parse_listing(source)
             print(f'{source["store"]}: found {len(items)} candidates')
-            raw.extend(items[:35])
+            raw.extend(items[:25])
         except Exception as exc:
             print(f'Unable to read {source["store"]}: {exc}')
     # Visit each candidate product page for price/image/specs when the listing card is incomplete.
