@@ -24,12 +24,13 @@ SOURCES = [
     {"store":"Oliz Store","url":"https://www.olizstore.com/collections/phone","kind":"shopify"},
     {"store":"Brother Mart","url":"https://brother-mart.com/collections/smartphones-mobilephones-price-in-nepal","kind":"shopify"},
     {"store":"Neo Store","url":"https://www.neostore.com.np/product-category/mobile-brands","kind":"shop"},
-    {"store":"GBN Store","url":"https://gbnstore.com/category/smartphones","kind":"shop"},
+    {"store":"GBN Store","url":"https://gbnstore.com/category/smartphones","kind":"catalog"},
     {"store":"Quality Computer","url":"https://qualitycomputer.com.np/shop?category=833&order=create_date+desc&search=iPhone","kind":"shop"},
     {"store":"National Mobile","url":"https://store.nationalmobile.com.np/Mobile-Price-in-Nepal","kind":"shop"},
 
     {"store":"Daraz","url":"https://www.daraz.com.np/smartphones/","kind":"marketplace"},
 ]
+SOURCES += [{"store":"GBN Store","url":f"https://gbnstore.com/category/smartphones?page={page}","kind":"catalog"} for page in range(2,9)]
 BRANDS = ["Apple","Samsung","Xiaomi","Redmi","Poco","OnePlus","Vivo","OPPO","Realme","Motorola","Nothing","Honor","Huawei","Tecno","Infinix","Nokia","Google","iQOO","Itel","ZTE","Lava","CMF","Lenovo","Blackview"]
 PRICE_RE = re.compile(r"(?:NPR|Rs\.?|रु\.?|रु)\s*([\d,]{4,7})", re.I)
 VARIANT_RE = re.compile(r"\b(\d{1,2})\s*(?:GB)?\s*(?:\+|/|RAM)\s*(\d{2,4})\s*GB\b", re.I)
@@ -201,7 +202,7 @@ def parse_listing(source):
             image=img.get("data-src") or img.get("data-lazy-src") or img.get("src") or img.get("srcset","").split(",")[0].split(" ")[0]
             if image: image=urljoin(source["url"],image)
         # If a listing price exists, it's evidence for that store. If absent, fetch product page.
-        found.append({"store":source["store"],"title":title,"url":href,"price":price,"image":image,"kind":fallback_kind})
+        found.append({"store":source["store"],"title":title,"url":href,"price":price,"image":image,"description":text,"text":text,"kind":fallback_kind})
     # Product cards are often rendered differently; fall back to visible links then inspect pages.
     if not found:
         for a in soup.select('a[href]'):
@@ -373,14 +374,14 @@ def main():
         if dedupe_key in seen: continue
         seen.add(dedupe_key)
         detail={"title":item["title"],"image":item.get("image"),"price":item.get("price"),"description":item.get("description"),"specs":{},"text":item.get("text") or ""}
-        if item.get("kind")!="shopify":
+        if item.get("kind") not in ("shopify","catalog"):
             try:
                 soup=fetch(item["url"])
                 meta=product_meta(soup,item["title"])
                 detail.update({k:v for k,v in meta.items() if v not in (None,"",{})})
             except Exception as exc: print(f'Skip detail {item["url"]}: {exc}')
         unavailable=bool(re.search(r"outofstock|discontinued|soldout",clean(detail.get("availability")).lower()))
-        price=None if unavailable else ((item.get("price") or detail.get("price")) if item.get("kind")=="shopify" else (detail.get("price") or item.get("price")))
+        price=None if unavailable else ((item.get("price") or detail.get("price")) if item.get("kind") in ("shopify","catalog") else (detail.get("price") or item.get("price")))
         # Do not publish non-phone categories or pages without a plausible product name.
         title=clean(item["title"] if item.get("kind")=="shopify" else (detail.get("title") or item["title"]))
         if not is_phone_title(title): continue
