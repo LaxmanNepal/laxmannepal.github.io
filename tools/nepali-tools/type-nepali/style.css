@@ -81,3 +81,5 @@ body{background:var(--type-bg);color:var(--type-ink)}
   #editor{display:block;width:100%;min-height:0;height:auto;border:0;padding:0;resize:none;overflow:visible;color:#000;font-size:12pt;line-height:1.6}
   body{background:#fff}
 }
+
+#voice-toggle.listening{background:#b42318;color:#fff;border-color:#b42318}#voice-toggle:focus-visible,.workspace-grid button:focus-visible{outline:3px solid #bfdbfe;outline-offset:2px}
