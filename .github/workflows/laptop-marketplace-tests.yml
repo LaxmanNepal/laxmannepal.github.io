@@ -1,0 +1,29 @@
+name: Laptop marketplace regression tests
+on:
+  pull_request:
+    paths:
+      - 'laptop-price-in-nepal/**'
+      - 'tests/laptop-marketplace.test.cjs'
+      - '.github/workflows/laptop-marketplace-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Validate catalogue JSON
+        run: |
+          python -m json.tool laptop-price-in-nepal/data/laptops.json > /dev/null
+          python -m json.tool laptop-price-in-nepal/data/laptop-price-history.json > /dev/null
+      - name: Check JavaScript and regression tests
+        run: node --test tests/laptop-marketplace.test.cjs
+      - name: Compile price refresh script
+        run: python -m py_compile laptop-price-in-nepal/scripts/refresh_prices.py
