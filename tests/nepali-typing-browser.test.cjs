@@ -192,3 +192,51 @@ test('Preeti converter fits a narrow mobile viewport', async () => {
     assert.ok(dimensions.page <= dimensions.viewport + 1, `horizontal overflow: ${JSON.stringify(dimensions)}`);
   } finally { await context.close(); }
 });
+
+test('voice errors are actionable and final speech saves into the local document', async () => {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  await page.addInitScript(() => {
+    class MockSpeechRecognition {
+      constructor() { window.__mockSpeechRecognition = this; }
+      start() { if (this.onstart) this.onstart(); }
+      stop() { if (this.onend) this.onend(); }
+    }
+    window.SpeechRecognition = MockSpeechRecognition;
+  });
+  try {
+    await page.goto('http://127.0.0.1:4173/tools/nepali-tools/type-nepali/', { waitUntil: 'domcontentloaded' });
+    await page.locator('[data-mode="voice"]').click();
+    await page.locator('#voice-toggle').click();
+    assert.match(await page.locator('#voice-status').textContent(), /सुन्दैछ/);
+    await page.evaluate(() => window.__mockSpeechRecognition.onerror({ error: 'not-allowed' }));
+    assert.match(await page.locator('#voice-status').textContent(), /Microphone permission was denied/);
+    await page.evaluate(() => window.__mockSpeechRecognition.onend());
+    assert.match(await page.locator('#voice-status').textContent(), /Microphone permission was denied/);
+    await page.locator('#voice-toggle').click();
+    await page.evaluate(() => window.__mockSpeechRecognition.onresult({ results: [{ 0: { transcript: 'नमस्ते' }, isFinal: true }] }));
+    assert.match(await page.locator('#editor').inputValue(), /नमस्ते/);
+    const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('ln-nepali-typing-documents-v1') || '[]'));
+    assert.ok(saved.some(doc => doc.content.includes('नमस्ते')));
+    assert.equal(await page.locator('#voice-toggle').getAttribute('aria-pressed'), 'true');
+  } finally { await context.close(); }
+});
+
+test('typing, practice and Preeti pages expose SEO metadata and FAQ structured data', async () => {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  try {
+    for (const path of [
+      '/tools/nepali-tools/type-nepali/',
+      '/tools/nepali-tools/nepali-typing-practice/',
+      '/tools/nepali-tools/preeti-unicode-converter/'
+    ]) {
+      await page.goto('http://127.0.0.1:4173' + path, { waitUntil: 'domcontentloaded' });
+      assert.ok(await page.locator('link[rel="canonical"]').count());
+      assert.ok(await page.locator('meta[property="og:title"]').count());
+      const jsonld = await page.locator('script[type="application/ld+json"]').textContent();
+      assert.match(jsonld, /FAQPage/);
+      assert.match(jsonld, /SoftwareApplication/);
+    }
+  } finally { await context.close(); }
+});
