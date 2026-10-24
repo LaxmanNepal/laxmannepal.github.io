@@ -256,3 +256,28 @@ test('smart local lexicon ranks common suffix forms in the typing UI', async () 
     assert.ok(learned.netaharulai);
   } finally { await context.close(); }
 });
+
+
+test('Enter accepts the highlighted candidate after Tab selects it', async () => {
+  const { context, page } = await openPage();
+  try {
+    const editor = page.locator('#editor');
+    await editor.fill('namaste');
+    await editor.press('Tab');
+    const selected = page.locator('.suggestion[aria-selected="true"]');
+    await selected.waitFor({ state: 'visible' });
+    const expected = await selected.evaluate(el => el.childNodes[0].textContent);
+    await editor.press('Enter');
+    assert.equal(await editor.inputValue(), expected);
+  } finally { await context.close(); }
+});
+
+test('Shift+Enter inserts a newline instead of accepting a suggestion', async () => {
+  const { context, page } = await openPage();
+  try {
+    const editor = page.locator('#editor');
+    await editor.fill('namaste');
+    await editor.press('Shift+Enter');
+    assert.equal(await editor.inputValue(), 'namaste\n');
+  } finally { await context.close(); }
+});
