@@ -76,6 +76,20 @@ jobs:
           for file in /tmp/mobile-price-inline-*.js; do node --check "$file"; done
       - name: Test Nepali typing range regression
         run: node --test tests/nepali-typing-range.test.cjs
+      - name: Install browser-test dependency
+        run: npm install --prefix /tmp/typing-browser playwright
+      - name: Install Chromium for browser tests
+        run: /tmp/typing-browser/node_modules/.bin/playwright install --with-deps chromium
+      - name: Run Nepali typing browser regressions
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/nepali-typing-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --silent --fail http://127.0.0.1:4173/tools/nepali-tools/type-nepali/ > /dev/null; then break; fi
+            sleep 1
+          done
+          NODE_PATH=/tmp/typing-browser/node_modules node --test tests/nepali-typing-browser.test.cjs
       - name: Protect source homepage
         run: |
           test -f index.html
