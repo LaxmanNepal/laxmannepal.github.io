@@ -294,8 +294,8 @@ test('Word-compatible RTF export includes Unicode text and paragraph breaks', as
     const stream = await download.createReadStream();
     let content = '';
     for await (const chunk of stream) content += chunk.toString('utf8');
-    assert.match(content, /\\\\rtf1/);
-    assert.match(content, /\\\\u/);
-    assert.match(content, /\\\\par/);
+    assert.match(content, /\\rtf1/);
+    assert.match(content, /\\u/);
+    assert.match(content, /\\par/);
   } finally { await context.close(); }
 });
