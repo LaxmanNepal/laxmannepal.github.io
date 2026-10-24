@@ -12,6 +12,7 @@ from statistics import median
 OUT = Path("data/mobile-prices.json")
 DETAIL_ROOT = Path("mobile-price-in-nepal/phones")
 HISTORY_OUT = Path("data/mobile-price-history.json")
+STATUS_OUT = Path("data/mobile-price-refresh-status.json")
 APPLE_MIN_NPR = 50_000
 MAX_REASONABLE_NPR = 3_000_000
 
@@ -208,6 +209,21 @@ def main():
     refresh_metadata(data, phones)
     sync_today_history(phones)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if STATUS_OUT.exists():
+        try:
+            status_doc = json.loads(STATUS_OUT.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise SystemExit(f"Unable to update mobile refresh status: {exc}")
+        status_doc["model_variants"] = len(phones)
+        status_doc["fresh_offers"] = sum(
+            1 for phone in phones for offer in phone.get("prices", [])
+            if isinstance(offer, dict) and is_num(offer.get("price")) and not offer.get("stale")
+        )
+        status_doc["stale_offers"] = sum(
+            1 for phone in phones for offer in phone.get("prices", [])
+            if isinstance(offer, dict) and is_num(offer.get("price")) and offer.get("stale")
+        )
+        STATUS_OUT.write_text(json.dumps(status_doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     regenerate_detail_pages(phones)
     print(f"Price validation complete: {changed} corrected, {removed} suspicious offers removed.")
     print(f"Catalogue metadata: {data['variant_count']} variants, {data['price_count']} offers, {data['store_count']} stores.")
