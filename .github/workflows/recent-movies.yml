@@ -1,0 +1,90 @@
+name: Refresh recent movies catalogue
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 2 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: recent-movies-catalogue
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch movie listings from TMDB
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json, os, sys, time, urllib.parse, urllib.request
+          from datetime import date, datetime, timezone
+          key = os.environ.get("TMDB_API_KEY", "").strip()
+          if not key:
+              print("TMDB_API_KEY repository secret is missing. Add it in Settings > Secrets and variables > Actions.")
+              sys.exit(1)
+          today = date.today()
+          start, end = f"{today.year}-01-01", f"{today.year}-12-31"
+          base = "https://api.themoviedb.org/3"
+          seen = {}
+          def get(path, params):
+              params = dict(params)
+              params["api_key"] = key
+              url = base + path + "?" + urllib.parse.urlencode(params)
+              req = urllib.request.Request(url, headers={"Accept":"application/json","User-Agent":"LaxmanNepalRecentMovies/1.0"})
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  return json.load(response)
+          # Keep release categories broad; filters on the page use dates and language.
+          queries = [
+              ("/movie/upcoming", {"region":"NP","language":"en-US"}),
+              ("/movie/now_playing", {"region":"NP","language":"en-US"}),
+              ("/movie/popular", {"language":"en-US"}),
+              ("/discover/movie", {"with_original_language":"ne","sort_by":"primary_release_date.desc","primary_release_date.lte":end}),
+              ("/discover/movie", {"with_original_language":"hi","sort_by":"primary_release_date.desc","primary_release_date.lte":end}),
+              ("/discover/movie", {"with_original_language":"ta","sort_by":"primary_release_date.desc","primary_release_date.lte":end}),
+              ("/discover/movie", {"with_original_language":"te","sort_by":"primary_release_date.desc","primary_release_date.lte":end}),
+              ("/discover/movie", {"with_original_language":"ml","sort_by":"primary_release_date.desc","primary_release_date.lte":end}),
+              ("/discover/movie", {"with_original_language":"kn","sort_by":"primary_release_date.desc","primary_release_date.lte":end}),
+              ("/discover/movie", {"with_original_language":"en","sort_by":"primary_release_date.desc","primary_release_date.gte":start,"primary_release_date.lte":end}),
+              ("/discover/movie", {"sort_by":"primary_release_date.desc","primary_release_date.gte":start,"primary_release_date.lte":end}),
+          ]
+          for path, params in queries:
+              for page in range(1, 4):
+                  try:
+                      data = get(path, {**params, "page":page})
+                  except Exception as exc:
+                      print(f"Warning: {path} page {page} failed: {exc}")
+                      break
+                  for item in data.get("results", []):
+                      if not item.get("id"): continue
+                      old = seen.get(item["id"], {})
+                      merged = {**old, **item}
+                      merged["popular"] = bool(old.get("popular") or path == "/movie/popular")
+                      merged["in_theatres"] = bool(old.get("in_theatres") or path == "/movie/now_playing")
+                      seen[item["id"]] = merged
+                  if page >= data.get("total_pages", 1) or page >= 3: break
+                  time.sleep(0.12)
+          results = sorted(seen.values(), key=lambda m: (m.get("release_date") or "", m.get("popularity") or 0), reverse=True)
+          os.makedirs("data", exist_ok=True)
+          out = {"source":"TMDB","updated_at":datetime.now(timezone.utc).isoformat(),"results":results}
+          with open("data/recent-movies.json","w",encoding="utf-8") as f:
+              json.dump(out,f,ensure_ascii=False,separators=(",",":"))
+          print(f"Wrote {len(results)} unique movie records.")
+          PY
+      - name: Commit refreshed catalogue
+        run: |
+          if git diff --quiet -- data/recent-movies.json; then
+            echo "Movie catalogue has no changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/recent-movies.json
+          git commit -m "chore: refresh recent movies catalogue"
+          git push
