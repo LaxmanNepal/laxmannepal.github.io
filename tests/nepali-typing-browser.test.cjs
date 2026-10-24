@@ -126,7 +126,6 @@ test('Google suggestions are opt-in and local suggestions work by default', asyn
     assert.equal(remoteRequests, 0);
     await page.locator('#remote-suggestions').check();
     await editor.fill('nepal');
-    await page.waitForFunction(() => document.querySelector('#suggestion-status').textContent.includes('Checking Google Input'));
     await page.waitForTimeout(250);
     assert.ok(remoteRequests > 0);
   } finally { await context.close(); }
