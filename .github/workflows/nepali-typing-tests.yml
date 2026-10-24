@@ -10,7 +10,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'tools/nepali-tools/type-nepali/**'
+      - 'tools/nepali-tools/**'
       - 'tests/nepali-typing-*.test.cjs'
       - '.github/workflows/nepali-typing-tests.yml'
       - '.github/workflows/deploy.yml'
