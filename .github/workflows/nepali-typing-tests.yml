@@ -35,6 +35,8 @@ jobs:
           node-version: 22
       - name: Run range regression tests
         run: node --test tests/nepali-typing-range.test.cjs
+      - name: Run Romanized engine unit tests
+        run: node --test tests/nepali-romanized.test.cjs
       - name: Install browser-test dependency
         run: npm install --prefix /tmp/typing-browser playwright
       - name: Install Chromium
