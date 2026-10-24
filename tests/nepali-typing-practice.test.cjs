@@ -4,17 +4,17 @@ const { graphemes, calculateMetrics } = require('../tools/nepali-tools/nepali-ty
 
 test('counts Devanagari grapheme clusters rather than raw UTF-16 units', () => {
   assert.equal(graphemes('कि').length, 1);
-  assert.equal(graphemes('नेपाली').length, 6);
+  assert.equal(graphemes('नेपाली').length, 3);
 });
 
 test('calculates correct characters, errors, remaining, and accuracy', () => {
   const result = calculateMetrics('नेपाल', 'नेपल', 60000);
-  assert.equal(result.targetCharacters, 5);
-  assert.equal(result.typedCharacters, 4);
-  assert.equal(result.correctCharacters, 3);
+  assert.equal(result.targetCharacters, 3);
+  assert.equal(result.typedCharacters, 3);
+  assert.equal(result.correctCharacters, 2);
   assert.equal(result.errors, 1);
-  assert.equal(result.remaining, 1);
-  assert.equal(result.accuracy, 75);
+  assert.equal(result.remaining, 0);
+  assert.equal(result.accuracy, 66.7);
 });
 
 test('uses the standard five-characters-per-word WPM formula', () => {
