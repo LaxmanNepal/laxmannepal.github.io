@@ -1,0 +1,61 @@
+name: Repair mobile catalogue metadata
+
+on:
+  workflow_run:
+    workflows: ["Build and Deploy to GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+  schedule:
+    - cron: "45 2 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mobile-catalogue-repair
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Repair derived catalogue metadata
+        run: python3 scripts/repair-mobile-catalogue.py
+
+      - name: Validate repaired catalogue
+        run: |
+          python3 -m py_compile scripts/repair-mobile-catalogue.py
+          python3 -m json.tool data/mobile-prices.json > /dev/null
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("data/mobile-prices.json").read_text(encoding="utf-8"))
+          phones = data.get("phones", [])
+          assert phones, "Mobile catalogue is empty"
+          offers = [o for p in phones for o in p.get("prices", []) if isinstance(o, dict) and isinstance(o.get("price"), (int, float)) and o.get("price") > 0]
+          stores = {str(o.get("store", "")).strip() for o in offers if o.get("store")}
+          assert data.get("variant_count") == len(phones)
+          assert data.get("price_count") == len(offers)
+          assert data.get("store_count") == len(stores)
+          assert all(p.get("price_count") == len([o for o in p.get("prices", []) if isinstance(o, dict) and isinstance(o.get("price"), (int, float)) and o.get("price") > 0]) for p in phones)
+          print(f"Verified {len(phones)} variants, {len(offers)} offers, {len(stores)} stores.")
+          PY
+
+      - name: Commit repaired metadata
+        run: |
+          if git diff --quiet -- data/mobile-prices.json; then
+            echo "Catalogue metadata already consistent."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mobile-prices.json
+          git commit -m "chore: repair mobile catalogue metadata"
+          git push origin main
