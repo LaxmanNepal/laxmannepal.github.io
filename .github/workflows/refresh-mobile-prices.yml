@@ -52,19 +52,25 @@ jobs:
           PY
       - name: Refresh phone listings
         run: python scripts/refresh-mobile-prices.py
-      - name: Commit refreshed catalogue when changed
+      - name: Publish refreshed catalogue without rebase conflicts
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data/mobile-prices.json data/mobile-price-history.json mobile-price-in-nepal/phones mobile-price-in-nepal/brands mobile-price-in-nepal/budgets
-          if git diff --cached --quiet; then
-            echo "Catalogue unchanged; no commit needed."
-          else
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --mixed origin/main
+            git add -A data/mobile-prices.json data/mobile-price-history.json mobile-price-in-nepal/phones mobile-price-in-nepal/brands mobile-price-in-nepal/budgets
+            if git diff --cached --quiet; then
+              echo "Catalogue unchanged; no commit needed."
+              exit 0
+            fi
             git commit -m "chore: refresh Nepal mobile price catalogue"
-            for attempt in 1 2 3; do
-              git pull --rebase origin main && git push && exit 0
-              sleep $((attempt * 3))
-            done
-            echo "Unable to publish refreshed catalogue after three attempts."
-            exit 1
-          fi
+            if git push origin HEAD:main; then
+              echo "Published refreshed phone prices and generated pages."
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying against the latest main branch."
+            sleep $((attempt * 3))
+          done
+          echo "Unable to publish refreshed catalogue after three attempts."
+          exit 1
