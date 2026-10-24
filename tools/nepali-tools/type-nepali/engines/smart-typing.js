@@ -246,7 +246,7 @@ function createTyper(options = {}) {
     return [...scored.entries()].sort((a, b) => a[1] - b[1]).slice(0, limit).map(([w]) => w);
   };
 
-  const convert = (text, o = {}) {
+  const convert = (text, o = {}) => {
     const keep = new Set((o.keep ?? []).map((k) => k.toLowerCase()));
     let out = text.replace(/[A-Za-z]+(?:'[A-Za-z]+)?/g, (w) => (keep.has(w.toLowerCase()) || (w.length > 1 && w === w.toUpperCase()) ? w : suggest(w, { limit: 1, complete: false })[0] ?? w));
     if (o.digits !== false) out = out.replace(/[0-9]/g, (d) => "०१२३४५६७८९"[+d]);
