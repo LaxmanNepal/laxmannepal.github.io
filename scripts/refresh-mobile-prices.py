@@ -98,7 +98,7 @@ def jsonld_objects(soup):
         except Exception: pass
     return out
 def product_meta(soup, fallback_name):
-    title=fallback_name; image=None; price=None; desc=None; specs={}
+    title=fallback_name; image=None; price=None; desc=None; availability=None; specs={}
     for obj in jsonld_objects(soup):
         typ=obj.get("@type",[])
         if isinstance(typ,str): typ=[typ]
@@ -112,6 +112,7 @@ def product_meta(soup, fallback_name):
         offers=obj.get("offers",{})
         if isinstance(offers,list): offers=offers[0] if offers else {}
         if isinstance(offers,dict):
+            availability=clean(offers.get("availability")) or None
             try: price=int(float(offers.get("price") or offers.get("lowPrice") or 0)) or None
             except Exception: pass
         break
@@ -134,7 +135,7 @@ def product_meta(soup, fallback_name):
             k=bits[0].lower().rstrip(":")
             v=bits[-1]
             if k and v and len(v)<120: specs[k]=v
-    return {"title":title,"image":image,"price":price,"description":desc,"specs":specs,"text":text}
+    return {"title":title,"image":image,"price":price,"availability":availability,"description":desc,"specs":specs,"text":text}
 def parse_listing(source):
     if source.get("kind")=="shopify":
         api=source["url"].rstrip("/")+"/products.json?limit=250"
@@ -375,7 +376,7 @@ def main():
             meta=product_meta(soup,item["title"])
             detail.update({k:v for k,v in meta.items() if v not in (None,"",{})})
         except Exception as exc: print(f'Skip detail {item["url"]}: {exc}')
-        price=(item.get("price") or detail.get("price")) if item.get("kind")=="shopify" else (detail.get("price") or item.get("price"))
+        unavailable=bool(re.search(r"outofstock|discontinued|soldout",clean(detail.get("availability")).lower()))\n        price=None if unavailable else ((item.get("price") or detail.get("price")) if item.get("kind")=="shopify" else (detail.get("price") or item.get("price")))
         # Do not publish non-phone categories or pages without a plausible product name.
         title=clean(item["title"] if item.get("kind")=="shopify" else (detail.get("title") or item["title"]))
         if not is_phone_title(title): continue
