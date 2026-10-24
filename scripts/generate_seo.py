@@ -20,6 +20,7 @@ INDEXABLE_STATIC_PATHS = [
     "/gold-price-in-nepal-today/",
     "/gold-price-history-nepal/",
     "/silver-price-in-nepal-today/",
+    "/mobile-price-in-nepal/",
 ]
 
 def load_posts():
@@ -43,6 +44,19 @@ def main():
                 continue
             blog_urls.append("/" + p.relative_to(ROOT).parent.as_posix() + "/")
 
+    mobile_price_urls = []
+    for mobile_root in [ROOT / "mobile-price-in-nepal" / "phones", ROOT / "mobile-price-in-nepal" / "brands", ROOT / "mobile-price-in-nepal" / "budgets"]:
+        if not mobile_root.exists():
+            continue
+        for p in sorted(mobile_root.glob("*/index.html")):
+            try:
+                html = p.read_text(encoding="utf-8", errors="ignore")
+            except OSError:
+                continue
+            if 'name="robots" content="noindex' in html.lower():
+                continue
+            mobile_price_urls.append("/" + p.relative_to(ROOT).parent.as_posix() + "/")
+
     tech_root = ROOT / "tech-news"
     tech_urls = []
     if tech_root.exists():
@@ -50,7 +64,7 @@ def main():
             tech_urls.append("/" + p.relative_to(ROOT).parent.as_posix() + "/")
 
     urls = []
-    for path in INDEXABLE_STATIC_PATHS + blog_urls + tech_urls + [p["path"] for p in posts]:
+    for path in INDEXABLE_STATIC_PATHS + mobile_price_urls + blog_urls + tech_urls + [p["path"] for p in posts]:
         if path.startswith("/old/") or path.startswith("/scripts/") or path.startswith("/search/"):
             continue
         if path not in urls:
