@@ -63,3 +63,23 @@ test('typing workspace fits a narrow mobile viewport without horizontal overflow
     assert.ok(await page.locator('#editor').isVisible());
   } finally { await context.close(); }
 });
+
+test('cached typing page reloads and converts locally while offline', async () => {
+  const { context, page } = await openPage();
+  try {
+    await page.evaluate(async () => { await navigator.serviceWorker.ready; });
+    await page.reload({ waitUntil: 'domcontentloaded' });
+    await page.evaluate(async () => { await navigator.serviceWorker.ready; });
+    await context.setOffline(true);
+    await page.reload({ waitUntil: 'domcontentloaded' });
+    const editor = page.locator('#editor');
+    await editor.fill('namaste');
+    await editor.press('Space');
+    await page.waitForFunction(() => document.querySelector('#editor').value === 'नमस्ते ');
+    assert.equal(await editor.inputValue(), 'नमस्ते ');
+    assert.match(await page.locator('#network-status').textContent(), /Offline/);
+  } finally {
+    await context.setOffline(false);
+    await context.close();
+  }
+});

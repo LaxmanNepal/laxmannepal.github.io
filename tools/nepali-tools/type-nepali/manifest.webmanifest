@@ -1,0 +1,22 @@
+{
+  "id": "./",
+  "name": "Laxman Nepal Nepali Typing",
+  "short_name": "Nepali Typing",
+  "description": "Offline-first Nepali Unicode typing with local Romanized conversion.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f8fafc",
+  "theme_color": "#f8fafc",
+  "lang": "ne",
+  "categories": ["productivity", "education", "utilities"],
+  "icons": [
+    {
+      "src": "/assets/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
