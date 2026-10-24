@@ -50,6 +50,10 @@ jobs:
           assert mod.normalize_model('Apple iPhone 15 6.1" A16 Bionic 48MP Dual Rear Camera Black 128GB') == "Apple iPhone 15"
           print("Scraper syntax and conservative parser checks passed.")
           PY
+      - name: Clear prior run status before this refresh attempt
+        run: rm -f data/mobile-price-refresh-status.json
+      - name: Test source-health merge safeguards
+        run: python -m unittest discover -s tests -p "test_mobile_price_refresh.py"
       - name: Refresh phone listings
         run: python scripts/refresh-mobile-prices.py
       - name: Validate and repair suspicious prices
