@@ -63,3 +63,31 @@ test('typing workspace fits a narrow mobile viewport without horizontal overflow
     assert.ok(await page.locator('#editor').isVisible());
   } finally { await context.close(); }
 });
+
+test('practice page updates accuracy locally and stops on exact completion', async () => {
+  const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const page = await context.newPage();
+  try {
+    await page.goto('http://127.0.0.1:4173/tools/nepali-tools/nepali-typing-practice/', { waitUntil: 'domcontentloaded' });
+    const target = page.locator('#target-text');
+    const input = page.locator('#practice-input');
+    await target.fill('नेपाल');
+    await input.fill('नेप');
+    assert.equal(await page.locator('#accuracy').textContent(), '100%');
+    await page.locator('#start').click();
+    await input.fill('नेपाल');
+    await page.waitForFunction(() => document.querySelector('#practice-status').textContent.includes('completed'));
+    assert.equal(await page.locator('#correct').textContent(), '3');
+    assert.equal(await page.locator('#start').isDisabled(), true);
+  } finally { await context.close(); }
+});
+
+test('practice page fits a narrow mobile viewport', async () => {
+  const context = await browser.newContext({ viewport: { width: 375, height: 812 } });
+  const page = await context.newPage();
+  try {
+    await page.goto('http://127.0.0.1:4173/tools/nepali-tools/nepali-typing-practice/', { waitUntil: 'domcontentloaded' });
+    const dimensions = await page.evaluate(() => ({ viewport: document.documentElement.clientWidth, page: document.documentElement.scrollWidth }));
+    assert.ok(dimensions.page <= dimensions.viewport + 1, `horizontal overflow: ${JSON.stringify(dimensions)}`);
+  } finally { await context.close(); }
+});
