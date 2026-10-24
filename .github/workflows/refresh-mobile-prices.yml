@@ -29,6 +29,19 @@ jobs:
           python-version: "3.12"
       - name: Install scraper dependencies
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+      - name: Validate scraper and price parser
+        run: |
+          python -m py_compile scripts/refresh-mobile-prices.py
+          python - <<'PY'
+          import importlib.util
+          spec = importlib.util.spec_from_file_location("mobile_prices", "scripts/refresh-mobile-prices.py")
+          mod = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(mod)
+          assert mod.money("Rs. 45,999") == 45999
+          assert mod.money("Rs. 45,999 MRP Rs. 49,999") is None
+          assert mod.variant_key("Samsung Galaxy A55 8GB/256GB") == "8GB/256GB"
+          print("Scraper syntax and conservative parser checks passed.")
+          PY
       - name: Refresh phone listings
         run: python scripts/refresh-mobile-prices.py
       - name: Commit refreshed catalogue when changed
