@@ -1,0 +1,56 @@
+name: Inject mobile Daraz shopping buttons
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'mobile-price-in-nepal/index.html'
+      - 'assets/js/mobile-daraz-buy.js'
+      - '.github/workflows/inject-mobile-daraz-buttons.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  inject:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Inject script into mobile price page
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('mobile-price-in-nepal/index.html')
+          s = p.read_text(encoding='utf-8')
+          tag = '<script src="/assets/js/daraz-affiliate.js"></script><script src="/assets/js/mobile-daraz-buy.js"></script>'
+          if '/assets/js/mobile-daraz-buy.js' not in s:
+              marker = '</body>'
+              if marker not in s:
+                  raise SystemExit('Could not find </body> in mobile price page')
+              s = s.replace(marker, tag + marker, 1)
+              p.write_text(s, encoding='utf-8')
+              print('Injected Daraz shopping scripts.')
+          else:
+              print('Daraz shopping script already present.')
+          PY
+
+      - name: Validate JavaScript
+        run: |
+          node --check assets/js/mobile-daraz-buy.js
+
+      - name: Commit injected page
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add mobile-price-in-nepal/index.html
+          if git diff --cached --quiet; then
+            echo 'No page change required.'
+            exit 0
+          fi
+          git commit -m 'chore: enable Daraz shopping buttons [skip ci]'
+          git push origin main
