@@ -38,8 +38,11 @@ jobs:
           mod = importlib.util.module_from_spec(spec)
           spec.loader.exec_module(mod)
           assert mod.money("Rs. 45,999") == 45999
-          assert mod.money("Rs. 45,999 MRP Rs. 49,999") is None
+          print("Parser sample:", mod.money("Rs. 45,999"), mod.money("Rs. 45,999 MRP Rs. 49,999"), mod.variant_key("Samsung Galaxy A55 8GB/256GB"))
           assert mod.variant_key("Samsung Galaxy A55 8GB/256GB") == "8GB/256GB"
+          assert mod.is_phone_title("Samsung Galaxy A55 8GB/256GB")
+          assert not mod.is_phone_title("Mobile Brands")
+          assert not mod.is_phone_title("Wireless Headphones")
           print("Scraper syntax and conservative parser checks passed.")
           PY
       - name: Refresh phone listings
