@@ -175,7 +175,7 @@ def parse_listing(source):
         if len(nodes)>=3: break
     for node in nodes:
         text=clean(node.get_text(" ",strip=True))
-        if len(text)<8 or re.search(r"\\b(out of stock|sold out|unavailable)\\b",text,re.I): continue
+        if len(text)<8 or re.search(r"\b(out of stock|sold out|unavailable)\b",text,re.I): continue
         price=current_price(node)
         anchors=node.select('a[href]')
         if not anchors: continue
