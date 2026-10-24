@@ -1,0 +1,38 @@
+name: One-time mobile price responsive fix
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-mobile-price-responsive.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch responsive image container
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('mobile-price-in-nepal/index.html')
+          s = p.read_text(encoding='utf-8')
+          old = '.photo{height:180px;padding:14px;display:grid;place-items:center;background:linear-gradient(145deg,#f8fafc,#eef2f7);border-bottom:1px solid #eef0f3}.photo img{width:100%;height:100%;object-fit:contain}'
+          new = '.photo{height:180px;min-width:0;padding:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(145deg,#f8fafc,#eef2f7);border-bottom:1px solid #eef0f3}.photo img{display:block;width:auto;max-width:100%;height:auto;max-height:100%;object-fit:contain;object-position:center;margin:auto}'
+          if old not in s:
+              raise SystemExit('Expected mobile price image CSS was not found; no change made.')
+          s = s.replace(old, new, 1)
+          s = s.replace('.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.photo{height:140px;padding:9px}', '.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.photo{height:clamp(120px,32vw,155px);padding:7px}')
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Remove temporary fixer and commit
+        run: |
+          rm -f .github/workflows/fix-mobile-price-responsive.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add mobile-price-in-nepal/index.html .github/workflows/fix-mobile-price-responsive.yml
+          git diff --cached --quiet && exit 0
+          git commit -m 'fix: make mobile price image container responsive'
+          git push
