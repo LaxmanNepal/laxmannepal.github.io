@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T21:30:12.409320+00:00",
+  "updated_at": "2026-10-24T22:35:20.152807+00:00",
   "status": "Daily retailer refresh; only unambiguous recorded prices are shown",
   "phones": [
     {
@@ -1546,12 +1546,7 @@
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-15",
       "price_count": 1,
-      "history": [
-        {
-          "date": "2026-10-24",
-          "price": 12749
-        }
-      ]
+      "history": []
     },
     {
       "slug": "iphone-16",
@@ -1597,12 +1592,7 @@
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17",
       "price_count": 1,
-      "history": [
-        {
-          "date": "2026-10-24",
-          "price": 17349
-        }
-      ]
+      "history": []
     },
     {
       "slug": "iphone-17-pro",
@@ -1625,12 +1615,7 @@
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17-pro",
       "price_count": 1,
-      "history": [
-        {
-          "date": "2026-10-24",
-          "price": 22129
-        }
-      ]
+      "history": []
     },
     {
       "slug": "iphone-17-pro-max",
@@ -1676,12 +1661,7 @@
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17e",
       "price_count": 1,
-      "history": [
-        {
-          "date": "2026-10-24",
-          "price": 13249
-        }
-      ]
+      "history": []
     },
     {
       "slug": "iphone-18-pro",
@@ -1704,12 +1684,7 @@
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-18-pro",
       "price_count": 1,
-      "history": [
-        {
-          "date": "2026-10-24",
-          "price": 25990
-        }
-      ]
+      "history": []
     },
     {
       "slug": "iphone-18-pro-max",
@@ -1732,12 +1707,7 @@
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-18-pro-max",
       "price_count": 1,
-      "history": [
-        {
-          "date": "2026-10-24",
-          "price": 27990
-        }
-      ]
+      "history": []
     },
     {
       "slug": "iphone-air",
