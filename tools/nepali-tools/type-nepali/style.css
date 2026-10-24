@@ -50,3 +50,6 @@ body{background:var(--type-bg);color:var(--type-ink)}
  .action-row>*{max-width:100%}
  #toast{flex-basis:100%;margin-left:0}
 }
+
+/* Draft status and expanded live counts */
+.save-status{color:#667085;font-size:12px;white-space:normal}.editor-footer{flex-wrap:wrap}.editor-footer #counts{font-variant-numeric:tabular-nums}@media(max-width:620px){.save-status{width:100%}}
