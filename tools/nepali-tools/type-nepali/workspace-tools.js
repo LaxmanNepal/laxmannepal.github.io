@@ -144,5 +144,6 @@
     }
   }
   renderDocuments();
+  if (currentDocument() && editor.value !== currentDocument().content) syncEditor(currentDocument().content);
   setStatus('Saved locally · ' + documents.length + ' document' + (documents.length === 1 ? '' : 's'));
 })();
