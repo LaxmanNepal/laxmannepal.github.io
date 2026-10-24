@@ -150,7 +150,8 @@ def parse_listing(source):
         # Choose the longest plausible product title link, avoiding category/navigation links.
         choices=[]
         for a in anchors:
-            img_tag=a.select_one("img")\n            title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True) or (img_tag.get("alt") if img_tag else ""))
+            img_tag=a.select_one("img")
+            title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True) or (img_tag.get("alt") if img_tag else ""))
             href=urljoin(source["url"],a.get("href",""))
             path=urlparse(href).path.lower()
             if len(title)<5 or href==source["url"] or any(x in path for x in ["/cart","/account","/category/","/collections/","/product-category/","/tag/"]): continue
@@ -169,7 +170,8 @@ def parse_listing(source):
     # Product cards are often rendered differently; fall back to visible links then inspect pages.
     if not found:
         for a in soup.select('a[href]'):
-            img_tag=a.select_one("img")\n            title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True) or (img_tag.get("alt") if img_tag else ""))
+            img_tag=a.select_one("img")
+            title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True) or (img_tag.get("alt") if img_tag else ""))
             href=urljoin(source["url"],a.get("href",""))
             if len(title)<7 or not is_phone_title(title): continue
             if urlparse(href).netloc!=urlparse(source["url"]).netloc: continue
