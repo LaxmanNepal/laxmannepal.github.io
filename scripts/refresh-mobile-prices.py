@@ -189,6 +189,7 @@ def parse_listing(source):
             img_tag=a.select_one("img")
             title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True) or (img_tag.get("alt") if img_tag else ""))
             href=urljoin(source["url"],a.get("href",""))
+            if "error.html" in href.lower() or "/error/" in href.lower(): continue
             path=urlparse(href).path.lower()
             if len(title)<5 or href==source["url"] or any(x in path for x in ["/cart","/account","/category/","/collections/","/product-category/","/tag/"]): continue
             if not is_phone_title(title): continue
@@ -209,6 +210,7 @@ def parse_listing(source):
             img_tag=a.select_one("img")
             title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True) or (img_tag.get("alt") if img_tag else ""))
             href=urljoin(source["url"],a.get("href",""))
+            if "error.html" in href.lower() or "/error/" in href.lower(): continue
             parent_text=clean(a.parent.get_text(" ",strip=True) if a.parent else "")
             if re.search(r"\b(out of stock|sold out|unavailable)\b",parent_text,re.I): continue
             if len(title)<7 or not is_phone_title(title): continue
