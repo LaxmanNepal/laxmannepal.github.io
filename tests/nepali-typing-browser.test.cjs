@@ -220,7 +220,6 @@ test('voice errors are actionable and final speech saves into the local document
     assert.match(await page.locator('#editor').inputValue(), /नमस्ते/);
     const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('ln-nepali-typing-documents-v1') || '[]'));
     assert.ok(saved.some(doc => doc.content.includes('नमस्ते')));
-    assert.ok(JSON.parse(localStorage.getItem('ln-nepali-typing-learned-v1') || '{}').netaharulai);
     assert.equal(await page.locator('#voice-toggle').getAttribute('aria-pressed'), 'true');
   } finally { await context.close(); }
 });
@@ -253,5 +252,7 @@ test('smart local lexicon ranks common suffix forms in the typing UI', async () 
     assert.match(await page.locator('.suggestion').first().textContent(), /नेताहरूलाई/);
     await page.locator('.suggestion').first().click();
     assert.equal(await editor.inputValue(), 'नेताहरूलाई');
+    const learned = await page.evaluate(() => JSON.parse(localStorage.getItem('ln-nepali-typing-learned-v1') || '{}'));
+    assert.ok(learned.netaharulai);
   } finally { await context.close(); }
 });
