@@ -9,6 +9,8 @@ on:
     workflows: ["Build and validate native blogs", "Sync Analytics Data"]
     types: [completed]
   workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
 
 permissions:
   contents: read
@@ -29,6 +31,49 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Validate mobile price data, Python and JavaScript
+        run: |
+          python3 -m py_compile scripts/refresh-mobile-prices.py scripts/generate_seo.py
+          python3 -m json.tool data/mobile-prices.json > /dev/null
+          python3 -m json.tool data/mobile-price-history.json > /dev/null
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          from html.parser import HTMLParser
+          data = json.loads(Path("data/mobile-prices.json").read_text(encoding="utf-8"))
+          phones = data.get("phones", [])
+          assert phones, "Mobile price catalogue must not be empty"
+          assert len({p.get("slug") for p in phones}) == len(phones), "Phone slugs must be unique"
+          assert data.get("price_count") == sum(len(p.get("prices", [])) for p in phones), "Offer count mismatch"
+          assert data.get("store_count") == len({o.get("store") for p in phones for o in p.get("prices", [])}), "Store count mismatch"
+          class ScriptParser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.scripts = []
+                  self.current = None
+                  self.keep = False
+              def handle_starttag(self, tag, attrs):
+                  if tag.lower() == "script":
+                      attrs = dict(attrs)
+                      self.current = []
+                      self.keep = "src" not in attrs and attrs.get("type", "").lower() != "application/ld+json"
+              def handle_data(self, data):
+                  if self.current is not None and self.keep:
+                      self.current.append(data)
+              def handle_endtag(self, tag):
+                  if tag.lower() == "script" and self.current is not None:
+                      if self.keep:
+                          self.scripts.append("".join(self.current))
+                      self.current = None
+                      self.keep = False
+          parser = ScriptParser()
+          parser.feed(Path("mobile-price-in-nepal/index.html").read_text(encoding="utf-8"))
+          assert parser.scripts, "Mobile price page inline JavaScript was not found"
+          for i, script in enumerate(parser.scripts):
+              Path(f"/tmp/mobile-price-inline-{i}.js").write_text(script, encoding="utf-8")
+          print(f"Validated {len(phones)} phone variants, {data['price_count']} offers, {data['store_count']} stores.")
+          PY
+          for file in /tmp/mobile-price-inline-*.js; do node --check "$file"; done
       - name: Test Nepali typing range regression
         run: node --test tests/nepali-typing-range.test.cjs
       - name: Protect source homepage
