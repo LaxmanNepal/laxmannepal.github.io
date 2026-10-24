@@ -43,6 +43,9 @@ jobs:
           assert mod.is_phone_title("Samsung Galaxy A55 8GB/256GB")
           assert not mod.is_phone_title("Mobile Brands")
           assert not mod.is_phone_title("Wireless Headphones")
+          assert mod.is_phone_title("Nothing Phone 4a")
+          assert mod.variant_key("Apple iPhone 15 128GB") == "128GB"
+          assert mod.normalize_model('Apple iPhone 15 6.1" A16 Bionic 48MP Dual Rear Camera Black 128GB') == "Apple iPhone 15"
           print("Scraper syntax and conservative parser checks passed.")
           PY
       - name: Refresh phone listings
