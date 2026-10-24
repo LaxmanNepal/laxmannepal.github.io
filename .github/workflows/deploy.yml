@@ -133,14 +133,12 @@ jobs:
           rm -rf .pages
           mkdir -p .pages
           find . -maxdepth 1 -type f -not -name '.blogger-migration.json' -not -name 'CNAME' -not -name '404.html' -print0 | xargs -0 -r -I{} cp --parents "{}" .pages/
-          for dir in assets image-prompt 2022 2023 2024 2025 2026 Open-Source about apps ai ai-tools blog blogs compare contact footprint guides laptops me mobile mobile-price-in-nepal mobile-prices-in-nepal news privacy tech-news phones products reviews search terms tools pdf-tools image-tools data-tools laxman-tools nepal-tools youtube youtube-tools nepal-jobs subdomain-finder gold-rates-nepal gold-price-in-nepal-today kalimati-format gold-price-history-nepal silver-price-in-nepal-today vacation jobs en ne hi Drumkit analytics data qrcodetool remove-gemini-watermark; do
+          for dir in assets image-prompt 2022 2023 2024 2025 2026 Open-Source about apps ai ai-tools blog blogs compare contact footprint guides laptops laptop-price-in-nepal me mobile mobile-price-in-nepal mobile-prices-in-nepal news privacy tech-news phones products reviews search terms tools pdf-tools image-tools data-tools laxman-tools nepal-tools youtube youtube-tools nepal-jobs subdomain-finder gold-rates-nepal gold-price-in-nepal-today kalimati-format gold-price-history-nepal silver-price-in-nepal-today vacation jobs en hi Drumkit analytics data qrcodetool remove-gemini-watermark; do
             if [ -d "$dir" ]; then cp -R "$dir" .pages/; fi
           done
           if [ -f nextjs-foundation/out/index.html ]; then
             cp -R nextjs-foundation/out/. .pages/
           fi
-          # Preserve the hand-authored Nepali typing tool after the Next.js export.
-          # The export can contain overlapping paths and must not replace this standalone tool.
           if [ -d tools/nepali-tools/type-nepali ]; then
             mkdir -p .pages/tools/nepali-tools
             cp -R tools/nepali-tools/type-nepali .pages/tools/nepali-tools/
@@ -240,6 +238,16 @@ jobs:
           test -f .pages/ai/index.html
           test -f .pages/youtube/index.html
           test -f .pages/search/index.html
+      - name: Verify laptop price marketplace artifact
+        run: |
+          test -f .pages/laptop-price-in-nepal/index.html
+          test -f .pages/laptop-price-in-nepal/assets/app.js
+          test -f .pages/laptop-price-in-nepal/assets/style.css
+          test -f .pages/laptop-price-in-nepal/data/laptops.json
+          test -f .pages/laptop-price-in-nepal/laptops/index.html
+          test -f .pages/laptop-price-in-nepal/stores/index.html
+          test -f .pages/laptop-price-in-nepal/brands/index.html
+          test -f .pages/laptop-price-in-nepal/compare/index.html
       - name: Verify Nepali typing tool artifact
         run: |
           test -s .pages/tools/nepali-tools/type-nepali/index.html
