@@ -1,0 +1,51 @@
+name: Install Mobile Price Experience
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/js/mobile-price-experience.js'
+      - 'mobile-price-in-nepal/index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mobile-price-experience
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Validate enhancement JavaScript
+        run: node --check assets/js/mobile-price-experience.js
+      - name: Install enhancement script in source page
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('mobile-price-in-nepal/index.html')
+          s=p.read_text(encoding='utf-8')
+          marker='<!-- LAXMANNEPAL-MOBILE-PRICE-EXPERIENCE -->'
+          tag=f'{marker}\n<script src="/assets/js/mobile-price-experience.js" defer></script>'
+          if marker not in s:
+              s=s.replace('</body>', tag+'\n</body>', 1)
+              p.write_text(s, encoding='utf-8')
+              print('Installed mobile price experience.')
+          else:
+              print('Mobile price experience already installed.')
+          PY
+      - name: Commit installation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "No source change needed."
+          else
+            git add mobile-price-in-nepal/index.html assets/js/mobile-price-experience.js
+            git commit -m "feat: enable mobile price decision experience"
+            git push
+          fi
