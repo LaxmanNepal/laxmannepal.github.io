@@ -3,6 +3,7 @@
 from __future__ import annotations
 import json
 import math
+import re
 from pathlib import Path
 DATA = Path("data/mobile-prices.json")
 DETAILS = Path("mobile-price-in-nepal/phones")
@@ -44,6 +45,30 @@ def audit(data, root=Path(".")):
             raise ValueError(f"Generated phone page missing title/canonical: {path}")
     if missing:
         raise ValueError("Missing generated phone pages: " + ", ".join(missing[:20]))
+
+    listing = root / "mobile-price-in-nepal" / "index.html"
+    if not listing.is_file():
+        raise ValueError("Mobile price listing page is missing")
+    html = listing.read_text(encoding="utf-8", errors="ignore")
+    for required in (
+        'rel="canonical" href="https://laxmannepal.com.np/mobile-price-in-nepal/"',
+        'property="og:url"',
+        'name="twitter:title"',
+        'name="twitter:description"',
+        'lang="ne"',
+        'id="mobile-price-nepali-guide"',
+    ):
+        if required not in html:
+            raise ValueError(f"Mobile price SEO/content marker missing: {required}")
+    schemas = []
+    for raw in re.findall(r'<script[^>]+type=["\\']application/ld\\+json["\\'][^>]*>(.*?)</script>', html, re.I | re.S):
+        try:
+            schemas.append(json.loads(raw))
+        except json.JSONDecodeError as exc:
+            raise ValueError("Invalid JSON-LD in mobile price listing") from exc
+    schema_types = {schema.get("@type") for schema in schemas if isinstance(schema, dict)}
+    if not {"WebPage", "FAQPage"}.issubset(schema_types):
+        raise ValueError("Mobile price listing needs WebPage and FAQPage JSON-LD")
     return len(phones), len(offers), len(stores)
 def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
