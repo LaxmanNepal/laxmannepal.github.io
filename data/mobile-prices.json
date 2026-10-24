@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T06:44:29.840068+00:00",
+  "updated_at": "2026-10-24T21:29:05.090296+00:00",
   "status": "Daily retailer refresh; only unambiguous recorded prices are shown",
   "phones": [
     {
@@ -11415,5 +11415,6 @@
     }
   ],
   "store_count": 4,
-  "price_count": 241
+  "price_count": 235,
+  "variant_count": 282
 }
