@@ -76,6 +76,8 @@ jobs:
           for file in /tmp/mobile-price-inline-*.js; do node --check "$file"; done
       - name: Test Nepali typing range regression
         run: node --test tests/nepali-typing-range.test.cjs
+      - name: Test offline Romanized engine
+        run: node --test tests/nepali-romanized.test.cjs
       - name: Install browser-test dependency
         run: npm install --prefix /tmp/typing-browser playwright
       - name: Install Chromium for browser tests
