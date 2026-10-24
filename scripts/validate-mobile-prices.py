@@ -5,11 +5,13 @@ from __future__ import annotations
 import importlib.util
 import json
 import math
+from datetime import datetime, timezone
 from pathlib import Path
 from statistics import median
 
 OUT = Path("data/mobile-prices.json")
 DETAIL_ROOT = Path("mobile-price-in-nepal/phones")
+HISTORY_OUT = Path("data/mobile-price-history.json")
 APPLE_MIN_NPR = 50_000
 MAX_REASONABLE_NPR = 3_000_000
 
@@ -86,22 +88,96 @@ def regenerate_detail_pages(phones):
 
 
 def refresh_metadata(data, phones):
-    """Recompute catalogue counters after validation may remove or repair offers."""
-    stores = {
-        str(item.get("store", "")).strip()
-        for phone in phones
-        if isinstance(phone, dict)
-        for item in phone.get("prices", [])
-        if isinstance(item, dict) and is_num(item.get("price")) and item.get("store")
-    }
-    data["price_count"] = sum(
-        1 for phone in phones if isinstance(phone, dict)
-        for item in phone.get("prices", [])
-        if isinstance(item, dict) and is_num(item.get("price"))
-    )
-    data["store_count"] = len(stores)
+    """Normalize offer arrays and recompute per-phone and catalogue metadata."""
+    valid_stores = set()
+    valid_count = 0
+    for phone in phones:
+        if not isinstance(phone, dict):
+            continue
+        prices = phone.get("prices")
+        if not isinstance(prices, list):
+            prices = []
+        prices = [
+            item for item in prices
+            if isinstance(item, dict)
+            and is_num(item.get("price"))
+            and float(item["price"]) > 0
+            and str(item.get("store", "")).strip()
+        ]
+        prices.sort(key=lambda item: float(item["price"]))
+        phone["prices"] = prices
+        phone["price_count"] = len(prices)
+        if prices:
+            phone["price"] = int(round(float(prices[0]["price"])))
+            phone["best_store"] = prices[0]["store"]
+            phone["best_url"] = prices[0].get("url")
+            valid_stores.update(str(item["store"]).strip() for item in prices)
+            valid_count += len(prices)
+        else:
+            phone["price"] = None
+            phone["best_store"] = None
+            phone["best_url"] = None
+    data["price_count"] = valid_count
+    data["store_count"] = len(valid_stores)
     data["variant_count"] = len(phones)
 
+def sync_today_history(phones, history_path=HISTORY_OUT):
+    """Replace today's pre-validation snapshot with the validated catalogue."""
+    if not history_path.exists():
+        return 0
+    try:
+        history = json.loads(history_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        raise SystemExit(f"Unable to read mobile price history: {history_path}")
+    if not isinstance(history, dict) or not isinstance(history.get("days"), list):
+        raise SystemExit("mobile-price-history.json: expected a days list")
+
+    today = datetime.now(timezone.utc).date().isoformat()
+    snapshot_phones = []
+    for phone in phones:
+        if not isinstance(phone, dict):
+            continue
+        valid = [
+            item for item in phone.get("prices", [])
+            if isinstance(item, dict) and is_num(item.get("price")) and float(item["price"]) > 0 and item.get("store")
+        ]
+        if not valid:
+            continue
+        valid.sort(key=lambda item: float(item["price"]))
+        snapshot_phones.append({
+            "slug": phone.get("slug"),
+            "model": phone.get("model") or phone.get("title") or phone.get("slug"),
+            "best_price": int(round(float(valid[0]["price"]))),
+            "best_store": valid[0]["store"],
+            "offers": [
+                {"store": item["store"], "price": int(round(float(item["price"])))}
+                for item in valid
+            ],
+        })
+
+    days = [day for day in history["days"] if isinstance(day, dict) and day.get("date") != today]
+    days.append({"date": today, "phones": snapshot_phones})
+    history["days"] = sorted(days, key=lambda day: str(day.get("date", "")))[-180:]
+    history["updated_at"] = datetime.now(timezone.utc).isoformat()
+
+    by_slug = {}
+    for day in history["days"]:
+        for item in day.get("phones", []):
+            if isinstance(item, dict) and item.get("slug"):
+                by_slug.setdefault(item["slug"], []).append({
+                    "date": day.get("date"),
+                    "price": item.get("best_price"),
+                })
+    for phone in phones:
+        if isinstance(phone, dict):
+            phone["history"] = [
+                item for item in by_slug.get(phone.get("slug"), [])
+                if is_num(item.get("price")) and float(item["price"]) > 0
+            ]
+
+    history_path.write_text(json.dumps(history, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    print(f"Synchronized validated catalogue into {today}'s price-history snapshot.")
+    return len(snapshot_phones)
 
 def main():
     data = json.loads(OUT.read_text(encoding="utf-8"))
@@ -125,6 +201,7 @@ def main():
         raise SystemExit(f"Suspicious published prices remain: {suspicious[:10]}")
 
     refresh_metadata(data, phones)
+    sync_today_history(phones)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     regenerate_detail_pages(phones)
     print(f"Price validation complete: {changed} corrected, {removed} suspicious offers removed.")
