@@ -21,8 +21,8 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chr
 # Public store category pages. The store label is what readers see; source provenance
 # is kept in each price record as a direct product/listing URL for price verification.
 SOURCES = [
-    {"store":"Oliz Store","url":"https://www.olizstore.com/collections/phone","kind":"shop"},
-    {"store":"Brother Mart","url":"https://brother-mart.com/collections/smartphones-mobilephones-price-in-nepal","kind":"shop"},
+    {"store":"Oliz Store","url":"https://www.olizstore.com/collections/phone","kind":"shopify"},
+    {"store":"Brother Mart","url":"https://brother-mart.com/collections/smartphones-mobilephones-price-in-nepal","kind":"shopify"},
     {"store":"Neo Store","url":"https://www.neostore.com.np/product-category/mobile-brands","kind":"shop"},
     {"store":"National Mobile","url":"https://store.nationalmobile.com.np/Mobile-Price-in-Nepal","kind":"shop"},
 
@@ -133,6 +133,35 @@ def product_meta(soup, fallback_name):
             if k and v and len(v)<120: specs[k]=v
     return {"title":title,"image":image,"price":price,"description":desc,"specs":specs,"text":text}
 def parse_listing(source):
+    if source.get("kind")=="shopify":
+        api=source["url"].rstrip("/")+"/products.json?limit=250"
+        try:
+            response=requests.get(api,headers=HEADERS,timeout=12)
+            response.raise_for_status()
+            products=response.json().get("products",[])
+            items=[]
+            for product in products:
+                title=clean(product.get("title"))
+                if not is_phone_title(title): continue
+                images=product.get("images") or []
+                image=(images[0].get("src") if images and isinstance(images[0],dict) else None)
+                handle=product.get("handle")
+                if not handle: continue
+                href=urljoin(source["url"],"/products/"+handle)
+                for variant in product.get("variants") or []:
+                    if variant.get("available") is False: continue
+                    try: price=int(float(variant.get("price") or 0)) or None
+                    except Exception: price=None
+                    variant_title=clean(variant.get("public_title") or variant.get("title"))
+                    full_title=title if not variant_title or variant_title.lower()=="default title" else title+" "+variant_title
+                    if price and not (1000 < price < 3000000): price=None
+                    items.append({"store":source["store"],"title":full_title,"url":href,"price":price,"image":image,"kind":"shopify"})
+            if items:
+                print(f'{source["store"]}: Shopify feed returned {len(items)} phone variants')
+                return items
+            print(f'{source["store"]}: Shopify feed had no available phone variants; falling back to page parser')
+        except Exception as exc:
+            print(f'{source["store"]}: Shopify feed unavailable ({exc}); falling back to page parser')
     soup=fetch(source["url"])
     found=[]
     # Prefer cards/product links. Restrict to links with a visible price in the same card.
@@ -274,24 +303,25 @@ def main():
         try:
             items=parse_listing(source)
             print(f'{source["store"]}: found {len(items)} candidates')
-            raw.extend(items[:45])
+            raw.extend(items[:35])
         except Exception as exc:
             print(f'Unable to read {source["store"]}: {exc}')
     # Visit each candidate product page for price/image/specs when the listing card is incomplete.
     enriched=[]
     seen=set()
     for item in raw:
-        if item["url"] in seen: continue
-        seen.add(item["url"])
+        dedupe_key=(item["url"],item["title"])
+        if dedupe_key in seen: continue
+        seen.add(dedupe_key)
         detail={"title":item["title"],"image":item.get("image"),"price":item.get("price"),"description":None,"specs":{},"text":""}
         try:
             soup=fetch(item["url"])
             meta=product_meta(soup,item["title"])
             detail.update({k:v for k,v in meta.items() if v not in (None,"",{})})
         except Exception as exc: print(f'Skip detail {item["url"]}: {exc}')
-        price=detail.get("price") or item.get("price")
+        price=(item.get("price") or detail.get("price")) if item.get("kind")=="shopify" else (detail.get("price") or item.get("price"))
         # Do not publish non-phone categories or pages without a plausible product name.
-        title=clean(detail.get("title") or item["title"])
+        title=clean(item["title"] if item.get("kind")=="shopify" else (detail.get("title") or item["title"]))
         if not is_phone_title(title): continue
         image=detail.get("image") or item.get("image")
         # Keep image only when it's a real HTTP URL.
@@ -304,7 +334,7 @@ def main():
     for x in enriched:
         model=x["model"]
         if not model: continue
-        key=slugify((model+" "+x["variant"]) if x["variant"] else x["title"])
+        key=slugify((model+" "+x["variant"]) if x["variant"] else model)
         p=groups.setdefault(key,{"slug":key,"brand":brand_for(model),"model":(model+" "+x["variant"]).strip(),"title":(model+" "+x["variant"]).strip(),"variant":x["variant"],"prices":[],"image":None,"description":None,"ram":None,"storage":None,"display":None,"battery":None,"chipset":None,"camera":None,"specifications":{},"updated_at":TODAY})
         if x["price"] and int(x["price"])>1000 and int(x["price"])<3000000:
             if not any(pr["store"]==x["store"] and pr["url"]==x["url"] for pr in p["prices"]):
