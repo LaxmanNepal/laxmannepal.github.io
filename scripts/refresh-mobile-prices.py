@@ -150,7 +150,7 @@ def parse_listing(source):
         # Choose the longest plausible product title link, avoiding category/navigation links.
         choices=[]
         for a in anchors:
-            title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True))
+            img_tag=a.select_one("img")\n            title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True) or (img_tag.get("alt") if img_tag else ""))
             href=urljoin(source["url"],a.get("href",""))
             path=urlparse(href).path.lower()
             if len(title)<5 or href==source["url"] or any(x in path for x in ["/cart","/account","/category/","/collections/","/product-category/","/tag/"]): continue
@@ -169,7 +169,7 @@ def parse_listing(source):
     # Product cards are often rendered differently; fall back to visible links then inspect pages.
     if not found:
         for a in soup.select('a[href]'):
-            title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True))
+            img_tag=a.select_one("img")\n            title=clean(a.get("aria-label") or a.get("title") or a.get_text(" ",strip=True) or (img_tag.get("alt") if img_tag else ""))
             href=urljoin(source["url"],a.get("href",""))
             if len(title)<7 or not is_phone_title(title): continue
             if urlparse(href).netloc!=urlparse(source["url"]).netloc: continue
@@ -184,8 +184,16 @@ def variant_key(title):
     m=re.search(r"\b(\d{1,2})\s*GB\s*\+\s*(\d{2,4})\s*GB\b",title,re.I)
     return f"{m.group(1)}GB/{m.group(2)}GB" if m else ""
 def normalize_model(title):
-    # Remove price, store tags and memory variant so same handset can be grouped.
-    s=re.sub(r"\b\d{1,2}\s*GB\s*(?:\+|/)\s*\d{2,4}\s*GB\b"," ",title,flags=re.I)
+    # Remove retailer SEO slogans before matching models across stores.
+    s=clean(title)
+    s=re.split(r"\s*[|–—]\s*",s)[0]
+    s=re.sub(r"\s*(?:price\s+in\s+nepal|price\s+nepal).*$","",s,flags=re.I)
+    s=re.sub(r"\s+\d[\d,]*\s*mAh.*$","",s,flags=re.I)
+    s=re.sub(r"\s+(?:with|featuring)\b.*$","",s,flags=re.I)
+    s=re.sub(r"\s+smartphone\b.*$","",s,flags=re.I)
+    s=re.sub(r"\s*:\s*.*$","",s)
+    # Remove memory variants only after the model name is clean.
+    s=re.sub(r"\b\d{1,2}\s*GB\s*(?:\+|/)\s*\d{2,4}\s*GB\b"," ",s,flags=re.I)
     s=re.sub(r"\b\d{1,2}\s*\+\s*\d{2,4}\s*GB\b"," ",s,flags=re.I)
     s=re.sub(r"\([^)]*(?:GB|RAM|ROM|storage)[^)]*\)"," ",s,flags=re.I)
     s=re.sub(r"\s+"," ",s).strip(" -|·")
