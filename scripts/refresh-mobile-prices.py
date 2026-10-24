@@ -65,7 +65,7 @@ def current_price(root):
 def is_phone_title(title):
     t=clean(title)
     if len(t)>110 or len(t.split())<2: return False
-    if re.search(r"\b(accessories|accessory|headphones|earphones|earbuds|tablet|tablets|mobile brands|phone brands|mobile accessories|phone cases|charger|charging cable|power bank|buy a phone|mobile price|phones list)\b",t,re.I): return False
+    if re.search(r"\b(accessories|accessory|headphones|earphones|earbuds|tablet|tablets|tab|choice\s+t\d+|mobile brands|phone brands|mobile accessories|phone cases|charger|charging cable|power bank|buy a phone|mobile price|phones list)\b",t,re.I): return False
     family=bool(re.search(r"\b(iphone|galaxy|redmi|poco|pixel|oneplus|vivo|oppo|realme|motorola|nothing|honor|infinix|tecno|nokia|samsung|xiaomi|cmf|nubia|zte|magic|spark|camon|hot)\b",t,re.I))
     has_brand=any(re.search(r"\b"+re.escape(b)+r"\b",t,re.I) for b in BRANDS)
     has_model=bool(re.search(r"\b(\d{1,4}|[A-Z]\d{1,4}|SE|Fold|Flip|Ultra|Pro|Plus|Lite|Note|Edge|Neo|Air|Max|Play|Spark|Camon|Hot|Smart)\b",t,re.I))
