@@ -66,5 +66,18 @@ class MobilePriceValidationTests(unittest.TestCase):
             self.assertEqual(phones[0]["history"][-1]["price"], 127499)
 
 
+    def test_fresh_offer_remains_best_when_stale_offer_is_cheaper(self):
+        data = {}
+        phones = [{"prices": [
+            {"store": "Current store", "price": 18000},
+            {"store": "Old store", "price": 15000, "stale": True},
+        ]}]
+        MODULE.refresh_metadata(data, phones)
+        self.assertEqual(phones[0]["price"], 18000)
+        self.assertEqual(phones[0]["best_store"], "Current store")
+        self.assertFalse(phones[0]["price_is_stale"])
+        self.assertEqual(phones[0]["fresh_offer_count"], 1)
+        self.assertEqual(phones[0]["stale_offer_count"], 1)
+
 if __name__ == "__main__":
     unittest.main()
