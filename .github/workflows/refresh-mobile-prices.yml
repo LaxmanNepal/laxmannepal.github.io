@@ -56,6 +56,8 @@ jobs:
         run: rm -f data/mobile-price-refresh-status.json
       - name: Test source-health merge safeguards
         run: python -m unittest discover -s tests -p "test_mobile_price_refresh.py"
+      - name: Test retailer price parsing
+        run: python -m unittest discover -s tests -p "test_mobile_price_scraper_parsing.py"
       - name: Refresh phone listings
         run: python scripts/refresh-mobile-prices.py
       - name: Validate and repair suspicious prices
