@@ -53,3 +53,6 @@ body{background:var(--type-bg);color:var(--type-ink)}
 
 /* Draft status and expanded live counts */
 .save-status{color:#667085;font-size:12px;white-space:normal}.editor-footer{flex-wrap:wrap}.editor-footer #counts{font-variant-numeric:tabular-nums}@media(max-width:620px){.save-status{width:100%}}
+
+/* Offline/PWA status */
+.network-status{color:#667085;font-size:12px;white-space:normal}.update-button{padding:5px 9px;font-size:12px;min-height:30px}.update-button[hidden]{display:none}.editor-footer .network-status{max-width:100%}
