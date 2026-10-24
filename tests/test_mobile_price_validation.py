@@ -30,7 +30,7 @@ class MobilePriceValidationTests(unittest.TestCase):
 
     def test_metadata_counts_only_valid_numeric_offers_and_stores(self):
         data = {}
-        phones = [{"prices": [
+        phones = [{"price": 9999, "best_store": "Stale", "prices": [
             {"store": "A", "price": 10000},
             {"store": "B", "price": None},
             {"store": "A", "price": 0},
@@ -40,6 +40,9 @@ class MobilePriceValidationTests(unittest.TestCase):
         self.assertEqual(data["price_count"], 1)
         self.assertEqual(data["store_count"], 1)
         self.assertEqual(data["variant_count"], 1)
+        self.assertEqual(phones[0]["price"], 10000)
+        self.assertEqual(phones[0]["best_store"], "A")
+        self.assertEqual(phones[0]["prices"], [{"store": "A", "price": 10000}])
 
     def test_validated_catalogue_replaces_todays_history_snapshot(self):
         with tempfile.TemporaryDirectory() as directory:
