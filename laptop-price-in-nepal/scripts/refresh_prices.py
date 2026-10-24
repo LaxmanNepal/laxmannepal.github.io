@@ -107,6 +107,14 @@ def main():
     with open(DATA, encoding="utf-8") as file:
         data = json.load(file)
 
+    history_path = DATA.replace("laptops.json", "laptop-price-history.json")
+    try:
+        with open(history_path, encoding="utf-8") as file:
+            history = json.load(file)
+    except (OSError, ValueError):
+        history = {"schemaVersion": 1, "description": "Only dated source observations; no synthetic history.", "products": {}}
+    history.setdefault("products", {})
+
     today = datetime.date.today().isoformat()
     changed = 0
     successful_sources = 0
@@ -169,6 +177,15 @@ def main():
                 "url": direct_url,
                 "checked": today,
             }
+            # Store one real source observation per product, store and date.
+            history_rows = history["products"].setdefault(product["id"], [])
+            observation = {"date": today, "storeId": store_id, "price": best["price"]}
+            previous = next((row for row in history_rows if row.get("date") == today and row.get("storeId") == store_id), None)
+            if previous:
+                previous.update(observation)
+            else:
+                history_rows.append(observation)
+
             if old != new_offer:
                 if old:
                     product["offers"][product["offers"].index(old)] = new_offer
@@ -181,6 +198,9 @@ def main():
         data["generatedAt"] = today
     with open(DATA, "w", encoding="utf-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=2)
+        file.write("\n")
+    with open(history_path, "w", encoding="utf-8") as file:
+        json.dump(history, file, ensure_ascii=False, indent=2)
         file.write("\n")
 
     print(f"Sources fetched: {successful_sources}/{len(sources)}; offers changed: {changed}")
