@@ -217,7 +217,7 @@ def main():
         try:
             items=parse_listing(source)
             print(f'{source["store"]}: found {len(items)} candidates')
-            raw.extend(items[:90])
+            raw.extend(items[:45])
         except Exception as exc:
             print(f'Unable to read {source["store"]}: {exc}')
     # Visit each candidate product page for price/image/specs when the listing card is incomplete.
@@ -241,7 +241,7 @@ def main():
         if image and not str(image).startswith("http"): image=urljoin(item["url"],str(image))
         specs={**detail.get("specs",{}), **extract_specs(title,detail.get("text",""),detail.get("specs",{}))}
         enriched.append({"store":item["store"],"title":title,"model":normalize_model(title),"variant":variant_key(title),"price":price,"url":item["url"],"image":image,"specs":specs,"description":detail.get("description"),"checked_at":TODAY,"warranty":None})
-        time.sleep(.12)
+        time.sleep(.25)
     # Group exact model/variant only; avoid merging different storage versions.
     groups={}
     for x in enriched:
