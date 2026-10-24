@@ -21,6 +21,8 @@ jobs:
           p='laptop-price-in-nepal/data/laptops.json'
           d=json.load(open(p, encoding='utf-8'))
           assert d['products'] and d['stores']
+          h=json.load(open('laptop-price-in-nepal/data/laptop-price-history.json', encoding='utf-8'))
+          assert h.get('schemaVersion') == 1 and isinstance(h.get('products'), dict)
           for x in d['products']:
               assert x['id'] and x['brand'] and x['name'] and x['offers']
               assert min(o['price'] for o in x['offers']) == x['priceFrom']
@@ -30,4 +32,4 @@ jobs:
         run: |
           git config user.name 'Laxman Nepal Bot'
           git config user.email '84069546+LaxmanNepal@users.noreply.github.com'
-          git diff --quiet && echo 'No catalogue changes to commit.' || (git add laptop-price-in-nepal/data/laptops.json && git commit -m 'chore: refresh laptop catalogue' && git push)
+          git diff --quiet && echo 'No catalogue changes to commit.' || (git add laptop-price-in-nepal/data/laptops.json laptop-price-in-nepal/data/laptop-price-history.json && git commit -m 'chore: refresh laptop catalogue' && git push)
