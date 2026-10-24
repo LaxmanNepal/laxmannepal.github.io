@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Convert legacy Nepali Preeti font text to Unicode and Unicode Nepali back to Preeti in your browser. Local conversion with before-and-after preview.">
+<meta name="theme-color" content="#f8fafc">
+<link rel="canonical" href="https://laxmannepal.com.np/tools/nepali-tools/preeti-unicode-converter/">
+<title>Preeti to Unicode Converter — Nepali Font Converter | Laxman Nepal</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/blog.css">
+<link rel="stylesheet" href="/assets/css/shared-shell.css">
+<link rel="stylesheet" href="./style.css">
+<script src="/assets/js/shared-shell.js" defer></script>
+<script src="./engine.js?v=20261025-1" defer></script>
+<script src="./app.js?v=20261025-1" defer></script>
+</head>
+<body>
+<header class="shared-header" data-shared-shell="header"><a class="shared-brand" href="/" aria-label="Laxman Nepal home"><span class="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Blog · Digital</small></span></a><nav class="shared-desktop-nav" aria-label="Main menu"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI</a><a href="/blog/">Blog</a><a href="/apps/">Apps</a><a href="/youtube/">YouTube</a><details class="nav-dropdown"><summary>Explore</summary><div class="nav-dropdown-menu"><a href="/news/">News &amp; Updates</a><a href="/guides/">Guides</a><a href="/mobile/">Mobile</a><a href="/laptop/">Laptops</a><a href="/gadgets/">Gadgets</a><a href="/brands/">Brands</a></div></details></nav><div class="shared-actions"><form class="shared-search-box" action="/search/" method="get"><span aria-hidden="true">⌕</span><input name="q" type="search" autocomplete="off" aria-label="Search Laxman Nepal" placeholder="Search tools &amp; guides…"></form><button class="shared-menu-btn" type="button" data-shared-menu aria-label="Open menu" aria-expanded="false">☰</button></div></header>
+<nav class="shared-mobile-menu" data-shared-mobile aria-label="Mobile menu"><div class="shared-mobile-head"><strong>Laxman Nepal</strong><button type="button" data-shared-close aria-label="Close menu">×</button></div><a href="/">🏠 Home</a><a href="/tools/">🧰 Tools</a><a href="/ai-tools/">✨ AI Tools</a><a href="/blog/">📝 Blog</a><a href="/apps/">📦 Apps</a><a href="/youtube/">▶ YouTube</a><a href="/guides/">📖 Guides</a><a href="/news/">📰 News</a><a href="/contact/">✉ Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav><div class="shared-menu-backdrop" data-shared-backdrop></div>
+<main class="preeti-page">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/tools/nepali-tools/">Nepali Tools</a><span>/</span><span>Preeti Converter</span></nav>
+<section class="preeti-heading"><p class="eyebrow">🇳🇵 NEPALI FONT UTILITY</p><h1>Preeti ↔ Unicode Converter</h1><p>Convert legacy Preeti-encoded text into Nepali Unicode, or convert Unicode Nepali back to Preeti for older documents. Conversion runs locally in your browser.</p></section>
+<section class="preeti-card">
+<label for="direction">Conversion direction</label>
+<select id="direction"><option value="preeti-to-unicode">Preeti → Unicode Nepali</option><option value="unicode-to-preeti">Unicode Nepali → Preeti</option></select>
+<div class="preeti-panes">
+<div><div class="pane-head"><label for="source-text">Original text</label><button id="sample" type="button" class="minor-btn">Load sample</button></div><textarea id="source-text" rows="9" spellcheck="false" placeholder="Paste Preeti-encoded text or Unicode Nepali here…"></textarea></div>
+<div><div class="pane-head"><label for="result-text">Converted preview</label><button id="copy-result" type="button" class="minor-btn">Copy result</button></div><textarea id="result-text" rows="9" readonly spellcheck="false" aria-label="Converted text preview"></textarea></div>
+</div>
+<div class="preeti-actions"><button id="download-result" class="primary-btn" type="button">Download .txt</button><button id="clear-text" class="secondary-btn" type="button">Clear</button><span id="conversion-status" role="status" aria-live="polite">Paste text to preview the conversion.</span></div>
+<p class="privacy-note">Local conversion only: your text is not uploaded or saved by this page. Keep the original until you have reviewed the converted result.</p>
+</section>
+<section class="preeti-info"><h2>Before converting</h2><ul><li>Preeti is a legacy font encoding: the text may look like English letters until the correct font is applied.</li><li>For Preeti → Unicode, the input should be Preeti-encoded. Ordinary English inside the same text may also be converted, so review the preview carefully.</li><li>Different legacy Nepali fonts can use different key maps. This converter targets Preeti; it does not claim lossless support for Kantipur, PCS Nepali, or every custom font.</li><li>For normal Romanized typing, use the <a href="/tools/nepali-tools/type-nepali/">Nepali typing tool</a>.</li></ul></section>
+</main>
+<footer class="preeti-footer"><a href="/tools/nepali-tools/">← All Nepali tools</a><span>Made with 🇳🇵 by Laxman Nepal</span></footer>
+</body>
+</html>
