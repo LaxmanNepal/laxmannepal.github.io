@@ -281,3 +281,21 @@ test('Shift+Enter inserts a newline instead of accepting a suggestion', async ()
     assert.equal(await editor.inputValue(), 'namaste\n');
   } finally { await context.close(); }
 });
+
+
+test('Word-compatible RTF export includes Unicode text and paragraph breaks', async () => {
+  const { context, page } = await openPage();
+  try {
+    await page.locator('#editor').fill('नमस्ते\nनेपाल');
+    const downloadPromise = page.waitForEvent('download');
+    await page.locator('#download-rtf').click();
+    const download = await downloadPromise;
+    assert.equal(download.suggestedFilename(), 'nepali-typing.rtf');
+    const stream = await download.createReadStream();
+    let content = '';
+    for await (const chunk of stream) content += chunk.toString('utf8');
+    assert.match(content, /\\\\rtf1/);
+    assert.match(content, /\\\\u/);
+    assert.match(content, /\\\\par/);
+  } finally { await context.close(); }
+});
