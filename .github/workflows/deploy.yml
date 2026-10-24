@@ -290,6 +290,8 @@ jobs:
           grep -q 'id="remote-suggestions"' .pages/tools/nepali-tools/type-nepali/index.html
           grep -q 'FAQPage' .pages/tools/nepali-tools/type-nepali/index.html
           grep -q 'Microphone permission was denied' .pages/tools/nepali-tools/type-nepali/app.js
+          grep -q 'LEARNED_KEY' .pages/tools/nepali-tools/type-nepali/app.js
+          grep -q 'ln-nepali-typing-learned-v1' .pages/tools/nepali-tools/type-nepali/workspace-tools.js
           grep -q "restoreDraft();" .pages/tools/nepali-tools/type-nepali/app.js
       - name: Verify Nepali typing practice artifact
         run: |
