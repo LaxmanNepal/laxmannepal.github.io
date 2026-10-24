@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T22:51:09.208857+00:00",
+  "updated_at": "2026-10-24T22:55:55.067898+00:00",
   "status": "Daily retailer refresh; last-known offers are marked stale when a source refresh is incomplete",
   "source_status": {
     "Brother Mart": {
@@ -1691,7 +1691,7 @@
       "best_url": null,
       "price_count": 0,
       "price_is_stale": false,
-      "fresh_offer_count": 1,
+      "fresh_offer_count": 0,
       "stale_offer_count": 0,
       "history": []
     },
@@ -1743,7 +1743,7 @@
       "best_url": null,
       "price_count": 0,
       "price_is_stale": false,
-      "fresh_offer_count": 1,
+      "fresh_offer_count": 0,
       "stale_offer_count": 0,
       "history": []
     },
@@ -1769,7 +1769,7 @@
       "best_url": null,
       "price_count": 0,
       "price_is_stale": false,
-      "fresh_offer_count": 1,
+      "fresh_offer_count": 0,
       "stale_offer_count": 0,
       "history": []
     },
@@ -1821,7 +1821,7 @@
       "best_url": null,
       "price_count": 0,
       "price_is_stale": false,
-      "fresh_offer_count": 1,
+      "fresh_offer_count": 0,
       "stale_offer_count": 0,
       "history": []
     },
@@ -1847,7 +1847,7 @@
       "best_url": null,
       "price_count": 0,
       "price_is_stale": false,
-      "fresh_offer_count": 1,
+      "fresh_offer_count": 0,
       "stale_offer_count": 0,
       "history": []
     },
@@ -1873,7 +1873,7 @@
       "best_url": null,
       "price_count": 0,
       "price_is_stale": false,
-      "fresh_offer_count": 1,
+      "fresh_offer_count": 0,
       "stale_offer_count": 0,
       "history": []
     },
