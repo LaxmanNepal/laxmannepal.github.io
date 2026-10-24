@@ -240,3 +240,15 @@ test('typing, practice and Preeti pages expose SEO metadata and FAQ structured d
     }
   } finally { await context.close(); }
 });
+
+test('smart local lexicon ranks common suffix forms in the typing UI', async () => {
+  const { context, page } = await openPage();
+  try {
+    const editor = page.locator('#editor');
+    await editor.fill('netaharulai');
+    await page.locator('.suggestion').filter({ hasText: 'नेताहरूलाई' }).first().waitFor();
+    assert.match(await page.locator('.suggestion').first().textContent(), /नेताहरूलाई/);
+    await page.locator('.suggestion').first().click();
+    assert.equal(await editor.inputValue(), 'नेताहरूलाई');
+  } finally { await context.close(); }
+});

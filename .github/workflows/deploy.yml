@@ -85,6 +85,8 @@ jobs:
         run: node --test tests/nepali-typing-practice.test.cjs
       - name: Test Preeti converter
         run: node --test tests/preeti-unicode-converter.test.cjs
+      - name: Test smart Romanized engine
+        run: node --test tests/nepali-smart-typing.test.cjs
       - name: Install browser-test dependency
         run: npm install --prefix /tmp/typing-browser playwright
       - name: Install Chromium for browser tests
@@ -277,6 +279,9 @@ jobs:
           test -s .pages/tools/nepali-tools/type-nepali/app.js
           test -s .pages/tools/nepali-tools/type-nepali/style.css
           test -s .pages/tools/nepali-tools/type-nepali/engines/romanized.js
+          test -s .pages/tools/nepali-tools/type-nepali/engines/typing-lexicon.js
+          test -s .pages/tools/nepali-tools/type-nepali/engines/smart-typing.js
+          test -s .pages/tools/nepali-tools/type-nepali/engines/LICENSE-TYPING
           test -s .pages/tools/nepali-tools/type-nepali/workspace-tools.js
           test -s .pages/tools/nepali-tools/type-nepali/manifest.webmanifest
           test -s .pages/tools/nepali-tools/type-nepali/sw.js
