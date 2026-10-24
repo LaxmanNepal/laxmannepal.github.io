@@ -160,10 +160,12 @@ test('local documents, templates, find/replace and delete-all work', async () =>
     await page.locator('#delete-local-data').click();
     const saved = await page.evaluate(() => ({
       draft: localStorage.getItem('ln-nepali-typing-draft'),
-      docs: localStorage.getItem('ln-nepali-typing-documents-v1')
+      docs: localStorage.getItem('ln-nepali-typing-documents-v1'),
+      learned: localStorage.getItem('ln-nepali-typing-learned-v1')
     }));
     assert.equal(saved.draft, null);
     assert.equal(saved.docs, null);
+    assert.equal(saved.learned, null);
   } finally { await context.close(); }
 });
 
@@ -218,6 +220,7 @@ test('voice errors are actionable and final speech saves into the local document
     assert.match(await page.locator('#editor').inputValue(), /नमस्ते/);
     const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('ln-nepali-typing-documents-v1') || '[]'));
     assert.ok(saved.some(doc => doc.content.includes('नमस्ते')));
+    assert.ok(JSON.parse(localStorage.getItem('ln-nepali-typing-learned-v1') || '{}').netaharulai);
     assert.equal(await page.locator('#voice-toggle').getAttribute('aria-pressed'), 'true');
   } finally { await context.close(); }
 });
