@@ -160,10 +160,12 @@ test('local documents, templates, find/replace and delete-all work', async () =>
     await page.locator('#delete-local-data').click();
     const saved = await page.evaluate(() => ({
       draft: localStorage.getItem('ln-nepali-typing-draft'),
-      docs: localStorage.getItem('ln-nepali-typing-documents-v1')
+      docs: localStorage.getItem('ln-nepali-typing-documents-v1'),
+      learned: localStorage.getItem('ln-nepali-typing-learned-v1')
     }));
     assert.equal(saved.draft, null);
     assert.equal(saved.docs, null);
+    assert.equal(saved.learned, null);
   } finally { await context.close(); }
 });
 
@@ -250,5 +252,7 @@ test('smart local lexicon ranks common suffix forms in the typing UI', async () 
     assert.match(await page.locator('.suggestion').first().textContent(), /नेताहरूलाई/);
     await page.locator('.suggestion').first().click();
     assert.equal(await editor.inputValue(), 'नेताहरूलाई');
+    const learned = await page.evaluate(() => JSON.parse(localStorage.getItem('ln-nepali-typing-learned-v1') || '{}'));
+    assert.ok(learned.netaharulai);
   } finally { await context.close(); }
 });
