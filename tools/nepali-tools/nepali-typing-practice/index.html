@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Practice Nepali typing online with local WPM, accuracy and error statistics. Choose a short practice passage or use your own text.">
+<meta name="theme-color" content="#f8fafc">
+<link rel="canonical" href="https://laxmannepal.com.np/tools/nepali-tools/nepali-typing-practice/">
+<title>Nepali Typing Practice — WPM & Accuracy | Laxman Nepal</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/blog.css">
+<link rel="stylesheet" href="/assets/css/shared-shell.css">
+<link rel="stylesheet" href="./style.css">
+<script src="/assets/js/shared-shell.js" defer></script>
+<script src="./metrics.js?v=20261025-1" defer></script>
+<script src="./app.js?v=20261025-1" defer></script>
+</head>
+<body>
+<header class="shared-header" data-shared-shell="header"><a class="shared-brand" href="/" aria-label="Laxman Nepal home"><span class="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Blog · Digital</small></span></a><nav class="shared-desktop-nav" aria-label="Main menu"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI</a><a href="/blog/">Blog</a><a href="/apps/">Apps</a><a href="/youtube/">YouTube</a><details class="nav-dropdown"><summary>Explore</summary><div class="nav-dropdown-menu"><a href="/news/">News &amp; Updates</a><a href="/guides/">Guides</a><a href="/mobile/">Mobile</a><a href="/laptop/">Laptops</a><a href="/gadgets/">Gadgets</a><a href="/brands/">Brands</a></div></details></nav><div class="shared-actions"><form class="shared-search-box" action="/search/" method="get"><span aria-hidden="true">⌕</span><input name="q" type="search" autocomplete="off" aria-label="Search Laxman Nepal" placeholder="Search tools &amp; guides…"></form><button class="shared-menu-btn" type="button" data-shared-menu aria-label="Open menu" aria-expanded="false">☰</button></div></header>
+<nav class="shared-mobile-menu" data-shared-mobile aria-label="Mobile menu"><div class="shared-mobile-head"><strong>Laxman Nepal</strong><button type="button" data-shared-close aria-label="Close menu">×</button></div><a href="/">🏠 Home</a><a href="/tools/">🧰 Tools</a><a href="/ai-tools/">✨ AI Tools</a><a href="/blog/">📝 Blog</a><a href="/apps/">📦 Apps</a><a href="/youtube/">▶ YouTube</a><a href="/guides/">📖 Guides</a><a href="/news/">📰 News</a><a href="/contact/">✉ Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav><div class="shared-menu-backdrop" data-shared-backdrop></div>
+<main class="practice-page">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/tools/nepali-tools/">Nepali Tools</a><span>/</span><span>Typing Practice</span></nav>
+<section class="practice-heading"><p class="eyebrow">🇳🇵 NEPALI TYPING PRACTICE</p><h1>Practice Nepali Typing</h1><p>Build speed and accuracy with Nepali passages. Your typing and results stay in this browser session; this page does not upload practice text or scores.</p></section>
+<section class="practice-card" aria-label="Typing practice">
+<div class="practice-controls">
+<label for="sample-passage">Practice passage
+<select id="sample-passage"><option value="basic">Beginner · Basic sentence</option><option value="paragraph">Intermediate · Short paragraph</option><option value="mixed">Mixed Nepali and numbers</option><option value="custom">Custom passage</option></select>
+</label>
+<label for="duration">Time limit
+<select id="duration"><option value="0">Untimed</option><option value="1">1 minute</option><option value="3" selected>3 minutes</option><option value="5">5 minutes</option><option value="10">10 minutes</option></select>
+</label>
+</div>
+<label class="field-label" for="target-text">Text to type (editable)</label>
+<textarea id="target-text" rows="3" spellcheck="false">नेपाल सुन्दर देश हो। नेपाली भाषा हाम्रो पहिचान हो।</textarea>
+<div class="practice-actions"><button id="start" class="primary-btn" type="button">Start practice</button><button id="pause" class="secondary-btn" type="button" disabled>Pause</button><button id="reset" class="secondary-btn" type="button">Reset</button><span id="practice-status" role="status" aria-live="polite">Ready when you are</span></div>
+<div class="timer-line"><span>Time</span><strong id="timer">00:00</strong><span id="timer-mode">3-minute session</span></div>
+<label class="field-label" for="practice-input">Type the passage below</label>
+<textarea id="practice-input" rows="6" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="Start practice, then type the passage here…" aria-describedby="practice-hint"></textarea>
+<p id="practice-hint" class="hint">You can pause and resume. Changing the passage or time limit resets the current attempt.</p>
+<div class="metrics-grid" aria-live="polite">
+<div><span>Speed</span><strong id="wpm">0</strong><small>WPM</small></div>
+<div><span>Characters/min</span><strong id="cpm">0</strong><small>CPM</small></div>
+<div><span>Accuracy</span><strong id="accuracy">0%</strong><small>Correct typed graphemes / typed graphemes</small></div>
+<div><span>Errors</span><strong id="errors">0</strong><small>Wrong or extra graphemes</small></div>
+<div><span>Remaining</span><strong id="remaining">0</strong><small>Target graphemes</small></div>
+<div><span>Correct</span><strong id="correct">0</strong><small>Correct graphemes</small></div>
+</div>
+</section>
+<section class="practice-info"><h2>How scoring works</h2><ul><li><strong>WPM:</strong> correct graphemes divided by five, then divided by elapsed minutes.</li><li><strong>Accuracy:</strong> correct graphemes divided by the number of graphemes you typed.</li><li><strong>Errors:</strong> wrong-position and extra graphemes. Devanagari combining marks are grouped using the browser's grapheme segmenter where available.</li><li><strong>Privacy:</strong> the passage, timer and score are processed locally and are not saved or uploaded by this page.</li></ul><p><a href="/tools/nepali-tools/type-nepali/">Need to convert Romanized text to Nepali? Open the Nepali typing tool →</a></p></section>
+</main>
+<footer class="practice-footer"><a href="/tools/nepali-tools/">← All Nepali tools</a><span>Made with 🇳🇵 by Laxman Nepal</span></footer>
+</body>
+</html>
