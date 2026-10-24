@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "17 */3 * * *"
   workflow_dispatch:
+  # Run once immediately when the collector/workflow is first installed or changed.
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/refresh-news-feed.yml"
+      - "scripts/refresh-news-feed.py"
 
 permissions:
   contents: write
