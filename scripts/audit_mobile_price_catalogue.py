@@ -61,7 +61,7 @@ def audit(data, root=Path(".")):
         if required not in html:
             raise ValueError(f"Mobile price SEO/content marker missing: {required}")
     schemas = []
-    for raw in re.findall(r'<script[^>]+type=["\\']application/ld\\+json["\\'][^>]*>(.*?)</script>', html, re.I | re.S):
+    for raw in re.findall(r"""<script[^>]+type=["']application/ld\+json["'][^>]*>(.*?)</script>""", html, re.I | re.S):
         try:
             schemas.append(json.loads(raw))
         except json.JSONDecodeError as exc:
