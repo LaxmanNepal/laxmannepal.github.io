@@ -102,6 +102,7 @@
     setStatus('Document deleted from this browser');
   });
   editor.addEventListener('input', saveCurrent);
+  editor.addEventListener('change', saveCurrent);
   $('#insert-template').addEventListener('click', () => {
     const key = $('#template-select').value, template = templates[key];
     if (!template) return;
