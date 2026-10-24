@@ -139,7 +139,7 @@ def sync_today_history(phones, history_path=HISTORY_OUT):
             continue
         valid = [
             item for item in phone.get("prices", [])
-            if isinstance(item, dict) and is_num(item.get("price")) and float(item["price"]) > 0 and item.get("store")
+            if isinstance(item, dict) and is_num(item.get("price")) and float(item["price"]) > 0 and item.get("store") and not item.get("stale")
         ]
         if not valid:
             continue
