@@ -72,7 +72,7 @@ test('practice page updates accuracy locally and stops on exact completion', asy
     const target = page.locator('#target-text');
     const input = page.locator('#practice-input');
     await target.fill('नेपाल');
-    await input.fill('नेप');
+    await input.fill('ने');
     assert.equal(await page.locator('#accuracy').textContent(), '100%');
     await page.locator('#start').click();
     await input.fill('नेपाल');
