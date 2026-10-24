@@ -5,7 +5,7 @@ Only prices and specifications actually found on a page are published. A retaile
 price is kept separate by store and variant; failed or ambiguous matches are omitted.
 """
 from __future__ import annotations
-import json, re, time, hashlib, html
+import copy, json, math, re, time, hashlib, html
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 
 OUT = Path("data/mobile-prices.json")
 HISTORY_OUT = Path("data/mobile-price-history.json")
+STATUS_OUT = Path("data/mobile-price-refresh-status.json")
 DETAIL_ROOT = Path("mobile-price-in-nepal/phones")
 TODAY = datetime.now(timezone.utc).date().isoformat()
 HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
@@ -25,7 +26,7 @@ SOURCES = [
     {"store":"Brother Mart","url":"https://brother-mart.com/collections/smartphones-mobilephones-price-in-nepal","kind":"shopify"},
     {"store":"Neo Store","url":"https://www.neostore.com.np/product-category/mobile-brands","kind":"shop"},
     {"store":"GBN Store","url":"https://gbnstore.com/category/smartphones","kind":"catalog"},
-    {"store":"Quality Computer","url":"https://qualitycomputer.com.np/shop?category=833&order=create_date+desc&search=iPhone","kind":"shop"},
+    {"store":"Quality Computer","url":"https://qualitycomputer.com.np/shop?category=833&order=create_date+desc","kind":"shop"},
     {"store":"National Mobile","url":"https://store.nationalmobile.com.np/Mobile-Price-in-Nepal","kind":"shop"},
 
     {"store":"Daraz","url":"https://www.daraz.com.np/smartphones/","kind":"marketplace"},
@@ -36,9 +37,22 @@ PRICE_RE = re.compile(r"(?:NPR|Rs\.?|रु\.?|रु)\s*([\d,]{4,7})", re.I)
 VARIANT_RE = re.compile(r"\b(\d{1,2})\s*(?:GB)?\s*(?:\+|/|RAM)\s*(\d{2,4})\s*GB\b", re.I)
 
 def clean(v): return re.sub(r"\s+", " ", str(v or "")).strip()
+def request_with_retry(url, timeout=(4,10)):
+    """Retry transient retailer timeouts/rate limits before declaring a source unavailable."""
+    last_error = None
+    for attempt in range(3):
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=timeout)
+            response.raise_for_status()
+            return response
+        except requests.RequestException as exc:
+            last_error = exc
+            if attempt < 2:
+                time.sleep(1.5 * (attempt + 1))
+    raise last_error
+
 def fetch(url):
-    r=requests.get(url,headers=HEADERS,timeout=(4,10)); r.raise_for_status()
-    return BeautifulSoup(r.text,"html.parser")
+    return BeautifulSoup(request_with_retry(url).text,"html.parser")
 def money(text):
     """Only accept text with one distinct currency amount."""
     matches=PRICE_RE.findall(clean(text))
@@ -141,9 +155,17 @@ def parse_listing(source):
     if source.get("kind")=="shopify":
         api=source["url"].rstrip("/")+"/products.json?limit=250"
         try:
-            response=requests.get(api,headers=HEADERS,timeout=12)
-            response.raise_for_status()
-            products=response.json().get("products",[])
+            products=[]
+            next_url=api
+            seen_pages=set()
+            # Shopify's public JSON feed exposes cursor pagination in the Link header.
+            for _ in range(5):
+                if not next_url or next_url in seen_pages:
+                    break
+                seen_pages.add(next_url)
+                response=request_with_retry(next_url,timeout=12)
+                products.extend(response.json().get("products",[]))
+                next_url=(response.links.get("next") or {}).get("url")
             items=[]
             for product in products:
                 title=clean(product.get("title"))
@@ -278,10 +300,11 @@ def extract_specs(title, text, specs_map):
     return {"ram":clean(ram) or None,"storage":clean(storage) or None,"display":clean(display) or None,"battery":clean(battery) or None,"chipset":clean(chipset) or None,"camera":clean(camera) or None}
 def page_template(p):
     title=p["model"]; prices=p.get("prices",[])
-    best=min((x for x in prices if x.get("price")),key=lambda x:x["price"],default=None)
+    fresh_prices=[x for x in prices if x.get("price") and not x.get("stale")]
+    best=min(fresh_prices or [x for x in prices if x.get("price")],key=lambda x:x["price"],default=None)
     esc=lambda x:html.escape(str(x or ""),quote=True)
     canonical="https://laxmannepal.com.np/mobile-price-in-nepal/phones/"+p["slug"]+"/"
-    price_rows="".join(f'<tr><td><a href="{esc(x["url"])}" target="_blank" rel="nofollow sponsored noopener">{esc(x["store"])}</a></td><td>Rs. {int(x["price"]):,}</td><td>{esc(x.get("warranty") or "Check with store")}</td><td>{esc(x.get("checked_at") or TODAY)}</td><td><a href="{esc(x["url"])}" target="_blank" rel="nofollow sponsored noopener">View offer ↗</a></td></tr>' for x in sorted(prices,key=lambda x:x.get("price") or 10**12))
+    price_rows="".join(f'<tr><td><a href="{esc(x["url"])}" target="_blank" rel="nofollow sponsored noopener">{esc(x["store"])}</a></td><td>Rs. {int(x["price"]):,}</td><td>{esc(x.get("warranty") or "Check with store")}</td><td>{esc(("STALE · " if x.get("stale") else "") + str(x.get("checked_at") or TODAY))}</td><td><a href="{esc(x["url"])}" target="_blank" rel="nofollow sponsored noopener">View offer ↗</a></td></tr>' for x in sorted(prices,key=lambda x:x.get("price") or 10**12))
     specs=[("Brand",p.get("brand")),("RAM",p.get("ram")),("Storage",p.get("storage")),("Display",p.get("display")),("Battery",p.get("battery")),("Chipset",p.get("chipset")),("Camera",p.get("camera"))]
     spec_rows="".join(f'<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>' for k,v in specs if v)
     seen_labels={k.lower() for k,v in specs if v}
@@ -291,7 +314,7 @@ def page_template(p):
     if best: jsonld["offers"]={"@type":"AggregateOffer","priceCurrency":"NPR","lowPrice":best["price"],"offerCount":len(prices),"url":best["url"]}
     structured=json.dumps(jsonld,ensure_ascii=False).replace("</","<\\/")
     image_html=f'<img src="{esc(image)}" alt="{esc(title)} smartphone" loading="eager">' if image else '<div class="placeholder">📱</div>'
-    best_html=f'Rs. {best["price"]:,}' if best else 'No verified retailer price yet'
+    best_html=(("Last known · " if p.get("price_is_stale") else "")+f'Rs. {best["price"]:,}') if best else 'No verified retailer price yet'
     history=p.get("history",[])
     valid_history=[h for h in history if h.get("price")]
     if len(valid_history)>=2:
@@ -331,7 +354,7 @@ def write_category_pages(phones):
             price=p.get("price")
             image=p.get("image")
             photo=f'<img src="{esc(image)}" alt="{esc(p.get("model"))}" loading="lazy">' if image else '<span>📱</span>'
-            price_html=f'Rs. {int(price):,}' if price else "Price not confirmed"
+            price_html=(("Last known · " if p.get("price_is_stale") else "")+f'Rs. {int(price):,}') if price else "Price not confirmed"
             cards.append(f'<article class="card"><a href="/mobile-price-in-nepal/phones/{esc(p["slug"])}/"><div class="photo">{photo}</div><div class="brand">{esc(p.get("brand"))}</div><h2>{esc(p.get("model"))}</h2><strong>{price_html}</strong><p>Lowest at {esc(p.get("best_store") or "No confirmed store")}</p><span>Compare offers and specifications →</span></a></article>')
         item_list={"@context":"https://schema.org","@type":"ItemList","name":title,"itemListElement":[{"@type":"ListItem","position":i+1,"url":"https://laxmannepal.com.np/mobile-price-in-nepal/phones/"+p["slug"]+"/","name":p.get("model")} for i,p in enumerate(entries)]}
         structured=json.dumps(item_list,ensure_ascii=False).replace("</","<\\/")
@@ -368,15 +391,111 @@ def write_category_pages(phones):
         if folder.is_dir() and folder.name not in keep_budgets:
             import shutil; shutil.rmtree(folder)
 
+def offer_counts(phones):
+    counts={}
+    for phone in phones:
+        for offer in phone.get("prices",[]) if isinstance(phone.get("prices"),list) else []:
+            if isinstance(offer,dict) and offer.get("store") and offer.get("price") and not offer.get("stale"):
+                counts[offer["store"]]=counts.get(offer["store"],0)+1
+    return counts
+
+def assess_source_health(fresh_phones, previous_phones, candidate_counts=None, source_errors=None):
+    """Mark a store complete only when today's priced coverage is credible vs its history."""
+    current=offer_counts(fresh_phones)
+    previous=offer_counts(previous_phones)
+    candidate_counts=candidate_counts or {}
+    source_errors=source_errors or {}
+    health={}
+    status={}
+    all_stores=set(current)|set(previous)|set(candidate_counts)|set(source_errors)|{s["store"] for s in SOURCES}
+    for store in sorted(all_stores):
+        prior=previous.get(store,0)
+        found=current.get(store,0)
+        required=1 if prior<3 else max(3,math.ceil(prior*0.35))
+        complete=found>=required and found>0
+        health[store]=complete
+        status[store]={
+            "candidates":int(candidate_counts.get(store,0)),
+            "priced_offers_found":int(found),
+            "previous_offers":int(prior),
+            "minimum_expected_offers":int(required),
+            "status":"complete" if complete and not source_errors.get(store) else ("partial" if complete else "stale"),
+            "errors":source_errors.get(store,[]),
+        }
+    return health,status
+
+def merge_previous_catalogue(fresh_phones, previous_phones, healthy_stores, today=None):
+    """Use fresh offers where observed; retain last-known offers as explicitly stale if a store scrape is incomplete."""
+    today=today or TODAY
+    fresh_by_slug={p["slug"]:p for p in fresh_phones if p.get("slug")}
+    old_by_slug={p["slug"]:p for p in previous_phones if p.get("slug")}
+    merged=[]
+    for slug in sorted(set(fresh_by_slug)|set(old_by_slug)):
+        fresh=fresh_by_slug.get(slug)
+        old=old_by_slug.get(slug)
+        if fresh:
+            phone=copy.deepcopy(fresh)
+            if old:
+                for key in ("image","description","ram","storage","display","battery","chipset","camera","specifications"):
+                    if not phone.get(key) and old.get(key):
+                        phone[key]=copy.deepcopy(old[key])
+        else:
+            phone=copy.deepcopy(old)
+            phone["prices"]=[]
+        current_by_store={o.get("store"):copy.deepcopy(o) for o in (fresh or {}).get("prices",[]) if o.get("store") and o.get("price")}
+        old_by_store={o.get("store"):copy.deepcopy(o) for o in (old or {}).get("prices",[]) if o.get("store") and o.get("price")}
+        final=[]
+        for store in sorted(set(current_by_store)|set(old_by_store)):
+            if store in current_by_store:
+                offer=current_by_store[store]
+                offer.pop("stale",None)
+                offer.pop("stale_reason",None)
+                final.append(offer)
+            elif not healthy_stores.get(store,False) and store in old_by_store:
+                offer=old_by_store[store]
+                offer["stale"]=True
+                offer["stale_reason"]="retailer-refresh-incomplete"
+                final.append(offer)
+        if not final and not fresh:
+            continue
+        final.sort(key=lambda o:(bool(o.get("stale")),int(o.get("price") or 10**12)))
+        phone["prices"]=final
+        current_prices=[o for o in final if not o.get("stale")]
+        best=min(current_prices or final,key=lambda o:int(o.get("price") or 10**12),default=None)
+        phone["price"]=int(best["price"]) if best else None
+        phone["best_store"]=best.get("store") if best else None
+        phone["best_url"]=best.get("url") if best else None
+        phone["price_is_stale"]=bool(final) and not bool(current_prices)
+        phone["price_count"]=len(final)
+        phone["fresh_offer_count"]=len(current_prices)
+        phone["stale_offer_count"]=len(final)-len(current_prices)
+        phone["updated_at"]=today if current_prices else (old or {}).get("updated_at") or today
+        merged.append(phone)
+    merged.sort(key=lambda p:(p.get("brand",""),p.get("model","")))
+    return merged
+
 def main():
+    try:
+        previous_doc=json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
+        previous_phones=previous_doc.get("phones",[]) if isinstance(previous_doc,dict) else []
+        if not isinstance(previous_phones,list):
+            previous_phones=[]
+    except (OSError,json.JSONDecodeError) as exc:
+        raise SystemExit(f"Cannot safely read previous catalogue; refusing refresh: {exc}")
     raw=[]
+    candidate_counts={}
+    source_errors={}
     for source in SOURCES:
+        store=source["store"]
         try:
             items=parse_listing(source)
-            print(f'{source["store"]}: found {len(items)} candidates')
-            raw.extend(items[:500] if any(x.get("kind")=="shopify" for x in items) else items[:25])
+            candidate_counts[store]=candidate_counts.get(store,0)+len(items)
+            print(f'{store}: found {len(items)} candidates at {source["url"]}')
+            # Do not silently truncate ordinary retailer pages at 25 candidates.
+            raw.extend(items[:500])
         except Exception as exc:
-            print(f'Unable to read {source["store"]}: {exc}')
+            source_errors.setdefault(store,[]).append(f'{source["url"]}: {type(exc).__name__}: {exc}')
+            print(f'Unable to read {store} at {source["url"]}: {exc}')
     # Visit each candidate product page for price/image/specs when the listing card is incomplete.
     enriched=[]
     seen=set()
@@ -435,16 +554,20 @@ def main():
         phones.append(p)
     phones.sort(key=lambda p:(p["brand"],p["model"]))
     for p in phones: p["updated_at"]=TODAY
-    # Never replace a populated catalogue with a failed/empty retailer scrape.
-    if not phones or not any(p["prices"] for p in phones):
-        raise SystemExit("No confirmed phone prices extracted; preserving the last published catalogue.")
+    healthy_stores,source_status=assess_source_health(phones,previous_phones,candidate_counts,source_errors)
+    phones=merge_previous_catalogue(phones,previous_phones,healthy_stores,TODAY)
+    fresh_offer_total=sum(1 for p in phones for offer in p.get("prices",[]) if offer.get("price") and not offer.get("stale"))
+    if not phones or fresh_offer_total==0:
+        raise SystemExit("No fresh confirmed phone prices extracted; preserving the last published catalogue.")
+    for store,details in source_status.items():
+        print(f'SOURCE HEALTH {store}: {details["status"]}; {details["priced_offers_found"]}/{details["previous_offers"]} current/previous priced offers')
     # Save one daily snapshot per model/variant and store, keeping 180 days for trend charts.
     HISTORY_OUT.parent.mkdir(parents=True,exist_ok=True)
     try:
         history_doc=json.loads(HISTORY_OUT.read_text(encoding="utf-8")) if HISTORY_OUT.exists() else {"updated_at":None,"days":[]}
     except Exception:
         history_doc={"updated_at":None,"days":[]}
-    snapshot={"date":TODAY,"phones":[{"slug":p["slug"],"model":p["model"],"best_price":p["price"],"best_store":p["best_store"],"offers":[{"store":x["store"],"price":x["price"]} for x in p["prices"]]} for p in phones if p["prices"]]}
+    snapshot={"date":TODAY,"phones":[{"slug":p["slug"],"model":p["model"],"best_price":p["price"],"best_store":p["best_store"],"offers":[{"store":x["store"],"price":x["price"]} for x in p["prices"] if not x.get("stale")]} for p in phones if any(not x.get("stale") for x in p.get("prices",[]))]}
     days=[d for d in history_doc.get("days",[]) if d.get("date")!=TODAY]
     days.append(snapshot)
     days=sorted(days,key=lambda d:d.get("date",""))[-180:]
@@ -464,9 +587,15 @@ def main():
     for folder in DETAIL_ROOT.iterdir():
         if folder.is_dir() and folder.name not in keep:
             import shutil; shutil.rmtree(folder)
-    payload={"updated_at":datetime.now(timezone.utc).isoformat(),"status":"Daily retailer refresh; only unambiguous recorded prices are shown","phones":phones,"store_count":len({pr["store"] for p in phones for pr in p["prices"]}),"price_count":sum(len(p["prices"]) for p in phones)}
+    refreshed_at=datetime.now(timezone.utc).isoformat()
+    fresh_offer_count=sum(1 for p in phones for offer in p.get("prices",[]) if offer.get("price") and not offer.get("stale"))
+    stale_offer_count=sum(1 for p in phones for offer in p.get("prices",[]) if offer.get("price") and offer.get("stale"))
+    payload={"updated_at":refreshed_at,"status":"Daily retailer refresh; last-known offers are marked stale when a source refresh is incomplete","source_status":source_status,"fresh_offer_count":fresh_offer_count,"stale_offer_count":stale_offer_count,"phones":phones,"store_count":len({pr["store"] for p in phones for pr in p["prices"]}),"price_count":sum(len(p["prices"]) for p in phones)}
+    status_doc={"updated_at":refreshed_at,"date":TODAY,"schedule":"daily","model_variants":len(phones),"fresh_offers":fresh_offer_count,"stale_offers":stale_offer_count,"stores":source_status}
+    STATUS_OUT.parent.mkdir(parents=True,exist_ok=True)
+    STATUS_OUT.write_text(json.dumps(status_doc,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print(f'Wrote {len(phones)} model variants and {payload["price_count"]} store prices')
+    print(f'Wrote {len(phones)} model variants; {fresh_offer_count} fresh and {stale_offer_count} last-known stale store offers')
     if not phones: raise SystemExit("No product variants extracted; refusing to overwrite the catalogue.")
 if __name__=="__main__": main()
