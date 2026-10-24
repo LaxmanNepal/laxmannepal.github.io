@@ -276,7 +276,7 @@ def page_template(p):
     spec_rows += "".join(f'<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>' for k,v in (p.get("specifications") or {}).items() if v and k.lower() not in seen_labels)
     image=p.get("image") or ""
     jsonld={"@context":"https://schema.org","@type":"Product","name":title,"image":[image] if image else [],"brand":{"@type":"Brand","name":p.get("brand","Other")},"description":f"{title} Nepal price comparison, specifications and retailer offers.","url":canonical}
-    if best: jsonld["offers"]={"@type":"AggregateOffer","priceCurrency":"NPR","lowPrice":best["price"],"offerCount":len(prices),"availability":"https://schema.org/InStock","url":best["url"]}
+    if best: jsonld["offers"]={"@type":"AggregateOffer","priceCurrency":"NPR","lowPrice":best["price"],"offerCount":len(prices),"url":best["url"]}
     structured=json.dumps(jsonld,ensure_ascii=False).replace("</","<\\/")
     image_html=f'<img src="{esc(image)}" alt="{esc(title)} smartphone" loading="eager">' if image else '<div class="placeholder">📱</div>'
     best_html=f'Rs. {best["price"]:,}' if best else 'No verified retailer price yet'
