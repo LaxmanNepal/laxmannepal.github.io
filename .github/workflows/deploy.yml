@@ -83,6 +83,8 @@ jobs:
         run: node --test tests/nepali-romanized.test.cjs
       - name: Test typing-practice metrics
         run: node --test tests/nepali-typing-practice.test.cjs
+      - name: Test Preeti converter
+        run: node --test tests/preeti-unicode-converter.test.cjs
       - name: Install browser-test dependency
         run: npm install --prefix /tmp/typing-browser playwright
       - name: Install Chromium for browser tests
@@ -288,6 +290,13 @@ jobs:
           test -s .pages/tools/nepali-tools/nepali-typing-practice/app.js
           test -s .pages/tools/nepali-tools/nepali-typing-practice/metrics.js
           grep -q 'Practice Nepali Typing' .pages/tools/nepali-tools/nepali-typing-practice/index.html
+      - name: Verify Preeti converter artifact
+        run: |
+          test -s .pages/tools/nepali-tools/preeti-unicode-converter/index.html
+          test -s .pages/tools/nepali-tools/preeti-unicode-converter/app.js
+          test -s .pages/tools/nepali-tools/preeti-unicode-converter/engine.js
+          test -s .pages/tools/nepali-tools/preeti-unicode-converter/LICENSE-PREETI
+          grep -q 'Preeti ↔ Unicode Converter' .pages/tools/nepali-tools/preeti-unicode-converter/index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
