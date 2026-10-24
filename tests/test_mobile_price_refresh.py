@@ -53,7 +53,7 @@ class MobilePriceRefreshTests(unittest.TestCase):
     def test_model_with_only_last_known_prices_is_explicitly_stale(self):
         previous = [{
             "slug": "phone-old", "brand": "Example", "model": "Phone Old",
-            "price": 14000, "best_store": "Store B",
+            "price": 14000, "best_store": "Store B", "updated_at": "2026-10-20",
             "prices": [{"store": "Store B", "price": 14000, "checked_at": "2026-10-20"}],
         }]
         merged = MODULE.merge_previous_catalogue(
@@ -63,7 +63,7 @@ class MobilePriceRefreshTests(unittest.TestCase):
         self.assertTrue(merged[0]["price_is_stale"])
         self.assertEqual(merged[0]["price"], 14000)
         self.assertTrue(merged[0]["prices"][0]["stale"])
-        self.assertEqual(merged[0]["updated_at"], "2026-10-25") if not previous[0].get("updated_at") else None
+        self.assertEqual(merged[0]["updated_at"], "2026-10-20")
 
     def test_fresh_offers_override_stale_copy_for_same_store(self):
         previous = [{
