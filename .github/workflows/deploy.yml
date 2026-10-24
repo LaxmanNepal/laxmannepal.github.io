@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v6
       - name: Validate mobile price data, Python and JavaScript
         run: |
-          python3 -m py_compile scripts/refresh-mobile-prices.py scripts/generate_seo.py
+          python3 -m py_compile scripts/refresh-mobile-prices.py scripts/validate-mobile-prices.py scripts/generate_seo.py
           python3 -m json.tool data/mobile-prices.json > /dev/null
           python3 -m json.tool data/mobile-price-history.json > /dev/null
           python3 - <<'PY'
@@ -44,8 +44,9 @@ jobs:
           phones = data.get("phones", [])
           assert phones, "Mobile price catalogue must not be empty"
           assert len({p.get("slug") for p in phones}) == len(phones), "Phone slugs must be unique"
-          assert data.get("price_count") == sum(len(p.get("prices", [])) for p in phones), "Offer count mismatch"
-          assert data.get("store_count") == len({o.get("store") for p in phones for o in p.get("prices", [])}), "Store count mismatch"
+          valid_offers = [o for p in phones for o in p.get("prices", []) if isinstance(o, dict) and isinstance(o.get("price"), (int, float)) and not isinstance(o.get("price"), bool) and o.get("price") > 0 and o.get("store")]
+          assert data.get("price_count") == len(valid_offers), "Offer count mismatch: metadata must equal valid priced offers"
+          assert data.get("store_count") == len({o.get("store") for o in valid_offers}), "Store count mismatch: count stores with valid priced offers"
           class ScriptParser(HTMLParser):
               def __init__(self):
                   super().__init__()
@@ -74,6 +75,8 @@ jobs:
           print(f"Validated {len(phones)} phone variants, {data['price_count']} offers, {data['store_count']} stores.")
           PY
           for file in /tmp/mobile-price-inline-*.js; do node --check "$file"; done
+      - name: Test mobile price validation and history consistency
+        run: python3 -m unittest discover -s tests -p "test_mobile_price_validation.py"
       - name: Test Nepali typing range regression
         run: node --test tests/nepali-typing-range.test.cjs
       - name: Test offline Romanized engine
