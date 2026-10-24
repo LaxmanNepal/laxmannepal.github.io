@@ -15,7 +15,7 @@
   document.title=c.name+' Post Card Designer | Laxman Nepal';
   $('platformName').textContent=c.name;$('eyebrow').textContent='✦ '+c.name.toUpperCase()+' CARD DESIGNER';
   $('pageTitle').textContent=c.name+' Post Card Designer';
-  $('pageDescription').textContent='Design a customizable '+c.name+'-inspired post card inside your own frame. Adjust proportions, spacing, colors, shadows and text fit, then export a PNG.';
+  $('pageDescription').textContent='Design a customizable '+c.name+'-inspired post card inside your own frame. Adjust proportions, spacing, colors, shadows and text fit, then export a high-resolution image.';
   $('usernameLabel').textContent=c.usernameLabel;
   const defaultContext={twitter:'· 2h',facebook:'2h · 🌐 Public',instagram:'2h · 🌐',linkedin:'Creator • Tech & AI · 2h · 🌐',threads:'· 2h',youtube:'2 hours ago · Public'};
   $('postContext').value=defaultContext[platform]||'2h · Public';
@@ -160,15 +160,27 @@
     $('nameCount').textContent='12/50';$('userCount').textContent='12/40';$('messageCount').textContent=$('message').value.length+'/10000';
     $('outName').textContent='Laxman Nepal';$('outUsername').textContent='@laxmannepal';$('outMessage').textContent='your post show here ,';apply();
   });
+  const exportFormat=$('exportFormat');
+  const exportLabels={png:'PNG',jpeg:'JPG',webp:'WebP'};
+  function syncExportLabel(){ $('downloadBtn').textContent='Download '+(exportLabels[exportFormat.value]||'JPG'); }
+  exportFormat.addEventListener('change',syncExportLabel);
+  syncExportLabel();
   $('downloadBtn').addEventListener('click',async()=>{
     const button=$('downloadBtn');
-    if(typeof window.html2canvas!=='function'){alert('PNG export is loading. Please try again in a moment.');return;}
-    button.disabled=true;button.textContent='Preparing PNG…';
+    if(typeof window.html2canvas!=='function'){alert('The image export library is still loading. Please try again in a moment.');return;}
+    const format=exportFormat.value;
+    const mime={png:'image/png',jpeg:'image/jpeg',webp:'image/webp'}[format]||'image/jpeg';
+    const extension={png:'png',jpeg:'jpg',webp:'webp'}[format]||'jpg';
+    button.disabled=true;button.textContent='Preparing '+(exportLabels[format]||'JPG')+'…';
     try{
-      const canvas=await window.html2canvas(frame,{scale:2,backgroundColor:null,useCORS:true,logging:false});
-      const link=document.createElement('a');link.download='laxman-nepal-'+platform+'-post-card.png';link.href=canvas.toDataURL('image/png');link.click();
-    }catch(error){alert('PNG export failed. Please try a smaller frame or profile picture.');}
-    finally{button.disabled=false;button.textContent='Download PNG';}
+      const canvas=await window.html2canvas(frame,{scale:3,backgroundColor:format==='jpeg'?'#ffffff':null,useCORS:true,allowTaint:false,logging:false,windowWidth:Math.max(document.documentElement.clientWidth,frame.scrollWidth)});
+      const dataUrl=canvas.toDataURL(mime,format==='png'?undefined:0.94);
+      // Some browsers may not support WebP encoding; detect fallback rather than
+      // silently saving a PNG/JPG with the wrong extension.
+      if(format==='webp'&&!dataUrl.startsWith('data:image/webp'))throw new Error('WebP export is not supported by this browser.');
+      const link=document.createElement('a');link.download='laxman-nepal-'+platform+'-post-card.'+extension;link.href=dataUrl;link.click();
+    }catch(error){alert((error&&error.message&&error.message.includes('WebP'))?'WebP export is not supported in this browser. Try JPG or PNG.':'Image export failed. Try a smaller frame or a locally uploaded profile picture.');}
+    finally{button.disabled=false;syncExportLabel();}
   });
   apply();
 })();
