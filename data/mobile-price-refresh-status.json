@@ -1,18 +1,20 @@
 {
-  "updated_at": "2026-10-24T22:58:54.477851+00:00",
-  "date": "2026-10-24",
+  "updated_at": "2026-10-25T06:15:19.385745+00:00",
+  "date": "2026-10-25",
   "schedule": "daily",
   "model_variants": 282,
-  "fresh_offers": 282,
-  "stale_offers": 0,
+  "fresh_offers": 113,
+  "stale_offers": 169,
   "stores": {
     "Brother Mart": {
-      "candidates": 420,
-      "priced_offers_found": 169,
+      "candidates": 0,
+      "priced_offers_found": 0,
       "previous_offers": 169,
       "minimum_expected_offers": 60,
-      "status": "complete",
-      "errors": []
+      "status": "stale",
+      "errors": [
+        "https://brother-mart.com/collections/smartphones-mobilephones-price-in-nepal: ConnectionError: HTTPSConnectionPool(host='brother-mart.com', port=443): Max retries exceeded with url: /collections/smartphones-mobilephones-price-in-nepal (Caused by NameResolutionError(\"HTTPSConnection(host='brother-mart.com', port=443): Failed to resolve 'brother-mart.com' ([Errno -2] Name or service not known)\"))"
+      ]
     },
     "Daraz": {
       "candidates": 0,
@@ -23,10 +25,10 @@
       "errors": []
     },
     "GBN Store": {
-      "candidates": 204,
+      "candidates": 203,
       "priced_offers_found": 100,
-      "previous_offers": 53,
-      "minimum_expected_offers": 19,
+      "previous_offers": 100,
+      "minimum_expected_offers": 35,
       "status": "complete",
       "errors": []
     },
