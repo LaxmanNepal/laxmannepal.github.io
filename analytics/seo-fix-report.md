@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-10-25T16:32:19.228586+00:00.
+Generated from the latest analytics snapshot: 2026-10-25T20:58:06.076417+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -95,16 +95,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/image prompt.html
 - Top queries: No page-query rows
 
-### /p/about.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/about.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/about.html
-- Top queries: No page-query rows
-
 ### /p/cookies-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -113,6 +103,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/cookies policy.html
+- Top queries: No page-query rows
+
+### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/01/25 trusted sites that pay in usd for.html | Laxman…
+- Current description: Missing
+- Recommended description: Learn about 2025/01/25 trusted sites that pay in usd for.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/01/25 trusted sites that pay in usd for.html
+- Top queries: No page-query rows
+
+### /p/about.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/about.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/about.html
 - Top queries: No page-query rows
 
 ### /p/terms-and-conditions.html — SEO score 0/100
@@ -155,16 +165,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/09/convert image to pdf free tools.html
 - Top queries: No page-query rows
 
-### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/01/25 trusted sites that pay in usd for.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2025/01/25 trusted sites that pay in usd for.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/01/25 trusted sites that pay in usd for.html
-- Top queries: No page-query rows
-
 ### /p/disclaimer.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -205,16 +205,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/10/top 20 websites for modded apks your.html
 - Top queries: No page-query rows
 
-### /2025/07/free-online-courses-by-laxman-nepal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/07/free online courses by laxman nepal.html | Laxman N…
-- Current description: Missing
-- Recommended description: Learn about 2025/07/free online courses by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/07/free online courses by laxman nepal.html
-- Top queries: No page-query rows
-
 ### /p/privacy-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -243,6 +233,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/06/facebook video downloader save hd.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/06/facebook video downloader save hd.html
+- Top queries: No page-query rows
+
+### /2025/07/free-online-courses-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/07/free online courses by laxman nepal.html | Laxman N…
+- Current description: Missing
+- Recommended description: Learn about 2025/07/free online courses by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/07/free online courses by laxman nepal.html
 - Top queries: No page-query rows
 
 ### /2023/01/how-to-extract-youtube-video-title.html — SEO score 0/100
@@ -355,16 +355,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/03/top 8 free alternatives to paid software.html
 - Top queries: No page-query rows
 
-### /2025/05/12-free-ai-tools-2025.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/05/12 free ai tools 2025.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2025/05/12 free ai tools 2025.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/05/12 free ai tools 2025.html
-- Top queries: No page-query rows
-
 ### /p/laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -465,6 +455,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/04/best free image to pdf converter online.html
 - Top queries: No page-query rows
 
+### /2025/05/12-free-ai-tools-2025.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/05/12 free ai tools 2025.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2025/05/12 free ai tools 2025.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/05/12 free ai tools 2025.html
+- Top queries: No page-query rows
+
+### /2025/07/qr-code-generator.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/07/qr code generator.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2025/07/qr code generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/07/qr code generator.html
+- Top queries: No page-query rows
+
 ### /p/laxman-nepal-personal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -533,16 +543,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/06/html live editor online free real time.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/06/html live editor online free real time.html
-- Top queries: No page-query rows
-
-### /2025/07/qr-code-generator.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/07/qr code generator.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2025/07/qr code generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/07/qr code generator.html
 - Top queries: No page-query rows
 
 ### /ai.html — SEO score 0/100
@@ -945,6 +945,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: jobs/roster of field technicians for nwash data collection and verifi…
 - Top queries: No page-query rows
 
+### /laptop-prices-in-nepal/ — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: laptop prices in nepal | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about laptop prices in nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: laptop prices in nepal
+- Top queries: No page-query rows
+
 ### /news/khabardhara-premium.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1033,6 +1043,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/youtube video download by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/youtube video download by laxman nepal.html
+- Top queries: No page-query rows
+
+### /recent-movies — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: recent movies | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about recent movies with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: recent movies
 - Top queries: No page-query rows
 
 ### /topics/idea-06.html — SEO score 0/100
