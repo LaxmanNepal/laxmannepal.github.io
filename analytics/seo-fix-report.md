@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-10-24T20:57:06.832418+00:00.
+Generated from the latest analytics snapshot: 2026-10-25T04:53:27.032033+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -945,16 +945,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: jobs/roster of field technicians for nwash data collection and verifi…
 - Top queries: No page-query rows
 
-### /laptop-price-in-nepal — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: laptop price in nepal | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about laptop price in nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: laptop price in nepal
-- Top queries: No page-query rows
-
 ### /news/khabardhara-premium.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1155,6 +1145,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Explore more apps
 - Top queries: No page-query rows
 
+### /laptop-price-in-nepal/laptops/ — SEO score 55/100
+- Issues: Title length 22, Description length 45, Thin content (82 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptops | Laxman Nepal
+- Recommended title: Laptops | Laxman Nepal | Laxman Nepal
+- Current description: Search and filter laptops available in Nepal.
+- Recommended description: Learn about Laptops | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptops | Laxman Nepal
+- Top queries: No page-query rows
+
 ### /2026/07/youtube-channel-analytics-pro.html — SEO score 55/100
 - Issues: Description length 51, Noindex, Thin content (93 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1325,6 +1325,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Gold & silver rates in Nepal
 - Top queries: No page-query rows
 
+### /laptop-price-in-nepal/ — SEO score 70/100
+- Issues: Title length 61, Thin content (96 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop Price in Nepal | Compare Specs & Stores | Laxman Nepal
+- Recommended title: Laptop Price in Nepal | Compare Specs & Stores | Laxman Nep…
+- Current description: Compare laptop prices in Nepal by brand, processor, RAM, SSD, GPU, budget and store. See specifications and jump directly to the retailer.
+- Recommended description: Learn about Laptop Price in Nepal | Compare Specs & Stores | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop Price in Nepal | Compare Specs & Stores | Laxman Nepal
+- Top queries: No page-query rows
+
 ### /laxman-tools/ — SEO score 70/100
 - Issues: Description length 34, Thin content (85 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1445,16 +1455,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Slowed + Reverb
 - Top queries: No page-query rows
 
-### /tools/nepali-tools/ — SEO score 70/100
-- Issues: Title length 27, Thin content (128 words)
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Nepali Tools — Laxman Nepal
-- Recommended title: Nepali Tools | Laxman Nepal
-- Current description: Free Nepali language tools, including an online Nepali Unicode typing tool.
-- Recommended description: Learn about Nepali Tools with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Nepali Tools
-- Top queries: No page-query rows
-
 ### /youtube-video-seo-analyzer.html — SEO score 70/100
 - Issues: Title length 65, Thin content (120 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1543,6 +1543,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Digital Presence Tool
 - Recommended description: Learn about QR Generator Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: QR Generator Pro
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal — SEO score 70/100
+- Issues: Title length 61, Thin content (96 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop Price in Nepal | Compare Specs & Stores | Laxman Nepal
+- Recommended title: Laptop Price in Nepal | Compare Specs & Stores | Laxman Nep…
+- Current description: Compare laptop prices in Nepal by brand, processor, RAM, SSD, GPU, budget and store. See specifications and jump directly to the retailer.
+- Recommended description: Learn about Laptop Price in Nepal | Compare Specs & Stores | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop Price in Nepal | Compare Specs & Stores | Laxman Nepal
 - Top queries: No page-query rows
 
 ### /2022/09/kalimati-font-download-by-laxman-nepal.html — SEO score 85/100
@@ -1993,6 +2003,106 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Kalimati / Preeti-style Nepali typing format with searchable keys, matras, half letters, punctuation, symbols and Alt codes.
 - Recommended description: Learn about Kalimati Format Keyboard Chart with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Kalimati Format Keyboard Chart
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal/brands/ — SEO score 85/100
+- Issues: Thin content (88 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop Brands in Nepal | Laxman Nepal
+- Recommended title: Laptop Brands in Nepal | Laxman Nepal | Laxman Nepal
+- Current description: Practical tools, AI resources, tutorials and useful digital guides built by Laxman Nepal.
+- Recommended description: Learn about Laptop Brands in Nepal | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop Brands in Nepal | Laxman Nepal
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal/compare/ — SEO score 85/100
+- Issues: Thin content (84 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Compare Laptops | Laxman Nepal
+- Recommended title: Compare Laptops | Laxman Nepal | Laxman Nepal
+- Current description: Practical tools, AI resources, tutorials and useful digital guides built by Laxman Nepal.
+- Recommended description: Learn about Compare Laptops | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Compare Laptops | Laxman Nepal
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal/laptops/acer-aspire-5-i5-1235u-rtx2050/ — SEO score 85/100
+- Issues: Thin content (89 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop Price in Nepal | Laxman Nepal
+- Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
+- Current description: Laptop price, specifications, store comparison and buying links in Nepal.
+- Recommended description: Learn about Laptop Price in Nepal | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop Price in Nepal | Laxman Nepal
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal/laptops/acer-nitro-v15-rtx4050/ — SEO score 85/100
+- Issues: Thin content (89 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop Price in Nepal | Laxman Nepal
+- Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
+- Current description: Laptop price, specifications, store comparison and buying links in Nepal.
+- Recommended description: Learn about Laptop Price in Nepal | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop Price in Nepal | Laxman Nepal
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal/laptops/asus-vivobook-14-i5-1335u-8-512/ — SEO score 85/100
+- Issues: Thin content (89 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop Price in Nepal | Laxman Nepal
+- Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
+- Current description: Laptop price, specifications, store comparison and buying links in Nepal.
+- Recommended description: Learn about Laptop Price in Nepal | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop Price in Nepal | Laxman Nepal
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal/laptops/dell-dc15250-i5-13th-8-512/ — SEO score 85/100
+- Issues: Thin content (89 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop Price in Nepal | Laxman Nepal
+- Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
+- Current description: Laptop price, specifications, store comparison and buying links in Nepal.
+- Recommended description: Learn about Laptop Price in Nepal | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop Price in Nepal | Laxman Nepal
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal/laptops/dell-inspiron-3535-ryzen7-16-512/ — SEO score 85/100
+- Issues: Thin content (89 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop Price in Nepal | Laxman Nepal
+- Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
+- Current description: Laptop price, specifications, store comparison and buying links in Nepal.
+- Recommended description: Learn about Laptop Price in Nepal | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop Price in Nepal | Laxman Nepal
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal/laptops/hp-pavilion-15-i5-1335u-16-512/ — SEO score 85/100
+- Issues: Thin content (89 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop Price in Nepal | Laxman Nepal
+- Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
+- Current description: Laptop price, specifications, store comparison and buying links in Nepal.
+- Recommended description: Learn about Laptop Price in Nepal | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop Price in Nepal | Laxman Nepal
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal/laptops/lenovo-ideapad-slim-3-i5-12450h-16-512/ — SEO score 85/100
+- Issues: Thin content (89 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop Price in Nepal | Laxman Nepal
+- Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
+- Current description: Laptop price, specifications, store comparison and buying links in Nepal.
+- Recommended description: Learn about Laptop Price in Nepal | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop Price in Nepal | Laxman Nepal
+- Top queries: No page-query rows
+
+### /laptop-price-in-nepal/stores/ — SEO score 85/100
+- Issues: Thin content (88 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop Stores in Nepal | Laxman Nepal
+- Recommended title: Laptop Stores in Nepal | Laxman Nepal | Laxman Nepal
+- Current description: Practical tools, AI resources, tutorials and useful digital guides built by Laxman Nepal.
+- Recommended description: Learn about Laptop Stores in Nepal | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop Stores in Nepal | Laxman Nepal
 - Top queries: No page-query rows
 
 ### /laptops/ — SEO score 85/100
@@ -5163,6 +5273,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Terms of use for the Laxman Nepal website, browser-based tools, tutorials and digital resources.
 - Recommended description: Learn about Terms of use. with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Terms of use.
+- Top queries: No page-query rows
+
+### /tools/nepali-tools/ — SEO score 85/100
+- Issues: Title length 27
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Nepali Tools — Laxman Nepal
+- Recommended title: Nepali Tools | Laxman Nepal
+- Current description: Free Nepali language tools, including an online Nepali Unicode typing tool.
+- Recommended description: Learn about Nepali Tools with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Nepali Tools
+- Top queries: No page-query rows
+
+### /tools/nepali-tools/preeti-unicode-converter/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Preeti to Unicode Converter — Nepali Font Converter | Laxman Nepa
+- Recommended title: Preeti ↔ Unicode Converter | Laxman Nepal
+- Current description: Convert legacy Nepali Preeti font text to Unicode and Unicode Nepali back to Preeti in your browser. Local conversion with before-and-after preview.
+- Recommended description: Learn about Preeti ↔ Unicode Converter with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Preeti ↔ Unicode Converter
 - Top queries: No page-query rows
 
 ### /tools/nepali-tools/type-nepali/ — SEO score 85/100
