@@ -10,8 +10,21 @@
     "seo_audit": "ok",
     "snapshot": "ok"
   },
-  "updatedAt": "2026-10-25T11:42:21.452749+00:00",
+  "updatedAt": "2026-10-25T16:32:19.316055+00:00",
   "history": [
+    {
+      "status": "success",
+      "stage": "complete",
+      "message": "GA4 + Search Console sync completed successfully.",
+      "checks": {
+        "credentials": "ok",
+        "ga4": "ok",
+        "search_console": "ok",
+        "seo_audit": "ok",
+        "snapshot": "ok"
+      },
+      "updatedAt": "2026-10-25T16:32:19.316055+00:00"
+    },
     {
       "status": "success",
       "stage": "complete",
@@ -138,15 +151,6 @@
         "credentials": "ok"
       },
       "updatedAt": "2026-10-23T22:35:16.244707+00:00"
-    },
-    {
-      "status": "failed",
-      "stage": "search_console",
-      "message": "\"code\": 403,",
-      "checks": {
-        "credentials": "ok"
-      },
-      "updatedAt": "2026-10-23T22:31:34.988219+00:00"
     }
   ]
 }

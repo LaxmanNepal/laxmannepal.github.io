@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-10-25T11:42:21.359514+00:00.
+Generated from the latest analytics snapshot: 2026-10-25T16:32:19.228586+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
