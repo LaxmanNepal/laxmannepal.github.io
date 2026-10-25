@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-10-25T04:53:27.032033+00:00.
+Generated from the latest analytics snapshot: 2026-10-25T11:42:21.359514+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -3438,11 +3438,11 @@ This report is review-only. It does not modify published pages. Recommendations 
 ### /mobile-price-in-nepal/phones/poco-f8-pro/ — SEO score 85/100
 - Issues: Title length 63
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: POCO F8 Pro Price in Nepal, Specs & Store Offers | Laxman Nepal
-- Recommended title: POCO F8 Pro Price in Nepal | Laxman Nepal
-- Current description: Compare POCO F8 Pro price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about POCO F8 Pro Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: POCO F8 Pro Price in Nepal
+- Current title: Poco F8 Pro Price in Nepal, Specs & Store Offers | Laxman Nepal
+- Recommended title: Poco F8 Pro Price in Nepal | Laxman Nepal
+- Current description: Compare Poco F8 Pro price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Poco F8 Pro Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Poco F8 Pro Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/poco-m8-pro-5g-8gb-256gb/ — SEO score 85/100
