@@ -1,5 +1,6 @@
 'use client';
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const nav = [
   ["Home", "/"], ["Tools", "/tools/"], ["AI Tools", "/ai-tools/"],
@@ -10,11 +11,12 @@ const mobile = [["🏠 Home", "/"], ["🧰 Tools", "/tools/"], ["✨ AI Tools", 
 
 export default function SharedShell({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
   return <>
     <header className="shared-header" data-shared-shell="header">
       <a className="shared-brand" href="/" aria-label="Laxman Nepal home"><span className="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Blog · YouTube</small></span></a>
       <nav className="shared-desktop-nav" aria-label="Main menu">
-        {nav.map(([label, href]) => <a key={href} href={href} aria-current={href === "/news/" ? "page" : undefined}>{label}</a>)}
+        {nav.map(([label, href]) => <a key={href} href={href} aria-current={pathname === href || (href !== "/" && pathname.startsWith(href)) ? "page" : undefined}>{label}</a>)}
         <details className="nav-dropdown"><summary>Explore</summary><div className="nav-dropdown-menu">{explore.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</div></details>
       </nav>
       <div className="shared-actions">
