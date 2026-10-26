@@ -286,7 +286,10 @@ test('Enter accepts the currently highlighted suggestion without inserting a new
     await editor.fill('namaste');
     await page.locator('.suggestion').filter({ hasText: 'नमस्ते' }).first().waitFor();
     await editor.press('ArrowDown');
-    const selected = await page.locator('.suggestion[aria-selected="true"]').first().textContent();
+    const selectedButton = page.locator('.suggestion[aria-selected="true"]').first();
+    const selected = await selectedButton.textContent();
+    const selectedIndex = await selectedButton.evaluate(el => [...el.parentElement.querySelectorAll('.suggestion')].indexOf(el));
+    assert.equal(selectedIndex, 1, 'ArrowDown should keep the second suggestion selected after keyup');
     await editor.press('Enter');
     assert.equal(await editor.inputValue(), selected.replace(/\\s*\\d+\\s*$/, '').trim());
     assert.equal(await editor.inputValue(), 'नमस्ते');
