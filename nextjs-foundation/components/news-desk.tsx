@@ -61,7 +61,7 @@ export default function NewsDesk() {
       <div className="newsdesk-kicker"><span className="newsdesk-live-dot"/> NEWSROOM · UPDATED AUTOMATICALLY</div>
       <h1>What’s happening.<br/><span>In Nepal and beyond.</span></h1>
       <p>One place for the past seven days of Nepal, world, technology, business, politics, science, sports, entertainment and trending stories. Every headline links to its original publisher.</p>
-      <div className="newsdesk-meta"><span>{stories.length.toLocaleString()} recent stories · 7-day window</span><span>Feed updated {refreshed}</span><button className="newsdesk-refresh" onClick={()=>void refresh()} disabled={loading} type="button}>{loading?"Refreshing…":"↻ Refresh news"}</button></div>
+      <div className="newsdesk-meta"><span>{stories.length.toLocaleString()} recent stories · 7-day window</span><span>Feed updated {refreshed}</span><button className="newsdesk-refresh" onClick={()=>void refresh()} disabled={loading} type="button">{loading?"Refreshing…":"↻ Refresh news"}</button></div>
     </section>
     <section className="newsdesk-controls" aria-label="Search and filter news">
       <label className="newsdesk-search"><span aria-hidden="true">⌕</span><input type="search" value={query} onChange={e=>{setQuery(e.target.value);setLimit(PAGE_SIZE);}} placeholder="Search headlines, topics or publishers…" aria-label="Search headlines, topics or publishers"/></label>
