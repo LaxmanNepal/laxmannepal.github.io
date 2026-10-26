@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-25T06:15:19.385745+00:00",
-  "date": "2026-10-25",
+  "updated_at": "2026-10-26T06:23:29.696624+00:00",
+  "date": "2026-10-26",
   "schedule": "daily",
   "model_variants": 282,
   "fresh_offers": 113,
@@ -25,7 +25,7 @@
       "errors": []
     },
     "GBN Store": {
-      "candidates": 203,
+      "candidates": 204,
       "priced_offers_found": 100,
       "previous_offers": 100,
       "minimum_expected_offers": 35,
