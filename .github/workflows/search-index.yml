@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: search-index-\${{ github.ref }}
+  group: search-index-main
   cancel-in-progress: false
 
 jobs:
