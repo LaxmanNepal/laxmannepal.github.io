@@ -30,7 +30,7 @@ def apply_shell(path: Path):
         return False
     # Next.js routes already render the native site header, navigation and footer from app/layout.tsx.
     # Do not inject the legacy shell on top of those pages or visitors see duplicate navigation.
-    if re.search(r'<header\b[^>]*class=["\'][^"\']*\bsite-header\b', text, flags=re.I):
+    if re.search(r'<header\b[^>]*class=["\'][^"\']*\b(?:site-header|shared-header)\b', text, flags=re.I):
         return False
     text = re.sub(r'<header\s+class=["\']shared-header["\'][^>]*>.*?</header>', '', text, count=0, flags=re.I | re.S)
     # Remove every previous shared mobile menu and backdrop. Older pages can place the backdrop outside the nav.
