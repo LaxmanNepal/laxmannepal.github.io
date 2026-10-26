@@ -1,0 +1,51 @@
+name: Search index and search UI tests
+
+on:
+  pull_request:
+    paths:
+      - "search/**"
+      - "scripts/generate_search_index.py"
+      - "tests/test_search_index.py"
+      - ".github/workflows/search-tests.yml"
+  push:
+    branches: [main]
+    paths:
+      - "search/**"
+      - "scripts/generate_search_index.py"
+      - "tests/test_search_index.py"
+      - ".github/workflows/search-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  search-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Test search-index extraction
+        run: python -m unittest discover -s tests -p "test_search_index.py" -v
+      - name: Validate generated index
+        run: |
+          python scripts/generate_search_index.py
+          python -m json.tool search-index.json > /dev/null
+      - name: Check search page JavaScript syntax
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          html = Path("search/index.html").read_text(encoding="utf-8")
+          scripts = re.findall(r"<script(?:\s[^>]*)?>(.*?)</script>", html, re.I | re.S)
+          inline = [s for s in scripts if s.strip()]
+          if not inline:
+              raise SystemExit("No inline search script found")
+          Path("/tmp/search-inline.js").write_text("\n;".join(inline), encoding="utf-8")
+          PY
+          node --check /tmp/search-inline.js
