@@ -42,6 +42,9 @@ FEEDS = [
     ("Sports", "Nepal sports", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepal cricket football sports when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
     ("Entertainment", "Nepali entertainment", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepali movies music entertainment when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
     ("Trending", "World news in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('विश्व समाचार अन्तर्राष्ट्रिय विदेश when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Health", "Nepal health in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('नेपाल स्वास्थ्य अस्पताल औषधि when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Education", "Nepal education in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('नेपाल शिक्षा विद्यालय विश्वविद्यालय when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Science", "Nepal science in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('नेपाल विज्ञान अनुसन्धान वातावरण when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
 ]
 def local_name(tag: str) -> str:
     return tag.rsplit("}", 1)[-1].lower()
