@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import NewsDesk from "@/components/news-desk";
 
 export const metadata: Metadata = {
@@ -13,6 +15,17 @@ export const metadata: Metadata = {
   },
 };
 
+type Feed = { generated_at?: string; story_count?: number; stories?: Array<Record<string, unknown>> };
+
 export default function Page() {
-  return <NewsDesk />;
+  let initialStories: Feed["stories"] = [];
+  let initialGeneratedAt = "";
+  try {
+    const feed = JSON.parse(readFileSync(join(process.cwd(), "../news/news-feed.json"), "utf8")) as Feed;
+    initialStories = (feed.stories || []).slice(0, 60);
+    initialGeneratedAt = feed.generated_at || "";
+  } catch {
+    // Keep the page buildable if a first-time feed has not been generated yet.
+  }
+  return <NewsDesk initialStories={initialStories} initialGeneratedAt={initialGeneratedAt} />;
 }
