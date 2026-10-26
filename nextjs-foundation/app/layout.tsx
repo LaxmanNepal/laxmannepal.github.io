@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="ne"><head><link rel="stylesheet" href="/assets/css/shared-shell.css" /></head><body><SharedShell>{children}</SharedShell></body></html>;
+  return <html lang="en"><head><link rel="stylesheet" href="/assets/css/shared-shell.css" /></head><body><SharedShell>{children}</SharedShell></body></html>;
 }
