@@ -151,3 +151,46 @@
   .intelligence-recommended .post-grid{grid-template-columns:1fr}
   .intel-item,.trend-item{grid-template-columns:28px 1fr auto;padding:12px 9px}
 }
+
+
+/* Automated seven-day digital news desk */
+.newsdesk{padding-top:42px;padding-bottom:64px}
+.newsdesk-hero{padding:32px 0 26px}
+.newsdesk-kicker,.newsdesk-label{display:flex;align-items:center;gap:9px;color:#667085;font-size:10px;font-weight:900;letter-spacing:.13em}
+.newsdesk-live-dot{width:8px;height:8px;display:inline-block;border-radius:50%;background:#16a34a;box-shadow:0 0 0 4px #dcfce7}
+.newsdesk-hero h1{font-size:clamp(44px,7vw,82px);line-height:.96;letter-spacing:-.068em;margin:20px 0 16px;max-width:1000px}
+.newsdesk-hero h1 span{color:#7b8493}.newsdesk-hero>p{max-width:790px;color:var(--muted);font-size:17px;line-height:1.75;margin:0}
+.newsdesk-meta{display:flex;align-items:center;gap:12px 20px;flex-wrap:wrap;margin-top:24px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:12px}
+.newsdesk-refresh,.newsdesk-sort select{border:1px solid var(--border);border-radius:11px;background:#fff;padding:10px 13px;font:inherit;font-size:12px;font-weight:800;color:#344054}
+.newsdesk-refresh{cursor:pointer;margin-left:auto}.newsdesk-refresh:disabled{opacity:.55;cursor:wait}
+.newsdesk-controls{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:10px;margin:20px 0 12px}
+.newsdesk-search{display:flex;align-items:center;gap:10px;border:1px solid #d0d5dd;border-radius:13px;background:#fff;padding:0 15px;min-width:0;height:52px}
+.newsdesk-search>span{font-size:24px;color:#667085}.newsdesk-search input{border:0;outline:0;background:transparent;min-width:0;width:100%;height:100%;font:inherit;font-size:14px}
+.newsdesk-sort{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid var(--border);border-radius:13px;background:#fff;padding:0 10px;color:#667085;font-size:11px;font-weight:800}.newsdesk-sort select{border:0;padding:8px 2px;max-width:125px;outline:0}
+.newsdesk-tabs{display:flex;gap:7px;overflow-x:auto;padding:5px 0 17px;scrollbar-width:thin}
+.newsdesk-tabs button{display:flex;align-items:center;gap:7px;white-space:nowrap;border:1px solid var(--border);border-radius:999px;background:#fff;padding:9px 12px;color:#475467;font-size:11px;font-weight:850;cursor:pointer}
+.newsdesk-tabs button span{border-radius:999px;background:#f2f4f7;color:#667085;padding:2px 5px;font-size:9px}
+.newsdesk-tabs button.active{background:#111318;color:#fff;border-color:#111318}.newsdesk-tabs button.active span{background:#343741;color:#fff}
+.newsdesk-notice{margin:10px 0 20px;padding:14px 16px;border:1px solid #fed7aa;border-radius:13px;background:#fff7ed;color:#9a3412;font-size:13px;line-height:1.65}.newsdesk-notice button,.newsdesk-empty button{border:0;background:transparent;text-decoration:underline;font:inherit;font-weight:850;cursor:pointer;color:inherit}
+.newsdesk-featured{display:grid;grid-template-columns:1.1fr .9fr;min-height:300px;border:1px solid var(--border);border-radius:24px;background:#fff;overflow:hidden;margin:14px 0 36px}
+.newsdesk-featured-copy{padding:clamp(22px,4vw,42px);display:flex;align-items:flex-start;flex-direction:column}.newsdesk-category{display:inline-flex;align-items:center;border-radius:999px;padding:5px 8px;background:#eff6ff;color:#1d4ed8;font-size:10px;font-weight:900}
+.newsdesk-featured-copy>.newsdesk-category{margin-top:20px}.newsdesk-featured h2{font-size:clamp(24px,3vw,38px);line-height:1.14;letter-spacing:-.045em;margin:14px 0}.newsdesk-featured h2 a:hover,.newsdesk-card h3 a:hover{color:#1d4ed8}
+.newsdesk-featured-copy>p{color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 16px}.newsdesk-byline{display:flex;flex-wrap:wrap;gap:8px 16px;color:#667085;font-size:11px;margin-top:auto;padding-top:10px}.newsdesk-read-link{margin-top:17px;font-size:12px;font-weight:900}
+.newsdesk-featured-image,.newsdesk-featured-art{display:flex;min-height:270px;background:#171923;overflow:hidden}.newsdesk-featured-image img{width:100%;height:100%;min-height:300px;object-fit:cover}
+.newsdesk-featured-art{align-items:center;justify-content:center;flex-direction:column;gap:14px;background:radial-gradient(circle at 75% 20%,#34415b,#171923 55%)}.newsdesk-featured-art span{font-size:clamp(76px,12vw,140px);font-weight:950;letter-spacing:-.1em;color:#fff}.newsdesk-featured-art small{color:#cbd5e1;font-size:10px;font-weight:850;letter-spacing:.16em}
+.newsdesk-section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:0 0 16px}.newsdesk-section-head .newsdesk-label{margin-bottom:9px}.newsdesk-section-head h2{font-size:clamp(24px,3vw,32px);letter-spacing:-.045em;margin:0}.newsdesk-section-head p{color:var(--muted);font-size:12px;margin:7px 0 0}.newsdesk-section-head>strong{color:#667085;font-size:12px;white-space:nowrap}
+.newsdesk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.newsdesk-card{display:flex;flex-direction:column;min-width:0;border:1px solid var(--border);border-radius:18px;background:#fff;overflow:hidden;transition:transform .16s,box-shadow .16s}.newsdesk-card:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(16,24,40,.08)}
+.newsdesk-card-image,.newsdesk-card-placeholder{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;overflow:hidden;background:#eef1f5}.newsdesk-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .2s}.newsdesk-card:hover .newsdesk-card-image img{transform:scale(1.025)}
+.newsdesk-card-placeholder{font-size:28px;color:#98a2b3;background:linear-gradient(135deg,#f1f4f8,#e7ebf1)}.newsdesk-card-body{display:flex;flex:1;flex-direction:column;padding:16px}
+.newsdesk-card-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:11px}.newsdesk-card-meta time{font-size:10px;color:#98a2b3;white-space:nowrap}
+.newsdesk-card h3{font-size:16px;line-height:1.38;letter-spacing:-.025em;margin:0 0 9px}.newsdesk-card h3 a{transition:color .15s}.newsdesk-card-body>p{font-size:12px;line-height:1.65;color:var(--muted);margin:0 0 14px}
+.newsdesk-card-source{display:flex;align-items:end;justify-content:space-between;gap:8px;margin-top:auto;padding-top:12px;border-top:1px solid #f2f4f7;color:#667085;font-size:10px;line-height:1.45}.newsdesk-card-source a{flex-shrink:0;color:#111318;font-weight:900;white-space:nowrap}
+.newsdesk-more{display:block;margin:22px auto 0;padding:13px 18px;border:1px solid #111318;border-radius:12px;background:#111318;color:#fff;font:inherit;font-size:12px;font-weight:900;cursor:pointer}
+.newsdesk-empty{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:9px;padding:40px 18px;border:1px dashed #d0d5dd;border-radius:18px;color:var(--muted);text-align:center}.newsdesk-empty strong{color:#344054}
+.newsdesk-loading{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.newsdesk-loading i{height:260px;border-radius:18px;background:linear-gradient(100deg,#eef1f5,#fafbfc,#eef1f5);background-size:200% 100%;animation:newsdesk-shimmer 1.3s infinite}@keyframes newsdesk-shimmer{to{background-position:-200% 0}}
+.newsdesk-bottom{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;margin-top:58px;padding:30px;border:1px solid var(--border);border-radius:22px;background:#f0f2f5}
+.newsdesk-bottom h2{font-size:clamp(26px,3vw,36px);line-height:1.08;letter-spacing:-.05em;margin:14px 0 10px}.newsdesk-bottom p{max-width:350px;color:var(--muted);font-size:13px;line-height:1.7}
+.newsdesk-category-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.newsdesk-category-list button{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:12px;padding:12px;border:1px solid #e1e4e9;border-radius:12px;background:#fff;text-align:left;font:inherit;font-size:12px;cursor:pointer}.newsdesk-category-list button strong{font-size:11px;color:#667085}.newsdesk-category-list button:hover{border-color:#9ca3af}
+.newsdesk-disclaimer{margin:22px 0 0;color:#98a2b3;font-size:11px;line-height:1.7}
+@media(max-width:900px){.newsdesk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.newsdesk-featured{grid-template-columns:1fr}.newsdesk-featured-image,.newsdesk-featured-art{min-height:210px;max-height:320px;order:-1}.newsdesk-featured-image img{min-height:210px}.newsdesk-bottom{grid-template-columns:1fr;gap:12px}}
+@media(max-width:600px){.newsdesk{padding-top:24px;padding-bottom:42px}.newsdesk-hero{padding-top:20px}.newsdesk-hero h1{font-size:clamp(40px,12vw,58px)}.newsdesk-hero>p{font-size:14px}.newsdesk-meta{gap:10px}.newsdesk-refresh{margin-left:0}.newsdesk-controls{grid-template-columns:1fr}.newsdesk-sort{min-height:44px}.newsdesk-sort select{max-width:none}.newsdesk-grid,.newsdesk-loading{grid-template-columns:1fr}.newsdesk-card{display:grid;grid-template-columns:112px minmax(0,1fr)}.newsdesk-card-image,.newsdesk-card-placeholder{height:100%;min-height:155px;aspect-ratio:auto}.newsdesk-card-body{padding:12px}.newsdesk-card h3{font-size:14px}.newsdesk-card-body>p{font-size:11px}.newsdesk-card-source{font-size:9px}.newsdesk-section-head{align-items:start}.newsdesk-section-head>strong{padding-top:4px}.newsdesk-bottom{padding:20px}.newsdesk-category-list{grid-template-columns:1fr}.newsdesk-loading i{height:170px}}
