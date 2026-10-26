@@ -6,7 +6,7 @@ on:
     paths-ignore:
       - 'old/**'
   workflow_run:
-    workflows: ["Build and validate native blogs", "Sync Analytics Data"]
+    workflows: ["Build and validate native blogs", "Sync Analytics Data", "Refresh automated news feed"]
     types: [completed]
   workflow_dispatch:
   schedule:
