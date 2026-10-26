@@ -17,7 +17,9 @@ function clean(value: Story): Story | null {
 function ago(value:string) { const m=Math.max(0,Math.floor((Date.now()-Date.parse(value))/60000)); return !Number.isFinite(m)?"Recently":m<60?`${m} min ago`:m<1440?`${Math.floor(m/60)} hr ago`:m<2880?"Yesterday":`${Math.floor(m/1440)} days ago`; }
 function dateLabel(value:string) { return new Date(value).toLocaleString("en",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}); }
 
-type NewsDeskProps = { initialStories?: Story[]; initialGeneratedAt?: string };\n\nexport default function NewsDesk({ initialStories = [], initialGeneratedAt = "" }: NewsDeskProps) {
+type NewsDeskProps = { initialStories?: Story[]; initialGeneratedAt?: string };
+
+export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" }: NewsDeskProps) {
   const [stories,setStories]=useState<Story[]>(initialStories.map(clean).filter((s): s is Story => Boolean(s)));
   const [category,setCategory]=useState("All");
   const [query,setQuery]=useState("");
