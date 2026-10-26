@@ -95,6 +95,11 @@ def parse_feed(url: str, category: str, label: str) -> list[dict]:
             continue
         description = text_only(child_text(item, {"description", "summary", "content"}))
         source = child_text(item, {"source"}) or label
+        # Google News RSS descriptions often repeat the headline; avoid duplicate card text.
+        if description.casefold().startswith(title.casefold()):
+            description = description[len(title):].lstrip(" -–—:|")
+        if description.casefold() in {"", source.casefold(), label.casefold()}:
+            description = ""
         if " - " in title and source == label:
             maybe_title, maybe_source = title.rsplit(" - ", 1)
             if maybe_title.strip() and maybe_source.strip():
