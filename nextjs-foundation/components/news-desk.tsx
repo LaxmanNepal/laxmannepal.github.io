@@ -64,7 +64,7 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
   const counts=useMemo(()=>Object.fromEntries(CATEGORIES.filter(c=>c!=="All").map(c=>[c,regionStories.filter(s=>s.category===c).length])),[regionStories]);
   const refreshed=generatedAt?new Date(generatedAt).toLocaleString("en",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"Waiting for first refresh";
 
-  return <main className="newsdesk container">
+  return <main className="newsdesk container" lang="ne">
     <section className="newsdesk-hero">
       <div className="newsdesk-kicker"><span className="newsdesk-live-dot"/> समाचार कक्ष · स्वचालित अपडेट</div>
       <h1>नेपालका ताजा समाचार।<br/><span>विश्वभरका खबर पनि।</span></h1>
@@ -83,13 +83,13 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
     <div className="newsdesk-tabs" role="tablist" aria-label="समाचारका विधा">{CATEGORIES.map(c=><button type="button" role="tab" aria-selected={category===c} className={category===c?"active":""} key={c} onClick={()=>{setCategory(c);setLimit(PAGE_SIZE);}}>{CATEGORY_NE[c]}{c!=="All"&&<span>{counts[c]||0}</span>}</button>)}</div>
     {error&&<div className="newsdesk-notice" role="status"><strong>Could not refresh the feed.</strong> {stories.length?"Showing the last stories already loaded. ":""}{error} <button type="button" onClick={()=>void refresh()}>Try again</button></div>}
     {!error&&!loading&&stories.length===0&&<div className="newsdesk-notice" role="status"><strong>No recent stories were returned.</strong> The scheduled collector may be temporarily unable to reach its RSS sources. Try again shortly.</div>}
-    {hasFeatured&&featured&&<section className="newsdesk-featured" aria-label="Top recent story">
+    {hasFeatured&&featured&&<section className="newsdesk-featured" aria-label="Top recent story" lang={featured.language==="ne"?"ne":"en"}>
       <div className="newsdesk-featured-copy"><span className="newsdesk-label">LATEST HEADLINE</span><span className="newsdesk-category">{featured.category}</span><h2><a href={featured.url} target="_blank" rel="noopener noreferrer">{featured.title}</a></h2>{featured.description&&<p>{featured.description}</p>}<div className="newsdesk-byline"><span>{featured.source}</span><span>{ago(featured.published_at)}</span></div><a className="newsdesk-read-link" href={featured.url} target="_blank" rel="noopener noreferrer">Read at original source ↗</a></div>
       {featured.image?<a className="newsdesk-featured-image" href={featured.url} target="_blank" rel="noopener noreferrer"><img src={featured.image} alt="" loading="lazy" referrerPolicy="no-referrer"/></a>:<div className="newsdesk-featured-art" aria-hidden="true"><span>LN</span><small>NEWS · WORLD · TECHNOLOGY</small></div>}
     </section>}
     <div className="newsdesk-section-head"><div><span className="newsdesk-label">पछिल्ला सात दिन</span><h2>{region==="Nepal"?"नेपालका समाचार":"विश्व समाचार"}{category!=="All"?` · ${CATEGORY_NE[category]}`:""}</h2><p>नयाँ समाचार पहिले · मूल प्रकाशकको लिंक</p></div><strong>{filtered.length.toLocaleString()} समाचार</strong></div>
     {loading&&stories.length===0?<div className="newsdesk-loading" aria-label="Loading news"><i/><i/><i/><i/><i/><i/></div>:
-      <div className="newsdesk-grid">{visible.map(s=><article className="newsdesk-card" key={s.id||s.url}>
+      <div className="newsdesk-grid">{visible.map(s=><article className="newsdesk-card" key={s.id||s.url} lang={s.language==="ne"?"ne":"en"}>
         {s.image?<a className="newsdesk-card-image" href={s.url} target="_blank" rel="noopener noreferrer"><img src={s.image} alt="" loading="lazy" referrerPolicy="no-referrer"/></a>:<div className="newsdesk-card-placeholder" aria-hidden="true">📰</div>}
         <div className="newsdesk-card-body"><div className="newsdesk-card-meta"><span className="newsdesk-category">{s.category}</span><time dateTime={s.published_at}>{ago(s.published_at)}</time></div><h3><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></h3>{s.description&&<p>{s.description}</p>}<div className="newsdesk-card-source"><span>{s.source} · {dateLabel(s.published_at)}</span><a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={`Read ${s.title} at original source`}>Read ↗</a></div></div>
       </article>)}{!visible.length&&<div className="newsdesk-empty"><strong>No matching stories</strong><span>Try another category or search term.</span><button type="button" onClick={()=>{setCategory("All");setQuery("");}}>Clear filters</button></div>}</div>}
