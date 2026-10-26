@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 };
 
-type FeedStory = { id?: string; title: string; url: string; published_at: string; source?: string; category?: string; description?: string; image?: string };
+type FeedStory = { id?: string; title: string; url: string; published_at: string; source?: string; category?: string; description?: string; image?: string; region?: string; language?: string };
 type Feed = { generated_at?: string; story_count?: number; stories?: FeedStory[] };
 
 export default function Page() {
