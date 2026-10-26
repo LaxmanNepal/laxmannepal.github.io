@@ -41,6 +41,7 @@ FEEDS = [
     ("Education", "Education and universities", "https://news.google.com/rss/search?q=" + urllib.parse.quote('education schools universities when:7d') + "&hl=en-US&gl=US&ceid=US:en"),
     ("Sports", "Nepal sports", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepal cricket football sports when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
     ("Entertainment", "Nepali entertainment", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepali movies music entertainment when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
+    ("Trending", "World news in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('विश्व समाचार अन्तर्राष्ट्रिय विदेश when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
 ]
 def local_name(tag: str) -> str:
     return tag.rsplit("}", 1)[-1].lower()
@@ -70,6 +71,8 @@ def text_only(value: str) -> str:
     value = re.sub(r"<[^>]*>", " ", value or "")
     return re.sub(r"\s+", " ", unescape(value)).strip()
 def parse_feed(url: str, category: str, label: str) -> list[dict]:
+    global_region_labels = {"Technology", "Science and space", "Sports", "Entertainment", "Trending stories", "Health and medicine", "Education and universities"}
+    region = "World" if label.startswith("World") or label in global_region_labels else "Nepal"
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml"})
     with urllib.request.urlopen(req, timeout=20) as response:
         root = ET.fromstring(response.read())
@@ -118,6 +121,8 @@ def parse_feed(url: str, category: str, label: str) -> list[dict]:
             "published_at": published.isoformat().replace("+00:00", "Z"),
             "source": text_only(source)[:100] or label,
             "category": category,
+            "region": region,
+            "language": "ne" if re.search(r"[\\u0900-\\u097F]", title) else "en",
             "description": description[:360],
             "image": image,
         })
