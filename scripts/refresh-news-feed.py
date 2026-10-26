@@ -31,6 +31,16 @@ FEEDS = [
     ("Sports", "Sports", "https://news.google.com/rss/search?q=" + urllib.parse.quote('sports football cricket when:7d') + "&hl=en-US&gl=US&ceid=US:en"),
     ("Entertainment", "Entertainment", "https://news.google.com/rss/search?q=" + urllib.parse.quote('entertainment movies music celebrity when:7d') + "&hl=en-US&gl=US&ceid=US:en"),
     ("Trending", "Trending stories", "https://news.google.com/rss/search?q=" + urllib.parse.quote('viral trending internet culture when:7d') + "&hl=en-US&gl=US&ceid=US:en"),
+    ("Nepal", "Nepali-language news", "https://news.google.com/rss/search?q=" + urllib.parse.quote('नेपाल समाचार when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Politics", "Nepal politics in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('नेपाल राजनीति सरकार संसद when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Business", "Nepal economy in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('नेपाल अर्थतन्त्र बजार व्यवसाय when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Technology", "Nepal technology", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepal technology AI mobile apps when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
+    ("Technology", "Technology in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('प्रविधि एआई मोबाइल when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Trending", "Nepal trending", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepal viral trending social media when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
+    ("Health", "Health and medicine", "https://news.google.com/rss/search?q=" + urllib.parse.quote('health medicine public health research when:7d') + "&hl=en-US&gl=US&ceid=US:en"),
+    ("Education", "Education and universities", "https://news.google.com/rss/search?q=" + urllib.parse.quote('education schools universities when:7d') + "&hl=en-US&gl=US&ceid=US:en"),
+    ("Sports", "Nepal sports", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepal cricket football sports when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
+    ("Entertainment", "Nepali entertainment", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepali movies music entertainment when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
 ]
 def local_name(tag: str) -> str:
     return tag.rsplit("}", 1)[-1].lower()
