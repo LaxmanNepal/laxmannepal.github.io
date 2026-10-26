@@ -277,3 +277,48 @@ test('share button passes the current text to the native share sheet', async () 
     assert.match(payload.url, /type-nepali/);
   } finally { await context.close(); }
 });
+
+
+test('Enter accepts the highlighted suggestion without inserting a newline', async () => {
+  const { context, page } = await openPage();
+  try {
+    const editor = page.locator('#editor');
+    await editor.fill('namaste');
+    await page.locator('.suggestion').first().waitFor();
+    await editor.press('ArrowDown');
+    const selectedButton = page.locator('.suggestion[aria-selected="true"]').first();
+    const selected = await selectedButton.textContent();
+    const selectedIndex = await selectedButton.evaluate(el => [...el.parentElement.querySelectorAll('.suggestion')].indexOf(el));
+    assert.equal(selectedIndex, 1, 'ArrowDown should keep the second suggestion selected after keyup');
+    await editor.press('Enter');
+    assert.equal(await editor.inputValue(), selected.replace(/[0-9]+$/, '').trim());
+    assert.ok(!(await editor.inputValue()).includes('\\n'));
+  } finally { await context.close(); }
+});
+
+test('Tab cycles suggestion selection without moving the editor caret', async () => {
+  const { context, page } = await openPage();
+  try {
+    const editor = page.locator('#editor');
+    await editor.fill('namaste');
+    await page.locator('.suggestion').first().waitFor();
+    await editor.evaluate(el => el.setSelectionRange(3, 3));
+    const before = await editor.evaluate(el => el.selectionStart);
+    await editor.press('Tab');
+    assert.equal(await editor.evaluate(el => el.selectionStart), before);
+    const selectedIndex = await page.locator('.suggestion[aria-selected="true"]').evaluate(el => [...el.parentElement.querySelectorAll('.suggestion')].indexOf(el));
+    assert.equal(selectedIndex, 1, 'Tab should advance the highlighted suggestion');
+  } finally { await context.close(); }
+});
+
+test('English text inside braces is excluded from suggestion conversion', async () => {
+  const { context, page } = await openPage();
+  try {
+    const editor = page.locator('#editor');
+    await editor.fill('hello {namaste}');
+    await editor.evaluate(el => el.setSelectionRange(10, 10));
+    await page.waitForTimeout(50);
+    assert.equal(await page.locator('.suggestion').count(), 0);
+    assert.equal(await editor.inputValue(), 'hello {namaste}');
+  } finally { await context.close(); }
+});
