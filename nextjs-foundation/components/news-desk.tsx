@@ -77,7 +77,7 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
   const featured=filtered[0], hasFeatured=category==="All"&&!query&&sort==="newest"&&Boolean(featured);
   const visible=filtered.slice(hasFeatured?1:0,limit+(hasFeatured?1:0));
   const hasMore=filtered.length>limit+(hasFeatured?1:0);
-  const regionStories=useMemo(()=>stories.filter(s=>s.region===region&&(language==="all"||s.language===language)),[stories,region,language]);
+  const regionStories=useMemo(()=>(showSaved?savedStories:stories).filter(s=>s.region===region&&(language==="all"||s.language===language)),[stories,savedStories,showSaved,region,language]);
   const counts=useMemo(()=>Object.fromEntries(CATEGORIES.filter(c=>c!=="All").map(c=>[c,regionStories.filter(s=>s.category===c).length])),[regionStories]);
   const refreshed=generatedAt?new Date(generatedAt).toLocaleString("en",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"Waiting for first refresh";
 
