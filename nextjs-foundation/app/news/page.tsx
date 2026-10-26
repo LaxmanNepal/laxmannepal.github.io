@@ -4,12 +4,12 @@ import { join } from "node:path";
 import NewsDesk from "@/components/news-desk";
 
 export const metadata: Metadata = {
-  title: "Latest News — Nepal, World, Technology & Trending",
-  description: "Browse automatically updated news from Nepal and around the world, including technology, business, politics, science, sports, entertainment and trending topics from the last seven days.",
+  title: "नेपाली समाचार — नेपाल, विश्व, प्रविधि र ताजा खबर",
+  description: "नेपालका पछिल्ला सात दिनका नेपाली भाषाका समाचार। राजनीति, अर्थतन्त्र, प्रविधि, विज्ञान, खेलकुद, मनोरञ्जन, स्वास्थ्य र शिक्षाका ताजा खबर; विश्व समाचारका लागि छुट्टै फिल्टर।",
   alternates: { canonical: "/news/" },
   openGraph: {
-    title: "Latest News — Nepal, World, Technology & Trending",
-    description: "A searchable digital news desk with headlines from the last seven days.",
+    title: "नेपाली समाचार — नेपाल, विश्व, प्रविधि र ताजा खबर",
+    description: "नेपालका नेपाली भाषाका ताजा समाचार र विश्वका समाचार एउटै ठाउँमा।",
     url: "https://laxmannepal.com.np/news/",
     type: "website",
   },
@@ -23,7 +23,7 @@ export default function Page() {
   let initialGeneratedAt = "";
   try {
     const feed = JSON.parse(readFileSync(join(process.cwd(), "../news/news-feed.json"), "utf8")) as Feed;
-    initialStories = (feed.stories || []).slice(0, 60);
+    initialStories = (feed.stories || []).filter(story => story.region === "Nepal" && story.language === "ne").slice(0, 60);
     initialGeneratedAt = feed.generated_at || "";
   } catch {
     // Keep the page buildable if a first-time feed has not been generated yet.
