@@ -34,19 +34,20 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
   const [loading,setLoading]=useState(initialStories.length===0);
   const [error,setError]=useState("");
   const [generatedAt,setGeneratedAt]=useState(initialGeneratedAt);
-  const [savedUrls,setSavedUrls]=useState<string[]>([]);
+  const [savedStories,setSavedStories]=useState<Story[]>([]);
   const [savedLoaded,setSavedLoaded]=useState(false);
   const [showSaved,setShowSaved]=useState(false);
   const [compact,setCompact]=useState(false);
   const [brokenImages,setBrokenImages]=useState<string[]>([]);
 
   useEffect(()=>{
-    try { const raw=window.localStorage.getItem("ln-news-saved-v1"); if(raw){const parsed=JSON.parse(raw);if(Array.isArray(parsed))setSavedUrls(parsed.filter((v):v is string=>typeof v==="string"));} }
+    try { const raw=window.localStorage.getItem("ln-news-saved-v1"); if(raw){const parsed=JSON.parse(raw);if(Array.isArray(parsed))setSavedStories(parsed.filter((v):v is Story=>Boolean(v&&typeof v==="object"&&typeof v.url==="string"&&typeof v.title==="string"&&safeUrl(v.url)===v.url));} }
     catch { /* Saved stories are optional; private browsing may block storage. */ }
     setSavedLoaded(true);
   },[]);
-  useEffect(()=>{if(savedLoaded){try{window.localStorage.setItem("ln-news-saved-v1",JSON.stringify(savedUrls));}catch{/* Continue without persistent saves if storage is unavailable. */}}},[savedUrls,savedLoaded]);
-  const toggleSaved=useCallback((url:string)=>setSavedUrls(current=>current.includes(url)?current.filter(v=>v!==url):[url,...current]),[]);
+  useEffect(()=>{if(savedLoaded){try{window.localStorage.setItem("ln-news-saved-v1",JSON.stringify(savedStories));}catch{/* Continue without persistent saves if storage is unavailable. */}}},[savedStories,savedLoaded]);
+  const savedUrls=useMemo(()=>savedStories.map(s=>s.url),[savedStories]);
+  const toggleSaved=useCallback((story:Story)=>setSavedStories(current=>current.some(s=>s.url===story.url)?current.filter(s=>s.url!==story.url):[story,...current]),[]);
   const isSaved=useCallback((url:string)=>savedUrls.includes(url),[savedUrls]);
   const markImageBroken=useCallback((url:string)=>setBrokenImages(current=>current.includes(url)?current:[...current,url]),[]);
 
@@ -70,9 +71,9 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
 
   const filtered=useMemo(()=>{
     const q=query.trim().toLocaleLowerCase();
-    return stories.filter(s=>s.region===region&&(language==="all"||s.language===language)&&(category==="All"||s.category===category)&&(!showSaved||savedUrls.includes(s.url))&&(!q||[s.title,s.description,s.source,s.category].join(" ").toLocaleLowerCase().includes(q)))
+    return (showSaved?savedStories:stories).filter(s=>s.region===region&&(language==="all"||s.language===language)&&(category==="All"||s.category===category)&&(!q||[s.title,s.description,s.source,s.category].join(" ").toLocaleLowerCase().includes(q)))
       .sort((a,b)=>sort==="oldest"?Date.parse(a.published_at)-Date.parse(b.published_at):Date.parse(b.published_at)-Date.parse(a.published_at));
-  },[stories,region,language,category,query,sort,showSaved,savedUrls]);
+  },[stories,savedStories,region,language,category,query,sort,showSaved]);
   const featured=filtered[0], hasFeatured=category==="All"&&!query&&sort==="newest"&&Boolean(featured);
   const visible=filtered.slice(hasFeatured?1:0,limit+(hasFeatured?1:0));
   const hasMore=filtered.length>limit+(hasFeatured?1:0);
@@ -100,14 +101,14 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
     {error&&<div className="newsdesk-notice" role="status"><strong>Could not refresh the feed.</strong> {stories.length?"Showing the last stories already loaded. ":""}{error} <button type="button" onClick={()=>void refresh()}>Try again</button></div>}
     {!error&&!loading&&stories.length===0&&<div className="newsdesk-notice" role="status"><strong>No recent stories were returned.</strong> The scheduled collector may be temporarily unable to reach its RSS sources. Try again shortly.</div>}
     {hasFeatured&&featured&&<section className="newsdesk-featured" aria-label="Top recent story" lang={featured.language==="ne"?"ne":"en"}>
-      <div className="newsdesk-featured-copy"><span className="newsdesk-label">LATEST HEADLINE</span><span className="newsdesk-category">{featured.category}</span><h2><a href={featured.url} target="_blank" rel="noopener noreferrer">{featured.title}</a></h2>{featured.description&&<p>{featured.description}</p>}<div className="newsdesk-byline"><span>{featured.source}</span><span>{ago(featured.published_at)}</span></div><button className={isSaved(featured.url)?"newsdesk-bookmark saved":"newsdesk-bookmark"} type="button" aria-pressed={isSaved(featured.url)} onClick={()=>toggleSaved(featured.url)}>{isSaved(featured.url)?"★ सुरक्षित गरिएको":"☆ पछि पढ्न सुरक्षित"}</button><a className="newsdesk-read-link" href={featured.url} target="_blank" rel="noopener noreferrer">Read at original source ↗</a></div>
+      <div className="newsdesk-featured-copy"><span className="newsdesk-label">LATEST HEADLINE</span><span className="newsdesk-category">{featured.category}</span><h2><a href={featured.url} target="_blank" rel="noopener noreferrer">{featured.title}</a></h2>{featured.description&&<p>{featured.description}</p>}<div className="newsdesk-byline"><span>{featured.source}</span><span>{ago(featured.published_at)}</span></div><button className={isSaved(featured.url)?"newsdesk-bookmark saved":"newsdesk-bookmark"} type="button" aria-pressed={isSaved(featured.url)} onClick={()=>toggleSaved(featured)}>{isSaved(featured.url)?"★ सुरक्षित गरिएको":"☆ पछि पढ्न सुरक्षित"}</button><a className="newsdesk-read-link" href={featured.url} target="_blank" rel="noopener noreferrer">Read at original source ↗</a></div>
       {featured.image&&!brokenImages.includes(featured.image)?<a className="newsdesk-featured-image" href={featured.url} target="_blank" rel="noopener noreferrer"><img src={featured.image} alt={`समाचारको तस्बिर: ${featured.title}`} loading="lazy" referrerPolicy="no-referrer" onError={()=>markImageBroken(featured.image||"")}/><span className="newsdesk-image-caption">प्रकाशकको फिडमा समावेश तस्बिर</span></a>:<div className="newsdesk-featured-art" aria-label="प्रकाशकले तस्बिर उपलब्ध गराएको छैन"><span>LN</span><small>तस्बिर उपलब्ध छैन</small></div>}
     </section>}
     <div className="newsdesk-section-head"><div><span className="newsdesk-label">पछिल्ला सात दिन</span><h2>{region==="Nepal"?"नेपालका समाचार":"विश्व समाचार"}{category!=="All"?` · ${CATEGORY_NE[category]}`:""}</h2><p>नयाँ समाचार पहिले · मूल प्रकाशकको लिंक</p></div><strong>{filtered.length.toLocaleString()} समाचार</strong></div>
     {loading&&stories.length===0?<div className="newsdesk-loading" aria-label="Loading news"><i/><i/><i/><i/><i/><i/></div>:
       <div className={compact?"newsdesk-grid compact":"newsdesk-grid"}>{visible.map(s=><article className={compact?"newsdesk-card compact":"newsdesk-card"} key={s.id||s.url} lang={s.language==="ne"?"ne":"en"}>
         {s.image&&!brokenImages.includes(s.image)?<a className="newsdesk-card-image" href={s.url} target="_blank" rel="noopener noreferrer"><img src={s.image} alt={`समाचारको तस्बिर: ${s.title}`} loading="lazy" referrerPolicy="no-referrer" onError={()=>markImageBroken(s.image||"")}/><span className="newsdesk-image-caption">प्रकाशकको तस्बिर</span></a>:<div className="newsdesk-card-placeholder" aria-label="प्रकाशकको फिडमा तस्बिर छैन">📰 <span>तस्बिर उपलब्ध छैन</span></div>}
-        <div className="newsdesk-card-body"><div className="newsdesk-card-meta"><span className="newsdesk-category">{s.category}</span><time dateTime={s.published_at}>{ago(s.published_at)}</time></div><h3><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></h3>{s.description&&<p>{s.description}</p>}<div className="newsdesk-card-source"><span>{s.source} · {dateLabel(s.published_at)}</span><div className="newsdesk-card-actions"><button className={isSaved(s.url)?"newsdesk-bookmark saved":"newsdesk-bookmark"} type="button" aria-label={isSaved(s.url)?`Remove saved story: ${s.title}`:`Save story: ${s.title}`} aria-pressed={isSaved(s.url)} onClick={()=>toggleSaved(s.url)}>{isSaved(s.url)?"★":"☆"}</button><a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={`Read ${s.title} at original source`}>पढ्नुहोस् ↗</a></div></div></div>
+        <div className="newsdesk-card-body"><div className="newsdesk-card-meta"><span className="newsdesk-category">{s.category}</span><time dateTime={s.published_at}>{ago(s.published_at)}</time></div><h3><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></h3>{s.description&&<p>{s.description}</p>}<div className="newsdesk-card-source"><span>{s.source} · {dateLabel(s.published_at)}</span><div className="newsdesk-card-actions"><button className={isSaved(s.url)?"newsdesk-bookmark saved":"newsdesk-bookmark"} type="button" aria-label={isSaved(s.url)?`Remove saved story: ${s.title}`:`Save story: ${s.title}`} aria-pressed={isSaved(s.url)} onClick={()=>toggleSaved(s)}>{isSaved(s.url)?"★":"☆"}</button><a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={`Read ${s.title} at original source`}>पढ्नुहोस् ↗</a></div></div></div>
       </article>)}{!visible.length&&<div className="newsdesk-empty"><strong>No matching stories</strong><span>Try another category or search term.</span><button type="button" onClick={()=>{setCategory("All");setQuery("");setShowSaved(false);setLanguage(region==="Nepal"?"ne":"all");}}>Clear filters</button></div>}</div>}
     {hasMore&&<button className="newsdesk-more" type="button" onClick={()=>setLimit(n=>n+PAGE_SIZE)}>Load more headlines ({Math.min(PAGE_SIZE,filtered.length-limit-(hasFeatured?1:0))} more)</button>}
     <section className="newsdesk-bottom"><div><span className="newsdesk-label">COVERAGE</span><h2>More than one beat.</h2><p>Follow the stories that matter to you, from Nepal and the region to global technology and culture.</p></div><div className="newsdesk-category-list">{CATEGORIES.filter(c=>c!=="All").map(c=><button type="button" key={c} onClick={()=>{setCategory(c);setLimit(PAGE_SIZE);window.scrollTo({top:360,behavior:"smooth"});}}><span>{c}</span><strong>{counts[c]||0}</strong><span>↗</span></button>)}</div></section>
