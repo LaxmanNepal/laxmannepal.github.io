@@ -19,7 +19,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -90,7 +90,7 @@ jobs:
       - name: Install browser-test dependency
         run: npm install --prefix /tmp/typing-browser playwright
       - name: Install Chromium for browser tests
-        run: /tmp/typing-browser/node_modules/.bin/playwright install --with-deps chromium
+        run: /tmp/typing-browser/node_modules/.bin/playwright install chromium
       - name: Run Nepali typing browser regressions
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/nepali-typing-http.log 2>&1 &
