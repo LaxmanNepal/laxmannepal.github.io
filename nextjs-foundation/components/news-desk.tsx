@@ -2,8 +2,8 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 type Story = { id?: string; title: string; url: string; published_at: string; source?: string; category?: string; description?: string; image?: string; region?: string; language?: string };
-const CATEGORIES = ["All","Politics","Business","Technology","Science","Sports","Entertainment","Trending","Health","Education"];
-const CATEGORY_NE: Record<string,string> = { All:"सबै", Politics:"राजनीति", Business:"अर्थतन्त्र", Technology:"प्रविधि", Science:"विज्ञान", Sports:"खेलकुद", Entertainment:"मनोरञ्जन", Trending:"ट्रेन्डिङ", Health:"स्वास्थ्य", Education:"शिक्षा" };
+const CATEGORIES = ["All","General","Politics","Business","Technology","Science","Sports","Entertainment","Trending","Health","Education"];
+const CATEGORY_NE: Record<string,string> = { All:"सबै", General:"सामान्य", Politics:"राजनीति", Business:"अर्थतन्त्र", Technology:"प्रविधि", Science:"विज्ञान", Sports:"खेलकुद", Entertainment:"मनोरञ्जन", Trending:"ट्रेन्डिङ", Health:"स्वास्थ्य", Education:"शिक्षा" };
 const WEEK = 7 * 86400000;
 const PAGE_SIZE = 18;
 
@@ -15,7 +15,7 @@ function clean(value: Story): Story | null {
   if (!url || !title || !Number.isFinite(date) || Date.now() - date > WEEK || date > Date.now() + 3600000) return null;
   const inferredRegion = /नेपाल|nepal|nepalese/i.test(title + " " + String(value.source || "")) || value.category === "Nepal" ? "Nepal" : "World";
   const language = value.language === "ne" || /[\u0900-\u097F]/.test(title) ? "ne" : "en";
-  return { id:value.id || url, title, url, published_at:new Date(date).toISOString(), source:String(value.source || "Original publisher").slice(0,100), category:CATEGORIES.includes(value.category || "") && value.category !== "All" ? value.category : "Trending", region:value.region === "Nepal" || value.region === "World" ? value.region : inferredRegion, language, description:String(value.description || "").replace(/<[^>]*>/g," ").replace(/\s+/g," ").trim().slice(0,320), image:safeUrl(value.image) };
+  return { id:value.id || url, title, url, published_at:new Date(date).toISOString(), source:String(value.source || "Original publisher").slice(0,100), category:value.category === "Nepal" ? "General" : CATEGORIES.includes(value.category || "") && value.category !== "All" ? value.category : "Trending", region:value.region === "Nepal" || value.region === "World" ? value.region : inferredRegion, language, description:String(value.description || "").replace(/<[^>]*>/g," ").replace(/\s+/g," ").trim().slice(0,320), image:safeUrl(value.image) };
 }
 function ago(value:string) { const m=Math.max(0,Math.floor((Date.now()-Date.parse(value))/60000)); return !Number.isFinite(m)?"Recently":m<60?`${m} min ago`:m<1440?`${Math.floor(m/60)} hr ago`:m<2880?"Yesterday":`${Math.floor(m/1440)} days ago`; }
 function dateLabel(value:string) { return new Date(value).toLocaleString("en",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}); }
