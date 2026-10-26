@@ -133,7 +133,7 @@ def parse_feed(url: str, category: str, label: str) -> list[dict]:
             if score:
                 image_candidates.append((score, candidate))
         # Some publishers place the story's own thumbnail in the RSS description HTML.
-        html_image = re.search(r'<img\b[^>]*?src=["\'](https://[^"\']+)["\']', child_text(item, {"description", "summary"}), re.I)
+        html_image = re.search(r'<img\b[^>]*?src=["\'](https://[^"\']+)["\']', unescape(child_text(item, {"description", "summary"})), re.I)
         if html_image:
             image_candidates.append((70, unescape(html_image.group(1))))
         if image_candidates:
