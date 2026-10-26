@@ -15,7 +15,8 @@ export const metadata: Metadata = {
   },
 };
 
-type Feed = { generated_at?: string; story_count?: number; stories?: Array<Record<string, unknown>> };
+type FeedStory = { id?: string; title: string; url: string; published_at: string; source?: string; category?: string; description?: string; image?: string };
+type Feed = { generated_at?: string; story_count?: number; stories?: FeedStory[] };
 
 export default function Page() {
   let initialStories: Feed["stories"] = [];
