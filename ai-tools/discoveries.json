@@ -1,34 +1,196 @@
 {
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "inference",
-      "url": "https://github.com/xorbitsai/inference",
-      "description": "Swap GPT for any LLM by changing a single line of code. Xinference lets you run open-source, speech, and multimodal models on cloud, on-prem, or your laptop — all through one unified, production-ready inference API.",
+      "name": "rakazo",
+      "url": "https://github.com/elie222/rakazo",
+      "description": "Open-source Grok Bot alternative. Choose your own model and sandbox.",
+      "language": "TypeScript",
+      "stars": 5830,
+      "updatedAt": "2026-10-26T07:46:10Z",
+      "fullName": "elie222/rakazo"
+    },
+    {
+      "name": "openaccountants",
+      "url": "https://github.com/openaccountants/openaccountants",
+      "description": "Free AI skills (tax rules your AI follows) for 190+ countries, with sources and review status. Written by AI-first accountants in many countries. Need cross-border work done? Hire us.",
       "language": "Python",
-      "stars": 9627,
-      "updatedAt": "2026-10-25T07:33:57Z",
-      "fullName": "xorbitsai/inference"
+      "stars": 461,
+      "updatedAt": "2026-10-26T07:46:10Z",
+      "fullName": "openaccountants/openaccountants"
+    },
+    {
+      "name": "agentplay",
+      "url": "https://github.com/Entelligence-AI/agentplay",
+      "description": "Replay your coding agent sessions as a map and a timeline",
+      "language": "Python",
+      "stars": 313,
+      "updatedAt": "2026-10-26T07:46:08Z",
+      "fullName": "Entelligence-AI/agentplay"
+    },
+    {
+      "name": "perxona-connect-kit",
+      "url": "https://github.com/XRSPACE-Inc/perxona-connect-kit",
+      "description": "Add a talking 3D AI avatar to any web app. Samples and tools for the Perxona Connect SDK: <sv-presenter> web component, lip-sync, text-to-speech and VRM avatars. Clone to talking avatar in under 15 minutes.",
+      "language": "JavaScript",
+      "stars": 66,
+      "updatedAt": "2026-10-26T07:46:06Z",
+      "fullName": "XRSPACE-Inc/perxona-connect-kit"
+    },
+    {
+      "name": "prompt-scrubber",
+      "url": "https://github.com/Nano-Collective/prompt-scrubber",
+      "description": "Local-first tool that strips emails, secrets, paths, and other identifying content out of your prompts before they reach a cloud LLM — and rehydrates the response locally.",
+      "language": "TypeScript",
+      "stars": 23,
+      "updatedAt": "2026-10-26T07:45:56Z",
+      "fullName": "Nano-Collective/prompt-scrubber"
+    },
+    {
+      "name": "dify",
+      "url": "https://github.com/langgenius/dify",
+      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+      "language": "Python",
+      "stars": 159572,
+      "updatedAt": "2026-10-26T07:45:50Z",
+      "fullName": "langgenius/dify"
+    },
+    {
+      "name": "mcp-servers-live",
+      "url": "https://github.com/linny006/mcp-servers-live",
+      "description": "Auto-updated index of MCP servers shipping on GitHub, refreshed every 15 minutes",
+      "language": "HTML",
+      "stars": 13,
+      "updatedAt": "2026-10-26T07:45:45Z",
+      "fullName": "linny006/mcp-servers-live"
     },
     {
       "name": "dsh-prompt",
       "url": "https://github.com/FeatherHunter/dsh-prompt",
       "description": "💡DSH 的 Prompt提示词工具箱：常用prompt保存后点击即可注入到对话框——省时省力，/prompt 自动提示已有Prompt。 💡The Prompt toolbox for DSH: save frequently-used prompts and inject them into the dialog with one click — saving time and effort, with /prompt auto-suggesting your existing prompts.",
       "language": "JavaScript",
-      "stars": 61,
-      "updatedAt": "2026-10-25T07:33:41Z",
+      "stars": 65,
+      "updatedAt": "2026-10-26T07:45:43Z",
       "fullName": "FeatherHunter/dsh-prompt"
     },
     {
-      "name": "ai-free-vscode",
-      "url": "https://github.com/AppsGanin/ai-free-vscode",
-      "description": "Free AI models in VS Code Copilot Chat via browser auth. No API keys required.",
+      "name": "awesome-agent-skills",
+      "url": "https://github.com/linny006/awesome-agent-skills",
+      "description": "Curated, auto-updated awesome-list of vetted AI agent skills with quality ratings for Claude, GPT, a",
+      "language": "Python",
+      "stars": 44,
+      "updatedAt": "2026-10-26T07:45:34Z",
+      "fullName": "linny006/awesome-agent-skills"
+    },
+    {
+      "name": "agent-eval-harness",
+      "url": "https://github.com/linny006/agent-eval-harness",
+      "description": "Live, open-source benchmark for comparing AI coding agents on real GitHub issues",
+      "language": "Python",
+      "stars": 6,
+      "updatedAt": "2026-10-26T07:45:33Z",
+      "fullName": "linny006/agent-eval-harness"
+    },
+    {
+      "name": "skills-tracker",
+      "url": "https://github.com/linny006/skills-tracker",
+      "description": "Real-time tracking of every new GitHub 'skills' repo to capture the AI agent skill ecosystem trend",
+      "language": "Python",
+      "stars": 30,
+      "updatedAt": "2026-10-26T07:45:32Z",
+      "fullName": "linny006/skills-tracker"
+    },
+    {
+      "name": "slotstream",
+      "url": "https://github.com/carloslfu/slotstream",
+      "description": "Run a 105 GB AI model on a Mac that can't hold it. Slotstream streams Qwen3.8-Flash-Next (125B mixture of experts) from your SSD and caches the busiest experts in memory, so it runs on Macs with 16 to 64 GB. One native Swift binary on MLX and Metal, no Python,",
+      "language": "Swift",
+      "stars": 501,
+      "updatedAt": "2026-10-26T07:45:31Z",
+      "fullName": "carloslfu/slotstream"
+    },
+    {
+      "name": "gaia",
+      "url": "https://github.com/theexperiencecompany/gaia",
+      "description": "Your proactive personal AI assistant for daily life",
+      "language": "Python",
+      "stars": 320,
+      "updatedAt": "2026-10-26T07:45:31Z",
+      "fullName": "theexperiencecompany/gaia"
+    },
+    {
+      "name": "prompt-tools-live",
+      "url": "https://github.com/linny006/prompt-tools-live",
+      "description": "Live-updating tracker of prompt engineering tools, libraries, and techniques — refreshed every 15 mi",
+      "language": "Python",
+      "stars": 11,
+      "updatedAt": "2026-10-26T07:45:29Z",
+      "fullName": "linny006/prompt-tools-live"
+    },
+    {
+      "name": "agent-framework-radar",
+      "url": "https://github.com/linny006/agent-framework-radar",
+      "description": "Live index of the newest agent frameworks shipping on GitHub, sorted by recency not stars",
+      "language": "Python",
+      "stars": 9,
+      "updatedAt": "2026-10-26T07:45:24Z",
+      "fullName": "linny006/agent-framework-radar"
+    },
+    {
+      "name": "llm-eval-tracker",
+      "url": "https://github.com/linny006/llm-eval-tracker",
+      "description": "Live index of LLM evaluation tools and benchmarks, refreshed every 15 minutes from GitHub",
+      "language": "Python",
+      "stars": 6,
+      "updatedAt": "2026-10-26T07:45:22Z",
+      "fullName": "linny006/llm-eval-tracker"
+    },
+    {
+      "name": "SAGE",
+      "url": "https://github.com/dp-web4/SAGE",
+      "description": "A cognition kernel that wraps a frozen LLM in a persistent identity + trust + governance loop — testing whether capability comes from structure, not weights. Research-stage; honest about what's real vs mocked.",
+      "language": "Python",
+      "stars": 27,
+      "updatedAt": "2026-10-26T07:45:19Z",
+      "fullName": "dp-web4/SAGE"
+    },
+    {
+      "name": "llm-agents-radar",
+      "url": "https://github.com/linny006/llm-agents-radar",
+      "description": "Live-updating index of LLM agent frameworks shipping on GitHub, refreshed every 15 minutes",
+      "language": "Python",
+      "stars": 14,
+      "updatedAt": "2026-10-26T07:45:19Z",
+      "fullName": "linny006/llm-agents-radar"
+    },
+    {
+      "name": "claude-code-plugin-tracker",
+      "url": "https://github.com/linny006/claude-code-plugin-tracker",
+      "description": "Live index of Claude Code extensions, hooks, and plugins — refreshed every 15 minutes from GitHub",
+      "language": "Python",
+      "stars": 6,
+      "updatedAt": "2026-10-26T07:45:19Z",
+      "fullName": "linny006/claude-code-plugin-tracker"
+    },
+    {
+      "name": "trending-claude-skills",
+      "url": "https://github.com/linny006/trending-claude-skills",
+      "description": "Auto-updated leaderboard of trending claude-skills and AI agent repos, refreshed every 15 minutes",
+      "language": "Python",
+      "stars": 133,
+      "updatedAt": "2026-10-26T07:45:16Z",
+      "fullName": "linny006/trending-claude-skills"
+    },
+    {
+      "name": "dsh-quant",
+      "url": "https://github.com/pengpengyi92/dsh-quant",
+      "description": "\"🐳 Dsh-Quant: The Everything-Plugin Ai native Quant OS \"",
       "language": "TypeScript",
       "stars": 55,
-      "updatedAt": "2026-10-25T07:33:38Z",
-      "fullName": "AppsGanin/ai-free-vscode"
+      "updatedAt": "2026-10-26T07:45:12Z",
+      "fullName": "pengpengyi92/dsh-quant"
     },
     {
       "name": "nextclaw",
@@ -36,188 +198,26 @@
       "description": "A human-centered long-term AI partner—not a task-centered assistant.",
       "language": "TypeScript",
       "stars": 262,
-      "updatedAt": "2026-10-25T07:33:33Z",
+      "updatedAt": "2026-10-26T07:45:07Z",
       "fullName": "Peiiii/nextclaw"
     },
     {
-      "name": "Vibe-Mathematics",
-      "url": "https://github.com/ChongCyrus/Vibe-Mathematics",
-      "description": "Vibe Mathematics —— 多代理数学问题求解与形式化验证框架",
-      "language": "JavaScript",
-      "stars": 43,
-      "updatedAt": "2026-10-25T07:33:29Z",
-      "fullName": "ChongCyrus/Vibe-Mathematics"
-    },
-    {
-      "name": "moli",
-      "url": "https://github.com/lexmount/moli",
-      "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
+      "name": "ax-engine",
+      "url": "https://github.com/defai-digital/ax-engine",
+      "description": "One Mac process. Many models. Real speed. Multi-model LLM serving with prefix reuse, MTP acceleration, and OpenAI APIs — built for Apple Silicon, measured against mlx-lm and llama.cpp.",
       "language": "Rust",
-      "stars": 20539,
-      "updatedAt": "2026-10-25T07:33:21Z",
-      "fullName": "lexmount/moli"
+      "stars": 32,
+      "updatedAt": "2026-10-26T07:44:53Z",
+      "fullName": "defai-digital/ax-engine"
     },
     {
-      "name": "claude-code-plugins",
-      "url": "https://github.com/melodic-software/claude-code-plugins",
-      "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
-      "language": "Shell",
-      "stars": 28,
-      "updatedAt": "2026-10-25T07:33:21Z",
-      "fullName": "melodic-software/claude-code-plugins"
-    },
-    {
-      "name": "unsloth",
-      "url": "https://github.com/unslothai/unsloth",
-      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
-      "language": "Python",
-      "stars": 78530,
-      "updatedAt": "2026-10-25T07:33:13Z",
-      "fullName": "unslothai/unsloth"
-    },
-    {
-      "name": "archlang",
-      "url": "https://github.com/ChanMeng666/archlang",
-      "description": "An open-source DSL and compiler for floor plans: write .arch source (or have an AI agent write it) and compile it to SVG, DXF or PDF with linting and geometric validation.",
-      "language": "TypeScript",
-      "stars": 24,
-      "updatedAt": "2026-10-25T07:33:10Z",
-      "fullName": "ChanMeng666/archlang"
-    },
-    {
-      "name": "mu",
-      "url": "https://github.com/qybaihe/mu",
-      "description": "mu (μ): most of what a coding agent decides isn't code. mu hands 40 kinds of yes/no calls to a small model: fewer wasted tokens, fewer approvals on autopilot, fewer runs that stop halfway. Built on pi.",
-      "language": "TypeScript",
-      "stars": 548,
-      "updatedAt": "2026-10-25T07:33:03Z",
-      "fullName": "qybaihe/mu"
-    },
-    {
-      "name": "arifOS",
-      "url": "https://github.com/ariffazil/arifOS",
-      "description": "Independent policy kernel for AI agents: judge before execute. F1–F13 floors, VAULT999 receipts. Not a model. Not a chatbot.",
-      "language": "Python",
-      "stars": 54,
-      "updatedAt": "2026-10-25T07:33:00Z",
-      "fullName": "ariffazil/arifOS"
-    },
-    {
-      "name": "NeverD",
-      "url": "https://github.com/NeverSight/NeverD",
-      "description": "The AI-friendly binary analysis & decompilation engine — 1:1 lift, built on LLVM [WIP]",
-      "language": "C++",
-      "stars": 98,
-      "updatedAt": "2026-10-25T07:32:57Z",
-      "fullName": "NeverSight/NeverD"
-    },
-    {
-      "name": "parley",
-      "url": "https://github.com/pathorsAI/parley",
-      "description": "Real-time AI coaching for sales & negotiation calls — live suggestions while you talk, voice translation into the meeting, deep debrief after. Local-first macOS app, bring your own keys.",
-      "language": "TypeScript",
-      "stars": 22,
-      "updatedAt": "2026-10-25T07:32:54Z",
-      "fullName": "pathorsAI/parley"
-    },
-    {
-      "name": "CONTINUUM",
-      "url": "https://github.com/Cyrax321/CONTINUUM",
-      "description": "CONTINUUM: Verifiable semantic recovery for long-running AI agents. Semantic checkpoints (not conversation dumps), an idempotent action ledger that refuses duplicate side effects, and a hash-chained tamper-evident event log, all exposed as a deny-by-default MC",
-      "language": "Python",
-      "stars": 24,
-      "updatedAt": "2026-10-25T07:32:51Z",
-      "fullName": "Cyrax321/CONTINUUM"
-    },
-    {
-      "name": "fastbrowse",
-      "url": "https://github.com/agent-labs-dev/fastbrowse",
-      "description": "A fast browser agent: Jev picks each action from what is on the page, an LLM reads and plans, and every claim in an answer cites a quote from the page.",
-      "language": "Python",
-      "stars": 120,
-      "updatedAt": "2026-10-25T07:32:46Z",
-      "fullName": "agent-labs-dev/fastbrowse"
-    },
-    {
-      "name": "OpenNotebookLM",
-      "url": "https://github.com/tom1030507/OpenNotebookLM",
-      "description": "Self-hosted alternative to Google's NotebookLM: import PDFs, web pages and YouTube transcripts, then get answers with citations back to the source. Hybrid dense + BM25 retrieval over a local SQLite database, with Claude, any OpenAI-compatible provider, or a mo",
-      "language": "Python",
-      "stars": 69,
-      "updatedAt": "2026-10-25T07:32:31Z",
-      "fullName": "tom1030507/OpenNotebookLM"
-    },
-    {
-      "name": "Pi-Bolt",
-      "url": "https://github.com/opensec-git/Pi-Bolt",
-      "description": "⚡ Pi, the coding agent, compiled ahead of time to one native executable. 10× faster to start, 7× less CPU and 4.5× less memory than Pi on Node. Linux, macOS, Windows, ARM64 and Android (Termux).",
-      "language": "TypeScript",
-      "stars": 557,
-      "updatedAt": "2026-10-25T07:32:25Z",
-      "fullName": "opensec-git/Pi-Bolt"
-    },
-    {
-      "name": "KiroCrew",
-      "url": "https://github.com/kirodotdev/KiroCrew",
-      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
-      "language": "Python",
-      "stars": 4571,
-      "updatedAt": "2026-10-25T07:32:21Z",
-      "fullName": "kirodotdev/KiroCrew"
-    },
-    {
-      "name": "Docxodus",
-      "url": "https://github.com/JSv4/Docxodus",
-      "description": "Swiss-army toolkit for .docx — faithful DOCX→HTML rendering, an in-browser block editor, Word-grade redlines with native tracked changes, and anchor-addressed markdown for LLM agents. .NET, WASM/TypeScript, Python, CLI.",
-      "language": "C#",
-      "stars": 103,
-      "updatedAt": "2026-10-25T07:31:59Z",
-      "fullName": "JSv4/Docxodus"
-    },
-    {
-      "name": "GoModel",
-      "url": "https://github.com/ENTERPILOT/GoModel",
-      "description": "AI gateway / AI control plane / AI proxy written in Go. Unified OpenAI-compatible and Anthropic-compatible API for OpenAI, Anthropic, Gemini, Groq, xAI, Ollama, vLLM and more. A LiteLLM alternative with observability, guardrails, streaming, cost tracking, inte",
+      "name": "9router-go",
+      "url": "https://github.com/luqman-v1/9router-go",
+      "description": "High-performance Go proxy gateway for 9Router LLM routing — 32K RPS, 42MB RAM, CGO-free",
       "language": "Go",
-      "stars": 1270,
-      "updatedAt": "2026-10-25T07:31:57Z",
-      "fullName": "ENTERPILOT/GoModel"
-    },
-    {
-      "name": "paperclip",
-      "url": "https://github.com/paperclipai/paperclip",
-      "description": "The open-source app everyone uses to manage agents at work",
-      "language": "TypeScript",
-      "stars": 107053,
-      "updatedAt": "2026-10-25T07:31:43Z",
-      "fullName": "paperclipai/paperclip"
-    },
-    {
-      "name": "drt",
-      "url": "https://github.com/drt-hub/drt",
-      "description": "Reverse ETL for the code-first data stack",
-      "language": "Python",
-      "stars": 37,
-      "updatedAt": "2026-10-25T07:31:33Z",
-      "fullName": "drt-hub/drt"
-    },
-    {
-      "name": "tokenspeed",
-      "url": "https://github.com/lightseekorg/tokenspeed",
-      "description": "TokenSpeed is a speed-of-light LLM inference engine.",
-      "language": "Python",
-      "stars": 2779,
-      "updatedAt": "2026-10-25T07:31:28Z",
-      "fullName": "lightseekorg/tokenspeed"
-    },
-    {
-      "name": "evener",
-      "url": "https://github.com/prime-radiant-inc/evener",
-      "description": "A coding agent: give it a prompt and it reads, writes, runs commands, and searches code in a loop until the work is done, using native tool-calling across OpenAI, Anthropic, and Google models.",
-      "language": "Go",
-      "stars": 184,
-      "updatedAt": "2026-10-25T07:31:13Z",
-      "fullName": "prime-radiant-inc/evener"
+      "stars": 233,
+      "updatedAt": "2026-10-26T07:44:47Z",
+      "fullName": "luqman-v1/9router-go"
     }
   ]
 }
