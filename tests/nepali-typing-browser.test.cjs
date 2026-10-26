@@ -277,3 +277,43 @@ test('share button passes the current text to the native share sheet', async () 
     assert.match(payload.url, /type-nepali/);
   } finally { await context.close(); }
 });
+
+
+test('Enter accepts the currently highlighted suggestion without inserting a newline', async () => {
+  const { context, page } = await openPage();
+  try {
+    const editor = page.locator('#editor');
+    await editor.fill('namaste');
+    await page.locator('.suggestion').filter({ hasText: 'नमस्ते' }).first().waitFor();
+    await editor.press('ArrowDown');
+    const selected = await page.locator('.suggestion[aria-selected="true"]').first().textContent();
+    await editor.press('Enter');
+    assert.equal(await editor.inputValue(), selected.replace(/\\s*\\d+\\s*$/, '').trim());
+    assert.equal(await editor.inputValue(), 'नमस्ते');
+  } finally { await context.close(); }
+});
+
+test('Tab cycles suggestion selection without moving the editor caret', async () => {
+  const { context, page } = await openPage();
+  try {
+    const editor = page.locator('#editor');
+    await editor.fill('namaste');
+    await page.locator('.suggestion').first().waitFor();
+    await editor.evaluate(el => el.setSelectionRange(3, 3));
+    const before = await editor.evaluate(el => el.selectionStart);
+    await editor.press('Tab');
+    assert.equal(await editor.evaluate(el => el.selectionStart), before);
+    assert.equal(await page.locator('.suggestion[aria-selected="true"]').count(), 1);
+  } finally { await context.close(); }
+});
+
+test('English text inside braces remains unchanged when a suggestion key is pressed', async () => {
+  const { context, page } = await openPage();
+  try {
+    const editor = page.locator('#editor');
+    await editor.fill('hello {namaste}');
+    await editor.evaluate(el => el.setSelectionRange(10, 10));
+    await editor.press('Enter');
+    assert.equal(await editor.inputValue(), 'hello {namaste}');
+  } finally { await context.close(); }
+});
