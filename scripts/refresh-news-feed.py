@@ -122,7 +122,7 @@ def parse_feed(url: str, category: str, label: str) -> list[dict]:
             "source": text_only(source)[:100] or label,
             "category": category,
             "region": region,
-            "language": "ne" if re.search(r"[\\u0900-\\u097F]", title) else "en",
+            "language": "ne" if re.search(r"[\u0900-\u097F]", title) else "en",
             "description": description[:360],
             "image": image,
         })
