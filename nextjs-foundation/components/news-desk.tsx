@@ -17,15 +17,15 @@ function clean(value: Story): Story | null {
 function ago(value:string) { const m=Math.max(0,Math.floor((Date.now()-Date.parse(value))/60000)); return !Number.isFinite(m)?"Recently":m<60?`${m} min ago`:m<1440?`${Math.floor(m/60)} hr ago`:m<2880?"Yesterday":`${Math.floor(m/1440)} days ago`; }
 function dateLabel(value:string) { return new Date(value).toLocaleString("en",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}); }
 
-export default function NewsDesk() {
-  const [stories,setStories]=useState<Story[]>([]);
+type NewsDeskProps = { initialStories?: Story[]; initialGeneratedAt?: string };\n\nexport default function NewsDesk({ initialStories = [], initialGeneratedAt = "" }: NewsDeskProps) {
+  const [stories,setStories]=useState<Story[]>(initialStories.map(clean).filter((s): s is Story => Boolean(s)));
   const [category,setCategory]=useState("All");
   const [query,setQuery]=useState("");
   const [sort,setSort]=useState("newest");
   const [limit,setLimit]=useState(PAGE_SIZE);
-  const [loading,setLoading]=useState(true);
+  const [loading,setLoading]=useState(initialStories.length===0);
   const [error,setError]=useState("");
-  const [generatedAt,setGeneratedAt]=useState("");
+  const [generatedAt,setGeneratedAt]=useState(initialGeneratedAt);
 
   const refresh=useCallback(async(quiet=false)=>{
     if(!quiet)setLoading(true);
