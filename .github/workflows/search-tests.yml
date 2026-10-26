@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - "search/**"
+      - "assets/js/shared-shell.js"
+      - "assets/css/shared-shell.css"
       - "scripts/generate_search_index.py"
       - "tests/test_search_index.py"
       - ".github/workflows/search-tests.yml"
@@ -36,6 +38,8 @@ jobs:
         run: |
           python scripts/generate_search_index.py
           python -m json.tool search-index.json > /dev/null
+      - name: Check shared shell JavaScript syntax
+        run: node --check assets/js/shared-shell.js
       - name: Check search page JavaScript syntax
         run: |
           python - <<'PY'
