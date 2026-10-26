@@ -23,7 +23,12 @@ export default function Page() {
   let initialGeneratedAt = "";
   try {
     const feed = JSON.parse(readFileSync(join(process.cwd(), "../news/news-feed.json"), "utf8")) as Feed;
-    initialStories = (feed.stories || []).filter(story => story.region === "Nepal" && story.language === "ne").slice(0, 60);
+    initialStories = (feed.stories || []).filter(story => {
+      const nepaliTitle = /[\u0900-\u097F]/.test(story.title || "");
+      const isNepali = story.language === "ne" || nepaliTitle;
+      const isNepal = story.region === "Nepal" || story.category === "Nepal" || /नेपाल|nepal|nepalese/i.test(`${story.title} ${story.source || ""}`);
+      return isNepal && isNepali;
+    }).slice(0, 60);
     initialGeneratedAt = feed.generated_at || "";
   } catch {
     // Keep the page buildable if a first-time feed has not been generated yet.
