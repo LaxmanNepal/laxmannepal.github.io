@@ -1,5 +1,6 @@
 'use client';
 import { useCallback, useEffect, useMemo, useState } from "react";
+import "./news-desk-enhancements.css";
 
 type Story = { id?: string; title: string; url: string; published_at: string; source?: string; category?: string; description?: string; image?: string; region?: string; language?: string };
 const CATEGORIES = ["All","General","Politics","Business","Technology","Science","Sports","Entertainment","Trending","Health","Education"];
@@ -33,6 +34,21 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
   const [loading,setLoading]=useState(initialStories.length===0);
   const [error,setError]=useState("");
   const [generatedAt,setGeneratedAt]=useState(initialGeneratedAt);
+  const [savedUrls,setSavedUrls]=useState<string[]>([]);
+  const [savedLoaded,setSavedLoaded]=useState(false);
+  const [showSaved,setShowSaved]=useState(false);
+  const [compact,setCompact]=useState(false);
+  const [brokenImages,setBrokenImages]=useState<string[]>([]);
+
+  useEffect(()=>{
+    try { const raw=window.localStorage.getItem("ln-news-saved-v1"); if(raw){const parsed=JSON.parse(raw);if(Array.isArray(parsed))setSavedUrls(parsed.filter((v):v is string=>typeof v==="string"));} }
+    catch { /* Saved stories are optional; private browsing may block storage. */ }
+    setSavedLoaded(true);
+  },[]);
+  useEffect(()=>{if(savedLoaded){try{window.localStorage.setItem("ln-news-saved-v1",JSON.stringify(savedUrls));}catch{/* Continue without persistent saves if storage is unavailable. */}}},[savedUrls,savedLoaded]);
+  const toggleSaved=useCallback((url:string)=>setSavedUrls(current=>current.includes(url)?current.filter(v=>v!==url):[url,...current]),[]);
+  const isSaved=useCallback((url:string)=>savedUrls.includes(url),[savedUrls]);
+  const markImageBroken=useCallback((url:string)=>setBrokenImages(current=>current.includes(url)?current:[...current,url]),[]);
 
   const refresh=useCallback(async(quiet=false)=>{
     if(!quiet)setLoading(true);
@@ -54,9 +70,9 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
 
   const filtered=useMemo(()=>{
     const q=query.trim().toLocaleLowerCase();
-    return stories.filter(s=>s.region===region&&(language==="all"||s.language===language)&&(category==="All"||s.category===category)&&(!q||[s.title,s.description,s.source,s.category].join(" ").toLocaleLowerCase().includes(q)))
+    return stories.filter(s=>s.region===region&&(language==="all"||s.language===language)&&(category==="All"||s.category===category)&&(!showSaved||savedUrls.includes(s.url))&&(!q||[s.title,s.description,s.source,s.category].join(" ").toLocaleLowerCase().includes(q)))
       .sort((a,b)=>sort==="oldest"?Date.parse(a.published_at)-Date.parse(b.published_at):Date.parse(b.published_at)-Date.parse(a.published_at));
-  },[stories,region,language,category,query,sort]);
+  },[stories,region,language,category,query,sort,showSaved,savedUrls]);
   const featured=filtered[0], hasFeatured=category==="All"&&!query&&sort==="newest"&&Boolean(featured);
   const visible=filtered.slice(hasFeatured?1:0,limit+(hasFeatured?1:0));
   const hasMore=filtered.length>limit+(hasFeatured?1:0);
@@ -69,11 +85,11 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
       <div className="newsdesk-kicker"><span className="newsdesk-live-dot"/> समाचार कक्ष · स्वचालित अपडेट</div>
       <h1>नेपालका ताजा समाचार।<br/><span>विश्वभरका खबर पनि।</span></h1>
       <p>नेपालका पछिल्ला सात दिनका समाचार नेपाली भाषामा पढ्नुहोस्। राजनीति, अर्थतन्त्र, प्रविधि, खेलकुद, स्वास्थ्य, शिक्षा र मनोरञ्जनका विषय छान्नुहोस्। विश्व छान्दा विश्वसम्बन्धी समाचार देखिन्छन्।</p>
-      <div className="newsdesk-meta"><span>{filtered.length.toLocaleString()} समाचार · पछिल्ला ७ दिन</span><span>अन्तिम अपडेट {refreshed}</span><button className="newsdesk-refresh" onClick={()=>void refresh()} disabled={loading} type="button">{loading?"अपडेट हुँदैछ…":"↻ समाचार अपडेट"}</button></div>
+      <div className="newsdesk-meta"><span>{filtered.length.toLocaleString()} समाचार · पछिल्ला ७ दिन</span><span>अन्तिम अपडेट {refreshed}</span><div className="newsdesk-toolbar-actions"><button className={showSaved?"newsdesk-save-toggle active":"newsdesk-save-toggle"} type="button" aria-pressed={showSaved} onClick={()=>{setShowSaved(v=>!v);setLimit(PAGE_SIZE);}}>★ सुरक्षित ({savedUrls.length})</button><button className="newsdesk-refresh" onClick={()=>void refresh()} disabled={loading} type="button">{loading?"अपडेट हुँदैछ…":"↻ समाचार अपडेट"}</button></div></div>
     </section>
     <section className="newsdesk-controls" aria-label="समाचार खोज र फिल्टर">
       <label className="newsdesk-search"><span aria-hidden="true">⌕</span><input type="search" value={query} onChange={e=>{setQuery(e.target.value);setLimit(PAGE_SIZE);}} placeholder="समाचार, विषय वा प्रकाशक खोज्नुहोस्…" aria-label="समाचार खोज्नुहोस्"/></label>
-      <label className="newsdesk-sort"><span>क्रम</span><select value={sort} onChange={e=>setSort(e.target.value)} aria-label="समाचार क्रम"><option value="newest">नयाँ पहिले</option><option value="oldest">पुराना पहिले</option></select></label>
+      <label className="newsdesk-sort"><span>क्रम</span><select value={sort} onChange={e=>setSort(e.target.value)} aria-label="समाचार क्रम"><option value="newest">नयाँ पहिले</option><option value="oldest">पुराना पहिले</option></select></label><button className={compact?"newsdesk-view-toggle active":"newsdesk-view-toggle"} type="button" aria-pressed={compact} onClick={()=>setCompact(v=>!v)}>{compact?"▦ कार्ड दृश्य":"☰ Compact सूची"}</button>
     </section>
     <div className="newsdesk-tabs newsdesk-region-tabs" role="group" aria-label="समाचार क्षेत्र">
       <button type="button" className={region==="Nepal"?"active":""} aria-pressed={region==="Nepal"} onClick={()=>{setRegion("Nepal");setLanguage("ne");setCategory("All");setLimit(PAGE_SIZE);}}>🇳🇵 नेपाल</button>
@@ -84,17 +100,17 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
     {error&&<div className="newsdesk-notice" role="status"><strong>Could not refresh the feed.</strong> {stories.length?"Showing the last stories already loaded. ":""}{error} <button type="button" onClick={()=>void refresh()}>Try again</button></div>}
     {!error&&!loading&&stories.length===0&&<div className="newsdesk-notice" role="status"><strong>No recent stories were returned.</strong> The scheduled collector may be temporarily unable to reach its RSS sources. Try again shortly.</div>}
     {hasFeatured&&featured&&<section className="newsdesk-featured" aria-label="Top recent story" lang={featured.language==="ne"?"ne":"en"}>
-      <div className="newsdesk-featured-copy"><span className="newsdesk-label">LATEST HEADLINE</span><span className="newsdesk-category">{featured.category}</span><h2><a href={featured.url} target="_blank" rel="noopener noreferrer">{featured.title}</a></h2>{featured.description&&<p>{featured.description}</p>}<div className="newsdesk-byline"><span>{featured.source}</span><span>{ago(featured.published_at)}</span></div><a className="newsdesk-read-link" href={featured.url} target="_blank" rel="noopener noreferrer">Read at original source ↗</a></div>
-      {featured.image?<a className="newsdesk-featured-image" href={featured.url} target="_blank" rel="noopener noreferrer"><img src={featured.image} alt="" loading="lazy" referrerPolicy="no-referrer"/></a>:<div className="newsdesk-featured-art" aria-hidden="true"><span>LN</span><small>NEWS · WORLD · TECHNOLOGY</small></div>}
+      <div className="newsdesk-featured-copy"><span className="newsdesk-label">LATEST HEADLINE</span><span className="newsdesk-category">{featured.category}</span><h2><a href={featured.url} target="_blank" rel="noopener noreferrer">{featured.title}</a></h2>{featured.description&&<p>{featured.description}</p>}<div className="newsdesk-byline"><span>{featured.source}</span><span>{ago(featured.published_at)}</span></div><button className={isSaved(featured.url)?"newsdesk-bookmark saved":"newsdesk-bookmark"} type="button" aria-pressed={isSaved(featured.url)} onClick={()=>toggleSaved(featured.url)}>{isSaved(featured.url)?"★ सुरक्षित गरिएको":"☆ पछि पढ्न सुरक्षित"}</button><a className="newsdesk-read-link" href={featured.url} target="_blank" rel="noopener noreferrer">Read at original source ↗</a></div>
+      {featured.image&&!brokenImages.includes(featured.image)?<a className="newsdesk-featured-image" href={featured.url} target="_blank" rel="noopener noreferrer"><img src={featured.image} alt={`समाचारको तस्बिर: ${featured.title}`} loading="lazy" referrerPolicy="no-referrer" onError={()=>markImageBroken(featured.image||"")}/><span className="newsdesk-image-caption">प्रकाशकको फिडमा समावेश तस्बिर</span></a>:<div className="newsdesk-featured-art" aria-label="प्रकाशकले तस्बिर उपलब्ध गराएको छैन"><span>LN</span><small>तस्बिर उपलब्ध छैन</small></div>}
     </section>}
     <div className="newsdesk-section-head"><div><span className="newsdesk-label">पछिल्ला सात दिन</span><h2>{region==="Nepal"?"नेपालका समाचार":"विश्व समाचार"}{category!=="All"?` · ${CATEGORY_NE[category]}`:""}</h2><p>नयाँ समाचार पहिले · मूल प्रकाशकको लिंक</p></div><strong>{filtered.length.toLocaleString()} समाचार</strong></div>
     {loading&&stories.length===0?<div className="newsdesk-loading" aria-label="Loading news"><i/><i/><i/><i/><i/><i/></div>:
-      <div className="newsdesk-grid">{visible.map(s=><article className="newsdesk-card" key={s.id||s.url} lang={s.language==="ne"?"ne":"en"}>
-        {s.image?<a className="newsdesk-card-image" href={s.url} target="_blank" rel="noopener noreferrer"><img src={s.image} alt="" loading="lazy" referrerPolicy="no-referrer"/></a>:<div className="newsdesk-card-placeholder" aria-hidden="true">📰</div>}
-        <div className="newsdesk-card-body"><div className="newsdesk-card-meta"><span className="newsdesk-category">{s.category}</span><time dateTime={s.published_at}>{ago(s.published_at)}</time></div><h3><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></h3>{s.description&&<p>{s.description}</p>}<div className="newsdesk-card-source"><span>{s.source} · {dateLabel(s.published_at)}</span><a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={`Read ${s.title} at original source`}>Read ↗</a></div></div>
+      <div className={compact?"newsdesk-grid compact":"newsdesk-grid"}>{visible.map(s=><article className={compact?"newsdesk-card compact":"newsdesk-card"} key={s.id||s.url} lang={s.language==="ne"?"ne":"en"}>
+        {s.image&&!brokenImages.includes(s.image)?<a className="newsdesk-card-image" href={s.url} target="_blank" rel="noopener noreferrer"><img src={s.image} alt={`समाचारको तस्बिर: ${s.title}`} loading="lazy" referrerPolicy="no-referrer" onError={()=>markImageBroken(s.image||"")}/><span className="newsdesk-image-caption">प्रकाशकको तस्बिर</span></a>:<div className="newsdesk-card-placeholder" aria-label="प्रकाशकको फिडमा तस्बिर छैन">📰 <span>तस्बिर उपलब्ध छैन</span></div>}
+        <div className="newsdesk-card-body"><div className="newsdesk-card-meta"><span className="newsdesk-category">{s.category}</span><time dateTime={s.published_at}>{ago(s.published_at)}</time></div><h3><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></h3>{s.description&&<p>{s.description}</p>}<div className="newsdesk-card-source"><span>{s.source} · {dateLabel(s.published_at)}</span><div className="newsdesk-card-actions"><button className={isSaved(s.url)?"newsdesk-bookmark saved":"newsdesk-bookmark"} type="button" aria-label={isSaved(s.url)?`Remove saved story: ${s.title}`:`Save story: ${s.title}`} aria-pressed={isSaved(s.url)} onClick={()=>toggleSaved(s.url)}>{isSaved(s.url)?"★":"☆"}</button><a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={`Read ${s.title} at original source`}>पढ्नुहोस् ↗</a></div></div></div>
       </article>)}{!visible.length&&<div className="newsdesk-empty"><strong>No matching stories</strong><span>Try another category or search term.</span><button type="button" onClick={()=>{setCategory("All");setQuery("");}}>Clear filters</button></div>}</div>}
     {hasMore&&<button className="newsdesk-more" type="button" onClick={()=>setLimit(n=>n+PAGE_SIZE)}>Load more headlines ({Math.min(PAGE_SIZE,filtered.length-limit-(hasFeatured?1:0))} more)</button>}
     <section className="newsdesk-bottom"><div><span className="newsdesk-label">COVERAGE</span><h2>More than one beat.</h2><p>Follow the stories that matter to you, from Nepal and the region to global technology and culture.</p></div><div className="newsdesk-category-list">{CATEGORIES.filter(c=>c!=="All").map(c=><button type="button" key={c} onClick={()=>{setCategory(c);setLimit(PAGE_SIZE);window.scrollTo({top:360,behavior:"smooth"});}}><span>{c}</span><strong>{counts[c]||0}</strong><span>↗</span></button>)}</div></section>
-    <p className="newsdesk-disclaimer">समाचारका शीर्षक, सारांश र तस्बिर फिड तथा प्रकाशकबाट आउँछन्। Laxman Nepal ले मूल समाचारमा लिंक गर्छ।</p>
+    <p className="newsdesk-disclaimer">समाचारका शीर्षक, सारांश र उपलब्ध तस्बिर RSS फिड वा प्रकाशकबाट आउँछन्। मिल्दो तस्बिर नभेटिएमा सामान्य तस्बिर राखिँदैन। Laxman Nepal ले मूल प्रकाशकमा लिंक गर्छ। सुरक्षित समाचार यही ब्राउजरमा मात्र रहन्छ।</p>
   </main>;
 }
