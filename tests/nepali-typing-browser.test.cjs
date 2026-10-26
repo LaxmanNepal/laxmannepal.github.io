@@ -307,13 +307,14 @@ test('Tab cycles suggestion selection without moving the editor caret', async ()
   } finally { await context.close(); }
 });
 
-test('English text inside braces remains unchanged when a suggestion key is pressed', async () => {
+test('English text inside braces is excluded from suggestion conversion', async () => {
   const { context, page } = await openPage();
   try {
     const editor = page.locator('#editor');
     await editor.fill('hello {namaste}');
     await editor.evaluate(el => el.setSelectionRange(10, 10));
-    await editor.press('Enter');
+    await page.waitForTimeout(50);
+    assert.equal(await page.locator('.suggestion').count(), 0);
     assert.equal(await editor.inputValue(), 'hello {namaste}');
   } finally { await context.close(); }
 });
