@@ -110,13 +110,34 @@ def parse_feed(url: str, category: str, label: str) -> list[dict]:
             maybe_title, maybe_source = title.rsplit(" - ", 1)
             if maybe_title.strip() and maybe_source.strip():
                 title, source = maybe_title.strip(), maybe_source.strip()
+        # Only use images explicitly attached to this story by its RSS/Atom item.
+        # Never guess a photo from the headline or use a generic stock image: that can mislead readers.
         image = ""
+        image_candidates: list[tuple[int, str]] = []
         for el in item.iter():
-            if local_name(el.tag) in {"thumbnail", "content"}:
-                candidate = el.attrib.get("url", "")
-                if candidate.startswith("https://"):
-                    image = candidate
-                    break
+            tag = local_name(el.tag)
+            candidate = (el.attrib.get("url", "") or el.attrib.get("href", "")).strip()
+            mime = (el.attrib.get("type", "") or "").lower()
+            medium = (el.attrib.get("medium", "") or "").lower()
+            if not candidate.startswith("https://"):
+                continue
+            score = 0
+            if tag == "thumbnail":
+                score = 100
+            elif tag == "content" and (medium == "image" or mime.startswith("image/")):
+                score = 90
+            elif tag == "enclosure" and mime.startswith("image/"):
+                score = 85
+            elif tag in {"image", "logo"}:
+                score = 50
+            if score:
+                image_candidates.append((score, candidate))
+        # Some publishers place the story's own thumbnail in the RSS description HTML.
+        html_image = re.search(r'<img\b[^>]*?src=["\'](https://[^"\']+)["\']', unescape(child_text(item, {"description", "summary"})), re.I)
+        if html_image:
+            image_candidates.append((70, unescape(html_image.group(1))))
+        if image_candidates:
+            image = sorted(image_candidates, key=lambda candidate: candidate[0], reverse=True)[0][1]
         results.append({
             "id": link,
             "title": title[:300],

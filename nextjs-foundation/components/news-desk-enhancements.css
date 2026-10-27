@@ -1,0 +1,22 @@
+/* News desk enhancements: responsive controls, honest image fallbacks and compact reading mode. */
+.newsdesk-toolbar-actions,.newsdesk-card-actions{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap}
+.newsdesk-save-toggle,.newsdesk-view-toggle,.newsdesk-bookmark{font:inherit;cursor:pointer;border:1px solid var(--news-border,#d9e2ec);border-radius:999px;background:var(--news-surface,#fff);color:inherit;padding:.48rem .8rem;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+.newsdesk-save-toggle:hover,.newsdesk-view-toggle:hover,.newsdesk-bookmark:hover{border-color:var(--news-accent,#2563eb);transform:translateY(-1px)}
+.newsdesk-save-toggle.active,.newsdesk-view-toggle.active,.newsdesk-bookmark.saved{background:#fff4d6;border-color:#d8a52a;color:#754d00}
+.newsdesk-bookmark{padding:.32rem .65rem;white-space:nowrap}
+.newsdesk-image-caption{display:block;font-size:.72rem;opacity:.72;padding:.35rem .65rem .5rem}
+.newsdesk-card-placeholder{display:flex;min-height:150px;align-items:center;justify-content:center;flex-direction:column;gap:.4rem;background:linear-gradient(135deg,#edf2f7,#f8fafc);color:#64748b}
+.newsdesk-card-placeholder span{font-size:.75rem}
+.newsdesk-featured-art{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.65rem;min-height:230px;background:linear-gradient(135deg,#e9eff8,#f8fafc);color:#64748b}
+.newsdesk-featured-art>span{font-weight:800;font-size:clamp(2rem,5vw,4rem);letter-spacing:-.08em;color:#64748b}
+.newsdesk-featured-art small{font-size:.72rem}
+.newsdesk-featured-image img,.newsdesk-card-image img{display:block;width:100%;height:100%;object-fit:cover}
+.newsdesk-featured-image .newsdesk-image-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;padding:1.2rem .8rem .55rem}
+.newsdesk-featured-image{position:relative;overflow:hidden}
+.newsdesk-card.compact{display:grid;grid-template-columns:minmax(110px,190px) minmax(0,1fr);align-items:stretch}
+.newsdesk-grid.compact{grid-template-columns:minmax(0,1fr)}
+.newsdesk-card.compact .newsdesk-card-image,.newsdesk-card.compact .newsdesk-card-placeholder{min-height:130px;height:100%}
+.newsdesk-card.compact .newsdesk-card-body{padding:1rem}
+.newsdesk-card.compact .newsdesk-card-body>p{display:none}
+.newsdesk-card.compact .newsdesk-image-caption{display:none}
+@media(max-width:560px){.newsdesk-toolbar-actions{width:100%}.newsdesk-meta{align-items:flex-start;flex-direction:column}.newsdesk-card.compact{grid-template-columns:105px minmax(0,1fr)}.newsdesk-card.compact .newsdesk-card-body{padding:.7rem}.newsdesk-card.compact .newsdesk-card-body h3{font-size:.98rem}.newsdesk-card.compact .newsdesk-card-source{gap:.4rem;align-items:flex-start;flex-direction:column}}
