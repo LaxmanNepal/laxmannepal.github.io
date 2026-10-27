@@ -1,88 +1,115 @@
 {
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "rakazo",
-      "url": "https://github.com/elie222/rakazo",
-      "description": "Open-source Grok Bot alternative. Choose your own model and sandbox.",
+      "name": "agent-zero-to-hero",
+      "url": "https://github.com/KeWang0622/agent-zero-to-hero",
+      "description": "Build a Claude-Code-shaped agent harness from scratch. 7-week course, 20 chapters, ~5,000 lines of Python, 42 tests, 3 LLM providers, no frameworks.",
+      "language": "Python",
+      "stars": 55,
+      "updatedAt": "2026-10-27T07:49:06Z",
+      "fullName": "KeWang0622/agent-zero-to-hero"
+    },
+    {
+      "name": "sim",
+      "url": "https://github.com/simstudioai/sim",
+      "description": "Sim is the collaborative workspace to build, deploy, and monitor AI agents and workflows. Used by 100,000+ builders.",
       "language": "TypeScript",
-      "stars": 5830,
-      "updatedAt": "2026-10-26T07:46:10Z",
-      "fullName": "elie222/rakazo"
+      "stars": 29925,
+      "updatedAt": "2026-10-27T07:49:05Z",
+      "fullName": "simstudioai/sim"
     },
     {
-      "name": "openaccountants",
-      "url": "https://github.com/openaccountants/openaccountants",
-      "description": "Free AI skills (tax rules your AI follows) for 190+ countries, with sources and review status. Written by AI-first accountants in many countries. Need cross-border work done? Hire us.",
-      "language": "Python",
-      "stars": 461,
-      "updatedAt": "2026-10-26T07:46:10Z",
-      "fullName": "openaccountants/openaccountants"
-    },
-    {
-      "name": "agentplay",
-      "url": "https://github.com/Entelligence-AI/agentplay",
-      "description": "Replay your coding agent sessions as a map and a timeline",
-      "language": "Python",
-      "stars": 313,
-      "updatedAt": "2026-10-26T07:46:08Z",
-      "fullName": "Entelligence-AI/agentplay"
-    },
-    {
-      "name": "perxona-connect-kit",
-      "url": "https://github.com/XRSPACE-Inc/perxona-connect-kit",
-      "description": "Add a talking 3D AI avatar to any web app. Samples and tools for the Perxona Connect SDK: <sv-presenter> web component, lip-sync, text-to-speech and VRM avatars. Clone to talking avatar in under 15 minutes.",
-      "language": "JavaScript",
-      "stars": 66,
-      "updatedAt": "2026-10-26T07:46:06Z",
-      "fullName": "XRSPACE-Inc/perxona-connect-kit"
-    },
-    {
-      "name": "prompt-scrubber",
-      "url": "https://github.com/Nano-Collective/prompt-scrubber",
-      "description": "Local-first tool that strips emails, secrets, paths, and other identifying content out of your prompts before they reach a cloud LLM — and rehydrates the response locally.",
-      "language": "TypeScript",
-      "stars": 23,
-      "updatedAt": "2026-10-26T07:45:56Z",
-      "fullName": "Nano-Collective/prompt-scrubber"
-    },
-    {
-      "name": "dify",
-      "url": "https://github.com/langgenius/dify",
-      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-      "language": "Python",
-      "stars": 159572,
-      "updatedAt": "2026-10-26T07:45:50Z",
-      "fullName": "langgenius/dify"
-    },
-    {
-      "name": "mcp-servers-live",
-      "url": "https://github.com/linny006/mcp-servers-live",
-      "description": "Auto-updated index of MCP servers shipping on GitHub, refreshed every 15 minutes",
+      "name": "rl-gym-orchestrator",
+      "url": "https://github.com/raamonp/rl-gym-orchestrator",
+      "description": "Ultimate LLM Gym Trainer Guide 2026: Reinforcement Learning Fine-Tuning Framework",
       "language": "HTML",
-      "stars": 13,
-      "updatedAt": "2026-10-26T07:45:45Z",
-      "fullName": "linny006/mcp-servers-live"
+      "stars": 55,
+      "updatedAt": "2026-10-27T07:49:00Z",
+      "fullName": "raamonp/rl-gym-orchestrator"
     },
     {
-      "name": "dsh-prompt",
-      "url": "https://github.com/FeatherHunter/dsh-prompt",
-      "description": "💡DSH 的 Prompt提示词工具箱：常用prompt保存后点击即可注入到对话框——省时省力，/prompt 自动提示已有Prompt。 💡The Prompt toolbox for DSH: save frequently-used prompts and inject them into the dialog with one click — saving time and effort, with /prompt auto-suggesting your existing prompts.",
-      "language": "JavaScript",
-      "stars": 65,
-      "updatedAt": "2026-10-26T07:45:43Z",
-      "fullName": "FeatherHunter/dsh-prompt"
+      "name": "AI-Studio",
+      "url": "https://github.com/MindWorkAI/AI-Studio",
+      "description": "MindWork AI Studio is a free, independent cross-platform desktop app for local and cloud LLMs across providers, built to democratize AI access.",
+      "language": "C#",
+      "stars": 579,
+      "updatedAt": "2026-10-27T07:48:53Z",
+      "fullName": "MindWorkAI/AI-Studio"
     },
     {
-      "name": "awesome-agent-skills",
-      "url": "https://github.com/linny006/awesome-agent-skills",
-      "description": "Curated, auto-updated awesome-list of vetted AI agent skills with quality ratings for Claude, GPT, a",
+      "name": "synaplan",
+      "url": "https://github.com/metadist/synaplan",
+      "description": "Open-source, self-hosted AI platform (PHP/Symfony): chat with any model, RAG over your docs, embeddable widget, MCP — see the cost of every answer. Apache-2.0.",
+      "language": "PHP",
+      "stars": 297,
+      "updatedAt": "2026-10-27T07:48:53Z",
+      "fullName": "metadist/synaplan"
+    },
+    {
+      "name": "inalpha",
+      "url": "https://github.com/mirror29/inalpha",
+      "description": "🦊 Open-source professional quant agent framework. Agents pick the factors working now to time entries, write full strategies, and evolve them in   a sandbox — every order through machine approval, the LLM never on the order path. Multi-market, audit-grade.",
       "language": "Python",
-      "stars": 44,
-      "updatedAt": "2026-10-26T07:45:34Z",
-      "fullName": "linny006/awesome-agent-skills"
+      "stars": 49,
+      "updatedAt": "2026-10-27T07:48:50Z",
+      "fullName": "mirror29/inalpha"
+    },
+    {
+      "name": "pipeshub-ai",
+      "url": "https://github.com/pipeshub-ai/pipeshub-ai",
+      "description": "The open-source context layer for AI agents. PipesHub turns your company's knowledge (Slack, Drive, Jira, GitHub, Microsoft 365 and 40+ connectors) into a permission-aware workspace that agents can search, grep, navigate and cite. MCP, SDKs and built-in agents",
+      "language": "Python",
+      "stars": 3851,
+      "updatedAt": "2026-10-27T07:48:47Z",
+      "fullName": "pipeshub-ai/pipeshub-ai"
+    },
+    {
+      "name": "agent-native-agent",
+      "url": "https://github.com/tykimos/agent-native-agent",
+      "description": "Self-hosted apps you operate by watching a dashboard and talking to a coding agent that IS the runtime — it proposes, applies, and evolves the app live. Built for Claude Code and MCP.",
+      "language": "HTML",
+      "stars": 128,
+      "updatedAt": "2026-10-27T07:48:47Z",
+      "fullName": "tykimos/agent-native-agent"
+    },
+    {
+      "name": "WasmEdge",
+      "url": "https://github.com/WasmEdge/WasmEdge",
+      "description": "WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud native, edge, and decentralized applications. It powers serverless apps, embedded functions, microservices, smart contracts, and IoT devices.",
+      "language": "C++",
+      "stars": 10847,
+      "updatedAt": "2026-10-27T07:48:46Z",
+      "fullName": "WasmEdge/WasmEdge"
+    },
+    {
+      "name": "llm",
+      "url": "https://github.com/r-uby-dev/llm",
+      "description": "An agentic runtime",
+      "language": "Ruby",
+      "stars": 144,
+      "updatedAt": "2026-10-27T07:48:44Z",
+      "fullName": "r-uby-dev/llm"
+    },
+    {
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": 393528,
+      "updatedAt": "2026-10-27T07:48:38Z",
+      "fullName": "morluto/rea"
+    },
+    {
+      "name": "birdnet-go",
+      "url": "https://github.com/tphakala/birdnet-go",
+      "description": "Self-hosted realtime soundscape analyser for birds, bats and other wildlife. Multi-model local AI inference, runs 24/7 on a Raspberry Pi.",
+      "language": "Go",
+      "stars": 2365,
+      "updatedAt": "2026-10-27T07:48:30Z",
+      "fullName": "tphakala/birdnet-go"
     },
     {
       "name": "agent-eval-harness",
@@ -90,134 +117,107 @@
       "description": "Live, open-source benchmark for comparing AI coding agents on real GitHub issues",
       "language": "Python",
       "stars": 6,
-      "updatedAt": "2026-10-26T07:45:33Z",
+      "updatedAt": "2026-10-27T07:48:24Z",
       "fullName": "linny006/agent-eval-harness"
     },
     {
-      "name": "skills-tracker",
-      "url": "https://github.com/linny006/skills-tracker",
-      "description": "Real-time tracking of every new GitHub 'skills' repo to capture the AI agent skill ecosystem trend",
-      "language": "Python",
-      "stars": 30,
-      "updatedAt": "2026-10-26T07:45:32Z",
-      "fullName": "linny006/skills-tracker"
-    },
-    {
-      "name": "slotstream",
-      "url": "https://github.com/carloslfu/slotstream",
-      "description": "Run a 105 GB AI model on a Mac that can't hold it. Slotstream streams Qwen3.8-Flash-Next (125B mixture of experts) from your SSD and caches the busiest experts in memory, so it runs on Macs with 16 to 64 GB. One native Swift binary on MLX and Metal, no Python,",
-      "language": "Swift",
-      "stars": 501,
-      "updatedAt": "2026-10-26T07:45:31Z",
-      "fullName": "carloslfu/slotstream"
-    },
-    {
-      "name": "gaia",
-      "url": "https://github.com/theexperiencecompany/gaia",
-      "description": "Your proactive personal AI assistant for daily life",
-      "language": "Python",
-      "stars": 320,
-      "updatedAt": "2026-10-26T07:45:31Z",
-      "fullName": "theexperiencecompany/gaia"
-    },
-    {
-      "name": "prompt-tools-live",
-      "url": "https://github.com/linny006/prompt-tools-live",
-      "description": "Live-updating tracker of prompt engineering tools, libraries, and techniques — refreshed every 15 mi",
-      "language": "Python",
-      "stars": 11,
-      "updatedAt": "2026-10-26T07:45:29Z",
-      "fullName": "linny006/prompt-tools-live"
-    },
-    {
-      "name": "agent-framework-radar",
-      "url": "https://github.com/linny006/agent-framework-radar",
-      "description": "Live index of the newest agent frameworks shipping on GitHub, sorted by recency not stars",
-      "language": "Python",
-      "stars": 9,
-      "updatedAt": "2026-10-26T07:45:24Z",
-      "fullName": "linny006/agent-framework-radar"
-    },
-    {
-      "name": "llm-eval-tracker",
-      "url": "https://github.com/linny006/llm-eval-tracker",
-      "description": "Live index of LLM evaluation tools and benchmarks, refreshed every 15 minutes from GitHub",
-      "language": "Python",
-      "stars": 6,
-      "updatedAt": "2026-10-26T07:45:22Z",
-      "fullName": "linny006/llm-eval-tracker"
-    },
-    {
-      "name": "SAGE",
-      "url": "https://github.com/dp-web4/SAGE",
-      "description": "A cognition kernel that wraps a frozen LLM in a persistent identity + trust + governance loop — testing whether capability comes from structure, not weights. Research-stage; honest about what's real vs mocked.",
-      "language": "Python",
-      "stars": 27,
-      "updatedAt": "2026-10-26T07:45:19Z",
-      "fullName": "dp-web4/SAGE"
-    },
-    {
-      "name": "llm-agents-radar",
-      "url": "https://github.com/linny006/llm-agents-radar",
-      "description": "Live-updating index of LLM agent frameworks shipping on GitHub, refreshed every 15 minutes",
-      "language": "Python",
-      "stars": 14,
-      "updatedAt": "2026-10-26T07:45:19Z",
-      "fullName": "linny006/llm-agents-radar"
-    },
-    {
-      "name": "claude-code-plugin-tracker",
-      "url": "https://github.com/linny006/claude-code-plugin-tracker",
-      "description": "Live index of Claude Code extensions, hooks, and plugins — refreshed every 15 minutes from GitHub",
-      "language": "Python",
-      "stars": 6,
-      "updatedAt": "2026-10-26T07:45:19Z",
-      "fullName": "linny006/claude-code-plugin-tracker"
-    },
-    {
-      "name": "trending-claude-skills",
-      "url": "https://github.com/linny006/trending-claude-skills",
-      "description": "Auto-updated leaderboard of trending claude-skills and AI agent repos, refreshed every 15 minutes",
-      "language": "Python",
-      "stars": 133,
-      "updatedAt": "2026-10-26T07:45:16Z",
-      "fullName": "linny006/trending-claude-skills"
-    },
-    {
-      "name": "dsh-quant",
-      "url": "https://github.com/pengpengyi92/dsh-quant",
-      "description": "\"🐳 Dsh-Quant: The Everything-Plugin Ai native Quant OS \"",
+      "name": "jazz",
+      "url": "https://github.com/lvndry/jazz",
+      "description": "One agent. Every surface. Your rules.",
       "language": "TypeScript",
+      "stars": 54,
+      "updatedAt": "2026-10-27T07:48:22Z",
+      "fullName": "lvndry/jazz"
+    },
+    {
+      "name": "walrus-memory",
+      "url": "https://github.com/MystenLabs/walrus-memory",
+      "description": "A portable memory layer that makes AI agents reliable across apps and sessions. Persistent, verifiable, and fully under your control.",
+      "language": "TypeScript",
+      "stars": 127,
+      "updatedAt": "2026-10-27T07:48:16Z",
+      "fullName": "MystenLabs/walrus-memory"
+    },
+    {
+      "name": "precision-arena-trainer",
+      "url": "https://github.com/vickyvenu190-web/precision-arena-trainer",
+      "description": "Web Aim Trainer 2026: Ranked Reflex & Precision FPS Practice",
+      "language": "HTML",
       "stars": 55,
-      "updatedAt": "2026-10-26T07:45:12Z",
-      "fullName": "pengpengyi92/dsh-quant"
+      "updatedAt": "2026-10-27T07:48:12Z",
+      "fullName": "vickyvenu190-web/precision-arena-trainer"
     },
     {
-      "name": "nextclaw",
-      "url": "https://github.com/Peiiii/nextclaw",
-      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
       "language": "TypeScript",
-      "stars": 262,
-      "updatedAt": "2026-10-26T07:45:07Z",
-      "fullName": "Peiiii/nextclaw"
+      "stars": 28742,
+      "updatedAt": "2026-10-27T07:48:07Z",
+      "fullName": "QwenLM/qwen-code"
     },
     {
-      "name": "ax-engine",
-      "url": "https://github.com/defai-digital/ax-engine",
-      "description": "One Mac process. Many models. Real speed. Multi-model LLM serving with prefix reuse, MTP acceleration, and OpenAI APIs — built for Apple Silicon, measured against mlx-lm and llama.cpp.",
-      "language": "Rust",
+      "name": "claude-code-plugins",
+      "url": "https://github.com/melodic-software/claude-code-plugins",
+      "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
+      "language": "Shell",
+      "stars": 28,
+      "updatedAt": "2026-10-27T07:48:03Z",
+      "fullName": "melodic-software/claude-code-plugins"
+    },
+    {
+      "name": "DensePack",
+      "url": "https://github.com/Fabian-Galvez/DensePack",
+      "description": "Packs text files into small images that an AI model reads for about half the input tokens. Includes a Claude Code plugin, a right-click tool and an HTML app.",
+      "language": "Python",
       "stars": 32,
-      "updatedAt": "2026-10-26T07:44:53Z",
-      "fullName": "defai-digital/ax-engine"
+      "updatedAt": "2026-10-27T07:47:59Z",
+      "fullName": "Fabian-Galvez/DensePack"
     },
     {
-      "name": "9router-go",
-      "url": "https://github.com/luqman-v1/9router-go",
-      "description": "High-performance Go proxy gateway for 9Router LLM routing — 32K RPS, 42MB RAM, CGO-free",
-      "language": "Go",
-      "stars": 233,
-      "updatedAt": "2026-10-26T07:44:47Z",
-      "fullName": "luqman-v1/9router-go"
+      "name": "senpi",
+      "url": "https://github.com/code-yeongyu/senpi",
+      "description": "pi had nothing (nothing), so I made something (something) — sorry mariozechner-senpai, I went ahead and lovingly soiled your pure pi for you. opinionated fork of badlogic/pi-mono with extension-first additions. ganbare ganbare senpi 頑張れ頑張れ先輩",
+      "language": "TypeScript",
+      "stars": 497,
+      "updatedAt": "2026-10-27T07:47:57Z",
+      "fullName": "code-yeongyu/senpi"
+    },
+    {
+      "name": "iran-mcp",
+      "url": "https://github.com/sepehr071/iran-mcp",
+      "description": "39 MCP servers (488 tools) that give AI agents the Iranian web: Digikala, Torob, Divar, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche, laws, tax, crypto, stocks, news and more. Prices in Toman.",
+      "language": "Python",
+      "stars": 158,
+      "updatedAt": "2026-10-27T07:47:56Z",
+      "fullName": "sepehr071/iran-mcp"
+    },
+    {
+      "name": "dsh-prompt",
+      "url": "https://github.com/FeatherHunter/dsh-prompt",
+      "description": "💡DSH 的 Prompt提示词工具箱：常用prompt保存后点击即可注入到对话框——省时省力，/prompt 自动提示已有Prompt。 💡The Prompt toolbox for DSH: save frequently-used prompts and inject them into the dialog with one click — saving time and effort, with /prompt auto-suggesting your existing prompts.",
+      "language": "JavaScript",
+      "stars": 68,
+      "updatedAt": "2026-10-27T07:47:54Z",
+      "fullName": "FeatherHunter/dsh-prompt"
+    },
+    {
+      "name": "Agnostos-v2",
+      "url": "https://github.com/Avinashistoocool/Agnostos-v2",
+      "description": "Agnostos: AI research internship outreach CLI. Finds professors matching your resume, drafts honest cold emails, sends them paced, tracks and drafts replies.",
+      "language": "Python",
+      "stars": 26,
+      "updatedAt": "2026-10-27T07:47:48Z",
+      "fullName": "Avinashistoocool/Agnostos-v2"
+    },
+    {
+      "name": "suna",
+      "url": "https://github.com/kortix-ai/suna",
+      "description": "The open-source AI Operating System",
+      "language": "TypeScript",
+      "stars": 20318,
+      "updatedAt": "2026-10-27T07:47:37Z",
+      "fullName": "kortix-ai/suna"
     }
   ]
 }
