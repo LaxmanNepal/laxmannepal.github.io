@@ -8,6 +8,7 @@
 - Prefer the canonical URL listed in each article's article.json.
 
 ## Articles
+- https://laxmannepal.com.np/blogs/claude-faceless-video-master-prompt/ — How to Make a Complete Faceless YouTube Video With Claude AI
 - https://laxmannepal.com.np/blogs/download-entire-youtube-channel-using-cmd/ — How to Download an Entire YouTube Channel Using CMD
 
 ## Discovery

@@ -13,4 +13,35 @@
 <meta name="twitter:description" content="Learn how to download all accessible videos from a YouTube channel using Windows CMD with yt-dlp and FFmpeg.">
 <meta name="twitter:image" content="https://laxmannepal.com.np/blogs/download-entire-youtube-channel-using-cmd/thumbnail.jpg">
 </head><body><header class="shared-header"><a class="shared-brand" href="/"><span class="shared-logo">LN</span><strong>Laxman Nepal</strong></a><nav class="shared-desktop-nav"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI Tools</a><a href="/blogs/" aria-current="page">Blogs</a></nav></header><main class="article"><div class="wrap"><img class="hero-img" src="/blogs/download-entire-youtube-channel-using-cmd/thumbnail.jpg" alt="How to Download an Entire YouTube Channel Using CMD" fetchpriority="high"><p>YOUTUBE • WINDOWS • CMD</p><h1>How to Download an Entire YouTube Channel Using CMD</h1><p class="lead">Learn how to use yt-dlp and FFmpeg to download accessible channel videos, resume interrupted downloads, choose quality, save thumbnails and more.</p><p class="meta">Published October 7, 2026 · By Laxman Nepal</p><div class="box"><strong>Before you download:</strong> Only download videos when you have permission or a lawful right to do so. Do not bypass private access, DRM, paid-content restrictions, or other access controls.</div><h2>Install yt-dlp and FFmpeg</h2><p>Install yt-dlp and FFmpeg on Windows, then test them from Command Prompt.</p><pre class="code">yt-dlp --version
-ffmpeg -version</pre><h2>Download an entire channel</h2><p>Replace the URL with a channel you are authorized to download.</p><pre class="code">yt-dlp -f "bv*+ba/b" --merge-output-format mp4 -o "%(upload_date)s - %(title)s [%(id)s].%(ext)s" "https://www.youtube.com/@CHANNEL_HANDLE/videos"</pre><h2>Resume-safe downloads</h2><pre class="code">yt-dlp --download-archive downloaded.txt -f "bv*+ba/b" --merge-output-format mp4 "https://www.youtube.com/@CHANNEL_HANDLE/videos"</pre><h2>Subtitles, thumbnails and metadata</h2><pre class="code">yt-dlp --write-thumbnail --skip-download "CHANNEL_URL/videos"</pre><h2>Common problems</h2><p>Some videos can be private, removed, region-limited, members-only or otherwise unavailable. Do not attempt to bypass access restrictions.</p><div class="box"><strong>More guides:</strong> <a href="/blogs/">Browse all Laxman Nepal blogs →</a></div></div></main></body></html>
+ffmpeg -version</pre><h2>Download an entire channel</h2><p>Replace the URL with a channel you are authorized to download.</p><pre class="code">yt-dlp -f "bv*+ba/b" --merge-output-format mp4 -o "%(upload_date)s - %(title)s [%(id)s].%(ext)s" "https://www.youtube.com/@CHANNEL_HANDLE/videos"</pre><h2>Resume-safe downloads</h2><pre class="code">yt-dlp --download-archive downloaded.txt -f "bv*+ba/b" --merge-output-format mp4 "https://www.youtube.com/@CHANNEL_HANDLE/videos"</pre><h2>Subtitles, thumbnails and metadata</h2><pre class="code">yt-dlp --write-thumbnail --skip-download "CHANNEL_URL/videos"</pre><h2>Common problems</h2><p>Some videos can be private, removed, region-limited, members-only or otherwise unavailable. Do not attempt to bypass access restrictions.</p><div class="box"><strong>More guides:</strong> <a href="/blogs/">Browse all Laxman Nepal blogs →</a></div></div>
+<!-- related-blogs:start -->
+<section class="related-blogs" aria-labelledby="related-blogs-title">
+<style>
+.related-blogs{margin:54px 0 12px;padding-top:28px;border-top:1px solid #e5e7eb;color:#101828}
+.related-blogs h2{font-size:clamp(23px,3vw,30px);line-height:1.2;margin:0 0 8px}
+.related-blogs .related-blogs-intro{margin:0 0 20px;color:#667085;font-size:15px;line-height:1.6}
+.related-blogs-grid{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;padding:4px 3px 16px;scroll-snap-type:x mandatory;scroll-padding-inline:3px;-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#98a2b3 #f2f4f7}.related-blogs-grid::-webkit-scrollbar{height:8px}.related-blogs-grid::-webkit-scrollbar-track{background:#f2f4f7;border-radius:99px}.related-blogs-grid::-webkit-scrollbar-thumb{background:#98a2b3;border-radius:99px}
+.related-blog-card{display:flex;flex:0 0 280px;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #e5e7eb;border-radius:16px;background:#fff;color:inherit;text-decoration:none;scroll-snap-align:start;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.related-blog-card:hover{transform:translateY(-3px);border-color:#b2ccff;box-shadow:0 10px 24px rgba(16,24,40,.08)}
+.related-blog-card:focus-visible{outline:3px solid #84adff;outline-offset:3px}
+.related-blog-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#f2f4f7}
+.related-blog-card-copy{display:flex;flex:1;flex-direction:column;align-items:flex-start;gap:9px;padding:15px}
+.related-blog-card-copy strong{font-size:16px;line-height:1.4;color:#101828}
+.related-blog-card-copy span{font-size:13px;line-height:1.55;color:#667085;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.related-blog-card-copy em{margin-top:auto;padding-top:3px;font-size:13px;font-style:normal;font-weight:650;color:#175cd3}
+@media(max-width:700px){.related-blogs-grid{gap:12px}.related-blog-card{flex-basis:250px}.related-blog-card-copy{padding:12px}.related-blog-card-copy strong{font-size:14px}}
+@media(max-width:420px){.related-blog-card{flex-basis:min(82vw,280px)}.related-blog-card-copy{padding:12px}}
+@media(prefers-reduced-motion:reduce){.related-blog-card{transition:none}.related-blog-card:hover{transform:none}}
+</style>
+<h2 id="related-blogs-title">You might also like</h2>
+<p class="related-blogs-intro">More practical guides selected from the Laxman Nepal blog.</p>
+<div class="related-blogs-grid">
+<a class="related-blog-card" href="https://laxmannepal.com.np/blogs/claude-faceless-video-master-prompt/">
+<img src="https://laxmannepal.com.np/blogs/claude-faceless-video-master-prompt/thumbnail.jpg" alt="" loading="lazy" decoding="async">
+<span class="related-blog-card-copy"><strong>How to Make a Complete Faceless YouTube Video With Claude AI</strong><span>A copy-paste Claude master prompt that interviews you about language, country, audience, channel, topic, voice, visuals, tools and editing before building a complete faceless video production plan.</span><em>Read article →</em></span>
+</a>
+</div>
+<p style="margin:18px 0 0"><a href="/blogs/">Explore all blogs →</a></p>
+</section>
+<!-- related-blogs:end -->
+</main></body></html>
