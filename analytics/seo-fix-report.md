@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-10-27T12:23:35.914733+00:00.
+Generated from the latest analytics snapshot: 2026-10-27T22:23:15.724551+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,6 +13,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/apple-iphone-17-pro-max-5g-a19-chip-silver-512gb/ — SEO score 0/100
+- Issues: Audit error: ConnectionError
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: mobile price in nepal/phones/apple iphone 17 pro max 5g a19…
+- Current description: Missing
+- Recommended description: Learn about mobile price in nepal/phones/apple iphone 17 pro max 5g a19 chip silver 512gb with practical steps, useful tips and clear guidance from Laxman…
+- Recommended H1: mobile price in nepal/phones/apple iphone 17 pro max 5g a19 chip silv…
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -65,16 +75,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/top 10 free online tools will save you.html
 - Top queries: No page-query rows
 
-### /p/contact-us.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/contact us.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/contact us.html
-- Top queries: No page-query rows
-
 ### /p/link-shortner-generator.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -93,6 +93,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/07/image prompt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/07/image prompt.html
+- Top queries: No page-query rows
+
+### /p/contact-us.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/contact us.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/contact us.html
 - Top queries: No page-query rows
 
 ### /p/cookies-policy.html — SEO score 0/100
@@ -123,6 +133,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/about.html
+- Top queries: No page-query rows
+
+### /p/disclaimer.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/disclaimer.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/disclaimer.html
 - Top queries: No page-query rows
 
 ### /p/terms-and-conditions.html — SEO score 0/100
@@ -165,16 +185,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/09/convert image to pdf free tools.html
 - Top queries: No page-query rows
 
-### /p/disclaimer.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/disclaimer.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/disclaimer.html
-- Top queries: No page-query rows
-
 ### /p/pdf.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -195,16 +205,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/sitemap.html
 - Top queries: No page-query rows
 
-### /2024/10/top-20-websites-for-modded-apks-your.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/10/top 20 websites for modded apks your.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2024/10/top 20 websites for modded apks your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/10/top 20 websites for modded apks your.html
-- Top queries: No page-query rows
-
 ### /p/privacy-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -223,6 +223,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/youtube tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/youtube tools.html
+- Top queries: No page-query rows
+
+### /2024/10/top-20-websites-for-modded-apks-your.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/10/top 20 websites for modded apks your.html | Laxman…
+- Current description: Missing
+- Recommended description: Learn about 2024/10/top 20 websites for modded apks your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/10/top 20 websites for modded apks your.html
 - Top queries: No page-query rows
 
 ### /2025/06/facebook-video-downloader-save-hd.html — SEO score 0/100
@@ -283,6 +293,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/09/top advanced ai websites everyone.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/09/top advanced ai websites everyone.html
+- Top queries: No page-query rows
+
+### /2025/04/best-free-image-to-pdf-converter-online.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/04/best free image to pdf converter online.html | Laxm…
+- Current description: Missing
+- Recommended description: Learn about 2025/04/best free image to pdf converter online.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/04/best free image to pdf converter online.html
 - Top queries: No page-query rows
 
 ### /2025/06/ebook-finder.html — SEO score 0/100
@@ -443,16 +463,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/11/how to upload your music to spotify.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/11/how to upload your music to spotify.html
-- Top queries: No page-query rows
-
-### /2025/04/best-free-image-to-pdf-converter-online.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/04/best free image to pdf converter online.html | Laxm…
-- Current description: Missing
-- Recommended description: Learn about 2025/04/best free image to pdf converter online.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/04/best free image to pdf converter online.html
 - Top queries: No page-query rows
 
 ### /2025/05/12-free-ai-tools-2025.html — SEO score 0/100
@@ -2443,16 +2453,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Apple iPhone 17 Pro Max 5G A19 Chip Silver / 256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specif
 - Recommended description: Learn about Apple iPhone 17 Pro Max 5G A19 Chip Silver / 256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Apple iPhone 17 Pro Max 5G A19 Chip Silver / 256GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/apple-iphone-17-pro-max-5g-a19-chip-silver-512gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Apple iPhone 17 Pro Max 5G A19 Chip Silver / 512GB Price in Nepal
-- Recommended title: Apple iPhone 17 Pro Max 5G A19 Chip Silver / 512GB Price in…
-- Current description: Compare Apple iPhone 17 Pro Max 5G A19 Chip Silver / 512GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specif
-- Recommended description: Learn about Apple iPhone 17 Pro Max 5G A19 Chip Silver / 512GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Apple iPhone 17 Pro Max 5G A19 Chip Silver / 512GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/apple-iphone-17-pro-max/ — SEO score 85/100
@@ -5633,6 +5633,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: '); background-size: cover; background-position: center; } .channel-info { padding: 0 2rem 2rem; margin-top: -60px; position: relative; z-index: 1; } .channel-a
 - Recommended description: Learn about Enhanced YouTube Channel Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Enhanced YouTube Channel Analytics
+- Top queries: No page-query rows
+
+### /tools/nepali-tools/type-nepali/index.html — SEO score 85/100
+- Issues: Title length 62
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Type Nepali Online — Nepali Unicode Typing Tool | Laxman Nepal
+- Recommended title: Type Nepali Online | Laxman Nepal
+- Current description: Type Nepali Unicode online with Romanized typing, live word suggestions, keyboard shortcuts, copy and download. Free and works offline.
+- Recommended description: Learn about Type Nepali Online with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Type Nepali Online
 - Top queries: No page-query rows
 
 ### /youtube-tools/archive/youtube-video-title-description-tag.html — SEO score 85/100
