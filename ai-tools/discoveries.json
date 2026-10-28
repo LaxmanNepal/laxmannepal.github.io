@@ -1,223 +1,223 @@
 {
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "agent-zero-to-hero",
-      "url": "https://github.com/KeWang0622/agent-zero-to-hero",
-      "description": "Build a Claude-Code-shaped agent harness from scratch. 7-week course, 20 chapters, ~5,000 lines of Python, 42 tests, 3 LLM providers, no frameworks.",
-      "language": "Python",
-      "stars": 55,
-      "updatedAt": "2026-10-27T07:49:06Z",
-      "fullName": "KeWang0622/agent-zero-to-hero"
-    },
-    {
-      "name": "sim",
-      "url": "https://github.com/simstudioai/sim",
-      "description": "Sim is the collaborative workspace to build, deploy, and monitor AI agents and workflows. Used by 100,000+ builders.",
+      "name": "adk-js",
+      "url": "https://github.com/google/adk-js",
+      "description": "An open-source, code-first Typescript toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
       "language": "TypeScript",
-      "stars": 29925,
-      "updatedAt": "2026-10-27T07:49:05Z",
-      "fullName": "simstudioai/sim"
+      "stars": 1456,
+      "updatedAt": "2026-10-28T08:26:36Z",
+      "fullName": "google/adk-js"
     },
     {
-      "name": "rl-gym-orchestrator",
-      "url": "https://github.com/raamonp/rl-gym-orchestrator",
-      "description": "Ultimate LLM Gym Trainer Guide 2026: Reinforcement Learning Fine-Tuning Framework",
-      "language": "HTML",
-      "stars": 55,
-      "updatedAt": "2026-10-27T07:49:00Z",
-      "fullName": "raamonp/rl-gym-orchestrator"
-    },
-    {
-      "name": "AI-Studio",
-      "url": "https://github.com/MindWorkAI/AI-Studio",
-      "description": "MindWork AI Studio is a free, independent cross-platform desktop app for local and cloud LLMs across providers, built to democratize AI access.",
-      "language": "C#",
-      "stars": 579,
-      "updatedAt": "2026-10-27T07:48:53Z",
-      "fullName": "MindWorkAI/AI-Studio"
-    },
-    {
-      "name": "synaplan",
-      "url": "https://github.com/metadist/synaplan",
-      "description": "Open-source, self-hosted AI platform (PHP/Symfony): chat with any model, RAG over your docs, embeddable widget, MCP — see the cost of every answer. Apache-2.0.",
-      "language": "PHP",
-      "stars": 297,
-      "updatedAt": "2026-10-27T07:48:53Z",
-      "fullName": "metadist/synaplan"
-    },
-    {
-      "name": "inalpha",
-      "url": "https://github.com/mirror29/inalpha",
-      "description": "🦊 Open-source professional quant agent framework. Agents pick the factors working now to time entries, write full strategies, and evolve them in   a sandbox — every order through machine approval, the LLM never on the order path. Multi-market, audit-grade.",
+      "name": "LMCache",
+      "url": "https://github.com/LMCache/LMCache",
+      "description": "LMCache: Supercharge Your LLM with the Fastest KV Cache Layer",
       "language": "Python",
-      "stars": 49,
-      "updatedAt": "2026-10-27T07:48:50Z",
-      "fullName": "mirror29/inalpha"
+      "stars": 12197,
+      "updatedAt": "2026-10-28T08:26:33Z",
+      "fullName": "LMCache/LMCache"
     },
     {
-      "name": "pipeshub-ai",
-      "url": "https://github.com/pipeshub-ai/pipeshub-ai",
-      "description": "The open-source context layer for AI agents. PipesHub turns your company's knowledge (Slack, Drive, Jira, GitHub, Microsoft 365 and 40+ connectors) into a permission-aware workspace that agents can search, grep, navigate and cite. MCP, SDKs and built-in agents",
-      "language": "Python",
-      "stars": 3851,
-      "updatedAt": "2026-10-27T07:48:47Z",
-      "fullName": "pipeshub-ai/pipeshub-ai"
-    },
-    {
-      "name": "agent-native-agent",
-      "url": "https://github.com/tykimos/agent-native-agent",
-      "description": "Self-hosted apps you operate by watching a dashboard and talking to a coding agent that IS the runtime — it proposes, applies, and evolves the app live. Built for Claude Code and MCP.",
-      "language": "HTML",
-      "stars": 128,
-      "updatedAt": "2026-10-27T07:48:47Z",
-      "fullName": "tykimos/agent-native-agent"
-    },
-    {
-      "name": "WasmEdge",
-      "url": "https://github.com/WasmEdge/WasmEdge",
-      "description": "WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud native, edge, and decentralized applications. It powers serverless apps, embedded functions, microservices, smart contracts, and IoT devices.",
-      "language": "C++",
-      "stars": 10847,
-      "updatedAt": "2026-10-27T07:48:46Z",
-      "fullName": "WasmEdge/WasmEdge"
-    },
-    {
-      "name": "llm",
-      "url": "https://github.com/r-uby-dev/llm",
-      "description": "An agentic runtime",
-      "language": "Ruby",
-      "stars": 144,
-      "updatedAt": "2026-10-27T07:48:44Z",
-      "fullName": "r-uby-dev/llm"
-    },
-    {
-      "name": "rea",
-      "url": "https://github.com/morluto/rea",
-      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "name": "anythingmcp",
+      "url": "https://github.com/HelpCode-ai/anythingmcp",
+      "description": "MCP gateway for AI agents: turn any REST/OpenAPI, GraphQL, SOAP or SQL API into MCP tools. 561 ready-made connectors (SAP, ERP, e-commerce) with RBAC, SSO, audit logs and a knowledge graph.",
       "language": "TypeScript",
-      "stars": 393528,
-      "updatedAt": "2026-10-27T07:48:38Z",
-      "fullName": "morluto/rea"
+      "stars": 754,
+      "updatedAt": "2026-10-28T08:26:24Z",
+      "fullName": "HelpCode-ai/anythingmcp"
     },
     {
-      "name": "birdnet-go",
-      "url": "https://github.com/tphakala/birdnet-go",
-      "description": "Self-hosted realtime soundscape analyser for birds, bats and other wildlife. Multi-model local AI inference, runs 24/7 on a Raspberry Pi.",
+      "name": "evener",
+      "url": "https://github.com/prime-radiant-inc/evener",
+      "description": "A coding agent: give it a prompt and it reads, writes, runs commands, and searches code in a loop until the work is done, using native tool-calling across OpenAI, Anthropic, and Google models.",
       "language": "Go",
-      "stars": 2365,
-      "updatedAt": "2026-10-27T07:48:30Z",
-      "fullName": "tphakala/birdnet-go"
+      "stars": 186,
+      "updatedAt": "2026-10-28T08:26:18Z",
+      "fullName": "prime-radiant-inc/evener"
     },
     {
-      "name": "agent-eval-harness",
-      "url": "https://github.com/linny006/agent-eval-harness",
-      "description": "Live, open-source benchmark for comparing AI coding agents on real GitHub issues",
-      "language": "Python",
-      "stars": 6,
-      "updatedAt": "2026-10-27T07:48:24Z",
-      "fullName": "linny006/agent-eval-harness"
-    },
-    {
-      "name": "jazz",
-      "url": "https://github.com/lvndry/jazz",
-      "description": "One agent. Every surface. Your rules.",
-      "language": "TypeScript",
-      "stars": 54,
-      "updatedAt": "2026-10-27T07:48:22Z",
-      "fullName": "lvndry/jazz"
-    },
-    {
-      "name": "walrus-memory",
-      "url": "https://github.com/MystenLabs/walrus-memory",
-      "description": "A portable memory layer that makes AI agents reliable across apps and sessions. Persistent, verifiable, and fully under your control.",
-      "language": "TypeScript",
-      "stars": 127,
-      "updatedAt": "2026-10-27T07:48:16Z",
-      "fullName": "MystenLabs/walrus-memory"
-    },
-    {
-      "name": "precision-arena-trainer",
-      "url": "https://github.com/vickyvenu190-web/precision-arena-trainer",
-      "description": "Web Aim Trainer 2026: Ranked Reflex & Precision FPS Practice",
-      "language": "HTML",
-      "stars": 55,
-      "updatedAt": "2026-10-27T07:48:12Z",
-      "fullName": "vickyvenu190-web/precision-arena-trainer"
-    },
-    {
-      "name": "qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "description": "An open-source AI coding agent that lives in your terminal.",
-      "language": "TypeScript",
-      "stars": 28742,
-      "updatedAt": "2026-10-27T07:48:07Z",
-      "fullName": "QwenLM/qwen-code"
-    },
-    {
-      "name": "claude-code-plugins",
-      "url": "https://github.com/melodic-software/claude-code-plugins",
-      "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
+      "name": "agent-skills",
+      "url": "https://github.com/okx/agent-skills",
+      "description": "Plug-and-play AI agent skills for OKX — letting any LLM agent trade, manage portfolios, query live market data, and run grid/DCA bots through a single okx CLI, no API wiring required.  ",
       "language": "Shell",
-      "stars": 28,
-      "updatedAt": "2026-10-27T07:48:03Z",
-      "fullName": "melodic-software/claude-code-plugins"
+      "stars": 197,
+      "updatedAt": "2026-10-28T08:26:17Z",
+      "fullName": "okx/agent-skills"
     },
     {
-      "name": "DensePack",
-      "url": "https://github.com/Fabian-Galvez/DensePack",
-      "description": "Packs text files into small images that an AI model reads for about half the input tokens. Includes a Claude Code plugin, a right-click tool and an HTML app.",
+      "name": "omnigent",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
       "language": "Python",
-      "stars": 32,
-      "updatedAt": "2026-10-27T07:47:59Z",
-      "fullName": "Fabian-Galvez/DensePack"
+      "stars": 11093,
+      "updatedAt": "2026-10-28T08:25:46Z",
+      "fullName": "omnigent-ai/omnigent"
     },
     {
-      "name": "senpi",
-      "url": "https://github.com/code-yeongyu/senpi",
-      "description": "pi had nothing (nothing), so I made something (something) — sorry mariozechner-senpai, I went ahead and lovingly soiled your pure pi for you. opinionated fork of badlogic/pi-mono with extension-first additions. ganbare ganbare senpi 頑張れ頑張れ先輩",
-      "language": "TypeScript",
-      "stars": 497,
-      "updatedAt": "2026-10-27T07:47:57Z",
-      "fullName": "code-yeongyu/senpi"
-    },
-    {
-      "name": "iran-mcp",
-      "url": "https://github.com/sepehr071/iran-mcp",
-      "description": "39 MCP servers (488 tools) that give AI agents the Iranian web: Digikala, Torob, Divar, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche, laws, tax, crypto, stocks, news and more. Prices in Toman.",
-      "language": "Python",
-      "stars": 158,
-      "updatedAt": "2026-10-27T07:47:56Z",
-      "fullName": "sepehr071/iran-mcp"
+      "name": "DevoxxGenieIDEAPlugin",
+      "url": "https://github.com/devoxx/DevoxxGenieIDEAPlugin",
+      "description": "DevoxxGenie is an agentic plugin for IntelliJ IDEA that uses local LLM's (Ollama, LMStudio, GPT4All, Jan and Llama.cpp) and Cloud based LLMs to help review, test, explain your project code. Latest version now also supports Spec Driven Development with CLI Runn",
+      "language": "Java",
+      "stars": 686,
+      "updatedAt": "2026-10-28T08:25:44Z",
+      "fullName": "devoxx/DevoxxGenieIDEAPlugin"
     },
     {
       "name": "dsh-prompt",
       "url": "https://github.com/FeatherHunter/dsh-prompt",
       "description": "💡DSH 的 Prompt提示词工具箱：常用prompt保存后点击即可注入到对话框——省时省力，/prompt 自动提示已有Prompt。 💡The Prompt toolbox for DSH: save frequently-used prompts and inject them into the dialog with one click — saving time and effort, with /prompt auto-suggesting your existing prompts.",
       "language": "JavaScript",
-      "stars": 68,
-      "updatedAt": "2026-10-27T07:47:54Z",
+      "stars": 75,
+      "updatedAt": "2026-10-28T08:25:34Z",
       "fullName": "FeatherHunter/dsh-prompt"
     },
     {
-      "name": "Agnostos-v2",
-      "url": "https://github.com/Avinashistoocool/Agnostos-v2",
-      "description": "Agnostos: AI research internship outreach CLI. Finds professors matching your resume, drafts honest cold emails, sends them paced, tracks and drafts replies.",
-      "language": "Python",
-      "stars": 26,
-      "updatedAt": "2026-10-27T07:47:48Z",
-      "fullName": "Avinashistoocool/Agnostos-v2"
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": 399132,
+      "updatedAt": "2026-10-28T08:25:33Z",
+      "fullName": "morluto/rea"
     },
     {
-      "name": "suna",
-      "url": "https://github.com/kortix-ai/suna",
-      "description": "The open-source AI Operating System",
+      "name": "unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
+      "language": "Python",
+      "stars": 78663,
+      "updatedAt": "2026-10-28T08:25:27Z",
+      "fullName": "unslothai/unsloth"
+    },
+    {
+      "name": "giskard-oss",
+      "url": "https://github.com/Giskard-AI/giskard-oss",
+      "description": "🐢 Open-Source Evaluation & Testing library for LLM Agents",
+      "language": "Python",
+      "stars": 5931,
+      "updatedAt": "2026-10-28T08:25:13Z",
+      "fullName": "Giskard-AI/giskard-oss"
+    },
+    {
+      "name": "cc-haha",
+      "url": "https://github.com/NanmiCoder/cc-haha",
+      "description": "本地优先的跨平台 Claude Code / AI Agent 桌面工作台：多 Agent 协作、Git Worktree、代码 Diff、技能市场、多模型、Computer Use、桌面宠物；支持微信、飞书、钉钉及 H5 等远程访问。 | Local-first Claude Code / AI Agent desktop workspace: multi-agent teams, Git worktrees, diffs, skills marketplace, multi-model, Computer Us",
       "language": "TypeScript",
-      "stars": 20318,
-      "updatedAt": "2026-10-27T07:47:37Z",
-      "fullName": "kortix-ai/suna"
+      "stars": 15207,
+      "updatedAt": "2026-10-28T08:24:50Z",
+      "fullName": "NanmiCoder/cc-haha"
+    },
+    {
+      "name": "qq-agent-plus",
+      "url": "https://github.com/sakurawwwxh/qq-agent-plus",
+      "description": "Linux QQ 群聊 Agent（OneBot v11）：分条发言、贴纸系统、主动发言与内置运维命令",
+      "language": "JavaScript",
+      "stars": 94,
+      "updatedAt": "2026-10-28T08:24:49Z",
+      "fullName": "sakurawwwxh/qq-agent-plus"
+    },
+    {
+      "name": "glideship",
+      "url": "https://github.com/mickyarun/glideship",
+      "description": "Glideship (formerly Bodhiorchard) is the open-source, self-hosted alternative to Jira and Linear for AI-native software teams. Specialised agents draft every spec, forecast cycle times, and reason over your real repositories, commits, and pull requests — repla",
+      "language": "Python",
+      "stars": 28,
+      "updatedAt": "2026-10-28T08:24:32Z",
+      "fullName": "mickyarun/glideship"
+    },
+    {
+      "name": "smart-trade-ai",
+      "url": "https://github.com/chefroger/smart-trade-ai",
+      "description": "AI assistant for international trade — 39 B2B skills (lead gen, OSINT, email, docs, compliance). End-to-end customer development pipeline. Runs locally. 外贸业务员 AI 助手。",
+      "language": "Python",
+      "stars": 96,
+      "updatedAt": "2026-10-28T08:24:05Z",
+      "fullName": "chefroger/smart-trade-ai"
+    },
+    {
+      "name": "prompts.chat",
+      "url": "https://github.com/f/prompts.chat",
+      "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "language": "HTML",
+      "stars": 174884,
+      "updatedAt": "2026-10-28T08:23:59Z",
+      "fullName": "f/prompts.chat"
+    },
+    {
+      "name": "LangBot",
+      "url": "https://github.com/langbot-app/LangBot",
+      "description": "Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integrated with ChatGPT(GPT), DeepSeek, Dify, n8n, Langflow, Coze,",
+      "language": "Python",
+      "stars": 18549,
+      "updatedAt": "2026-10-28T08:23:56Z",
+      "fullName": "langbot-app/LangBot"
+    },
+    {
+      "name": "OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "description": "🙌 OpenHands: AI-Driven Development",
+      "language": "TypeScript",
+      "stars": 92067,
+      "updatedAt": "2026-10-28T08:23:39Z",
+      "fullName": "OpenHands/OpenHands"
+    },
+    {
+      "name": "cloakpipe",
+      "url": "https://github.com/rohansx/cloakpipe",
+      "description": "CloakPipe is the verifiable control plane for production AI agents: evaluate a release, certify it, enforce it at runtime, and prove what happened.",
+      "language": "Rust",
+      "stars": 49,
+      "updatedAt": "2026-10-28T08:23:33Z",
+      "fullName": "rohansx/cloakpipe"
+    },
+    {
+      "name": "floe-agent",
+      "url": "https://github.com/JiangNanGenius/floe-agent",
+      "description": "Open-source AI agent workspace for iOS/iPadOS and Android. On-device Linux, terminal, code, Git and local web previews; BYOK cloud AI. iOS adds Notes, Canvas, CAD/3D, voice, Skill Hub and supported local models. Android alpha includes Office viewing and editin",
+      "language": "Swift",
+      "stars": 357,
+      "updatedAt": "2026-10-28T08:23:31Z",
+      "fullName": "JiangNanGenius/floe-agent"
+    },
+    {
+      "name": "AI-Studio",
+      "url": "https://github.com/MindWorkAI/AI-Studio",
+      "description": "MindWork AI Studio is a free, independent cross-platform desktop app for local and cloud LLMs across providers, built to democratize AI access.",
+      "language": "C#",
+      "stars": 580,
+      "updatedAt": "2026-10-28T08:23:30Z",
+      "fullName": "MindWorkAI/AI-Studio"
+    },
+    {
+      "name": "nextclaw",
+      "url": "https://github.com/Peiiii/nextclaw",
+      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
+      "language": "TypeScript",
+      "stars": 262,
+      "updatedAt": "2026-10-28T08:23:21Z",
+      "fullName": "Peiiii/nextclaw"
+    },
+    {
+      "name": "firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "description": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
+      "language": "TypeScript",
+      "stars": 196187,
+      "updatedAt": "2026-10-28T08:23:20Z",
+      "fullName": "firecrawl/firecrawl"
+    },
+    {
+      "name": "sail",
+      "url": "https://github.com/lakehq/sail",
+      "description": "Drop-in Apache Spark replacement written in Rust, unifying batch processing, stream processing, and compute-intensive AI workloads.",
+      "language": "Rust",
+      "stars": 3475,
+      "updatedAt": "2026-10-28T08:23:14Z",
+      "fullName": "lakehq/sail"
     }
   ]
 }
