@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-10-28T13:14:51.232750+00:00.
+Generated from the latest analytics snapshot: 2026-10-28T22:42:00.438710+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,56 +13,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
-- Top queries: No page-query rows
-
-### /hi/reviews/ — SEO score 0/100
-- Issues: Audit error: ConnectionError
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: hi/reviews | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about hi/reviews with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: hi/reviews
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/brands/blackview/ — SEO score 0/100
-- Issues: Audit error: ConnectionError
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: mobile price in nepal/brands/blackview | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about mobile price in nepal/brands/blackview with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: mobile price in nepal/brands/blackview
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/brands/realme/ — SEO score 0/100
-- Issues: Audit error: SSLError
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: mobile price in nepal/brands/realme | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about mobile price in nepal/brands/realme with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: mobile price in nepal/brands/realme
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/honor-600-pro-5g-12gb-512gb/ — SEO score 0/100
-- Issues: Audit error: ConnectionError
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: mobile price in nepal/phones/honor 600 pro 5g 12gb 512gb |…
-- Current description: Missing
-- Recommended description: Learn about mobile price in nepal/phones/honor 600 pro 5g 12gb 512gb with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: mobile price in nepal/phones/honor 600 pro 5g 12gb 512gb
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/vivo-y500-4g-8gb-128gb/ — SEO score 0/100
-- Issues: Audit error: ConnectionError
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: mobile price in nepal/phones/vivo y500 4g 8gb 128gb | Laxma…
-- Current description: Missing
-- Recommended description: Learn about mobile price in nepal/phones/vivo y500 4g 8gb 128gb with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: mobile price in nepal/phones/vivo y500 4g 8gb 128gb
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -106,7 +56,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
-- Issues: Audit error: ConnectionError
+- Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
 - Recommended title: 2025/06/top 10 free online tools will save you.html | Laxma…
@@ -245,6 +195,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/sitemap.html
 - Top queries: No page-query rows
 
+### /2023/01/how-to-extract-youtube-video-title.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/01/how to extract youtube video title.html | Laxman Ne…
+- Current description: Missing
+- Recommended description: Learn about 2023/01/how to extract youtube video title.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/01/how to extract youtube video title.html
+- Top queries: No page-query rows
+
 ### /p/privacy-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -295,16 +255,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/free online courses by laxman nepal.html
 - Top queries: No page-query rows
 
-### /2023/01/how-to-extract-youtube-video-title.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/01/how to extract youtube video title.html | Laxman Ne…
-- Current description: Missing
-- Recommended description: Learn about 2023/01/how to extract youtube video title.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/01/how to extract youtube video title.html
-- Top queries: No page-query rows
-
 ### /2023/07/html-prase-tool-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -323,16 +273,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/qr code generator by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/qr code generator by laxman nepal.html
-- Top queries: No page-query rows
-
-### /2024/09/top-advanced-ai-websites-everyone.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/09/top advanced ai websites everyone.html | Laxman Nep…
-- Current description: Missing
-- Recommended description: Learn about 2024/09/top advanced ai websites everyone.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/09/top advanced ai websites everyone.html
 - Top queries: No page-query rows
 
 ### /2025/04/best-free-image-to-pdf-converter-online.html — SEO score 0/100
@@ -403,6 +343,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/09/free pdf to image converter tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/09/free pdf to image converter tools.html
+- Top queries: No page-query rows
+
+### /2024/09/top-advanced-ai-websites-everyone.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/09/top advanced ai websites everyone.html | Laxman Nep…
+- Current description: Missing
+- Recommended description: Learn about 2024/09/top advanced ai websites everyone.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/09/top advanced ai websites everyone.html
 - Top queries: No page-query rows
 
 ### /2024/09/top-ai-image-generators-without-sign-up.html — SEO score 0/100
@@ -485,36 +435,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/09/netflix free website watch movies.html
 - Top queries: No page-query rows
 
-### /2024/09/top-10-ways-to-make-money-online-in-2024.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/09/top 10 ways to make money online in 2024.html | Lax…
-- Current description: Missing
-- Recommended description: Learn about 2024/09/top 10 ways to make money online in 2024.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/09/top 10 ways to make money online in 2024.html
-- Top queries: No page-query rows
-
-### /2024/11/how-to-upload-your-music-to-spotify.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/11/how to upload your music to spotify.html | Laxman N…
-- Current description: Missing
-- Recommended description: Learn about 2024/11/how to upload your music to spotify.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/11/how to upload your music to spotify.html
-- Top queries: No page-query rows
-
-### /2025/05/12-free-ai-tools-2025.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/05/12 free ai tools 2025.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2025/05/12 free ai tools 2025.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/05/12 free ai tools 2025.html
-- Top queries: No page-query rows
-
 ### /2025/07/qr-code-generator.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -563,6 +483,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/09/bs to ad nepali date converter ad to bs.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/09/bs to ad nepali date converter ad to bs.html
+- Top queries: No page-query rows
+
+### /2024/09/top-10-ways-to-make-money-online-in-2024.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/09/top 10 ways to make money online in 2024.html | Lax…
+- Current description: Missing
+- Recommended description: Learn about 2024/09/top 10 ways to make money online in 2024.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/09/top 10 ways to make money online in 2024.html
+- Top queries: No page-query rows
+
+### /2024/11/how-to-upload-your-music-to-spotify.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/11/how to upload your music to spotify.html | Laxman N…
+- Current description: Missing
+- Recommended description: Learn about 2024/11/how to upload your music to spotify.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/11/how to upload your music to spotify.html
 - Top queries: No page-query rows
 
 ### /2025/02/blogger-post-fetcher-free-tool.html — SEO score 0/100
@@ -636,7 +576,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2021/07/youtube-video-downloader-online-tool.html — SEO score 0/100
-- Issues: Audit error: ConnectionError
+- Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
 - Recommended title: 2021/07/youtube video downloader online tool.html | Laxman…
@@ -825,8 +765,18 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/05/12 best ai bots on whatsapp for chatgpt.html
 - Top queries: No page-query rows
 
+### /2025/05/12-free-ai-tools-2025.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/05/12 free ai tools 2025.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2025/05/12 free ai tools 2025.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/05/12 free ai tools 2025.html
+- Top queries: No page-query rows
+
 ### /2025/06/free-online-video-to-audio-converter.html — SEO score 0/100
-- Issues: Audit error: ConnectionError
+- Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
 - Recommended title: 2025/06/free online video to audio converter.html | Laxman…
@@ -1093,16 +1043,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/youtube video download by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/youtube video download by laxman nepal.html
-- Top queries: No page-query rows
-
-### /tools/index.html — SEO score 0/100
-- Issues: Audit error: ConnectionError
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: tools/index.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about tools/index.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: tools/index.html
 - Top queries: No page-query rows
 
 ### /topics/idea-06.html — SEO score 0/100
@@ -1465,6 +1405,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: समाचार
 - Top queries: No page-query rows
 
+### /hi/reviews/ — SEO score 70/100
+- Issues: Description length 33, Thin content (98 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: रिव्यू — Laxman Nepal | Laxman Nepal
+- Recommended title: रिव्यू | Laxman Nepal
+- Current description: Explore रिव्यू from Laxman Nepal.
+- Recommended description: Learn about रिव्यू with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: रिव्यू
+- Top queries: No page-query rows
+
 ### /hi/tools/ — SEO score 70/100
 - Issues: Description length 32, Thin content (98 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1715,16 +1665,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Advanced YouTube Video SEO Analyzer
 - Top queries: No page-query rows
 
-### /2025/11/youtube-video-analytics.html — SEO score 70/100
-- Issues: Description length 59, Noindex
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: YouTube Video Analytics | Blog Analytics
-- Recommended title: YouTube Video Analytics | Laxman Nepal
-- Current description: Get detailed insights about any YouTube video for your blog
-- Recommended description: Learn about YouTube Video Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: YouTube Video Analytics
-- Top queries: No page-query rows
-
 ### /2025/11/youtube-video-seo-analyzer.html — SEO score 70/100
 - Issues: Noindex, Thin content (122 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1733,6 +1673,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Fetching data from YouTube API and generating comprehensive analysis...
 - Recommended description: Learn about Advanced YouTube Video SEO Analyzer with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Advanced YouTube Video SEO Analyzer
+- Top queries: No page-query rows
+
+### /2025/11/youtube-video-analytics.html — SEO score 70/100
+- Issues: Description length 59, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Video Analytics | Blog Analytics
+- Recommended title: YouTube Video Analytics | Laxman Nepal
+- Current description: Get detailed insights about any YouTube video for your blog
+- Recommended description: Learn about YouTube Video Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Video Analytics
 - Top queries: No page-query rows
 
 ### /2025/08/20-free-ai-tools-to-skyrocket-your.html — SEO score 70/100
@@ -2683,6 +2633,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare HONOR 600 Pro 5G 12GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product im
 - Recommended description: Learn about HONOR 600 Pro 5G 12GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: HONOR 600 Pro 5G 12GB/256GB Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/honor-600-pro-5g-12gb-512gb/ — SEO score 85/100
+- Issues: Title length 64
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: HONOR 600 Pro 5G 12GB/512GB Price in Nepal, Specs & Store Offers
+- Recommended title: HONOR 600 Pro 5G 12GB/512GB Price in Nepal | Laxman Nepal
+- Current description: Compare HONOR 600 Pro 5G 12GB/512GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product im
+- Recommended description: Learn about HONOR 600 Pro 5G 12GB/512GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: HONOR 600 Pro 5G 12GB/512GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/honor-600-pro/ — SEO score 85/100
@@ -4903,6 +4863,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Vivo Y31d 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Vivo Y31d 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Vivo Y31d 8GB/256GB Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/vivo-y500-4g-8gb-128gb/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Vivo Y500 4G 8GB/128GB Price in Nepal, Specs & Store Offers | Lax
+- Recommended title: Vivo Y500 4G 8GB/128GB Price in Nepal | Laxman Nepal
+- Current description: Compare Vivo Y500 4G 8GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Vivo Y500 4G 8GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Vivo Y500 4G 8GB/128GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/vivo-y500-4g-8gb-256gb/ — SEO score 85/100
