@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-10-27T22:23:15.724551+00:00.
+Generated from the latest analytics snapshot: 2026-10-28T05:52:48.446369+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,16 +13,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/apple-iphone-17-pro-max-5g-a19-chip-silver-512gb/ — SEO score 0/100
-- Issues: Audit error: ConnectionError
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: mobile price in nepal/phones/apple iphone 17 pro max 5g a19…
-- Current description: Missing
-- Recommended description: Learn about mobile price in nepal/phones/apple iphone 17 pro max 5g a19 chip silver 512gb with practical steps, useful tips and clear guidance from Laxman…
-- Recommended H1: mobile price in nepal/phones/apple iphone 17 pro max 5g a19 chip silv…
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -2453,6 +2443,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Apple iPhone 17 Pro Max 5G A19 Chip Silver / 256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specif
 - Recommended description: Learn about Apple iPhone 17 Pro Max 5G A19 Chip Silver / 256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Apple iPhone 17 Pro Max 5G A19 Chip Silver / 256GB Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/apple-iphone-17-pro-max-5g-a19-chip-silver-512gb/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Apple iPhone 17 Pro Max 5G A19 Chip Silver / 512GB Price in Nepal
+- Recommended title: Apple iPhone 17 Pro Max 5G A19 Chip Silver / 512GB Price in…
+- Current description: Compare Apple iPhone 17 Pro Max 5G A19 Chip Silver / 512GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specif
+- Recommended description: Learn about Apple iPhone 17 Pro Max 5G A19 Chip Silver / 512GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Apple iPhone 17 Pro Max 5G A19 Chip Silver / 512GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/apple-iphone-17-pro-max/ — SEO score 85/100
