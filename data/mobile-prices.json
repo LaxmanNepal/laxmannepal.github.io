@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T06:24:21.945296+00:00",
+  "updated_at": "2026-10-28T06:55:21.595690+00:00",
   "status": "Daily retailer refresh; last-known offers are marked stale when a source refresh is incomplete",
   "source_status": {
     "Brother Mart": {
@@ -8,9 +8,7 @@
       "previous_offers": 169,
       "minimum_expected_offers": 60,
       "status": "stale",
-      "errors": [
-        "https://brother-mart.com/collections/smartphones-mobilephones-price-in-nepal: ConnectionError: HTTPSConnectionPool(host='brother-mart.com', port=443): Max retries exceeded with url: /collections/smartphones-mobilephones-price-in-nepal (Caused by NameResolutionError(\"HTTPSConnection(host='brother-mart.com', port=443): Failed to resolve 'brother-mart.com' ([Errno -2] Name or service not known)\"))"
-      ]
+      "errors": []
     },
     "Daraz": {
       "candidates": 0,
@@ -75,7 +73,7 @@
           "store": "GBN Store",
           "price": 22999,
           "url": "https://gbnstore.com/product/ai-nova-2-5g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -88,7 +86,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 22999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/ai-nova-2-5g",
@@ -112,6 +110,10 @@
         {
           "date": "2026-10-27",
           "price": 22999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 22999
         }
       ]
     },
@@ -126,7 +128,7 @@
           "store": "GBN Store",
           "price": 19999,
           "url": "https://gbnstore.com/product/ai-pulse-2",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -139,7 +141,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 19999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/ai-pulse-2",
@@ -162,6 +164,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 19999
+        },
+        {
+          "date": "2026-10-28",
           "price": 19999
         }
       ]
@@ -273,14 +279,14 @@
           "store": "Neo Store",
           "price": 127499,
           "url": "https://www.neostore.com.np/product/apple-iphone-15",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         },
         {
           "store": "Quality Computer",
           "price": 127499,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-15-48358?category=833&order=create_date+desc",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -317,34 +323,26 @@
         "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
         "term (in month)": "Choose a term",
         "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-        "iphone 15": "Price in Nepal",
-        "128gb": "Rs. 127,499",
-        "256gb": "Rs. 154,200",
-        "512gb": "Rs. 191,900",
-        "size": "6.1 inches",
-        "resolution": "2556 x 1179 pixels, 461 PPI",
-        "technology": "OLED",
-        "refresh rate": "60Hz",
-        "system chip": "A16 Bionic (4 nm)",
-        "gpu": "Apple GPU 5-core",
-        "os": "iOS (17.x)",
-        "capacity": "3349 mAh",
-        "rear": "Dual camera",
-        "main camera": "48 MP (Sensor-shift OIS)",
-        "specifications": "Aperture size: F2.4; Focal Length: 13 mm",
-        "second camera": "12 MP (Ultra-wide)",
-        "video recording": "3840x2160 (4K UHD) (60 fps), 1920x1080 (Full HD) (240 fps)",
-        "front": "12 MP (Time-of-Flight (ToF))",
-        "video capture": "3840x2160 (4K UHD) (60 fps)",
-        "colors": "Black, Blue, Green, Yellow, Pink",
-        "headphones": "No 3.5mm jack",
-        "speakers": "Earpiece, Loudspeaker",
-        "screen mirroring": "Wireless screen share",
-        "additional microphone(s)": "for Noise cancellation",
-        "colour": "Black or Pink or Blue or Green or Yellow",
-        "memory": "128GB or 256GB or 512GB"
+        "memory": "128GB or 256GB or 512GB",
+        "128gb": "Rs 127,499",
+        "256gb": "Rs 154,200",
+        "512gb": "Rs 191,900",
+        "brightness": "1,000 nits typical, 1,600 nits HDR, 2,000 nits outdoor peak",
+        "chip": "A16 Bionic: 6-core CPU, 5-core GPU, 16-core Neural Engine",
+        "main camera": "48MP, 26 mm, ƒ/1.6, sensor-shift OIS; 2x telephoto option",
+        "ultra wide": "12MP, 13 mm, ƒ/2.4",
+        "video": "4K Dolby Vision up to 60 fps, Cinematic mode up to 4K HDR 30 fps",
+        "front camera": "12MP TrueDepth, ƒ/1.9; Face ID",
+        "charging": "USB-C, 50% in about 30 min with a 20W+ adapter; MagSafe and Qi2 up to 15W",
+        "wireless": "Wi-Fi 6, Bluetooth 5.3, Ultra Wideband (2nd gen), NFC",
+        "sim": "Nano-SIM + eSIM on international models; US models are eSIM-only",
+        "port": "USB-C, USB 2 (up to 480 Mb/s)",
+        "build": "Colour-infused glass back, Ceramic Shield front, IP68 (6 m for up to 30 minutes)",
+        "size and weight": "147.6 × 71.6 × 7.80 mm, 171 g",
+        "colours": "Black, Blue, Green, Yellow, Pink",
+        "colour": "Black or Pink or Blue or Green or Yellow"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "product": "iPhone 15",
       "category": "Mobile",
       "color": "Black, Green and Pink",
@@ -362,31 +360,24 @@
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-      "iphone 15": "Price in Nepal",
-      "128gb": "Rs. 127,499",
-      "256gb": "Rs. 154,200",
-      "512gb": "Rs. 191,900",
-      "size": "6.1 inches",
-      "resolution": "2556 x 1179 pixels, 461 PPI",
-      "technology": "OLED",
-      "refresh rate": "60Hz",
-      "system chip": "A16 Bionic (4 nm)",
-      "gpu": "Apple GPU 5-core",
-      "os": "iOS (17.x)",
-      "capacity": "3349 mAh",
-      "rear": "Dual camera",
-      "main camera": "48 MP (Sensor-shift OIS)",
-      "second camera": "12 MP (Ultra-wide)",
-      "video recording": "3840x2160 (4K UHD) (60 fps), 1920x1080 (Full HD) (240 fps)",
-      "front": "12 MP (Time-of-Flight (ToF))",
-      "video capture": "3840x2160 (4K UHD) (60 fps)",
-      "colors": "Black, Blue, Green, Yellow, Pink",
-      "headphones": "No 3.5mm jack",
-      "speakers": "Earpiece, Loudspeaker",
-      "screen mirroring": "Wireless screen share",
-      "additional microphone(s)": "for Noise cancellation",
-      "colour": "Black or Pink or Blue or Green or Yellow",
       "memory": "128GB or 256GB or 512GB",
+      "128gb": "Rs 127,499",
+      "256gb": "Rs 154,200",
+      "512gb": "Rs 191,900",
+      "brightness": "1,000 nits typical, 1,600 nits HDR, 2,000 nits outdoor peak",
+      "chip": "A16 Bionic: 6-core CPU, 5-core GPU, 16-core Neural Engine",
+      "main camera": "48MP, 26 mm, ƒ/1.6, sensor-shift OIS; 2x telephoto option",
+      "ultra wide": "12MP, 13 mm, ƒ/2.4",
+      "video": "4K Dolby Vision up to 60 fps, Cinematic mode up to 4K HDR 30 fps",
+      "front camera": "12MP TrueDepth, ƒ/1.9; Face ID",
+      "charging": "USB-C, 50% in about 30 min with a 20W+ adapter; MagSafe and Qi2 up to 15W",
+      "wireless": "Wi-Fi 6, Bluetooth 5.3, Ultra Wideband (2nd gen), NFC",
+      "sim": "Nano-SIM + eSIM on international models; US models are eSIM-only",
+      "port": "USB-C, USB 2 (up to 480 Mb/s)",
+      "build": "Colour-infused glass back, Ceramic Shield front, IP68 (6 m for up to 30 minutes)",
+      "size and weight": "147.6 × 71.6 × 7.80 mm, 171 g",
+      "colours": "Black, Blue, Green, Yellow, Pink",
+      "colour": "Black or Pink or Blue or Green or Yellow",
       "price": 127499,
       "best_store": "Neo Store",
       "best_url": "https://www.neostore.com.np/product/apple-iphone-15",
@@ -410,6 +401,10 @@
         {
           "date": "2026-10-27",
           "price": 127499
+        },
+        {
+          "date": "2026-10-28",
+          "price": 127499
         }
       ]
     },
@@ -424,14 +419,14 @@
           "store": "Neo Store",
           "price": 146599,
           "url": "https://www.neostore.com.np/product/apple-iphone-16",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         },
         {
           "store": "Quality Computer",
           "price": 146599,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-16-51326?category=833&order=create_date+desc",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -470,25 +465,28 @@
         "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
         "term (in month)": "Choose a term",
         "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-        "iphone 16": "Price in Nepal",
-        "128gb": "Rs. 146,599",
-        "256gb": "Rs. 149,000",
-        "512gb": "Rs. 186,500",
-        "feature": "Specification",
-        "chip": "A18 Bionic chip, 6-core CPU, 5-core GPU, 16-core Neural Engine",
-        "battery life": "Up to 22 hours video playback",
-        "storage options": "128 GB, 256 GB, 512 GB",
-        "connectivity": "5G, Wi-Fi 7, Bluetooth 5.3, Ultra Wideband chip",
-        "charging": "MagSafe, Qi Wireless Charging, USB-C",
-        "water resistance": "IP68 (maximum depth of 6 meters up to 30 minutes)",
-        "security": "Face ID, Secure Enclave",
-        "colors": "Midnight, Starlight, Blue, Purple, Green",
-        "dimensions": "146.7 x 71.5 x 7.8 mm",
-        "weight": "173g (6.10 ounces)",
-        "colour": "Ultramarine or Teal or Black or White or Pink",
-        "memory": "128GB or 256GB or 512GB"
+        "memory": "128GB or 256GB or 512GB",
+        "128gb": "Rs 146,599",
+        "256gb": "Rs 149,000",
+        "512gb": "Rs 186,500",
+        "brightness": "1,000 nits typical, 1,600 nits HDR, 2,000 nits outdoor peak",
+        "chip": "A18: 6-core CPU, 5-core GPU, 16-core Neural Engine",
+        "main camera": "48MP Fusion, 26 mm, ƒ/1.6, sensor-shift OIS; 2x telephoto option",
+        "ultra wide": "12MP, 13 mm, ƒ/2.2",
+        "zoom": "2x optical in, 2x optical out (4x optical zoom range); digital up to 10x",
+        "video": "4K Dolby Vision up to 60 fps",
+        "front camera": "12MP TrueDepth, ƒ/1.9; Face ID",
+        "buttons": "Camera Control, Action button",
+        "charging": "USB-C, 50% in 30 min with a 20W+ adapter; MagSafe and Qi2 up to 25W (30W+ adapter)",
+        "wireless": "Wi-Fi 7, Bluetooth 5.3, Ultra Wideband (2nd gen), Thread, NFC",
+        "sim": "Nano-SIM + eSIM on international models; US models are eSIM-only",
+        "port": "USB-C, USB 2 (up to 480 Mb/s)",
+        "build": "IP68 (6 m for up to 30 minutes)",
+        "size and weight": "147.6 × 71.6 × 7.80 mm, 170 g",
+        "colours": "Black, White, Pink, Teal, Ultramarine",
+        "colour": "Ultramarine or Teal or Black or White or Pink"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "lock in your look.-": "dial in your exact desired look with more advanced skin-tone rendering",
       "align with your aesthetic. -": "customize the different moods of a photo",
       "make the most of your megapixels.": "easy to adjust tone and color simultaneously",
@@ -508,23 +506,26 @@
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-      "iphone 16": "Price in Nepal",
-      "128gb": "Rs. 146,599",
-      "256gb": "Rs. 149,000",
-      "512gb": "Rs. 186,500",
-      "feature": "Specification",
-      "chip": "A18 Bionic chip, 6-core CPU, 5-core GPU, 16-core Neural Engine",
-      "battery life": "Up to 22 hours video playback",
-      "storage options": "128 GB, 256 GB, 512 GB",
-      "connectivity": "5G, Wi-Fi 7, Bluetooth 5.3, Ultra Wideband chip",
-      "charging": "MagSafe, Qi Wireless Charging, USB-C",
-      "water resistance": "IP68 (maximum depth of 6 meters up to 30 minutes)",
-      "security": "Face ID, Secure Enclave",
-      "colors": "Midnight, Starlight, Blue, Purple, Green",
-      "dimensions": "146.7 x 71.5 x 7.8 mm",
-      "weight": "173g (6.10 ounces)",
-      "colour": "Ultramarine or Teal or Black or White or Pink",
       "memory": "128GB or 256GB or 512GB",
+      "128gb": "Rs 146,599",
+      "256gb": "Rs 149,000",
+      "512gb": "Rs 186,500",
+      "brightness": "1,000 nits typical, 1,600 nits HDR, 2,000 nits outdoor peak",
+      "chip": "A18: 6-core CPU, 5-core GPU, 16-core Neural Engine",
+      "main camera": "48MP Fusion, 26 mm, ƒ/1.6, sensor-shift OIS; 2x telephoto option",
+      "ultra wide": "12MP, 13 mm, ƒ/2.2",
+      "zoom": "2x optical in, 2x optical out (4x optical zoom range); digital up to 10x",
+      "video": "4K Dolby Vision up to 60 fps",
+      "front camera": "12MP TrueDepth, ƒ/1.9; Face ID",
+      "buttons": "Camera Control, Action button",
+      "charging": "USB-C, 50% in 30 min with a 20W+ adapter; MagSafe and Qi2 up to 25W (30W+ adapter)",
+      "wireless": "Wi-Fi 7, Bluetooth 5.3, Ultra Wideband (2nd gen), Thread, NFC",
+      "sim": "Nano-SIM + eSIM on international models; US models are eSIM-only",
+      "port": "USB-C, USB 2 (up to 480 Mb/s)",
+      "build": "IP68 (6 m for up to 30 minutes)",
+      "size and weight": "147.6 × 71.6 × 7.80 mm, 170 g",
+      "colours": "Black, White, Pink, Teal, Ultramarine",
+      "colour": "Ultramarine or Teal or Black or White or Pink",
       "price": 146599,
       "best_store": "Neo Store",
       "best_url": "https://www.neostore.com.np/product/apple-iphone-16",
@@ -547,6 +548,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 146599
+        },
+        {
+          "date": "2026-10-28",
           "price": 146599
         }
       ]
@@ -697,65 +702,65 @@
           "store": "Quality Computer",
           "price": 173499,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-1-year-warranty-52079?category=833&order=create_date+desc",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
       "image": "https://qualitycomputer.com.np/web/image/product.template/52079/image_1024?unique=1b9c75f",
-      "description": "Buy the latest Apple iPhone 17 in Nepal 2026. Discover Prices, specs and features. A19 chip, 6.3-inch display, Dual Fusion Camera System, and unmatched performance with 256GB. Elevate your smartphone experience. Shop Now!",
+      "description": "Apple iPhone 17 price in Nepal: from Rs 173,499. 6.3-inch 120Hz ProMotion screen, A19 chip, two 48MP cameras, 18MP selfie. Authorised Apple reseller, 0% EMI.",
       "ram": "256GB or 512GB",
-      "storage": "128GB, 256GB, 512GB, 1TB",
-      "display": "6.3 inch",
-      "battery": "Up to 30 hrs video playback, fast charging (50% in ~20 min with 30W USB-C)",
+      "storage": "256GB, 512GB",
+      "display": "4 inch",
+      "battery": "Up to 30 hours video playback",
       "chipset": null,
-      "camera": "Dual 48MP + 12MP Fusion camera system, Photonic Engine, Night Mode, Smart HDR",
+      "camera": "48MP Fusion, 26 mm, ƒ/1.6, sensor-shift OIS; 2x optical-quality zoom",
       "specifications": {
         "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
         "term (in month)": "Choose a term",
         "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-        "iphone 17": "Price in Nepal",
-        "256gb": "Rs. 173,499",
-        "512gb": "Rs. 215,699",
-        "category": "Details",
-        "design & build": "Aluminum unibody, Ceramic Shield 2 front, glass back, IP68 water and dust resistance",
-        "display": "6.3 inch",
-        "performance": "A19 chip, 5-core GPU, 16-core Neural Engine",
-        "storage options": "128GB, 256GB, 512GB, 1TB",
-        "cameras": "Dual 48MP + 12MP Fusion camera system, Photonic Engine, Night Mode, Smart HDR",
-        "video": "4K Dolby Vision HDR up to 60fps, Cinematic Mode, Action Mode",
-        "front camera": "12MP TrueDepth with Center Stage, 4K recording",
-        "battery life": "Up to 30 hrs video playback, fast charging (50% in ~20 min with 30W USB-C)",
-        "connectivity": "5G, Wi-Fi 7, Bluetooth 6, USB-C, eSIM + physical SIM (varies by region)",
-        "other features": "Face ID, Action Button, iOS 26 with Apple Intelligence",
-        "in the box": "iPhone 17, USB-C charge cable (1m), documentation",
-        "colour": "Black or White or Mist Blue or Lavender or Sage",
         "memory": "256GB or 512GB",
+        "256gb": "Rs 173,499",
+        "512gb": "Rs 215,699",
+        "display": "4 inch",
+        "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
+        "chip": "A19: 6-core CPU, 5-core GPU with Neural Accelerators, 16-core Neural Engine",
+        "storage": "256GB, 512GB",
+        "main camera": "48MP Fusion, 26 mm, ƒ/1.6, sensor-shift OIS; 2x optical-quality zoom",
+        "ultra wide": "48MP Fusion, 13 mm, ƒ/2.2",
+        "video": "4K Dolby Vision up to 60 fps, Cinematic mode up to 4K 30 fps",
+        "front camera": "18MP Center Stage, ƒ/1.9; Face ID",
+        "battery": "Up to 30 hours video playback",
+        "charging": "USB-C, 50% in 20 min with a 40W+ adapter; MagSafe and Qi2 up to 25W",
+        "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
+        "sim": "Nano-SIM + eSIM on international models; eSIM-only on US, Canada, Japan, Mexico and Gulf models",
+        "port": "USB-C, USB 2 (up to 480 Mb/s)",
+        "build": "Aluminium, Ceramic Shield 2 front, colour-infused glass back, IP68 (6 m for up to 30 minutes)",
+        "colours": "Black, White, Mist Blue, Sage, Lavender",
+        "colour": "Black or White or Mist Blue or Lavender or Sage",
         "brand": "Apple",
         "ram": "256GB or 512GB",
-        "storage": "128GB, 256GB, 512GB, 1TB",
-        "battery": "Up to 30 hrs video playback, fast charging (50% in ~20 min with 30W USB-C)",
-        "camera": "Dual 48MP + 12MP Fusion camera system, Photonic Engine, Night Mode, Smart HDR"
+        "camera": "48MP Fusion, 26 mm, ƒ/1.6, sensor-shift OIS; 2x optical-quality zoom"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-      "iphone 17": "Price in Nepal",
-      "256gb": "Rs. 173,499",
-      "512gb": "Rs. 215,699",
-      "category": "Details",
-      "design & build": "Aluminum unibody, Ceramic Shield 2 front, glass back, IP68 water and dust resistance",
-      "performance": "A19 chip, 5-core GPU, 16-core Neural Engine",
-      "storage options": "128GB, 256GB, 512GB, 1TB",
-      "cameras": "Dual 48MP + 12MP Fusion camera system, Photonic Engine, Night Mode, Smart HDR",
-      "video": "4K Dolby Vision HDR up to 60fps, Cinematic Mode, Action Mode",
-      "front camera": "12MP TrueDepth with Center Stage, 4K recording",
-      "battery life": "Up to 30 hrs video playback, fast charging (50% in ~20 min with 30W USB-C)",
-      "connectivity": "5G, Wi-Fi 7, Bluetooth 6, USB-C, eSIM + physical SIM (varies by region)",
-      "other features": "Face ID, Action Button, iOS 26 with Apple Intelligence",
-      "in the box": "iPhone 17, USB-C charge cable (1m), documentation",
-      "colour": "Black or White or Mist Blue or Lavender or Sage",
       "memory": "256GB or 512GB",
+      "256gb": "Rs 173,499",
+      "512gb": "Rs 215,699",
+      "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
+      "chip": "A19: 6-core CPU, 5-core GPU with Neural Accelerators, 16-core Neural Engine",
+      "main camera": "48MP Fusion, 26 mm, ƒ/1.6, sensor-shift OIS; 2x optical-quality zoom",
+      "ultra wide": "48MP Fusion, 13 mm, ƒ/2.2",
+      "video": "4K Dolby Vision up to 60 fps, Cinematic mode up to 4K 30 fps",
+      "front camera": "18MP Center Stage, ƒ/1.9; Face ID",
+      "charging": "USB-C, 50% in 20 min with a 40W+ adapter; MagSafe and Qi2 up to 25W",
+      "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
+      "sim": "Nano-SIM + eSIM on international models; eSIM-only on US, Canada, Japan, Mexico and Gulf models",
+      "port": "USB-C, USB 2 (up to 480 Mb/s)",
+      "build": "Aluminium, Ceramic Shield 2 front, colour-infused glass back, IP68 (6 m for up to 30 minutes)",
+      "colours": "Black, White, Mist Blue, Sage, Lavender",
+      "colour": "Black or White or Mist Blue or Lavender or Sage",
       "price": 173499,
       "best_store": "Quality Computer",
       "best_url": "https://qualitycomputer.com.np/shop/apple-iphone-17-1-year-warranty-52079?category=833&order=create_date+desc",
@@ -778,6 +783,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 173499
+        },
+        {
+          "date": "2026-10-28",
           "price": 173499
         }
       ]
@@ -840,67 +849,67 @@
           "store": "Quality Computer",
           "price": 221299,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-pro-52081?category=833&order=create_date+desc",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
       "image": "https://qualitycomputer.com.np/web/image/product.template/52081/image_1024?unique=b64ed0c",
-      "description": "Discover the latest iPhone 17 Pro price in Nepal, specs, and availability. Compare official and grey market prices, EMI options, and where to buy the iPhone 17 Pro in Nepal with a warranty.",
+      "description": "Apple iPhone 17 Pro price in Nepal: from Rs 221,299. 6.3-inch 120Hz screen, A19 Pro chip, three 48MP cameras with 8x zoom. Authorised Apple reseller, 0% EMI.",
       "ram": "256GB or 512GB or 1TB",
-      "storage": "256GB, 512GB, 1TB, 2TB",
-      "display": "6.3 inch",
-      "battery": "Up to 37 hrs video playback, fast charging (50% in ~20 min with 40W USB-C)",
+      "storage": "256GB, 512GB, 1TB",
+      "display": "4 inch",
+      "battery": "Up to 31 hours video playback (33 hours on eSIM-only models)",
       "chipset": null,
-      "camera": "18MP TrueDepth with Center Stage, 4K Dolby Vision",
+      "camera": "48MP Fusion Main, 48MP Fusion Ultra Wide, 48MP Telephoto 4x (100 mm)",
       "specifications": {
         "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
         "term (in month)": "Choose a term",
         "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-        "iphone 17 pro": "Price in Nepal",
-        "256gb": "Rs. 221,299",
-        "512gb": "Rs. 263,599",
-        "1tb": "Rs. 305,699",
-        "category": "Details",
-        "design & build": "Aluminum unibody, Ceramic Shield 2, glass back, IP68 water and dust resistance",
-        "display": "6.3 inch",
-        "performance": "A19 Pro chip, 6-core GPU with hardware ray tracing, 16-core Neural Engine, vapor chamber cooling",
-        "storage options": "256GB, 512GB, 1TB, 2TB",
-        "cameras": "Triple 48MP Pro Fusion camera system with 5× telephoto zoom, Photonic Engine, Night Mode, Smart HDR",
-        "video": "4K Dolby Vision HDR up to 120fps, ProRes RAW, Apple Log 2",
-        "front camera": "18MP TrueDepth with Center Stage, 4K Dolby Vision",
-        "battery life": "Up to 37 hrs video playback, fast charging (50% in ~20 min with 40W USB-C)",
-        "connectivity": "5G, Wi-Fi 7, Bluetooth 6, USB-C (10Gbps), eSIM support",
-        "other features": "Face ID, LiDAR Scanner, Action Button, iOS 26 with Apple Intelligence",
-        "in the box": "iPhone 17 Pro, USB-C charge cable (1m), documentation",
-        "colour": "Silver or Cosmic Orange or Deep Blue",
         "memory": "256GB or 512GB or 1TB",
+        "256gb": "Rs 221,299",
+        "512gb": "Rs 263,599",
+        "1tb": "Rs 305,699",
+        "display": "4 inch",
+        "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
+        "chip": "A19 Pro: 6-core CPU, 6-core GPU with Neural Accelerators, 16-core Neural Engine",
+        "storage": "256GB, 512GB, 1TB",
+        "rear cameras": "48MP Fusion Main, 48MP Fusion Ultra Wide, 48MP Telephoto 4x (100 mm)",
+        "zoom": "8x optical-quality, digital up to 40x",
+        "video": "4K Dolby Vision up to 120 fps, ProRes RAW, Apple Log 2, ACES, Genlock",
+        "front camera": "18MP Center Stage, ƒ/1.9; Face ID",
+        "battery": "Up to 31 hours video playback (33 hours on eSIM-only models)",
+        "charging": "USB-C, 50% in 20 min with a 40W+ adapter; MagSafe and Qi2 up to 25W",
+        "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
+        "sim": "Nano-SIM + eSIM on international models; eSIM-only on US, Canada, Japan, Mexico and Gulf models",
+        "port": "USB-C, USB 3 (up to 10Gb/s)",
+        "build": "Aluminium unibody, Ceramic Shield 2 front, IP68 (6 m for up to 30 minutes)",
+        "colours": "Silver, Cosmic Orange, Deep Blue",
+        "colour": "Silver or Cosmic Orange or Deep Blue",
         "brand": "Apple",
         "ram": "256GB or 512GB or 1TB",
-        "storage": "256GB, 512GB, 1TB, 2TB",
-        "battery": "Up to 37 hrs video playback, fast charging (50% in ~20 min with 40W USB-C)",
-        "camera": "18MP TrueDepth with Center Stage, 4K Dolby Vision"
+        "camera": "48MP Fusion Main, 48MP Fusion Ultra Wide, 48MP Telephoto 4x (100 mm)"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-      "iphone 17 pro": "Price in Nepal",
-      "256gb": "Rs. 221,299",
-      "512gb": "Rs. 263,599",
-      "1tb": "Rs. 305,699",
-      "category": "Details",
-      "design & build": "Aluminum unibody, Ceramic Shield 2, glass back, IP68 water and dust resistance",
-      "performance": "A19 Pro chip, 6-core GPU with hardware ray tracing, 16-core Neural Engine, vapor chamber cooling",
-      "storage options": "256GB, 512GB, 1TB, 2TB",
-      "cameras": "Triple 48MP Pro Fusion camera system with 5× telephoto zoom, Photonic Engine, Night Mode, Smart HDR",
-      "video": "4K Dolby Vision HDR up to 120fps, ProRes RAW, Apple Log 2",
-      "front camera": "18MP TrueDepth with Center Stage, 4K Dolby Vision",
-      "battery life": "Up to 37 hrs video playback, fast charging (50% in ~20 min with 40W USB-C)",
-      "connectivity": "5G, Wi-Fi 7, Bluetooth 6, USB-C (10Gbps), eSIM support",
-      "other features": "Face ID, LiDAR Scanner, Action Button, iOS 26 with Apple Intelligence",
-      "in the box": "iPhone 17 Pro, USB-C charge cable (1m), documentation",
-      "colour": "Silver or Cosmic Orange or Deep Blue",
       "memory": "256GB or 512GB or 1TB",
+      "256gb": "Rs 221,299",
+      "512gb": "Rs 263,599",
+      "1tb": "Rs 305,699",
+      "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
+      "chip": "A19 Pro: 6-core CPU, 6-core GPU with Neural Accelerators, 16-core Neural Engine",
+      "rear cameras": "48MP Fusion Main, 48MP Fusion Ultra Wide, 48MP Telephoto 4x (100 mm)",
+      "zoom": "8x optical-quality, digital up to 40x",
+      "video": "4K Dolby Vision up to 120 fps, ProRes RAW, Apple Log 2, ACES, Genlock",
+      "front camera": "18MP Center Stage, ƒ/1.9; Face ID",
+      "charging": "USB-C, 50% in 20 min with a 40W+ adapter; MagSafe and Qi2 up to 25W",
+      "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
+      "sim": "Nano-SIM + eSIM on international models; eSIM-only on US, Canada, Japan, Mexico and Gulf models",
+      "port": "USB-C, USB 3 (up to 10Gb/s)",
+      "build": "Aluminium unibody, Ceramic Shield 2 front, IP68 (6 m for up to 30 minutes)",
+      "colours": "Silver, Cosmic Orange, Deep Blue",
+      "colour": "Silver or Cosmic Orange or Deep Blue",
       "price": 221299,
       "best_store": "Quality Computer",
       "best_url": "https://qualitycomputer.com.np/shop/apple-iphone-17-pro-52081?category=833&order=create_date+desc",
@@ -923,6 +932,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 221299
+        },
+        {
+          "date": "2026-10-28",
           "price": 221299
         }
       ]
@@ -1076,67 +1089,71 @@
           "store": "Quality Computer",
           "price": 242499,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-pro-max-52082?category=833&order=create_date+desc",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
       "image": "https://qualitycomputer.com.np/web/image/product.template/52082/image_1024?unique=16a7231",
-      "description": "iPhone 17 Pro Max price in Nepal - Check today’s official price, full specs, storage variants, best deals, EMI options & buy genuine with warranty. Fast Delivery",
+      "description": "Apple iPhone 17 Pro Max price in Nepal: from Rs 242,499. 6.9-inch 120Hz screen, A19 Pro chip, three 48MP cameras, up to 2TB. Authorised Apple reseller, 0% EMI.",
       "ram": "256GB or 512GB or 1TB or 2TB",
-      "storage": "Price in Nepal",
-      "display": "6.9 inch",
-      "battery": "Up to 39 hrs video playback, fast charging (50% in ~20 min with 40W USB-C)",
+      "storage": "256GB, 512GB, 1TB, 2TB",
+      "display": "4 inch",
+      "battery": "Up to 37 hours video playback (39 hours on eSIM-only models)",
       "chipset": null,
-      "camera": "18MP TrueDepth with Center Stage, 4K Dolby Vision recording",
+      "camera": "48MP Fusion, 24 mm, ƒ/1.78",
       "specifications": {
         "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
         "term (in month)": "Choose a term",
         "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-        "storage": "Price in Nepal",
-        "256gb": "Rs. 242,499",
-        "512gb": "Rs. 284,599",
-        "1tb": "Rs. 327,099",
-        "2tb": "Rs. 411,399",
-        "category": "Details",
-        "design & build": "Heat-forged aluminum unibody, Ceramic Shield 2 front, glass back, IP68 water and dust resistance",
-        "display": "6.9 inch",
-        "performance": "A19 Pro chip, 6-core GPU with hardware ray tracing, 16-core Neural Engine, vapor chamber cooling",
-        "storage options": "256GB, 512GB, 1TB, 2TB",
-        "cameras": "Triple 48MP Pro Fusion camera system with new 5×/8× telephoto zoom, Photonic Engine, Night mode, Smart HDR",
-        "video": "4K Dolby Vision up to 120fps, ProRes RAW, Apple Log 2, ACES color, Genlock support",
-        "front camera": "18MP TrueDepth with Center Stage, 4K Dolby Vision recording",
-        "battery life": "Up to 39 hrs video playback, fast charging (50% in ~20 min with 40W USB-C)",
-        "connectivity": "5G, Wi-Fi 7, Bluetooth 6, USB-C (10Gbps), eSIM only (in most regions)",
-        "other features": "Face ID, LiDAR Scanner, Action Button, iOS 26 with Apple Intelligence",
-        "in the box": "iPhone 17 Pro Max, USB-C charge cable (1m), documentation",
-        "colour": "Silver or Cosmic Orange or Deep Blue",
         "memory": "256GB or 512GB or 1TB or 2TB",
+        "256gb": "Rs 242,499",
+        "512gb": "Rs 284,599",
+        "1tb": "Rs 327,099",
+        "2tb": "Rs 411,399",
+        "display": "4 inch",
+        "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
+        "chip": "A19 Pro: 6-core CPU, 6-core GPU with Neural Accelerators, 16-core Neural Engine",
+        "storage": "256GB, 512GB, 1TB, 2TB",
+        "main camera": "48MP Fusion, 24 mm, ƒ/1.78",
+        "ultra wide": "48MP Fusion, 13 mm, ƒ/2.2",
+        "telephoto": "48MP, 4x (100 mm), ƒ/2.8; 8x optical-quality zoom; digital zoom up to 40x",
+        "video": "4K Dolby Vision up to 120 fps, ProRes RAW, Apple Log 2, ACES, Genlock",
+        "front camera": "18MP Center Stage, ƒ/1.9; Face ID",
+        "battery": "Up to 37 hours video playback (39 hours on eSIM-only models)",
+        "charging": "USB-C, 50% in 20 min with a 40W+ adapter; MagSafe and Qi2 up to 25W",
+        "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
+        "sim": "Nano-SIM + eSIM on international models; eSIM-only on US, Canada, Japan, Mexico and Gulf models",
+        "port": "USB-C, USB 3 (up to 10Gb/s)",
+        "build": "Aluminium unibody, Ceramic Shield 2 front, IP68 (6 m for up to 30 minutes)",
+        "colours": "Silver, Cosmic Orange, Deep Blue",
+        "colour": "Silver or Cosmic Orange or Deep Blue",
         "brand": "Apple",
         "ram": "256GB or 512GB or 1TB or 2TB",
-        "battery": "Up to 39 hrs video playback, fast charging (50% in ~20 min with 40W USB-C)",
-        "camera": "18MP TrueDepth with Center Stage, 4K Dolby Vision recording"
+        "camera": "48MP Fusion, 24 mm, ƒ/1.78"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-      "256gb": "Rs. 242,499",
-      "512gb": "Rs. 284,599",
-      "1tb": "Rs. 327,099",
-      "2tb": "Rs. 411,399",
-      "category": "Details",
-      "design & build": "Heat-forged aluminum unibody, Ceramic Shield 2 front, glass back, IP68 water and dust resistance",
-      "performance": "A19 Pro chip, 6-core GPU with hardware ray tracing, 16-core Neural Engine, vapor chamber cooling",
-      "storage options": "256GB, 512GB, 1TB, 2TB",
-      "cameras": "Triple 48MP Pro Fusion camera system with new 5×/8× telephoto zoom, Photonic Engine, Night mode, Smart HDR",
-      "video": "4K Dolby Vision up to 120fps, ProRes RAW, Apple Log 2, ACES color, Genlock support",
-      "front camera": "18MP TrueDepth with Center Stage, 4K Dolby Vision recording",
-      "battery life": "Up to 39 hrs video playback, fast charging (50% in ~20 min with 40W USB-C)",
-      "connectivity": "5G, Wi-Fi 7, Bluetooth 6, USB-C (10Gbps), eSIM only (in most regions)",
-      "other features": "Face ID, LiDAR Scanner, Action Button, iOS 26 with Apple Intelligence",
-      "in the box": "iPhone 17 Pro Max, USB-C charge cable (1m), documentation",
-      "colour": "Silver or Cosmic Orange or Deep Blue",
       "memory": "256GB or 512GB or 1TB or 2TB",
+      "256gb": "Rs 242,499",
+      "512gb": "Rs 284,599",
+      "1tb": "Rs 327,099",
+      "2tb": "Rs 411,399",
+      "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
+      "chip": "A19 Pro: 6-core CPU, 6-core GPU with Neural Accelerators, 16-core Neural Engine",
+      "main camera": "48MP Fusion, 24 mm, ƒ/1.78",
+      "ultra wide": "48MP Fusion, 13 mm, ƒ/2.2",
+      "telephoto": "48MP, 4x (100 mm), ƒ/2.8; 8x optical-quality zoom; digital zoom up to 40x",
+      "video": "4K Dolby Vision up to 120 fps, ProRes RAW, Apple Log 2, ACES, Genlock",
+      "front camera": "18MP Center Stage, ƒ/1.9; Face ID",
+      "charging": "USB-C, 50% in 20 min with a 40W+ adapter; MagSafe and Qi2 up to 25W",
+      "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
+      "sim": "Nano-SIM + eSIM on international models; eSIM-only on US, Canada, Japan, Mexico and Gulf models",
+      "port": "USB-C, USB 3 (up to 10Gb/s)",
+      "build": "Aluminium unibody, Ceramic Shield 2 front, IP68 (6 m for up to 30 minutes)",
+      "colours": "Silver, Cosmic Orange, Deep Blue",
+      "colour": "Silver or Cosmic Orange or Deep Blue",
       "price": 242499,
       "best_store": "Quality Computer",
       "best_url": "https://qualitycomputer.com.np/shop/apple-iphone-17-pro-max-52082?category=833&order=create_date+desc",
@@ -1159,6 +1176,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 242499
+        },
+        {
+          "date": "2026-10-28",
           "price": 242499
         }
       ]
@@ -1540,47 +1561,77 @@
           "store": "Quality Computer",
           "price": 259900,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-18-pro-53385?category=833&order=create_date+desc",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
       "image": "https://qualitycomputer.com.np/web/image/product.template/53385/image_1024?unique=5021af2",
-      "description": "Buy the Apple iPhone 18 Pro in Nepal from Quality Computer. Explore the latest features, specifications, competitive prices, and enjoy genuine Apple products with warranty and reliable support.",
+      "description": "Apple iPhone 18 Pro price in Nepal: from Rs 259,900. 6.3-inch 120Hz screen, A20 Pro chip, 48MP variable-aperture camera. Authorised Apple reseller, 0% EMI.",
       "ram": "256GB or 512GB or 1TB or 2TB",
-      "storage": "256GB, 512GB, 1TB and 2TB. The 2TB tier is a first for iPhone",
-      "display": "6.3 inch",
-      "battery": "Up to 36 hours of video playback. 50% charge in about 15 minutes over USB-C",
+      "storage": "256GB, 512GB, 1TB, 2TB",
+      "display": "4 inch",
+      "battery": "Up to 34 hours video playback, 23 hours typical use",
       "chipset": null,
-      "camera": "48MP",
+      "camera": "48MP Fusion, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)",
       "specifications": {
         "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
         "term (in month)": "Choose a term",
         "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-        "category": "Details",
-        "design & build": "Aluminium body with Ceramic Shield 2 front and colour-matched rear glass and aluminium, IP68 water and dust resistance",
-        "storage options": "256GB, 512GB, 1TB and 2TB. The 2TB tier is a first for iPhone",
-        "battery life": "Up to 36 hours of video playback. 50% charge in about 15 minutes over USB-C",
-        "in the box": "iPhone 18 Pro, USB-C charge cable (1m), documentation",
-        "colour": "Black or Silver or Burgundy or Glacier",
         "memory": "256GB or 512GB or 1TB or 2TB",
+        "256gb": "Rs 259,900",
+        "512gb": "Rs 301,900",
+        "1tb": "Rs 386,900",
+        "2tb": "Rs 513,900",
+        "display": "4 inch",
+        "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
+        "chip": "A20 Pro (2nm): 6-core CPU, 7-core GPU with Neural Accelerators, dual 16-core Neural Engine",
+        "storage": "256GB, 512GB, 1TB, 2TB",
+        "main camera": "48MP Fusion, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)",
+        "ultra wide": "48MP Fusion",
+        "telephoto": "48MP, 4x (100 mm); 8x optical-quality zoom; digital zoom up to 40x",
+        "video": "Cinematic up to 4K 60 fps, ProRes RAW, Apple Log 2, ACES, Genlock",
+        "front camera": "18MP Center Stage; Face ID",
+        "battery": "Up to 34 hours video playback, 23 hours typical use",
+        "charging": "USB-C, 50% in about 15 min with a 60W-capable adapter; MagSafe and Qi2 up to 25W",
+        "mobile network": "5G (sub-6 GHz), Apple C2 modem",
+        "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
+        "sim": "Nano-SIM + eSIM, dual eSIM supported",
+        "port": "USB-C, USB 3 (up to 10Gb/s)",
+        "build": "Aluminium unibody, Ceramic Shield 2 front, IP68 (6 m for up to 30 minutes)",
+        "size and weight": "150.0 × 71.9 × 8.75 mm, 211 g",
+        "colours": "Black, Silver, Glacier, Burgundy",
+        "software": "iOS 27",
+        "colour": "Black or Silver or Burgundy or Glacier",
         "brand": "Apple",
         "ram": "256GB or 512GB or 1TB or 2TB",
-        "storage": "256GB, 512GB, 1TB and 2TB. The 2TB tier is a first for iPhone",
-        "display": "6.3 inch",
-        "battery": "Up to 36 hours of video playback. 50% charge in about 15 minutes over USB-C",
-        "camera": "48MP"
+        "camera": "48MP Fusion, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-      "category": "Details",
-      "design & build": "Aluminium body with Ceramic Shield 2 front and colour-matched rear glass and aluminium, IP68 water and dust resistance",
-      "storage options": "256GB, 512GB, 1TB and 2TB. The 2TB tier is a first for iPhone",
-      "battery life": "Up to 36 hours of video playback. 50% charge in about 15 minutes over USB-C",
-      "in the box": "iPhone 18 Pro, USB-C charge cable (1m), documentation",
-      "colour": "Black or Silver or Burgundy or Glacier",
       "memory": "256GB or 512GB or 1TB or 2TB",
+      "256gb": "Rs 259,900",
+      "512gb": "Rs 301,900",
+      "1tb": "Rs 386,900",
+      "2tb": "Rs 513,900",
+      "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
+      "chip": "A20 Pro (2nm): 6-core CPU, 7-core GPU with Neural Accelerators, dual 16-core Neural Engine",
+      "main camera": "48MP Fusion, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)",
+      "ultra wide": "48MP Fusion",
+      "telephoto": "48MP, 4x (100 mm); 8x optical-quality zoom; digital zoom up to 40x",
+      "video": "Cinematic up to 4K 60 fps, ProRes RAW, Apple Log 2, ACES, Genlock",
+      "front camera": "18MP Center Stage; Face ID",
+      "charging": "USB-C, 50% in about 15 min with a 60W-capable adapter; MagSafe and Qi2 up to 25W",
+      "mobile network": "5G (sub-6 GHz), Apple C2 modem",
+      "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
+      "sim": "Nano-SIM + eSIM, dual eSIM supported",
+      "port": "USB-C, USB 3 (up to 10Gb/s)",
+      "build": "Aluminium unibody, Ceramic Shield 2 front, IP68 (6 m for up to 30 minutes)",
+      "size and weight": "150.0 × 71.9 × 8.75 mm, 211 g",
+      "colours": "Black, Silver, Glacier, Burgundy",
+      "software": "iOS 27",
+      "colour": "Black or Silver or Burgundy or Glacier",
       "price": 259900,
       "best_store": "Quality Computer",
       "best_url": "https://qualitycomputer.com.np/shop/apple-iphone-18-pro-53385?category=833&order=create_date+desc",
@@ -1604,6 +1655,10 @@
         {
           "date": "2026-10-27",
           "price": 259900
+        },
+        {
+          "date": "2026-10-28",
+          "price": 259900
         }
       ]
     },
@@ -1618,46 +1673,77 @@
           "store": "Quality Computer",
           "price": 279900,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-18-pro-max-53386?category=833&order=create_date+desc",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
       "image": "https://qualitycomputer.com.np/web/image/product.product/55025/image_1024/Apple%20iPhone%2018%20Pro%20Max%20%28Burgundy%2C%20256GB%29?unique=cfd2bc6",
-      "description": "Buy the Apple iPhone 18 Pro Max in Nepal from Quality Computer. Explore the latest price, features, specifications, competitive prices, and enjoy genuine Apple products with warranty and reliable support.",
+      "description": "Apple iPhone 18 Pro Max price in Nepal: from Rs 279,900. 6.9-inch 120Hz screen, A20 Pro chip, 48MP variable-aperture camera. Authorised Apple reseller, 0% EMI.",
       "ram": "256GB or 512GB or 1TB or 2TB",
-      "storage": "256GB, 512GB, 1TB and 2TB. The 2TB tier is a first for iPhone",
-      "display": "6.9 inch",
-      "battery": null,
+      "storage": "256GB, 512GB, 1TB, 2TB",
+      "display": "4 inch",
+      "battery": "Up to 43 hours video playback, 29 hours typical use",
       "chipset": null,
-      "camera": "48MP",
+      "camera": "48MP Fusion, 24 mm, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)",
       "specifications": {
         "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
         "term (in month)": "Choose a term",
         "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-        "category": "Details",
-        "design & build": "Aluminium body with Ceramic Shield 2 front and colour-matched rear glass and aluminium, IP68 water and dust resistance",
-        "storage options": "256GB, 512GB, 1TB and 2TB. The 2TB tier is a first for iPhone",
-        "battery life": "Up to 45 hours of video playback, the longest battery life of any iPhone. 50% charge in about 15 minutes over USB-C",
-        "in the box": "iPhone 18 Pro Max, USB-C charge cable (1m), documentation",
-        "colour": "Black or Silver or Burgundy or Glacier",
         "memory": "256GB or 512GB or 1TB or 2TB",
+        "256gb": "Rs 279,900",
+        "512gb": "Rs 322,900",
+        "1tb": "Rs 407,900",
+        "2tb": "Rs 534,900",
+        "display": "4 inch",
+        "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
+        "chip": "A20 Pro (2nm): 6-core CPU, 7-core GPU with Neural Accelerators, dual 16-core Neural Engine",
+        "storage": "256GB, 512GB, 1TB, 2TB",
+        "main camera": "48MP Fusion, 24 mm, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)",
+        "ultra wide": "48MP Fusion, 13 mm, ƒ/2.2",
+        "telephoto": "48MP, 4x (100 mm), ƒ/2.8; 8x optical-quality zoom; digital zoom up to 40x",
+        "video": "4K Dolby Vision up to 120 fps, ProRes RAW, Apple Log 2, ACES, Genlock",
+        "front camera": "18MP Center Stage, ƒ/1.9; Face ID",
+        "battery": "Up to 43 hours video playback, 29 hours typical use",
+        "charging": "USB-C, 50% in about 15 min with a 60W-capable adapter; MagSafe and Qi2 up to 25W",
+        "mobile network": "5G (sub-6 GHz), Apple C2 modem",
+        "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
+        "sim": "Nano-SIM + eSIM, dual eSIM supported",
+        "port": "USB-C, USB 3 (up to 10Gb/s)",
+        "build": "Aluminium unibody, Ceramic Shield 2 front, IP68 (6 m for up to 30 minutes)",
+        "size and weight": "163.4 × 78.0 × 8.75 mm, 249 g",
+        "colours": "Black, Silver, Glacier, Burgundy",
+        "software": "iOS 27",
+        "colour": "Black or Silver or Burgundy or Glacier",
         "brand": "Apple",
         "ram": "256GB or 512GB or 1TB or 2TB",
-        "storage": "256GB, 512GB, 1TB and 2TB. The 2TB tier is a first for iPhone",
-        "display": "6.9 inch",
-        "camera": "48MP"
+        "camera": "48MP Fusion, 24 mm, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-      "category": "Details",
-      "design & build": "Aluminium body with Ceramic Shield 2 front and colour-matched rear glass and aluminium, IP68 water and dust resistance",
-      "storage options": "256GB, 512GB, 1TB and 2TB. The 2TB tier is a first for iPhone",
-      "battery life": "Up to 45 hours of video playback, the longest battery life of any iPhone. 50% charge in about 15 minutes over USB-C",
-      "in the box": "iPhone 18 Pro Max, USB-C charge cable (1m), documentation",
-      "colour": "Black or Silver or Burgundy or Glacier",
       "memory": "256GB or 512GB or 1TB or 2TB",
+      "256gb": "Rs 279,900",
+      "512gb": "Rs 322,900",
+      "1tb": "Rs 407,900",
+      "2tb": "Rs 534,900",
+      "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
+      "chip": "A20 Pro (2nm): 6-core CPU, 7-core GPU with Neural Accelerators, dual 16-core Neural Engine",
+      "main camera": "48MP Fusion, 24 mm, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)",
+      "ultra wide": "48MP Fusion, 13 mm, ƒ/2.2",
+      "telephoto": "48MP, 4x (100 mm), ƒ/2.8; 8x optical-quality zoom; digital zoom up to 40x",
+      "video": "4K Dolby Vision up to 120 fps, ProRes RAW, Apple Log 2, ACES, Genlock",
+      "front camera": "18MP Center Stage, ƒ/1.9; Face ID",
+      "charging": "USB-C, 50% in about 15 min with a 60W-capable adapter; MagSafe and Qi2 up to 25W",
+      "mobile network": "5G (sub-6 GHz), Apple C2 modem",
+      "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
+      "sim": "Nano-SIM + eSIM, dual eSIM supported",
+      "port": "USB-C, USB 3 (up to 10Gb/s)",
+      "build": "Aluminium unibody, Ceramic Shield 2 front, IP68 (6 m for up to 30 minutes)",
+      "size and weight": "163.4 × 78.0 × 8.75 mm, 249 g",
+      "colours": "Black, Silver, Glacier, Burgundy",
+      "software": "iOS 27",
+      "colour": "Black or Silver or Burgundy or Glacier",
       "price": 279900,
       "best_store": "Quality Computer",
       "best_url": "https://qualitycomputer.com.np/shop/apple-iphone-18-pro-max-53386?category=833&order=create_date+desc",
@@ -1681,6 +1767,10 @@
         {
           "date": "2026-10-27",
           "price": 279900
+        },
+        {
+          "date": "2026-10-28",
+          "price": 279900
         }
       ]
     },
@@ -1695,15 +1785,15 @@
           "store": "Quality Computer",
           "price": 190699,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-air-52080?category=833&order=create_date+desc",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
       "image": "https://qualitycomputer.com.np/web/image/product.template/52080/image_1024?unique=b33c2bd",
-      "description": "Discover the latest iPhone 17 Air price in Nepal, specs, and availability. Compare official and grey market prices, EMI options, and where to buy the iPhone 17 Air in Nepal with warranty.",
+      "description": "Apple iPhone Air price in Nepal: from Rs 190,699. Buy the Apple iPhone Air from Quality Computer. Genuine, with VAT bill and delivery across Nepal.",
       "ram": "256GB or 512GB or 1TB",
       "storage": "128GB, 256GB, 512GB, 1TB",
-      "display": "6.5 inch",
+      "display": "4 inch",
       "battery": null,
       "chipset": null,
       "camera": "12MP TrueDepth with Center Stage, 4K recording",
@@ -1711,13 +1801,13 @@
         "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
         "term (in month)": "Choose a term",
         "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-        "iphone 17 air": "Price in Nepal",
-        "256gb": "₨ 190,699",
-        "512gb": "₨ 232,899",
-        "1tb": "₨ 275,099",
+        "memory": "256GB or 512GB or 1TB",
+        "256gb": "Rs 190,699",
+        "512gb": "Rs 232,899",
+        "1tb": "Rs 275,099",
         "category": "Details",
         "design & build": "Ultra-slim titanium unibody (~5mm thin), Ceramic Shield 2, glass back, IP68 water resistance",
-        "display": "6.5 inch",
+        "display": "4 inch",
         "performance": "A19 chip, 5-core GPU, 16-core Neural Engine, highly efficient design for thin form factor",
         "storage options": "128GB, 256GB, 512GB, 1TB",
         "cameras": "Single 48MP Wide Fusion camera with unique circular module, Photonic Engine, Night Mode",
@@ -1728,20 +1818,19 @@
         "other features": "Face ID, Action Button, iOS 26 with Apple Intelligence",
         "in the box": "iPhone 17 Air, USB-C charge cable (1m), documentation",
         "colour": "Space Black or Sky Blue or Light Gold or Cloud White",
-        "memory": "256GB or 512GB or 1TB",
         "brand": "Apple",
         "ram": "256GB or 512GB or 1TB",
         "storage": "128GB, 256GB, 512GB, 1TB",
         "camera": "12MP TrueDepth with Center Stage, 4K recording"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-      "iphone 17 air": "Price in Nepal",
-      "256gb": "₨ 190,699",
-      "512gb": "₨ 232,899",
-      "1tb": "₨ 275,099",
+      "memory": "256GB or 512GB or 1TB",
+      "256gb": "Rs 190,699",
+      "512gb": "Rs 232,899",
+      "1tb": "Rs 275,099",
       "category": "Details",
       "design & build": "Ultra-slim titanium unibody (~5mm thin), Ceramic Shield 2, glass back, IP68 water resistance",
       "performance": "A19 chip, 5-core GPU, 16-core Neural Engine, highly efficient design for thin form factor",
@@ -1754,7 +1843,6 @@
       "other features": "Face ID, Action Button, iOS 26 with Apple Intelligence",
       "in the box": "iPhone 17 Air, USB-C charge cable (1m), documentation",
       "colour": "Space Black or Sky Blue or Light Gold or Cloud White",
-      "memory": "256GB or 512GB or 1TB",
       "price": 190699,
       "best_store": "Quality Computer",
       "best_url": "https://qualitycomputer.com.np/shop/apple-iphone-air-52080?category=833&order=create_date+desc",
@@ -1777,6 +1865,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 190699
+        },
+        {
+          "date": "2026-10-28",
           "price": 190699
         }
       ]
@@ -1838,7 +1930,7 @@
           "store": "GBN Store",
           "price": 127499,
           "url": "https://gbnstore.com/product/iphone-15",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -1851,7 +1943,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 127499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-15",
@@ -1875,6 +1967,10 @@
         {
           "date": "2026-10-27",
           "price": 127499
+        },
+        {
+          "date": "2026-10-28",
+          "price": 127499
         }
       ]
     },
@@ -1889,7 +1985,7 @@
           "store": "GBN Store",
           "price": 146599,
           "url": "https://gbnstore.com/product/iphone-16",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -1902,7 +1998,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 146599,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-16",
@@ -1926,6 +2022,10 @@
         {
           "date": "2026-10-27",
           "price": 146599
+        },
+        {
+          "date": "2026-10-28",
+          "price": 146599
         }
       ]
     },
@@ -1940,7 +2040,7 @@
           "store": "GBN Store",
           "price": 173499,
           "url": "https://gbnstore.com/product/iphone-17",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -1953,7 +2053,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 173499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17",
@@ -1977,6 +2077,10 @@
         {
           "date": "2026-10-27",
           "price": 173499
+        },
+        {
+          "date": "2026-10-28",
+          "price": 173499
         }
       ]
     },
@@ -1991,7 +2095,7 @@
           "store": "GBN Store",
           "price": 221299,
           "url": "https://gbnstore.com/product/iphone-17-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2004,7 +2108,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 221299,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17-pro",
@@ -2028,6 +2132,10 @@
         {
           "date": "2026-10-27",
           "price": 221299
+        },
+        {
+          "date": "2026-10-28",
+          "price": 221299
         }
       ]
     },
@@ -2042,7 +2150,7 @@
           "store": "GBN Store",
           "price": 242499,
           "url": "https://gbnstore.com/product/iphone-17-pro-max",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2055,7 +2163,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 242499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17-pro-max",
@@ -2079,6 +2187,10 @@
         {
           "date": "2026-10-27",
           "price": 242499
+        },
+        {
+          "date": "2026-10-28",
+          "price": 242499
         }
       ]
     },
@@ -2093,7 +2205,7 @@
           "store": "GBN Store",
           "price": 132499,
           "url": "https://gbnstore.com/product/iphone-17e",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2106,7 +2218,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 132499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17e",
@@ -2130,6 +2242,10 @@
         {
           "date": "2026-10-27",
           "price": 132499
+        },
+        {
+          "date": "2026-10-28",
+          "price": 132499
         }
       ]
     },
@@ -2144,7 +2260,7 @@
           "store": "GBN Store",
           "price": 259900,
           "url": "https://gbnstore.com/product/iphone-18-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2157,7 +2273,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 259900,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-18-pro",
@@ -2181,6 +2297,10 @@
         {
           "date": "2026-10-27",
           "price": 259900
+        },
+        {
+          "date": "2026-10-28",
+          "price": 259900
         }
       ]
     },
@@ -2195,7 +2315,7 @@
           "store": "GBN Store",
           "price": 279900,
           "url": "https://gbnstore.com/product/iphone-18-pro-max",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2208,7 +2328,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 279900,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-18-pro-max",
@@ -2232,6 +2352,10 @@
         {
           "date": "2026-10-27",
           "price": 279900
+        },
+        {
+          "date": "2026-10-28",
+          "price": 279900
         }
       ]
     },
@@ -2246,7 +2370,7 @@
           "store": "GBN Store",
           "price": 190699,
           "url": "https://gbnstore.com/product/iphone-air",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2259,7 +2383,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 190699,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-air",
@@ -2283,6 +2407,10 @@
         {
           "date": "2026-10-27",
           "price": 190699
+        },
+        {
+          "date": "2026-10-28",
+          "price": 190699
         }
       ]
     },
@@ -2297,7 +2425,7 @@
           "store": "GBN Store",
           "price": 21999,
           "url": "https://gbnstore.com/product/blackview-fort-1",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2310,7 +2438,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 21999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-fort-1",
@@ -2334,6 +2462,10 @@
         {
           "date": "2026-10-27",
           "price": 21999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 21999
         }
       ]
     },
@@ -2348,7 +2480,7 @@
           "store": "GBN Store",
           "price": 13999,
           "url": "https://gbnstore.com/product/blackview-wave-10c",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2361,7 +2493,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 13999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-wave-10c",
@@ -2385,6 +2517,10 @@
         {
           "date": "2026-10-27",
           "price": 13999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 13999
         }
       ]
     },
@@ -2399,7 +2535,7 @@
           "store": "GBN Store",
           "price": 9999,
           "url": "https://gbnstore.com/product/blackview-wave-2c",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2412,7 +2548,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 9999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-wave-2c",
@@ -2436,6 +2572,10 @@
         {
           "date": "2026-10-27",
           "price": 9999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 9999
         }
       ]
     },
@@ -2450,7 +2590,7 @@
           "store": "GBN Store",
           "price": 16999,
           "url": "https://gbnstore.com/product/blackview-wave-7c",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2463,7 +2603,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 16999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-wave-7c",
@@ -2486,6 +2626,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 16999
+        },
+        {
+          "date": "2026-10-28",
           "price": 16999
         }
       ]
@@ -2786,7 +2930,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/honor-600",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2799,7 +2943,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-600",
@@ -2823,6 +2967,10 @@
         {
           "date": "2026-10-27",
           "price": 89999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 89999
         }
       ]
     },
@@ -2837,7 +2985,7 @@
           "store": "GBN Store",
           "price": 59999,
           "url": "https://gbnstore.com/product/honor-600-lite",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2850,7 +2998,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 59999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-600-lite",
@@ -2873,6 +3021,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 59999
+        },
+        {
+          "date": "2026-10-28",
           "price": 59999
         }
       ]
@@ -2933,7 +3085,7 @@
           "store": "GBN Store",
           "price": 129999,
           "url": "https://gbnstore.com/product/honor-600-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -2946,7 +3098,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 129999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-600-pro",
@@ -2969,6 +3121,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 129999
+        },
+        {
+          "date": "2026-10-28",
           "price": 129999
         }
       ]
@@ -3032,7 +3188,7 @@
           "store": "GBN Store",
           "price": 179999,
           "url": "https://gbnstore.com/product/honor-magic-8-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -3045,7 +3201,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 179999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-magic-8-pro",
@@ -3069,6 +3225,10 @@
         {
           "date": "2026-10-27",
           "price": 179999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 179999
         }
       ]
     },
@@ -3083,7 +3243,7 @@
           "store": "GBN Store",
           "price": 266999,
           "url": "https://gbnstore.com/product/honor-magic-v5",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -3096,7 +3256,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 266999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-magic-v5",
@@ -3119,6 +3279,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 266999
+        },
+        {
+          "date": "2026-10-28",
           "price": 266999
         }
       ]
@@ -3181,7 +3345,7 @@
           "store": "GBN Store",
           "price": 20999,
           "url": "https://gbnstore.com/product/honor-play10",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -3194,7 +3358,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 20999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-play10",
@@ -3217,6 +3381,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 20999
+        },
+        {
+          "date": "2026-10-28",
           "price": 20999
         }
       ]
@@ -3326,7 +3494,7 @@
           "store": "GBN Store",
           "price": 22499,
           "url": "https://gbnstore.com/product/honor-x5c-plus",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -3339,7 +3507,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 22499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-x5c-plus",
@@ -3363,6 +3531,10 @@
         {
           "date": "2026-10-27",
           "price": 22499
+        },
+        {
+          "date": "2026-10-28",
+          "price": 22499
         }
       ]
     },
@@ -3377,7 +3549,7 @@
           "store": "GBN Store",
           "price": 28999,
           "url": "https://gbnstore.com/product/honor-x5d-plus",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -3390,7 +3562,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 28999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-x5d-plus",
@@ -3413,6 +3585,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 28999
+        },
+        {
+          "date": "2026-10-28",
           "price": 28999
         }
       ]
@@ -3754,7 +3930,7 @@
           "store": "GBN Store",
           "price": 65999,
           "url": "https://gbnstore.com/product/infinixgt-30-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -3767,7 +3943,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 65999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinixgt-30-pro",
@@ -3790,6 +3966,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 65999
+        },
+        {
+          "date": "2026-10-28",
           "price": 65999
         }
       ]
@@ -3897,7 +4077,7 @@
           "store": "GBN Store",
           "price": 84999,
           "url": "https://gbnstore.com/product/infinix-gt-50-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -3910,7 +4090,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 84999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-gt-50-pro",
@@ -3933,6 +4113,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 84999
+        },
+        {
+          "date": "2026-10-28",
           "price": 84999
         }
       ]
@@ -3996,7 +4180,7 @@
           "store": "GBN Store",
           "price": 33999,
           "url": "https://gbnstore.com/product/infinix-hot-70",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -4009,7 +4193,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 33999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-hot-70",
@@ -4032,6 +4216,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 33999
+        },
+        {
+          "date": "2026-10-28",
           "price": 33999
         }
       ]
@@ -4133,7 +4321,7 @@
           "store": "GBN Store",
           "price": 52999,
           "url": "https://gbnstore.com/product/infinix-hot-70-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -4146,7 +4334,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 52999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-hot-70-pro",
@@ -4169,6 +4357,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 52999
+        },
+        {
+          "date": "2026-10-28",
           "price": 52999
         }
       ]
@@ -4276,7 +4468,7 @@
           "store": "GBN Store",
           "price": 54999,
           "url": "https://gbnstore.com/product/infinix-note-60",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -4289,7 +4481,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 54999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-note-60",
@@ -4312,6 +4504,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 54999
+        },
+        {
+          "date": "2026-10-28",
           "price": 54999
         }
       ]
@@ -4421,7 +4617,7 @@
           "store": "GBN Store",
           "price": 62999,
           "url": "https://gbnstore.com/product/infinix-note-60-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -4434,7 +4630,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 62999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-note-60-pro",
@@ -4458,6 +4654,10 @@
         {
           "date": "2026-10-27",
           "price": 62999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 62999
         }
       ]
     },
@@ -4472,7 +4672,7 @@
           "store": "GBN Store",
           "price": 41999,
           "url": "https://gbnstore.com/product/infinix-note-edge",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -4485,7 +4685,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 41999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-note-edge",
@@ -4508,6 +4708,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 41999
+        },
+        {
+          "date": "2026-10-28",
           "price": 41999
         }
       ]
@@ -4617,7 +4821,7 @@
           "store": "GBN Store",
           "price": 23999,
           "url": "https://gbnstore.com/product/infinix-smart-20",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -4630,7 +4834,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 23999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-smart-20",
@@ -4653,6 +4857,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 23999
+        },
+        {
+          "date": "2026-10-28",
           "price": 23999
         }
       ]
@@ -4764,7 +4972,7 @@
           "store": "GBN Store",
           "price": 66999,
           "url": "https://gbnstore.com/product/motorola-edge-70-fusion",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -4777,7 +4985,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 66999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-edge-70-fusion",
@@ -4800,6 +5008,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 66999
+        },
+        {
+          "date": "2026-10-28",
           "price": 66999
         }
       ]
@@ -4911,7 +5123,7 @@
           "store": "GBN Store",
           "price": 26499,
           "url": "https://gbnstore.com/product/motorola-moto-g06-power",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -4924,7 +5136,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 26499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-moto-g06-power",
@@ -4947,6 +5159,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 26499
+        },
+        {
+          "date": "2026-10-28",
           "price": 26499
         }
       ]
@@ -5154,7 +5370,7 @@
           "store": "GBN Store",
           "price": 37499,
           "url": "https://gbnstore.com/product/motorola-moto-g57-power",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -5167,7 +5383,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 37499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-moto-g57-power",
@@ -5191,6 +5407,10 @@
         {
           "date": "2026-10-27",
           "price": 37499
+        },
+        {
+          "date": "2026-10-28",
+          "price": 37499
         }
       ]
     },
@@ -5205,7 +5425,7 @@
           "store": "GBN Store",
           "price": 44999,
           "url": "https://gbnstore.com/product/motorola-g96-5g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -5218,7 +5438,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 44999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-g96-5g",
@@ -5242,6 +5462,10 @@
         {
           "date": "2026-10-27",
           "price": 44999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 44999
         }
       ]
     },
@@ -5256,7 +5480,7 @@
           "store": "GBN Store",
           "price": 69999,
           "url": "https://gbnstore.com/product/nothing-phone-4a",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -5303,7 +5527,7 @@
         "storage": "128GB 8GB RAM, 256GB 8GB RAM, 256GB 12GB RAM",
         "camera": "50 MP, f/1.9, 24mm (wide), 1/1.57\", 1.0µm, PDAF, OIS"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "body": "164 x 77.6 x 8.6 mm (6.46 x 3.06 x 0.34 in)",
       "weight": "204.5 g (7.23 oz)",
       "build": "Glass front (Gorilla Glass 7i), plastic frame, glass back",
@@ -5353,6 +5577,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 69999
+        },
+        {
+          "date": "2026-10-28",
           "price": 69999
         }
       ]
@@ -5559,7 +5787,7 @@
           "store": "GBN Store",
           "price": 43999,
           "url": "https://gbnstore.com/product/nothing-phone-3a-lite",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -5572,7 +5800,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 43999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nothing-phone-3a-lite",
@@ -5596,6 +5824,10 @@
         {
           "date": "2026-10-27",
           "price": 43999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 43999
         }
       ]
     },
@@ -5610,7 +5842,7 @@
           "store": "GBN Store",
           "price": 99999,
           "url": "https://gbnstore.com/product/nothing-phone-4a-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -5623,7 +5855,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 99999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nothing-phone-4a-pro",
@@ -5646,6 +5878,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 99999
+        },
+        {
+          "date": "2026-10-28",
           "price": 99999
         }
       ]
@@ -5753,7 +5989,7 @@
           "store": "GBN Store",
           "price": 64999,
           "url": "https://gbnstore.com/product/nothing-phone-4b",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -5766,7 +6002,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 64999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nothing-phone-4b",
@@ -5790,6 +6026,10 @@
         {
           "date": "2026-10-27",
           "price": 64999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 64999
         }
       ]
     },
@@ -5804,7 +6044,7 @@
           "store": "GBN Store",
           "price": 40999,
           "url": "https://gbnstore.com/product/oppo-a6",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -5817,7 +6057,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 40999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-a6",
@@ -5841,6 +6081,10 @@
         {
           "date": "2026-10-27",
           "price": 40999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 40999
         }
       ]
     },
@@ -5855,7 +6099,7 @@
           "store": "GBN Store",
           "price": 51999,
           "url": "https://gbnstore.com/product/oppo-a6-pro-4g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -5868,7 +6112,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 51999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-a6-pro-4g",
@@ -5892,6 +6136,10 @@
         {
           "date": "2026-10-27",
           "price": 51999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 51999
         }
       ]
     },
@@ -5906,7 +6154,7 @@
           "store": "GBN Store",
           "price": 56999,
           "url": "https://gbnstore.com/product/oppo-a6s-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -5919,7 +6167,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 56999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-a6s-pro",
@@ -5943,6 +6191,10 @@
         {
           "date": "2026-10-27",
           "price": 56999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 56999
         }
       ]
     },
@@ -5957,7 +6209,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/oppo-reno-15",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -5970,7 +6222,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-15",
@@ -5994,6 +6246,10 @@
         {
           "date": "2026-10-27",
           "price": 89999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 89999
         }
       ]
     },
@@ -6008,7 +6264,7 @@
           "store": "GBN Store",
           "price": 69999,
           "url": "https://gbnstore.com/product/oppo-reno-15f",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -6021,7 +6277,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 69999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-15f",
@@ -6045,6 +6301,10 @@
         {
           "date": "2026-10-27",
           "price": 69999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 69999
         }
       ]
     },
@@ -6059,7 +6319,7 @@
           "store": "GBN Store",
           "price": 109999,
           "url": "https://gbnstore.com/product/oppo-reno-16",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -6072,7 +6332,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 109999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-16",
@@ -6096,6 +6356,10 @@
         {
           "date": "2026-10-27",
           "price": 109999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 109999
         }
       ]
     },
@@ -6110,7 +6374,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/oppo-reno-16f",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -6123,7 +6387,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-16f",
@@ -6146,6 +6410,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 89999
+        },
+        {
+          "date": "2026-10-28",
           "price": 89999
         }
       ]
@@ -6492,7 +6760,7 @@
           "store": "GBN Store",
           "price": 98499,
           "url": "https://gbnstore.com/product/oneplus-15r",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -6505,7 +6773,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 98499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oneplus-15r",
@@ -6528,6 +6796,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 98499
+        },
+        {
+          "date": "2026-10-28",
           "price": 98499
         }
       ]
@@ -6727,7 +6999,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/oneplus-nord-6",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -6740,7 +7012,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oneplus-nord-6",
@@ -6763,6 +7035,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 89999
+        },
+        {
+          "date": "2026-10-28",
           "price": 89999
         }
       ]
@@ -6959,7 +7235,7 @@
           "store": "GBN Store",
           "price": 58999,
           "url": "https://gbnstore.com/product/poco-m8-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -6972,7 +7248,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 58999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-m8-pro",
@@ -6995,6 +7271,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 58999
+        },
+        {
+          "date": "2026-10-28",
           "price": 58999
         }
       ]
@@ -7380,7 +7660,7 @@
           "store": "GBN Store",
           "price": 104999,
           "url": "https://gbnstore.com/product/poco-f8-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         },
         {
@@ -7407,7 +7687,7 @@
         "chipset": "Snapdragon 8 Elite Black The Flagship Killer is Back: E",
         "camera": "50MP"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 104999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-f8-pro",
@@ -7431,6 +7711,10 @@
         {
           "date": "2026-10-27",
           "price": 104999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 104999
         }
       ]
     },
@@ -7445,7 +7729,7 @@
           "store": "GBN Store",
           "price": 76999,
           "url": "https://gbnstore.com/product/poco-x8-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -7458,7 +7742,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 76999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-x8-pro",
@@ -7482,6 +7766,10 @@
         {
           "date": "2026-10-27",
           "price": 76999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 76999
         }
       ]
     },
@@ -7496,7 +7784,7 @@
           "store": "GBN Store",
           "price": 94999,
           "url": "https://gbnstore.com/product/poco-x8-pro-max",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -7509,7 +7797,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 94999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-x8-pro-max",
@@ -7533,6 +7821,10 @@
         {
           "date": "2026-10-27",
           "price": 94999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 94999
         }
       ]
     },
@@ -7547,7 +7839,7 @@
           "store": "GBN Store",
           "price": 66999,
           "url": "https://gbnstore.com/product/realme-15-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -7560,7 +7852,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 66999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-15-pro",
@@ -7583,6 +7875,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 66999
+        },
+        {
+          "date": "2026-10-28",
           "price": 66999
         }
       ]
@@ -7786,7 +8082,7 @@
           "store": "GBN Store",
           "price": 39999,
           "url": "https://gbnstore.com/product/realme-c85",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -7799,7 +8095,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 39999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-c85",
@@ -7823,6 +8119,10 @@
         {
           "date": "2026-10-27",
           "price": 39999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 39999
         }
       ]
     },
@@ -7837,7 +8137,7 @@
           "store": "GBN Store",
           "price": 39999,
           "url": "https://gbnstore.com/product/realme-c85-5g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -7850,7 +8150,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 39999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-c85-5g",
@@ -7873,6 +8173,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 39999
+        },
+        {
+          "date": "2026-10-28",
           "price": 39999
         }
       ]
@@ -7982,7 +8286,7 @@
           "store": "GBN Store",
           "price": 36999,
           "url": "https://gbnstore.com/product/realme-c85-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -7995,7 +8299,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 36999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-c85-pro",
@@ -8019,6 +8323,10 @@
         {
           "date": "2026-10-27",
           "price": 36999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 36999
         }
       ]
     },
@@ -8033,7 +8341,7 @@
           "store": "GBN Store",
           "price": 149999,
           "url": "https://gbnstore.com/product/realme-gt-8-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -8046,7 +8354,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 149999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-gt-8-pro",
@@ -8069,6 +8377,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 149999
+        },
+        {
+          "date": "2026-10-28",
           "price": 149999
         }
       ]
@@ -8130,7 +8442,7 @@
           "store": "GBN Store",
           "price": 16999,
           "url": "https://gbnstore.com/product/realme-note-60x",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -8143,7 +8455,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 16999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-note-60x",
@@ -8167,6 +8479,10 @@
         {
           "date": "2026-10-27",
           "price": 16999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 16999
         }
       ]
     },
@@ -8181,7 +8497,7 @@
           "store": "GBN Store",
           "price": 16999,
           "url": "https://gbnstore.com/product/realme-note-70",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -8194,7 +8510,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 16999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-note-70",
@@ -8218,6 +8534,10 @@
         {
           "date": "2026-10-27",
           "price": 16999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 16999
         }
       ]
     },
@@ -8232,12 +8552,12 @@
           "store": "GBN Store",
           "price": 23999,
           "url": "https://gbnstore.com/product/realme-note-80",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
       "image": "https://gbnstore.com/_next/image?url=https%3A%2F%2Fmedia.gbnstore.com%2F2026%2F07%2FRealme-Note-80-Glacier-Blue.webp&w=1920&q=75",
-      "description": "Realme 2 % OFF Realme Note 80 4GB+64GB Rs 23,999 In stock Buy now",
+      "description": "Realme Realme Note 80 4GB+64GB Rs 23,999 In stock Buy now",
       "ram": null,
       "storage": null,
       "display": null,
@@ -8245,7 +8565,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 23999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-note-80",
@@ -8268,6 +8588,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 23999
+        },
+        {
+          "date": "2026-10-28",
           "price": 23999
         }
       ]
@@ -8329,7 +8653,7 @@
           "store": "GBN Store",
           "price": 44999,
           "url": "https://gbnstore.com/product/realme-p3",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -8342,7 +8666,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 44999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-p3",
@@ -8366,6 +8690,10 @@
         {
           "date": "2026-10-27",
           "price": 44999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 44999
         }
       ]
     },
@@ -8380,7 +8708,7 @@
           "store": "GBN Store",
           "price": 65999,
           "url": "https://gbnstore.com/product/realme-p3-ultra",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -8393,7 +8721,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 65999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-p3-ultra",
@@ -8417,6 +8745,10 @@
         {
           "date": "2026-10-27",
           "price": 65999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 65999
         }
       ]
     },
@@ -8431,7 +8763,7 @@
           "store": "GBN Store",
           "price": 76999,
           "url": "https://gbnstore.com/product/realme-p4-power",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -8444,7 +8776,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 76999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-p4-power",
@@ -8467,6 +8799,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 76999
+        },
+        {
+          "date": "2026-10-28",
           "price": 76999
         }
       ]
@@ -8762,7 +9098,7 @@
           "store": "GBN Store",
           "price": 27999,
           "url": "https://gbnstore.com/product/redmi-17-4g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -8775,7 +9111,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 27999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-17-4g",
@@ -8799,6 +9135,10 @@
         {
           "date": "2026-10-27",
           "price": 27999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 27999
         }
       ]
     },
@@ -8813,7 +9153,7 @@
           "store": "GBN Store",
           "price": 33999,
           "url": "https://gbnstore.com/product/redmi-17-5g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -8826,7 +9166,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 33999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-17-5g",
@@ -8850,6 +9190,10 @@
         {
           "date": "2026-10-27",
           "price": 33999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 33999
         }
       ]
     },
@@ -8864,7 +9208,7 @@
           "store": "GBN Store",
           "price": 20499,
           "url": "https://gbnstore.com/product/redmi-a7-4g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -8877,7 +9221,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 20499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-a7-4g",
@@ -8901,6 +9245,10 @@
         {
           "date": "2026-10-27",
           "price": 20499
+        },
+        {
+          "date": "2026-10-28",
+          "price": 20499
         }
       ]
     },
@@ -8915,7 +9263,7 @@
           "store": "GBN Store",
           "price": 21499,
           "url": "https://gbnstore.com/product/redmi-a7-pro-4g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -8928,7 +9276,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 21499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-a7-pro-4g",
@@ -8951,6 +9299,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 21499
+        },
+        {
+          "date": "2026-10-28",
           "price": 21499
         }
       ]
@@ -9332,7 +9684,7 @@
           "store": "GBN Store",
           "price": 42999,
           "url": "https://gbnstore.com/product/redmi-note-17",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -9345,7 +9697,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 42999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17",
@@ -9368,6 +9720,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 42999
+        },
+        {
+          "date": "2026-10-28",
           "price": 42999
         }
       ]
@@ -9475,7 +9831,7 @@
           "store": "GBN Store",
           "price": 47999,
           "url": "https://gbnstore.com/product/redmi-note-17-5g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -9488,7 +9844,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 47999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17-5g",
@@ -9511,6 +9867,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 47999
+        },
+        {
+          "date": "2026-10-28",
           "price": 47999
         }
       ]
@@ -9622,7 +9982,7 @@
           "store": "GBN Store",
           "price": 57999,
           "url": "https://gbnstore.com/product/redmi-note-17-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -9635,7 +9995,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 57999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17-pro",
@@ -9658,6 +10018,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 57999
+        },
+        {
+          "date": "2026-10-28",
           "price": 57999
         }
       ]
@@ -9765,7 +10129,7 @@
           "store": "GBN Store",
           "price": 69999,
           "url": "https://gbnstore.com/product/redmi-note-17-pro-max",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -9778,7 +10142,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 69999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17-pro-max",
@@ -9801,6 +10165,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 69999
+        },
+        {
+          "date": "2026-10-28",
           "price": 69999
         }
       ]
@@ -9908,7 +10276,7 @@
           "store": "GBN Store",
           "price": 25499,
           "url": "https://gbnstore.com/product/samsung-galaxy-a07",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -9954,7 +10322,7 @@
         "storage": "64GB 4GB RAM, 128GB 4GB RAM, 128GB 6GB RAM, 256GB 8GB RAM",
         "camera": "50 MP, f/1.8, (wide), 1/2.76\", 0.64µm, PDAF"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "network": "GSM / HSPA / LTE",
       "body": "167.4 x 77.4 x 7.6 mm (6.59 x 3.05 x 0.30 in)",
       "weight": "184 g (6.49 oz)",
@@ -10003,6 +10371,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 25499
+        },
+        {
+          "date": "2026-10-28",
           "price": 25499
         }
       ]
@@ -10203,7 +10575,7 @@
           "store": "GBN Store",
           "price": 44999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a17-5g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -10216,7 +10588,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 44999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-a17-5g",
@@ -10239,6 +10611,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 44999
+        },
+        {
+          "date": "2026-10-28",
           "price": 44999
         }
       ]
@@ -10683,7 +11059,7 @@
           "store": "GBN Store",
           "price": 51999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a27-5g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -10696,7 +11072,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 51999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-a27-5g",
@@ -10719,6 +11095,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 51999
+        },
+        {
+          "date": "2026-10-28",
           "price": 51999
         }
       ]
@@ -10828,7 +11208,7 @@
           "store": "GBN Store",
           "price": 74999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a37-5g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -10878,7 +11258,7 @@
         "storage": "128GB 6GB RAM, 128GB 8GB RAM, 256GB 8GB RAM, 256GB 12GB RAM",
         "camera": "50 MP, f/1.8, (wide), 1/1.56\", 1.0µm, PDAF, OIS"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "network": "GSM / HSPA / LTE / 5G",
       "launch": "2026, March 25",
       "status": "Available. Released 2026, April 9",
@@ -10931,6 +11311,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 74999
+        },
+        {
+          "date": "2026-10-28",
           "price": 74999
         }
       ]
@@ -11294,7 +11678,7 @@
           "store": "GBN Store",
           "price": 96999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a57-5g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -11307,7 +11691,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 96999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-a57-5g",
@@ -11330,6 +11714,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 96999
+        },
+        {
+          "date": "2026-10-28",
           "price": 96999
         }
       ]
@@ -11435,7 +11823,7 @@
           "store": "GBN Store",
           "price": 43999,
           "url": "https://gbnstore.com/product/samsung-galaxy-m17",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -11448,7 +11836,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 43999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-m17",
@@ -11471,6 +11859,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 43999
+        },
+        {
+          "date": "2026-10-28",
           "price": 43999
         }
       ]
@@ -11534,14 +11926,14 @@
           "store": "GBN Store",
           "price": 139999,
           "url": "https://gbnstore.com/product/samsung-galaxy-s26",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         },
         {
           "store": "Neo Store",
           "price": 139999,
           "url": "https://www.neostore.com.np/product/samsung-galaxy-s26-",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -11587,7 +11979,7 @@
         "storage": "256GB 12GB RAM,",
         "camera": "50 MP, f/1.8, 24mm (wide), 1/1.56\", 1.0µm, dual pixel PDAF, OIS"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
       "body": "149.6 x 71.7 x 7.2 mm (5.89 x 2.82 x 0.28 in)",
       "weight": "167 g (5.89 oz)",
@@ -11636,6 +12028,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 139999
+        },
+        {
+          "date": "2026-10-28",
           "price": 139999
         }
       ]
@@ -11699,7 +12095,7 @@
           "store": "GBN Store",
           "price": 124999,
           "url": "https://gbnstore.com/product/samsung-galaxy-s26-fe",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -11712,7 +12108,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 124999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-s26-fe",
@@ -11735,6 +12131,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 124999
+        },
+        {
+          "date": "2026-10-28",
           "price": 124999
         }
       ]
@@ -11796,7 +12196,7 @@
           "store": "Neo Store",
           "price": 182999,
           "url": "https://www.neostore.com.np/product/samsung-galaxy-s26-plus",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -11843,7 +12243,7 @@
         "storage": "256GB 12GB RAM,",
         "camera": "50 MP, f/1.8, 24mm (wide), 1/1.56\", 1.0µm, dual pixel PDAF, OIS"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
       "launch": "2026, February 25",
       "body": "158.4 x 75.8 x 7.3 mm (6.24 x 2.98 x 0.29 in)",
@@ -11893,6 +12293,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 182999
+        },
+        {
+          "date": "2026-10-28",
           "price": 182999
         }
       ]
@@ -11996,7 +12400,7 @@
           "store": "GBN Store",
           "price": 224999,
           "url": "https://gbnstore.com/product/samsung-galaxy-s26-ultra",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -12044,7 +12448,7 @@
         "storage": "256GB 12GB RAM, 512GB 12GB RAM, 1TB 16GB RAM",
         "camera": "200 MP, f/1.4, 24mm (wide), 1/1.3\", 0.6µm, multi-directional PDAF, OIS"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "now nudge": "Pause",
       "now brief": "understand your habits better than before.",
       "network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
@@ -12095,6 +12499,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 224999
+        },
+        {
+          "date": "2026-10-28",
           "price": 224999
         }
       ]
@@ -12248,7 +12656,7 @@
           "store": "GBN Store",
           "price": 194999,
           "url": "https://gbnstore.com/product/samsung-galaxy-z-flip-8",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -12261,7 +12669,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 194999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-z-flip-8",
@@ -12284,6 +12692,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 194999
+        },
+        {
+          "date": "2026-10-28",
           "price": 194999
         }
       ]
@@ -12437,7 +12849,7 @@
           "store": "GBN Store",
           "price": 279999,
           "url": "https://gbnstore.com/product/samsung-galaxy-z-fold-7",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -12450,7 +12862,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 279999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-z-fold-7",
@@ -12474,6 +12886,10 @@
         {
           "date": "2026-10-27",
           "price": 279999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 279999
         }
       ]
     },
@@ -12488,7 +12904,7 @@
           "store": "GBN Store",
           "price": 274999,
           "url": "https://gbnstore.com/product/samsung-galaxy-z-fold-8",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -12501,7 +12917,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 274999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-z-fold-8",
@@ -12524,6 +12940,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 274999
+        },
+        {
+          "date": "2026-10-28",
           "price": 274999
         }
       ]
@@ -12891,7 +13311,7 @@
           "store": "GBN Store",
           "price": 84999,
           "url": "https://gbnstore.com/product/vivo-v70",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -12904,7 +13324,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 84999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-v70",
@@ -12927,6 +13347,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 84999
+        },
+        {
+          "date": "2026-10-28",
           "price": 84999
         }
       ]
@@ -13032,7 +13456,7 @@
           "store": "GBN Store",
           "price": 62999,
           "url": "https://gbnstore.com/product/vivo-v70-fe",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -13045,7 +13469,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 62999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-v70-fe",
@@ -13068,6 +13492,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 62999
+        },
+        {
+          "date": "2026-10-28",
           "price": 62999
         }
       ]
@@ -13171,7 +13599,7 @@
           "store": "GBN Store",
           "price": 63999,
           "url": "https://gbnstore.com/product/vivo-v80-lite",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -13184,7 +13612,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 63999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-v80-lite",
@@ -13207,6 +13635,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 63999
+        },
+        {
+          "date": "2026-10-28",
           "price": 63999
         }
       ]
@@ -13267,7 +13699,7 @@
           "store": "GBN Store",
           "price": 199999,
           "url": "https://gbnstore.com/product/vivo-x300-pro",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -13280,7 +13712,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 199999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-x300-pro",
@@ -13303,6 +13735,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 199999
+        },
+        {
+          "date": "2026-10-28",
           "price": 199999
         }
       ]
@@ -13365,7 +13801,7 @@
           "store": "GBN Store",
           "price": 21999,
           "url": "https://gbnstore.com/product/vivo-y05",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -13378,7 +13814,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 21999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-y05",
@@ -13402,6 +13838,10 @@
         {
           "date": "2026-10-27",
           "price": 21999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 21999
         }
       ]
     },
@@ -13416,7 +13856,7 @@
           "store": "GBN Store",
           "price": 40999,
           "url": "https://gbnstore.com/product/vivo-y21-5g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -13429,7 +13869,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 40999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-y21-5g",
@@ -13452,6 +13892,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 40999
+        },
+        {
+          "date": "2026-10-28",
           "price": 40999
         }
       ]
@@ -13611,7 +14055,7 @@
           "store": "GBN Store",
           "price": 54999,
           "url": "https://gbnstore.com/product/vivo-y500",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -13624,7 +14068,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 54999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-y500",
@@ -13647,6 +14091,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 54999
+        },
+        {
+          "date": "2026-10-28",
           "price": 54999
         }
       ]
@@ -13754,7 +14202,7 @@
           "store": "GBN Store",
           "price": 200000,
           "url": "https://gbnstore.com/product/xiaomi-17-ultra",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -13767,7 +14215,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 200000,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/xiaomi-17-ultra",
@@ -13790,6 +14238,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 200000
+        },
+        {
+          "date": "2026-10-28",
           "price": 200000
         }
       ]
@@ -13851,7 +14303,7 @@
           "store": "GBN Store",
           "price": 99999,
           "url": "https://gbnstore.com/product/xiaomi-17t",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -13864,7 +14316,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 99999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/xiaomi-17t",
@@ -13887,6 +14339,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 99999
+        },
+        {
+          "date": "2026-10-28",
           "price": 99999
         }
       ]
@@ -13998,7 +14454,7 @@
           "store": "Neo Store",
           "price": 34999,
           "url": "https://www.neostore.com.np/product/xiaomi-mi-11-lite-6gb-128gb-",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -14033,7 +14489,7 @@
         "battery": "4250mAh battery",
         "camera": "64MP primary camera f/1.79, 6P lens"
       },
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "product": "Mi 11 Lite",
       "category": "Mobile",
       "color": "Blue, Pink, Black",
@@ -14070,6 +14526,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 34999
+        },
+        {
+          "date": "2026-10-28",
           "price": 34999
         }
       ]
@@ -14157,7 +14617,7 @@
           "store": "GBN Store",
           "price": 18999,
           "url": "https://gbnstore.com/product/zte-nubia-a36",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -14170,7 +14630,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 18999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a36",
@@ -14194,6 +14654,10 @@
         {
           "date": "2026-10-27",
           "price": 18999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 18999
         }
       ]
     },
@@ -14208,7 +14672,7 @@
           "store": "GBN Store",
           "price": 19999,
           "url": "https://gbnstore.com/product/zte-nubia-a56",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -14221,7 +14685,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 19999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a56",
@@ -14245,6 +14709,10 @@
         {
           "date": "2026-10-27",
           "price": 19999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 19999
         }
       ]
     },
@@ -14259,7 +14727,7 @@
           "store": "GBN Store",
           "price": 21999,
           "url": "https://gbnstore.com/product/zte-nubia-a57",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -14272,7 +14740,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 21999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a57",
@@ -14296,6 +14764,10 @@
         {
           "date": "2026-10-27",
           "price": 21999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 21999
         }
       ]
     },
@@ -14310,7 +14782,7 @@
           "store": "GBN Store",
           "price": 25499,
           "url": "https://gbnstore.com/product/zte-nubia-a77",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -14323,7 +14795,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 25499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a77",
@@ -14347,6 +14819,10 @@
         {
           "date": "2026-10-27",
           "price": 25499
+        },
+        {
+          "date": "2026-10-28",
+          "price": 25499
         }
       ]
     },
@@ -14361,7 +14837,7 @@
           "store": "GBN Store",
           "price": 55999,
           "url": "https://gbnstore.com/product/nubia-neo-5-5g",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -14374,7 +14850,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 55999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nubia-neo-5-5g",
@@ -14398,6 +14874,10 @@
         {
           "date": "2026-10-27",
           "price": 55999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 55999
         }
       ]
     },
@@ -14412,7 +14892,7 @@
           "store": "GBN Store",
           "price": 77999,
           "url": "https://gbnstore.com/product/nubia-neo-5-gt",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -14425,7 +14905,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 77999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nubia-neo-5-gt",
@@ -14449,6 +14929,10 @@
         {
           "date": "2026-10-27",
           "price": 77999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 77999
         }
       ]
     },
@@ -14463,7 +14947,7 @@
           "store": "GBN Store",
           "price": 29999,
           "url": "https://gbnstore.com/product/zte-nubia-v80-design",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -14476,7 +14960,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 29999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-v80-design",
@@ -14500,6 +14984,10 @@
         {
           "date": "2026-10-27",
           "price": 29999
+        },
+        {
+          "date": "2026-10-28",
+          "price": 29999
         }
       ]
     },
@@ -14514,7 +15002,7 @@
           "store": "GBN Store",
           "price": 29499,
           "url": "https://gbnstore.com/product/zte-nubia-v80-max",
-          "checked_at": "2026-10-27",
+          "checked_at": "2026-10-28",
           "warranty": null
         }
       ],
@@ -14527,7 +15015,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "price": 29499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-v80-max",
@@ -14550,6 +15038,10 @@
         },
         {
           "date": "2026-10-27",
+          "price": 29499
+        },
+        {
+          "date": "2026-10-28",
           "price": 29499
         }
       ]
