@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T06:55:21.595690+00:00",
+  "updated_at": "2026-10-29T07:13:16.411425+00:00",
   "status": "Daily retailer refresh; last-known offers are marked stale when a source refresh is incomplete",
   "source_status": {
     "Brother Mart": {
@@ -51,15 +51,15 @@
       "errors": []
     },
     "Quality Computer": {
-      "candidates": 8,
-      "priced_offers_found": 8,
+      "candidates": 7,
+      "priced_offers_found": 7,
       "previous_offers": 8,
       "minimum_expected_offers": 3,
       "status": "complete",
       "errors": []
     }
   },
-  "fresh_offer_count": 113,
+  "fresh_offer_count": 112,
   "stale_offer_count": 169,
   "phones": [
     {
@@ -73,7 +73,7 @@
           "store": "GBN Store",
           "price": 22999,
           "url": "https://gbnstore.com/product/ai-nova-2-5g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -86,7 +86,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 22999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/ai-nova-2-5g",
@@ -114,6 +114,10 @@
         {
           "date": "2026-10-28",
           "price": 22999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 22999
         }
       ]
     },
@@ -128,7 +132,7 @@
           "store": "GBN Store",
           "price": 19999,
           "url": "https://gbnstore.com/product/ai-pulse-2",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -141,7 +145,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 19999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/ai-pulse-2",
@@ -168,6 +172,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 19999
+        },
+        {
+          "date": "2026-10-29",
           "price": 19999
         }
       ]
@@ -279,14 +287,14 @@
           "store": "Neo Store",
           "price": 127499,
           "url": "https://www.neostore.com.np/product/apple-iphone-15",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         },
         {
           "store": "Quality Computer",
           "price": 127499,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-15-48358?category=833&order=create_date+desc",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -342,7 +350,7 @@
         "colours": "Black, Blue, Green, Yellow, Pink",
         "colour": "Black or Pink or Blue or Green or Yellow"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "product": "iPhone 15",
       "category": "Mobile",
       "color": "Black, Green and Pink",
@@ -405,6 +413,10 @@
         {
           "date": "2026-10-28",
           "price": 127499
+        },
+        {
+          "date": "2026-10-29",
+          "price": 127499
         }
       ]
     },
@@ -419,14 +431,14 @@
           "store": "Neo Store",
           "price": 146599,
           "url": "https://www.neostore.com.np/product/apple-iphone-16",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         },
         {
           "store": "Quality Computer",
           "price": 146599,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-16-51326?category=833&order=create_date+desc",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -486,7 +498,7 @@
         "colours": "Black, White, Pink, Teal, Ultramarine",
         "colour": "Ultramarine or Teal or Black or White or Pink"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "lock in your look.-": "dial in your exact desired look with more advanced skin-tone rendering",
       "align with your aesthetic. -": "customize the different moods of a photo",
       "make the most of your megapixels.": "easy to adjust tone and color simultaneously",
@@ -552,6 +564,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 146599
+        },
+        {
+          "date": "2026-10-29",
           "price": 146599
         }
       ]
@@ -702,7 +718,7 @@
           "store": "Quality Computer",
           "price": 173499,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-1-year-warranty-52079?category=833&order=create_date+desc",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -741,7 +757,7 @@
         "ram": "256GB or 512GB",
         "camera": "48MP Fusion, 26 mm, ƒ/1.6, sensor-shift OIS; 2x optical-quality zoom"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
@@ -787,6 +803,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 173499
+        },
+        {
+          "date": "2026-10-29",
           "price": 173499
         }
       ]
@@ -849,7 +869,7 @@
           "store": "Quality Computer",
           "price": 221299,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-pro-52081?category=833&order=create_date+desc",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -889,7 +909,7 @@
         "ram": "256GB or 512GB or 1TB",
         "camera": "48MP Fusion Main, 48MP Fusion Ultra Wide, 48MP Telephoto 4x (100 mm)"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
@@ -936,6 +956,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 221299
+        },
+        {
+          "date": "2026-10-29",
           "price": 221299
         }
       ]
@@ -1089,7 +1113,7 @@
           "store": "Quality Computer",
           "price": 242499,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-pro-max-52082?category=833&order=create_date+desc",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -1131,7 +1155,7 @@
         "ram": "256GB or 512GB or 1TB or 2TB",
         "camera": "48MP Fusion, 24 mm, ƒ/1.78"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
@@ -1180,6 +1204,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 242499
+        },
+        {
+          "date": "2026-10-29",
           "price": 242499
         }
       ]
@@ -1551,118 +1579,6 @@
       ]
     },
     {
-      "slug": "apple-iphone-18-pro",
-      "brand": "Apple",
-      "model": "Apple iPhone 18 Pro",
-      "title": "Apple iPhone 18 Pro",
-      "variant": "",
-      "prices": [
-        {
-          "store": "Quality Computer",
-          "price": 259900,
-          "url": "https://qualitycomputer.com.np/shop/apple-iphone-18-pro-53385?category=833&order=create_date+desc",
-          "checked_at": "2026-10-28",
-          "warranty": null
-        }
-      ],
-      "image": "https://qualitycomputer.com.np/web/image/product.template/53385/image_1024?unique=5021af2",
-      "description": "Apple iPhone 18 Pro price in Nepal: from Rs 259,900. 6.3-inch 120Hz screen, A20 Pro chip, 48MP variable-aperture camera. Authorised Apple reseller, 0% EMI.",
-      "ram": "256GB or 512GB or 1TB or 2TB",
-      "storage": "256GB, 512GB, 1TB, 2TB",
-      "display": "4 inch",
-      "battery": "Up to 34 hours video playback, 23 hours typical use",
-      "chipset": null,
-      "camera": "48MP Fusion, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)",
-      "specifications": {
-        "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
-        "term (in month)": "Choose a term",
-        "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-        "memory": "256GB or 512GB or 1TB or 2TB",
-        "256gb": "Rs 259,900",
-        "512gb": "Rs 301,900",
-        "1tb": "Rs 386,900",
-        "2tb": "Rs 513,900",
-        "display": "4 inch",
-        "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
-        "chip": "A20 Pro (2nm): 6-core CPU, 7-core GPU with Neural Accelerators, dual 16-core Neural Engine",
-        "storage": "256GB, 512GB, 1TB, 2TB",
-        "main camera": "48MP Fusion, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)",
-        "ultra wide": "48MP Fusion",
-        "telephoto": "48MP, 4x (100 mm); 8x optical-quality zoom; digital zoom up to 40x",
-        "video": "Cinematic up to 4K 60 fps, ProRes RAW, Apple Log 2, ACES, Genlock",
-        "front camera": "18MP Center Stage; Face ID",
-        "battery": "Up to 34 hours video playback, 23 hours typical use",
-        "charging": "USB-C, 50% in about 15 min with a 60W-capable adapter; MagSafe and Qi2 up to 25W",
-        "mobile network": "5G (sub-6 GHz), Apple C2 modem",
-        "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
-        "sim": "Nano-SIM + eSIM, dual eSIM supported",
-        "port": "USB-C, USB 3 (up to 10Gb/s)",
-        "build": "Aluminium unibody, Ceramic Shield 2 front, IP68 (6 m for up to 30 minutes)",
-        "size and weight": "150.0 × 71.9 × 8.75 mm, 211 g",
-        "colours": "Black, Silver, Glacier, Burgundy",
-        "software": "iOS 27",
-        "colour": "Black or Silver or Burgundy or Glacier",
-        "brand": "Apple",
-        "ram": "256GB or 512GB or 1TB or 2TB",
-        "camera": "48MP Fusion, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)"
-      },
-      "updated_at": "2026-10-28",
-      "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
-      "term (in month)": "Choose a term",
-      "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
-      "memory": "256GB or 512GB or 1TB or 2TB",
-      "256gb": "Rs 259,900",
-      "512gb": "Rs 301,900",
-      "1tb": "Rs 386,900",
-      "2tb": "Rs 513,900",
-      "brightness": "1,000 nits typical, 1,600 nits HDR, 3,000 nits outdoor peak",
-      "chip": "A20 Pro (2nm): 6-core CPU, 7-core GPU with Neural Accelerators, dual 16-core Neural Engine",
-      "main camera": "48MP Fusion, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)",
-      "ultra wide": "48MP Fusion",
-      "telephoto": "48MP, 4x (100 mm); 8x optical-quality zoom; digital zoom up to 40x",
-      "video": "Cinematic up to 4K 60 fps, ProRes RAW, Apple Log 2, ACES, Genlock",
-      "front camera": "18MP Center Stage; Face ID",
-      "charging": "USB-C, 50% in about 15 min with a 60W-capable adapter; MagSafe and Qi2 up to 25W",
-      "mobile network": "5G (sub-6 GHz), Apple C2 modem",
-      "wireless": "Wi-Fi 7, Bluetooth 6, Thread (Apple N1 chip)",
-      "sim": "Nano-SIM + eSIM, dual eSIM supported",
-      "port": "USB-C, USB 3 (up to 10Gb/s)",
-      "build": "Aluminium unibody, Ceramic Shield 2 front, IP68 (6 m for up to 30 minutes)",
-      "size and weight": "150.0 × 71.9 × 8.75 mm, 211 g",
-      "colours": "Black, Silver, Glacier, Burgundy",
-      "software": "iOS 27",
-      "colour": "Black or Silver or Burgundy or Glacier",
-      "price": 259900,
-      "best_store": "Quality Computer",
-      "best_url": "https://qualitycomputer.com.np/shop/apple-iphone-18-pro-53385?category=833&order=create_date+desc",
-      "price_count": 1,
-      "price_is_stale": false,
-      "fresh_offer_count": 1,
-      "stale_offer_count": 0,
-      "history": [
-        {
-          "date": "2026-10-24",
-          "price": 259900
-        },
-        {
-          "date": "2026-10-25",
-          "price": 259900
-        },
-        {
-          "date": "2026-10-26",
-          "price": 259900
-        },
-        {
-          "date": "2026-10-27",
-          "price": 259900
-        },
-        {
-          "date": "2026-10-28",
-          "price": 259900
-        }
-      ]
-    },
-    {
       "slug": "apple-iphone-18-pro-max",
       "brand": "Apple",
       "model": "Apple iPhone 18 Pro Max",
@@ -1673,7 +1589,7 @@
           "store": "Quality Computer",
           "price": 279900,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-18-pro-max-53386?category=833&order=create_date+desc",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -1718,7 +1634,7 @@
         "ram": "256GB or 512GB or 1TB or 2TB",
         "camera": "48MP Fusion, 24 mm, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
@@ -1771,6 +1687,10 @@
         {
           "date": "2026-10-28",
           "price": 279900
+        },
+        {
+          "date": "2026-10-29",
+          "price": 279900
         }
       ]
     },
@@ -1785,7 +1705,7 @@
           "store": "Quality Computer",
           "price": 190699,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-air-52080?category=833&order=create_date+desc",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -1823,7 +1743,7 @@
         "storage": "128GB, 256GB, 512GB, 1TB",
         "camera": "12MP TrueDepth with Center Stage, 4K recording"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
@@ -1869,6 +1789,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 190699
+        },
+        {
+          "date": "2026-10-29",
           "price": 190699
         }
       ]
@@ -1930,7 +1854,7 @@
           "store": "GBN Store",
           "price": 127499,
           "url": "https://gbnstore.com/product/iphone-15",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -1943,7 +1867,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 127499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-15",
@@ -1971,6 +1895,10 @@
         {
           "date": "2026-10-28",
           "price": 127499
+        },
+        {
+          "date": "2026-10-29",
+          "price": 127499
         }
       ]
     },
@@ -1985,7 +1913,7 @@
           "store": "GBN Store",
           "price": 146599,
           "url": "https://gbnstore.com/product/iphone-16",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -1998,7 +1926,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 146599,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-16",
@@ -2026,6 +1954,10 @@
         {
           "date": "2026-10-28",
           "price": 146599
+        },
+        {
+          "date": "2026-10-29",
+          "price": 146599
         }
       ]
     },
@@ -2040,7 +1972,7 @@
           "store": "GBN Store",
           "price": 173499,
           "url": "https://gbnstore.com/product/iphone-17",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2053,7 +1985,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 173499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17",
@@ -2081,6 +2013,10 @@
         {
           "date": "2026-10-28",
           "price": 173499
+        },
+        {
+          "date": "2026-10-29",
+          "price": 173499
         }
       ]
     },
@@ -2095,7 +2031,7 @@
           "store": "GBN Store",
           "price": 221299,
           "url": "https://gbnstore.com/product/iphone-17-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2108,7 +2044,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 221299,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17-pro",
@@ -2136,6 +2072,10 @@
         {
           "date": "2026-10-28",
           "price": 221299
+        },
+        {
+          "date": "2026-10-29",
+          "price": 221299
         }
       ]
     },
@@ -2150,7 +2090,7 @@
           "store": "GBN Store",
           "price": 242499,
           "url": "https://gbnstore.com/product/iphone-17-pro-max",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2163,7 +2103,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 242499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17-pro-max",
@@ -2191,6 +2131,10 @@
         {
           "date": "2026-10-28",
           "price": 242499
+        },
+        {
+          "date": "2026-10-29",
+          "price": 242499
         }
       ]
     },
@@ -2205,7 +2149,7 @@
           "store": "GBN Store",
           "price": 132499,
           "url": "https://gbnstore.com/product/iphone-17e",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2218,7 +2162,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 132499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17e",
@@ -2246,6 +2190,10 @@
         {
           "date": "2026-10-28",
           "price": 132499
+        },
+        {
+          "date": "2026-10-29",
+          "price": 132499
         }
       ]
     },
@@ -2260,7 +2208,7 @@
           "store": "GBN Store",
           "price": 259900,
           "url": "https://gbnstore.com/product/iphone-18-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2273,7 +2221,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 259900,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-18-pro",
@@ -2301,6 +2249,10 @@
         {
           "date": "2026-10-28",
           "price": 259900
+        },
+        {
+          "date": "2026-10-29",
+          "price": 259900
         }
       ]
     },
@@ -2315,7 +2267,7 @@
           "store": "GBN Store",
           "price": 279900,
           "url": "https://gbnstore.com/product/iphone-18-pro-max",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2328,7 +2280,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 279900,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-18-pro-max",
@@ -2356,6 +2308,10 @@
         {
           "date": "2026-10-28",
           "price": 279900
+        },
+        {
+          "date": "2026-10-29",
+          "price": 279900
         }
       ]
     },
@@ -2370,7 +2326,7 @@
           "store": "GBN Store",
           "price": 190699,
           "url": "https://gbnstore.com/product/iphone-air",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2383,7 +2339,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 190699,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-air",
@@ -2411,6 +2367,10 @@
         {
           "date": "2026-10-28",
           "price": 190699
+        },
+        {
+          "date": "2026-10-29",
+          "price": 190699
         }
       ]
     },
@@ -2425,7 +2385,7 @@
           "store": "GBN Store",
           "price": 21999,
           "url": "https://gbnstore.com/product/blackview-fort-1",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2438,7 +2398,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 21999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-fort-1",
@@ -2466,6 +2426,10 @@
         {
           "date": "2026-10-28",
           "price": 21999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 21999
         }
       ]
     },
@@ -2480,7 +2444,7 @@
           "store": "GBN Store",
           "price": 13999,
           "url": "https://gbnstore.com/product/blackview-wave-10c",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2493,7 +2457,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 13999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-wave-10c",
@@ -2521,6 +2485,10 @@
         {
           "date": "2026-10-28",
           "price": 13999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 13999
         }
       ]
     },
@@ -2535,7 +2503,7 @@
           "store": "GBN Store",
           "price": 9999,
           "url": "https://gbnstore.com/product/blackview-wave-2c",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2548,7 +2516,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 9999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-wave-2c",
@@ -2576,6 +2544,10 @@
         {
           "date": "2026-10-28",
           "price": 9999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 9999
         }
       ]
     },
@@ -2590,7 +2562,7 @@
           "store": "GBN Store",
           "price": 16999,
           "url": "https://gbnstore.com/product/blackview-wave-7c",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2603,7 +2575,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 16999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-wave-7c",
@@ -2630,6 +2602,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 16999
+        },
+        {
+          "date": "2026-10-29",
           "price": 16999
         }
       ]
@@ -2930,7 +2906,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/honor-600",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2943,7 +2919,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-600",
@@ -2971,6 +2947,10 @@
         {
           "date": "2026-10-28",
           "price": 89999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 89999
         }
       ]
     },
@@ -2985,7 +2965,7 @@
           "store": "GBN Store",
           "price": 59999,
           "url": "https://gbnstore.com/product/honor-600-lite",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -2998,7 +2978,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 59999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-600-lite",
@@ -3025,6 +3005,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 59999
+        },
+        {
+          "date": "2026-10-29",
           "price": 59999
         }
       ]
@@ -3085,7 +3069,7 @@
           "store": "GBN Store",
           "price": 129999,
           "url": "https://gbnstore.com/product/honor-600-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -3098,7 +3082,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 129999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-600-pro",
@@ -3125,6 +3109,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 129999
+        },
+        {
+          "date": "2026-10-29",
           "price": 129999
         }
       ]
@@ -3188,7 +3176,7 @@
           "store": "GBN Store",
           "price": 179999,
           "url": "https://gbnstore.com/product/honor-magic-8-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -3201,7 +3189,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 179999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-magic-8-pro",
@@ -3229,6 +3217,10 @@
         {
           "date": "2026-10-28",
           "price": 179999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 179999
         }
       ]
     },
@@ -3243,7 +3235,7 @@
           "store": "GBN Store",
           "price": 266999,
           "url": "https://gbnstore.com/product/honor-magic-v5",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -3256,7 +3248,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 266999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-magic-v5",
@@ -3283,6 +3275,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 266999
+        },
+        {
+          "date": "2026-10-29",
           "price": 266999
         }
       ]
@@ -3345,7 +3341,7 @@
           "store": "GBN Store",
           "price": 20999,
           "url": "https://gbnstore.com/product/honor-play10",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -3358,7 +3354,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 20999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-play10",
@@ -3385,6 +3381,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 20999
+        },
+        {
+          "date": "2026-10-29",
           "price": 20999
         }
       ]
@@ -3494,7 +3494,7 @@
           "store": "GBN Store",
           "price": 22499,
           "url": "https://gbnstore.com/product/honor-x5c-plus",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -3507,7 +3507,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 22499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-x5c-plus",
@@ -3535,6 +3535,10 @@
         {
           "date": "2026-10-28",
           "price": 22499
+        },
+        {
+          "date": "2026-10-29",
+          "price": 22499
         }
       ]
     },
@@ -3549,7 +3553,7 @@
           "store": "GBN Store",
           "price": 28999,
           "url": "https://gbnstore.com/product/honor-x5d-plus",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -3562,7 +3566,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 28999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-x5d-plus",
@@ -3589,6 +3593,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 28999
+        },
+        {
+          "date": "2026-10-29",
           "price": 28999
         }
       ]
@@ -3930,7 +3938,7 @@
           "store": "GBN Store",
           "price": 65999,
           "url": "https://gbnstore.com/product/infinixgt-30-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -3943,7 +3951,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 65999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinixgt-30-pro",
@@ -3970,6 +3978,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 65999
+        },
+        {
+          "date": "2026-10-29",
           "price": 65999
         }
       ]
@@ -4077,7 +4089,7 @@
           "store": "GBN Store",
           "price": 84999,
           "url": "https://gbnstore.com/product/infinix-gt-50-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -4090,7 +4102,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 84999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-gt-50-pro",
@@ -4117,6 +4129,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 84999
+        },
+        {
+          "date": "2026-10-29",
           "price": 84999
         }
       ]
@@ -4180,7 +4196,7 @@
           "store": "GBN Store",
           "price": 33999,
           "url": "https://gbnstore.com/product/infinix-hot-70",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -4193,7 +4209,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 33999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-hot-70",
@@ -4220,6 +4236,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 33999
+        },
+        {
+          "date": "2026-10-29",
           "price": 33999
         }
       ]
@@ -4321,7 +4341,7 @@
           "store": "GBN Store",
           "price": 52999,
           "url": "https://gbnstore.com/product/infinix-hot-70-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -4334,7 +4354,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 52999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-hot-70-pro",
@@ -4361,6 +4381,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 52999
+        },
+        {
+          "date": "2026-10-29",
           "price": 52999
         }
       ]
@@ -4468,7 +4492,7 @@
           "store": "GBN Store",
           "price": 54999,
           "url": "https://gbnstore.com/product/infinix-note-60",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -4481,7 +4505,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 54999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-note-60",
@@ -4508,6 +4532,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 54999
+        },
+        {
+          "date": "2026-10-29",
           "price": 54999
         }
       ]
@@ -4617,7 +4645,7 @@
           "store": "GBN Store",
           "price": 62999,
           "url": "https://gbnstore.com/product/infinix-note-60-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -4630,7 +4658,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 62999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-note-60-pro",
@@ -4658,6 +4686,10 @@
         {
           "date": "2026-10-28",
           "price": 62999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 62999
         }
       ]
     },
@@ -4672,7 +4704,7 @@
           "store": "GBN Store",
           "price": 41999,
           "url": "https://gbnstore.com/product/infinix-note-edge",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -4685,7 +4717,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 41999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-note-edge",
@@ -4712,6 +4744,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 41999
+        },
+        {
+          "date": "2026-10-29",
           "price": 41999
         }
       ]
@@ -4821,7 +4857,7 @@
           "store": "GBN Store",
           "price": 23999,
           "url": "https://gbnstore.com/product/infinix-smart-20",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -4834,7 +4870,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 23999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-smart-20",
@@ -4861,6 +4897,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 23999
+        },
+        {
+          "date": "2026-10-29",
           "price": 23999
         }
       ]
@@ -4972,7 +5012,7 @@
           "store": "GBN Store",
           "price": 66999,
           "url": "https://gbnstore.com/product/motorola-edge-70-fusion",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -4985,7 +5025,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 66999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-edge-70-fusion",
@@ -5012,6 +5052,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 66999
+        },
+        {
+          "date": "2026-10-29",
           "price": 66999
         }
       ]
@@ -5123,7 +5167,7 @@
           "store": "GBN Store",
           "price": 26499,
           "url": "https://gbnstore.com/product/motorola-moto-g06-power",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -5136,7 +5180,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 26499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-moto-g06-power",
@@ -5163,6 +5207,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 26499
+        },
+        {
+          "date": "2026-10-29",
           "price": 26499
         }
       ]
@@ -5370,7 +5418,7 @@
           "store": "GBN Store",
           "price": 37499,
           "url": "https://gbnstore.com/product/motorola-moto-g57-power",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -5383,7 +5431,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 37499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-moto-g57-power",
@@ -5411,6 +5459,10 @@
         {
           "date": "2026-10-28",
           "price": 37499
+        },
+        {
+          "date": "2026-10-29",
+          "price": 37499
         }
       ]
     },
@@ -5425,7 +5477,7 @@
           "store": "GBN Store",
           "price": 44999,
           "url": "https://gbnstore.com/product/motorola-g96-5g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -5438,7 +5490,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 44999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-g96-5g",
@@ -5466,6 +5518,10 @@
         {
           "date": "2026-10-28",
           "price": 44999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 44999
         }
       ]
     },
@@ -5480,7 +5536,7 @@
           "store": "GBN Store",
           "price": 69999,
           "url": "https://gbnstore.com/product/nothing-phone-4a",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -5527,7 +5583,7 @@
         "storage": "128GB 8GB RAM, 256GB 8GB RAM, 256GB 12GB RAM",
         "camera": "50 MP, f/1.9, 24mm (wide), 1/1.57\", 1.0µm, PDAF, OIS"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "body": "164 x 77.6 x 8.6 mm (6.46 x 3.06 x 0.34 in)",
       "weight": "204.5 g (7.23 oz)",
       "build": "Glass front (Gorilla Glass 7i), plastic frame, glass back",
@@ -5581,6 +5637,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 69999
+        },
+        {
+          "date": "2026-10-29",
           "price": 69999
         }
       ]
@@ -5787,7 +5847,7 @@
           "store": "GBN Store",
           "price": 43999,
           "url": "https://gbnstore.com/product/nothing-phone-3a-lite",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -5800,7 +5860,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 43999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nothing-phone-3a-lite",
@@ -5828,6 +5888,10 @@
         {
           "date": "2026-10-28",
           "price": 43999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 43999
         }
       ]
     },
@@ -5842,7 +5906,7 @@
           "store": "GBN Store",
           "price": 99999,
           "url": "https://gbnstore.com/product/nothing-phone-4a-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -5855,7 +5919,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 99999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nothing-phone-4a-pro",
@@ -5882,6 +5946,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 99999
+        },
+        {
+          "date": "2026-10-29",
           "price": 99999
         }
       ]
@@ -5989,7 +6057,7 @@
           "store": "GBN Store",
           "price": 64999,
           "url": "https://gbnstore.com/product/nothing-phone-4b",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -6002,7 +6070,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 64999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nothing-phone-4b",
@@ -6030,6 +6098,10 @@
         {
           "date": "2026-10-28",
           "price": 64999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 64999
         }
       ]
     },
@@ -6044,7 +6116,7 @@
           "store": "GBN Store",
           "price": 40999,
           "url": "https://gbnstore.com/product/oppo-a6",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -6057,7 +6129,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 40999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-a6",
@@ -6085,6 +6157,10 @@
         {
           "date": "2026-10-28",
           "price": 40999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 40999
         }
       ]
     },
@@ -6099,7 +6175,7 @@
           "store": "GBN Store",
           "price": 51999,
           "url": "https://gbnstore.com/product/oppo-a6-pro-4g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -6112,7 +6188,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 51999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-a6-pro-4g",
@@ -6140,6 +6216,10 @@
         {
           "date": "2026-10-28",
           "price": 51999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 51999
         }
       ]
     },
@@ -6154,7 +6234,7 @@
           "store": "GBN Store",
           "price": 56999,
           "url": "https://gbnstore.com/product/oppo-a6s-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -6167,7 +6247,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 56999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-a6s-pro",
@@ -6195,6 +6275,10 @@
         {
           "date": "2026-10-28",
           "price": 56999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 56999
         }
       ]
     },
@@ -6209,7 +6293,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/oppo-reno-15",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -6222,7 +6306,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-15",
@@ -6250,6 +6334,10 @@
         {
           "date": "2026-10-28",
           "price": 89999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 89999
         }
       ]
     },
@@ -6264,7 +6352,7 @@
           "store": "GBN Store",
           "price": 69999,
           "url": "https://gbnstore.com/product/oppo-reno-15f",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -6277,7 +6365,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 69999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-15f",
@@ -6305,6 +6393,10 @@
         {
           "date": "2026-10-28",
           "price": 69999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 69999
         }
       ]
     },
@@ -6319,7 +6411,7 @@
           "store": "GBN Store",
           "price": 109999,
           "url": "https://gbnstore.com/product/oppo-reno-16",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -6332,7 +6424,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 109999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-16",
@@ -6360,6 +6452,10 @@
         {
           "date": "2026-10-28",
           "price": 109999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 109999
         }
       ]
     },
@@ -6374,7 +6470,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/oppo-reno-16f",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -6387,7 +6483,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-16f",
@@ -6414,6 +6510,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 89999
+        },
+        {
+          "date": "2026-10-29",
           "price": 89999
         }
       ]
@@ -6760,7 +6860,7 @@
           "store": "GBN Store",
           "price": 98499,
           "url": "https://gbnstore.com/product/oneplus-15r",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -6773,7 +6873,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 98499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oneplus-15r",
@@ -6800,6 +6900,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 98499
+        },
+        {
+          "date": "2026-10-29",
           "price": 98499
         }
       ]
@@ -6999,7 +7103,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/oneplus-nord-6",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -7012,7 +7116,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oneplus-nord-6",
@@ -7039,6 +7143,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 89999
+        },
+        {
+          "date": "2026-10-29",
           "price": 89999
         }
       ]
@@ -7235,7 +7343,7 @@
           "store": "GBN Store",
           "price": 58999,
           "url": "https://gbnstore.com/product/poco-m8-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -7248,7 +7356,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 58999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-m8-pro",
@@ -7275,6 +7383,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 58999
+        },
+        {
+          "date": "2026-10-29",
           "price": 58999
         }
       ]
@@ -7660,7 +7772,7 @@
           "store": "GBN Store",
           "price": 104999,
           "url": "https://gbnstore.com/product/poco-f8-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         },
         {
@@ -7687,7 +7799,7 @@
         "chipset": "Snapdragon 8 Elite Black The Flagship Killer is Back: E",
         "camera": "50MP"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 104999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-f8-pro",
@@ -7715,6 +7827,10 @@
         {
           "date": "2026-10-28",
           "price": 104999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 104999
         }
       ]
     },
@@ -7729,7 +7845,7 @@
           "store": "GBN Store",
           "price": 76999,
           "url": "https://gbnstore.com/product/poco-x8-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -7742,7 +7858,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 76999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-x8-pro",
@@ -7770,6 +7886,10 @@
         {
           "date": "2026-10-28",
           "price": 76999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 76999
         }
       ]
     },
@@ -7784,7 +7904,7 @@
           "store": "GBN Store",
           "price": 94999,
           "url": "https://gbnstore.com/product/poco-x8-pro-max",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -7797,7 +7917,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 94999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-x8-pro-max",
@@ -7825,6 +7945,10 @@
         {
           "date": "2026-10-28",
           "price": 94999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 94999
         }
       ]
     },
@@ -7839,7 +7963,7 @@
           "store": "GBN Store",
           "price": 66999,
           "url": "https://gbnstore.com/product/realme-15-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -7852,7 +7976,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 66999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-15-pro",
@@ -7879,6 +8003,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 66999
+        },
+        {
+          "date": "2026-10-29",
           "price": 66999
         }
       ]
@@ -8082,7 +8210,7 @@
           "store": "GBN Store",
           "price": 39999,
           "url": "https://gbnstore.com/product/realme-c85",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -8095,7 +8223,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 39999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-c85",
@@ -8123,6 +8251,10 @@
         {
           "date": "2026-10-28",
           "price": 39999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 39999
         }
       ]
     },
@@ -8137,7 +8269,7 @@
           "store": "GBN Store",
           "price": 39999,
           "url": "https://gbnstore.com/product/realme-c85-5g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -8150,7 +8282,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 39999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-c85-5g",
@@ -8177,6 +8309,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 39999
+        },
+        {
+          "date": "2026-10-29",
           "price": 39999
         }
       ]
@@ -8286,7 +8422,7 @@
           "store": "GBN Store",
           "price": 36999,
           "url": "https://gbnstore.com/product/realme-c85-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -8299,7 +8435,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 36999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-c85-pro",
@@ -8327,6 +8463,10 @@
         {
           "date": "2026-10-28",
           "price": 36999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 36999
         }
       ]
     },
@@ -8341,7 +8481,7 @@
           "store": "GBN Store",
           "price": 149999,
           "url": "https://gbnstore.com/product/realme-gt-8-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -8354,7 +8494,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 149999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-gt-8-pro",
@@ -8381,6 +8521,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 149999
+        },
+        {
+          "date": "2026-10-29",
           "price": 149999
         }
       ]
@@ -8442,7 +8586,7 @@
           "store": "GBN Store",
           "price": 16999,
           "url": "https://gbnstore.com/product/realme-note-60x",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -8455,7 +8599,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 16999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-note-60x",
@@ -8483,6 +8627,10 @@
         {
           "date": "2026-10-28",
           "price": 16999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 16999
         }
       ]
     },
@@ -8497,7 +8645,7 @@
           "store": "GBN Store",
           "price": 16999,
           "url": "https://gbnstore.com/product/realme-note-70",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -8510,7 +8658,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 16999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-note-70",
@@ -8538,6 +8686,10 @@
         {
           "date": "2026-10-28",
           "price": 16999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 16999
         }
       ]
     },
@@ -8552,7 +8704,7 @@
           "store": "GBN Store",
           "price": 23999,
           "url": "https://gbnstore.com/product/realme-note-80",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -8565,7 +8717,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 23999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-note-80",
@@ -8592,6 +8744,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 23999
+        },
+        {
+          "date": "2026-10-29",
           "price": 23999
         }
       ]
@@ -8653,7 +8809,7 @@
           "store": "GBN Store",
           "price": 44999,
           "url": "https://gbnstore.com/product/realme-p3",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -8666,7 +8822,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 44999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-p3",
@@ -8694,6 +8850,10 @@
         {
           "date": "2026-10-28",
           "price": 44999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 44999
         }
       ]
     },
@@ -8708,7 +8868,7 @@
           "store": "GBN Store",
           "price": 65999,
           "url": "https://gbnstore.com/product/realme-p3-ultra",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -8721,7 +8881,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 65999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-p3-ultra",
@@ -8749,6 +8909,10 @@
         {
           "date": "2026-10-28",
           "price": 65999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 65999
         }
       ]
     },
@@ -8763,7 +8927,7 @@
           "store": "GBN Store",
           "price": 76999,
           "url": "https://gbnstore.com/product/realme-p4-power",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -8776,7 +8940,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 76999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-p4-power",
@@ -8803,6 +8967,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 76999
+        },
+        {
+          "date": "2026-10-29",
           "price": 76999
         }
       ]
@@ -9098,7 +9266,7 @@
           "store": "GBN Store",
           "price": 27999,
           "url": "https://gbnstore.com/product/redmi-17-4g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -9111,7 +9279,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 27999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-17-4g",
@@ -9139,6 +9307,10 @@
         {
           "date": "2026-10-28",
           "price": 27999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 27999
         }
       ]
     },
@@ -9153,7 +9325,7 @@
           "store": "GBN Store",
           "price": 33999,
           "url": "https://gbnstore.com/product/redmi-17-5g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -9166,7 +9338,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 33999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-17-5g",
@@ -9194,6 +9366,10 @@
         {
           "date": "2026-10-28",
           "price": 33999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 33999
         }
       ]
     },
@@ -9208,7 +9384,7 @@
           "store": "GBN Store",
           "price": 20499,
           "url": "https://gbnstore.com/product/redmi-a7-4g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -9221,7 +9397,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 20499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-a7-4g",
@@ -9249,6 +9425,10 @@
         {
           "date": "2026-10-28",
           "price": 20499
+        },
+        {
+          "date": "2026-10-29",
+          "price": 20499
         }
       ]
     },
@@ -9263,7 +9443,7 @@
           "store": "GBN Store",
           "price": 21499,
           "url": "https://gbnstore.com/product/redmi-a7-pro-4g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -9276,7 +9456,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 21499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-a7-pro-4g",
@@ -9303,6 +9483,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 21499
+        },
+        {
+          "date": "2026-10-29",
           "price": 21499
         }
       ]
@@ -9684,7 +9868,7 @@
           "store": "GBN Store",
           "price": 42999,
           "url": "https://gbnstore.com/product/redmi-note-17",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -9697,7 +9881,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 42999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17",
@@ -9724,6 +9908,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 42999
+        },
+        {
+          "date": "2026-10-29",
           "price": 42999
         }
       ]
@@ -9831,7 +10019,7 @@
           "store": "GBN Store",
           "price": 47999,
           "url": "https://gbnstore.com/product/redmi-note-17-5g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -9844,7 +10032,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 47999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17-5g",
@@ -9871,6 +10059,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 47999
+        },
+        {
+          "date": "2026-10-29",
           "price": 47999
         }
       ]
@@ -9982,7 +10174,7 @@
           "store": "GBN Store",
           "price": 57999,
           "url": "https://gbnstore.com/product/redmi-note-17-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -9995,7 +10187,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 57999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17-pro",
@@ -10022,6 +10214,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 57999
+        },
+        {
+          "date": "2026-10-29",
           "price": 57999
         }
       ]
@@ -10129,7 +10325,7 @@
           "store": "GBN Store",
           "price": 69999,
           "url": "https://gbnstore.com/product/redmi-note-17-pro-max",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -10142,7 +10338,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 69999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17-pro-max",
@@ -10169,6 +10365,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 69999
+        },
+        {
+          "date": "2026-10-29",
           "price": 69999
         }
       ]
@@ -10276,7 +10476,7 @@
           "store": "GBN Store",
           "price": 25499,
           "url": "https://gbnstore.com/product/samsung-galaxy-a07",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -10322,7 +10522,7 @@
         "storage": "64GB 4GB RAM, 128GB 4GB RAM, 128GB 6GB RAM, 256GB 8GB RAM",
         "camera": "50 MP, f/1.8, (wide), 1/2.76\", 0.64µm, PDAF"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "network": "GSM / HSPA / LTE",
       "body": "167.4 x 77.4 x 7.6 mm (6.59 x 3.05 x 0.30 in)",
       "weight": "184 g (6.49 oz)",
@@ -10375,6 +10575,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 25499
+        },
+        {
+          "date": "2026-10-29",
           "price": 25499
         }
       ]
@@ -10575,7 +10779,7 @@
           "store": "GBN Store",
           "price": 44999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a17-5g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -10588,7 +10792,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 44999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-a17-5g",
@@ -10615,6 +10819,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 44999
+        },
+        {
+          "date": "2026-10-29",
           "price": 44999
         }
       ]
@@ -11059,7 +11267,7 @@
           "store": "GBN Store",
           "price": 51999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a27-5g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -11072,7 +11280,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 51999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-a27-5g",
@@ -11099,6 +11307,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 51999
+        },
+        {
+          "date": "2026-10-29",
           "price": 51999
         }
       ]
@@ -11208,7 +11420,7 @@
           "store": "GBN Store",
           "price": 74999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a37-5g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -11258,7 +11470,7 @@
         "storage": "128GB 6GB RAM, 128GB 8GB RAM, 256GB 8GB RAM, 256GB 12GB RAM",
         "camera": "50 MP, f/1.8, (wide), 1/1.56\", 1.0µm, PDAF, OIS"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "network": "GSM / HSPA / LTE / 5G",
       "launch": "2026, March 25",
       "status": "Available. Released 2026, April 9",
@@ -11315,6 +11527,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 74999
+        },
+        {
+          "date": "2026-10-29",
           "price": 74999
         }
       ]
@@ -11678,7 +11894,7 @@
           "store": "GBN Store",
           "price": 96999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a57-5g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -11691,7 +11907,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 96999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-a57-5g",
@@ -11718,6 +11934,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 96999
+        },
+        {
+          "date": "2026-10-29",
           "price": 96999
         }
       ]
@@ -11823,7 +12043,7 @@
           "store": "GBN Store",
           "price": 43999,
           "url": "https://gbnstore.com/product/samsung-galaxy-m17",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -11836,7 +12056,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 43999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-m17",
@@ -11863,6 +12083,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 43999
+        },
+        {
+          "date": "2026-10-29",
           "price": 43999
         }
       ]
@@ -11926,14 +12150,14 @@
           "store": "GBN Store",
           "price": 139999,
           "url": "https://gbnstore.com/product/samsung-galaxy-s26",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         },
         {
           "store": "Neo Store",
           "price": 139999,
           "url": "https://www.neostore.com.np/product/samsung-galaxy-s26-",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -11979,7 +12203,7 @@
         "storage": "256GB 12GB RAM,",
         "camera": "50 MP, f/1.8, 24mm (wide), 1/1.56\", 1.0µm, dual pixel PDAF, OIS"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
       "body": "149.6 x 71.7 x 7.2 mm (5.89 x 2.82 x 0.28 in)",
       "weight": "167 g (5.89 oz)",
@@ -12032,6 +12256,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 139999
+        },
+        {
+          "date": "2026-10-29",
           "price": 139999
         }
       ]
@@ -12095,7 +12323,7 @@
           "store": "GBN Store",
           "price": 124999,
           "url": "https://gbnstore.com/product/samsung-galaxy-s26-fe",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -12108,7 +12336,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 124999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-s26-fe",
@@ -12135,6 +12363,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 124999
+        },
+        {
+          "date": "2026-10-29",
           "price": 124999
         }
       ]
@@ -12196,7 +12428,7 @@
           "store": "Neo Store",
           "price": 182999,
           "url": "https://www.neostore.com.np/product/samsung-galaxy-s26-plus",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -12243,7 +12475,7 @@
         "storage": "256GB 12GB RAM,",
         "camera": "50 MP, f/1.8, 24mm (wide), 1/1.56\", 1.0µm, dual pixel PDAF, OIS"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
       "launch": "2026, February 25",
       "body": "158.4 x 75.8 x 7.3 mm (6.24 x 2.98 x 0.29 in)",
@@ -12297,6 +12529,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 182999
+        },
+        {
+          "date": "2026-10-29",
           "price": 182999
         }
       ]
@@ -12400,7 +12636,7 @@
           "store": "GBN Store",
           "price": 224999,
           "url": "https://gbnstore.com/product/samsung-galaxy-s26-ultra",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -12448,7 +12684,7 @@
         "storage": "256GB 12GB RAM, 512GB 12GB RAM, 1TB 16GB RAM",
         "camera": "200 MP, f/1.4, 24mm (wide), 1/1.3\", 0.6µm, multi-directional PDAF, OIS"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "now nudge": "Pause",
       "now brief": "understand your habits better than before.",
       "network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
@@ -12503,6 +12739,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 224999
+        },
+        {
+          "date": "2026-10-29",
           "price": 224999
         }
       ]
@@ -12656,7 +12896,7 @@
           "store": "GBN Store",
           "price": 194999,
           "url": "https://gbnstore.com/product/samsung-galaxy-z-flip-8",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -12669,7 +12909,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 194999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-z-flip-8",
@@ -12696,6 +12936,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 194999
+        },
+        {
+          "date": "2026-10-29",
           "price": 194999
         }
       ]
@@ -12849,7 +13093,7 @@
           "store": "GBN Store",
           "price": 279999,
           "url": "https://gbnstore.com/product/samsung-galaxy-z-fold-7",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -12862,7 +13106,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 279999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-z-fold-7",
@@ -12890,6 +13134,10 @@
         {
           "date": "2026-10-28",
           "price": 279999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 279999
         }
       ]
     },
@@ -12904,7 +13152,7 @@
           "store": "GBN Store",
           "price": 274999,
           "url": "https://gbnstore.com/product/samsung-galaxy-z-fold-8",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -12917,7 +13165,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 274999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-z-fold-8",
@@ -12945,6 +13193,10 @@
         {
           "date": "2026-10-28",
           "price": 274999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 274999
         }
       ]
     },
@@ -12956,7 +13208,7 @@
       "variant": "",
       "prices": [],
       "image": null,
-      "description": "Overview Find the official mobile price in Nepal with updated MRP listings of all available smartphones. These are official prices set by authorised distributors. You can buy these models from the GBN Store. Mobile Brands in Nepal In Nepal, people can buy phones from every brand. The smartphone market in Nepal wide selection of options. People can buy the phone they like. They can pick a budget phone or a very expensive phone. Nepal's smartphone market has standard budget phones and expensive premium phones. People in Nepal can buy phones from Samsung , Apple , Honor , OnePlus , Xiaomi , Vivo , Realme , Infinix , Poco , Motorola , ZTE , Ai +, Tecno, and Nothing . These phones are sold by our GBN Store with various additional services. These days, smartphones have lots of options. This makes consumers choose between a product that is made for them according to their needs and budgets. Some brands provide excellent value for money, and others focus on giving a premium experience to their users. A normal, functional phone typically focuses on reliable performance, a decent camera, and enough battery and storage to handle everyday tasks without extra frills. Premium features, on the other hand, include refined design, advanced camera systems, high-end gaming performance, long battery life, and larger storage capacities. Likewise, many phones today focus on providing built-in AI features. In today's market, with competition at an extreme level, we see phone brands introducing better hardware, software, and exclusive features at unbelievable prices to stay at the top. Thus, even if you are a student looking for a budget phone, a gamer looking for peak performance, or a photographer looking for a camera with great features, rest assured cause Nepal's smartphone market has a wide variety of phones to offer, and understanding each brand would help make a smarter choice. Here is a list of the market share of smartphones in Nepal as of May 2026: Apple: Apple iPhones were introduced in the Nepali market in December 2014. Generation Next Communication (GenXT) was officially introduced as the distributor in Nepal. iPhones were introduced to Nepal after Samsung, so consumers perceive iPhones as a stronger status-symbol brand than a value brand. Despite its high price, people love it, and it holds the highest market share at 24.98 per cent. Xiaomi: Xiaomi came into the Nepalese market in October 2018, with Ramesh Corp’s Tele becoming the official partner. Later, Teletalk was introduced to become a second distributor to break the price monopoly. Today, Xiaomi has a 19.49 percent market share, making it a go-to brand for budget and mid-range phone buyers. Samsung: Samsung entered Nepal in the year 2001 through IMS Group as an official distributor. Mobile phone usage surged after Ncell, formerly known as Mero Mobile, launched. Samsung, being the early mover,r had an advantage, becoming the “safe choice” brand for Nepal, providing phones in every price segment. Fast forward to today, Samsung has a default recommendation for first-time phone buyers and has a 17.73 percent market share in the market. Realme: Realme had a great start when it was introduced to Nepal’s market in 2019 through Jagadamba Mobiles. It had a bad reputation for overpricing in the beginning. The reputation once lost was regained when realme India partnered with Shaker Group in 2021. Today, realme has a 6.19 percent market share in Nepal. Young people and students really like realme because of its design and specs. Vivo: Vivo entered the Nepali market a bit later than Samsung and Xiaomi and built its identity around camera-focused marketing. It particularly advertised its selfie cameras (V-series). It's perceived as a solid mid-range choice, especially for buyers who prioritise photography over raw specs, though it competes closely with Xiaomi and Realme for the same budget-conscious crowd with 5.58 percent market share. Different types of mobile phones available in Nepal In Nepal, mobile phones come in various types that are suitable for people in accordance with their needs, budget, and lifestyle. Whether you need a simple phone for communication or a high-performance phone for demanding tasks, we have options for you. Feature Phones – They are basic phones for calling, texting, FM radio, and long battery life. These phones are valued for their durability and long-lasting battery backups. They remain a popular choice for elderly people and as a backup phone for others. Popular examples in Nepal include the Nokia 105 and Nokia 3310. Entry-Level Smartphones – These are Affordable Android phones for everyday use, typically priced between NPR 20,000 and 25,000. They can handle basic tasks such as handling calls, messaging, social media, and light browsing without issues. Popular models in this category include Redmi 15C and Realme C-series. Mid-Range Smartphones – These smartphones provide balanced performance, camera, and battery for most users, and they are usually priced between NPR 25,000 - 50,0000. This is currently the most competitive segment in Nepal, with brands packing in AMOLED displays and 5G support. Popular picks in this segment include the Redmi Note 15, Samsung Galaxy A17 5G, and Pova 6. Flagship Smartphones – This category contains premium phones with top-tier performance, camera, and displays, which are priced above NPR 100,000. They run on the latest processors such as the Qualcomm Snapdragon 8 Elite Gen 5 and Apple A19 or A19 Pro, with software updates for years. Leading examples of Flagship Smartphones in Nepal include the Samsung Galaxy S26 Ultra, iPhone 17 Pro Max, and OnePlus 15. Gaming Smartphones – They are smartphones packed with powerful processors, high-refresh-rate displays, and advanced cooling for gamers. These phones also include extra built-in features such as shoulder trigger buttons. Esports games such as PUBG, Mobile Legends, and Call of Duty run smoothly on them. In Nepal, gaming-focused buyers usually go for iPhones and Samsung Galaxy S Series, alongside the dedicated gaming brands like Nubia's Red Magic series. Camera-Centric Smartphones – Camera-centric smartphones focus on high-quality photography and videography over other specs. Specifications such as Larger Camers Sensors, telephoto lenses, and 4K resolution video recording make them stand out. The Vivo X300 Pro, with its Zeiss-tuned optics and 200MP periscope lens, is a standout example in Nepal, and iPhones are also widely favoured for their reliable video stabilisation. Foldable Smartphones – They are Phones with folding or flip displays for enhanced portability and multitasking. Such phones offer a wide screen that offers more room for productivity while still staying compact in our pockets. The Samsung Galaxy Z Fold series remains the dominant foldable option available in Nepal. 5G Smartphones – Even though Nepal hasn't yet introduced 5G networks in Nepal, still Smartphones that support fifth-generation mobile networks for faster internet speeds are commonly seen nowadays in Nepal’s market. Owning such a phone may seem advantageous as Nepal's telecom infrastructure continues to expand, and we may see 5G networks soon. Rugged Smartphones – They are phones built to withstand drops, water, dust, and harsh environments, often built with IP68/IP69 ratings and reinforced frames. In such phones, durability matters more than slim designs and cameras. These phones are usually preferred by outdoor workers, trekkers, the army, or police officers. Brands like Blackview, Cubot, Oscal, and Ulefone offer dedicated rugged models available in Nepal. Used/Refurbished Smartphones – Pre-owned devices sold at lower prices, often flagship models from previous years. Budget-conscious buyers can access premium features like better cameras and build quality at a fraction of the original cost. This remains a popular option in Nepal, with refurbished iPhones and older Samsung Galaxy models commonly sold through local retailers. Before purchasing, buyers should verify the phone's condition, battery health, and warranty status. Mobile Price in Nepal - Updated 2026 Here is the list of updated mobile prices in Nepal as of now. Samsung Product price in Nepal Product Name Price in Nepal Samsung Galaxy A07 NPR 25,499 (4+64 GB) NPR 29,499 (4+128 GB) NPR 33,499 (6+128 GB) Samsung Galaxy A07s NPR 30,499 (4+64 GB) Samsung Galaxy M17 5G NPR 43,999 (6+128 GB) Samsung Galaxy A17 5G NPR 44,999 (6+128 GB) NPR 48,999 (8+128 GB) NPR 56,999 (8+256 GB) Samsung Galaxy A27 5G NPR 51,999 (6+128 GB) NPR 65,999 (8+256 GB) Samsung Galaxy A37 5G NPR 74,999 (8+128 GB) NPR 86,999 (8+256 GB) NPR 96,999 (12+256 GB) Samsung Galaxy A57 5G NPR 96,999 (8+256 GB) NPR 1,07,999 (12+256 GB) Samsung Galaxy S26 FE NPR 1,24,999 (8+256 GB) Samsung Galaxy S26 NPR 1,39,999 (12+256 GB) Samsung Galaxy Z Flip7 NPR 1,54,999 (12+256 GB) Samsung Galaxy S26+ NPR 1,82,999 (12+256 GB) Samsung Galaxy Z Flip 8 NPR 1,94,999 (12+256 GB) Samsung Galaxy S26 Ultra NPR 2,24,999 (12+256 GB) NPR 2,59,999 (12+512 GB) NPR 2,93,999 (16GB+1TB) Samsung Galaxy Z Fold 8 NPR 2,74,999 (12+256 GB) Samsung Galaxy Z Fold 7 NPR 2,79,999 (12+256 GB) Samsung Galaxy Z Fold 8 Ultra NPR 2,99,999 (12+256 GB) NPR 3,39,999 (12+512 GB) Why Samsung? Samsung is known to make phones that last long-term with software updates. They are also known for having widespread service centres all across Nepal, providing top-notch service. This combination of trust, service support, and overall quality makes Samsung one of the most dependable choices for buyers. Apple Iphone Product price in Nepal Product Name Price in Nepal iPhone 15 NPR 1,27,499 (128GB) iPhone 17e NPR 1,32,499 (8+256 GB) NPR 1,75,098 (8+512 GB) iPhone 16 NPR 1,46,599 (8+128 GB) iPhone 17 NPR 1,73,499 (8+256 GB) NPR 2,15,699 (8+512 GB) iPhone Air NPR 1,90,699 (12+256 GB) NPR 2,32,899 (12+512 GB) NPR 2,75,099 (12GB+1TB) iPhone 17 Pro NPR 2,21,299 (12+256 GB) NPR 2,63,599 (12+512 GB) NPR 3,05,699 (12GB+1TB) iPhone 17 Pro Max NPR 2,42,499 (12+256 GB) NPR 2,84,599 (12+512 GB) NPR 3,27,099 (12GB+1TB) NPR 4,11,399 (12GB+2TB) iPhone 18 Pro NPR 2,59,900 (12+256 GB) NPR 3,01,900 (12+512 GB) NPR 3,86,900 (12GB+1TB) NPR 5,13,900 (12GB+2TB) iPhone 18 Pro Max NPR 2,79,900 (12+256 GB) NPR 3,22,900 (12+512 GB) NPR 4,07,900 (12GB+1TB) NPR 5,34,900 (12GB+2TB) Why Apple iPhones? People often choose Apple iPhones for their seamless and adaptable ecosystem. They are also famous for their camera and video features, which are the best assets for content creators and people who want a premium phone experience. Xiaomi Product price in Nepal Product Name Price in Nepal Redmi A7 4G NPR 20,499 (3+64 GB) Redmi A7 Pro 4G NPR 21,499 (4+64 GB) NPR 23,999 (4+128 GB) Redmi 17 4G NPR 27,999 (4+128 GB) NPR 33,999 (6+128 GB) Redmi 17 5G NPR 33,999 (4+128 GB) NPR 37,999 (4+256 GB) NPR 41,999 (6+256 GB) Redmi Note 17 4G NPR 42,999 (6+128 GB) NPR 47,999 (8+256 GB) Redmi Note 17 5G NPR 47,999 (6+128 GB) NPR 52,999 (8+256 GB) Redmi Note 17 Pro NPR 57,999 (8+256 GB) NPR 64,999 (12+256 GB) Redmi Note 17 Pro Max NPR 69,999 (8+256 GB) NPR 79,999 (12+256 GB) Xiaomi 17T NPR 92,999 (12+256 GB) NPR 99,999 (12+512 GB) Xiaomi 17 Ultra NPR 2,00,000 (16+512 GB) Why Xiaomi? Xiaomi is mostly renowned for its powerful, optimised phones at relevant prices and a diverse range of products for every budget segment. The brand provides strong value-for-money products. However, some users complain about the bloatware that comes with the phone software. VIVO Product price in Nepal Product Name Price in Nepal Vivo Y05e NPR 19,999 (4+64 GB) Vivo Y05 NPR 21,999 (4+64 GB) NPR 24,999 (4+128 GB) Vivo Y11d NPR 27,999 (4+128 GB) NPR 33,999 (6+128 GB) Vivo Y21 5G NPR 40,999 (6+128 GB) Vivo Y500 NPR 54,999 (8+128 GB) NPR 61,999 (8+256 GB) Vivo V70 FE NPR 62,999 (8+256 GB) NPR 72,999 (12+256 GB) Vivo V80 Lite NPR 63,999 (8+128 GB) NPR 73,999 (8+256 GB) Vivo V70 NPR 84,999 (8+256 GB) NPR 1,02,999 (12+256 GB) NPR 1,22,999 (12+512 GB) Vivo X300 Pro NPR 1,99,999 (16+512 GB) Why VIVO? VIVO stands out from its competitors for its innovative camera and sleek design, with the Vivo X300 Pro serving as a great example. The brand also emphasises premium build quality alongside an increasingly polished and improved UI that users love. HONOR Product price in Nepal Product Name Price in Nepal HONOR CHOICE T10 NPR 16,499 (3+32 GB) NPR 19,499 (4+64 GB) Honor X5c NPR 20,499 (4+64 GB) Honor Play 10 NPR 20,999 (3+64 GB) NPR 22,999 (4+128 GB) Honor X5c Plus NPR 22,499 (4+128 GB) Honor X5d NPR 25,499 (4+64 GB) Honor X5d Plus NPR 28,999 (4+128 GB) Honor X6d NPR 29,999 (4+128 GB) Honor X6e NPR 31,999 (4+128 GB) Honor X8d NPR 39,999 (8+128 GB) NPR 43,999 (8+256 GB) Honor X7e NPR 39,999 (6+128 GB) Honor X9d NPR 54,999 (8+256 GB) NPR 59,999 (12+256 GB) Honor 600 Lite NPR 59,999 (8+256 GB) Honor 600 NPR 84,999 (8+256 GB) NPR 89,999 (12+256 GB) Honor 600 Pro NPR 1,29,999 (12+256 GB) NPR 1,49,999 (12+512 GB) Honor Magic 8 Pro NPR 1,79,999 (12+512 GB) Honor Magic V5 NPR 2,66,999 (16+512 GB) Why Honor? Honor is known for features that compete with flagship titles at an affordable price, along with stylish designs. The brand places a strong emphasis on its durability, ensuring its phones hold up well over time. These features make Honor a choice for consumers wanting flagship performance without hurting their pockets. OnePlus Product price in Nepal Product Name Price in Nepal OnePlus Nord CE5 NPR 59,999 (8+256 GB) OnePlus Nord CE6 NPR 74,999 (8+256 GB) OnePlus Nord 6 NPR 89,999 (8+256 GB) NPR 1,00,999 (12+512 GB) OnePlus 15R NPR 98,499 (12+256 GB) Why OnePlus? OnePlus stands for delivering flagship-level performance along with super-fast charging, ensuring users spend less time waiting and more time using their phone. The brand is also well-regarded for its clean, optimised UI, which keeps the software experience smooth and clutter-free. This makes OnePlus a favourite among users who value performance and a clean interface. Nothing Product price in Nepal Product Name Price in Nepal Nothing Phone 3a Lite NPR 43,999 (8+128 GB) NPR 48,999 (8+256 GB) Nothing Phone 4b NPR 64,999 (8+128 GB) Nothing Phone 4a NPR 69,999 (8+128 GB) NPR 79,999 (8+256 GB) NPR 83,999 (12+256 GB) Nothing Phone 4a Pro NPR 99,999 (12+256 GB) Why Nothing? Nothing has made its name through transparent phone designs and its unique Glyph LED interface, setting it apart visually from other brands. It also carries CMF as a sub-brand, extending its distinctive design philosophy to more affordable devices. On top of its design language, Nothing OS is widely regarded as one of the most loved user interfaces in the industry. POCO Product price in Nepal Product Name Price in Nepal POCO M8s NPR 39,999 (6+128 GB) NPR 46,999 (8+256 GB) POCO M8 Pro NPR 58,999 (8+256 GB) Poco X8 Pro NPR 69,999 (8+256 GB) NPR 76,999 (12+512 GB) Poco X8 Pro Max NPR 94,999 (12+256 GB) NPR 1,04,999 (12+512 GB) Poco F8 Pro NPR 1,04,999 (12+512 GB) Why Poco? Poco is known for delivering high performance at a budget-friendly price, making it a go-to option for gamers. The X series caters specifically to gaming enthusiasts, while the F series offers a meaningful upgrade for users seeking more power. That said, its software UI is often criticised as being subpar compared to the hardware it is being paired with. Realme Product price in Nepal Product Name Price in Nepal Realme Note 60x NPR 15,999 (3+64 GB) NPR 16,999 (4+64 GB) NPR 21,999 (4+128 GB) Realme Note 70 NPR 16,999 (4+64 GB) NPR 20,999 (4+128 GB) NPR 23,999 (6+128 GB) Realme Note 80 NPR 23,999 (4+64 GB) Realme C100i NPR 28,999 (4+128 GB) Realme C100x NPR 35,999 (6+256 GB) Realme C85 Pro NPR 36,999 (8+128 GB) Realme C85 5G NPR 39,999 (8+128 GB) NPR 44,999 (8+256 GB) Realme C85 NPR 39,999 (8+256 GB) Realme P3 NPR 44,999 (8+256 GB) Realme P3 Ultra NPR 65,999 (12+256 GB) Realme 15 Pro NPR 66,999 (12+256 GB) Realme P4 Power NPR 76,999 (12+256 GB) Realme GT 8 Pro NPR 1,49,999 (16+512 GB) Why Realme? Realme offers phones with features that are well-suited for students and gamers alike. The brand focuses on strong battery life and decent camera performance, making its phones practical for everyday use as well as extended gaming sessions. OPPO Product price in Nepal Product Name Price in Nepal OPPO A6c NPR 24,999 (4+64 GB) NPR 30,999 (4+128 GB) OPPO A6x NPR 27,999 (4+128 GB) NPR 32,499 (6+128 GB) NPR 34,999 (6+256 GB) OPPO A6 NPR 40,999 (8+128 GB) NPR 46,999 (8+256 GB) OPPO A6 Pro 4G NPR 51,999 (8+256 GB) OPPO A6s Pro NPR 56,999 (8+256 GB) OPPO Reno 15F NPR 63,998 (8+256 GB) NPR 69,999 (12+512 GB) OPPO Reno 15 NPR 89,999 (12+512 GB) OPPO Reno 16F NPR 89,999 (8+256 GB) OPPO Reno 16 NPR 1,09,999 (12GB + 256GB + Phone Only) NPR 1,19,999 (12GB + 256GB + With OPPO Bubble) Why Oppo? Oppo is known for its strong camera performance, especially in portrait and selfie photography, combined with sleek, lightweight designs. The brand has invested heavily in fast charging technology, often leading the industry in charging speeds. Oppo's ColorOS also brings a visually polished interface aimed at users who value style alongside function. Motorola Product price in Nepal Product Name Price in Nepal Motorola Moto G06 Power NPR 26,499 (4+64 GB) Motorola Moto G57 Power NPR 37,499 (8+128 GB) Motorola Moto G96 5G NPR 44,999 (8+256 GB) Motorola Edge 70 Fusion NPR 66,999 (12+256 GB) NPR 76,999 (12+512 GB) Why Motorola? Motorola is recognised for its clean, near-stock Android experience and consistent software updates, closely mirroring the Google Pixel approach. The brand's Edge series brings a premium feel with curved displays and solid build quality at competitive prices. Motorola also has a long-standing reputation for reliable hardware and a no-frills user experience. Infinix Model Variant Best Buying Price Infinix Hot 70 Pro 8GB + 128GB Rs. 52,999 8GB + 256GB Rs. 56,999 Infinix GT 50 Pro 12GB + 256GB Rs. 84,999 Infinix GT 30 Pro 8GB+256GB+Gaming Kit Rs. 65,999 12GB+256GB+Gaming Kit Rs. 69,999 Infinix Note 60 8GB+128GB Rs. 54,999 Infinix Note 60 Pro 8GB+256GB Rs. 62,999 Infinix Note Edge 8GB+128GB Rs. 41,999 Why Infinix? Infinix has carved a niche by offering surprisingly capable specs at low prices, especially in battery capacity and display quality. The brand's Note and Zero series often pack large batteries and fast charging that outperform rivals in the same price range. This makes Infinix a strong pick for budget buyers who prioritise battery life over brand prestige. ZTE Product price in Nepal Product Name Price in Nepal ZTE Nubia A36 NPR 18,999 (4+64 GB) ZTE Nubia A56 NPR 19,999 (4+128 GB) ZTE Nubia A57 NPR 21,999 (4+64 GB) NPR 24,499 (4+128 GB) ZTE Nubia A77 NPR 25,499 (4+128 GB) ZTE Nubia V80 Max NPR 29,499 (8+128 GB) NPR 31,499 (8+256 GB) ZTE Nubia V80 Design NPR 29,999 (8+128 GB) NPR 32,499 (8+256 GB) ZTE Nubia Neo 5 5G NPR 55,999 (8+256 GB) ZTE Nubia Neo 5 GT NPR 77,999 (12+256 GB) Why ZTE? ZTE is known for bringing advanced telecom expertise into smartphones, especially with strong network connectivity and innovative display technology. The Nubia and Red Magic lineups are built specifically for a peak gaming experience, backed by advanced cooling systems that maintain performance during long sessions. Ai+ Product price in Nepal Product Name Price in Nepal Ai+ Pulse 2 NPR 19,999 (4+64 GB) NPR 25,999 (6+128 GB) Ai+ Nova 2 5G NPR 22,999 (4+64 GB) NPR 28,499 (6+128 GB) Why AI+? AI+ , as the name suggests, focuses on integrating AI-powered features to make everyday smartphone tasks smarter and more efficient. The brand keeps its offerings budget-centric, making AI-driven functionality accessible to cost-conscious buyers. The Latest Price Trend of Smartphones in Nepal Mobile prices globally, including in Nepal, have increased significantly in 2026, largely due to the ongoing RAM and storage shortage. With rising demand from AI companies for large memory components, smartphone manufacturers are facing higher production costs, directly impacting retail prices. As a result, even budget smartphones that previously cost under NPR 15,000 are now crossing NPR 20,000. So far, the budget segment has been the most affected, but mid-range and even flagship phones have seen price hikes in recent months. So, if you are planning to buy a smartphone in 2026, it’s best to purchase only if it’s an immediate need. Otherwise, holding onto your current device for a bit longer could be a smarter decision as the market stabilises. Also Read: Best Phones Under Rs. 20,000 in Nepal (Updated 2026) Best Phones Under Rs. 30,000 in Nepal (Updated 2026) Best Mobile Phones Under Rs. 40,000 in Nepal [Updated 2026] Understanding Smartphone Price Segments in Nepal Budget Smartphones (< NPR 25,000) Budget smartphones in Nepal are usually priced between NPR 10,000 and 25,000 and are ideal for first-time smartphone buyers and casual users. They handle social media, light gaming, and everyday apps efficiently. Brands like Redmi, Samsung, Realme, Vivo, Honor, and Tecno dominate this segment. Keep in mind that the processors and cameras are decent but not great. Midrange Smartphones (NPR 25,000–55,000) Midrange devices offer better displays (OLED), faster processors, and improved cameras. This segment is ideal for users who want value-for-money smartphones with smooth performance. A wide range of options from Xiaomi, Samsung, Realme, Honor, and Vivo is available here, offering the right balance of price and specs. Midrange phones are generally phones under NPR 55000 but above NPR 25000. Premium Midrange Smartphones (NPR 55,000–100,000) These phones offer near-flagship performance at a lower cost. Expect premium designs paired with high-refresh-rate displays (typically 120Hz or higher) that make everyday scrolling and gaming feel noticeably smoother. Under the hood, they're powered by flagship-grade processors capable of handling demanding games and heavy multitasking with ease. Their cameras are also a step up, often featuring larger sensors, better low-light performance, and more refined image processing compared to budget and mid-range options. Ideal for users seeking a premium experience from phones under NPR 100,000. Flagship Smartphones (Above NPR 100,000) Flagship phones such as the Samsung Galaxy S series, Apple iPhones, OnePlus, Xiaomi, Vivo, and Honor deliver ultimate performance, superior cameras, and the best displays available. They come equipped with the latest processors, premium build materials, and extended software support, ensuring a smooth experience for years. This segment is for users who want the latest and greatest technology, regardless of price. It's best suited for professionals, content creators, and tech enthusiasts who prioritise the best possible experience over cost savings. Also Read: Which phone is best under 25000 in Nepal? - (2026) Best Phones Under Rs. 50,000 in Nepal (Updated 2026) How to Choose the Best Smartphone for You? Choosing the right brand for yourself seems complicated for many, but it isn't. The suitable phone is something that fits in your budget and meets the requirements you have. Firstly, noticing your requirements can help narrow down the options and find the phone that offers the best value for your money. You can follow these steps to choose the best phone: Set your budget - Deciding how much you're willing to spend narrows down the choices and makes the buying process far more manageable. Students can typically find everything they need in the NPR 20,000–35,000 range, while working professionals often prefer NPR 35,000–70,000 for better cameras and performance. Those wanting a premium or flagship experience should look above NPR 70,000. Once your budget is fixed within the right category, you can focus only on models that match your needs instead of getting overwhelmed by endless options. Choose the right display size and quality- if you enjoy high-quality streaming and gaming, an AMOLED display is worth prioritising for its sharper colours and better contrast. For basic day-to-day use, a compact display with an LCD panel works just as well and is usually more affordable. Refresh rate also matters here, as a 90Hz or 120Hz screen makes scrolling and gaming feel noticeably smoother. Check the processor and RAM - Today, a phone with a decent processor and 4–6GB of RAM is enough for daily use like calling, browsing, and social media. However, 8GB or more is better suited for gaming, multitasking, and heavier apps that demand more power. Choosing the right balance here ensures your phone stays smooth and doesn't lag even after a year or two of use. Consider camera performance - While selecting a camera, don't just look at higher megapixel counts, as sensor quality often matters more than raw numbers. Checking sample photos and real user reviews gives a much better sense of actual image quality. Features like optical image stabilisation and low-light performance can make a bigger difference than a flashy spec sheet. Look at battery life and charging speed - A 5,000mAh or larger battery paired with fast charging support means less time worrying about your phone dying mid-day. Fast charging is especially useful for those with busy schedules who can't afford to wait hours for a full charge. Battery efficiency also depends on the chipset, so a good processor paired with a large battery gives the best overall experience. Ensure enough storage - In today's time, a phone should ideally have at least 128GB of storage if you take lots of photos, videos, or install several apps. Higher storage options like 256GB are worth considering if you rarely delete files or rely heavily on offline media. Expandable storage via microSD is also a helpful bonus for those who need extra space without paying a premium. Check software updates and security - Choosing a phone that receives regular software and security updates helps keep your device safer from vulnerabilities. It also ensures your phone feels fresh and doesn't become outdated too quickly. Brands that commit to multiple years of updates, like Samsung and Apple, generally offer better long-term value. Consider 5G connectivity and other essential features - Even if 5G isn't fully available everywhere yet, choosing a 5G-ready phone future-proofs your purchase as network coverage continues to expand. Other essentials like NFC, a good in-display fingerprint scanner, and stereo speakers can also significantly improve daily usability. Paying attention to these small details often makes a bigger difference in user experience than headline specs alone. Grey vs Authorised Smartphones in Nepal There are two types of smartphones you can buy in Nepal: official (authorised) units and grey market units. Authorised smartphones are officially imported by brand-authorised distributors. With these, you get a valid warranty and, in some cases (especially on high-end phones), even breakage insurance, where the brand may cover screen replacement for a certain period. However, official phones are usually slightly more expensive due to taxes and proper distribution. On the other hand, grey market smartphones are not officially imported. These devices are generally cheaper, but they do not come with a VAT bill or official warranty. This means that if your phone has any issues, you cannot claim free service from authorised service centres, making it a riskier option. So, it ultimately depends on whether you are willing to take that risk for a lower price. How to Identify an Authorised Phone in Nepal You will receive an official VAT bill at the time of purchase. The box will include the MPIA (Mobile Phone Importers Association) hologram. You will also find the authorised distributor’s seal or label on the packaging. Where to Buy Smartphones at the Best Price in Nepal? There are three main ways to buy smartphones in Nepal: offline retail stores, official showrooms, and online platforms. GBN Store You can buy smartphones from the GBN Store. You can get coupon codes, vouchers, discounts, and freebies, making it one of the best platforms to purchase at a lower price. EMI on Smartphones in GBN Store Since the start of 2025, EMI on smartphones in Nepal has become extremely popular. There are two main reasons behind this growth. First, many brands now offer 0% interest EMI, especially on Android smartphones (while iPhones may have a small interest component). This means you don’t have to pay the full amount upfront, making smartphones more accessible. Second, the process is now much easier. You don’t need a credit card: just citizenship and a guarantor are enough. Because of this hassle-free process, EMI adoption has increased rapidly, with a large portion of mid-range, premium mid-range, and flagship phones now being purchased through EMI. In the GBN store, too, we have a hassle-free EMI service for any mobile phone available in the store. So, if you are looking to get a phone on EMI, do browse through the option. EMI has also changed buying behaviour. Instead of buying a mid-range phone, many users now upgrade to a premium mid-range or even a flagship device. For example, if your budget is NPR 40,000, you can pay around 40% as a down payment and purchase a NPR 1 lakh phone, then pay the remaining amount in monthly instalments (around NPR 5,000 per month for a year). If you have a stable income and can comfortably manage monthly payments, EMI is a smart way to get a better device without paying everything upfront. However, if your income is unstable, it’s better to avoid EMI traps and stick to a phone within your budget. Mobile Price in Nepal: Conclusion Mobile phone prices in Nepal vary by smartphone brand. Some brands may offer better smartphones with better specs at lower prices than others. One should explore models in similar price segments, conduct thorough market research, and then purchase a smartphone. For that, you can always count on our buying guides, articles, and YouTube videos to help you choose the best phone for you.",
+      "description": "Overview Find the official mobile price in Nepal with updated MRP listings of all available smartphones. These are official prices set by authorised distributors. You can buy these models from our GBN Store. Mobile Brands in Nepal In Nepal, people can buy phones from every brand. The smartphone market in Nepal wide selection of options. People can buy the phone they like. They can pick a budget phone or a very expensive phone. Nepal's smartphone market has standard budget phones and expensive premium phones. People in Nepal can buy phones from Samsung , Apple , Honor , OnePlus , Xiaomi , Vivo , Realme , Infinix , Poco , Motorola , ZTE , Ai +, Tecno, and Nothing . These phones are sold by our GBN Store with various additional services. These days, smartphones have lots of options. This makes consumers choose between a product that is made for them according to their needs and budgets. Some brands provide excellent value for money, and others focus on giving a premium experience to their users. A normal, functional phone typically focuses on reliable performance, a decent camera, and enough battery and storage to handle everyday tasks without extra frills. Premium features, on the other hand, include refined design, advanced camera systems, high-end gaming performance, long battery life, and larger storage capacities. Likewise, many phones today focus on providing built-in AI features. In today's market, with competition at an extreme level, we see phone brands introducing better hardware, software, and exclusive features at unbelievable prices to stay at the top. Thus, even if you are a student looking for a budget phone, a gamer looking for peak performance, or a photographer looking for a camera with great features, rest assured cause Nepal's smartphone market has a wide variety of phones to offer, and understanding each brand would help make a smarter choice. Here is a list of the market share of smartphones in Nepal as of May 2026: Apple: Apple iPhones were introduced in the Nepali market in December 2014. Generation Next Communication (GenXT) was officially introduced as the distributor in Nepal. iPhones were introduced to Nepal after Samsung, so consumers perceive iPhones as a stronger status-symbol brand than a value brand. Despite its high price, people love it, and it holds the highest market share at 24.98 per cent. Xiaomi: Xiaomi came into the Nepalese market in October 2018, with Ramesh Corp’s Tele becoming the official partner. Later, Teletalk was introduced to become a second distributor to break the price monopoly. Today, Xiaomi has a 19.49 percent market share, making it a go-to brand for budget and mid-range phone buyers. Samsung: Samsung entered Nepal in the year 2001 through IMS Group as an official distributor. Mobile phone usage surged after Ncell, formerly known as Mero Mobile, launched. Samsung, being the early mover,r had an advantage, becoming the “safe choice” brand for Nepal, providing phones in every price segment. Fast forward to today, Samsung has a default recommendation for first-time phone buyers and has a 17.73 percent market share in the market. Realme: Realme had a great start when it was introduced to Nepal’s market in 2019 through Jagadamba Mobiles. It had a bad reputation for overpricing in the beginning. The reputation once lost was regained when realme India partnered with Shaker Group in 2021. Today, realme has a 6.19 percent market share in Nepal. Young people and students really like realme because of its design and specs. Vivo: Vivo entered the Nepali market a bit later than Samsung and Xiaomi and built its identity around camera-focused marketing. It particularly advertised its selfie cameras (V-series). It's perceived as a solid mid-range choice, especially for buyers who prioritise photography over raw specs, though it competes closely with Xiaomi and Realme for the same budget-conscious crowd with 5.58 percent market share. Different types of mobile phones available in Nepal In Nepal, mobile phones come in various types that are suitable for people in accordance with their needs, budget, and lifestyle. Whether you need a simple phone for communication or a high-performance phone for demanding tasks, we have options for you. Feature Phones – They are basic phones for calling, texting, FM radio, and long battery life. These phones are valued for their durability and long-lasting battery backups. They remain a popular choice for elderly people and as a backup phone for others. Popular examples in Nepal include the Nokia 105 and Nokia 3310. Entry-Level Smartphones – These are Affordable Android phones for everyday use, typically priced between NPR 20,000 and 25,000. They can handle basic tasks such as handling calls, messaging, social media, and light browsing without issues. Popular models in this category include Redmi 15C and Realme C-series. Mid-Range Smartphones – These smartphones provide balanced performance, camera, and battery for most users, and they are usually priced between NPR 25,000 - 50,0000. This is currently the most competitive segment in Nepal, with brands packing in AMOLED displays and 5G support. Popular picks in this segment include the Redmi Note 15, Samsung Galaxy A17 5G, and Pova 6. Flagship Smartphones – This category contains premium phones with top-tier performance, camera, and displays, which are priced above NPR 100,000. They run on the latest processors such as the Qualcomm Snapdragon 8 Elite Gen 5 and Apple A19 or A19 Pro, with software updates for years. Leading examples of Flagship Smartphones in Nepal include the Samsung Galaxy S26 Ultra, iPhone 17 Pro Max, and OnePlus 15. Gaming Smartphones – They are smartphones packed with powerful processors, high-refresh-rate displays, and advanced cooling for gamers. These phones also include extra built-in features such as shoulder trigger buttons. Esports games such as PUBG, Mobile Legends, and Call of Duty run smoothly on them. In Nepal, gaming-focused buyers usually go for iPhones and Samsung Galaxy S Series, alongside the dedicated gaming brands like Nubia's Red Magic series. Camera-Centric Smartphones – Camera-centric smartphones focus on high-quality photography and videography over other specs. Specifications such as Larger Camers Sensors, telephoto lenses, and 4K resolution video recording make them stand out. The Vivo X300 Pro, with its Zeiss-tuned optics and 200MP periscope lens, is a standout example in Nepal, and iPhones are also widely favoured for their reliable video stabilisation. Foldable Smartphones – They are Phones with folding or flip displays for enhanced portability and multitasking. Such phones offer a wide screen that offers more room for productivity while still staying compact in our pockets. The Samsung Galaxy Z Fold series remains the dominant foldable option available in Nepal. 5G Smartphones – Even though Nepal hasn't yet introduced 5G networks in Nepal, still Smartphones that support fifth-generation mobile networks for faster internet speeds are commonly seen nowadays in Nepal’s market. Owning such a phone may seem advantageous as Nepal's telecom infrastructure continues to expand, and we may see 5G networks soon. Rugged Smartphones – They are phones built to withstand drops, water, dust, and harsh environments, often built with IP68/IP69 ratings and reinforced frames. In such phones, durability matters more than slim designs and cameras. These phones are usually preferred by outdoor workers, trekkers, the army, or police officers. Brands like Blackview, Cubot, Oscal, and Ulefone offer dedicated rugged models available in Nepal. Used/Refurbished Smartphones – Pre-owned devices sold at lower prices, often flagship models from previous years. Budget-conscious buyers can access premium features like better cameras and build quality at a fraction of the original cost. This remains a popular option in Nepal, with refurbished iPhones and older Samsung Galaxy models commonly sold through local retailers. Before purchasing, buyers should verify the phone's condition, battery health, and warranty status. Mobile Price in Nepal - Updated 2026 Here is the list of updated mobile prices in Nepal as of now. Samsung Product price in Nepal Product Name Price in Nepal Samsung Galaxy A07 NPR 25,499 (4+64 GB) NPR 29,499 (4+128 GB) NPR 33,499 (6+128 GB) Samsung Galaxy A07s NPR 30,499 (4+64 GB) Samsung Galaxy M17 5G NPR 43,999 (6+128 GB) Samsung Galaxy A17 5G NPR 44,999 (6+128 GB) NPR 48,999 (8+128 GB) NPR 56,999 (8+256 GB) Samsung Galaxy A27 5G NPR 51,999 (6+128 GB) NPR 65,999 (8+256 GB) Samsung Galaxy A37 5G NPR 74,999 (8+128 GB) NPR 86,999 (8+256 GB) NPR 96,999 (12+256 GB) Samsung Galaxy A57 5G NPR 96,999 (8+256 GB) NPR 1,07,999 (12+256 GB) Samsung Galaxy S26 FE NPR 1,24,999 (8+256 GB) Samsung Galaxy S26 NPR 1,39,999 (12+256 GB) Samsung Galaxy Z Flip7 NPR 1,54,999 (12+256 GB) Samsung Galaxy S26+ NPR 1,82,999 (12+256 GB) Samsung Galaxy Z Flip 8 NPR 1,94,999 (12+256 GB) Samsung Galaxy S26 Ultra NPR 2,24,999 (12+256 GB) NPR 2,59,999 (12+512 GB) NPR 2,93,999 (16GB+1TB) Samsung Galaxy Z Fold 8 NPR 2,74,999 (12+256 GB) Samsung Galaxy Z Fold 7 NPR 2,79,999 (12+256 GB) Samsung Galaxy Z Fold 8 Ultra NPR 2,99,999 (12+256 GB) NPR 3,39,999 (12+512 GB) Why Samsung? Samsung is known to make phones that last long-term with software updates. They are also known for having widespread service centres all across Nepal, providing top-notch service. This combination of trust, service support, and overall quality makes Samsung one of the most dependable choices for buyers. Apple Iphone Product price in Nepal Product Name Price in Nepal iPhone 15 NPR 1,27,499 (128GB) iPhone 17e NPR 1,32,499 (8+256 GB) NPR 1,75,098 (8+512 GB) iPhone 16 NPR 1,46,599 (8+128 GB) iPhone 17 NPR 1,73,499 (8+256 GB) NPR 2,15,699 (8+512 GB) iPhone Air NPR 1,90,699 (12+256 GB) NPR 2,32,899 (12+512 GB) NPR 2,75,099 (12GB+1TB) iPhone 17 Pro NPR 2,21,299 (12+256 GB) NPR 2,63,599 (12+512 GB) NPR 3,05,699 (12GB+1TB) iPhone 17 Pro Max NPR 2,42,499 (12+256 GB) NPR 2,84,599 (12+512 GB) NPR 3,27,099 (12GB+1TB) NPR 4,11,399 (12GB+2TB) iPhone 18 Pro NPR 2,59,900 (12+256 GB) NPR 3,01,900 (12+512 GB) NPR 3,86,900 (12GB+1TB) NPR 5,13,900 (12GB+2TB) iPhone 18 Pro Max NPR 2,79,900 (12+256 GB) NPR 3,22,900 (12+512 GB) NPR 4,07,900 (12GB+1TB) NPR 5,34,900 (12GB+2TB) Why Apple iPhones? People often choose Apple iPhones for their seamless and adaptable ecosystem. They are also famous for their camera and video features, which are the best assets for content creators and people who want a premium phone experience. Xiaomi Product price in Nepal Product Name Price in Nepal Redmi A7 4G NPR 20,499 (3+64 GB) Redmi A7 Pro 4G NPR 21,499 (4+64 GB) NPR 23,999 (4+128 GB) Redmi 17 4G NPR 27,999 (4+128 GB) NPR 33,999 (6+128 GB) Redmi 17 5G NPR 33,999 (4+128 GB) NPR 37,999 (4+256 GB) NPR 41,999 (6+256 GB) Redmi Note 17 4G NPR 42,999 (6+128 GB) NPR 47,999 (8+256 GB) Redmi Note 17 5G NPR 47,999 (6+128 GB) NPR 52,999 (8+256 GB) Redmi Note 17 Pro NPR 57,999 (8+256 GB) NPR 64,999 (12+256 GB) Redmi Note 17 Pro Max NPR 69,999 (8+256 GB) NPR 79,999 (12+256 GB) Xiaomi 17T NPR 92,999 (12+256 GB) NPR 99,999 (12+512 GB) Xiaomi 17 Ultra NPR 2,00,000 (16+512 GB) Why Xiaomi? Xiaomi is mostly renowned for its powerful, optimised phones at relevant prices and a diverse range of products for every budget segment. The brand provides strong value-for-money products. However, some users complain about the bloatware that comes with the phone software. VIVO Product price in Nepal Product Name Price in Nepal Vivo Y05e NPR 19,999 (4+64 GB) Vivo Y05 NPR 21,999 (4+64 GB) NPR 24,999 (4+128 GB) Vivo Y11d NPR 27,999 (4+128 GB) NPR 33,999 (6+128 GB) Vivo Y21 5G NPR 40,999 (6+128 GB) Vivo Y500 NPR 54,999 (8+128 GB) NPR 61,999 (8+256 GB) Vivo V70 FE NPR 62,999 (8+256 GB) NPR 72,999 (12+256 GB) Vivo V80 Lite NPR 63,999 (8+128 GB) NPR 73,999 (8+256 GB) Vivo V70 NPR 84,999 (8+256 GB) NPR 1,02,999 (12+256 GB) NPR 1,22,999 (12+512 GB) Vivo X300 Pro NPR 1,99,999 (16+512 GB) Why VIVO? VIVO stands out from its competitors for its innovative camera and sleek design, with the Vivo X300 Pro serving as a great example. The brand also emphasises premium build quality alongside an increasingly polished and improved UI that users love. HONOR Product price in Nepal Product Name Price in Nepal HONOR CHOICE T10 NPR 16,499 (3+32 GB) NPR 19,499 (4+64 GB) Honor X5c NPR 20,499 (4+64 GB) Honor Play 10 NPR 20,999 (3+64 GB) NPR 22,999 (4+128 GB) Honor X5c Plus NPR 22,499 (4+128 GB) Honor X5d NPR 25,499 (4+64 GB) Honor X5d Plus NPR 28,999 (4+128 GB) Honor X6d NPR 29,999 (4+128 GB) Honor X6e NPR 31,999 (4+128 GB) Honor X8d NPR 39,999 (8+128 GB) NPR 43,999 (8+256 GB) Honor X7e NPR 39,999 (6+128 GB) Honor X9d NPR 54,999 (8+256 GB) NPR 59,999 (12+256 GB) Honor 600 Lite NPR 59,999 (8+256 GB) Honor 600 NPR 84,999 (8+256 GB) NPR 89,999 (12+256 GB) Honor 600 Pro NPR 1,29,999 (12+256 GB) NPR 1,49,999 (12+512 GB) Honor Magic 8 Pro NPR 1,79,999 (12+512 GB) Honor Magic V5 NPR 2,66,999 (16+512 GB) Why Honor? Honor is known for features that compete with flagship titles at an affordable price, along with stylish designs. The brand places a strong emphasis on its durability, ensuring its phones hold up well over time. These features make Honor a choice for consumers wanting flagship performance without hurting their pockets. OnePlus Product price in Nepal Product Name Price in Nepal OnePlus Nord CE5 NPR 59,999 (8+256 GB) OnePlus Nord CE6 NPR 74,999 (8+256 GB) OnePlus Nord 6 NPR 89,999 (8+256 GB) NPR 1,00,999 (12+512 GB) OnePlus 15R NPR 98,499 (12+256 GB) Why OnePlus? OnePlus stands for delivering flagship-level performance along with super-fast charging, ensuring users spend less time waiting and more time using their phone. The brand is also well-regarded for its clean, optimised UI, which keeps the software experience smooth and clutter-free. This makes OnePlus a favourite among users who value performance and a clean interface. Nothing Product price in Nepal Product Name Price in Nepal Nothing Phone 3a Lite NPR 43,999 (8+128 GB) NPR 48,999 (8+256 GB) Nothing Phone 4b NPR 64,999 (8+128 GB) Nothing Phone 4a NPR 69,999 (8+128 GB) NPR 79,999 (8+256 GB) NPR 83,999 (12+256 GB) Nothing Phone 4a Pro NPR 99,999 (12+256 GB) Why Nothing? Nothing has made its name through transparent phone designs and its unique Glyph LED interface, setting it apart visually from other brands. It also carries CMF as a sub-brand, extending its distinctive design philosophy to more affordable devices. On top of its design language, Nothing OS is widely regarded as one of the most loved user interfaces in the industry. POCO Product price in Nepal Product Name Price in Nepal POCO M8s NPR 39,999 (6+128 GB) NPR 46,999 (8+256 GB) POCO M8 Pro NPR 58,999 (8+256 GB) Poco X8 Pro NPR 69,999 (8+256 GB) NPR 76,999 (12+512 GB) Poco X8 Pro Max NPR 94,999 (12+256 GB) NPR 1,04,999 (12+512 GB) Poco F8 Pro NPR 1,04,999 (12+512 GB) Why Poco? Poco is known for delivering high performance at a budget-friendly price, making it a go-to option for gamers. The X series caters specifically to gaming enthusiasts, while the F series offers a meaningful upgrade for users seeking more power. That said, its software UI is often criticised as being subpar compared to the hardware it is being paired with. Realme Product price in Nepal Product Name Price in Nepal Realme Note 60x NPR 15,999 (3+64 GB) NPR 16,999 (4+64 GB) NPR 21,999 (4+128 GB) Realme Note 70 NPR 16,999 (4+64 GB) NPR 20,999 (4+128 GB) NPR 23,999 (6+128 GB) Realme Note 80 NPR 23,999 (4+64 GB) Realme C100i NPR 28,999 (4+128 GB) Realme C100x NPR 35,999 (6+256 GB) Realme C85 Pro NPR 36,999 (8+128 GB) Realme C85 5G NPR 39,999 (8+128 GB) NPR 44,999 (8+256 GB) Realme C85 NPR 39,999 (8+256 GB) Realme P3 NPR 44,999 (8+256 GB) Realme P3 Ultra NPR 65,999 (12+256 GB) Realme 15 Pro NPR 66,999 (12+256 GB) Realme P4 Power NPR 76,999 (12+256 GB) Realme GT 8 Pro NPR 1,49,999 (16+512 GB) Why Realme? Realme offers phones with features that are well-suited for students and gamers alike. The brand focuses on strong battery life and decent camera performance, making its phones practical for everyday use as well as extended gaming sessions. OPPO Product price in Nepal Product Name Price in Nepal OPPO A6c NPR 24,999 (4+64 GB) NPR 30,999 (4+128 GB) OPPO A6x NPR 27,999 (4+128 GB) NPR 32,499 (6+128 GB) NPR 34,999 (6+256 GB) OPPO A6 NPR 40,999 (8+128 GB) NPR 46,999 (8+256 GB) OPPO A6 Pro 4G NPR 51,999 (8+256 GB) OPPO A6s Pro NPR 56,999 (8+256 GB) OPPO Reno 15F NPR 63,998 (8+256 GB) NPR 69,999 (12+512 GB) OPPO Reno 15 NPR 89,999 (12+512 GB) OPPO Reno 16F NPR 89,999 (8+256 GB) OPPO Reno 16 NPR 1,09,999 (12GB + 256GB + Phone Only) NPR 1,19,999 (12GB + 256GB + With OPPO Bubble) Why Oppo? Oppo is known for its strong camera performance, especially in portrait and selfie photography, combined with sleek, lightweight designs. The brand has invested heavily in fast charging technology, often leading the industry in charging speeds. Oppo's ColorOS also brings a visually polished interface aimed at users who value style alongside function. Motorola Product price in Nepal Product Name Price in Nepal Motorola Moto G06 Power NPR 26,499 (4+64 GB) Motorola Moto G57 Power NPR 37,499 (8+128 GB) Motorola Moto G96 5G NPR 44,999 (8+256 GB) Motorola Edge 70 Fusion NPR 66,999 (12+256 GB) NPR 76,999 (12+512 GB) Why Motorola? Motorola is recognised for its clean, near-stock Android experience and consistent software updates, closely mirroring the Google Pixel approach. The brand's Edge series brings a premium feel with curved displays and solid build quality at competitive prices. Motorola also has a long-standing reputation for reliable hardware and a no-frills user experience. Infinix Model Variant Best Buying Price Infinix Hot 70 Pro 8GB + 128GB Rs. 52,999 8GB + 256GB Rs. 56,999 Infinix GT 50 Pro 12GB + 256GB Rs. 84,999 Infinix GT 30 Pro 8GB+256GB+Gaming Kit Rs. 65,999 12GB+256GB+Gaming Kit Rs. 69,999 Infinix Note 60 8GB+128GB Rs. 54,999 Infinix Note 60 Pro 8GB+256GB Rs. 62,999 Infinix Note Edge 8GB+128GB Rs. 41,999 Why Infinix? Infinix has carved a niche by offering surprisingly capable specs at low prices, especially in battery capacity and display quality. The brand's Note and Zero series often pack large batteries and fast charging that outperform rivals in the same price range. This makes Infinix a strong pick for budget buyers who prioritise battery life over brand prestige. ZTE Product price in Nepal Product Name Price in Nepal ZTE Nubia A36 NPR 18,999 (4+64 GB) ZTE Nubia A56 NPR 19,999 (4+128 GB) ZTE Nubia A57 NPR 21,999 (4+64 GB) NPR 24,499 (4+128 GB) ZTE Nubia A77 NPR 25,499 (4+128 GB) ZTE Nubia V80 Max NPR 29,499 (8+128 GB) NPR 31,499 (8+256 GB) ZTE Nubia V80 Design NPR 29,999 (8+128 GB) NPR 32,499 (8+256 GB) ZTE Nubia Neo 5 5G NPR 55,999 (8+256 GB) ZTE Nubia Neo 5 GT NPR 77,999 (12+256 GB) Why ZTE? ZTE is known for bringing advanced telecom expertise into smartphones, especially with strong network connectivity and innovative display technology. The Nubia and Red Magic lineups are built specifically for a peak gaming experience, backed by advanced cooling systems that maintain performance during long sessions. Ai+ Product price in Nepal Product Name Price in Nepal Ai+ Pulse 2 NPR 19,999 (4+64 GB) NPR 25,999 (6+128 GB) Ai+ Nova 2 5G NPR 22,999 (4+64 GB) NPR 28,499 (6+128 GB) Why AI+? AI+ , as the name suggests, focuses on integrating AI-powered features to make everyday smartphone tasks smarter and more efficient. The brand keeps its offerings budget-centric, making AI-driven functionality accessible to cost-conscious buyers. The Latest Price Trend of Smartphones in Nepal Mobile prices globally, including in Nepal, have increased significantly in 2026, largely due to the ongoing RAM and storage shortage. With rising demand from AI companies for large memory components, smartphone manufacturers are facing higher production costs, directly impacting retail prices. As a result, even budget smartphones that previously cost under NPR 15,000 are now crossing NPR 20,000. So far, the budget segment has been the most affected, but mid-range and even flagship phones have seen price hikes in recent months. So, if you are planning to buy a smartphone in 2026, it’s best to purchase only if it’s an immediate need. Otherwise, holding onto your current device for a bit longer could be a smarter decision as the market stabilises. Also Read: Best Phones Under Rs. 20,000 in Nepal (Updated 2026) Best Phones Under Rs. 30,000 in Nepal (Updated 2026) Best Mobile Phones Under Rs. 40,000 in Nepal [Updated 2026] Understanding Smartphone Price Segments in Nepal Budget Smartphones (< NPR 25,000) Budget smartphones in Nepal are usually priced between NPR 10,000 and 25,000 and are ideal for first-time smartphone buyers and casual users. They handle social media, light gaming, and everyday apps efficiently. Brands like Redmi, Samsung, Realme, Vivo, Honor, and Tecno dominate this segment. Keep in mind that the processors and cameras are decent but not great. Midrange Smartphones (NPR 25,000–55,000) Midrange devices offer better displays (OLED), faster processors, and improved cameras. This segment is ideal for users who want value-for-money smartphones with smooth performance. A wide range of options from Xiaomi, Samsung, Realme, Honor, and Vivo is available here, offering the right balance of price and specs. Midrange phones are generally phones under NPR 55000 but above NPR 25000. Premium Midrange Smartphones (NPR 55,000–100,000) These phones offer near-flagship performance at a lower cost. Expect premium designs paired with high-refresh-rate displays (typically 120Hz or higher) that make everyday scrolling and gaming feel noticeably smoother. Under the hood, they're powered by flagship-grade processors capable of handling demanding games and heavy multitasking with ease. Their cameras are also a step up, often featuring larger sensors, better low-light performance, and more refined image processing compared to budget and mid-range options. Ideal for users seeking a premium experience from phones under NPR 100,000. Flagship Smartphones (Above NPR 100,000) Flagship phones such as the Samsung Galaxy S series, Apple iPhones, OnePlus, Xiaomi, Vivo, and Honor deliver ultimate performance, superior cameras, and the best displays available. They come equipped with the latest processors, premium build materials, and extended software support, ensuring a smooth experience for years. This segment is for users who want the latest and greatest technology, regardless of price. It's best suited for professionals, content creators, and tech enthusiasts who prioritise the best possible experience over cost savings. Also Read: Which phone is best under 25000 in Nepal? - (2026) Best Phones Under Rs. 50,000 in Nepal (Updated 2026) How to Choose the Best Smartphone for You? Choosing the right brand for yourself seems complicated for many, but it isn't. The suitable phone is something that fits in your budget and meets the requirements you have. Firstly, noticing your requirements can help narrow down the options and find the phone that offers the best value for your money. You can follow these steps to choose the best phone: Set your budget - Deciding how much you're willing to spend narrows down the choices and makes the buying process far more manageable. Students can typically find everything they need in the NPR 20,000–35,000 range, while working professionals often prefer NPR 35,000–70,000 for better cameras and performance. Those wanting a premium or flagship experience should look above NPR 70,000. Once your budget is fixed within the right category, you can focus only on models that match your needs instead of getting overwhelmed by endless options. Choose the right display size and quality- if you enjoy high-quality streaming and gaming, an AMOLED display is worth prioritising for its sharper colours and better contrast. For basic day-to-day use, a compact display with an LCD panel works just as well and is usually more affordable. Refresh rate also matters here, as a 90Hz or 120Hz screen makes scrolling and gaming feel noticeably smoother. Check the processor and RAM - Today, a phone with a decent processor and 4–6GB of RAM is enough for daily use like calling, browsing, and social media. However, 8GB or more is better suited for gaming, multitasking, and heavier apps that demand more power. Choosing the right balance here ensures your phone stays smooth and doesn't lag even after a year or two of use. Consider camera performance - While selecting a camera, don't just look at higher megapixel counts, as sensor quality often matters more than raw numbers. Checking sample photos and real user reviews gives a much better sense of actual image quality. Features like optical image stabilisation and low-light performance can make a bigger difference than a flashy spec sheet. Look at battery life and charging speed - A 5,000mAh or larger battery paired with fast charging support means less time worrying about your phone dying mid-day. Fast charging is especially useful for those with busy schedules who can't afford to wait hours for a full charge. Battery efficiency also depends on the chipset, so a good processor paired with a large battery gives the best overall experience. Ensure enough storage - In today's time, a phone should ideally have at least 128GB of storage if you take lots of photos, videos, or install several apps. Higher storage options like 256GB are worth considering if you rarely delete files or rely heavily on offline media. Expandable storage via microSD is also a helpful bonus for those who need extra space without paying a premium. Check software updates and security - Choosing a phone that receives regular software and security updates helps keep your device safer from vulnerabilities. It also ensures your phone feels fresh and doesn't become outdated too quickly. Brands that commit to multiple years of updates, like Samsung and Apple, generally offer better long-term value. Consider 5G connectivity and other essential features - Even if 5G isn't fully available everywhere yet, choosing a 5G-ready phone future-proofs your purchase as network coverage continues to expand. Other essentials like NFC, a good in-display fingerprint scanner, and stereo speakers can also significantly improve daily usability. Paying attention to these small details often makes a bigger difference in user experience than headline specs alone. Grey vs Authorised Smartphones in Nepal There are two types of smartphones you can buy in Nepal: official (authorised) units and grey market units. Authorised smartphones are officially imported by brand-authorised distributors. With these, you get a valid warranty and, in some cases (especially on high-end phones), even breakage insurance, where the brand may cover screen replacement for a certain period. However, official phones are usually slightly more expensive due to taxes and proper distribution. On the other hand, grey market smartphones are not officially imported. These devices are generally cheaper, but they do not come with a VAT bill or official warranty. This means that if your phone has any issues, you cannot claim free service from authorised service centres, making it a riskier option. So, it ultimately depends on whether you are willing to take that risk for a lower price. How to Identify an Authorised Phone in Nepal You will receive an official VAT bill at the time of purchase. The box will include the MPIA (Mobile Phone Importers Association) hologram. You will also find the authorised distributor’s seal or label on the packaging. Where to Buy Smartphones at the Best Price in Nepal? There are three main ways to buy smartphones in Nepal: offline retail stores, official showrooms, and online platforms. GBN Store You can buy smartphones from the GBN Store. You can get coupon codes, vouchers, discounts, and freebies, making it one of the best platforms to purchase at a lower price. EMI on Smartphones in GBN Store Since the start of 2025, EMI on smartphones in Nepal has become extremely popular. There are two main reasons behind this growth. First, many brands now offer 0% interest EMI, especially on Android smartphones (while iPhones may have a small interest component). This means you don’t have to pay the full amount upfront, making smartphones more accessible. Second, the process is now much easier. You don’t need a credit card: just citizenship and a guarantor are enough. Because of this hassle-free process, EMI adoption has increased rapidly, with a large portion of mid-range, premium mid-range, and flagship phones now being purchased through EMI. In the GBN store, too, we have a hassle-free EMI service for any mobile phone available in the store. So, if you are looking to get a phone on EMI, do browse through the option. EMI has also changed buying behaviour. Instead of buying a mid-range phone, many users now upgrade to a premium mid-range or even a flagship device. For example, if your budget is NPR 40,000, you can pay around 40% as a down payment and purchase a NPR 1 lakh phone, then pay the remaining amount in monthly instalments (around NPR 5,000 per month for a year). If you have a stable income and can comfortably manage monthly payments, EMI is a smart way to get a better device without paying everything upfront. However, if your income is unstable, it’s better to avoid EMI traps and stick to a phone within your budget. Mobile Price in Nepal: Conclusion Mobile phone prices in Nepal vary by smartphone brand. Some brands may offer better smartphones with better specs at lower prices than others. One should explore models in similar price segments, conduct thorough market research, and then purchase a smartphone. For that, you can always count on our buying guides, articles, and YouTube videos to help you choose the best phone for you.",
       "ram": null,
       "storage": null,
       "display": null,
@@ -13311,7 +13563,7 @@
           "store": "GBN Store",
           "price": 84999,
           "url": "https://gbnstore.com/product/vivo-v70",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -13324,7 +13576,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 84999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-v70",
@@ -13351,6 +13603,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 84999
+        },
+        {
+          "date": "2026-10-29",
           "price": 84999
         }
       ]
@@ -13456,7 +13712,7 @@
           "store": "GBN Store",
           "price": 62999,
           "url": "https://gbnstore.com/product/vivo-v70-fe",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -13469,7 +13725,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 62999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-v70-fe",
@@ -13496,6 +13752,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 62999
+        },
+        {
+          "date": "2026-10-29",
           "price": 62999
         }
       ]
@@ -13599,7 +13859,7 @@
           "store": "GBN Store",
           "price": 63999,
           "url": "https://gbnstore.com/product/vivo-v80-lite",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -13612,7 +13872,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 63999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-v80-lite",
@@ -13639,6 +13899,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 63999
+        },
+        {
+          "date": "2026-10-29",
           "price": 63999
         }
       ]
@@ -13699,7 +13963,7 @@
           "store": "GBN Store",
           "price": 199999,
           "url": "https://gbnstore.com/product/vivo-x300-pro",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -13712,7 +13976,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 199999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-x300-pro",
@@ -13739,6 +14003,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 199999
+        },
+        {
+          "date": "2026-10-29",
           "price": 199999
         }
       ]
@@ -13801,7 +14069,7 @@
           "store": "GBN Store",
           "price": 21999,
           "url": "https://gbnstore.com/product/vivo-y05",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -13814,7 +14082,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 21999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-y05",
@@ -13842,6 +14110,10 @@
         {
           "date": "2026-10-28",
           "price": 21999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 21999
         }
       ]
     },
@@ -13856,7 +14128,7 @@
           "store": "GBN Store",
           "price": 40999,
           "url": "https://gbnstore.com/product/vivo-y21-5g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -13869,7 +14141,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 40999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-y21-5g",
@@ -13896,6 +14168,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 40999
+        },
+        {
+          "date": "2026-10-29",
           "price": 40999
         }
       ]
@@ -14055,7 +14331,7 @@
           "store": "GBN Store",
           "price": 54999,
           "url": "https://gbnstore.com/product/vivo-y500",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -14068,7 +14344,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 54999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-y500",
@@ -14095,6 +14371,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 54999
+        },
+        {
+          "date": "2026-10-29",
           "price": 54999
         }
       ]
@@ -14202,7 +14482,7 @@
           "store": "GBN Store",
           "price": 200000,
           "url": "https://gbnstore.com/product/xiaomi-17-ultra",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -14215,7 +14495,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 200000,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/xiaomi-17-ultra",
@@ -14242,6 +14522,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 200000
+        },
+        {
+          "date": "2026-10-29",
           "price": 200000
         }
       ]
@@ -14303,7 +14587,7 @@
           "store": "GBN Store",
           "price": 99999,
           "url": "https://gbnstore.com/product/xiaomi-17t",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -14316,7 +14600,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 99999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/xiaomi-17t",
@@ -14343,6 +14627,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 99999
+        },
+        {
+          "date": "2026-10-29",
           "price": 99999
         }
       ]
@@ -14454,7 +14742,7 @@
           "store": "Neo Store",
           "price": 34999,
           "url": "https://www.neostore.com.np/product/xiaomi-mi-11-lite-6gb-128gb-",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -14489,7 +14777,7 @@
         "battery": "4250mAh battery",
         "camera": "64MP primary camera f/1.79, 6P lens"
       },
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "product": "Mi 11 Lite",
       "category": "Mobile",
       "color": "Blue, Pink, Black",
@@ -14530,6 +14818,10 @@
         },
         {
           "date": "2026-10-28",
+          "price": 34999
+        },
+        {
+          "date": "2026-10-29",
           "price": 34999
         }
       ]
@@ -14617,7 +14909,7 @@
           "store": "GBN Store",
           "price": 18999,
           "url": "https://gbnstore.com/product/zte-nubia-a36",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -14630,7 +14922,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 18999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a36",
@@ -14658,6 +14950,10 @@
         {
           "date": "2026-10-28",
           "price": 18999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 18999
         }
       ]
     },
@@ -14672,7 +14968,7 @@
           "store": "GBN Store",
           "price": 19999,
           "url": "https://gbnstore.com/product/zte-nubia-a56",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -14685,7 +14981,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 19999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a56",
@@ -14713,6 +15009,10 @@
         {
           "date": "2026-10-28",
           "price": 19999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 19999
         }
       ]
     },
@@ -14727,7 +15027,7 @@
           "store": "GBN Store",
           "price": 21999,
           "url": "https://gbnstore.com/product/zte-nubia-a57",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -14740,7 +15040,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 21999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a57",
@@ -14768,6 +15068,10 @@
         {
           "date": "2026-10-28",
           "price": 21999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 21999
         }
       ]
     },
@@ -14782,7 +15086,7 @@
           "store": "GBN Store",
           "price": 25499,
           "url": "https://gbnstore.com/product/zte-nubia-a77",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -14795,7 +15099,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 25499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a77",
@@ -14823,6 +15127,10 @@
         {
           "date": "2026-10-28",
           "price": 25499
+        },
+        {
+          "date": "2026-10-29",
+          "price": 25499
         }
       ]
     },
@@ -14837,7 +15145,7 @@
           "store": "GBN Store",
           "price": 55999,
           "url": "https://gbnstore.com/product/nubia-neo-5-5g",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -14850,7 +15158,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 55999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nubia-neo-5-5g",
@@ -14878,6 +15186,10 @@
         {
           "date": "2026-10-28",
           "price": 55999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 55999
         }
       ]
     },
@@ -14892,7 +15204,7 @@
           "store": "GBN Store",
           "price": 77999,
           "url": "https://gbnstore.com/product/nubia-neo-5-gt",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -14905,7 +15217,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 77999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nubia-neo-5-gt",
@@ -14933,6 +15245,10 @@
         {
           "date": "2026-10-28",
           "price": 77999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 77999
         }
       ]
     },
@@ -14947,7 +15263,7 @@
           "store": "GBN Store",
           "price": 29999,
           "url": "https://gbnstore.com/product/zte-nubia-v80-design",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -14960,7 +15276,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 29999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-v80-design",
@@ -14988,6 +15304,10 @@
         {
           "date": "2026-10-28",
           "price": 29999
+        },
+        {
+          "date": "2026-10-29",
+          "price": 29999
         }
       ]
     },
@@ -15002,7 +15322,7 @@
           "store": "GBN Store",
           "price": 29499,
           "url": "https://gbnstore.com/product/zte-nubia-v80-max",
-          "checked_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "warranty": null
         }
       ],
@@ -15015,7 +15335,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "price": 29499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-v80-max",
@@ -15043,11 +15363,15 @@
         {
           "date": "2026-10-28",
           "price": 29499
+        },
+        {
+          "date": "2026-10-29",
+          "price": 29499
         }
       ]
     }
   ],
   "store_count": 4,
-  "price_count": 282,
-  "variant_count": 282
+  "price_count": 281,
+  "variant_count": 281
 }
