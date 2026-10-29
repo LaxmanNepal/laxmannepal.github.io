@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-10-29T13:15:19.193218+00:00.
+Generated from the latest analytics snapshot: 2026-10-29T22:51:09.839428+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -75,6 +75,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/link shortner generator.html
 - Top queries: No page-query rows
 
+### /2023/01/how-to-extract-youtube-video-title.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/01/how to extract youtube video title.html | Laxman Ne…
+- Current description: Missing
+- Recommended description: Learn about 2023/01/how to extract youtube video title.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/01/how to extract youtube video title.html
+- Top queries: No page-query rows
+
 ### /2025/07/image-prompt.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -135,6 +145,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/disclaimer.html
 - Top queries: No page-query rows
 
+### /p/sitemap.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/sitemap.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/sitemap.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/sitemap.html
+- Top queries: No page-query rows
+
 ### /p/terms-and-conditions.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -185,26 +205,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/pdf.html
 - Top queries: No page-query rows
 
-### /p/sitemap.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/sitemap.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/sitemap.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/sitemap.html
-- Top queries: No page-query rows
-
-### /2023/01/how-to-extract-youtube-video-title.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/01/how to extract youtube video title.html | Laxman Ne…
-- Current description: Missing
-- Recommended description: Learn about 2023/01/how to extract youtube video title.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/01/how to extract youtube video title.html
-- Top queries: No page-query rows
-
 ### /p/privacy-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -245,16 +245,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/facebook video downloader save hd.html
 - Top queries: No page-query rows
 
-### /2025/07/free-online-courses-by-laxman-nepal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/07/free online courses by laxman nepal.html | Laxman N…
-- Current description: Missing
-- Recommended description: Learn about 2025/07/free online courses by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/07/free online courses by laxman nepal.html
-- Top queries: No page-query rows
-
 ### /2023/07/html-prase-tool-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -293,6 +283,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/06/ebook finder.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/06/ebook finder.html
+- Top queries: No page-query rows
+
+### /2025/07/free-online-courses-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/07/free online courses by laxman nepal.html | Laxman N…
+- Current description: Missing
+- Recommended description: Learn about 2025/07/free online courses by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/07/free online courses by laxman nepal.html
 - Top queries: No page-query rows
 
 ### /p/image.html — SEO score 0/100
@@ -823,16 +823,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about apps/hindu with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: apps/hindu
-- Top queries: No page-query rows
-
-### /education — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: education | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about education with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: education
 - Top queries: No page-query rows
 
 ### /feeds — SEO score 0/100
