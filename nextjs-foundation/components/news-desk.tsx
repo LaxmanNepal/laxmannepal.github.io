@@ -40,7 +40,7 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
   const [brokenImages,setBrokenImages]=useState<string[]>([]);
 
   useEffect(()=>{
-    try { const raw=window.localStorage.getItem("ln-news-saved-v1"); if(raw){const parsed=JSON.parse(raw);if(Array.isArray(parsed))setSavedStories(parsed.filter((v):v is Story=>Boolean(v&&typeof v==="object"&&typeof v.url==="string"&&typeof v.title==="string"&&safeUrl(v.url)===v.url));} }
+    try { const raw=window.localStorage.getItem("ln-news-saved-v1"); if(raw){const parsed=JSON.parse(raw);if(Array.isArray(parsed))setSavedStories(parsed.filter((v):v is Story=>Boolean(v&&typeof v==="object"&&typeof v.url==="string"&&typeof v.title==="string"&&safeUrl(v.url)===v.url)));} }
     catch { /* Saved stories are optional; private browsing may block storage. */ }
     setSavedLoaded(true);
   },[]);
