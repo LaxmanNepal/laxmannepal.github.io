@@ -1,223 +1,223 @@
 {
-  "updatedAt": "2026-10-29",
+  "updatedAt": "2026-10-30",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
-    {
-      "name": "slackcli",
-      "url": "https://github.com/shaharia-lab/slackcli",
-      "description": "Slack CLI for humans and AI agents. Read, send, search and reply across one or many Slack workspaces from the terminal. No Slack app needed.",
-      "language": "TypeScript",
-      "stars": 255,
-      "updatedAt": "2026-10-29T08:26:23Z",
-      "fullName": "shaharia-lab/slackcli"
-    },
-    {
-      "name": "magpie",
-      "url": "https://github.com/yetone/magpie",
-      "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
-      "language": "Go",
-      "stars": 24982,
-      "updatedAt": "2026-10-29T08:26:21Z",
-      "fullName": "yetone/magpie"
-    },
-    {
-      "name": "forge",
-      "url": "https://github.com/adulari/forge",
-      "description": "Fast, model-agnostic AI coding harness and CLI in Rust — routes every task to the optimal model for cost × capability.",
-      "language": "Rust",
-      "stars": 11,
-      "updatedAt": "2026-10-29T08:26:19Z",
-      "fullName": "adulari/forge"
-    },
-    {
-      "name": "turftopic",
-      "url": "https://github.com/x-tabdeveloping/turftopic",
-      "description": "Robust and fast topic models with sentence-transformers.",
-      "language": "Python",
-      "stars": 128,
-      "updatedAt": "2026-10-29T08:26:17Z",
-      "fullName": "x-tabdeveloping/turftopic"
-    },
-    {
-      "name": "TestOPS",
-      "url": "https://github.com/qsumm/TestOPS",
-      "description": "TestOPS一站式AI运维平台 · By 一鸣（公众号：一鸣AI编程）",
-      "language": "Python",
-      "stars": 27,
-      "updatedAt": "2026-10-29T08:25:54Z",
-      "fullName": "qsumm/TestOPS"
-    },
     {
       "name": "unsloth",
       "url": "https://github.com/unslothai/unsloth",
       "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
       "language": "Python",
-      "stars": 78737,
-      "updatedAt": "2026-10-29T08:25:53Z",
+      "stars": 78783,
+      "updatedAt": "2026-10-30T08:37:00Z",
       "fullName": "unslothai/unsloth"
     },
     {
-      "name": "smart-trade-ai",
-      "url": "https://github.com/chefroger/smart-trade-ai",
-      "description": "AI assistant for international trade — 39 B2B skills (lead gen, OSINT, email, docs, compliance). End-to-end customer development pipeline. Runs locally. 外贸业务员 AI 助手。",
-      "language": "Python",
-      "stars": 96,
-      "updatedAt": "2026-10-29T08:25:53Z",
-      "fullName": "chefroger/smart-trade-ai"
+      "name": "CivicMesh",
+      "url": "https://github.com/Anbu-00001/CivicMesh",
+      "description": "Multi-agent AI navigator that routes people in crisis to housing, food, healthcare and legal aid. 7 walkers, 40 real resources, any language. Built in Jac.",
+      "language": "Jac",
+      "stars": 26,
+      "updatedAt": "2026-10-30T08:36:54Z",
+      "fullName": "Anbu-00001/CivicMesh"
     },
     {
-      "name": "dsh-prompt",
-      "url": "https://github.com/FeatherHunter/dsh-prompt",
-      "description": "💡DSH 的 Prompt提示词工具箱：常用prompt保存后点击即可注入到对话框——省时省力，/prompt 自动提示已有Prompt。 💡The Prompt toolbox for DSH: save frequently-used prompts and inject them into the dialog with one click — saving time and effort, with /prompt auto-suggesting your existing prompts.",
-      "language": "JavaScript",
-      "stars": 79,
-      "updatedAt": "2026-10-29T08:25:46Z",
-      "fullName": "FeatherHunter/dsh-prompt"
+      "name": "project-maya",
+      "url": "https://github.com/mw00/project-maya",
+      "description": "Project Maya - run GLM-5.3-Flash (321B MoE), DeepSeek-V4.1-Flash-1017 (748B MoE) and MiniMax-M3.1-Flash (428B MoE) privately on your own GPU(s), from one card to 16, NVIDIA or AMD, Linux or Windows. Engine, server, dashboard, OpenAI- and Anthropic-compatible A",
+      "language": "Cuda",
+      "stars": 2237,
+      "updatedAt": "2026-10-30T08:36:53Z",
+      "fullName": "mw00/project-maya"
     },
     {
-      "name": "skyvern",
-      "url": "https://github.com/Skyvern-AI/skyvern",
-      "description": "Automate browser based workflows with AI",
-      "language": "Python",
-      "stars": 23295,
-      "updatedAt": "2026-10-29T08:25:34Z",
-      "fullName": "Skyvern-AI/skyvern"
-    },
-    {
-      "name": "claude-code-plugin-tracker",
-      "url": "https://github.com/linny006/claude-code-plugin-tracker",
-      "description": "Live index of Claude Code extensions, hooks, and plugins — refreshed every 15 minutes from GitHub",
-      "language": "Python",
-      "stars": 6,
-      "updatedAt": "2026-10-29T08:25:29Z",
-      "fullName": "linny006/claude-code-plugin-tracker"
-    },
-    {
-      "name": "hive",
-      "url": "https://github.com/hivecommons/hive",
-      "description": "AI agent orchestration for open and closed source — a fully customizable fleet of AI agents covering every level of project maintenance, from brainstorming to full autonomy",
+      "name": "jargo",
+      "url": "https://github.com/gojargo/jargo",
+      "description": "Conversational-AI framework for Go.",
       "language": "Go",
-      "stars": 77,
-      "updatedAt": "2026-10-29T08:25:28Z",
-      "fullName": "hivecommons/hive"
+      "stars": 105,
+      "updatedAt": "2026-10-30T08:36:46Z",
+      "fullName": "gojargo/jargo"
     },
     {
-      "name": "Awesome-TCM-LLM",
-      "url": "https://github.com/tyang816/Awesome-TCM-LLM",
-      "description": "开源中医大模型、数据、新闻、专利合集 (Open-source Traditional Chinese Medical Large Language Models, Datasets, News and Patents hub.)",
+      "name": "mobius",
+      "url": "https://github.com/mobius-os/mobius",
+      "description": "Self-hosted AI agent that builds apps. Chat with a coding agent (Claude Code or Codex) that builds mini-apps, modifies its own UI, and gets sharper the more you use it. Your personal AI operating system, on your own server.",
       "language": "Python",
-      "stars": 132,
-      "updatedAt": "2026-10-29T08:25:20Z",
-      "fullName": "tyang816/Awesome-TCM-LLM"
+      "stars": 42,
+      "updatedAt": "2026-10-30T08:36:46Z",
+      "fullName": "mobius-os/mobius"
     },
     {
-      "name": "meclaw",
-      "url": "https://github.com/mmeyerlein/meclaw",
-      "description": "Where agents build agents. An open-source Rust framework for complex agentic systems: ontology-grounded, auditable, one binary.",
-      "language": "Rust",
-      "stars": 41,
-      "updatedAt": "2026-10-29T08:25:13Z",
-      "fullName": "mmeyerlein/meclaw"
-    },
-    {
-      "name": "ChaosEngineAI",
-      "url": "https://github.com/cryptopoly/ChaosEngineAI",
-      "description": "Local AI workstation — discover, run, chat, benchmark, and generate images from open-weight models. DFlash/DDTree speculative decoding, TurboQuant & TriAttention cache compression strategies, MLX + llama.cpp + vLLM + MTPLX backends.",
+      "name": "fortune",
+      "url": "https://github.com/wonglaitung/fortune",
+      "description": "实践人机混合智能的理念，开发具备变现能力的金融资产智能量化分析助手。系统整合大模型智能决策与机器学习预测模型，实时监控港股、A股、加密货币、黄金等金融市场。  支持市场：  🇭🇰 港股 - 恒生指数三周期预测、个股预测、异常检测 🇨🇳 A股 - 三周期预测、综合买卖建议、板块分析（310只股票池）",
       "language": "Python",
-      "stars": 25,
-      "updatedAt": "2026-10-29T08:25:07Z",
-      "fullName": "cryptopoly/ChaosEngineAI"
+      "stars": 90,
+      "updatedAt": "2026-10-30T08:36:38Z",
+      "fullName": "wonglaitung/fortune"
     },
     {
-      "name": "loams",
-      "url": "https://github.com/ostrium-labs/loams",
-      "description": "One bucket, every index: open-source, AI-native data platform in Rust. Hybrid retrieval on object storage, plus reactive data (Live), graph, SQL, Postgres and durable agent runs. Preview.",
-      "language": "Rust",
-      "stars": 36,
-      "updatedAt": "2026-10-29T08:25:05Z",
-      "fullName": "ostrium-labs/loams"
+      "name": "claude-code-plugins",
+      "url": "https://github.com/melodic-software/claude-code-plugins",
+      "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
+      "language": "Shell",
+      "stars": 28,
+      "updatedAt": "2026-10-30T08:36:36Z",
+      "fullName": "melodic-software/claude-code-plugins"
     },
     {
-      "name": "nextclaw",
-      "url": "https://github.com/Peiiii/nextclaw",
-      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
+      "name": "yardlet",
+      "url": "https://github.com/zzunkie/yardlet",
+      "description": "A native macOS app for running coding agents: Codex, Claude Code and other agent CLIs side by side in one window.",
+      "language": "Swift",
+      "stars": 28,
+      "updatedAt": "2026-10-30T08:36:19Z",
+      "fullName": "zzunkie/yardlet"
+    },
+    {
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
       "language": "TypeScript",
-      "stars": 262,
-      "updatedAt": "2026-10-29T08:24:50Z",
-      "fullName": "Peiiii/nextclaw"
+      "stars": 8642,
+      "updatedAt": "2026-10-30T08:36:15Z",
+      "fullName": "makecindy/cindy"
     },
     {
-      "name": "agent-sphere",
-      "url": "https://github.com/nullpointexception-i/agent-sphere",
-      "description": "This project is an AI Agent orchestration platform. It uses an LLM-driven decision engine, combined with capabilities (built-in tools, MCP protocol, CLI execution, browser operations, etc.), to achieve a basic closed loop from perception → planning → execution",
-      "language": "Java",
-      "stars": 76,
-      "updatedAt": "2026-10-29T08:24:50Z",
-      "fullName": "nullpointexception-i/agent-sphere"
-    },
-    {
-      "name": "kordoc",
-      "url": "https://github.com/chrisryugj/kordoc",
-      "description": "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "name": "paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "description": "The open-source app everyone uses to manage agents at work",
       "language": "TypeScript",
-      "stars": 2832,
-      "updatedAt": "2026-10-29T08:24:48Z",
-      "fullName": "chrisryugj/kordoc"
-    },
-    {
-      "name": "OpenHands",
-      "url": "https://github.com/OpenHands/OpenHands",
-      "description": "🙌 OpenHands: AI-Driven Development",
-      "language": "TypeScript",
-      "stars": 92157,
-      "updatedAt": "2026-10-29T08:24:45Z",
-      "fullName": "OpenHands/OpenHands"
-    },
-    {
-      "name": "booley",
-      "url": "https://github.com/boldaxolotl/booley",
-      "description": "The open-source agentic RTL IDE",
-      "language": "Python",
-      "stars": 22,
-      "updatedAt": "2026-10-29T08:24:27Z",
-      "fullName": "boldaxolotl/booley"
-    },
-    {
-      "name": "mneme",
-      "url": "https://github.com/slow-stack/mneme",
-      "description": "🧠 The memory that dreams — cross-session memory for DeepSeek Harness. Local SQLite + Markdown mirrors, autoDream consolidation, 4-way recall (keyword/vector/BM25/entity), and a memory panel. 10 model tools, MCP server, CLI.",
-      "language": "JavaScript",
-      "stars": 198,
-      "updatedAt": "2026-10-29T08:24:25Z",
-      "fullName": "slow-stack/mneme"
-    },
-    {
-      "name": "pygaeb",
-      "url": "https://github.com/frameIQ/pygaeb",
-      "description": "Python library to parse, validate, write and convert GAEB DA XML files (2.0–3.3): construction tenders, bids, orders, cost estimates and quantity take-offs. Exports to PDF, Excel, Word, HTML, Markdown, CSV and pandas; optional LLM item classification and extra",
-      "language": "Python",
-      "stars": 23,
-      "updatedAt": "2026-10-29T08:24:24Z",
-      "fullName": "frameIQ/pygaeb"
-    },
-    {
-      "name": "cubrid-mcp-server",
-      "url": "https://github.com/cubrid-lab/cubrid-mcp-server",
-      "description": "A Model Context Protocol (MCP) server for CUBRID database — enabling LLMs to inspect schemas and execute read-only queries via pycubrid.",
-      "language": "Python",
-      "stars": 34,
-      "updatedAt": "2026-10-29T08:24:21Z",
-      "fullName": "cubrid-lab/cubrid-mcp-server"
+      "stars": 108798,
+      "updatedAt": "2026-10-30T08:36:14Z",
+      "fullName": "paperclipai/paperclip"
     },
     {
       "name": "spiceai",
       "url": "https://github.com/spiceai/spiceai",
       "description": "Add a real-time analytics node to your operational database. Spice is a portable, accelerated SQL query, search, and LLM-inference engine in Rust for data-grounded AI apps and agents.",
       "language": "Rust",
-      "stars": 3113,
-      "updatedAt": "2026-10-29T08:24:10Z",
+      "stars": 3116,
+      "updatedAt": "2026-10-30T08:36:13Z",
       "fullName": "spiceai/spiceai"
+    },
+    {
+      "name": "dify",
+      "url": "https://github.com/langgenius/dify",
+      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+      "language": "Python",
+      "stars": 159969,
+      "updatedAt": "2026-10-30T08:36:08Z",
+      "fullName": "langgenius/dify"
+    },
+    {
+      "name": "mneme",
+      "url": "https://github.com/slow-stack/mneme",
+      "description": "🧠 The memory that dreams — cross-session memory for DeepSeek Harness. Local SQLite + Markdown mirrors, autoDream consolidation, 4-way recall (keyword/vector/BM25/entity), and a memory panel. 10 model tools, MCP server, CLI.",
+      "language": "JavaScript",
+      "stars": 199,
+      "updatedAt": "2026-10-30T08:36:02Z",
+      "fullName": "slow-stack/mneme"
+    },
+    {
+      "name": "vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "language": "Python",
+      "stars": 95892,
+      "updatedAt": "2026-10-30T08:36:00Z",
+      "fullName": "vllm-project/vllm"
+    },
+    {
+      "name": "Xenon",
+      "url": "https://github.com/xianyu-sheng/Xenon",
+      "description": "Verifiable AI coding agent harness / 可验证的 AI 编码代理：evidence hash-chain · hollow-answer gate · manual verification checklist · 6 engines + MCP · multi-model · Windows/CJK · listed in awesome-opensource-ai & Collabnix awesome-mcp-lists",
+      "language": "Python",
+      "stars": 56,
+      "updatedAt": "2026-10-30T08:35:56Z",
+      "fullName": "xianyu-sheng/Xenon"
+    },
+    {
+      "name": "omnigent",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
+      "language": "Python",
+      "stars": 11124,
+      "updatedAt": "2026-10-30T08:35:43Z",
+      "fullName": "omnigent-ai/omnigent"
+    },
+    {
+      "name": "keepline",
+      "url": "https://github.com/majiayu000/keepline",
+      "description": "Local CLI and dashboard for monitoring Codex and Claude Code sessions, recovering interrupted work where supported, and tracking usage and costs.",
+      "language": "TypeScript",
+      "stars": 7,
+      "updatedAt": "2026-10-30T08:35:37Z",
+      "fullName": "majiayu000/keepline"
+    },
+    {
+      "name": "dsh-prompt",
+      "url": "https://github.com/FeatherHunter/dsh-prompt",
+      "description": "💡DSH 的 Prompt提示词工具箱：常用prompt保存后点击即可注入到对话框——省时省力，/prompt 自动提示已有Prompt。 💡The Prompt toolbox for DSH: save frequently-used prompts and inject them into the dialog with one click — saving time and effort, with /prompt auto-suggesting your existing prompts.",
+      "language": "JavaScript",
+      "stars": 83,
+      "updatedAt": "2026-10-30T08:35:33Z",
+      "fullName": "FeatherHunter/dsh-prompt"
+    },
+    {
+      "name": "elephant-goldfish-model",
+      "url": "https://github.com/google/elephant-goldfish-model",
+      "description": "Open-source skills for designing and reviewing software with AI agents",
+      "language": "Python",
+      "stars": 6243,
+      "updatedAt": "2026-10-30T08:35:27Z",
+      "fullName": "google/elephant-goldfish-model"
+    },
+    {
+      "name": "KohakuTerrarium",
+      "url": "https://github.com/Kohaku-Lab/KohakuTerrarium",
+      "description": "KohakuTerrarium is a general-purpose AI agent framework and batteries-included app for building, running, and composing self-contained agents and multi-agent teams, with built-in tools, sub-agents, persistent sessions, TUI, and web UI.",
+      "language": "Python",
+      "stars": 537,
+      "updatedAt": "2026-10-30T08:35:27Z",
+      "fullName": "Kohaku-Lab/KohakuTerrarium"
+    },
+    {
+      "name": "LocalAI",
+      "url": "https://github.com/mudler/LocalAI",
+      "description": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+      "language": "Go",
+      "stars": 50068,
+      "updatedAt": "2026-10-30T08:35:26Z",
+      "fullName": "mudler/LocalAI"
+    },
+    {
+      "name": "agentos",
+      "url": "https://github.com/framerslab/agentos",
+      "description": "TypeScript AI agent framework: cognitive memory, dynamic personalities, emergent behaviors and self-building designs",
+      "language": "TypeScript",
+      "stars": 683,
+      "updatedAt": "2026-10-30T08:35:19Z",
+      "fullName": "framerslab/agentos"
+    },
+    {
+      "name": "llmfit",
+      "url": "https://github.com/AlexsJones/llmfit",
+      "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
+      "language": "Rust",
+      "stars": 38476,
+      "updatedAt": "2026-10-30T08:35:14Z",
+      "fullName": "AlexsJones/llmfit"
+    },
+    {
+      "name": "assay-evals",
+      "url": "https://github.com/tap222/assay-evals",
+      "description": "Behavioral regression testing for AI apps and agents: pytest plugin, behavior diff, CI gate, and document extraction metrics",
+      "language": "Python",
+      "stars": 23,
+      "updatedAt": "2026-10-30T08:35:12Z",
+      "fullName": "tap222/assay-evals"
     }
   ]
 }
