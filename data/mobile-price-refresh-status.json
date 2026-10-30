@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-29T07:13:16.411425+00:00",
-  "date": "2026-10-29",
+  "updated_at": "2026-10-30T07:16:24.711316+00:00",
+  "date": "2026-10-30",
   "schedule": "daily",
   "model_variants": 281,
   "fresh_offers": 112,
@@ -57,7 +57,7 @@
     "Quality Computer": {
       "candidates": 7,
       "priced_offers_found": 7,
-      "previous_offers": 8,
+      "previous_offers": 7,
       "minimum_expected_offers": 3,
       "status": "complete",
       "errors": []
