@@ -18,6 +18,7 @@ function clean(value: Story): Story | null {
   const language = value.language === "ne" || /[\u0900-\u097F]/.test(title) ? "ne" : "en";
   return { id:value.id || url, title, url, published_at:new Date(date).toISOString(), source:String(value.source || "Original publisher").slice(0,100), category:value.category === "Nepal" ? "General" : CATEGORIES.includes(value.category || "") && value.category !== "All" ? value.category : "Trending", region:value.region === "Nepal" || value.region === "World" ? value.region : inferredRegion, language, description:String(value.description || "").replace(/<[^>]*>/g," ").replace(/\s+/g," ").trim().slice(0,320), image:safeUrl(value.image) };
 }
+function dateLabel(value:string) { return new Date(value).toLocaleDateString("ne-NP",{year:"numeric",month:"short",day:"numeric"}); }
 function ago(value:string) { const m=Math.max(0,Math.floor((Date.now()-Date.parse(value))/60000)); return !Number.isFinite(m)?"भर्खरै":m<60?`${m} मिनेटअघि`:m<1440?`${Math.floor(m/60)} घण्टाअघि`:m<2880?"हिजो":`${Math.floor(m/1440)} दिनअघि`; }
 
 type NewsDeskProps = { initialStories?: Story[]; initialGeneratedAt?: string };
