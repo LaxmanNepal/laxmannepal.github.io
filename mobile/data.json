@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T13:03:06.640901+00:00",
+  "updated_at": "2026-10-30T22:25:56.012397+00:00",
   "count": 156,
   "products": [
     {
@@ -2144,12 +2144,14 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "4GB + 128GB"
       ],
-      "price": 32999,
+      "price": 29999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
+        "4GB",
         "6GB"
       ],
       "storages": [
@@ -2178,15 +2180,17 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+128GB"
+        "4GB+128GB",
+        "4GB+64GB"
       ],
-      "price": 25999,
+      "price": 21999,
       "max_price": 25999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
+        "64GB",
         "128GB"
       ]
     },
@@ -2269,13 +2273,15 @@
       "name": "Vivo V70 FE",
       "brand": "Vivo",
       "variants": [
-        "8GB + 256GB"
+        "8GB + 256GB",
+        "12GB + 256GB"
       ],
       "price": 62999,
-      "max_price": 62999,
+      "max_price": 72999,
       "original_price": null,
       "rams": [
-        "8GB"
+        "8GB",
+        "12GB"
       ],
       "storages": [
         "256GB"
@@ -2322,16 +2328,18 @@
       "name": "Vivo Y05",
       "brand": "Vivo",
       "variants": [
-        "4GB+64GB"
+        "4GB+64GB",
+        "4GB+128GB"
       ],
       "price": 21999,
-      "max_price": 21999,
+      "max_price": 24999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -2356,13 +2364,15 @@
       "name": "Vivo Y11d",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB"
+        "4GB + 128GB",
+        "6GB + 128GB"
       ],
       "price": 27999,
-      "max_price": 27999,
+      "max_price": 33999,
       "original_price": null,
       "rams": [
-        "4GB"
+        "4GB",
+        "6GB"
       ],
       "storages": [
         "128GB"
@@ -2390,16 +2400,22 @@
       "name": "Vivo Y31d",
       "brand": "Vivo",
       "variants": [
-        "6GB+128GB"
+        "6GB+128GB",
+        "8GB+128GB",
+        "8GB+256GB",
+        "4GB+128GB"
       ],
-      "price": 37999,
-      "max_price": 37999,
+      "price": 32999,
+      "max_price": 51999,
       "original_price": null,
       "rams": [
-        "6GB"
+        "4GB",
+        "6GB",
+        "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -2407,16 +2423,20 @@
       "name": "Vivo Y32",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB"
+        "4GB + 128GB",
+        "6GB + 128GB",
+        "6GB + 256GB"
       ],
       "price": 39999,
-      "max_price": 39999,
+      "max_price": 52999,
       "original_price": null,
       "rams": [
-        "4GB"
+        "4GB",
+        "6GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -2424,16 +2444,18 @@
       "name": "Vivo Y500",
       "brand": "Vivo",
       "variants": [
-        "8GB + 128GB"
+        "8GB + 128GB",
+        "8GB + 256GB"
       ],
       "price": 54999,
-      "max_price": 54999,
+      "max_price": 61999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
