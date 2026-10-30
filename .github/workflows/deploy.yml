@@ -158,12 +158,14 @@ jobs:
           rm -rf .pages
           mkdir -p .pages
           find . -maxdepth 1 -type f -not -name '.blogger-migration.json' -not -name 'CNAME' -not -name '404.html' -print0 | xargs -0 -r -I{} cp --parents "{}" .pages/
-          for dir in assets image-prompt 2022 2023 2024 2025 2026 Open-Source about apps ai ai-tools blog blogs compare contact footprint guides laptops laptop-price-in-nepal recent-movies me mobile mobile-price-in-nepal mobile-prices-in-nepal news privacy tech-news phones products reviews search terms tools pdf-tools image-tools data-tools laxman-tools nepal-tools youtube youtube-tools nepal-jobs subdomain-finder gold-rates-nepal gold-price-in-nepal-today kalimati-format gold-price-history-nepal silver-price-in-nepal-today vacation jobs en hi Drumkit analytics data qrcodetool remove-gemini-watermark; do
+          for dir in assets image-prompt 2022 2023 2024 2025 2026 Open-Source about apps ai ai-tools blog blogs compare contact footprint guides laptops laptop-price-in-nepal recent-movies me mobile mobile-price-in-nepal mobile-prices-in-nepal news nepse privacy tech-news phones products reviews search terms tools pdf-tools image-tools data-tools laxman-tools nepal-tools youtube youtube-tools nepal-jobs subdomain-finder gold-rates-nepal gold-price-in-nepal-today kalimati-format gold-price-history-nepal silver-price-in-nepal-today vacation jobs en hi Drumkit analytics data qrcodetool remove-gemini-watermark; do
             if [ -d "$dir" ]; then cp -R "$dir" .pages/; fi
           done
           if [ -f nextjs-foundation/out/index.html ]; then
             cp -R nextjs-foundation/out/. .pages/
           fi
+          # Keep the NEPSE route bridge as the root site's custom 404 fallback.
+          cp 404.html .pages/404.html
           if [ -d tools/nepali-tools/type-nepali ]; then
             mkdir -p .pages/tools/nepali-tools
             cp -R tools/nepali-tools/type-nepali .pages/tools/nepali-tools/
@@ -193,6 +195,9 @@ jobs:
         continue-on-error: true
         run: |
           test -f .pages/index.html
+          test -s .pages/nepse/index.html
+          grep -q 'laxmannepal.github.io/nepse/' .pages/nepse/index.html
+          grep -q 'NEPSE Terminal' .pages/404.html
           test -f .pages/nepal-jobs/index.html
           test -f .pages/nepal-jobs/jobs.js
           test -f .pages/nepal-jobs/jobs.css
