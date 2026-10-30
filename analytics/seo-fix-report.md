@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-10-30T13:07:55.137023+00:00.
+Generated from the latest analytics snapshot: 2026-10-30T22:28:36.497508+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,56 +13,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/honor-600-pro-5g-12gb-512gb/ — SEO score 0/100
-- Issues: Audit error: ConnectionError
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: mobile price in nepal/phones/honor 600 pro 5g 12gb 512gb |…
-- Current description: Missing
-- Recommended description: Learn about mobile price in nepal/phones/honor 600 pro 5g 12gb 512gb with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: mobile price in nepal/phones/honor 600 pro 5g 12gb 512gb
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/honor-x5d-plus/ — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: mobile price in nepal/phones/honor x5d plus | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about mobile price in nepal/phones/honor x5d plus with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: mobile price in nepal/phones/honor x5d plus
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/infinix-note-edge/ — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: mobile price in nepal/phones/infinix note edge | Laxman Nep…
-- Current description: Missing
-- Recommended description: Learn about mobile price in nepal/phones/infinix note edge with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: mobile price in nepal/phones/infinix note edge
-- Top queries: No page-query rows
-
-### /ne/ — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: ne | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about ne with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: ne
-- Top queries: No page-query rows
-
-### /tech-news/ai-smart-glasses-privacy-recording-explained/ — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: tech news/ai smart glasses privacy recording explained | La…
-- Current description: Missing
-- Recommended description: Learn about tech news/ai smart glasses privacy recording explained with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: tech news/ai smart glasses privacy recording explained
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -105,16 +55,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/05/how to make free website with euorg.html
 - Top queries: No page-query rows
 
-### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/06/top 10 free online tools will save you.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2025/06/top 10 free online tools will save you.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/06/top 10 free online tools will save you.html
-- Top queries: No page-query rows
-
 ### /2023/01/how-to-extract-youtube-video-title.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -123,6 +63,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/01/how to extract youtube video title.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/01/how to extract youtube video title.html
+- Top queries: No page-query rows
+
+### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/06/top 10 free online tools will save you.html | Laxma…
+- Current description: Missing
+- Recommended description: Learn about 2025/06/top 10 free online tools will save you.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/06/top 10 free online tools will save you.html
 - Top queries: No page-query rows
 
 ### /p/link-shortner-generator.html — SEO score 0/100
@@ -225,6 +175,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2020/11/use mobile data in aeroplane mode.html
 - Top queries: No page-query rows
 
+### /2024/09/convert-image-to-pdf-free-tools.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/09/convert image to pdf free tools.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2024/09/convert image to pdf free tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/09/convert image to pdf free tools.html
+- Top queries: No page-query rows
+
 ### /2024/02/m3um3u8-player-tool-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -235,14 +195,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/02/m3um3u8 player tool by laxman nepal.html
 - Top queries: No page-query rows
 
-### /2024/09/convert-image-to-pdf-free-tools.html — SEO score 0/100
+### /2024/10/top-20-websites-for-modded-apks-your.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: 2024/09/convert image to pdf free tools.html | Laxman Nepal
+- Recommended title: 2024/10/top 20 websites for modded apks your.html | Laxman…
 - Current description: Missing
-- Recommended description: Learn about 2024/09/convert image to pdf free tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/09/convert image to pdf free tools.html
+- Recommended description: Learn about 2024/10/top 20 websites for modded apks your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/10/top 20 websites for modded apks your.html
 - Top queries: No page-query rows
 
 ### /p/pdf.html — SEO score 0/100
@@ -273,16 +233,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/youtube tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/youtube tools.html
-- Top queries: No page-query rows
-
-### /2024/10/top-20-websites-for-modded-apks-your.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/10/top 20 websites for modded apks your.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2024/10/top 20 websites for modded apks your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/10/top 20 websites for modded apks your.html
 - Top queries: No page-query rows
 
 ### /2025/06/facebook-video-downloader-save-hd.html — SEO score 0/100
@@ -465,16 +415,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/07/whatsapp direct message send without.html
 - Top queries: No page-query rows
 
-### /2023/09/all-in-one-image-converter-online.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/09/all in one image converter online.html | Laxman Nep…
-- Current description: Missing
-- Recommended description: Learn about 2023/09/all in one image converter online.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/09/all in one image converter online.html
-- Top queries: No page-query rows
-
 ### /2024/09/netflix-free-website-watch-movies.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -523,6 +463,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/image editor by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/image editor by laxman nepal.html
+- Top queries: No page-query rows
+
+### /2023/09/all-in-one-image-converter-online.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/09/all in one image converter online.html | Laxman Nep…
+- Current description: Missing
+- Recommended description: Learn about 2023/09/all in one image converter online.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/09/all in one image converter online.html
 - Top queries: No page-query rows
 
 ### /2023/09/bs-to-ad-nepali-date-converter-ad-to-bs.html — SEO score 0/100
@@ -1043,6 +993,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/laxman nepal search.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/laxman nepal search.html
+- Top queries: No page-query rows
+
+### /p/laxman-nepal-website.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/laxman nepal website.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/laxman nepal website.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/laxman nepal website.html
 - Top queries: No page-query rows
 
 ### /p/loan — SEO score 0/100
@@ -2675,6 +2635,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: HONOR 600 Pro 5G 12GB/256GB Price in Nepal
 - Top queries: No page-query rows
 
+### /mobile-price-in-nepal/phones/honor-600-pro-5g-12gb-512gb/ — SEO score 85/100
+- Issues: Title length 64
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: HONOR 600 Pro 5G 12GB/512GB Price in Nepal, Specs & Store Offers
+- Recommended title: HONOR 600 Pro 5G 12GB/512GB Price in Nepal | Laxman Nepal
+- Current description: Compare HONOR 600 Pro 5G 12GB/512GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product im
+- Recommended description: Learn about HONOR 600 Pro 5G 12GB/512GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: HONOR 600 Pro 5G 12GB/512GB Price in Nepal
+- Top queries: No page-query rows
+
 ### /mobile-price-in-nepal/phones/honor-600-pro/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -2783,6 +2753,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare HONOR X5d Plus 4GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product image
 - Recommended description: Learn about HONOR X5d Plus 4GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: HONOR X5d Plus 4GB/128GB Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/honor-x5d-plus/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Honor X5d Plus Price in Nepal, Specs & Store Offers | Laxman Nepa
+- Recommended title: Honor X5d Plus Price in Nepal | Laxman Nepal
+- Current description: Compare Honor X5d Plus price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Honor X5d Plus Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Honor X5d Plus Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/honor-x6d-5g-4gb-128gb/ — SEO score 85/100
@@ -3033,6 +3013,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Infinix Note Edge in Nepal 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and p
 - Recommended description: Learn about Infinix Note Edge in Nepal 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Infinix Note Edge in Nepal 8GB/256GB Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/infinix-note-edge/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Infinix Note Edge Price in Nepal, Specs & Store Offers | Laxman N
+- Recommended title: Infinix Note Edge Price in Nepal | Laxman Nepal
+- Current description: Compare Infinix Note Edge price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Infinix Note Edge Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Infinix Note Edge Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/infinix-smart-20-4g-4gb-128gb/ — SEO score 85/100
@@ -5075,6 +5065,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Mobile Phones in Nepal
 - Top queries: No page-query rows
 
+### /ne/ — SEO score 85/100
+- Issues: Thin content (98 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laxman Nepal — Technology, Tools & AI
+- Recommended title: प्रविधि, टुल्स र AI | Laxman Nepal
+- Current description: Practical technology news, reviews, guides, product research, free tools, AI resources and YouTube intelligence.
+- Recommended description: Learn about प्रविधि, टुल्स र AI with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: प्रविधि, टुल्स र AI
+- Top queries: No page-query rows
+
 ### /ne/blog/ — SEO score 85/100
 - Issues: Description length 31
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -5163,6 +5163,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: AI glasses can offer hands-free translation, search and assistance, but cameras and microphones create difficult privacy questions in public spaces.
 - Recommended description: Learn about AI Smart Glasses Are Getting Smarter — But Privacy and Recording Remain Major Questions with practical steps, useful tips and clear guidance f…
 - Recommended H1: AI Smart Glasses Are Getting Smarter — But Privacy and Recording Rema…
+- Top queries: No page-query rows
+
+### /tech-news/ai-smart-glasses-privacy-recording-explained/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: AI Smart Glasses Privacy: What Users Should Know About Cameras an
+- Recommended title: AI Smart Glasses Privacy: What Users Should Know About Came…
+- Current description: AI glasses combine cameras, microphones and assistants. Here is what users should understand about capture indicators, consent and privacy controls.
+- Recommended description: Learn about AI Smart Glasses Privacy: What Users Should Know About Cameras and Recording with practical steps, useful tips and clear guidance from Laxman…
+- Recommended H1: AI Smart Glasses Privacy: What Users Should Know About Cameras and Re…
 - Top queries: No page-query rows
 
 ### /tech-news/alibaba-zhenwu-v900-qwen-3-8-max-ai-chip/ — SEO score 85/100
