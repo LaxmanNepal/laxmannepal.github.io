@@ -190,6 +190,9 @@ def main():
     items=research(); (OUT/"research.json").write_text(json.dumps(items,ensure_ascii=False,indent=2),encoding="utf-8")
     log(f"Collected {len(items)} research candidates.")
     data=call_model(items,topic,script_override)
+    # Only allow source URLs actually discovered in the research stage; reject invented citations.
+    allowed_urls={x["url"] for x in items}
+    data["sources"]=[s for s in data.get("sources",[]) if isinstance(s,dict) and s.get("url") in allowed_urls]
     if data.get("decision")!="MAKE":
         (OUT/"latest.json").write_text(json.dumps({"status":"skipped","reason":"Evidence or topic strength insufficient","research":items},ensure_ascii=False,indent=2),encoding="utf-8")
         log("No suitable topic; safely skipped."); return
