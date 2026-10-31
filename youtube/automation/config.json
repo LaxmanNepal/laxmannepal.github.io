@@ -1,0 +1,38 @@
+{
+  "channel": "laxmannepalofficial",
+  "language": "Nepali",
+  "region": "NP",
+  "duration_target_seconds": 45,
+  "posting_time_nepal": "18:15",
+  "timezone": "Asia/Kathmandu",
+  "research": {
+    "max_items": 20,
+    "google_news_query": "Nepal technology AI apps digital services",
+    "youtube_queries": [
+      "Nepal tech AI tools",
+      "Nepali technology apps"
+    ],
+    "lookback_hours": 36
+  },
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "brand": "Laxman Nepal",
+    "accent": "#20B8A5",
+    "background": "#071522",
+    "music_file": "assets/background.mp3"
+  },
+  "publishing": {
+    "youtube": true,
+    "facebook": true,
+    "instagram": true,
+    "privacy_status": "public",
+    "made_for_kids": false
+  },
+  "safety": {
+    "require_sources": true,
+    "skip_if_no_reliable_topic": true,
+    "default_auto_publish": false
+  }
+}
