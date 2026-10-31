@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-10-30T22:28:36.497508+00:00.
+Generated from the latest analytics snapshot: 2026-10-31T05:54:50.463095+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -85,6 +85,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/link shortner generator.html
 - Top queries: No page-query rows
 
+### /p/cookies-policy.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/cookies policy.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/cookies policy.html
+- Top queries: No page-query rows
+
 ### /2025/07/image-prompt.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -103,16 +113,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/contact us.html
-- Top queries: No page-query rows
-
-### /p/cookies-policy.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/cookies policy.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/cookies policy.html
 - Top queries: No page-query rows
 
 ### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
@@ -1136,7 +1136,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /apps/ — SEO score 55/100
-- Issues: Title length 27, Description length 20, Thin content (128 words)
+- Issues: Title length 27, Description length 20, Thin content (88 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Apps & Tools — Laxman Nepal
 - Recommended title: Apps & Tools | Laxman Nepal
@@ -1146,7 +1146,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /apps/details/ — SEO score 55/100
-- Issues: Title length 26, Description length 59, Thin content (89 words)
+- Issues: Title length 26, Description length 59, Thin content (29 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: App details — Laxman Nepal
 - Recommended title: Explore more apps | Laxman Nepal
@@ -1165,8 +1165,58 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Laptops | Laxman Nepal
 - Top queries: No page-query rows
 
+### /pdf-tools/images-to-pdf/ — SEO score 55/100
+- Issues: Title length 28, Description length 66, Thin content (134 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Images to PDF — Laxman Nepal
+- Recommended title: Images to PDF | Laxman Nepal
+- Current description: Convert JPG, PNG and WebP images to a PDF locally in your browser.
+- Recommended description: Learn about Images to PDF with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Images to PDF
+- Top queries: No page-query rows
+
+### /pdf-tools/optimize/ — SEO score 55/100
+- Issues: Title length 27, Description length 55, Thin content (110 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Optimize PDF — Laxman Nepal
+- Recommended title: Optimize PDF | Laxman Nepal
+- Current description: Optimize a PDF with browser-side structural processing.
+- Recommended description: Learn about Optimize PDF with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Optimize PDF
+- Top queries: No page-query rows
+
+### /pdf-tools/pdf-to-image/ — SEO score 55/100
+- Issues: Title length 27, Description length 56, Thin content (124 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: PDF to Image — Laxman Nepal
+- Recommended title: PDF to Image | Laxman Nepal
+- Current description: Render PDF pages as PNG images directly in your browser.
+- Recommended description: Learn about PDF to Image with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: PDF to Image
+- Top queries: No page-query rows
+
+### /pdf-tools/rotate/ — SEO score 55/100
+- Issues: Title length 25, Description length 57, Thin content (122 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Rotate PDF — Laxman Nepal
+- Recommended title: Rotate PDF | Laxman Nepal
+- Current description: Rotate PDF pages and download the result in your browser.
+- Recommended description: Learn about Rotate PDF with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Rotate PDF
+- Top queries: No page-query rows
+
+### /pdf-tools/watermark/ — SEO score 55/100
+- Issues: Title length 28, Description length 63, Thin content (120 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Watermark PDF — Laxman Nepal
+- Recommended title: Watermark PDF | Laxman Nepal
+- Current description: Add a text watermark to every PDF page locally in your browser.
+- Recommended description: Learn about Watermark PDF with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Watermark PDF
+- Top queries: No page-query rows
+
 ### /phones/ — SEO score 55/100
-- Issues: Title length 21, Description length 68, Thin content (86 words)
+- Issues: Title length 21, Description length 68, Thin content (84 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Phones | Laxman Nepal
 - Recommended title: Phones | Laxman Nepal
@@ -1316,7 +1366,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /blog/ — SEO score 70/100
-- Issues: Title length 19, Thin content (96 words)
+- Issues: Title length 19, Thin content (56 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Blog — Laxman Nepal
 - Recommended title: Useful ideas. Explained simply. | Laxman Nepal
@@ -1336,7 +1386,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /en/news/ — SEO score 70/100
-- Issues: Description length 31, Thin content (92 words)
+- Issues: Description length 31, Thin content (90 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: News — Laxman Nepal | Laxman Nepal
 - Recommended title: News | Laxman Nepal
@@ -1346,7 +1396,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /en/reviews/ — SEO score 70/100
-- Issues: Description length 34, Thin content (92 words)
+- Issues: Description length 34, Thin content (90 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Reviews — Laxman Nepal | Laxman Nepal
 - Recommended title: Reviews | Laxman Nepal
@@ -1356,7 +1406,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /en/youtube/ — SEO score 70/100
-- Issues: Description length 34, Thin content (118 words)
+- Issues: Description length 34, Thin content (116 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: YouTube — Laxman Nepal | Laxman Nepal
 - Recommended title: YouTube | Laxman Nepal
@@ -1376,7 +1426,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /hi/ai/ — SEO score 70/100
-- Issues: Description length 30, Thin content (102 words)
+- Issues: Description length 30, Thin content (100 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: एआई — Laxman Nepal | Laxman Nepal
 - Recommended title: एआई | Laxman Nepal
@@ -1386,7 +1436,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /hi/guides/ — SEO score 70/100
-- Issues: Description length 31, Thin content (102 words)
+- Issues: Description length 31, Thin content (100 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: गाइड — Laxman Nepal | Laxman Nepal
 - Recommended title: गाइड | Laxman Nepal
@@ -1396,7 +1446,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /hi/news/ — SEO score 70/100
-- Issues: Description length 33, Thin content (102 words)
+- Issues: Description length 33, Thin content (100 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: समाचार — Laxman Nepal | Laxman Nepal
 - Recommended title: समाचार | Laxman Nepal
@@ -1406,7 +1456,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /hi/reviews/ — SEO score 70/100
-- Issues: Description length 33, Thin content (98 words)
+- Issues: Description length 33, Thin content (96 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: रिव्यू — Laxman Nepal | Laxman Nepal
 - Recommended title: रिव्यू | Laxman Nepal
@@ -1416,7 +1466,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /hi/tools/ — SEO score 70/100
-- Issues: Description length 32, Thin content (98 words)
+- Issues: Description length 32, Thin content (96 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: टूल्स — Laxman Nepal | Laxman Nepal
 - Recommended title: टूल्स | Laxman Nepal
@@ -1426,7 +1476,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /hi/youtube/ — SEO score 70/100
-- Issues: Description length 34, Thin content (98 words)
+- Issues: Description length 34, Thin content (96 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: यूट्यूब — Laxman Nepal | Laxman Nepal
 - Recommended title: यूट्यूब | Laxman Nepal
@@ -1446,7 +1496,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptops/ — SEO score 70/100
-- Issues: Description length 62, Thin content (92 words)
+- Issues: Description length 62, Thin content (90 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptops, specs & buying information | Laxman Nepal
 - Recommended title: Laptops, specs & buying information | Laxman Nepal
@@ -1466,7 +1516,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /mobile-prices-in-nepal/ — SEO score 70/100
-- Issues: Description length 61, Thin content (94 words)
+- Issues: Description length 61, Thin content (92 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Mobile Prices in Nepal | Laxman Nepal
 - Recommended title: Mobile Prices in Nepal | Laxman Nepal
@@ -1476,7 +1526,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /ne/ai/ — SEO score 70/100
-- Issues: Description length 30, Thin content (102 words)
+- Issues: Description length 30, Thin content (100 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: एआई — Laxman Nepal | Laxman Nepal
 - Recommended title: एआई | Laxman Nepal
@@ -1486,7 +1536,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /ne/guides/ — SEO score 70/100
-- Issues: Description length 31, Thin content (102 words)
+- Issues: Description length 31, Thin content (100 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: गाइड — Laxman Nepal | Laxman Nepal
 - Recommended title: गाइड | Laxman Nepal
@@ -1496,7 +1546,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /ne/news/ — SEO score 70/100
-- Issues: Description length 33, Thin content (102 words)
+- Issues: Description length 33, Thin content (100 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: समाचार — Laxman Nepal | Laxman Nepal
 - Recommended title: समाचार | Laxman Nepal
@@ -1506,7 +1556,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /ne/reviews/ — SEO score 70/100
-- Issues: Description length 33, Thin content (98 words)
+- Issues: Description length 33, Thin content (96 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: रिभ्यु — Laxman Nepal | Laxman Nepal
 - Recommended title: रिभ्यु | Laxman Nepal
@@ -1516,7 +1566,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /ne/tools/ — SEO score 70/100
-- Issues: Description length 32, Thin content (98 words)
+- Issues: Description length 32, Thin content (96 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: टुल्स — Laxman Nepal | Laxman Nepal
 - Recommended title: टुल्स | Laxman Nepal
@@ -1526,7 +1576,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /ne/youtube/ — SEO score 70/100
-- Issues: Description length 34, Thin content (98 words)
+- Issues: Description length 34, Thin content (96 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: युट्युब — Laxman Nepal | Laxman Nepal
 - Recommended title: युट्युब | Laxman Nepal
@@ -1535,58 +1585,28 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: युट्युब
 - Top queries: No page-query rows
 
-### /pdf-tools/images-to-pdf/ — SEO score 70/100
-- Issues: Title length 28, Description length 66
+### /nepse/ — SEO score 70/100
+- Issues: Description length 58, Missing canonical
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Images to PDF — Laxman Nepal
-- Recommended title: Images to PDF | Laxman Nepal
-- Current description: Convert JPG, PNG and WebP images to a PDF locally in your browser.
-- Recommended description: Learn about Images to PDF with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Images to PDF
+- Current title: NEPSE Terminal — Market Intelligence
+- Recommended title: Market overview | Laxman Nepal
+- Current description: NEPSE market intelligence and short-term trading dashboard
+- Recommended description: Learn about Market overview with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Market overview
 - Top queries: No page-query rows
 
-### /pdf-tools/optimize/ — SEO score 70/100
-- Issues: Title length 27, Description length 55
+### /pdf-tools/split/ — SEO score 70/100
+- Issues: Title length 24, Thin content (123 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Optimize PDF — Laxman Nepal
-- Recommended title: Optimize PDF | Laxman Nepal
-- Current description: Optimize a PDF with browser-side structural processing.
-- Recommended description: Learn about Optimize PDF with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Optimize PDF
-- Top queries: No page-query rows
-
-### /pdf-tools/pdf-to-image/ — SEO score 70/100
-- Issues: Title length 27, Description length 56
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: PDF to Image — Laxman Nepal
-- Recommended title: PDF to Image | Laxman Nepal
-- Current description: Render PDF pages as PNG images directly in your browser.
-- Recommended description: Learn about PDF to Image with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: PDF to Image
-- Top queries: No page-query rows
-
-### /pdf-tools/rotate/ — SEO score 70/100
-- Issues: Title length 25, Description length 57
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Rotate PDF — Laxman Nepal
-- Recommended title: Rotate PDF | Laxman Nepal
-- Current description: Rotate PDF pages and download the result in your browser.
-- Recommended description: Learn about Rotate PDF with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Rotate PDF
-- Top queries: No page-query rows
-
-### /pdf-tools/watermark/ — SEO score 70/100
-- Issues: Title length 28, Description length 63
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Watermark PDF — Laxman Nepal
-- Recommended title: Watermark PDF | Laxman Nepal
-- Current description: Add a text watermark to every PDF page locally in your browser.
-- Recommended description: Learn about Watermark PDF with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Watermark PDF
+- Current title: Split PDF — Laxman Nepal
+- Recommended title: Split PDF | Laxman Nepal
+- Current description: Extract selected PDF pages into a new document locally in your browser.
+- Recommended description: Learn about Split PDF with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Split PDF
 - Top queries: No page-query rows
 
 ### /products/ — SEO score 70/100
-- Issues: Description length 57, Thin content (86 words)
+- Issues: Description length 57, Thin content (84 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Product research | Laxman Nepal
 - Recommended title: Product research | Laxman Nepal
@@ -1645,6 +1665,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Xiaomi MiMo-V2.6 AI Models: Pro, Flash and UltraSpeed Explained
 - Top queries: No page-query rows
 
+### /terms/ — SEO score 70/100
+- Issues: Title length 20, Thin content (135 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Terms — Laxman Nepal
+- Recommended title: Terms of use. | Laxman Nepal
+- Current description: Terms of use for the Laxman Nepal website, browser-based tools, tutorials and digital resources.
+- Recommended description: Learn about Terms of use. with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Terms of use.
+- Top queries: No page-query rows
+
 ### /tools/generator/slow-and-reverb-generator/ — SEO score 70/100
 - Issues: Title length 15, Description length 62
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1653,6 +1683,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Choose a vibe, then fine-tune Speed, Reverb and Impulse above.
 - Recommended description: Learn about Slowed + Reverb with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Slowed + Reverb
+- Top queries: No page-query rows
+
+### /tools/nepali-tools/ — SEO score 70/100
+- Issues: Title length 27, Thin content (129 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Nepali Tools — Laxman Nepal
+- Recommended title: Nepali Tools | Laxman Nepal
+- Current description: Free Nepali language tools, including an online Nepali Unicode typing tool.
+- Recommended description: Learn about Nepali Tools with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Nepali Tools
 - Top queries: No page-query rows
 
 ### /youtube-video-seo-analyzer.html — SEO score 70/100
@@ -1996,13 +2036,23 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /blogs/ — SEO score 85/100
-- Issues: Thin content (101 words)
+- Issues: Thin content (34 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Blogs & Tutorials | Laxman Nepal
 - Recommended title: Blogs & Tutorials | Laxman Nepal
 - Current description: Laxman Nepal practical tutorials about YouTube, AI, Windows, command-line tools and useful digital workflows.
 - Recommended description: Learn about Blogs & Tutorials with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Blogs & Tutorials
+- Top queries: No page-query rows
+
+### /blogs/claude-faceless-video-master-prompt/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: How to Make a Complete Faceless YouTube Video With Claude AI | La
+- Recommended title: Make a Complete Faceless YouTube Video With Claude AI | Lax…
+- Current description: A copy-paste Claude master prompt that interviews you about language, country, audience, channel, topic, voice, visuals, tools and editing before building a com
+- Recommended description: Learn about Make a Complete Faceless YouTube Video With Claude AI with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Make a Complete Faceless YouTube Video With Claude AI
 - Top queries: No page-query rows
 
 ### /blogs/download-entire-youtube-channel-using-cmd/ — SEO score 85/100
@@ -2016,7 +2066,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /compare/ — SEO score 85/100
-- Issues: Thin content (92 words)
+- Issues: Thin content (90 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Compare technology products | Laxman Nepal
 - Recommended title: Compare technology products | Laxman Nepal
@@ -2106,7 +2156,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /hi/ — SEO score 85/100
-- Issues: Thin content (94 words)
+- Issues: Thin content (92 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laxman Nepal — Technology, Tools & AI
 - Recommended title: टेक्नोलॉजी, टूल्स और AI | Laxman Nepal
@@ -2146,7 +2196,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /languages/ — SEO score 85/100
-- Issues: Thin content (112 words)
+- Issues: Thin content (110 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laxman Nepal — Technology, Tools & AI
 - Recommended title: Choose your language. | Laxman Nepal
@@ -2513,16 +2563,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Apple iPhone 18 Pro Max price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images
 - Recommended description: Learn about Apple iPhone 18 Pro Max Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Apple iPhone 18 Pro Max Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/apple-iphone-18-pro/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Apple iPhone 18 Pro Price in Nepal, Specs & Store Offers | Laxman
-- Recommended title: Apple iPhone 18 Pro Price in Nepal | Laxman Nepal
-- Current description: Compare Apple iPhone 18 Pro price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Apple iPhone 18 Pro Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Apple iPhone 18 Pro Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/apple-iphone-air-256gb/ — SEO score 85/100
@@ -5066,7 +5106,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /ne/ — SEO score 85/100
-- Issues: Thin content (98 words)
+- Issues: Thin content (96 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laxman Nepal — Technology, Tools & AI
 - Recommended title: प्रविधि, टुल्स र AI | Laxman Nepal
@@ -5106,13 +5146,13 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /news/ — SEO score 85/100
-- Issues: Title length 64
+- Issues: Title length 63
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Latest News — Nepal, World, Technology & Trending | Laxman Nepal
-- Recommended title: What’s happening. In Nepal and beyond. | Laxman Nepal
-- Current description: Browse automatically updated news from Nepal and around the world, including technology, business, politics, science, sports, entertainment and trending topics
-- Recommended description: Learn about What’s happening. In Nepal and beyond. with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: What’s happening. In Nepal and beyond.
+- Current title: नेपाली समाचार — नेपाल, विश्व, प्रविधि र ताजा खबर | Laxman Nepal
+- Recommended title: नेपालका ताजा समाचार। विश्वभरका खबर पनि। | Laxman Nepal
+- Current description: नेपालका पछिल्ला सात दिनका नेपाली भाषाका समाचार। राजनीति, अर्थतन्त्र, प्रविधि, विज्ञान, खेलकुद, मनोरञ्जन, स्वास्थ्य र शिक्षाका ताजा खबर; विश्व समाचारका लागि छुट्
+- Recommended description: Learn about नेपालका ताजा समाचार। विश्वभरका खबर पनि। with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: नेपालका ताजा समाचार। विश्वभरका खबर पनि।
 - Top queries: No page-query rows
 
 ### /pdf-tools/ — SEO score 85/100
@@ -5123,16 +5163,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Free PDF tools by Laxman Nepal. Browse tools automatically discovered from this category folder.
 - Recommended description: Learn about PDF tools: what each utility is for with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: PDF tools: what each utility is for
-- Top queries: No page-query rows
-
-### /pdf-tools/split/ — SEO score 85/100
-- Issues: Title length 24
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Split PDF — Laxman Nepal
-- Recommended title: Split PDF | Laxman Nepal
-- Current description: Extract selected PDF pages into a new document locally in your browser.
-- Recommended description: Learn about Split PDF with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Split PDF
 - Top queries: No page-query rows
 
 ### /privacy/ — SEO score 85/100
@@ -5146,7 +5176,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /reviews/ — SEO score 85/100
-- Issues: Thin content (93 words)
+- Issues: Thin content (91 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Technology reviews & buying research | Laxman Nepal
 - Recommended title: Technology reviews & buying research | Laxman Nepal
@@ -5355,24 +5385,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Xiaomi 18 Pro and 18 Pro Max: 8,500mAh Battery, 200MP Camera and What…
 - Top queries: No page-query rows
 
-### /terms/ — SEO score 85/100
-- Issues: Title length 20
+### /tools/generator/ — SEO score 85/100
+- Issues: Thin content (117 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Terms — Laxman Nepal
-- Recommended title: Terms of use. | Laxman Nepal
-- Current description: Terms of use for the Laxman Nepal website, browser-based tools, tutorials and digital resources.
-- Recommended description: Learn about Terms of use. with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Terms of use.
-- Top queries: No page-query rows
-
-### /tools/nepali-tools/ — SEO score 85/100
-- Issues: Title length 27
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Nepali Tools — Laxman Nepal
-- Recommended title: Nepali Tools | Laxman Nepal
-- Current description: Free Nepali language tools, including an online Nepali Unicode typing tool.
-- Recommended description: Learn about Nepali Tools with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Nepali Tools
+- Current title: Free Generators — Laxman Nepal
+- Recommended title: Small tools. Big possibilities. | Laxman Nepal
+- Current description: Free browser-based generators by Laxman Nepal. Create audio effects and useful digital assets with simple, privacy-friendly tools.
+- Recommended description: Learn about Small tools. Big possibilities. with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Small tools. Big possibilities.
 - Top queries: No page-query rows
 
 ### /tools/nepali-tools/preeti-unicode-converter/ — SEO score 85/100
@@ -5576,7 +5596,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /blogs — SEO score 85/100
-- Issues: Thin content (101 words)
+- Issues: Thin content (34 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Blogs & Tutorials | Laxman Nepal
 - Recommended title: Blogs & Tutorials | Laxman Nepal
