@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-31T05:52:14.397255+00:00",
-  "count": 154,
+  "updated_at": "2026-10-31T12:40:59.639464+00:00",
+  "count": 156,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -765,6 +765,25 @@
       ]
     },
     {
+      "id": "oppo-a6",
+      "name": "OPPO A6",
+      "brand": "OPPO",
+      "variants": [
+        "8GB+256GB",
+        "8GB+128GB"
+      ],
+      "price": 40999,
+      "max_price": 46999,
+      "original_price": null,
+      "rams": [
+        "8GB"
+      ],
+      "storages": [
+        "128GB",
+        "256GB"
+      ]
+    },
+    {
       "id": "oppo-a6-pro-4g",
       "name": "OPPO A6 Pro 4G",
       "brand": "OPPO",
@@ -786,16 +805,18 @@
       "name": "OPPO A6c",
       "brand": "OPPO",
       "variants": [
-        "4GB + 64GB"
+        "4GB + 64GB",
+        "4GB + 128GB"
       ],
       "price": 24999,
-      "max_price": 24999,
+      "max_price": 30999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -803,15 +824,17 @@
       "name": "OPPO A6k 4G",
       "brand": "OPPO",
       "variants": [
-        "6GB + 256GB"
+        "6GB + 256GB",
+        "6GB + 128GB"
       ],
-      "price": 43999,
+      "price": 38999,
       "max_price": 43999,
       "original_price": null,
       "rams": [
         "6GB"
       ],
       "storages": [
+        "128GB",
         "256GB"
       ]
     },
@@ -837,16 +860,20 @@
       "name": "OPPO A6x",
       "brand": "OPPO",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "6GB + 256GB",
+        "4GB + 128GB"
       ],
-      "price": 32499,
-      "max_price": 32499,
+      "price": 27999,
+      "max_price": 34999,
       "original_price": null,
       "rams": [
+        "4GB",
         "6GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -2523,16 +2550,35 @@
       "name": "ZTE Nubia A57",
       "brand": "ZTE",
       "variants": [
-        "4GB + 64GB"
+        "4GB + 64GB",
+        "4GB + 128GB"
       ],
       "price": 21999,
-      "max_price": 21999,
+      "max_price": 24499,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
+      ]
+    },
+    {
+      "id": "zte-nubia-a77",
+      "name": "ZTE Nubia A77",
+      "brand": "ZTE",
+      "variants": [
+        "4GB + 128GB"
+      ],
+      "price": 25499,
+      "max_price": 25499,
+      "original_price": null,
+      "rams": [
+        "4GB"
+      ],
+      "storages": [
+        "128GB"
       ]
     },
     {
