@@ -23,7 +23,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: nepali-tech-shorts-\${{ github.ref }}
+  group: nepali-tech-shorts-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -31,32 +31,32 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 35
     env:
-      ANTHROPIC_API_KEY: \${{ secrets.ANTHROPIC_API_KEY }}
-      ANTHROPIC_MODEL: \${{ vars.ANTHROPIC_MODEL }}
-      GROQ_API_KEY: \${{ secrets.GROQ_API_KEY }}
-      GROQ_MODEL: \${{ vars.GROQ_MODEL }}
-      ELEVENLABS_API_KEY: \${{ secrets.ELEVENLABS_API_KEY }}
-      ELEVENLABS_VOICE_ID: \${{ secrets.ELEVENLABS_VOICE_ID }}
-      YOUTUBE_API_KEY: \${{ secrets.YOUTUBE_API_KEY }}
-      YOUTUBE_CLIENT_SECRETS_JSON: \${{ secrets.YOUTUBE_CLIENT_SECRETS_JSON }}
-      YOUTUBE_REFRESH_TOKEN: \${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-      META_PAGE_ACCESS_TOKEN: \${{ secrets.META_PAGE_ACCESS_TOKEN }}
-      META_PAGE_ID: \${{ secrets.META_PAGE_ID }}
-      META_IG_USER_ID: \${{ secrets.META_IG_USER_ID }}
-      META_GRAPH_API_VERSION: \${{ vars.META_GRAPH_API_VERSION }}
-      R2_ACCOUNT_ID: \${{ secrets.R2_ACCOUNT_ID }}
-      R2_ACCESS_KEY_ID: \${{ secrets.R2_ACCESS_KEY_ID }}
-      R2_SECRET_ACCESS_KEY: \${{ secrets.R2_SECRET_ACCESS_KEY }}
-      R2_BUCKET: \${{ secrets.R2_BUCKET }}
-      R2_PUBLIC_BASE_URL: \${{ secrets.R2_PUBLIC_BASE_URL }}
-      TOPIC_OVERRIDE: \${{ inputs.topic }}
-      SCRIPT_OVERRIDE: \${{ inputs.script }}
-      PUBLISH_NOW: \${{ inputs.publish || 'true' }}
-      AUTO_PUBLISH: \${{ vars.AUTO_PUBLISH }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      GROQ_MODEL: ${{ vars.GROQ_MODEL }}
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      YOUTUBE_CLIENT_SECRETS_JSON: ${{ secrets.YOUTUBE_CLIENT_SECRETS_JSON }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+      META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+      META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+      META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+      META_GRAPH_API_VERSION: ${{ vars.META_GRAPH_API_VERSION }}
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
+      TOPIC_OVERRIDE: ${{ inputs.topic }}
+      SCRIPT_OVERRIDE: ${{ inputs.script }}
+      PUBLISH_NOW: ${{ github.event_name == 'schedule' || inputs.publish }}
+      AUTO_PUBLISH: ${{ vars.AUTO_PUBLISH }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: \${{ github.ref_name }}
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -82,7 +82,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: laxmannepal-daily-short-\${{ github.run_number }}
+          name: laxmannepal-daily-short-${{ github.run_number }}
           path: |
             youtube/automation/output/*.mp4
             youtube/automation/output/*.json
