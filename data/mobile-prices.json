@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T07:16:24.711316+00:00",
+  "updated_at": "2026-10-31T07:04:57.937554+00:00",
   "status": "Daily retailer refresh; last-known offers are marked stale when a source refresh is incomplete",
   "source_status": {
     "Brother Mart": {
@@ -73,7 +73,7 @@
           "store": "GBN Store",
           "price": 22999,
           "url": "https://gbnstore.com/product/ai-nova-2-5g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -86,7 +86,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 22999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/ai-nova-2-5g",
@@ -122,6 +122,10 @@
         {
           "date": "2026-10-30",
           "price": 22999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 22999
         }
       ]
     },
@@ -136,7 +140,7 @@
           "store": "GBN Store",
           "price": 19999,
           "url": "https://gbnstore.com/product/ai-pulse-2",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -149,7 +153,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 19999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/ai-pulse-2",
@@ -184,6 +188,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 19999
+        },
+        {
+          "date": "2026-10-31",
           "price": 19999
         }
       ]
@@ -295,14 +303,14 @@
           "store": "Neo Store",
           "price": 127499,
           "url": "https://www.neostore.com.np/product/apple-iphone-15",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         },
         {
           "store": "Quality Computer",
           "price": 127499,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-15-48358?category=833&order=create_date+desc",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -358,7 +366,7 @@
         "colours": "Black, Blue, Green, Yellow, Pink",
         "colour": "Black or Pink or Blue or Green or Yellow"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "product": "iPhone 15",
       "category": "Mobile",
       "color": "Black, Green and Pink",
@@ -429,6 +437,10 @@
         {
           "date": "2026-10-30",
           "price": 127499
+        },
+        {
+          "date": "2026-10-31",
+          "price": 127499
         }
       ]
     },
@@ -443,14 +455,14 @@
           "store": "Neo Store",
           "price": 146599,
           "url": "https://www.neostore.com.np/product/apple-iphone-16",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         },
         {
           "store": "Quality Computer",
           "price": 146599,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-16-51326?category=833&order=create_date+desc",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -510,7 +522,7 @@
         "colours": "Black, White, Pink, Teal, Ultramarine",
         "colour": "Ultramarine or Teal or Black or White or Pink"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "lock in your look.-": "dial in your exact desired look with more advanced skin-tone rendering",
       "align with your aesthetic. -": "customize the different moods of a photo",
       "make the most of your megapixels.": "easy to adjust tone and color simultaneously",
@@ -584,6 +596,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 146599
+        },
+        {
+          "date": "2026-10-31",
           "price": 146599
         }
       ]
@@ -734,7 +750,7 @@
           "store": "Quality Computer",
           "price": 173499,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-1-year-warranty-52079?category=833&order=create_date+desc",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -773,7 +789,7 @@
         "ram": "256GB or 512GB",
         "camera": "48MP Fusion, 26 mm, ƒ/1.6, sensor-shift OIS; 2x optical-quality zoom"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
@@ -827,6 +843,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 173499
+        },
+        {
+          "date": "2026-10-31",
           "price": 173499
         }
       ]
@@ -889,7 +909,7 @@
           "store": "Quality Computer",
           "price": 221299,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-pro-52081?category=833&order=create_date+desc",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -929,7 +949,7 @@
         "ram": "256GB or 512GB or 1TB",
         "camera": "48MP Fusion Main, 48MP Fusion Ultra Wide, 48MP Telephoto 4x (100 mm)"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
@@ -984,6 +1004,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 221299
+        },
+        {
+          "date": "2026-10-31",
           "price": 221299
         }
       ]
@@ -1137,7 +1161,7 @@
           "store": "Quality Computer",
           "price": 242499,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-pro-max-52082?category=833&order=create_date+desc",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -1179,7 +1203,7 @@
         "ram": "256GB or 512GB or 1TB or 2TB",
         "camera": "48MP Fusion, 24 mm, ƒ/1.78"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
@@ -1236,6 +1260,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 242499
+        },
+        {
+          "date": "2026-10-31",
           "price": 242499
         }
       ]
@@ -1617,7 +1645,7 @@
           "store": "Quality Computer",
           "price": 279900,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-18-pro-max-53386?category=833&order=create_date+desc",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -1662,7 +1690,7 @@
         "ram": "256GB or 512GB or 1TB or 2TB",
         "camera": "48MP Fusion, 24 mm, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
@@ -1723,6 +1751,10 @@
         {
           "date": "2026-10-30",
           "price": 279900
+        },
+        {
+          "date": "2026-10-31",
+          "price": 279900
         }
       ]
     },
@@ -1737,7 +1769,7 @@
           "store": "Quality Computer",
           "price": 190699,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-air-52080?category=833&order=create_date+desc",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -1775,7 +1807,7 @@
         "storage": "128GB, 256GB, 512GB, 1TB",
         "camera": "12MP TrueDepth with Center Stage, 4K recording"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
       "down payment (in %)": "Choose a Down Payment Percentage 20% 30% 40% 50%",
@@ -1829,6 +1861,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 190699
+        },
+        {
+          "date": "2026-10-31",
           "price": 190699
         }
       ]
@@ -1890,7 +1926,7 @@
           "store": "GBN Store",
           "price": 127499,
           "url": "https://gbnstore.com/product/iphone-15",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -1903,7 +1939,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 127499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-15",
@@ -1939,6 +1975,10 @@
         {
           "date": "2026-10-30",
           "price": 127499
+        },
+        {
+          "date": "2026-10-31",
+          "price": 127499
         }
       ]
     },
@@ -1953,7 +1993,7 @@
           "store": "GBN Store",
           "price": 146599,
           "url": "https://gbnstore.com/product/iphone-16",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -1966,7 +2006,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 146599,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-16",
@@ -2002,6 +2042,10 @@
         {
           "date": "2026-10-30",
           "price": 146599
+        },
+        {
+          "date": "2026-10-31",
+          "price": 146599
         }
       ]
     },
@@ -2016,7 +2060,7 @@
           "store": "GBN Store",
           "price": 173499,
           "url": "https://gbnstore.com/product/iphone-17",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -2029,7 +2073,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 173499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17",
@@ -2065,6 +2109,10 @@
         {
           "date": "2026-10-30",
           "price": 173499
+        },
+        {
+          "date": "2026-10-31",
+          "price": 173499
         }
       ]
     },
@@ -2079,7 +2127,7 @@
           "store": "GBN Store",
           "price": 221299,
           "url": "https://gbnstore.com/product/iphone-17-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -2092,7 +2140,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 221299,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17-pro",
@@ -2128,6 +2176,10 @@
         {
           "date": "2026-10-30",
           "price": 221299
+        },
+        {
+          "date": "2026-10-31",
+          "price": 221299
         }
       ]
     },
@@ -2142,7 +2194,7 @@
           "store": "GBN Store",
           "price": 242499,
           "url": "https://gbnstore.com/product/iphone-17-pro-max",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -2155,7 +2207,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 242499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17-pro-max",
@@ -2191,6 +2243,10 @@
         {
           "date": "2026-10-30",
           "price": 242499
+        },
+        {
+          "date": "2026-10-31",
+          "price": 242499
         }
       ]
     },
@@ -2205,7 +2261,7 @@
           "store": "GBN Store",
           "price": 132499,
           "url": "https://gbnstore.com/product/iphone-17e",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -2218,7 +2274,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 132499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-17e",
@@ -2254,6 +2310,10 @@
         {
           "date": "2026-10-30",
           "price": 132499
+        },
+        {
+          "date": "2026-10-31",
+          "price": 132499
         }
       ]
     },
@@ -2268,7 +2328,7 @@
           "store": "GBN Store",
           "price": 259900,
           "url": "https://gbnstore.com/product/iphone-18-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -2281,7 +2341,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 259900,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-18-pro",
@@ -2317,6 +2377,10 @@
         {
           "date": "2026-10-30",
           "price": 259900
+        },
+        {
+          "date": "2026-10-31",
+          "price": 259900
         }
       ]
     },
@@ -2331,7 +2395,7 @@
           "store": "GBN Store",
           "price": 279900,
           "url": "https://gbnstore.com/product/iphone-18-pro-max",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -2344,7 +2408,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 279900,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-18-pro-max",
@@ -2380,6 +2444,10 @@
         {
           "date": "2026-10-30",
           "price": 279900
+        },
+        {
+          "date": "2026-10-31",
+          "price": 279900
         }
       ]
     },
@@ -2394,7 +2462,7 @@
           "store": "GBN Store",
           "price": 190699,
           "url": "https://gbnstore.com/product/iphone-air",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -2407,7 +2475,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 190699,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/iphone-air",
@@ -2443,6 +2511,10 @@
         {
           "date": "2026-10-30",
           "price": 190699
+        },
+        {
+          "date": "2026-10-31",
+          "price": 190699
         }
       ]
     },
@@ -2457,7 +2529,7 @@
           "store": "GBN Store",
           "price": 21999,
           "url": "https://gbnstore.com/product/blackview-fort-1",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -2470,7 +2542,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 21999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-fort-1",
@@ -2506,6 +2578,10 @@
         {
           "date": "2026-10-30",
           "price": 21999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 21999
         }
       ]
     },
@@ -2520,7 +2596,7 @@
           "store": "GBN Store",
           "price": 13999,
           "url": "https://gbnstore.com/product/blackview-wave-10c",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -2533,7 +2609,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 13999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-wave-10c",
@@ -2569,6 +2645,10 @@
         {
           "date": "2026-10-30",
           "price": 13999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 13999
         }
       ]
     },
@@ -2583,7 +2663,7 @@
           "store": "GBN Store",
           "price": 9999,
           "url": "https://gbnstore.com/product/blackview-wave-2c",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -2596,7 +2676,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 9999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-wave-2c",
@@ -2632,6 +2712,10 @@
         {
           "date": "2026-10-30",
           "price": 9999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 9999
         }
       ]
     },
@@ -2646,7 +2730,7 @@
           "store": "GBN Store",
           "price": 16999,
           "url": "https://gbnstore.com/product/blackview-wave-7c",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -2659,7 +2743,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 16999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/blackview-wave-7c",
@@ -2694,6 +2778,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 16999
+        },
+        {
+          "date": "2026-10-31",
           "price": 16999
         }
       ]
@@ -2994,7 +3082,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/honor-600",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -3007,7 +3095,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-600",
@@ -3043,6 +3131,10 @@
         {
           "date": "2026-10-30",
           "price": 89999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 89999
         }
       ]
     },
@@ -3057,7 +3149,7 @@
           "store": "GBN Store",
           "price": 59999,
           "url": "https://gbnstore.com/product/honor-600-lite",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -3070,7 +3162,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 59999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-600-lite",
@@ -3105,6 +3197,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 59999
+        },
+        {
+          "date": "2026-10-31",
           "price": 59999
         }
       ]
@@ -3165,7 +3261,7 @@
           "store": "GBN Store",
           "price": 129999,
           "url": "https://gbnstore.com/product/honor-600-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -3178,7 +3274,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 129999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-600-pro",
@@ -3213,6 +3309,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 129999
+        },
+        {
+          "date": "2026-10-31",
           "price": 129999
         }
       ]
@@ -3276,7 +3376,7 @@
           "store": "GBN Store",
           "price": 179999,
           "url": "https://gbnstore.com/product/honor-magic-8-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -3289,7 +3389,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 179999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-magic-8-pro",
@@ -3325,6 +3425,10 @@
         {
           "date": "2026-10-30",
           "price": 179999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 179999
         }
       ]
     },
@@ -3339,7 +3443,7 @@
           "store": "GBN Store",
           "price": 266999,
           "url": "https://gbnstore.com/product/honor-magic-v5",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -3352,7 +3456,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 266999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-magic-v5",
@@ -3387,6 +3491,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 266999
+        },
+        {
+          "date": "2026-10-31",
           "price": 266999
         }
       ]
@@ -3449,7 +3557,7 @@
           "store": "GBN Store",
           "price": 20999,
           "url": "https://gbnstore.com/product/honor-play10",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -3462,7 +3570,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 20999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-play10",
@@ -3497,6 +3605,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 20999
+        },
+        {
+          "date": "2026-10-31",
           "price": 20999
         }
       ]
@@ -3606,7 +3718,7 @@
           "store": "GBN Store",
           "price": 22499,
           "url": "https://gbnstore.com/product/honor-x5c-plus",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -3619,7 +3731,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 22499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-x5c-plus",
@@ -3655,6 +3767,10 @@
         {
           "date": "2026-10-30",
           "price": 22499
+        },
+        {
+          "date": "2026-10-31",
+          "price": 22499
         }
       ]
     },
@@ -3669,7 +3785,7 @@
           "store": "GBN Store",
           "price": 28999,
           "url": "https://gbnstore.com/product/honor-x5d-plus",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -3682,7 +3798,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 28999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/honor-x5d-plus",
@@ -3717,6 +3833,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 28999
+        },
+        {
+          "date": "2026-10-31",
           "price": 28999
         }
       ]
@@ -4058,7 +4178,7 @@
           "store": "GBN Store",
           "price": 65999,
           "url": "https://gbnstore.com/product/infinixgt-30-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -4071,7 +4191,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 65999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinixgt-30-pro",
@@ -4106,6 +4226,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 65999
+        },
+        {
+          "date": "2026-10-31",
           "price": 65999
         }
       ]
@@ -4213,7 +4337,7 @@
           "store": "GBN Store",
           "price": 84999,
           "url": "https://gbnstore.com/product/infinix-gt-50-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -4226,7 +4350,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 84999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-gt-50-pro",
@@ -4261,6 +4385,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 84999
+        },
+        {
+          "date": "2026-10-31",
           "price": 84999
         }
       ]
@@ -4324,7 +4452,7 @@
           "store": "GBN Store",
           "price": 33999,
           "url": "https://gbnstore.com/product/infinix-hot-70",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -4337,7 +4465,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 33999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-hot-70",
@@ -4372,6 +4500,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 33999
+        },
+        {
+          "date": "2026-10-31",
           "price": 33999
         }
       ]
@@ -4473,7 +4605,7 @@
           "store": "GBN Store",
           "price": 52999,
           "url": "https://gbnstore.com/product/infinix-hot-70-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -4486,7 +4618,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 52999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-hot-70-pro",
@@ -4521,6 +4653,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 52999
+        },
+        {
+          "date": "2026-10-31",
           "price": 52999
         }
       ]
@@ -4628,7 +4764,7 @@
           "store": "GBN Store",
           "price": 54999,
           "url": "https://gbnstore.com/product/infinix-note-60",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -4641,7 +4777,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 54999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-note-60",
@@ -4676,6 +4812,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 54999
+        },
+        {
+          "date": "2026-10-31",
           "price": 54999
         }
       ]
@@ -4785,7 +4925,7 @@
           "store": "GBN Store",
           "price": 62999,
           "url": "https://gbnstore.com/product/infinix-note-60-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -4798,7 +4938,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 62999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-note-60-pro",
@@ -4834,6 +4974,10 @@
         {
           "date": "2026-10-30",
           "price": 62999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 62999
         }
       ]
     },
@@ -4848,7 +4992,7 @@
           "store": "GBN Store",
           "price": 41999,
           "url": "https://gbnstore.com/product/infinix-note-edge",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -4861,7 +5005,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 41999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-note-edge",
@@ -4896,6 +5040,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 41999
+        },
+        {
+          "date": "2026-10-31",
           "price": 41999
         }
       ]
@@ -5005,7 +5153,7 @@
           "store": "GBN Store",
           "price": 23999,
           "url": "https://gbnstore.com/product/infinix-smart-20",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -5018,7 +5166,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 23999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/infinix-smart-20",
@@ -5053,6 +5201,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 23999
+        },
+        {
+          "date": "2026-10-31",
           "price": 23999
         }
       ]
@@ -5164,7 +5316,7 @@
           "store": "GBN Store",
           "price": 66999,
           "url": "https://gbnstore.com/product/motorola-edge-70-fusion",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -5177,7 +5329,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 66999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-edge-70-fusion",
@@ -5212,6 +5364,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 66999
+        },
+        {
+          "date": "2026-10-31",
           "price": 66999
         }
       ]
@@ -5323,7 +5479,7 @@
           "store": "GBN Store",
           "price": 26499,
           "url": "https://gbnstore.com/product/motorola-moto-g06-power",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -5336,7 +5492,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 26499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-moto-g06-power",
@@ -5371,6 +5527,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 26499
+        },
+        {
+          "date": "2026-10-31",
           "price": 26499
         }
       ]
@@ -5578,7 +5738,7 @@
           "store": "GBN Store",
           "price": 37499,
           "url": "https://gbnstore.com/product/motorola-moto-g57-power",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -5591,7 +5751,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 37499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-moto-g57-power",
@@ -5627,6 +5787,10 @@
         {
           "date": "2026-10-30",
           "price": 37499
+        },
+        {
+          "date": "2026-10-31",
+          "price": 37499
         }
       ]
     },
@@ -5641,7 +5805,7 @@
           "store": "GBN Store",
           "price": 44999,
           "url": "https://gbnstore.com/product/motorola-g96-5g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -5654,7 +5818,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 44999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/motorola-g96-5g",
@@ -5690,6 +5854,10 @@
         {
           "date": "2026-10-30",
           "price": 44999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 44999
         }
       ]
     },
@@ -5704,7 +5872,7 @@
           "store": "GBN Store",
           "price": 69999,
           "url": "https://gbnstore.com/product/nothing-phone-4a",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -5751,7 +5919,7 @@
         "storage": "128GB 8GB RAM, 256GB 8GB RAM, 256GB 12GB RAM",
         "camera": "50 MP, f/1.9, 24mm (wide), 1/1.57\", 1.0µm, PDAF, OIS"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "body": "164 x 77.6 x 8.6 mm (6.46 x 3.06 x 0.34 in)",
       "weight": "204.5 g (7.23 oz)",
       "build": "Glass front (Gorilla Glass 7i), plastic frame, glass back",
@@ -5813,6 +5981,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 69999
+        },
+        {
+          "date": "2026-10-31",
           "price": 69999
         }
       ]
@@ -6019,7 +6191,7 @@
           "store": "GBN Store",
           "price": 43999,
           "url": "https://gbnstore.com/product/nothing-phone-3a-lite",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -6032,7 +6204,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 43999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nothing-phone-3a-lite",
@@ -6068,6 +6240,10 @@
         {
           "date": "2026-10-30",
           "price": 43999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 43999
         }
       ]
     },
@@ -6082,7 +6258,7 @@
           "store": "GBN Store",
           "price": 99999,
           "url": "https://gbnstore.com/product/nothing-phone-4a-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -6095,7 +6271,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 99999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nothing-phone-4a-pro",
@@ -6130,6 +6306,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 99999
+        },
+        {
+          "date": "2026-10-31",
           "price": 99999
         }
       ]
@@ -6237,7 +6417,7 @@
           "store": "GBN Store",
           "price": 64999,
           "url": "https://gbnstore.com/product/nothing-phone-4b",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -6250,7 +6430,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 64999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nothing-phone-4b",
@@ -6286,6 +6466,10 @@
         {
           "date": "2026-10-30",
           "price": 64999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 64999
         }
       ]
     },
@@ -6300,7 +6484,7 @@
           "store": "GBN Store",
           "price": 40999,
           "url": "https://gbnstore.com/product/oppo-a6",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -6313,7 +6497,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 40999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-a6",
@@ -6349,6 +6533,10 @@
         {
           "date": "2026-10-30",
           "price": 40999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 40999
         }
       ]
     },
@@ -6363,7 +6551,7 @@
           "store": "GBN Store",
           "price": 51999,
           "url": "https://gbnstore.com/product/oppo-a6-pro-4g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -6376,7 +6564,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 51999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-a6-pro-4g",
@@ -6412,6 +6600,10 @@
         {
           "date": "2026-10-30",
           "price": 51999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 51999
         }
       ]
     },
@@ -6426,7 +6618,7 @@
           "store": "GBN Store",
           "price": 56999,
           "url": "https://gbnstore.com/product/oppo-a6s-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -6439,7 +6631,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 56999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-a6s-pro",
@@ -6475,6 +6667,10 @@
         {
           "date": "2026-10-30",
           "price": 56999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 56999
         }
       ]
     },
@@ -6489,7 +6685,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/oppo-reno-15",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -6502,7 +6698,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-15",
@@ -6538,6 +6734,10 @@
         {
           "date": "2026-10-30",
           "price": 89999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 89999
         }
       ]
     },
@@ -6552,7 +6752,7 @@
           "store": "GBN Store",
           "price": 69999,
           "url": "https://gbnstore.com/product/oppo-reno-15f",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -6565,7 +6765,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 69999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-15f",
@@ -6601,6 +6801,10 @@
         {
           "date": "2026-10-30",
           "price": 69999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 69999
         }
       ]
     },
@@ -6615,7 +6819,7 @@
           "store": "GBN Store",
           "price": 109999,
           "url": "https://gbnstore.com/product/oppo-reno-16",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -6628,7 +6832,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 109999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-16",
@@ -6664,6 +6868,10 @@
         {
           "date": "2026-10-30",
           "price": 109999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 109999
         }
       ]
     },
@@ -6678,7 +6886,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/oppo-reno-16f",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -6691,7 +6899,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oppo-reno-16f",
@@ -6726,6 +6934,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 89999
+        },
+        {
+          "date": "2026-10-31",
           "price": 89999
         }
       ]
@@ -7072,7 +7284,7 @@
           "store": "GBN Store",
           "price": 98499,
           "url": "https://gbnstore.com/product/oneplus-15r",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -7085,7 +7297,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 98499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oneplus-15r",
@@ -7120,6 +7332,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 98499
+        },
+        {
+          "date": "2026-10-31",
           "price": 98499
         }
       ]
@@ -7319,7 +7535,7 @@
           "store": "GBN Store",
           "price": 89999,
           "url": "https://gbnstore.com/product/oneplus-nord-6",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -7332,7 +7548,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 89999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/oneplus-nord-6",
@@ -7367,6 +7583,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 89999
+        },
+        {
+          "date": "2026-10-31",
           "price": 89999
         }
       ]
@@ -7563,7 +7783,7 @@
           "store": "GBN Store",
           "price": 58999,
           "url": "https://gbnstore.com/product/poco-m8-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -7576,7 +7796,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 58999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-m8-pro",
@@ -7611,6 +7831,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 58999
+        },
+        {
+          "date": "2026-10-31",
           "price": 58999
         }
       ]
@@ -7996,7 +8220,7 @@
           "store": "GBN Store",
           "price": 104999,
           "url": "https://gbnstore.com/product/poco-f8-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         },
         {
@@ -8023,7 +8247,7 @@
         "chipset": "Snapdragon 8 Elite Black The Flagship Killer is Back: E",
         "camera": "50MP"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 104999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-f8-pro",
@@ -8059,6 +8283,10 @@
         {
           "date": "2026-10-30",
           "price": 104999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 104999
         }
       ]
     },
@@ -8073,7 +8301,7 @@
           "store": "GBN Store",
           "price": 76999,
           "url": "https://gbnstore.com/product/poco-x8-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -8086,7 +8314,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 76999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-x8-pro",
@@ -8122,6 +8350,10 @@
         {
           "date": "2026-10-30",
           "price": 76999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 76999
         }
       ]
     },
@@ -8136,7 +8368,7 @@
           "store": "GBN Store",
           "price": 94999,
           "url": "https://gbnstore.com/product/poco-x8-pro-max",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -8149,7 +8381,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 94999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/poco-x8-pro-max",
@@ -8185,6 +8417,10 @@
         {
           "date": "2026-10-30",
           "price": 94999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 94999
         }
       ]
     },
@@ -8199,7 +8435,7 @@
           "store": "GBN Store",
           "price": 66999,
           "url": "https://gbnstore.com/product/realme-15-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -8212,7 +8448,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 66999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-15-pro",
@@ -8247,6 +8483,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 66999
+        },
+        {
+          "date": "2026-10-31",
           "price": 66999
         }
       ]
@@ -8450,7 +8690,7 @@
           "store": "GBN Store",
           "price": 39999,
           "url": "https://gbnstore.com/product/realme-c85",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -8463,7 +8703,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 39999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-c85",
@@ -8499,6 +8739,10 @@
         {
           "date": "2026-10-30",
           "price": 39999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 39999
         }
       ]
     },
@@ -8513,7 +8757,7 @@
           "store": "GBN Store",
           "price": 39999,
           "url": "https://gbnstore.com/product/realme-c85-5g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -8526,7 +8770,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 39999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-c85-5g",
@@ -8561,6 +8805,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 39999
+        },
+        {
+          "date": "2026-10-31",
           "price": 39999
         }
       ]
@@ -8670,7 +8918,7 @@
           "store": "GBN Store",
           "price": 36999,
           "url": "https://gbnstore.com/product/realme-c85-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -8683,7 +8931,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 36999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-c85-pro",
@@ -8719,6 +8967,10 @@
         {
           "date": "2026-10-30",
           "price": 36999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 36999
         }
       ]
     },
@@ -8733,7 +8985,7 @@
           "store": "GBN Store",
           "price": 149999,
           "url": "https://gbnstore.com/product/realme-gt-8-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -8746,7 +8998,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 149999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-gt-8-pro",
@@ -8781,6 +9033,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 149999
+        },
+        {
+          "date": "2026-10-31",
           "price": 149999
         }
       ]
@@ -8842,7 +9098,7 @@
           "store": "GBN Store",
           "price": 16999,
           "url": "https://gbnstore.com/product/realme-note-60x",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -8855,7 +9111,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 16999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-note-60x",
@@ -8891,6 +9147,10 @@
         {
           "date": "2026-10-30",
           "price": 16999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 16999
         }
       ]
     },
@@ -8905,7 +9165,7 @@
           "store": "GBN Store",
           "price": 16999,
           "url": "https://gbnstore.com/product/realme-note-70",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -8918,7 +9178,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 16999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-note-70",
@@ -8954,6 +9214,10 @@
         {
           "date": "2026-10-30",
           "price": 16999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 16999
         }
       ]
     },
@@ -8968,7 +9232,7 @@
           "store": "GBN Store",
           "price": 23999,
           "url": "https://gbnstore.com/product/realme-note-80",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -8981,7 +9245,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 23999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-note-80",
@@ -9016,6 +9280,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 23999
+        },
+        {
+          "date": "2026-10-31",
           "price": 23999
         }
       ]
@@ -9077,7 +9345,7 @@
           "store": "GBN Store",
           "price": 44999,
           "url": "https://gbnstore.com/product/realme-p3",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -9090,7 +9358,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 44999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-p3",
@@ -9126,6 +9394,10 @@
         {
           "date": "2026-10-30",
           "price": 44999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 44999
         }
       ]
     },
@@ -9140,7 +9412,7 @@
           "store": "GBN Store",
           "price": 65999,
           "url": "https://gbnstore.com/product/realme-p3-ultra",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -9153,7 +9425,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 65999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-p3-ultra",
@@ -9189,6 +9461,10 @@
         {
           "date": "2026-10-30",
           "price": 65999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 65999
         }
       ]
     },
@@ -9203,7 +9479,7 @@
           "store": "GBN Store",
           "price": 76999,
           "url": "https://gbnstore.com/product/realme-p4-power",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -9216,7 +9492,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 76999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/realme-p4-power",
@@ -9251,6 +9527,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 76999
+        },
+        {
+          "date": "2026-10-31",
           "price": 76999
         }
       ]
@@ -9546,7 +9826,7 @@
           "store": "GBN Store",
           "price": 27999,
           "url": "https://gbnstore.com/product/redmi-17-4g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -9559,7 +9839,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 27999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-17-4g",
@@ -9595,6 +9875,10 @@
         {
           "date": "2026-10-30",
           "price": 27999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 27999
         }
       ]
     },
@@ -9609,7 +9893,7 @@
           "store": "GBN Store",
           "price": 33999,
           "url": "https://gbnstore.com/product/redmi-17-5g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -9622,7 +9906,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 33999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-17-5g",
@@ -9658,6 +9942,10 @@
         {
           "date": "2026-10-30",
           "price": 33999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 33999
         }
       ]
     },
@@ -9672,7 +9960,7 @@
           "store": "GBN Store",
           "price": 20499,
           "url": "https://gbnstore.com/product/redmi-a7-4g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -9685,7 +9973,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 20499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-a7-4g",
@@ -9721,6 +10009,10 @@
         {
           "date": "2026-10-30",
           "price": 20499
+        },
+        {
+          "date": "2026-10-31",
+          "price": 20499
         }
       ]
     },
@@ -9735,7 +10027,7 @@
           "store": "GBN Store",
           "price": 21499,
           "url": "https://gbnstore.com/product/redmi-a7-pro-4g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -9748,7 +10040,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 21499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-a7-pro-4g",
@@ -9783,6 +10075,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 21499
+        },
+        {
+          "date": "2026-10-31",
           "price": 21499
         }
       ]
@@ -10164,7 +10460,7 @@
           "store": "GBN Store",
           "price": 42999,
           "url": "https://gbnstore.com/product/redmi-note-17",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -10177,7 +10473,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 42999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17",
@@ -10212,6 +10508,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 42999
+        },
+        {
+          "date": "2026-10-31",
           "price": 42999
         }
       ]
@@ -10319,7 +10619,7 @@
           "store": "GBN Store",
           "price": 47999,
           "url": "https://gbnstore.com/product/redmi-note-17-5g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -10332,7 +10632,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 47999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17-5g",
@@ -10367,6 +10667,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 47999
+        },
+        {
+          "date": "2026-10-31",
           "price": 47999
         }
       ]
@@ -10478,7 +10782,7 @@
           "store": "GBN Store",
           "price": 57999,
           "url": "https://gbnstore.com/product/redmi-note-17-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -10491,7 +10795,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 57999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17-pro",
@@ -10526,6 +10830,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 57999
+        },
+        {
+          "date": "2026-10-31",
           "price": 57999
         }
       ]
@@ -10633,7 +10941,7 @@
           "store": "GBN Store",
           "price": 69999,
           "url": "https://gbnstore.com/product/redmi-note-17-pro-max",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -10646,7 +10954,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 69999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/redmi-note-17-pro-max",
@@ -10681,6 +10989,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 69999
+        },
+        {
+          "date": "2026-10-31",
           "price": 69999
         }
       ]
@@ -10788,7 +11100,7 @@
           "store": "GBN Store",
           "price": 25499,
           "url": "https://gbnstore.com/product/samsung-galaxy-a07",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -10834,7 +11146,7 @@
         "storage": "64GB 4GB RAM, 128GB 4GB RAM, 128GB 6GB RAM, 256GB 8GB RAM",
         "camera": "50 MP, f/1.8, (wide), 1/2.76\", 0.64µm, PDAF"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "network": "GSM / HSPA / LTE",
       "body": "167.4 x 77.4 x 7.6 mm (6.59 x 3.05 x 0.30 in)",
       "weight": "184 g (6.49 oz)",
@@ -10895,6 +11207,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 25499
+        },
+        {
+          "date": "2026-10-31",
           "price": 25499
         }
       ]
@@ -11095,7 +11411,7 @@
           "store": "GBN Store",
           "price": 44999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a17-5g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -11108,7 +11424,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 44999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-a17-5g",
@@ -11143,6 +11459,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 44999
+        },
+        {
+          "date": "2026-10-31",
           "price": 44999
         }
       ]
@@ -11587,7 +11907,7 @@
           "store": "GBN Store",
           "price": 51999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a27-5g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -11600,7 +11920,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 51999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-a27-5g",
@@ -11635,6 +11955,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 51999
+        },
+        {
+          "date": "2026-10-31",
           "price": 51999
         }
       ]
@@ -11744,7 +12068,7 @@
           "store": "GBN Store",
           "price": 74999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a37-5g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -11794,7 +12118,7 @@
         "storage": "128GB 6GB RAM, 128GB 8GB RAM, 256GB 8GB RAM, 256GB 12GB RAM",
         "camera": "50 MP, f/1.8, (wide), 1/1.56\", 1.0µm, PDAF, OIS"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "network": "GSM / HSPA / LTE / 5G",
       "launch": "2026, March 25",
       "status": "Available. Released 2026, April 9",
@@ -11859,6 +12183,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 74999
+        },
+        {
+          "date": "2026-10-31",
           "price": 74999
         }
       ]
@@ -12222,7 +12550,7 @@
           "store": "GBN Store",
           "price": 96999,
           "url": "https://gbnstore.com/product/samsung-galaxy-a57-5g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -12235,7 +12563,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 96999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-a57-5g",
@@ -12270,6 +12598,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 96999
+        },
+        {
+          "date": "2026-10-31",
           "price": 96999
         }
       ]
@@ -12375,7 +12707,7 @@
           "store": "GBN Store",
           "price": 43999,
           "url": "https://gbnstore.com/product/samsung-galaxy-m17",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -12388,7 +12720,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 43999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-m17",
@@ -12423,6 +12755,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 43999
+        },
+        {
+          "date": "2026-10-31",
           "price": 43999
         }
       ]
@@ -12486,14 +12822,14 @@
           "store": "GBN Store",
           "price": 139999,
           "url": "https://gbnstore.com/product/samsung-galaxy-s26",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         },
         {
           "store": "Neo Store",
           "price": 139999,
           "url": "https://www.neostore.com.np/product/samsung-galaxy-s26-",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -12539,7 +12875,7 @@
         "storage": "256GB 12GB RAM,",
         "camera": "50 MP, f/1.8, 24mm (wide), 1/1.56\", 1.0µm, dual pixel PDAF, OIS"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
       "body": "149.6 x 71.7 x 7.2 mm (5.89 x 2.82 x 0.28 in)",
       "weight": "167 g (5.89 oz)",
@@ -12600,6 +12936,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 139999
+        },
+        {
+          "date": "2026-10-31",
           "price": 139999
         }
       ]
@@ -12663,7 +13003,7 @@
           "store": "GBN Store",
           "price": 124999,
           "url": "https://gbnstore.com/product/samsung-galaxy-s26-fe",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -12676,7 +13016,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 124999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-s26-fe",
@@ -12711,6 +13051,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 124999
+        },
+        {
+          "date": "2026-10-31",
           "price": 124999
         }
       ]
@@ -12772,7 +13116,7 @@
           "store": "Neo Store",
           "price": 182999,
           "url": "https://www.neostore.com.np/product/samsung-galaxy-s26-plus",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -12819,7 +13163,7 @@
         "storage": "256GB 12GB RAM,",
         "camera": "50 MP, f/1.8, 24mm (wide), 1/1.56\", 1.0µm, dual pixel PDAF, OIS"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
       "launch": "2026, February 25",
       "body": "158.4 x 75.8 x 7.3 mm (6.24 x 2.98 x 0.29 in)",
@@ -12881,6 +13225,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 182999
+        },
+        {
+          "date": "2026-10-31",
           "price": 182999
         }
       ]
@@ -12984,7 +13332,7 @@
           "store": "GBN Store",
           "price": 224999,
           "url": "https://gbnstore.com/product/samsung-galaxy-s26-ultra",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -13032,7 +13380,7 @@
         "storage": "256GB 12GB RAM, 512GB 12GB RAM, 1TB 16GB RAM",
         "camera": "200 MP, f/1.4, 24mm (wide), 1/1.3\", 0.6µm, multi-directional PDAF, OIS"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "now nudge": "Pause",
       "now brief": "understand your habits better than before.",
       "network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
@@ -13095,6 +13443,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 224999
+        },
+        {
+          "date": "2026-10-31",
           "price": 224999
         }
       ]
@@ -13248,7 +13600,7 @@
           "store": "GBN Store",
           "price": 194999,
           "url": "https://gbnstore.com/product/samsung-galaxy-z-flip-8",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -13261,7 +13613,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 194999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-z-flip-8",
@@ -13296,6 +13648,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 194999
+        },
+        {
+          "date": "2026-10-31",
           "price": 194999
         }
       ]
@@ -13449,7 +13805,7 @@
           "store": "GBN Store",
           "price": 279999,
           "url": "https://gbnstore.com/product/samsung-galaxy-z-fold-7",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -13462,7 +13818,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 279999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-z-fold-7",
@@ -13498,6 +13854,10 @@
         {
           "date": "2026-10-30",
           "price": 279999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 279999
         }
       ]
     },
@@ -13512,7 +13872,7 @@
           "store": "GBN Store",
           "price": 274999,
           "url": "https://gbnstore.com/product/samsung-galaxy-z-fold-8",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -13525,7 +13885,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 274999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/samsung-galaxy-z-fold-8",
@@ -13560,6 +13920,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 274999
+        },
+        {
+          "date": "2026-10-31",
           "price": 274999
         }
       ]
@@ -13927,7 +14291,7 @@
           "store": "GBN Store",
           "price": 84999,
           "url": "https://gbnstore.com/product/vivo-v70",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -13940,7 +14304,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 84999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-v70",
@@ -13975,6 +14339,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 84999
+        },
+        {
+          "date": "2026-10-31",
           "price": 84999
         }
       ]
@@ -14080,7 +14448,7 @@
           "store": "GBN Store",
           "price": 62999,
           "url": "https://gbnstore.com/product/vivo-v70-fe",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -14093,7 +14461,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 62999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-v70-fe",
@@ -14128,6 +14496,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 62999
+        },
+        {
+          "date": "2026-10-31",
           "price": 62999
         }
       ]
@@ -14231,7 +14603,7 @@
           "store": "GBN Store",
           "price": 63999,
           "url": "https://gbnstore.com/product/vivo-v80-lite",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -14244,7 +14616,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 63999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-v80-lite",
@@ -14279,6 +14651,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 63999
+        },
+        {
+          "date": "2026-10-31",
           "price": 63999
         }
       ]
@@ -14339,7 +14715,7 @@
           "store": "GBN Store",
           "price": 199999,
           "url": "https://gbnstore.com/product/vivo-x300-pro",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -14352,7 +14728,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 199999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-x300-pro",
@@ -14387,6 +14763,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 199999
+        },
+        {
+          "date": "2026-10-31",
           "price": 199999
         }
       ]
@@ -14449,7 +14829,7 @@
           "store": "GBN Store",
           "price": 21999,
           "url": "https://gbnstore.com/product/vivo-y05",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -14462,7 +14842,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 21999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-y05",
@@ -14498,6 +14878,10 @@
         {
           "date": "2026-10-30",
           "price": 21999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 21999
         }
       ]
     },
@@ -14512,7 +14896,7 @@
           "store": "GBN Store",
           "price": 40999,
           "url": "https://gbnstore.com/product/vivo-y21-5g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -14525,7 +14909,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 40999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-y21-5g",
@@ -14560,6 +14944,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 40999
+        },
+        {
+          "date": "2026-10-31",
           "price": 40999
         }
       ]
@@ -14719,7 +15107,7 @@
           "store": "GBN Store",
           "price": 54999,
           "url": "https://gbnstore.com/product/vivo-y500",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -14732,7 +15120,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 54999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/vivo-y500",
@@ -14767,6 +15155,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 54999
+        },
+        {
+          "date": "2026-10-31",
           "price": 54999
         }
       ]
@@ -14874,7 +15266,7 @@
           "store": "GBN Store",
           "price": 200000,
           "url": "https://gbnstore.com/product/xiaomi-17-ultra",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -14887,7 +15279,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 200000,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/xiaomi-17-ultra",
@@ -14922,6 +15314,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 200000
+        },
+        {
+          "date": "2026-10-31",
           "price": 200000
         }
       ]
@@ -14983,7 +15379,7 @@
           "store": "GBN Store",
           "price": 99999,
           "url": "https://gbnstore.com/product/xiaomi-17t",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -14996,7 +15392,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 99999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/xiaomi-17t",
@@ -15031,6 +15427,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 99999
+        },
+        {
+          "date": "2026-10-31",
           "price": 99999
         }
       ]
@@ -15142,7 +15542,7 @@
           "store": "Neo Store",
           "price": 34999,
           "url": "https://www.neostore.com.np/product/xiaomi-mi-11-lite-6gb-128gb-",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -15177,7 +15577,7 @@
         "battery": "4250mAh battery",
         "camera": "64MP primary camera f/1.79, 6P lens"
       },
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "product": "Mi 11 Lite",
       "category": "Mobile",
       "color": "Blue, Pink, Black",
@@ -15226,6 +15626,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 34999
+        },
+        {
+          "date": "2026-10-31",
           "price": 34999
         }
       ]
@@ -15313,7 +15717,7 @@
           "store": "GBN Store",
           "price": 18999,
           "url": "https://gbnstore.com/product/zte-nubia-a36",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -15326,7 +15730,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 18999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a36",
@@ -15362,6 +15766,10 @@
         {
           "date": "2026-10-30",
           "price": 18999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 18999
         }
       ]
     },
@@ -15376,7 +15784,7 @@
           "store": "GBN Store",
           "price": 19999,
           "url": "https://gbnstore.com/product/zte-nubia-a56",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -15389,7 +15797,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 19999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a56",
@@ -15425,6 +15833,10 @@
         {
           "date": "2026-10-30",
           "price": 19999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 19999
         }
       ]
     },
@@ -15439,7 +15851,7 @@
           "store": "GBN Store",
           "price": 21999,
           "url": "https://gbnstore.com/product/zte-nubia-a57",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -15452,7 +15864,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 21999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a57",
@@ -15488,6 +15900,10 @@
         {
           "date": "2026-10-30",
           "price": 21999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 21999
         }
       ]
     },
@@ -15502,7 +15918,7 @@
           "store": "GBN Store",
           "price": 25499,
           "url": "https://gbnstore.com/product/zte-nubia-a77",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -15515,7 +15931,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 25499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-a77",
@@ -15551,6 +15967,10 @@
         {
           "date": "2026-10-30",
           "price": 25499
+        },
+        {
+          "date": "2026-10-31",
+          "price": 25499
         }
       ]
     },
@@ -15565,7 +15985,7 @@
           "store": "GBN Store",
           "price": 55999,
           "url": "https://gbnstore.com/product/nubia-neo-5-5g",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -15578,7 +15998,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 55999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nubia-neo-5-5g",
@@ -15614,6 +16034,10 @@
         {
           "date": "2026-10-30",
           "price": 55999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 55999
         }
       ]
     },
@@ -15628,7 +16052,7 @@
           "store": "GBN Store",
           "price": 77999,
           "url": "https://gbnstore.com/product/nubia-neo-5-gt",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -15641,7 +16065,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 77999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/nubia-neo-5-gt",
@@ -15677,6 +16101,10 @@
         {
           "date": "2026-10-30",
           "price": 77999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 77999
         }
       ]
     },
@@ -15691,7 +16119,7 @@
           "store": "GBN Store",
           "price": 29999,
           "url": "https://gbnstore.com/product/zte-nubia-v80-design",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -15704,7 +16132,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 29999,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-v80-design",
@@ -15740,6 +16168,10 @@
         {
           "date": "2026-10-30",
           "price": 29999
+        },
+        {
+          "date": "2026-10-31",
+          "price": 29999
         }
       ]
     },
@@ -15754,7 +16186,7 @@
           "store": "GBN Store",
           "price": 29499,
           "url": "https://gbnstore.com/product/zte-nubia-v80-max",
-          "checked_at": "2026-10-30",
+          "checked_at": "2026-10-31",
           "warranty": null
         }
       ],
@@ -15767,7 +16199,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "price": 29499,
       "best_store": "GBN Store",
       "best_url": "https://gbnstore.com/product/zte-nubia-v80-max",
@@ -15802,6 +16234,10 @@
         },
         {
           "date": "2026-10-30",
+          "price": 29499
+        },
+        {
+          "date": "2026-10-31",
           "price": 29499
         }
       ]
