@@ -1,0 +1,9 @@
+.env
+secrets/
+output/*
+!output/.gitkeep
+!output/latest.json
+!output/research.json
+assets/*.mp3
+assets/*.wav
+__pycache__/
