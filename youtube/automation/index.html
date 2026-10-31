@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f8fb">
+<title>Laxman Nepal — Shorts Automation</title>
+<style>
+:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#17202a;background:#f6f8fb}*{box-sizing:border-box}body{margin:0}.wrap{max-width:1040px;margin:auto;padding:26px 18px 70px}.top{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.brand{font-weight:850;font-size:14px;letter-spacing:.08em;color:#078a7a}.brand span{display:block;color:#192b3a;font-size:27px;letter-spacing:-.04em;margin-top:5px}.pill{border:1px solid #cfe8e2;border-radius:99px;background:#e9f8f4;color:#087a6c;padding:8px 12px;font-size:12px;font-weight:800}.hero{padding:35px 0 24px}.hero h1{font-size:clamp(32px,6vw,52px);letter-spacing:-.055em;line-height:1.02;margin:0 0 12px}.hero p{color:#667085;line-height:1.6;max-width:700px}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.card{background:#fff;border:1px solid #e3e8ee;border-radius:18px;padding:20px;box-shadow:0 5px 22px #17202a08}.card h2{font-size:18px;margin:0 0 14px}.muted{color:#667085;font-size:13px;line-height:1.6}.label{display:block;font-size:12px;font-weight:800;color:#52606d;margin:14px 0 7px}input,textarea,select{font:inherit;width:100%;border:1px solid #d7dee6;border-radius:10px;padding:11px 12px;background:#fff;color:#17202a}textarea{min-height:190px;resize:vertical;line-height:1.6}.btn{border:0;border-radius:10px;padding:12px 15px;background:#087f73;color:#fff;font-weight:800;cursor:pointer}.btn.secondary{background:#edf2f6;color:#263746}.btn.dark{background:#182c3c}.btn:disabled{opacity:.5;cursor:not-allowed}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.status{padding:11px 12px;border-radius:10px;background:#f0f4f7;color:#475467;font-size:13px;line-height:1.5;margin-top:12px}.status.good{background:#eaf8f1;color:#14764b}.status.bad{background:#fff0ee;color:#b42318}.platforms{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.platform{border:1px solid #e4e9ef;border-radius:12px;padding:12px;font-size:13px;font-weight:800}.platform small{display:block;font-weight:500;color:#667085;margin-top:5px}.source{padding:10px 0;border-bottom:1px solid #edf0f3;font-size:13px}.source a{color:#087f73;font-weight:750;text-decoration:none}.warning{border-left:3px solid #e3a008;padding:10px 12px;background:#fff9e8;color:#76540a;font-size:13px;line-height:1.55;border-radius:7px;margin-top:12px}.footer{font-size:12px;color:#84909c;margin-top:24px}@media(max-width:760px){.grid{grid-template-columns:1fr}.platforms{grid-template-columns:1fr}.wrap{padding-top:18px}}
+</style></head>
+<body><main class="wrap">
+<header class="top"><div class="brand">LAXMAN NEPAL<span>Daily Shorts Studio</span></div><div class="pill">ONE SHORT / DAY · NEPALI TECH</div></header>
+<section class="hero"><h1>Research once.<br>Publish everywhere.</h1><p>Daily Nepali technology Shorts for <b>@laxmannepalofficial</b>. Review and edit the script, generate one 9:16 video, then publish to YouTube Shorts, Facebook Reels and Instagram Reels.</p></section>
+<div class="grid">
+<section class="card">
+<h2>Today's Short</h2><div id="briefStatus" class="status">Loading latest brief…</div>
+<label class="label" for="topic">Topic override (optional)</label><input id="topic" placeholder="Leave blank to use today's researched topic">
+<label class="label" for="script">Edit Nepali script (optional)</label><textarea id="script" placeholder="Latest generated script will appear here. Edit it before regenerating."></textarea>
+<label class="label" for="publish">Publishing mode</label><select id="publish"><option value="false">Generate draft only — safest for first test</option><option value="true">Publish after generation (AUTO_PUBLISH must be enabled)</option></select>
+<div class="actions"><button class="btn" id="run">Generate / Regenerate</button><button class="btn secondary" id="reload">Reload latest</button></div>
+<div id="runStatus" class="status">Connect GitHub below to start a run.</div>
+<div class="platforms"><div class="platform">YouTube Shorts<small>OAuth + YouTube Data API</small></div><div class="platform">Facebook Reels<small>Page publishing permission</small></div><div class="platform">Instagram Reels<small>Professional + public video hosting</small></div></div>
+</section>
+<aside class="card">
+<h2>Connect GitHub Actions</h2><p class="muted">A fine-grained token is saved only in this browser. Never paste Google, Meta, Claude or Groq API keys here.</p>
+<label class="label" for="repo">Repository</label><input id="repo" value="LaxmanNepal/laxmannepal.github.io">
+<label class="label" for="branch">Branch</label><input id="branch" value="main">
+<label class="label" for="token">GitHub fine-grained token</label><input id="token" type="password" autocomplete="off" placeholder="github_pat_…">
+<div class="actions"><button class="btn secondary" id="save">Save token in this browser</button><button class="btn secondary" id="clear">Clear</button></div>
+<div class="warning">Token permissions: Actions (Read and write) and Contents (Read-only). Never paste API keys or platform access tokens here.</div>
+<h2 style="margin-top:22px">Latest sources</h2><div id="sources" class="muted">No source list loaded.</div>
+<div class="actions"><a class="btn dark" style="text-decoration:none" id="actionsLink" target="_blank" rel="noopener" href="https://github.com/LaxmanNepal/laxmannepal.github.io/actions/workflows/daily-shorts.yml">Open workflow runs</a></div>
+</aside></div>
+<p class="footer">Free-first setup. GitHub Actions usage, AI API limits, Meta permissions and media hosting limits still apply. Scheduled publishing is disabled until the repository variable AUTO_PUBLISH is set to true.</p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const defaultRepo="LaxmanNepal/laxmannepal.github.io";
+function cfg(){return {repo:$("repo").value.trim()||defaultRepo,branch:$("branch").value.trim()||"main",token:$("token").value.trim()||localStorage.getItem("ln_shorts_token")||""};}
+function show(id,msg,kind=""){const e=$(id);e.textContent=msg;e.className="status "+kind;}
+async function loadBrief(){
+ show("briefStatus","Loading latest brief…");
+ const r=cfg().repo; const branch=cfg().branch;
+ try{
+  const url="https://raw.githubusercontent.com/"+r+"/"+branch+"/youtube/automation/output/latest.json?ts="+Date.now();
+  const res=await fetch(url); if(!res.ok) throw new Error("No latest brief yet. Run the workflow once after setup.");
+  const d=await res.json();
+  if(d.script) $("script").value=d.script;
+  if(d.topic) $("topic").value=d.topic;
+  show("briefStatus",(d.status||"unknown")+" · "+(d.title||d.reason||"No title")+" · "+(d.voice_provider||"Voice pending")+" · "+(d.duration_seconds||"—")+"s",d.status==="ready"?"good":"");
+  $("sources").innerHTML="";
+  (d.sources||[]).forEach(s=>{const div=document.createElement("div");div.className="source";const a=document.createElement("a");a.href=s.url;a.target="_blank";a.rel="noopener";a.textContent=s.title||s.url;div.appendChild(a);$("sources").appendChild(div);});
+ }catch(e){show("briefStatus",e.message);}
+}
+async function dispatch(){
+ const c=cfg(); if(!c.token){show("runStatus","Add a GitHub fine-grained token first.","bad");return;}
+ const btn=$("run");btn.disabled=true;show("runStatus","Sending workflow dispatch…");
+ try{
+  const url="https://api.github.com/repos/"+c.repo+"/actions/workflows/daily-shorts.yml/dispatches";
+  const res=await fetch(url,{method:"POST",headers:{"Accept":"application/vnd.github+json","Authorization":"Bearer "+c.token,"X-GitHub-Api-Version":"2022-11-28","Content-Type":"application/json"},body:JSON.stringify({ref:c.branch,inputs:{topic:$("topic").value.trim(),script:$("script").value.trim(),publish:$("publish").value}})});
+  if(res.status!==204){const t=await res.text();throw new Error("GitHub returned "+res.status+": "+t.slice(0,400));}
+  show("runStatus","Workflow started. Open Actions to watch progress; the MP4 appears as a downloadable artifact when complete.","good");
+ }catch(e){show("runStatus",e.message,"bad");}finally{btn.disabled=false;}
+}
+$("save").onclick=()=>{localStorage.setItem("ln_shorts_token",$("token").value.trim());show("runStatus","Token saved in this browser only.","good");};
+$("clear").onclick=()=>{localStorage.removeItem("ln_shorts_token");$("token").value="";show("runStatus","Local token cleared.");};
+$("run").onclick=dispatch;$("reload").onclick=loadBrief;
+$("token").value=localStorage.getItem("ln_shorts_token")||"";
+$("actionsLink").href="https://github.com/"+defaultRepo+"/actions/workflows/daily-shorts.yml";
+loadBrief();
+</script></body></html>
