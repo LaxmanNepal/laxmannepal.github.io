@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-01T17:58:15.783132+00:00.
+Generated from the latest analytics snapshot: 2026-11-01T22:08:59.658907+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -105,16 +105,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/image prompt.html
 - Top queries: No page-query rows
 
-### /p/contact-us.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/contact us.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/contact us.html
-- Top queries: No page-query rows
-
 ### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -183,6 +173,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/09/convert image to pdf free tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/09/convert image to pdf free tools.html
+- Top queries: No page-query rows
+
+### /p/contact-us.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/contact us.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/contact us.html
 - Top queries: No page-query rows
 
 ### /p/privacy-policy.html — SEO score 0/100
@@ -375,16 +375,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/03/top 8 free alternatives to paid software.html
 - Top queries: No page-query rows
 
-### /2025/07/qr-code-generator.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/07/qr code generator.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2025/07/qr code generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/07/qr code generator.html
-- Top queries: No page-query rows
-
 ### /p/laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -435,6 +425,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/09/netflix free website watch movies.html
 - Top queries: No page-query rows
 
+### /2025/07/qr-code-generator.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/07/qr code generator.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2025/07/qr code generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/07/qr code generator.html
+- Top queries: No page-query rows
+
 ### /p/laxman-nepal-personal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -443,6 +443,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/laxman nepal personal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/laxman nepal personal.html
+- Top queries: No page-query rows
+
+### /2023/07/currency-converter-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/07/currency converter by laxman nepal.html | Laxman Ne…
+- Current description: Missing
+- Recommended description: Learn about 2023/07/currency converter by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/07/currency converter by laxman nepal.html
 - Top queries: No page-query rows
 
 ### /2023/07/google-drive-direct-download-link.html — SEO score 0/100
@@ -513,16 +523,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/02/blogger post fetcher free tool.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/02/blogger post fetcher free tool.html
-- Top queries: No page-query rows
-
-### /2025/04/top-20-free-ai-chatbots-to-boost-your.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/04/top 20 free ai chatbots to boost your.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2025/04/top 20 free ai chatbots to boost your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/04/top 20 free ai chatbots to boost your.html
 - Top queries: No page-query rows
 
 ### /2025/06/html-live-editor-online-free-real-time.html — SEO score 0/100
@@ -623,6 +623,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/image resize and compress tools by.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/image resize and compress tools by.html
+- Top queries: No page-query rows
+
+### /2023/07/weather-app-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/07/weather app by laxman nepal.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2023/07/weather app by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/07/weather app by laxman nepal.html
 - Top queries: No page-query rows
 
 ### /2023/12/download-nepali-and-english-cursive-font.html — SEO score 0/100
@@ -745,6 +755,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/04/top 10 proven online earning methods in.html
 - Top queries: No page-query rows
 
+### /2025/04/top-20-free-ai-chatbots-to-boost-your.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/04/top 20 free ai chatbots to boost your.html | Laxman…
+- Current description: Missing
+- Recommended description: Learn about 2025/04/top 20 free ai chatbots to boost your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/04/top 20 free ai chatbots to boost your.html
+- Top queries: No page-query rows
+
 ### /2025/05/10-free-google-ai-courses.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -763,16 +783,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/05/12 best ai bots on whatsapp for chatgpt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/05/12 best ai bots on whatsapp for chatgpt.html
-- Top queries: No page-query rows
-
-### /2025/05/12-free-ai-tools-2025.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/05/12 free ai tools 2025.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2025/05/12 free ai tools 2025.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/05/12 free ai tools 2025.html
 - Top queries: No page-query rows
 
 ### /2025/06/free-online-video-to-audio-converter.html — SEO score 0/100
@@ -1265,16 +1275,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Analytics | Laxman Nepal
 - Top queries: No page-query rows
 
-### /2025/07/usefull-links.html — SEO score 55/100
-- Issues: Title length 20, Description length 14, Noindex
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: नेपालका पुस्तकालयहरु
-- Recommended title: नेपालका पुस्तकालयहरु | Laxman Nepal
-- Current description: कर्णाली प्रदेश
-- Recommended description: Learn about नेपालका पुस्तकालयहरु with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: नेपालका पुस्तकालयहरु
-- Top queries: No page-query rows
-
 ### /2025/11/youtube-hashtag-extractor.html — SEO score 55/100
 - Issues: Title length 25, Noindex, Thin content (146 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1293,6 +1293,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Design professional social graphics instantly.
 - Recommended description: Learn about SocialPoster Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: SocialPoster Pro
+- Top queries: No page-query rows
+
+### /2025/07/usefull-links.html — SEO score 55/100
+- Issues: Title length 20, Description length 14, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: नेपालका पुस्तकालयहरु
+- Recommended title: नेपालका पुस्तकालयहरु | Laxman Nepal
+- Current description: कर्णाली प्रदेश
+- Recommended description: Learn about नेपालका पुस्तकालयहरु with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: नेपालका पुस्तकालयहरु
 - Top queries: No page-query rows
 
 ### /2025/11/ai-powered-youtube-seo-deep-analyzer.html — SEO score 55/100
