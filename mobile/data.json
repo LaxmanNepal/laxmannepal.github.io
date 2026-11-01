@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-31T21:40:47.713341+00:00",
-  "count": 156,
+  "updated_at": "2026-11-01T06:15:20.131164+00:00",
+  "count": 157,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -2144,12 +2144,14 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "4GB + 128GB"
       ],
-      "price": 32999,
+      "price": 29999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
+        "4GB",
         "6GB"
       ],
       "storages": [
@@ -2178,15 +2180,17 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+128GB"
+        "4GB+128GB",
+        "4GB+64GB"
       ],
-      "price": 25999,
+      "price": 21999,
       "max_price": 25999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
+        "64GB",
         "128GB"
       ]
     },
@@ -2281,6 +2285,25 @@
       ],
       "storages": [
         "256GB"
+      ]
+    },
+    {
+      "id": "vivo-v80",
+      "name": "Vivo V80",
+      "brand": "Vivo",
+      "variants": [
+        "8GB + 512GB",
+        "8GB + 256GB"
+      ],
+      "price": 108999,
+      "max_price": 133999,
+      "original_price": null,
+      "rams": [
+        "8GB"
+      ],
+      "storages": [
+        "256GB",
+        "512GB"
       ]
     },
     {
