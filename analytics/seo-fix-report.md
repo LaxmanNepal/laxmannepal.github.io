@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-01T22:08:59.658907+00:00.
+Generated from the latest analytics snapshot: 2026-11-02T06:20:25.901564+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,6 +13,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/apple-iphone-air/ — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: mobile price in nepal/phones/apple iphone air | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about mobile price in nepal/phones/apple iphone air with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: mobile price in nepal/phones/apple iphone air
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -475,6 +485,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/07/image editor by laxman nepal.html
 - Top queries: No page-query rows
 
+### /2023/07/weather-app-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/07/weather app by laxman nepal.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2023/07/weather app by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/07/weather app by laxman nepal.html
+- Top queries: No page-query rows
+
 ### /2023/09/all-in-one-image-converter-online.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -623,16 +643,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/image resize and compress tools by.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/image resize and compress tools by.html
-- Top queries: No page-query rows
-
-### /2023/07/weather-app-by-laxman-nepal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/07/weather app by laxman nepal.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2023/07/weather app by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/07/weather app by laxman nepal.html
 - Top queries: No page-query rows
 
 ### /2023/12/download-nepali-and-english-cursive-font.html — SEO score 0/100
@@ -2593,16 +2603,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Apple iPhone Air 256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Apple iPhone Air 256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Apple iPhone Air 256GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/apple-iphone-air/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Apple iPhone Air Price in Nepal, Specs & Store Offers | Laxman Ne
-- Recommended title: Apple iPhone Air Price in Nepal | Laxman Nepal
-- Current description: Compare Apple iPhone Air price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Apple iPhone Air Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Apple iPhone Air Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/blackview-fort-1/ — SEO score 85/100
