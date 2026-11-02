@@ -1,52 +1,178 @@
 {
-  "updatedAt": "2026-11-01",
+  "updatedAt": "2026-11-02",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "mobilecli",
-      "url": "https://github.com/mobile-next/mobilecli",
-      "description": "Universal command-line tool for managing iOS and Android devices, simulators, emulators and apps",
-      "language": "Go",
-      "stars": 310,
-      "updatedAt": "2026-11-01T09:59:19Z",
-      "fullName": "mobile-next/mobilecli"
-    },
-    {
-      "name": "Brokies-AI-Foundry",
-      "url": "https://github.com/Caplet1989/Brokies-AI-Foundry",
-      "description": "Top Free AI Developer Tools for 2026",
-      "language": "HTML",
-      "stars": 125,
-      "updatedAt": "2026-11-01T09:58:55Z",
-      "fullName": "Caplet1989/Brokies-AI-Foundry"
-    },
-    {
-      "name": "vibe_tavern",
-      "url": "https://github.com/Noineri/vibe_tavern",
-      "description": "A modern, local-first AI roleplay platform",
-      "language": "TypeScript",
-      "stars": 82,
-      "updatedAt": "2026-11-01T09:58:41Z",
-      "fullName": "Noineri/vibe_tavern"
-    },
-    {
-      "name": "awesome-daily-AI-arxiv",
-      "url": "https://github.com/Tavish9/awesome-daily-AI-arxiv",
-      "description": "🚀 Daily AI Research Digest: Tracking breakthroughs in AI/NLP/CV/Robotics with dynamic updates and paper navigation.",
+      "name": "KiroCrew",
+      "url": "https://github.com/kirodotdev/KiroCrew",
+      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
       "language": "Python",
-      "stars": 124,
-      "updatedAt": "2026-11-01T09:58:24Z",
-      "fullName": "Tavish9/awesome-daily-AI-arxiv"
+      "stars": 4720,
+      "updatedAt": "2026-11-02T09:26:39Z",
+      "fullName": "kirodotdev/KiroCrew"
     },
     {
-      "name": "kordoc",
-      "url": "https://github.com/chrisryugj/kordoc",
-      "description": "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "name": "oh-my-hermes",
+      "url": "https://github.com/rlaope/oh-my-hermes",
+      "description": "⚚ The coding harness with Hermes Agent wired into IDE.",
+      "language": "Python",
+      "stars": 5031,
+      "updatedAt": "2026-11-02T09:26:36Z",
+      "fullName": "rlaope/oh-my-hermes"
+    },
+    {
+      "name": "mcp-server-couchbase",
+      "url": "https://github.com/couchbase/mcp-server-couchbase",
+      "description": "Model Context Protocol server for Couchbase - connect AI agents and LLMs like Claude, Cursor, and Copilot to Couchbase/Capella",
+      "language": "Python",
+      "stars": 34,
+      "updatedAt": "2026-11-02T09:26:31Z",
+      "fullName": "couchbase/mcp-server-couchbase"
+    },
+    {
+      "name": "OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "description": "🙌 OpenHands: AI-Driven Development",
       "language": "TypeScript",
-      "stars": 2881,
-      "updatedAt": "2026-11-01T09:58:16Z",
-      "fullName": "chrisryugj/kordoc"
+      "stars": 92483,
+      "updatedAt": "2026-11-02T09:26:30Z",
+      "fullName": "OpenHands/OpenHands"
+    },
+    {
+      "name": "LiveAgent",
+      "url": "https://github.com/Stack-Cairn/LiveAgent",
+      "description": "A fully functional AI Agent desktop client that supports Webui access and can be creatively customized and expanded!",
+      "language": "TypeScript",
+      "stars": 2249,
+      "updatedAt": "2026-11-02T09:26:26Z",
+      "fullName": "Stack-Cairn/LiveAgent"
+    },
+    {
+      "name": "Hyperloom",
+      "url": "https://github.com/AMD-AGI/Hyperloom",
+      "description": "An agentic system that auto-optimizes LLM workloads on AMD GPUs.",
+      "language": "Python",
+      "stars": 258,
+      "updatedAt": "2026-11-02T09:26:05Z",
+      "fullName": "AMD-AGI/Hyperloom"
+    },
+    {
+      "name": "wanaku",
+      "url": "https://github.com/wanaku-ai/wanaku",
+      "description": "Wanaku Governed Action Proxy for AI Agents",
+      "language": "Rust",
+      "stars": 134,
+      "updatedAt": "2026-11-02T09:25:54Z",
+      "fullName": "wanaku-ai/wanaku"
+    },
+    {
+      "name": "langwatch",
+      "url": "https://github.com/langwatch/langwatch",
+      "description": "Open-Source Agent Observability & Evals for AI Platform teams. Trace, test, route and govern every agent & coding assistant in the company.",
+      "language": "TypeScript",
+      "stars": 5004,
+      "updatedAt": "2026-11-02T09:25:52Z",
+      "fullName": "langwatch/langwatch"
+    },
+    {
+      "name": "SkillBill",
+      "url": "https://github.com/Sermilion/SkillBill",
+      "description": "A deterministic Software Development pipeline for you AI agents, written in Kotlin with nice UI for monitoring.",
+      "language": "Kotlin",
+      "stars": 46,
+      "updatedAt": "2026-11-02T09:25:48Z",
+      "fullName": "Sermilion/SkillBill"
+    },
+    {
+      "name": "rome",
+      "url": "https://github.com/rome-os/rome",
+      "description": "A compounding agent OS for recursive agents. Also an open source alternative to Grok Bot and Meta's Muse.",
+      "language": "TypeScript",
+      "stars": 881,
+      "updatedAt": "2026-11-02T09:25:15Z",
+      "fullName": "rome-os/rome"
+    },
+    {
+      "name": "llm",
+      "url": "https://github.com/r-uby-dev/llm",
+      "description": "An agentic runtime",
+      "language": "Ruby",
+      "stars": 144,
+      "updatedAt": "2026-11-02T09:25:13Z",
+      "fullName": "r-uby-dev/llm"
+    },
+    {
+      "name": "dify",
+      "url": "https://github.com/langgenius/dify",
+      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+      "language": "Python",
+      "stars": 160217,
+      "updatedAt": "2026-11-02T09:25:11Z",
+      "fullName": "langgenius/dify"
+    },
+    {
+      "name": "molecule",
+      "url": "https://github.com/molecule-dev/molecule",
+      "description": "Open-source, composable full-stack packages an AI can wire correctly. Swap any provider in one line. Export anytime.",
+      "language": "TypeScript",
+      "stars": 44,
+      "updatedAt": "2026-11-02T09:25:11Z",
+      "fullName": "molecule-dev/molecule"
+    },
+    {
+      "name": "skill-of-skills",
+      "url": "https://github.com/the911fund/skill-of-skills",
+      "description": "The quality-ranked discovery engine for AI coding skills, plugins and MCP servers across Claude Code, Codex, Cursor, Windsurf, Cline and more.",
+      "language": "Python",
+      "stars": 82,
+      "updatedAt": "2026-11-02T09:25:04Z",
+      "fullName": "the911fund/skill-of-skills"
+    },
+    {
+      "name": "fletch",
+      "url": "https://github.com/fwdai/fletch",
+      "description": "A new kind of IDE for agentic engineering",
+      "language": "Rust",
+      "stars": 34,
+      "updatedAt": "2026-11-02T09:25:03Z",
+      "fullName": "fwdai/fletch"
+    },
+    {
+      "name": "Tavotto",
+      "url": "https://github.com/Tavotto/Tavotto",
+      "description": "AI drew your research figure. Tavotto makes it publication-ready: edit matplotlib and AI-generated figures on a canvas, lay out multi-panel pages in mm, check journal rules before export. Scripts stay untouched.",
+      "language": "Python",
+      "stars": 638,
+      "updatedAt": "2026-11-02T09:24:59Z",
+      "fullName": "Tavotto/Tavotto"
+    },
+    {
+      "name": "Xenon",
+      "url": "https://github.com/xianyu-sheng/Xenon",
+      "description": "Verifiable AI coding agent harness / 可验证的 AI 编码代理：evidence hash-chain · hollow-answer gate · manual verification checklist · 6 engines + MCP · multi-model · Windows/CJK · listed in awesome-opensource-ai & Collabnix awesome-mcp-lists",
+      "language": "Python",
+      "stars": 56,
+      "updatedAt": "2026-11-02T09:24:55Z",
+      "fullName": "xianyu-sheng/Xenon"
+    },
+    {
+      "name": "TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "language": "Zig",
+      "stars": 1591,
+      "updatedAt": "2026-11-02T09:24:51Z",
+      "fullName": "ashhart/TensorFold"
+    },
+    {
+      "name": "Containarium",
+      "url": "https://github.com/FootprintAI/Containarium",
+      "description": "Open-source agent runtime — SSH-native isolation, eBPF egress policy, Kubernetes + LXC backends, GPU passthrough, MCP-native CLI",
+      "language": "Go",
+      "stars": 314,
+      "updatedAt": "2026-11-02T09:24:48Z",
+      "fullName": "FootprintAI/Containarium"
     },
     {
       "name": "claude-code-plugins",
@@ -54,170 +180,44 @@
       "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
       "language": "Shell",
       "stars": 28,
-      "updatedAt": "2026-11-01T09:57:52Z",
+      "updatedAt": "2026-11-02T09:24:42Z",
       "fullName": "melodic-software/claude-code-plugins"
     },
     {
-      "name": "hewn-forge",
-      "url": "https://github.com/kaderkck/hewn-forge",
-      "description": "HEWN 2.0 2026: AI Output Router for Precision Summaries & Polished Code",
-      "language": "HTML",
-      "stars": 116,
-      "updatedAt": "2026-11-01T09:57:50Z",
-      "fullName": "kaderkck/hewn-forge"
-    },
-    {
-      "name": "Suijin",
-      "url": "https://github.com/0xwi11iam/Suijin",
-      "description": "Suijin is an open-source fully autonomous red teaming / web app pentesting framework for AI models. Powered by LangGraph, designed for bug bounty hunters and CTF players.",
-      "language": "Python",
-      "stars": 22,
-      "updatedAt": "2026-11-01T09:56:54Z",
-      "fullName": "0xwi11iam/Suijin"
-    },
-    {
-      "name": "Master-skill",
-      "url": "https://github.com/xr843/Master-skill",
-      "description": "FoJin-powered Buddhist AI persona framework — source-grounded, boundary-aware, fidelity-tested, runtime-ready.",
-      "language": "Python",
-      "stars": 483,
-      "updatedAt": "2026-11-01T09:55:55Z",
-      "fullName": "xr843/Master-skill"
-    },
-    {
-      "name": "ankole",
-      "url": "https://github.com/AgentBull/ankole",
-      "description": "The open source Agent Harness with a Company Brain. Self-hosted AI Agents for Slack, Teams, Lark, DingTalk, WeCom, and more. An open source alternative to Claude Tag.",
-      "language": "Elixir",
-      "stars": 162,
-      "updatedAt": "2026-11-01T09:55:24Z",
-      "fullName": "AgentBull/ankole"
-    },
-    {
-      "name": "no-vibe",
-      "url": "https://github.com/rizukirr/no-vibe",
-      "description": "Turn your AI coding agent into a tutor. It learns your level and adapts to you",
-      "language": "Shell",
-      "stars": 44,
-      "updatedAt": "2026-11-01T09:55:07Z",
-      "fullName": "rizukirr/no-vibe"
-    },
-    {
-      "name": "magic-eraser-studio",
-      "url": "https://github.com/onlyoneshakibul/magic-eraser-studio",
-      "description": "AI Object Remover 2026 – Erase Distractions & Keep HD Quality",
-      "language": "HTML",
-      "stars": 114,
-      "updatedAt": "2026-11-01T09:52:12Z",
-      "fullName": "onlyoneshakibul/magic-eraser-studio"
-    },
-    {
-      "name": "cromford",
-      "url": "https://github.com/cromford-ai/cromford",
-      "description": "Cromford: the open-source software factory. Tickets in, reviewed, merged and production-checked changes out.",
-      "language": "Shell",
-      "stars": 28,
-      "updatedAt": "2026-11-01T09:52:01Z",
-      "fullName": "cromford-ai/cromford"
-    },
-    {
-      "name": "parley",
-      "url": "https://github.com/pathorsAI/parley",
-      "description": "Real-time AI coaching for sales & negotiation calls — live suggestions while you talk, voice translation into the meeting, deep debrief after. Local-first macOS app, bring your own keys.",
+      "name": "nextclaw",
+      "url": "https://github.com/Peiiii/nextclaw",
+      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
       "language": "TypeScript",
-      "stars": 23,
-      "updatedAt": "2026-11-01T09:51:39Z",
-      "fullName": "pathorsAI/parley"
+      "stars": 262,
+      "updatedAt": "2026-11-02T09:24:41Z",
+      "fullName": "Peiiii/nextclaw"
     },
     {
-      "name": "scout",
-      "url": "https://github.com/outcrawlai/scout",
-      "description": "Scout: the open-source browser agent, by Outcrawl. Mirrored automatically from Outcrawl's own repository.",
-      "language": "TypeScript",
-      "stars": 948,
-      "updatedAt": "2026-11-01T09:51:30Z",
-      "fullName": "outcrawlai/scout"
-    },
-    {
-      "name": "AI-Practices",
-      "url": "https://github.com/zimingttkx/AI-Practices",
-      "description": "🎓 机器学习与深度学习实战教程 | Comprehensive ML & DL Tutorial with Jupyter Notebooks | 包含线性回归、神经网络、CNN、RNN等完整教程",
-      "language": "Jupyter Notebook",
-      "stars": 450,
-      "updatedAt": "2026-11-01T09:51:29Z",
-      "fullName": "zimingttkx/AI-Practices"
-    },
-    {
-      "name": "SwarmLLM",
-      "url": "https://github.com/enapt/SwarmLLM",
-      "description": "Free, open-source app that runs AI chat models on your own computer — and lets computers team up over the internet to run models too big for one machine. No account, no crypto. OpenAI- and Anthropic-compatible API.",
-      "language": "Rust",
-      "stars": 69,
-      "updatedAt": "2026-11-01T09:50:54Z",
-      "fullName": "enapt/SwarmLLM"
-    },
-    {
-      "name": "open-webui",
-      "url": "https://github.com/open-webui/open-webui",
-      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "name": "otari",
+      "url": "https://github.com/mozilla-ai/otari",
+      "description": "Open-source, OpenAI-compatible LLM gateway you run yourself. One endpoint for 40+ providers, with virtual keys, budgets, and usage tracking.",
       "language": "Python",
-      "stars": 157438,
-      "updatedAt": "2026-11-01T09:49:45Z",
-      "fullName": "open-webui/open-webui"
+      "stars": 809,
+      "updatedAt": "2026-11-02T09:24:08Z",
+      "fullName": "mozilla-ai/otari"
     },
     {
-      "name": "llm-light",
-      "url": "https://github.com/PIsberg/llm-light",
-      "description": "llm-light is an interactive CLI chat tool for querying and editing a codebase using Claude. By combining Anthropic's prompt caching with a highly optimized hybrid RAG (Retrieval-Augmented Generation) pipeline, it drastically reduces API costs while maintaining",
+      "name": "neatroots",
+      "url": "https://github.com/neatlogs/neatroots",
+      "description": "neatroots: see, check and replay your AI agent's runs on your machine while you build it. Local-first, by Neatlogs.",
+      "language": "TypeScript",
+      "stars": 80,
+      "updatedAt": "2026-11-02T09:23:57Z",
+      "fullName": "neatlogs/neatroots"
+    },
+    {
+      "name": "LangBot",
+      "url": "https://github.com/langbot-app/LangBot",
+      "description": "Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integrated with ChatGPT(GPT), DeepSeek, Dify, n8n, Langflow, Coze,",
       "language": "Python",
-      "stars": 6,
-      "updatedAt": "2026-11-01T09:49:26Z",
-      "fullName": "PIsberg/llm-light"
-    },
-    {
-      "name": "token-efficiency-lex",
-      "url": "https://github.com/Apil-Shrestha/token-efficiency-lex",
-      "description": "Token Cost Parity: Multilingual LLM Efficiency Analysis 2026",
-      "language": "HTML",
-      "stars": 115,
-      "updatedAt": "2026-11-01T09:49:18Z",
-      "fullName": "Apil-Shrestha/token-efficiency-lex"
-    },
-    {
-      "name": "respan-gateway",
-      "url": "https://github.com/respanai/respan-gateway",
-      "description": "Open-source LLM gateway in Rust. One endpoint for OpenAI, Anthropic, Gemini and every other vendor. Any SDK, any model, any tool.",
-      "language": "Rust",
-      "stars": 440,
-      "updatedAt": "2026-11-01T09:49:17Z",
-      "fullName": "respanai/respan-gateway"
-    },
-    {
-      "name": "swarm-foraging-qlearn",
-      "url": "https://github.com/jaimasih05-commits/swarm-foraging-qlearn",
-      "description": "Q-Learning Swarm Foraging 2026: Multi-Agent RL in Dynamic Grid Environments",
-      "language": "HTML",
-      "stars": 118,
-      "updatedAt": "2026-11-01T09:48:59Z",
-      "fullName": "jaimasih05-commits/swarm-foraging-qlearn"
-    },
-    {
-      "name": "natively-cluely-ai-assistant",
-      "url": "https://github.com/Natively-AI-assistant/natively-cluely-ai-assistant",
-      "description": "Natively — Free open-source AI meeting assistant, interview copilot, and note taker. The best alternative to Cluely, Otter, Granola, Final Round AI, Fireflies, and Interview Coder. Real-time transcription, AI meeting notes, lecture recording, local RAG, BYOK, ",
-      "language": "TypeScript",
-      "stars": 3141,
-      "updatedAt": "2026-11-01T09:47:47Z",
-      "fullName": "Natively-AI-assistant/natively-cluely-ai-assistant"
-    },
-    {
-      "name": "qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "description": "An open-source AI coding agent that lives in your terminal.",
-      "language": "TypeScript",
-      "stars": 28855,
-      "updatedAt": "2026-11-01T09:47:40Z",
-      "fullName": "QwenLM/qwen-code"
+      "stars": 18674,
+      "updatedAt": "2026-11-02T09:23:52Z",
+      "fullName": "langbot-app/LangBot"
     }
   ]
 }
