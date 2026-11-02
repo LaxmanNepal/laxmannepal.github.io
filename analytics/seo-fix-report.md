@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-02T06:20:25.901564+00:00.
+Generated from the latest analytics snapshot: 2026-11-02T21:47:01.400555+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,16 +13,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/apple-iphone-air/ — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: mobile price in nepal/phones/apple iphone air | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about mobile price in nepal/phones/apple iphone air with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: mobile price in nepal/phones/apple iphone air
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -95,16 +85,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/top 10 free online tools will save you.html
 - Top queries: No page-query rows
 
-### /p/cookies-policy.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/cookies policy.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/cookies policy.html
-- Top queries: No page-query rows
-
 ### /2025/07/image-prompt.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -135,14 +115,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/about.html
 - Top queries: No page-query rows
 
-### /p/disclaimer.html — SEO score 0/100
+### /p/cookies-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: p/disclaimer.html | Laxman Nepal
+- Recommended title: p/cookies policy.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/disclaimer.html
+- Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/cookies policy.html
 - Top queries: No page-query rows
 
 ### /p/sitemap.html — SEO score 0/100
@@ -195,6 +175,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/contact us.html
 - Top queries: No page-query rows
 
+### /p/disclaimer.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/disclaimer.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/disclaimer.html
+- Top queries: No page-query rows
+
 ### /p/privacy-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -213,16 +203,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/02/m3um3u8 player tool by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/02/m3um3u8 player tool by laxman nepal.html
-- Top queries: No page-query rows
-
-### /2024/10/top-20-websites-for-modded-apks-your.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/10/top 20 websites for modded apks your.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2024/10/top 20 websites for modded apks your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/10/top 20 websites for modded apks your.html
 - Top queries: No page-query rows
 
 ### /p/pdf.html — SEO score 0/100
@@ -253,6 +233,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/09/free pdf to image converter tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/09/free pdf to image converter tools.html
+- Top queries: No page-query rows
+
+### /2024/10/top-20-websites-for-modded-apks-your.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/10/top 20 websites for modded apks your.html | Laxman…
+- Current description: Missing
+- Recommended description: Learn about 2024/10/top 20 websites for modded apks your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/10/top 20 websites for modded apks your.html
 - Top queries: No page-query rows
 
 ### /2025/06/facebook-video-downloader-save-hd.html — SEO score 0/100
@@ -445,16 +435,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/qr code generator.html
 - Top queries: No page-query rows
 
-### /p/laxman-nepal-personal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/laxman nepal personal.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/laxman nepal personal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/laxman nepal personal.html
-- Top queries: No page-query rows
-
 ### /2023/07/currency-converter-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -565,14 +545,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: ai.html
 - Top queries: No page-query rows
 
-### /p/laxman-nepal-vacation.html — SEO score 0/100
+### /p/laxman-nepal-personal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: p/laxman nepal vacation.html | Laxman Nepal
+- Recommended title: p/laxman nepal personal.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about p/laxman nepal vacation.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/laxman nepal vacation.html
+- Recommended description: Learn about p/laxman nepal personal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/laxman nepal personal.html
 - Top queries: No page-query rows
 
 ### /p/typing-test.html — SEO score 0/100
@@ -805,16 +785,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/free online video to audio converter.html
 - Top queries: No page-query rows
 
-### /2025/06/no-more-google.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/06/no more google.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2025/06/no more google.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/06/no more google.html
-- Top queries: No page-query rows
-
 ### /2025/06/word-counter.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -995,16 +965,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/ai tools.html
 - Top queries: No page-query rows
 
-### /p/laxman-nepal-age.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/laxman nepal age.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/laxman nepal age.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/laxman nepal age.html
-- Top queries: No page-query rows
-
 ### /p/laxman-nepal-search.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1015,6 +975,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/laxman nepal search.html
 - Top queries: No page-query rows
 
+### /p/laxman-nepal-vacation.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/laxman nepal vacation.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/laxman nepal vacation.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/laxman nepal vacation.html
+- Top queries: No page-query rows
+
 ### /p/laxman-nepal-website.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1023,16 +993,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/laxman nepal website.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/laxman nepal website.html
-- Top queries: No page-query rows
-
-### /p/loan — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/loan | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/loan with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/loan
 - Top queries: No page-query rows
 
 ### /p/photos.html — SEO score 0/100
@@ -2603,6 +2563,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Apple iPhone Air 256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Apple iPhone Air 256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Apple iPhone Air 256GB Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/apple-iphone-air/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Apple iPhone Air Price in Nepal, Specs & Store Offers | Laxman Ne
+- Recommended title: Apple iPhone Air Price in Nepal | Laxman Nepal
+- Current description: Compare Apple iPhone Air price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Apple iPhone Air Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Apple iPhone Air Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/blackview-fort-1/ — SEO score 85/100
