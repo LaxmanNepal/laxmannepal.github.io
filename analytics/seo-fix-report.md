@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-03T06:57:43.869661+00:00.
+Generated from the latest analytics snapshot: 2026-11-03T19:37:07.204201+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,6 +13,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
+- Top queries: No page-query rows
+
+### /gold-price-in-nepal-today/ — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: gold price in nepal today | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about gold price in nepal today with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: gold price in nepal today
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -45,16 +55,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/11/download computer softwares by laxman.html
 - Top queries: No page-query rows
 
-### /2025/05/how-to-make-free-website-with-euorg.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/05/how to make free website with euorg.html | Laxman N…
-- Current description: Missing
-- Recommended description: Learn about 2025/05/how to make free website with euorg.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/05/how to make free website with euorg.html
-- Top queries: No page-query rows
-
 ### /2023/01/how-to-extract-youtube-video-title.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -63,6 +63,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/01/how to extract youtube video title.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/01/how to extract youtube video title.html
+- Top queries: No page-query rows
+
+### /2025/05/how-to-make-free-website-with-euorg.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/05/how to make free website with euorg.html | Laxman N…
+- Current description: Missing
+- Recommended description: Learn about 2025/05/how to make free website with euorg.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/05/how to make free website with euorg.html
 - Top queries: No page-query rows
 
 ### /p/link-shortner-generator.html — SEO score 0/100
@@ -85,14 +95,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/top 10 free online tools will save you.html
 - Top queries: No page-query rows
 
-### /2025/07/image-prompt.html — SEO score 0/100
+### /p/about.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: 2025/07/image prompt.html | Laxman Nepal
+- Recommended title: p/about.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about 2025/07/image prompt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/07/image prompt.html
+- Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/about.html
 - Top queries: No page-query rows
 
 ### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
@@ -105,14 +115,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/01/25 trusted sites that pay in usd for.html
 - Top queries: No page-query rows
 
-### /p/about.html — SEO score 0/100
+### /2025/07/image-prompt.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: p/about.html | Laxman Nepal
+- Recommended title: 2025/07/image prompt.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/about.html
+- Recommended description: Learn about 2025/07/image prompt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/07/image prompt.html
 - Top queries: No page-query rows
 
 ### /p/cookies-policy.html — SEO score 0/100
@@ -123,6 +133,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/cookies policy.html
+- Top queries: No page-query rows
+
+### /p/disclaimer.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/disclaimer.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/disclaimer.html
 - Top queries: No page-query rows
 
 ### /p/sitemap.html — SEO score 0/100
@@ -175,16 +195,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/contact us.html
 - Top queries: No page-query rows
 
-### /p/disclaimer.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/disclaimer.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/disclaimer.html
-- Top queries: No page-query rows
-
 ### /p/privacy-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -213,16 +223,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/pdf.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/pdf.html
-- Top queries: No page-query rows
-
-### /p/youtube-tools.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/youtube tools.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/youtube tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/youtube tools.html
 - Top queries: No page-query rows
 
 ### /2024/09/free-pdf-to-image-converter-tools.html — SEO score 0/100
@@ -313,6 +313,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/image.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/image.html
+- Top queries: No page-query rows
+
+### /p/youtube-tools.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/youtube tools.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/youtube tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/youtube tools.html
 - Top queries: No page-query rows
 
 ### /2023/07/text-to-speech-converter-by-laxman-nepal.html — SEO score 0/100
@@ -415,6 +425,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/07/whatsapp direct message send without.html
 - Top queries: No page-query rows
 
+### /2023/09/bs-to-ad-nepali-date-converter-ad-to-bs.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/09/bs to ad nepali date converter ad to bs.html | Laxm…
+- Current description: Missing
+- Recommended description: Learn about 2023/09/bs to ad nepali date converter ad to bs.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/09/bs to ad nepali date converter ad to bs.html
+- Top queries: No page-query rows
+
 ### /2024/09/netflix-free-website-watch-movies.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -465,6 +485,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/07/image editor by laxman nepal.html
 - Top queries: No page-query rows
 
+### /2023/07/increase-website-view-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/07/increase website view by laxman nepal.html | Laxman…
+- Current description: Missing
+- Recommended description: Learn about 2023/07/increase website view by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/07/increase website view by laxman nepal.html
+- Top queries: No page-query rows
+
 ### /2023/07/weather-app-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -483,16 +513,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/09/all in one image converter online.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/09/all in one image converter online.html
-- Top queries: No page-query rows
-
-### /2023/09/bs-to-ad-nepali-date-converter-ad-to-bs.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/09/bs to ad nepali date converter ad to bs.html | Laxm…
-- Current description: Missing
-- Recommended description: Learn about 2023/09/bs to ad nepali date converter ad to bs.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/09/bs to ad nepali date converter ad to bs.html
 - Top queries: No page-query rows
 
 ### /2024/09/top-10-ways-to-make-money-online-in-2024.html — SEO score 0/100
@@ -1263,6 +1283,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Design professional social graphics instantly.
 - Recommended description: Learn about SocialPoster Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: SocialPoster Pro
+- Top queries: No page-query rows
+
+### /laptop/ — SEO score 55/100
+- Issues: Description length 37, Noindex, Thin content (89 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laptop resources — Laxman Nepal
+- Recommended title: Laptop resources — Laxman Nepal | Laxman Nepal
+- Current description: This page has moved.  Continue here .
+- Recommended description: Learn about Laptop resources — Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laptop resources — Laxman Nepal
 - Top queries: No page-query rows
 
 ### /2025/07/usefull-links.html — SEO score 55/100
@@ -2123,16 +2153,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Nepal gold price history by date, including Fine Gold, Tejabi Gold and Silver rates per tola. Browse daily changes and use the latest gold price in Nepal today.
 - Recommended description: Learn about Gold Price History in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Gold Price History in Nepal
-- Top queries: No page-query rows
-
-### /gold-price-in-nepal-today/ — SEO score 85/100
-- Issues: Title length 61
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Gold Price in Nepal Today | आजको सुन चाँदीको भाउ | FENEGOSIDA
-- Recommended title: आजको सुन चाँदीको भाउ | Laxman Nepal
-- Current description: नेपालको पछिल्लो प्रकाशित छापावाल सुन, तेजाबी सुन र चाँदीको दर। प्रति तोला, १० ग्राम, ग्राम, आना र लालमा हिसाब, दैनिक परिवर्तन र इतिहास।
-- Recommended description: Learn about आजको सुन चाँदीको भाउ with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: आजको सुन चाँदीको भाउ
 - Top queries: No page-query rows
 
 ### /guides/ — SEO score 85/100
@@ -3475,6 +3495,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: OnePlus Nord 5 8GB/256GB Price in Nepal
 - Top queries: No page-query rows
 
+### /mobile-price-in-nepal/phones/oneplus-nord-5/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: OnePlus Nord 5 Price in Nepal, Specs & Store Offers | Laxman Nepa
+- Recommended title: OnePlus Nord 5 Price in Nepal | Laxman Nepal
+- Current description: Compare OnePlus Nord 5 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about OnePlus Nord 5 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: OnePlus Nord 5 Price in Nepal
+- Top queries: No page-query rows
+
 ### /mobile-price-in-nepal/phones/oneplus-nord-6-5g-12gb-256gb/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -4453,16 +4483,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Samsung Galaxy A53 5G Orange / 128GB / 8GB 128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specific
 - Recommended description: Learn about Samsung Galaxy A53 5G Orange / 128GB / 8GB 128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Samsung Galaxy A53 5G Orange / 128GB / 8GB 128GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/samsung-galaxy-a56/ — SEO score 85/100
-- Issues: Title length 64
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Samsung Galaxy A56 Price in Nepal, Specs & Store Offers | Laxman
-- Recommended title: Samsung Galaxy A56 Price in Nepal | Laxman Nepal
-- Current description: Compare Samsung Galaxy A56 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Samsung Galaxy A56 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Samsung Galaxy A56 Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/samsung-galaxy-a57-5g-6-9mm-ultra-slim-12gb-256gb/ — SEO score 85/100
