@@ -1,178 +1,43 @@
 {
-  "updatedAt": "2026-11-02",
+  "updatedAt": "2026-11-03",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "KiroCrew",
-      "url": "https://github.com/kirodotdev/KiroCrew",
-      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
-      "language": "Python",
-      "stars": 4720,
-      "updatedAt": "2026-11-02T09:26:39Z",
-      "fullName": "kirodotdev/KiroCrew"
-    },
-    {
-      "name": "oh-my-hermes",
-      "url": "https://github.com/rlaope/oh-my-hermes",
-      "description": "⚚ The coding harness with Hermes Agent wired into IDE.",
-      "language": "Python",
-      "stars": 5031,
-      "updatedAt": "2026-11-02T09:26:36Z",
-      "fullName": "rlaope/oh-my-hermes"
-    },
-    {
-      "name": "mcp-server-couchbase",
-      "url": "https://github.com/couchbase/mcp-server-couchbase",
-      "description": "Model Context Protocol server for Couchbase - connect AI agents and LLMs like Claude, Cursor, and Copilot to Couchbase/Capella",
-      "language": "Python",
-      "stars": 34,
-      "updatedAt": "2026-11-02T09:26:31Z",
-      "fullName": "couchbase/mcp-server-couchbase"
-    },
-    {
-      "name": "OpenHands",
-      "url": "https://github.com/OpenHands/OpenHands",
-      "description": "🙌 OpenHands: AI-Driven Development",
-      "language": "TypeScript",
-      "stars": 92483,
-      "updatedAt": "2026-11-02T09:26:30Z",
-      "fullName": "OpenHands/OpenHands"
-    },
-    {
-      "name": "LiveAgent",
-      "url": "https://github.com/Stack-Cairn/LiveAgent",
-      "description": "A fully functional AI Agent desktop client that supports Webui access and can be creatively customized and expanded!",
-      "language": "TypeScript",
-      "stars": 2249,
-      "updatedAt": "2026-11-02T09:26:26Z",
-      "fullName": "Stack-Cairn/LiveAgent"
-    },
-    {
-      "name": "Hyperloom",
-      "url": "https://github.com/AMD-AGI/Hyperloom",
-      "description": "An agentic system that auto-optimizes LLM workloads on AMD GPUs.",
-      "language": "Python",
-      "stars": 258,
-      "updatedAt": "2026-11-02T09:26:05Z",
-      "fullName": "AMD-AGI/Hyperloom"
-    },
-    {
-      "name": "wanaku",
-      "url": "https://github.com/wanaku-ai/wanaku",
-      "description": "Wanaku Governed Action Proxy for AI Agents",
-      "language": "Rust",
-      "stars": 134,
-      "updatedAt": "2026-11-02T09:25:54Z",
-      "fullName": "wanaku-ai/wanaku"
-    },
-    {
-      "name": "langwatch",
-      "url": "https://github.com/langwatch/langwatch",
-      "description": "Open-Source Agent Observability & Evals for AI Platform teams. Trace, test, route and govern every agent & coding assistant in the company.",
-      "language": "TypeScript",
-      "stars": 5004,
-      "updatedAt": "2026-11-02T09:25:52Z",
-      "fullName": "langwatch/langwatch"
-    },
-    {
-      "name": "SkillBill",
-      "url": "https://github.com/Sermilion/SkillBill",
-      "description": "A deterministic Software Development pipeline for you AI agents, written in Kotlin with nice UI for monitoring.",
-      "language": "Kotlin",
-      "stars": 46,
-      "updatedAt": "2026-11-02T09:25:48Z",
-      "fullName": "Sermilion/SkillBill"
-    },
-    {
-      "name": "rome",
-      "url": "https://github.com/rome-os/rome",
-      "description": "A compounding agent OS for recursive agents. Also an open source alternative to Grok Bot and Meta's Muse.",
-      "language": "TypeScript",
-      "stars": 881,
-      "updatedAt": "2026-11-02T09:25:15Z",
-      "fullName": "rome-os/rome"
-    },
-    {
-      "name": "llm",
-      "url": "https://github.com/r-uby-dev/llm",
-      "description": "An agentic runtime",
-      "language": "Ruby",
-      "stars": 144,
-      "updatedAt": "2026-11-02T09:25:13Z",
-      "fullName": "r-uby-dev/llm"
+      "name": "Artemis",
+      "url": "https://github.com/ls1intum/Artemis",
+      "description": "Artemis - Interactive Learning with Automated Feedback",
+      "language": "Java",
+      "stars": 825,
+      "updatedAt": "2026-11-03T09:29:43Z",
+      "fullName": "ls1intum/Artemis"
     },
     {
       "name": "dify",
       "url": "https://github.com/langgenius/dify",
       "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
       "language": "Python",
-      "stars": 160217,
-      "updatedAt": "2026-11-02T09:25:11Z",
+      "stars": 160309,
+      "updatedAt": "2026-11-03T09:29:40Z",
       "fullName": "langgenius/dify"
     },
     {
-      "name": "molecule",
-      "url": "https://github.com/molecule-dev/molecule",
-      "description": "Open-source, composable full-stack packages an AI can wire correctly. Swap any provider in one line. Export anytime.",
+      "name": "awesome-academic-skills",
+      "url": "https://github.com/O0000-code/awesome-academic-skills",
+      "description": "An index of Claude and agent skills for academic work, from literature search to peer review. Organized by where each skill fits in the research lifecycle; each entry notes its license and what it runs. CC0.",
+      "language": "Python",
+      "stars": 57,
+      "updatedAt": "2026-11-03T09:29:39Z",
+      "fullName": "O0000-code/awesome-academic-skills"
+    },
+    {
+      "name": "opencodex",
+      "url": "https://github.com/lidge-jun/opencodex",
+      "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
       "language": "TypeScript",
-      "stars": 44,
-      "updatedAt": "2026-11-02T09:25:11Z",
-      "fullName": "molecule-dev/molecule"
-    },
-    {
-      "name": "skill-of-skills",
-      "url": "https://github.com/the911fund/skill-of-skills",
-      "description": "The quality-ranked discovery engine for AI coding skills, plugins and MCP servers across Claude Code, Codex, Cursor, Windsurf, Cline and more.",
-      "language": "Python",
-      "stars": 82,
-      "updatedAt": "2026-11-02T09:25:04Z",
-      "fullName": "the911fund/skill-of-skills"
-    },
-    {
-      "name": "fletch",
-      "url": "https://github.com/fwdai/fletch",
-      "description": "A new kind of IDE for agentic engineering",
-      "language": "Rust",
-      "stars": 34,
-      "updatedAt": "2026-11-02T09:25:03Z",
-      "fullName": "fwdai/fletch"
-    },
-    {
-      "name": "Tavotto",
-      "url": "https://github.com/Tavotto/Tavotto",
-      "description": "AI drew your research figure. Tavotto makes it publication-ready: edit matplotlib and AI-generated figures on a canvas, lay out multi-panel pages in mm, check journal rules before export. Scripts stay untouched.",
-      "language": "Python",
-      "stars": 638,
-      "updatedAt": "2026-11-02T09:24:59Z",
-      "fullName": "Tavotto/Tavotto"
-    },
-    {
-      "name": "Xenon",
-      "url": "https://github.com/xianyu-sheng/Xenon",
-      "description": "Verifiable AI coding agent harness / 可验证的 AI 编码代理：evidence hash-chain · hollow-answer gate · manual verification checklist · 6 engines + MCP · multi-model · Windows/CJK · listed in awesome-opensource-ai & Collabnix awesome-mcp-lists",
-      "language": "Python",
-      "stars": 56,
-      "updatedAt": "2026-11-02T09:24:55Z",
-      "fullName": "xianyu-sheng/Xenon"
-    },
-    {
-      "name": "TensorFold",
-      "url": "https://github.com/ashhart/TensorFold",
-      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
-      "language": "Zig",
-      "stars": 1591,
-      "updatedAt": "2026-11-02T09:24:51Z",
-      "fullName": "ashhart/TensorFold"
-    },
-    {
-      "name": "Containarium",
-      "url": "https://github.com/FootprintAI/Containarium",
-      "description": "Open-source agent runtime — SSH-native isolation, eBPF egress policy, Kubernetes + LXC backends, GPU passthrough, MCP-native CLI",
-      "language": "Go",
-      "stars": 314,
-      "updatedAt": "2026-11-02T09:24:48Z",
-      "fullName": "FootprintAI/Containarium"
+      "stars": 18181,
+      "updatedAt": "2026-11-03T09:29:38Z",
+      "fullName": "lidge-jun/opencodex"
     },
     {
       "name": "claude-code-plugins",
@@ -180,8 +45,89 @@
       "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
       "language": "Shell",
       "stars": 28,
-      "updatedAt": "2026-11-02T09:24:42Z",
+      "updatedAt": "2026-11-03T09:29:37Z",
       "fullName": "melodic-software/claude-code-plugins"
+    },
+    {
+      "name": "auto-browser",
+      "url": "https://github.com/LvcidPsyche/auto-browser",
+      "description": "Give your AI agent a real browser — with a human in the loop. Open-source MCP-native browser agent.",
+      "language": "Python",
+      "stars": 916,
+      "updatedAt": "2026-11-03T09:29:33Z",
+      "fullName": "LvcidPsyche/auto-browser"
+    },
+    {
+      "name": "promptscript",
+      "url": "https://github.com/mrwogu/promptscript",
+      "description": "Prompt-as-Code for Enterprise AI. Standardize, audit, and deploy instructions across any AI coding assistant.",
+      "language": "TypeScript",
+      "stars": 380,
+      "updatedAt": "2026-11-03T09:29:30Z",
+      "fullName": "mrwogu/promptscript"
+    },
+    {
+      "name": "KiroCrew",
+      "url": "https://github.com/kirodotdev/KiroCrew",
+      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
+      "language": "Python",
+      "stars": 4745,
+      "updatedAt": "2026-11-03T09:29:25Z",
+      "fullName": "kirodotdev/KiroCrew"
+    },
+    {
+      "name": "scowld",
+      "url": "https://github.com/apoorvdarshan/scowld",
+      "description": "🦫 Open-source iOS AI companion with a live VRM avatar that sees you — bring-your-own-key chat, vision, speech-to-text & text-to-speech (OpenAI, Anthropic, Gemini, ElevenLabs, Groq & more). SwiftUI.",
+      "language": "Swift",
+      "stars": 34,
+      "updatedAt": "2026-11-03T09:29:17Z",
+      "fullName": "apoorvdarshan/scowld"
+    },
+    {
+      "name": "omnigent",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
+      "language": "Python",
+      "stars": 11184,
+      "updatedAt": "2026-11-03T09:29:13Z",
+      "fullName": "omnigent-ai/omnigent"
+    },
+    {
+      "name": "lattice",
+      "url": "https://github.com/ohdearquant/lattice",
+      "description": "Run AI models on Apple Silicon and Raspberry Pi",
+      "language": "Rust",
+      "stars": 46,
+      "updatedAt": "2026-11-03T09:29:13Z",
+      "fullName": "ohdearquant/lattice"
+    },
+    {
+      "name": "xyntetik-runner",
+      "url": "https://github.com/Joakimpalm-Zen/xyntetik-runner",
+      "description": "Local inference you can prove. A single-binary GGUF engine in C: serves, scores, and trains LoRA through the quantized weights it deploys, byte-reproducibly. Tool calls survive the token limit; every run replays as a signed receipt. CPU/CUDA/Metal, OpenAI- and",
+      "language": "C",
+      "stars": 30,
+      "updatedAt": "2026-11-03T09:29:12Z",
+      "fullName": "Joakimpalm-Zen/xyntetik-runner"
+    },
+    {
+      "name": "agentscope-java",
+      "url": "https://github.com/agentscope-ai/agentscope-java",
+      "description": "Build distributed, production-grade, long-running agents.",
+      "language": "Java",
+      "stars": 6230,
+      "updatedAt": "2026-11-03T09:28:46Z",
+      "fullName": "agentscope-ai/agentscope-java"
+    },
+    {
+      "name": "daimon",
+      "url": "https://github.com/pymc-labs/daimon",
+      "description": "The open source data science agent for Discord and Slack",
+      "language": "Python",
+      "stars": 24,
+      "updatedAt": "2026-11-03T09:28:38Z",
+      "fullName": "pymc-labs/daimon"
     },
     {
       "name": "nextclaw",
@@ -189,35 +135,89 @@
       "description": "A human-centered long-term AI partner—not a task-centered assistant.",
       "language": "TypeScript",
       "stars": 262,
-      "updatedAt": "2026-11-02T09:24:41Z",
+      "updatedAt": "2026-11-03T09:28:36Z",
       "fullName": "Peiiii/nextclaw"
     },
     {
-      "name": "otari",
-      "url": "https://github.com/mozilla-ai/otari",
-      "description": "Open-source, OpenAI-compatible LLM gateway you run yourself. One endpoint for 40+ providers, with virtual keys, budgets, and usage tracking.",
-      "language": "Python",
-      "stars": 809,
-      "updatedAt": "2026-11-02T09:24:08Z",
-      "fullName": "mozilla-ai/otari"
+      "name": "MobileRE-Skill",
+      "url": "https://github.com/index-login/MobileRE-Skill",
+      "description": "AI Agent 驱动的移动端逆向技能集：Frida hook、一键脱壳、反检测绕过、内存 DEX dump、Ghidra MCP 符号/结构恢复。AI-agent skill system for mobile reverse engineering.",
+      "language": "JavaScript",
+      "stars": 233,
+      "updatedAt": "2026-11-03T09:28:17Z",
+      "fullName": "index-login/MobileRE-Skill"
     },
     {
-      "name": "neatroots",
-      "url": "https://github.com/neatlogs/neatroots",
-      "description": "neatroots: see, check and replay your AI agent's runs on your machine while you build it. Local-first, by Neatlogs.",
+      "name": "tingly-box",
+      "url": "https://github.com/tingly-dev/tingly-box",
+      "description": "Your Intelligence, Orchestrated. Any Model, Any Agent, Any One.",
+      "language": "Go",
+      "stars": 376,
+      "updatedAt": "2026-11-03T09:28:01Z",
+      "fullName": "tingly-dev/tingly-box"
+    },
+    {
+      "name": "sglang",
+      "url": "https://github.com/sgl-project/sglang",
+      "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+      "language": "Python",
+      "stars": 38396,
+      "updatedAt": "2026-11-03T09:28:00Z",
+      "fullName": "sgl-project/sglang"
+    },
+    {
+      "name": "Xenon",
+      "url": "https://github.com/xianyu-sheng/Xenon",
+      "description": "Verifiable AI coding agent harness / 可验证的 AI 编码代理：evidence hash-chain · hollow-answer gate · manual verification checklist · 6 engines + MCP · multi-model · Windows/CJK · listed in awesome-opensource-ai & Collabnix awesome-mcp-lists",
+      "language": "Python",
+      "stars": 56,
+      "updatedAt": "2026-11-03T09:27:59Z",
+      "fullName": "xianyu-sheng/Xenon"
+    },
+    {
+      "name": "milvus",
+      "url": "https://github.com/milvus-io/milvus",
+      "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search",
+      "language": "Go",
+      "stars": 46571,
+      "updatedAt": "2026-11-03T09:27:58Z",
+      "fullName": "milvus-io/milvus"
+    },
+    {
+      "name": "optimum-intel",
+      "url": "https://github.com/huggingface/optimum-intel",
+      "description": "🤗 Optimum Intel: Accelerate inference with Intel optimization tools",
+      "language": "Jupyter Notebook",
+      "stars": 624,
+      "updatedAt": "2026-11-03T09:27:58Z",
+      "fullName": "huggingface/optimum-intel"
+    },
+    {
+      "name": "instar",
+      "url": "https://github.com/JKHeadley/instar",
+      "description": "Persistent Claude Code agents with scheduling, sessions, memory, and Telegram.",
       "language": "TypeScript",
-      "stars": 80,
-      "updatedAt": "2026-11-02T09:23:57Z",
-      "fullName": "neatlogs/neatroots"
+      "stars": 86,
+      "updatedAt": "2026-11-03T09:27:54Z",
+      "fullName": "JKHeadley/instar"
     },
     {
-      "name": "LangBot",
-      "url": "https://github.com/langbot-app/LangBot",
-      "description": "Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integrated with ChatGPT(GPT), DeepSeek, Dify, n8n, Langflow, Coze,",
+      "name": "AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
       "language": "Python",
-      "stars": 18674,
-      "updatedAt": "2026-11-02T09:23:52Z",
-      "fullName": "langbot-app/LangBot"
+      "stars": 187887,
+      "updatedAt": "2026-11-03T09:27:40Z",
+      "fullName": "Significant-Gravitas/AutoGPT"
+    },
+    {
+      "name": "gsv",
+      "url": "https://github.com/deathbyknowledge/gsv",
+      "description": "The personal assistant from the future.",
+      "language": "TypeScript",
+      "stars": 130,
+      "updatedAt": "2026-11-03T09:27:15Z",
+      "fullName": "deathbyknowledge/gsv"
     }
   ]
 }
