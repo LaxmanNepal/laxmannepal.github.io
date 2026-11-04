@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-04T06:37:51.730134+00:00.
+Generated from the latest analytics snapshot: 2026-11-04T19:53:06.042971+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -115,6 +115,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/image prompt.html
 - Top queries: No page-query rows
 
+### /p/terms-and-conditions.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/terms and conditions.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/terms and conditions.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/terms and conditions.html
+- Top queries: No page-query rows
+
 ### /p/cookies-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -143,16 +153,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/sitemap.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/sitemap.html
-- Top queries: No page-query rows
-
-### /p/terms-and-conditions.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/terms and conditions.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/terms and conditions.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/terms and conditions.html
 - Top queries: No page-query rows
 
 ### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
@@ -315,6 +315,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/youtube tools.html
 - Top queries: No page-query rows
 
+### /2023/07/increase-website-view-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/07/increase website view by laxman nepal.html | Laxman…
+- Current description: Missing
+- Recommended description: Learn about 2023/07/increase website view by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/07/increase website view by laxman nepal.html
+- Top queries: No page-query rows
+
 ### /2023/07/text-to-speech-converter-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -323,6 +333,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/text to speech converter by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/text to speech converter by laxman nepal.html
+- Top queries: No page-query rows
+
+### /2023/07/weather-app-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/07/weather app by laxman nepal.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2023/07/weather app by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/07/weather app by laxman nepal.html
 - Top queries: No page-query rows
 
 ### /2023/08/free-unlimited-ai-websites-lists-laxman.html — SEO score 0/100
@@ -405,6 +425,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/07/age calculator tool by laxman nepal.html
 - Top queries: No page-query rows
 
+### /2023/07/currency-converter-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/07/currency converter by laxman nepal.html | Laxman Ne…
+- Current description: Missing
+- Recommended description: Learn about 2023/07/currency converter by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/07/currency converter by laxman nepal.html
+- Top queries: No page-query rows
+
 ### /2023/07/free-keyword-generator-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -445,16 +475,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/qr code generator.html
 - Top queries: No page-query rows
 
-### /2023/07/currency-converter-by-laxman-nepal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/07/currency converter by laxman nepal.html | Laxman Ne…
-- Current description: Missing
-- Recommended description: Learn about 2023/07/currency converter by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/07/currency converter by laxman nepal.html
-- Top queries: No page-query rows
-
 ### /2023/07/google-drive-direct-download-link.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -473,26 +493,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/image editor by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/image editor by laxman nepal.html
-- Top queries: No page-query rows
-
-### /2023/07/increase-website-view-by-laxman-nepal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/07/increase website view by laxman nepal.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2023/07/increase website view by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/07/increase website view by laxman nepal.html
-- Top queries: No page-query rows
-
-### /2023/07/weather-app-by-laxman-nepal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/07/weather app by laxman nepal.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2023/07/weather app by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/07/weather app by laxman nepal.html
 - Top queries: No page-query rows
 
 ### /2023/09/all-in-one-image-converter-online.html — SEO score 0/100
@@ -1265,16 +1265,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Hashtag Extractor
 - Top queries: No page-query rows
 
-### /2026/01/facebook-post-generator.html — SEO score 55/100
-- Issues: Description length 46, Noindex, Thin content (141 words)
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: SocialPoster - Custom Gradients & Text Range
-- Recommended title: SocialPoster Pro | Laxman Nepal
-- Current description: Design professional social graphics instantly.
-- Recommended description: Learn about SocialPoster Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: SocialPoster Pro
-- Top queries: No page-query rows
-
 ### /laptop/ — SEO score 55/100
 - Issues: Description length 37, Noindex, Thin content (89 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1283,6 +1273,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: This page has moved.  Continue here .
 - Recommended description: Learn about Laptop resources — Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Laptop resources — Laxman Nepal
+- Top queries: No page-query rows
+
+### /2026/01/facebook-post-generator.html — SEO score 55/100
+- Issues: Description length 46, Noindex, Thin content (141 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: SocialPoster - Custom Gradients & Text Range
+- Recommended title: SocialPoster Pro | Laxman Nepal
+- Current description: Design professional social graphics instantly.
+- Recommended description: Learn about SocialPoster Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: SocialPoster Pro
 - Top queries: No page-query rows
 
 ### /2025/07/usefull-links.html — SEO score 55/100
@@ -2835,16 +2835,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Honor X7d 4G 8GB/256GB Price in Nepal
 - Top queries: No page-query rows
 
-### /mobile-price-in-nepal/phones/honor-x7d-4g-8gb-512gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Honor X7d 4G 8GB/512GB Price in Nepal, Specs & Store Offers | Lax
-- Recommended title: Honor X7d 4G 8GB/512GB Price in Nepal | Laxman Nepal
-- Current description: Compare Honor X7d 4G 8GB/512GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Honor X7d 4G 8GB/512GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Honor X7d 4G 8GB/512GB Price in Nepal
-- Top queries: No page-query rows
-
 ### /mobile-price-in-nepal/phones/honor-x7e-4g-6gb-256gb/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -3335,6 +3325,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Nothing Phone (4a) 5G 8GB/256GB Price in Nepal
 - Top queries: No page-query rows
 
+### /mobile-price-in-nepal/phones/nothing-phone-4a-pro-5g-black-12gb-256gb/ — SEO score 85/100
+- Issues: Title length 64
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Nothing Phone 4a Pro 5G Black / 12GB/256GB Price in Nepal, Specs
+- Recommended title: Nothing Phone 4a Pro 5G Black / 12GB/256GB Price in Nepal |…
+- Current description: Compare Nothing Phone 4a Pro 5G Black / 12GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications
+- Recommended description: Learn about Nothing Phone 4a Pro 5G Black / 12GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Nothing Phone 4a Pro 5G Black / 12GB/256GB Price in Nepal
+- Top queries: No page-query rows
+
 ### /mobile-price-in-nepal/phones/nothing-phone-4a-pro-5g-pink-12gb-256gb/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -3638,11 +3638,11 @@ This report is review-only. It does not modify published pages. Recommendations 
 ### /mobile-price-in-nepal/phones/poco-f8-pro/ — SEO score 85/100
 - Issues: Title length 63
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Poco F8 Pro Price in Nepal, Specs & Store Offers | Laxman Nepal
-- Recommended title: Poco F8 Pro Price in Nepal | Laxman Nepal
-- Current description: Compare Poco F8 Pro price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Poco F8 Pro Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Poco F8 Pro Price in Nepal
+- Current title: POCO F8 Pro Price in Nepal, Specs & Store Offers | Laxman Nepal
+- Recommended title: POCO F8 Pro Price in Nepal | Laxman Nepal
+- Current description: Compare POCO F8 Pro price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about POCO F8 Pro Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: POCO F8 Pro Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/poco-m8-pro-5g-8gb-256gb/ — SEO score 85/100
@@ -3935,6 +3935,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Realme P3 Price in Nepal
 - Top queries: No page-query rows
 
+### /mobile-price-in-nepal/phones/realme-p4-4g-8gb-256gb/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Realme P4 4G 8GB/256GB Price in Nepal, Specs & Store Offers | Lax
+- Recommended title: Realme P4 4G 8GB/256GB Price in Nepal | Laxman Nepal
+- Current description: Compare Realme P4 4G 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Realme P4 4G 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Realme P4 4G 8GB/256GB Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/realme-p4-lite-4g-4gb-128gb/ — SEO score 85/100
+- Issues: Title length 64
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Realme P4 Lite 4G 4GB/128GB Price in Nepal, Specs & Store Offers
+- Recommended title: Realme P4 Lite 4G 4GB/128GB Price in Nepal | Laxman Nepal
+- Current description: Compare Realme P4 Lite 4G 4GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product im
+- Recommended description: Learn about Realme P4 Lite 4G 4GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Realme P4 Lite 4G 4GB/128GB Price in Nepal
+- Top queries: No page-query rows
+
 ### /mobile-price-in-nepal/phones/realme-p4-power-5g-12gb-256gb/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -3953,6 +3973,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Realme P4 Power price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Realme P4 Power Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Realme P4 Power Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/realme-p4x-4g-4gb-128gb/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Realme P4x 4G 4GB/128GB Price in Nepal, Specs & Store Offers | La
+- Recommended title: Realme P4x 4G 4GB/128GB Price in Nepal | Laxman Nepal
+- Current description: Compare Realme P4x 4G 4GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images
+- Recommended description: Learn about Realme P4x 4G 4GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Realme P4x 4G 4GB/128GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/redmi-17-4g-4gb-128gb/ — SEO score 85/100
