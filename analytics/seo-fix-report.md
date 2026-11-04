@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-03T19:37:07.204201+00:00.
+Generated from the latest analytics snapshot: 2026-11-04T06:37:51.730134+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,16 +13,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
-- Top queries: No page-query rows
-
-### /gold-price-in-nepal-today/ — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: gold price in nepal today | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about gold price in nepal today with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: gold price in nepal today
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -345,6 +335,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/08/free unlimited ai websites lists laxman.html
 - Top queries: No page-query rows
 
+### /2023/09/bs-to-ad-nepali-date-converter-ad-to-bs.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/09/bs to ad nepali date converter ad to bs.html | Laxm…
+- Current description: Missing
+- Recommended description: Learn about 2023/09/bs to ad nepali date converter ad to bs.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/09/bs to ad nepali date converter ad to bs.html
+- Top queries: No page-query rows
+
 ### /2023/10/notepad-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -423,16 +423,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/whatsapp direct message send without.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/whatsapp direct message send without.html
-- Top queries: No page-query rows
-
-### /2023/09/bs-to-ad-nepali-date-converter-ad-to-bs.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/09/bs to ad nepali date converter ad to bs.html | Laxm…
-- Current description: Missing
-- Recommended description: Learn about 2023/09/bs to ad nepali date converter ad to bs.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/09/bs to ad nepali date converter ad to bs.html
 - Top queries: No page-query rows
 
 ### /2024/09/netflix-free-website-watch-movies.html — SEO score 0/100
@@ -2153,6 +2143,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Nepal gold price history by date, including Fine Gold, Tejabi Gold and Silver rates per tola. Browse daily changes and use the latest gold price in Nepal today.
 - Recommended description: Learn about Gold Price History in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Gold Price History in Nepal
+- Top queries: No page-query rows
+
+### /gold-price-in-nepal-today/ — SEO score 85/100
+- Issues: Title length 61
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Gold Price in Nepal Today | आजको सुन चाँदीको भाउ | FENEGOSIDA
+- Recommended title: आजको सुन चाँदीको भाउ | Laxman Nepal
+- Current description: नेपालको पछिल्लो प्रकाशित छापावाल सुन, तेजाबी सुन र चाँदीको दर। प्रति तोला, १० ग्राम, ग्राम, आना र लालमा हिसाब, दैनिक परिवर्तन र इतिहास।
+- Recommended description: Learn about आजको सुन चाँदीको भाउ with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: आजको सुन चाँदीको भाउ
 - Top queries: No page-query rows
 
 ### /guides/ — SEO score 85/100
