@@ -1,43 +1,34 @@
 {
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-04",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "Artemis",
-      "url": "https://github.com/ls1intum/Artemis",
-      "description": "Artemis - Interactive Learning with Automated Feedback",
-      "language": "Java",
-      "stars": 825,
-      "updatedAt": "2026-11-03T09:29:43Z",
-      "fullName": "ls1intum/Artemis"
+      "name": "milvus",
+      "url": "https://github.com/milvus-io/milvus",
+      "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search",
+      "language": "Go",
+      "stars": 46584,
+      "updatedAt": "2026-11-04T09:08:00Z",
+      "fullName": "milvus-io/milvus"
     },
     {
-      "name": "dify",
-      "url": "https://github.com/langgenius/dify",
-      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-      "language": "Python",
-      "stars": 160309,
-      "updatedAt": "2026-11-03T09:29:40Z",
-      "fullName": "langgenius/dify"
+      "name": "inferssd",
+      "url": "https://github.com/wici-ai/inferssd",
+      "description": "Run models larger than your RAM or VRAM by streaming MoE experts from SSD. Built on llama.cpp.",
+      "language": "C++",
+      "stars": 298,
+      "updatedAt": "2026-11-04T09:07:53Z",
+      "fullName": "wici-ai/inferssd"
     },
     {
-      "name": "awesome-academic-skills",
-      "url": "https://github.com/O0000-code/awesome-academic-skills",
-      "description": "An index of Claude and agent skills for academic work, from literature search to peer review. Organized by where each skill fits in the research lifecycle; each entry notes its license and what it runs. CC0.",
-      "language": "Python",
-      "stars": 57,
-      "updatedAt": "2026-11-03T09:29:39Z",
-      "fullName": "O0000-code/awesome-academic-skills"
-    },
-    {
-      "name": "opencodex",
-      "url": "https://github.com/lidge-jun/opencodex",
-      "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
-      "language": "TypeScript",
-      "stars": 18181,
-      "updatedAt": "2026-11-03T09:29:38Z",
-      "fullName": "lidge-jun/opencodex"
+      "name": "LOMAssistant",
+      "url": "https://github.com/kevinnie2003/LOMAssistant",
+      "description": "咖啡伴侣：《活侠传》全能Mod - AI陪玩、剧情回顾、分支自选、修改面板、存档优化 / 咖啡伴侶：《活俠傳》全能Mod - AI陪玩、劇情回顧、分支自選、修改面板、存檔優化 / Coffee Companion: All-in-One Mod for Legend of Mortal - AI companion, story overview, branch picking, stat editor, better saves / 珈琲のおとも：『活俠傳』オールインワンMod - AIお供、ストーリー振り返り、",
+      "language": "C#",
+      "stars": 118,
+      "updatedAt": "2026-11-04T09:07:46Z",
+      "fullName": "kevinnie2003/LOMAssistant"
     },
     {
       "name": "claude-code-plugins",
@@ -45,179 +36,188 @@
       "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
       "language": "Shell",
       "stars": 28,
-      "updatedAt": "2026-11-03T09:29:37Z",
+      "updatedAt": "2026-11-04T09:07:46Z",
       "fullName": "melodic-software/claude-code-plugins"
-    },
-    {
-      "name": "auto-browser",
-      "url": "https://github.com/LvcidPsyche/auto-browser",
-      "description": "Give your AI agent a real browser — with a human in the loop. Open-source MCP-native browser agent.",
-      "language": "Python",
-      "stars": 916,
-      "updatedAt": "2026-11-03T09:29:33Z",
-      "fullName": "LvcidPsyche/auto-browser"
-    },
-    {
-      "name": "promptscript",
-      "url": "https://github.com/mrwogu/promptscript",
-      "description": "Prompt-as-Code for Enterprise AI. Standardize, audit, and deploy instructions across any AI coding assistant.",
-      "language": "TypeScript",
-      "stars": 380,
-      "updatedAt": "2026-11-03T09:29:30Z",
-      "fullName": "mrwogu/promptscript"
     },
     {
       "name": "KiroCrew",
       "url": "https://github.com/kirodotdev/KiroCrew",
       "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
       "language": "Python",
-      "stars": 4745,
-      "updatedAt": "2026-11-03T09:29:25Z",
+      "stars": 4773,
+      "updatedAt": "2026-11-04T09:07:41Z",
       "fullName": "kirodotdev/KiroCrew"
     },
     {
-      "name": "scowld",
-      "url": "https://github.com/apoorvdarshan/scowld",
-      "description": "🦫 Open-source iOS AI companion with a live VRM avatar that sees you — bring-your-own-key chat, vision, speech-to-text & text-to-speech (OpenAI, Anthropic, Gemini, ElevenLabs, Groq & more). SwiftUI.",
-      "language": "Swift",
-      "stars": 34,
-      "updatedAt": "2026-11-03T09:29:17Z",
-      "fullName": "apoorvdarshan/scowld"
-    },
-    {
-      "name": "omnigent",
-      "url": "https://github.com/omnigent-ai/omnigent",
-      "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
+      "name": "awesome-claude-code",
+      "url": "https://github.com/hesreallyhim/awesome-claude-code",
+      "description": "A hand-picked collection of the finest of resources for the most awesome of agents, Claude Code, the undisputed champion of coding companions, from the unstoppable team at Anthropic PBC (no affiliation). A delectable showcase of top tier skills, ambidextrous a",
       "language": "Python",
-      "stars": 11184,
-      "updatedAt": "2026-11-03T09:29:13Z",
-      "fullName": "omnigent-ai/omnigent"
+      "stars": 57213,
+      "updatedAt": "2026-11-04T09:07:37Z",
+      "fullName": "hesreallyhim/awesome-claude-code"
     },
     {
-      "name": "lattice",
-      "url": "https://github.com/ohdearquant/lattice",
-      "description": "Run AI models on Apple Silicon and Raspberry Pi",
+      "name": "open-game-works-core",
+      "url": "https://github.com/wnsrn3436/open-game-works-core",
+      "description": "A harness that lets AI agents make server-client games of commercial quality on a prebuilt core",
+      "language": "TypeScript",
+      "stars": 23,
+      "updatedAt": "2026-11-04T09:07:34Z",
+      "fullName": "wnsrn3436/open-game-works-core"
+    },
+    {
+      "name": "modelship",
+      "url": "https://github.com/modelship-ai/modelship",
+      "description": "Self-hosted, OpenAI-compatible inference for the agentic era: reasoning LLMs, universal tool calling, and the Responses API alongside embeddings, speech, and image models — many models sharing your GPUs, one gateway. Powered by Ray Serve.",
+      "language": "Python",
+      "stars": 54,
+      "updatedAt": "2026-11-04T09:07:28Z",
+      "fullName": "modelship-ai/modelship"
+    },
+    {
+      "name": "notte",
+      "url": "https://github.com/nottelabs/notte",
+      "description": "Cloud browser infrastructure and web automation platform for your AI and coding agents",
+      "language": "Python",
+      "stars": 2054,
+      "updatedAt": "2026-11-04T09:07:26Z",
+      "fullName": "nottelabs/notte"
+    },
+    {
+      "name": "vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "language": "Python",
+      "stars": 96279,
+      "updatedAt": "2026-11-04T09:07:21Z",
+      "fullName": "vllm-project/vllm"
+    },
+    {
+      "name": "nuphus",
+      "url": "https://github.com/mrpulor-gh/nuphus",
+      "description": "Nuphus — 本地优先的 AI Agent：真实桌面执行力 + 手机第二块屏幕。Local-first AI agent with real desktop execution and dual-device real-time sync.",
       "language": "Rust",
-      "stars": 46,
-      "updatedAt": "2026-11-03T09:29:13Z",
-      "fullName": "ohdearquant/lattice"
+      "stars": 89,
+      "updatedAt": "2026-11-04T09:07:18Z",
+      "fullName": "mrpulor-gh/nuphus"
     },
     {
-      "name": "xyntetik-runner",
-      "url": "https://github.com/Joakimpalm-Zen/xyntetik-runner",
-      "description": "Local inference you can prove. A single-binary GGUF engine in C: serves, scores, and trains LoRA through the quantized weights it deploys, byte-reproducibly. Tool calls survive the token limit; every run replays as a signed receipt. CPU/CUDA/Metal, OpenAI- and",
-      "language": "C",
-      "stars": 30,
-      "updatedAt": "2026-11-03T09:29:12Z",
-      "fullName": "Joakimpalm-Zen/xyntetik-runner"
+      "name": "hive",
+      "url": "https://github.com/hivecommons/hive",
+      "description": "AI agent orchestration for open and closed source — a fully customizable fleet of AI agents covering every level of project maintenance, from brainstorming to full autonomy",
+      "language": "Go",
+      "stars": 79,
+      "updatedAt": "2026-11-04T09:07:07Z",
+      "fullName": "hivecommons/hive"
     },
     {
-      "name": "agentscope-java",
-      "url": "https://github.com/agentscope-ai/agentscope-java",
-      "description": "Build distributed, production-grade, long-running agents.",
-      "language": "Java",
-      "stars": 6230,
-      "updatedAt": "2026-11-03T09:28:46Z",
-      "fullName": "agentscope-ai/agentscope-java"
-    },
-    {
-      "name": "daimon",
-      "url": "https://github.com/pymc-labs/daimon",
-      "description": "The open source data science agent for Discord and Slack",
-      "language": "Python",
-      "stars": 24,
-      "updatedAt": "2026-11-03T09:28:38Z",
-      "fullName": "pymc-labs/daimon"
-    },
-    {
-      "name": "nextclaw",
-      "url": "https://github.com/Peiiii/nextclaw",
-      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
-      "language": "TypeScript",
-      "stars": 262,
-      "updatedAt": "2026-11-03T09:28:36Z",
-      "fullName": "Peiiii/nextclaw"
-    },
-    {
-      "name": "MobileRE-Skill",
-      "url": "https://github.com/index-login/MobileRE-Skill",
-      "description": "AI Agent 驱动的移动端逆向技能集：Frida hook、一键脱壳、反检测绕过、内存 DEX dump、Ghidra MCP 符号/结构恢复。AI-agent skill system for mobile reverse engineering.",
+      "name": "whale_gril",
+      "url": "https://github.com/Banan1cee/whale_gril",
+      "description": "鲸鲸 · 让 DeepSeek 用你的微信账号陪聊（Windows 桌面端 + WPF 启动器）。WeChat chat bot powered by DeepSeek/Qwen.",
       "language": "JavaScript",
-      "stars": 233,
-      "updatedAt": "2026-11-03T09:28:17Z",
-      "fullName": "index-login/MobileRE-Skill"
+      "stars": 57,
+      "updatedAt": "2026-11-04T09:06:59Z",
+      "fullName": "Banan1cee/whale_gril"
     },
     {
-      "name": "tingly-box",
-      "url": "https://github.com/tingly-dev/tingly-box",
-      "description": "Your Intelligence, Orchestrated. Any Model, Any Agent, Any One.",
+      "name": "magpie",
+      "url": "https://github.com/yetone/magpie",
+      "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
       "language": "Go",
-      "stars": 376,
-      "updatedAt": "2026-11-03T09:28:01Z",
-      "fullName": "tingly-dev/tingly-box"
+      "stars": 29431,
+      "updatedAt": "2026-11-04T09:06:57Z",
+      "fullName": "yetone/magpie"
     },
     {
-      "name": "sglang",
-      "url": "https://github.com/sgl-project/sglang",
-      "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+      "name": "che-ical-mcp",
+      "url": "https://github.com/PsychQuant/che-ical-mcp",
+      "description": "macOS Calendar & Reminders MCP server (29 tools) — native Swift EventKit for Claude Desktop & Code. Events + reminders CRUD, recurring, batch ops, conflict & duplicate detection, per-event timezone, undo/redo, #tags, --cli mode, SwiftUI --setup TCC flow, --sel",
+      "language": "Swift",
+      "stars": 42,
+      "updatedAt": "2026-11-04T09:06:54Z",
+      "fullName": "PsychQuant/che-ical-mcp"
+    },
+    {
+      "name": "omlx",
+      "url": "https://github.com/jundot/omlx",
+      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
       "language": "Python",
-      "stars": 38396,
-      "updatedAt": "2026-11-03T09:28:00Z",
-      "fullName": "sgl-project/sglang"
+      "stars": 23337,
+      "updatedAt": "2026-11-04T09:06:49Z",
+      "fullName": "jundot/omlx"
     },
     {
-      "name": "Xenon",
-      "url": "https://github.com/xianyu-sheng/Xenon",
-      "description": "Verifiable AI coding agent harness / 可验证的 AI 编码代理：evidence hash-chain · hollow-answer gate · manual verification checklist · 6 engines + MCP · multi-model · Windows/CJK · listed in awesome-opensource-ai & Collabnix awesome-mcp-lists",
+      "name": "mindroom",
+      "url": "https://github.com/mindroom-ai/mindroom",
+      "description": "AI agents that know you and your work, in a chat app anyone can use. Open source, any model, self-host or hosted.",
       "language": "Python",
-      "stars": 56,
-      "updatedAt": "2026-11-03T09:27:59Z",
-      "fullName": "xianyu-sheng/Xenon"
+      "stars": 357,
+      "updatedAt": "2026-11-04T09:06:48Z",
+      "fullName": "mindroom-ai/mindroom"
     },
     {
-      "name": "milvus",
-      "url": "https://github.com/milvus-io/milvus",
-      "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search",
-      "language": "Go",
-      "stars": 46571,
-      "updatedAt": "2026-11-03T09:27:58Z",
-      "fullName": "milvus-io/milvus"
+      "name": "albucore",
+      "url": "https://github.com/albumentations-team/albucore",
+      "description": "A high-performance image processing library designed to optimize and extend the Albumentations library with specialized functions for advanced image transformations. Perfect for developers working in computer vision who require efficient and scalable image aug",
+      "language": "Python",
+      "stars": 124,
+      "updatedAt": "2026-11-04T09:06:46Z",
+      "fullName": "albumentations-team/albucore"
     },
     {
-      "name": "optimum-intel",
-      "url": "https://github.com/huggingface/optimum-intel",
-      "description": "🤗 Optimum Intel: Accelerate inference with Intel optimization tools",
-      "language": "Jupyter Notebook",
-      "stars": 624,
-      "updatedAt": "2026-11-03T09:27:58Z",
-      "fullName": "huggingface/optimum-intel"
+      "name": "SkillBill",
+      "url": "https://github.com/Sermilion/SkillBill",
+      "description": "A deterministic Software Development pipeline for you AI agents, written in Kotlin with nice UI for monitoring.",
+      "language": "Kotlin",
+      "stars": 46,
+      "updatedAt": "2026-11-04T09:06:46Z",
+      "fullName": "Sermilion/SkillBill"
     },
     {
-      "name": "instar",
-      "url": "https://github.com/JKHeadley/instar",
-      "description": "Persistent Claude Code agents with scheduling, sessions, memory, and Telegram.",
+      "name": "MulmoChat",
+      "url": "https://github.com/receptron/MulmoChat",
+      "description": "Research prototype for chat that is not a text stream: keep talking while images, maps and playable games appear on the canvas. Each kind of answer is a plugin on the GUI Chat Protocol.",
       "language": "TypeScript",
-      "stars": 86,
-      "updatedAt": "2026-11-03T09:27:54Z",
-      "fullName": "JKHeadley/instar"
+      "stars": 177,
+      "updatedAt": "2026-11-04T09:06:41Z",
+      "fullName": "receptron/MulmoChat"
     },
     {
-      "name": "AutoGPT",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "name": "NeverD",
+      "url": "https://github.com/NeverSight/NeverD",
+      "description": "The AI-friendly binary analysis & decompilation engine — 1:1 lift, built on LLVM [WIP]",
+      "language": "C++",
+      "stars": 100,
+      "updatedAt": "2026-11-04T09:06:34Z",
+      "fullName": "NeverSight/NeverD"
+    },
+    {
+      "name": "haystack",
+      "url": "https://github.com/deepset-ai/haystack",
+      "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multi",
       "language": "Python",
-      "stars": 187887,
-      "updatedAt": "2026-11-03T09:27:40Z",
-      "fullName": "Significant-Gravitas/AutoGPT"
+      "stars": 26925,
+      "updatedAt": "2026-11-04T09:06:26Z",
+      "fullName": "deepset-ai/haystack"
     },
     {
-      "name": "gsv",
-      "url": "https://github.com/deathbyknowledge/gsv",
-      "description": "The personal assistant from the future.",
-      "language": "TypeScript",
-      "stars": 130,
-      "updatedAt": "2026-11-03T09:27:15Z",
-      "fullName": "deathbyknowledge/gsv"
+      "name": "spel",
+      "url": "https://github.com/Blockether/spel",
+      "description": "Idiomatic Clojure wrapper for Playwright. Browser automation, API testing, Allure reporting, and native CLI - for Chromium, Firefox, and WebKit",
+      "language": "Clojure",
+      "stars": 71,
+      "updatedAt": "2026-11-04T09:06:21Z",
+      "fullName": "Blockether/spel"
+    },
+    {
+      "name": "kwant",
+      "url": "https://github.com/alexsergivan/kwant",
+      "description": "Your own team of AI bots in one self-hosted binary: spaces, every account you have, handoffs, approvals and routines. Open-source, self-hosted alternative to Grok Bot, Claude Duet and OpenAI dots. Rust + React.",
+      "language": "Rust",
+      "stars": 22,
+      "updatedAt": "2026-11-04T09:06:18Z",
+      "fullName": "alexsergivan/kwant"
     }
   ]
 }
