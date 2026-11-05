@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-04T07:34:23.703564+00:00",
-  "date": "2026-11-04",
+  "updated_at": "2026-11-05T07:57:46.693728+00:00",
+  "date": "2026-11-05",
   "schedule": "daily",
   "model_variants": 284,
   "fresh_offers": 285,
@@ -9,8 +9,8 @@
     "Brother Mart": {
       "candidates": 424,
       "priced_offers_found": 172,
-      "previous_offers": 169,
-      "minimum_expected_offers": 60,
+      "previous_offers": 172,
+      "minimum_expected_offers": 61,
       "status": "complete",
       "errors": []
     },
