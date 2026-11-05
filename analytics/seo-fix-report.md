@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-04T19:53:06.042971+00:00.
+Generated from the latest analytics snapshot: 2026-11-05T06:57:38.171613+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -1255,16 +1255,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Analytics | Laxman Nepal
 - Top queries: No page-query rows
 
-### /2025/11/youtube-hashtag-extractor.html — SEO score 55/100
-- Issues: Title length 25, Noindex, Thin content (146 words)
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: YouTube Hashtag Extractor
-- Recommended title: YouTube Hashtag Extractor | Laxman Nepal
-- Current description: Enter a YouTube video URL to extract all hashtags used in the video description.
-- Recommended description: Learn about YouTube Hashtag Extractor with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: YouTube Hashtag Extractor
-- Top queries: No page-query rows
-
 ### /laptop/ — SEO score 55/100
 - Issues: Description length 37, Noindex, Thin content (89 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1273,6 +1263,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: This page has moved.  Continue here .
 - Recommended description: Learn about Laptop resources — Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Laptop resources — Laxman Nepal
+- Top queries: No page-query rows
+
+### /2025/11/youtube-hashtag-extractor.html — SEO score 55/100
+- Issues: Title length 25, Noindex, Thin content (146 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Hashtag Extractor
+- Recommended title: YouTube Hashtag Extractor | Laxman Nepal
+- Current description: Enter a YouTube video URL to extract all hashtags used in the video description.
+- Recommended description: Learn about YouTube Hashtag Extractor with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Hashtag Extractor
 - Top queries: No page-query rows
 
 ### /2026/01/facebook-post-generator.html — SEO score 55/100
