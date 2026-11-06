@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-06T06:58:06.727557+00:00.
+Generated from the latest analytics snapshot: 2026-11-06T19:30:17.737426+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,6 +13,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
+- Top queries: No page-query rows
+
+### /tech-news/claude-opus-5-5-vs-chatgpt-comparison/ — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: tech news/claude opus 5 5 vs chatgpt comparison | Laxman Ne…
+- Current description: Missing
+- Recommended description: Learn about tech news/claude opus 5 5 vs chatgpt comparison with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: tech news/claude opus 5 5 vs chatgpt comparison
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -105,16 +115,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/01/25 trusted sites that pay in usd for.html
 - Top queries: No page-query rows
 
-### /p/terms-and-conditions.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/terms and conditions.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/terms and conditions.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/terms and conditions.html
-- Top queries: No page-query rows
-
 ### /2025/07/image-prompt.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -135,16 +135,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/cookies policy.html
 - Top queries: No page-query rows
 
-### /p/disclaimer.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/disclaimer.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/disclaimer.html
-- Top queries: No page-query rows
-
 ### /p/sitemap.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -153,6 +143,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/sitemap.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/sitemap.html
+- Top queries: No page-query rows
+
+### /p/terms-and-conditions.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/terms and conditions.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/terms and conditions.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/terms and conditions.html
 - Top queries: No page-query rows
 
 ### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
@@ -183,6 +183,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/contact us.html
+- Top queries: No page-query rows
+
+### /p/disclaimer.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/disclaimer.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/disclaimer.html
 - Top queries: No page-query rows
 
 ### /p/privacy-policy.html — SEO score 0/100
@@ -243,6 +253,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/pdf.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/pdf.html
+- Top queries: No page-query rows
+
+### /2023/07/currency-converter-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/07/currency converter by laxman nepal.html | Laxman Ne…
+- Current description: Missing
+- Recommended description: Learn about 2023/07/currency converter by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/07/currency converter by laxman nepal.html
 - Top queries: No page-query rows
 
 ### /2023/07/html-prase-tool-by-laxman-nepal.html — SEO score 0/100
@@ -425,16 +445,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/07/age calculator tool by laxman nepal.html
 - Top queries: No page-query rows
 
-### /2023/07/currency-converter-by-laxman-nepal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/07/currency converter by laxman nepal.html | Laxman Ne…
-- Current description: Missing
-- Recommended description: Learn about 2023/07/currency converter by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/07/currency converter by laxman nepal.html
-- Top queries: No page-query rows
-
 ### /2023/07/free-keyword-generator-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -545,6 +555,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/html live editor online free real time.html
 - Top queries: No page-query rows
 
+### /2026/02/prompt-for-making-ai-story.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2026/02/prompt for making ai story.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2026/02/prompt for making ai story.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2026/02/prompt for making ai story.html
+- Top queries: No page-query rows
+
 ### /ai.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -583,6 +603,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about repo.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: repo.html
+- Top queries: No page-query rows
+
+### /tools/nepali-tools/type-nepai/ — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: tools/nepali tools/type nepai | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about tools/nepali tools/type nepai with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: tools/nepali tools/type nepai
 - Top queries: No page-query rows
 
 ### /2021/07/youtube-video-downloader-online-tool.html — SEO score 0/100
@@ -1025,6 +1055,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: tools/nepali tools/type nepali/index.html**⁠￼
 - Top queries: No page-query rows
 
+### /tools/nepali-toools/type-nepali — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: tools/nepali toools/type nepali | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about tools/nepali toools/type nepali with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: tools/nepali toools/type nepali
+- Top queries: No page-query rows
+
 ### /topics/idea-06.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1225,16 +1265,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Analytics — Redirecting
 - Top queries: No page-query rows
 
-### /2025/12/youtube-analytics.html — SEO score 55/100
-- Issues: Description length 43, Noindex, Thin content (90 words)
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: YouTube Analytics | Laxman Nepal
-- Recommended title: YouTube Analytics | Laxman Nepal | Laxman Nepal
-- Current description: This page has moved to  YouTube Analytics .
-- Recommended description: Learn about YouTube Analytics | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: YouTube Analytics | Laxman Nepal
-- Top queries: No page-query rows
-
 ### /laptop/ — SEO score 55/100
 - Issues: Description length 37, Noindex, Thin content (89 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1243,6 +1273,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: This page has moved.  Continue here .
 - Recommended description: Learn about Laptop resources — Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Laptop resources — Laxman Nepal
+- Top queries: No page-query rows
+
+### /2025/12/youtube-analytics.html — SEO score 55/100
+- Issues: Description length 43, Noindex, Thin content (90 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Analytics | Laxman Nepal
+- Recommended title: YouTube Analytics | Laxman Nepal | Laxman Nepal
+- Current description: This page has moved to  YouTube Analytics .
+- Recommended description: Learn about YouTube Analytics | Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Analytics | Laxman Nepal
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-hashtag-extractor.html — SEO score 55/100
@@ -2555,6 +2595,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Apple iPhone 18 Pro Max Price in Nepal
 - Top queries: No page-query rows
 
+### /mobile-price-in-nepal/phones/apple-iphone-18-pro/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Apple iPhone 18 Pro Price in Nepal, Specs & Store Offers | Laxman
+- Recommended title: Apple iPhone 18 Pro Price in Nepal | Laxman Nepal
+- Current description: Compare Apple iPhone 18 Pro price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Apple iPhone 18 Pro Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Apple iPhone 18 Pro Price in Nepal
+- Top queries: No page-query rows
+
 ### /mobile-price-in-nepal/phones/apple-iphone-air-256gb/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -3263,6 +3313,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Motorola Moto G96 5G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Motorola Moto G96 5G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Motorola Moto G96 5G Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/nothing-phone-3/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Nothing Phone 3 Price in Nepal, Specs & Store Offers | Laxman Nep
+- Recommended title: Nothing Phone 3 Price in Nepal | Laxman Nepal
+- Current description: Compare Nothing Phone 3 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Nothing Phone 3 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Nothing Phone 3 Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/nothing-phone-3a-lite/ — SEO score 85/100
@@ -5253,16 +5313,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Anthropic has launched Claude Opus 5.5 with lower typical operating cost, stronger agentic coding performance and expanded safety measures. Here is what users s
 - Recommended description: Learn about Claude Opus 5.5 Launch: What Changed, Pricing and Why It Matters with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Claude Opus 5.5 Launch: What Changed, Pricing and Why It Matters
-- Top queries: No page-query rows
-
-### /tech-news/claude-opus-5-5-vs-chatgpt-comparison/ — SEO score 85/100
-- Issues: Title length 64
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Claude Opus 5.5 vs ChatGPT: What Is Actually Different? | Laxman
-- Recommended title: Claude Opus 5.5 vs ChatGPT: What Is Actually Different? | L…
-- Current description: Both products handle writing, coding and research, but a useful comparison depends on the exact model, tools, limits and workflow.
-- Recommended description: Learn about Claude Opus 5.5 vs ChatGPT: What Is Actually Different? with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Claude Opus 5.5 vs ChatGPT: What Is Actually Different?
 - Top queries: No page-query rows
 
 ### /tech-news/how-to-free-up-storage-android-phone/ — SEO score 85/100
