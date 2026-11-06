@@ -71,6 +71,7 @@ def main():
 
     refs = read_csv(ref_file)
     symbols = []
+    latest_prices = []
     for r in refs:
         symbol = (r.get("symbol") or "").strip()
         if not symbol:
@@ -92,6 +93,7 @@ def main():
             "observations": len(history),
         }
         symbols.append(meta)
+        latest_prices.append({"symbol": symbol, "name": meta["name"], "instrument_type": meta["instrument_type"], "sector": meta["sector"], "status": meta["status"], **history[-1]})
         dump(out / "stocks" / f"{symbol.replace('/', '-')}.json", {
             "symbol": symbol, "name": meta["name"], "instrument_type": meta["instrument_type"],
             "sector": meta["sector"], "status": meta["status"], "source": SOURCE,
@@ -101,7 +103,8 @@ def main():
     symbols.sort(key=lambda x: x["symbol"])
     if not symbols:
         raise SystemExit("No stock history found from 2026-01-01; refusing to overwrite the archive.")
-    dump(out / "symbols.json", {"source": SOURCE, "data_start": START.isoformat(), "symbols": symbols})\n    dump(out / "latest-prices.json", {"source": SOURCE, "as_of_build": datetime.now(NPT).date().isoformat(), "prices": latest_prices})
+    dump(out / "symbols.json", {"source": SOURCE, "data_start": START.isoformat(), "symbols": symbols})
+    dump(out / "latest-prices.json", {"source": SOURCE, "as_of_build": datetime.now(NPT).date().isoformat(), "prices": latest_prices})
 
     index_path = raw_dir / "NEPSE_INDEX.csv"
     index_history = rows_for(index_path) if index_path.is_file() else []
