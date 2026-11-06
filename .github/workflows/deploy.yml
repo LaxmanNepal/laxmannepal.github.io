@@ -191,6 +191,19 @@ jobs:
           touch .pages/.nojekyll
       - name: Apply shared shell to final Pages artifact
         run: SHELL_ROOT=.pages python3 scripts/apply_laxman_shared_shell.py
+      - name: Validate NEPSE terminal bundle
+        run: |
+          test -s .pages/sharemarket/index.html
+          test -s .pages/sharemarket/assets/sharemarket.js
+          test -s .pages/sharemarket/assets/sharemarket.css
+          grep -q 'data-shared-shell="header"' .pages/sharemarket/index.html
+          grep -q 'data-shared-shell="footer"' .pages/sharemarket/index.html
+          grep -q 'id="top-stock-search"' .pages/sharemarket/index.html
+          node --check .pages/sharemarket/assets/sharemarket.js
+          python3 -m py_compile sharemarket/scripts/build_data.py
+          for file in .pages/sharemarket/data/manifest.json .pages/sharemarket/data/symbols.json .pages/sharemarket/data/latest-prices.json .pages/sharemarket/data/market-summary.json .pages/sharemarket/data/index-history.json; do
+            python3 -m json.tool "$file" > /dev/null
+          done
       - name: Verify published homepage and Nepal Jobs
         continue-on-error: true
         run: |
