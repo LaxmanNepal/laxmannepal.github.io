@@ -199,6 +199,10 @@ jobs:
           grep -q 'data-shared-shell="header"' .pages/sharemarket/index.html
           grep -q 'data-shared-shell="footer"' .pages/sharemarket/index.html
           grep -q 'id="top-stock-search"' .pages/sharemarket/index.html
+          grep -q 'id="quant-lab"' .pages/sharemarket/index.html
+          grep -q 'id="compare-a"' .pages/sharemarket/index.html
+          grep -q 'id="backtest-symbol"' .pages/sharemarket/index.html
+          grep -q 'id="min-price"' .pages/sharemarket/index.html
           node --check .pages/sharemarket/assets/sharemarket.js
           python3 -m py_compile sharemarket/scripts/build_data.py
           for file in .pages/sharemarket/data/manifest.json .pages/sharemarket/data/symbols.json .pages/sharemarket/data/latest-prices.json .pages/sharemarket/data/market-summary.json .pages/sharemarket/data/index-history.json; do
