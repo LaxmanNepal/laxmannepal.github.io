@@ -23,9 +23,15 @@ Initial backend source: [Nepal Market Data (MIT)](https://github.com/binayabaral
 
 Prices are **unadjusted**. Bonus shares, rights issues, splits, mergers and other corporate actions can make raw returns misleading. The current first release does not yet claim fundamentals, broker flows, live quotes, order-book depth, IPO calendars, dividend records or official notices are covered.
 
-## Dashboard
+## Dashboard and user workspace
 
-Open-source Chart.js is used for charts (MIT). The dashboard includes index trend, breadth, turnover, gainers/losers, sector performance, instrument filters, stock history, SMA/RSI snapshots, browser-local watchlists, portfolio tracking, price alerts and JSON downloads. Personal lists and holdings stay in the visitor's browser; no account or server database is used.
+The page uses the same shared Laxman Nepal header, navigation, search, footer and design tokens as the main website. It is not a separately branded microsite.
+
+The dashboard starts with a prominent global stock search. Search by ticker or company name to jump directly to that security's research chart. The screener also supports symbol/company search, sector and instrument filters, and pagination.
+
+Open-source Chart.js (MIT) powers the interactive index and stock charts. The workspace includes index performance ranges, market breadth, turnover, gainers/losers, sector performance, stock history, SMA/RSI snapshots, browser-local watchlists, a portfolio tracker, price alerts and JSON downloads. Cards and sections animate on entry; chart transitions and hover/focus states are enabled while respecting reduced-motion preferences.
+
+Personal lists, holdings and alerts stay in the visitor's browser; there is no account system or server-side personal-data database. Alerts are evaluated when the page is opened, not continuously in the background.
 
 ## Run the builder locally
 
