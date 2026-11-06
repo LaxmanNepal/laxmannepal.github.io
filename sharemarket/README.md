@@ -41,3 +41,19 @@ python sharemarket/scripts/build_data.py --source-dir /tmp/nepal-market-data
 ```
 
 The output is written to `sharemarket/data/`. The GitHub Actions workflow validates JSON before committing it.
+
+
+## Advanced research tools (static edition)
+
+The dashboard also includes a local quantitative research workspace:
+
+- **Advanced screener:** minimum/maximum latest close, minimum volume and minimum daily percentage change, alongside symbol, sector, instrument and listing-status filters.
+- **Relative performance comparison:** compare up to three symbols over their common available trading dates, normalized to 0% at the start.
+- **Technical indicators:** EMA 12/26, MACD and signal, 20-session Bollinger bands, ATR 14 and an approximate annualized 60-session volatility estimate, in addition to SMA and RSI.
+- **SMA crossover backtest:** configurable fast/slow moving averages and per-side transaction fee, with strategy return, buy-and-hold comparison, maximum drawdown, round-trip count and win rate.
+
+Backtest assumptions and limitations: signals use information through the prior session and trades execute at the next available session close. The simulation is long-only, all-in/all-out, and uses close prices. It does not model slippage, liquidity, taxes, brokerage minimums, partial fills, dividends, rights/bonus shares, suspensions or corporate-action-adjusted prices. Historical results are not forecasts and can be misleading on unadjusted prices.
+
+### Deliberately not presented as available data
+
+The current archive does not contain verified live quotes, market depth, floorsheet/broker transactions, issuer financial statements, valuation ratios, IPO calendars, dividends or corporate-action histories. These modules must not display fabricated metrics. They require additional source adapters, date-level provenance, field validation and reconciliation before integration. GitHub Pages can host the resulting public JSON, but persistent personal accounts, secure private API keys, server-side portfolios and continuous push notifications require a separate backend.
