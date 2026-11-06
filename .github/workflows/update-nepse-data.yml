@@ -1,0 +1,59 @@
+name: Update NEPSE share market data
+
+on:
+  schedule:
+    # 4:00 PM Nepal time, Monday to Friday (after the NEPSE session).
+    - cron: "15 10 * * 0-4"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nepse-data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch open NEPSE source archive
+        run: git clone --depth 1 https://github.com/binayabaral/nepal-market-data.git /tmp/nepal-market-data
+      - name: Build dated JSON archive (2026-01-01 onward)
+        run: python sharemarket/scripts/build_data.py --source-dir /tmp/nepal-market-data
+      - name: Validate generated JSON and date coverage
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path("sharemarket/data")
+          for name in ("manifest.json", "symbols.json", "market-summary.json", "index-history.json"):
+              json.loads((root / name).read_text(encoding="utf-8"))
+          manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+          assert manifest["data_start"] == "2026-01-01"
+          assert manifest["symbol_count"] > 0
+          assert manifest["data_end"] >= "2026-01-01"
+          for p in (root / "stocks").glob("*.json"):
+              data = json.loads(p.read_text(encoding="utf-8"))
+              assert data["history"]
+              assert all(row["date"] >= "2026-01-01" for row in data["history"])
+          print("Validated", manifest["symbol_count"], "symbols through", manifest["data_end"])
+          PY
+      - name: Commit updated market archive
+        run: |
+          git config user.name "Laxman Nepal Data Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add sharemarket/data
+          if git diff --cached --quiet; then
+            echo "No source data changes."
+          else
+            git commit -m "Update NEPSE share market data"
+            git push
+          fi
