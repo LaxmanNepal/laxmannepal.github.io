@@ -1,6 +1,11 @@
 name: Update NEPSE share market data
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "sharemarket/scripts/build_data.py"
+      - ".github/workflows/update-nepse-data.yml"
   schedule:
     # 4:00 PM Nepal time, Monday to Friday (after the NEPSE session).
     - cron: "15 10 * * 1-5"
