@@ -33,6 +33,10 @@ jobs:
         run: git clone --depth 1 https://github.com/binayabaral/nepal-market-data.git /tmp/nepal-market-data
       - name: Build dated JSON archive (2026-01-01 onward)
         run: python sharemarket/scripts/build_data.py --source-dir /tmp/nepal-market-data
+      - name: Validate backend and dashboard syntax
+        run: |
+          python -m py_compile sharemarket/scripts/build_data.py
+          node --check sharemarket/assets/sharemarket.js
       - name: Validate generated JSON and date coverage
         run: |
           python - <<'PY'
