@@ -35,3 +35,16 @@ body.dark .theme-toggle{background:#172337;color:#edf2f8;border-color:#29384d}
 body.dark .sm-nav a{color:#b8c4d4}body.dark .sm-nav a.active{color:#fff}
 @media(max-width:760px){.stock-command{grid-template-columns:1fr;gap:12px;padding:15px}.sm-intro{padding-top:30px}.sm-nav{top:78px}.intro-meta{grid-template-columns:1fr 1fr}.command-search{gap:7px}.command-search button{padding:10px}.command-search button i{display:none}}
 @media(prefers-reduced-motion:reduce){.section-block,.metric-card,.panel,.command-search button{animation:none;transition:none}}
+
+/* Advanced research and quantitative workspace */
+.quant-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+.quant-controls label{display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:11px;font-weight:700}
+.quant-controls select,.quant-controls input{width:100%;min-width:0;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit}
+.quant-controls .primary-btn{align-self:end;min-height:38px}
+.backtest-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:14px 0}
+.backtest-results .research-stat{min-width:0}
+#compare-summary{margin-top:12px}
+#screener .filters input[type=number]{flex:1 1 130px;max-width:180px}
+body.dark .quant-controls select,body.dark .quant-controls input{background:#111b2b;color:#edf2f8;border-color:#29384d}
+@media(max-width:760px){.quant-controls{grid-template-columns:1fr 1fr}.backtest-results{grid-template-columns:1fr 1fr}#screener .filters input[type=number]{max-width:none;flex:1 1 42%}}
+@media(max-width:420px){.quant-controls,.backtest-results{grid-template-columns:1fr}}
