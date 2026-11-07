@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-07T13:14:47.745343+00:00.
+Generated from the latest analytics snapshot: 2026-11-07T21:58:06.617778+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -75,16 +75,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/top 10 free online tools will save you.html
 - Top queries: No page-query rows
 
-### /p/about.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/about.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/about.html
-- Top queries: No page-query rows
-
 ### /p/link-shortner-generator.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -93,6 +83,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/link shortner generator.html
+- Top queries: No page-query rows
+
+### /p/about.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/about.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/about.html
 - Top queries: No page-query rows
 
 ### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
@@ -105,6 +105,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/01/25 trusted sites that pay in usd for.html
 - Top queries: No page-query rows
 
+### /p/cookies-policy.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/cookies policy.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/cookies policy.html
+- Top queries: No page-query rows
+
 ### /2025/07/image-prompt.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -115,14 +125,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/image prompt.html
 - Top queries: No page-query rows
 
-### /p/cookies-policy.html — SEO score 0/100
+### /p/privacy-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: p/cookies policy.html | Laxman Nepal
+- Recommended title: p/privacy policy.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/cookies policy.html
+- Recommended description: Learn about p/privacy policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/privacy policy.html
 - Top queries: No page-query rows
 
 ### /p/sitemap.html — SEO score 0/100
@@ -183,16 +193,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/disclaimer.html
-- Top queries: No page-query rows
-
-### /p/privacy-policy.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/privacy policy.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/privacy policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/privacy policy.html
 - Top queries: No page-query rows
 
 ### /2024/02/m3um3u8-player-tool-by-laxman-nepal.html — SEO score 0/100
@@ -683,16 +683,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/03/preeti to unicode converter free tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/03/preeti to unicode converter free tools.html
-- Top queries: No page-query rows
-
-### /2024/09/convert-anything-to-anything-free.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/09/convert anything to anything free.html | Laxman Nep…
-- Current description: Missing
-- Recommended description: Learn about 2024/09/convert anything to anything free.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/09/convert anything to anything free.html
 - Top queries: No page-query rows
 
 ### /2024/09/svg-download-free.html — SEO score 0/100
@@ -1245,16 +1235,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Channel Analytics | Laxman Nepal
 - Top queries: No page-query rows
 
-### /2025/11/youtube-analytics.html — SEO score 55/100
-- Issues: Description length 67, Noindex, Thin content (91 words)
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: YouTube Analytics — Redirecting
-- Recommended title: YouTube Analytics — Redirecting | Laxman Nepal
-- Current description: This YouTube Analytics tool has moved to  /youtube-analytics.html .
-- Recommended description: Learn about YouTube Analytics — Redirecting with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: YouTube Analytics — Redirecting
-- Top queries: No page-query rows
-
 ### /laptop/ — SEO score 55/100
 - Issues: Description length 37, Noindex, Thin content (89 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1263,6 +1243,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: This page has moved.  Continue here .
 - Recommended description: Learn about Laptop resources — Laxman Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Laptop resources — Laxman Nepal
+- Top queries: No page-query rows
+
+### /2025/11/youtube-analytics.html — SEO score 55/100
+- Issues: Description length 67, Noindex, Thin content (91 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Analytics — Redirecting
+- Recommended title: YouTube Analytics — Redirecting | Laxman Nepal
+- Current description: This YouTube Analytics tool has moved to  /youtube-analytics.html .
+- Recommended description: Learn about YouTube Analytics — Redirecting with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Analytics — Redirecting
 - Top queries: No page-query rows
 
 ### /2025/12/youtube-analytics.html — SEO score 55/100
