@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-06T19:30:17.737426+00:00.
+Generated from the latest analytics snapshot: 2026-11-07T06:09:25.319288+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,16 +13,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
-- Top queries: No page-query rows
-
-### /tech-news/claude-opus-5-5-vs-chatgpt-comparison/ — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: tech news/claude opus 5 5 vs chatgpt comparison | Laxman Ne…
-- Current description: Missing
-- Recommended description: Learn about tech news/claude opus 5 5 vs chatgpt comparison with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: tech news/claude opus 5 5 vs chatgpt comparison
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -5313,6 +5303,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Anthropic has launched Claude Opus 5.5 with lower typical operating cost, stronger agentic coding performance and expanded safety measures. Here is what users s
 - Recommended description: Learn about Claude Opus 5.5 Launch: What Changed, Pricing and Why It Matters with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Claude Opus 5.5 Launch: What Changed, Pricing and Why It Matters
+- Top queries: No page-query rows
+
+### /tech-news/claude-opus-5-5-vs-chatgpt-comparison/ — SEO score 85/100
+- Issues: Title length 64
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Claude Opus 5.5 vs ChatGPT: What Is Actually Different? | Laxman
+- Recommended title: Claude Opus 5.5 vs ChatGPT: What Is Actually Different? | L…
+- Current description: Both products handle writing, coding and research, but a useful comparison depends on the exact model, tools, limits and workflow.
+- Recommended description: Learn about Claude Opus 5.5 vs ChatGPT: What Is Actually Different? with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Claude Opus 5.5 vs ChatGPT: What Is Actually Different?
 - Top queries: No page-query rows
 
 ### /tech-news/how-to-free-up-storage-android-phone/ — SEO score 85/100
