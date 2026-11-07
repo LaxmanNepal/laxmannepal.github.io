@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-07T06:09:25.319288+00:00.
+Generated from the latest analytics snapshot: 2026-11-07T13:14:47.745343+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -4173,16 +4173,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Redmi Note 15 Pro Plus 5G 12GB/512GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and p
 - Recommended description: Learn about Redmi Note 15 Pro Plus 5G 12GB/512GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Redmi Note 15 Pro Plus 5G 12GB/512GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/redmi-note-15-pro-plus-5g-8gb-256gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Redmi Note 15 Pro Plus 5G 8GB/256GB Price in Nepal, Specs & Store
-- Recommended title: Redmi Note 15 Pro Plus 5G 8GB/256GB Price in Nepal | Laxman…
-- Current description: Compare Redmi Note 15 Pro Plus 5G 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and pr
-- Recommended description: Learn about Redmi Note 15 Pro Plus 5G 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Redmi Note 15 Pro Plus 5G 8GB/256GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/redmi-note-17-4g-6gb-128gb/ — SEO score 85/100
