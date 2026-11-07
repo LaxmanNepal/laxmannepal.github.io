@@ -1,97 +1,142 @@
 {
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-07",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "rakazo",
-      "url": "https://github.com/elie222/rakazo",
-      "description": "Open-source Grok Bot alternative. Choose your own model and sandbox.",
-      "language": "TypeScript",
-      "stars": 7240,
-      "updatedAt": "2026-11-06T09:20:55Z",
-      "fullName": "elie222/rakazo"
-    },
-    {
-      "name": "DeepSeek-Reasonix",
-      "url": "https://github.com/esengine/DeepSeek-Reasonix",
-      "description": "A reliable coding agent for complex software engineering tasks.",
-      "language": "Go",
-      "stars": 36104,
-      "updatedAt": "2026-11-06T09:20:43Z",
-      "fullName": "esengine/DeepSeek-Reasonix"
-    },
-    {
-      "name": "che-ical-mcp",
-      "url": "https://github.com/PsychQuant/che-ical-mcp",
-      "description": "macOS Calendar & Reminders MCP server (29 tools) — native Swift EventKit for Claude Desktop & Code. Events + reminders CRUD, recurring, batch ops, conflict & duplicate detection, per-event timezone, undo/redo, #tags, --cli mode, SwiftUI --setup TCC flow, --sel",
-      "language": "Swift",
-      "stars": 43,
-      "updatedAt": "2026-11-06T09:20:42Z",
-      "fullName": "PsychQuant/che-ical-mcp"
-    },
-    {
-      "name": "vllm",
-      "url": "https://github.com/vllm-project/vllm",
-      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "name": "sglang",
+      "url": "https://github.com/sgl-project/sglang",
+      "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
       "language": "Python",
-      "stars": 96446,
-      "updatedAt": "2026-11-06T09:20:33Z",
-      "fullName": "vllm-project/vllm"
+      "stars": 38550,
+      "updatedAt": "2026-11-07T08:45:07Z",
+      "fullName": "sgl-project/sglang"
     },
     {
-      "name": "dexto",
-      "url": "https://github.com/truffle-ai/dexto",
-      "description": "Agent harness and tookit for building AI agents and agentic applications. CLI and SDKs included",
+      "name": "Artemis",
+      "url": "https://github.com/ls1intum/Artemis",
+      "description": "Artemis - Interactive Learning with Automated Feedback",
+      "language": "Java",
+      "stars": 827,
+      "updatedAt": "2026-11-07T08:45:07Z",
+      "fullName": "ls1intum/Artemis"
+    },
+    {
+      "name": "commonly",
+      "url": "https://github.com/Team-Commonly/commonly",
+      "description": "One pod for your team and the agents each of you runs: your own Claude Code, or a hosted agent in one click. Open source (Apache-2.0), self-hostable.",
+      "language": "JavaScript",
+      "stars": 1390,
+      "updatedAt": "2026-11-07T08:44:56Z",
+      "fullName": "Team-Commonly/commonly"
+    },
+    {
+      "name": "Hyperloom",
+      "url": "https://github.com/AMD-AGI/Hyperloom",
+      "description": "An agentic system that auto-optimizes LLM workloads on AMD GPUs.",
+      "language": "Python",
+      "stars": 263,
+      "updatedAt": "2026-11-07T08:44:56Z",
+      "fullName": "AMD-AGI/Hyperloom"
+    },
+    {
+      "name": "kolega-code",
+      "url": "https://github.com/kolega-ai/kolega-code",
+      "description": "Agentic coding in the terminal: the model writes its own multi-agent workflows (Gigacode). Provider-agnostic, local-first, 15+ model providers, MCP support.",
+      "language": "Python",
+      "stars": 22,
+      "updatedAt": "2026-11-07T08:44:56Z",
+      "fullName": "kolega-ai/kolega-code"
+    },
+    {
+      "name": "token-monitor",
+      "url": "https://github.com/Javis603/token-monitor",
+      "description": "Local-first desktop widget for tracking token usage, costs, limits, and session activity across 52+ AI coding tools—including Claude Code, Codex, Cursor, OpenCode, OpenClaw, and more—with multi-device sync.",
+      "language": "JavaScript",
+      "stars": 3582,
+      "updatedAt": "2026-11-07T08:44:55Z",
+      "fullName": "Javis603/token-monitor"
+    },
+    {
+      "name": "archlang",
+      "url": "https://github.com/ChanMeng666/archlang",
+      "description": "Floor plans as code. Your AI writes ArchLang; the compiler draws a precise, dimensioned plan (SVG, DXF, PDF) and tells it what's wrong. Open source, MIT.",
       "language": "TypeScript",
-      "stars": 659,
-      "updatedAt": "2026-11-06T09:20:29Z",
-      "fullName": "truffle-ai/dexto"
+      "stars": 32,
+      "updatedAt": "2026-11-07T08:44:48Z",
+      "fullName": "ChanMeng666/archlang"
     },
     {
-      "name": "ExifGlass",
-      "url": "https://github.com/d2phap/ExifGlass",
-      "description": "📷 Cross-platform EXIF metadata viewing tool",
-      "language": "C#",
-      "stars": 309,
-      "updatedAt": "2026-11-06T09:20:27Z",
-      "fullName": "d2phap/ExifGlass"
-    },
-    {
-      "name": "rove",
-      "url": "https://github.com/Sma1lboy/rove",
-      "description": "Rove — the agent multiplexer for your terminal. Run coding agents on parallel tasks with isolated worktrees and persistent sessions.",
+      "name": "opencodex",
+      "url": "https://github.com/lidge-jun/opencodex",
+      "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
       "language": "TypeScript",
-      "stars": 184,
-      "updatedAt": "2026-11-06T09:20:25Z",
-      "fullName": "Sma1lboy/rove"
+      "stars": 18272,
+      "updatedAt": "2026-11-07T08:44:38Z",
+      "fullName": "lidge-jun/opencodex"
     },
     {
-      "name": "synaplan",
-      "url": "https://github.com/metadist/synaplan",
-      "description": "Open-source, self-hosted AI platform (PHP/Symfony): chat with any model, RAG over your docs, embeddable widget, MCP — see the cost of every answer. Apache-2.0.",
-      "language": "PHP",
-      "stars": 634,
-      "updatedAt": "2026-11-06T09:20:15Z",
-      "fullName": "metadist/synaplan"
+      "name": "hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": 261302,
+      "updatedAt": "2026-11-07T08:44:37Z",
+      "fullName": "NousResearch/hermes-agent"
     },
     {
-      "name": "Mika",
-      "url": "https://github.com/wangzan101/Mika",
-      "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
-      "language": "Kotlin",
-      "stars": 7280,
-      "updatedAt": "2026-11-06T09:20:10Z",
-      "fullName": "wangzan101/Mika"
-    },
-    {
-      "name": "langfuse",
-      "url": "https://github.com/langfuse/langfuse",
-      "description": "🪢 Open source agent evals & observability: Trace, evaluate, and improve LLM applications with one open platform.",
+      "name": "penguin-harness",
+      "url": "https://github.com/Prism-Shadow/penguin-harness",
+      "description": "🐧 Unified and Stable RSI Platform",
       "language": "TypeScript",
-      "stars": 37090,
-      "updatedAt": "2026-11-06T09:20:06Z",
-      "fullName": "langfuse/langfuse"
+      "stars": 3174,
+      "updatedAt": "2026-11-07T08:44:37Z",
+      "fullName": "Prism-Shadow/penguin-harness"
+    },
+    {
+      "name": "oh-my-hermes",
+      "url": "https://github.com/rlaope/oh-my-hermes",
+      "description": "⚚ The coding harness with Hermes Agent wired into IDE.",
+      "language": "Python",
+      "stars": 5222,
+      "updatedAt": "2026-11-07T08:44:28Z",
+      "fullName": "rlaope/oh-my-hermes"
+    },
+    {
+      "name": "zisla",
+      "url": "https://github.com/wzz6423/zisla",
+      "description": "Native macOS top workspace for media, files, system tools, and privacy-first local AI activity.",
+      "language": "Swift",
+      "stars": 12,
+      "updatedAt": "2026-11-07T08:44:18Z",
+      "fullName": "wzz6423/zisla"
+    },
+    {
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "stars": 9437,
+      "updatedAt": "2026-11-07T08:43:48Z",
+      "fullName": "makecindy/cindy"
+    },
+    {
+      "name": "OpenTechNotes",
+      "url": "https://github.com/taovietducofficial/OpenTechNotes",
+      "description": "OpenTechNotes là kho tài liệu IT miễn phí, tổng hợp kiến thức nền tảng và kinh nghiệm thực chiến. Nội dung được tóm gọn, dễ hiểu và cập nhật thường xuyên để hỗ trợ học nhanh – hiểu sâu",
+      "language": "Open source",
+      "stars": 86,
+      "updatedAt": "2026-11-07T08:43:43Z",
+      "fullName": "taovietducofficial/OpenTechNotes"
+    },
+    {
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "stars": 29064,
+      "updatedAt": "2026-11-07T08:43:37Z",
+      "fullName": "QwenLM/qwen-code"
     },
     {
       "name": "claude-code-plugins",
@@ -99,26 +144,44 @@
       "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
       "language": "Shell",
       "stars": 29,
-      "updatedAt": "2026-11-06T09:20:01Z",
+      "updatedAt": "2026-11-07T08:43:23Z",
       "fullName": "melodic-software/claude-code-plugins"
     },
     {
-      "name": "paperclip",
-      "url": "https://github.com/paperclipai/paperclip",
-      "description": "The open-source app everyone uses to manage agents at work",
-      "language": "TypeScript",
-      "stars": 111579,
-      "updatedAt": "2026-11-06T09:20:00Z",
-      "fullName": "paperclipai/paperclip"
+      "name": "ft",
+      "url": "https://github.com/Water-Run/ft",
+      "description": "f(t)函数: Agent制作的动画集. 自由软件, 自由视频.",
+      "language": "JavaScript",
+      "stars": 39,
+      "updatedAt": "2026-11-07T08:43:06Z",
+      "fullName": "Water-Run/ft"
     },
     {
-      "name": "Jolu",
-      "url": "https://github.com/meilule/Jolu",
-      "description": "Windows 桌面 AI 编程工具管理器：灵动岛常驻看额度，统一管理 Claude Code、Codex、Gemini 等供应商、用量统计、会话线程、自动化、Skills 与一键签到，数据全部留在本机。A local-first desktop manager for AI coding tools.",
-      "language": "Rust",
-      "stars": 16,
-      "updatedAt": "2026-11-06T09:19:51Z",
-      "fullName": "meilule/Jolu"
+      "name": "compose-skill",
+      "url": "https://github.com/aldefy/compose-skill",
+      "description": "Jetpack Compose Agent Skill — AI-powered coding guidance with actual androidx/androidx source code receipts. Works with Claude Code, Codex CLI, Gemini CLI, Cursor, Copilot, Windsurf, and more.",
+      "language": "Kotlin",
+      "stars": 599,
+      "updatedAt": "2026-11-07T08:43:02Z",
+      "fullName": "aldefy/compose-skill"
+    },
+    {
+      "name": "unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
+      "language": "Python",
+      "stars": 79135,
+      "updatedAt": "2026-11-07T08:42:42Z",
+      "fullName": "unslothai/unsloth"
+    },
+    {
+      "name": "thermite",
+      "url": "https://github.com/iammrduncan/thermite",
+      "description": "Auto researching harness that burns through everything.",
+      "language": "TypeScript",
+      "stars": 61,
+      "updatedAt": "2026-11-07T08:42:39Z",
+      "fullName": "iammrduncan/thermite"
     },
     {
       "name": "nextclaw",
@@ -126,98 +189,35 @@
       "description": "A human-centered long-term AI partner—not a task-centered assistant.",
       "language": "TypeScript",
       "stars": 263,
-      "updatedAt": "2026-11-06T09:19:42Z",
+      "updatedAt": "2026-11-07T08:42:22Z",
       "fullName": "Peiiii/nextclaw"
     },
     {
-      "name": "mloda",
-      "url": "https://github.com/mloda-ai/mloda",
-      "description": "mloda.ai - Open Data Access for AI and ML. Plugin-based. Traceable. Framework-agnostic.",
-      "language": "Python",
-      "stars": 100,
-      "updatedAt": "2026-11-06T09:19:37Z",
-      "fullName": "mloda-ai/mloda"
-    },
-    {
-      "name": "gaia",
-      "url": "https://github.com/theexperiencecompany/gaia",
-      "description": "Your proactive personal AI assistant for daily life",
-      "language": "Python",
-      "stars": 324,
-      "updatedAt": "2026-11-06T09:19:34Z",
-      "fullName": "theexperiencecompany/gaia"
-    },
-    {
-      "name": "miniforge",
-      "url": "https://github.com/miniforge-ai/miniforge",
-      "description": "miniforge is an autonomous software development system designed to behave like a factory, not a chatbot",
-      "language": "Clojure",
-      "stars": 51,
-      "updatedAt": "2026-11-06T09:19:33Z",
-      "fullName": "miniforge-ai/miniforge"
-    },
-    {
-      "name": "rome",
-      "url": "https://github.com/rome-os/rome",
-      "description": "A compounding agent OS for recursive agents. Also an open source alternative to Grok Bot and Meta's Muse.",
+      "name": "astralbeam",
+      "url": "https://github.com/AstralBeamAI/astralbeam",
+      "description": "Add an agent to your app in minutes",
       "language": "TypeScript",
-      "stars": 891,
-      "updatedAt": "2026-11-06T09:19:30Z",
-      "fullName": "rome-os/rome"
+      "stars": 32,
+      "updatedAt": "2026-11-07T08:42:21Z",
+      "fullName": "AstralBeamAI/astralbeam"
     },
     {
-      "name": "LangBot",
-      "url": "https://github.com/langbot-app/LangBot",
-      "description": "Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integrated with ChatGPT(GPT), DeepSeek, Dify, n8n, Langflow, Coze,",
-      "language": "Python",
-      "stars": 18753,
-      "updatedAt": "2026-11-06T09:19:20Z",
-      "fullName": "langbot-app/LangBot"
+      "name": "bpf-benchmark",
+      "url": "https://github.com/eunomia-bpf/bpf-benchmark",
+      "description": "AI Agent eBPF optimization benchmark and framework",
+      "language": "C",
+      "stars": 26,
+      "updatedAt": "2026-11-07T08:42:03Z",
+      "fullName": "eunomia-bpf/bpf-benchmark"
     },
     {
-      "name": "WrongStack",
-      "url": "https://github.com/WrongStack/WrongStack",
-      "description": "An AI coding agent that reads your code, edits files, runs commands, and reasons through bugs — across a terminal REPL, a full-screen TUI, and a browser UI, while you keep your hand on every permission.",
-      "language": "TypeScript",
-      "stars": 404,
-      "updatedAt": "2026-11-06T09:19:14Z",
-      "fullName": "WrongStack/WrongStack"
-    },
-    {
-      "name": "litellm",
-      "url": "https://github.com/BerriAI/litellm",
-      "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
-      "language": "Python",
-      "stars": 62815,
-      "updatedAt": "2026-11-06T09:19:13Z",
-      "fullName": "BerriAI/litellm"
-    },
-    {
-      "name": "medusa",
-      "url": "https://github.com/medusajs/medusa",
-      "description": "The world's most flexible commerce platform for agents and developers",
-      "language": "TypeScript",
-      "stars": 37110,
-      "updatedAt": "2026-11-06T09:19:10Z",
-      "fullName": "medusajs/medusa"
-    },
-    {
-      "name": "dify",
-      "url": "https://github.com/langgenius/dify",
-      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-      "language": "Python",
-      "stars": 160529,
-      "updatedAt": "2026-11-06T09:19:08Z",
-      "fullName": "langgenius/dify"
-    },
-    {
-      "name": "future-os",
-      "url": "https://github.com/futuregene/future-os",
-      "description": "One AI agent, everywhere you work — terminal, desktop, mobile, and your chat apps. Rust core.",
+      "name": "runner",
+      "url": "https://github.com/yicheng47/runner",
+      "description": "Where terminal agents work together. Claude Code, Codex, Copilot CLI and pi on the same task, in one mission, each keeping its own TUI in a real terminal.",
       "language": "Rust",
-      "stars": 114,
-      "updatedAt": "2026-11-06T09:19:04Z",
-      "fullName": "futuregene/future-os"
+      "stars": 487,
+      "updatedAt": "2026-11-07T08:42:00Z",
+      "fullName": "yicheng47/runner"
     }
   ]
 }
