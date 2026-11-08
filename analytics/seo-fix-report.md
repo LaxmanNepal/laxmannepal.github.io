@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-08T06:13:58.484414+00:00.
+Generated from the latest analytics snapshot: 2026-11-08T13:38:15.885065+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -2775,26 +2775,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Honor Play 10 Price in Nepal
 - Top queries: No page-query rows
 
-### /mobile-price-in-nepal/phones/honor-play10-6-74-inch-lcd-media-tek-3gb-64gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Honor Play10 6.74-inch LCD Media Tek 3GB/64GB Price in Nepal, Spe
-- Recommended title: Honor Play10 6.74-inch LCD Media Tek 3GB/64GB Price in Nepa…
-- Current description: Compare Honor Play10 6.74-inch LCD Media Tek 3GB/64GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specificati
-- Recommended description: Learn about Honor Play10 6.74-inch LCD Media Tek 3GB/64GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Honor Play10 6.74-inch LCD Media Tek 3GB/64GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/honor-play10-6-74-inch-lcd-media-tek-4gb-128gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Honor Play10 6.74-inch LCD Media Tek 4GB/128GB Price in Nepal, Sp
-- Recommended title: Honor Play10 6.74-inch LCD Media Tek 4GB/128GB Price in Nep…
-- Current description: Compare Honor Play10 6.74-inch LCD Media Tek 4GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specificat
-- Recommended description: Learn about Honor Play10 6.74-inch LCD Media Tek 4GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Honor Play10 6.74-inch LCD Media Tek 4GB/128GB Price in Nepal
-- Top queries: No page-query rows
-
 ### /mobile-price-in-nepal/phones/honor-x5c-plus/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -3075,26 +3055,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Infinix Note Edge Price in Nepal
 - Top queries: No page-query rows
 
-### /mobile-price-in-nepal/phones/infinix-smart-20-4g-4gb-128gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Infinix Smart 20 4G 4GB/128GB Price in Nepal, Specs & Store Offer
-- Recommended title: Infinix Smart 20 4G 4GB/128GB Price in Nepal | Laxman Nepal
-- Current description: Compare Infinix Smart 20 4G 4GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product
-- Recommended description: Learn about Infinix Smart 20 4G 4GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Infinix Smart 20 4G 4GB/128GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/infinix-smart-20-4g-4gb-64gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Infinix Smart 20 4G 4GB/64GB Price in Nepal, Specs & Store Offers
-- Recommended title: Infinix Smart 20 4G 4GB/64GB Price in Nepal | Laxman Nepal
-- Current description: Compare Infinix Smart 20 4G 4GB/64GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product i
-- Recommended description: Learn about Infinix Smart 20 4G 4GB/64GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Infinix Smart 20 4G 4GB/64GB Price in Nepal
-- Top queries: No page-query rows
-
 ### /mobile-price-in-nepal/phones/infinix-smart-20/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -3323,26 +3283,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Nothing Phone (4a) 5G 12GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and produ
 - Recommended description: Learn about Nothing Phone (4a) 5G 12GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Nothing Phone (4a) 5G 12GB/256GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/nothing-phone-4a-5g-8gb-128gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Nothing Phone (4a) 5G 8GB/128GB Price in Nepal, Specs & Store Off
-- Recommended title: Nothing Phone (4a) 5G 8GB/128GB Price in Nepal | Laxman Nep…
-- Current description: Compare Nothing Phone (4a) 5G 8GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and produc
-- Recommended description: Learn about Nothing Phone (4a) 5G 8GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Nothing Phone (4a) 5G 8GB/128GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/nothing-phone-4a-5g-8gb-256gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Nothing Phone (4a) 5G 8GB/256GB Price in Nepal, Specs & Store Off
-- Recommended title: Nothing Phone (4a) 5G 8GB/256GB Price in Nepal | Laxman Nep…
-- Current description: Compare Nothing Phone (4a) 5G 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and produc
-- Recommended description: Learn about Nothing Phone (4a) 5G 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Nothing Phone (4a) 5G 8GB/256GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/nothing-phone-4a-pro-5g-black-12gb-256gb/ — SEO score 85/100
@@ -4785,26 +4725,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Vivo V50 5G Price in Nepal
 - Top queries: No page-query rows
 
-### /mobile-price-in-nepal/phones/vivo-v60-5g-12gb-256gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Vivo V60 5G 12GB/256GB Price in Nepal, Specs & Store Offers | Lax
-- Recommended title: Vivo V60 5G 12GB/256GB Price in Nepal | Laxman Nepal
-- Current description: Compare Vivo V60 5G 12GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Vivo V60 5G 12GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Vivo V60 5G 12GB/256GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/vivo-v60-5g-12gb-512gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Vivo V60 5G 12GB/512GB Price in Nepal, Specs & Store Offers | Lax
-- Recommended title: Vivo V60 5G 12GB/512GB Price in Nepal | Laxman Nepal
-- Current description: Compare Vivo V60 5G 12GB/512GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Vivo V60 5G 12GB/512GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Vivo V60 5G 12GB/512GB Price in Nepal
-- Top queries: No page-query rows
-
 ### /mobile-price-in-nepal/phones/vivo-v60-lite-5g-12gb-256gb/ — SEO score 85/100
 - Issues: Title length 64
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -4823,26 +4743,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Vivo V60 Lite 5G 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product ima
 - Recommended description: Learn about Vivo V60 Lite 5G 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Vivo V60 Lite 5G 8GB/256GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/vivo-v70-5g-12gb-256gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Vivo V70 5G 12GB/256GB Price in Nepal, Specs & Store Offers | Lax
-- Recommended title: Vivo V70 5G 12GB/256GB Price in Nepal | Laxman Nepal
-- Current description: Compare Vivo V70 5G 12GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Vivo V70 5G 12GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Vivo V70 5G 12GB/256GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/vivo-v70-5g-12gb-512gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Vivo V70 5G 12GB/512GB Price in Nepal, Specs & Store Offers | Lax
-- Recommended title: Vivo V70 5G 12GB/512GB Price in Nepal | Laxman Nepal
-- Current description: Compare Vivo V70 5G 12GB/512GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Vivo V70 5G 12GB/512GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Vivo V70 5G 12GB/512GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/vivo-v70-fe-5g-features-8gb-256gb/ — SEO score 85/100
