@@ -1,205 +1,115 @@
 {
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-08",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "sglang",
-      "url": "https://github.com/sgl-project/sglang",
-      "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
-      "language": "Python",
-      "stars": 38550,
-      "updatedAt": "2026-11-07T08:45:07Z",
-      "fullName": "sgl-project/sglang"
+      "name": "magic",
+      "url": "https://github.com/polterguy/magic",
+      "description": "Instant SECURE Full Stack Apps and AI Agents",
+      "language": "C#",
+      "stars": 1243,
+      "updatedAt": "2026-11-08T08:56:58Z",
+      "fullName": "polterguy/magic"
     },
     {
-      "name": "Artemis",
-      "url": "https://github.com/ls1intum/Artemis",
-      "description": "Artemis - Interactive Learning with Automated Feedback",
-      "language": "Java",
-      "stars": 827,
-      "updatedAt": "2026-11-07T08:45:07Z",
-      "fullName": "ls1intum/Artemis"
-    },
-    {
-      "name": "commonly",
-      "url": "https://github.com/Team-Commonly/commonly",
-      "description": "One pod for your team and the agents each of you runs: your own Claude Code, or a hosted agent in one click. Open source (Apache-2.0), self-hostable.",
-      "language": "JavaScript",
-      "stars": 1390,
-      "updatedAt": "2026-11-07T08:44:56Z",
-      "fullName": "Team-Commonly/commonly"
-    },
-    {
-      "name": "Hyperloom",
-      "url": "https://github.com/AMD-AGI/Hyperloom",
-      "description": "An agentic system that auto-optimizes LLM workloads on AMD GPUs.",
-      "language": "Python",
-      "stars": 263,
-      "updatedAt": "2026-11-07T08:44:56Z",
-      "fullName": "AMD-AGI/Hyperloom"
-    },
-    {
-      "name": "kolega-code",
-      "url": "https://github.com/kolega-ai/kolega-code",
-      "description": "Agentic coding in the terminal: the model writes its own multi-agent workflows (Gigacode). Provider-agnostic, local-first, 15+ model providers, MCP support.",
-      "language": "Python",
-      "stars": 22,
-      "updatedAt": "2026-11-07T08:44:56Z",
-      "fullName": "kolega-ai/kolega-code"
-    },
-    {
-      "name": "token-monitor",
-      "url": "https://github.com/Javis603/token-monitor",
-      "description": "Local-first desktop widget for tracking token usage, costs, limits, and session activity across 52+ AI coding tools—including Claude Code, Codex, Cursor, OpenCode, OpenClaw, and more—with multi-device sync.",
-      "language": "JavaScript",
-      "stars": 3582,
-      "updatedAt": "2026-11-07T08:44:55Z",
-      "fullName": "Javis603/token-monitor"
-    },
-    {
-      "name": "archlang",
-      "url": "https://github.com/ChanMeng666/archlang",
-      "description": "Floor plans as code. Your AI writes ArchLang; the compiler draws a precise, dimensioned plan (SVG, DXF, PDF) and tells it what's wrong. Open source, MIT.",
-      "language": "TypeScript",
-      "stars": 32,
-      "updatedAt": "2026-11-07T08:44:48Z",
-      "fullName": "ChanMeng666/archlang"
-    },
-    {
-      "name": "opencodex",
-      "url": "https://github.com/lidge-jun/opencodex",
-      "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
-      "language": "TypeScript",
-      "stars": 18272,
-      "updatedAt": "2026-11-07T08:44:38Z",
-      "fullName": "lidge-jun/opencodex"
-    },
-    {
-      "name": "hermes-agent",
-      "url": "https://github.com/NousResearch/hermes-agent",
-      "description": "The agent that grows with you",
-      "language": "Python",
-      "stars": 261302,
-      "updatedAt": "2026-11-07T08:44:37Z",
-      "fullName": "NousResearch/hermes-agent"
-    },
-    {
-      "name": "penguin-harness",
-      "url": "https://github.com/Prism-Shadow/penguin-harness",
-      "description": "🐧 Unified and Stable RSI Platform",
-      "language": "TypeScript",
-      "stars": 3174,
-      "updatedAt": "2026-11-07T08:44:37Z",
-      "fullName": "Prism-Shadow/penguin-harness"
-    },
-    {
-      "name": "oh-my-hermes",
-      "url": "https://github.com/rlaope/oh-my-hermes",
-      "description": "⚚ The coding harness with Hermes Agent wired into IDE.",
-      "language": "Python",
-      "stars": 5222,
-      "updatedAt": "2026-11-07T08:44:28Z",
-      "fullName": "rlaope/oh-my-hermes"
-    },
-    {
-      "name": "zisla",
-      "url": "https://github.com/wzz6423/zisla",
-      "description": "Native macOS top workspace for media, files, system tools, and privacy-first local AI activity.",
-      "language": "Swift",
-      "stars": 12,
-      "updatedAt": "2026-11-07T08:44:18Z",
-      "fullName": "wzz6423/zisla"
-    },
-    {
-      "name": "cindy",
-      "url": "https://github.com/makecindy/cindy",
-      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
-      "language": "TypeScript",
-      "stars": 9437,
-      "updatedAt": "2026-11-07T08:43:48Z",
-      "fullName": "makecindy/cindy"
-    },
-    {
-      "name": "OpenTechNotes",
-      "url": "https://github.com/taovietducofficial/OpenTechNotes",
-      "description": "OpenTechNotes là kho tài liệu IT miễn phí, tổng hợp kiến thức nền tảng và kinh nghiệm thực chiến. Nội dung được tóm gọn, dễ hiểu và cập nhật thường xuyên để hỗ trợ học nhanh – hiểu sâu",
+      "name": "Awesome-Agent-Ecosystem",
+      "url": "https://github.com/0xWelt/Awesome-Agent-Ecosystem",
+      "description": "A curated list of coding harnesses, vibe-coding communities, named personal agents, and the tools and services agents call.",
       "language": "Open source",
-      "stars": 86,
-      "updatedAt": "2026-11-07T08:43:43Z",
-      "fullName": "taovietducofficial/OpenTechNotes"
+      "stars": 122,
+      "updatedAt": "2026-11-08T08:56:48Z",
+      "fullName": "0xWelt/Awesome-Agent-Ecosystem"
     },
     {
-      "name": "qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "description": "An open-source AI coding agent that lives in your terminal.",
+      "name": "smithers",
+      "url": "https://github.com/smithersai/smithers",
+      "description": "Smithers is an agentic workflow framework for defining workflows in simple TypeScript configuration files and executing them quickly, durably, and reliably",
       "language": "TypeScript",
-      "stars": 29064,
-      "updatedAt": "2026-11-07T08:43:37Z",
-      "fullName": "QwenLM/qwen-code"
+      "stars": 446,
+      "updatedAt": "2026-11-08T08:56:42Z",
+      "fullName": "smithersai/smithers"
     },
     {
-      "name": "claude-code-plugins",
-      "url": "https://github.com/melodic-software/claude-code-plugins",
-      "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
-      "language": "Shell",
-      "stars": 29,
-      "updatedAt": "2026-11-07T08:43:23Z",
-      "fullName": "melodic-software/claude-code-plugins"
+      "name": "jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "description": "High performance coding agent harness written in Rust, built for heavy multi-agent dev workflows",
+      "language": "Rust",
+      "stars": 21606,
+      "updatedAt": "2026-11-08T08:56:37Z",
+      "fullName": "1jehuang/jcode"
     },
     {
-      "name": "ft",
-      "url": "https://github.com/Water-Run/ft",
-      "description": "f(t)函数: Agent制作的动画集. 自由软件, 自由视频.",
+      "name": "repomix",
+      "url": "https://github.com/yamadashy/repomix",
+      "description": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, ",
+      "language": "TypeScript",
+      "stars": 29183,
+      "updatedAt": "2026-11-08T08:56:26Z",
+      "fullName": "yamadashy/repomix"
+    },
+    {
+      "name": "Sakura",
+      "url": "https://github.com/Vist233/Sakura",
+      "description": "A TypeScript framework for building coding agents with resumable sessions and pluggable tools.",
+      "language": "TypeScript",
+      "stars": 22,
+      "updatedAt": "2026-11-08T08:56:24Z",
+      "fullName": "Vist233/Sakura"
+    },
+    {
+      "name": "awesome-rsi",
+      "url": "https://github.com/Prism-Shadow/awesome-rsi",
+      "description": "An Open Index of RSI Papers",
       "language": "JavaScript",
-      "stars": 39,
-      "updatedAt": "2026-11-07T08:43:06Z",
-      "fullName": "Water-Run/ft"
+      "stars": 590,
+      "updatedAt": "2026-11-08T08:56:19Z",
+      "fullName": "Prism-Shadow/awesome-rsi"
     },
     {
-      "name": "compose-skill",
-      "url": "https://github.com/aldefy/compose-skill",
-      "description": "Jetpack Compose Agent Skill — AI-powered coding guidance with actual androidx/androidx source code receipts. Works with Claude Code, Codex CLI, Gemini CLI, Cursor, Copilot, Windsurf, and more.",
+      "name": "Aharou",
+      "url": "https://github.com/520huxiangli/Aharou",
+      "description": "Aharou · 手机上的 AI 助手与 Coding Agent（内置 Linux 环境 · 影子屏）",
       "language": "Kotlin",
-      "stars": 599,
-      "updatedAt": "2026-11-07T08:43:02Z",
-      "fullName": "aldefy/compose-skill"
+      "stars": 34,
+      "updatedAt": "2026-11-08T08:56:17Z",
+      "fullName": "520huxiangli/Aharou"
     },
     {
-      "name": "unsloth",
-      "url": "https://github.com/unslothai/unsloth",
-      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
+      "name": "moli",
+      "url": "https://github.com/lexmount/moli",
+      "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
+      "language": "Rust",
+      "stars": 22979,
+      "updatedAt": "2026-11-08T08:56:10Z",
+      "fullName": "lexmount/moli"
+    },
+    {
+      "name": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "description": "Tamper-evident tracing, policy gates and cross-checks for AI agents: see what the agent did, and why.",
       "language": "Python",
-      "stars": 79135,
-      "updatedAt": "2026-11-07T08:42:42Z",
-      "fullName": "unslothai/unsloth"
+      "stars": 583,
+      "updatedAt": "2026-11-08T08:56:09Z",
+      "fullName": "Cygnux-Labs/Tracekit"
     },
     {
-      "name": "thermite",
-      "url": "https://github.com/iammrduncan/thermite",
-      "description": "Auto researching harness that burns through everything.",
-      "language": "TypeScript",
-      "stars": 61,
-      "updatedAt": "2026-11-07T08:42:39Z",
-      "fullName": "iammrduncan/thermite"
+      "name": "SkillBill",
+      "url": "https://github.com/Sermilion/SkillBill",
+      "description": "AI Driven Development Factory.",
+      "language": "Kotlin",
+      "stars": 46,
+      "updatedAt": "2026-11-08T08:56:05Z",
+      "fullName": "Sermilion/SkillBill"
     },
     {
-      "name": "nextclaw",
-      "url": "https://github.com/Peiiii/nextclaw",
-      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
-      "language": "TypeScript",
-      "stars": 263,
-      "updatedAt": "2026-11-07T08:42:22Z",
-      "fullName": "Peiiii/nextclaw"
-    },
-    {
-      "name": "astralbeam",
-      "url": "https://github.com/AstralBeamAI/astralbeam",
-      "description": "Add an agent to your app in minutes",
-      "language": "TypeScript",
-      "stars": 32,
-      "updatedAt": "2026-11-07T08:42:21Z",
-      "fullName": "AstralBeamAI/astralbeam"
+      "name": "ankole",
+      "url": "https://github.com/AgentBull/ankole",
+      "description": "The open source Agent Harness with a Company Brain. Self-hosted AI Agents for Slack, Teams, Lark, DingTalk, WeCom, and more. An open source alternative to Claude Tag.",
+      "language": "Elixir",
+      "stars": 179,
+      "updatedAt": "2026-11-08T08:56:03Z",
+      "fullName": "AgentBull/ankole"
     },
     {
       "name": "bpf-benchmark",
@@ -207,17 +117,107 @@
       "description": "AI Agent eBPF optimization benchmark and framework",
       "language": "C",
       "stars": 26,
-      "updatedAt": "2026-11-07T08:42:03Z",
+      "updatedAt": "2026-11-08T08:56:03Z",
       "fullName": "eunomia-bpf/bpf-benchmark"
     },
     {
-      "name": "runner",
-      "url": "https://github.com/yicheng47/runner",
-      "description": "Where terminal agents work together. Claude Code, Codex, Copilot CLI and pi on the same task, in one mission, each keeping its own TUI in a real terminal.",
+      "name": "my-pi",
+      "url": "https://github.com/spences10/my-pi",
+      "description": "My Pi coding agent setup: secret redaction, LSP, searchable context, recall, telemetry, observability, and team mode. Toggle with /extensions.",
+      "language": "TypeScript",
+      "stars": 138,
+      "updatedAt": "2026-11-08T08:55:37Z",
+      "fullName": "spences10/my-pi"
+    },
+    {
+      "name": "IncarnaMind",
+      "url": "https://github.com/IncarnaMind/IncarnaMind",
+      "description": "From messy files to a checked report. A free, open-source desktop app for macOS, Windows and Linux: write and analyse with AI from your own files, check each sentence and figure against them, and export to Word. Meeting notes too. Works with ChatGPT, Claude, G",
+      "language": "TypeScript",
+      "stars": 856,
+      "updatedAt": "2026-11-08T08:55:35Z",
+      "fullName": "IncarnaMind/IncarnaMind"
+    },
+    {
+      "name": "cambio-uruguay",
+      "url": "https://github.com/eduair94/cambio-uruguay",
+      "description": "cambio-uruguay.com: Uruguay exchange rates, rentals, used cars and prices. Public API, remote MCP server (29 tools, no key) and a Claude skill.",
+      "language": "TypeScript",
+      "stars": 8,
+      "updatedAt": "2026-11-08T08:55:24Z",
+      "fullName": "eduair94/cambio-uruguay"
+    },
+    {
+      "name": "most-capable-agent-system-prompt",
+      "url": "https://github.com/fainir/most-capable-agent-system-prompt",
+      "description": "A copy-paste system prompt that has your coding agent (Claude Code, Codex, Cursor) build a self-improving agent system for any computer work.",
+      "language": "Open source",
+      "stars": 885,
+      "updatedAt": "2026-11-08T08:55:05Z",
+      "fullName": "fainir/most-capable-agent-system-prompt"
+    },
+    {
+      "name": "EchoBird",
+      "url": "https://github.com/edison7009/EchoBird",
+      "description": "All-in-one AI desktop app: one-click install for Claude Code, Codex CLI, DeepSeek and more, manage AI accounts and quotas, smart model routing with auto-failover, voice input, and run local LLMs. Bonus: a Token Pet that grows as you use AI.",
       "language": "Rust",
-      "stars": 487,
-      "updatedAt": "2026-11-07T08:42:00Z",
-      "fullName": "yicheng47/runner"
+      "stars": 3526,
+      "updatedAt": "2026-11-08T08:54:39Z",
+      "fullName": "edison7009/EchoBird"
+    },
+    {
+      "name": "AgileRL",
+      "url": "https://github.com/AgileRL/AgileRL",
+      "description": "The complete post-training stack for LLMs, plus RL for any problem. SFT, DPO and multi-turn agentic RL, with evolutionary hyperparameter optimization built in.",
+      "language": "Python",
+      "stars": 966,
+      "updatedAt": "2026-11-08T08:54:37Z",
+      "fullName": "AgileRL/AgileRL"
+    },
+    {
+      "name": "M31A",
+      "url": "https://github.com/eshanized/M31A",
+      "description": "M31 Autonomous — Rust-native autonomous software-engineering runtime with non-bypassable policy gates and verifiable execution",
+      "language": "Rust",
+      "stars": 11,
+      "updatedAt": "2026-11-08T08:54:29Z",
+      "fullName": "eshanized/M31A"
+    },
+    {
+      "name": "manus-ai",
+      "url": "https://github.com/abhinay-h/manus-ai",
+      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
+      "language": "Python",
+      "stars": 55,
+      "updatedAt": "2026-11-08T08:54:20Z",
+      "fullName": "abhinay-h/manus-ai"
+    },
+    {
+      "name": "camp",
+      "url": "https://github.com/Obedience-Corp/camp",
+      "description": "AI Workspace and context management",
+      "language": "Go",
+      "stars": 8,
+      "updatedAt": "2026-11-08T08:54:20Z",
+      "fullName": "Obedience-Corp/camp"
+    },
+    {
+      "name": "ai_manus",
+      "url": "https://github.com/proteus1121/ai_manus",
+      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
+      "language": "Open source",
+      "stars": 55,
+      "updatedAt": "2026-11-08T08:54:19Z",
+      "fullName": "proteus1121/ai_manus"
+    },
+    {
+      "name": "manus-ai",
+      "url": "https://github.com/tireddwarf99/manus-ai",
+      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
+      "language": "Python",
+      "stars": 55,
+      "updatedAt": "2026-11-08T08:54:19Z",
+      "fullName": "tireddwarf99/manus-ai"
     }
   ]
 }
