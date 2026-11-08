@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-08T13:38:15.885065+00:00.
+Generated from the latest analytics snapshot: 2026-11-08T22:15:33.860741+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -175,16 +175,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/09/convert image to pdf free tools.html
 - Top queries: No page-query rows
 
-### /p/contact-us.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/contact us.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/contact us.html
-- Top queries: No page-query rows
-
 ### /p/disclaimer.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -205,6 +195,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/02/m3um3u8 player tool by laxman nepal.html
 - Top queries: No page-query rows
 
+### /p/contact-us.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/contact us.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/contact us.html
+- Top queries: No page-query rows
+
 ### /2024/09/free-pdf-to-image-converter-tools.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -223,26 +223,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/10/top 20 websites for modded apks your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/10/top 20 websites for modded apks your.html
-- Top queries: No page-query rows
-
-### /2025/06/facebook-video-downloader-save-hd.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/06/facebook video downloader save hd.html | Laxman Nep…
-- Current description: Missing
-- Recommended description: Learn about 2025/06/facebook video downloader save hd.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/06/facebook video downloader save hd.html
-- Top queries: No page-query rows
-
-### /p/pdf.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/pdf.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/pdf.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/pdf.html
 - Top queries: No page-query rows
 
 ### /2023/07/currency-converter-by-laxman-nepal.html — SEO score 0/100
@@ -285,14 +265,24 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/04/best free image to pdf converter online.html
 - Top queries: No page-query rows
 
-### /2025/06/ebook-finder.html — SEO score 0/100
+### /2025/06/facebook-video-downloader-save-hd.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: 2025/06/ebook finder.html | Laxman Nepal
+- Recommended title: 2025/06/facebook video downloader save hd.html | Laxman Nep…
 - Current description: Missing
-- Recommended description: Learn about 2025/06/ebook finder.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/06/ebook finder.html
+- Recommended description: Learn about 2025/06/facebook video downloader save hd.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/06/facebook video downloader save hd.html
+- Top queries: No page-query rows
+
+### /p/pdf.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/pdf.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/pdf.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/pdf.html
 - Top queries: No page-query rows
 
 ### /p/youtube-tools.html — SEO score 0/100
@@ -395,6 +385,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/03/top 8 free alternatives to paid software.html
 - Top queries: No page-query rows
 
+### /2025/06/ebook-finder.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/06/ebook finder.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2025/06/ebook finder.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/06/ebook finder.html
+- Top queries: No page-query rows
+
 ### /2025/07/free-online-courses-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -473,6 +473,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/07/qr code generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/07/qr code generator.html
+- Top queries: No page-query rows
+
+### /2020/11/Ekadashi.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2020/11/Ekadashi.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2020/11/Ekadashi.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2020/11/Ekadashi.html
 - Top queries: No page-query rows
 
 ### /2023/07/google-drive-direct-download-link.html — SEO score 0/100
@@ -565,6 +575,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: ai.html
 - Top queries: No page-query rows
 
+### /p/google-drive-download-link-generator.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/google drive download link generator.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/google drive download link generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/google drive download link generator.html
+- Top queries: No page-query rows
+
 ### /p/laxman-nepal-personal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -573,16 +593,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/laxman nepal personal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/laxman nepal personal.html
-- Top queries: No page-query rows
-
-### /p/typing-test.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/typing test.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/typing test.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/typing test.html
 - Top queries: No page-query rows
 
 ### /repo.html — SEO score 0/100
@@ -673,16 +683,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/01 with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/01
-- Top queries: No page-query rows
-
-### /2024/03/preeti-to-unicode-converter-free-tools.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/03/preeti to unicode converter free tools.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2024/03/preeti to unicode converter free tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/03/preeti to unicode converter free tools.html
 - Top queries: No page-query rows
 
 ### /2024/09/svg-download-free.html — SEO score 0/100
@@ -803,16 +803,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/06/free online video to audio converter.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/06/free online video to audio converter.html
-- Top queries: No page-query rows
-
-### /2025/06/word-counter.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/06/word counter.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2025/06/word counter.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/06/word counter.html
 - Top queries: No page-query rows
 
 ### /2025/07/free-icon-finder-tools.html — SEO score 0/100
@@ -1015,14 +1005,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/sani.html
 - Top queries: No page-query rows
 
-### /p/youtube-video-download-by-laxman-nepal.html — SEO score 0/100
+### /p/typing-test.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: p/youtube video download by laxman nepal.html | Laxman Nepal
+- Recommended title: p/typing test.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about p/youtube video download by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/youtube video download by laxman nepal.html
+- Recommended description: Learn about p/typing test.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/typing test.html
 - Top queries: No page-query rows
 
 ### /tools/nepali-tools/type-nepali/index.html**⁠￼ — SEO score 0/100
@@ -1745,16 +1735,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 20 Best Free AI Tools Websites for Content & Productivity in 2025
 - Top queries: No page-query rows
 
-### /2025/12/strong-password-generator.html — SEO score 70/100
-- Issues: Description length 63, Noindex
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: FortressKey - Strong Password Generator
-- Recommended title: FortressKey | Laxman Nepal
-- Current description: Action Successful       FortressKey   Secure Password Generator
-- Recommended description: Learn about FortressKey with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: FortressKey
-- Top queries: No page-query rows
-
 ### /2025/11/youtube-channel-id-finder-analytics.html — SEO score 70/100
 - Issues: Title length 25, Noindex
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1773,6 +1753,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Fetching video tags...
 - Recommended description: Learn about Advanced YouTube Tag Extractor with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Advanced YouTube Tag Extractor
+- Top queries: No page-query rows
+
+### /2025/12/strong-password-generator.html — SEO score 70/100
+- Issues: Description length 63, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: FortressKey - Strong Password Generator
+- Recommended title: FortressKey | Laxman Nepal
+- Current description: Action Successful       FortressKey   Secure Password Generator
+- Recommended description: Learn about FortressKey with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: FortressKey
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-trending-keywords.html — SEO score 70/100
