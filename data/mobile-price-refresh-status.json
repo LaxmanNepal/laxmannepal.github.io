@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-07T07:17:23.970556+00:00",
-  "date": "2026-11-07",
+  "updated_at": "2026-11-08T07:28:44.984358+00:00",
+  "date": "2026-11-08",
   "schedule": "daily",
-  "model_variants": 285,
-  "fresh_offers": 286,
+  "model_variants": 275,
+  "fresh_offers": 276,
   "stale_offers": 0,
   "stores": {
     "Brother Mart": {
-      "candidates": 420,
-      "priced_offers_found": 171,
-      "previous_offers": 172,
-      "minimum_expected_offers": 61,
+      "candidates": 389,
+      "priced_offers_found": 161,
+      "previous_offers": 171,
+      "minimum_expected_offers": 60,
       "status": "complete",
       "errors": []
     },
