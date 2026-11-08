@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-08T13:31:31.828618+00:00",
-  "count": 150,
+  "updated_at": "2026-11-08T22:12:05.803398+00:00",
+  "count": 151,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -1595,16 +1595,20 @@
       "name": "Samsung Galaxy A07",
       "brand": "Samsung",
       "variants": [
-        "4GB+64GB"
+        "4GB+64GB",
+        "4GB+128GB",
+        "6GB+128GB"
       ],
       "price": 25499,
-      "max_price": 25499,
+      "max_price": 33499,
       "original_price": null,
       "rams": [
-        "4GB"
+        "4GB",
+        "6GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -1629,15 +1633,19 @@
       "name": "Samsung Galaxy A08",
       "brand": "Samsung",
       "variants": [
-        "Samsung Galaxy A08 - 4GB - 128GB"
+        "Samsung Galaxy A08 - 4GB - 128GB",
+        "Samsung Galaxy A08 - 4GB - 64GB",
+        "Samsung Galaxy A08 - 6GB - 128GB"
       ],
-      "price": 40999,
-      "max_price": 40999,
+      "price": 34499,
+      "max_price": 47499,
       "original_price": null,
       "rams": [
-        "4GB"
+        "4GB",
+        "6GB"
       ],
       "storages": [
+        "64GB",
         "128GB"
       ]
     },
@@ -1646,16 +1654,20 @@
       "name": "Samsung Galaxy A17 5G",
       "brand": "Samsung",
       "variants": [
-        "6GB+128GB"
+        "6GB+128GB",
+        "8GB+128GB",
+        "8GB+256GB"
       ],
       "price": 44999,
-      "max_price": 44999,
+      "max_price": 56999,
       "original_price": null,
       "rams": [
-        "6GB"
+        "6GB",
+        "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -1663,16 +1675,19 @@
       "name": "Samsung Galaxy A27 5G",
       "brand": "Samsung",
       "variants": [
-        "6GB + 128GB"
+        "6GB + 128GB",
+        "8GB + 256GB"
       ],
       "price": 55999,
-      "max_price": 55999,
+      "max_price": 69999,
       "original_price": null,
       "rams": [
-        "6GB"
+        "6GB",
+        "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -1680,15 +1695,19 @@
       "name": "Samsung Galaxy A37 5G",
       "brand": "Samsung",
       "variants": [
-        "8GB+256GB"
+        "8GB+256GB",
+        "12GB+256GB",
+        "8GB+128GB"
       ],
-      "price": 86999,
-      "max_price": 86999,
+      "price": 74999,
+      "max_price": 96999,
       "original_price": null,
       "rams": [
-        "8GB"
+        "8GB",
+        "12GB"
       ],
       "storages": [
+        "128GB",
         "256GB"
       ]
     },
@@ -1697,12 +1716,14 @@
       "name": "Samsung Galaxy A57 5G",
       "brand": "Samsung",
       "variants": [
-        "12GB+256GB"
+        "12GB+256GB",
+        "8GB+256GB"
       ],
-      "price": 107999,
+      "price": 96999,
       "max_price": 107999,
       "original_price": null,
       "rams": [
+        "8GB",
         "12GB"
       ],
       "storages": [
@@ -1792,6 +1813,23 @@
       "price": 123999,
       "max_price": 159999,
       "original_price": 182999,
+      "rams": [
+        "12GB"
+      ],
+      "storages": [
+        "256GB"
+      ]
+    },
+    {
+      "id": "samsung-galaxy-z-flip-8",
+      "name": "Samsung Galaxy Z Flip 8",
+      "brand": "Samsung",
+      "variants": [
+        "12GB+256GB"
+      ],
+      "price": 194999,
+      "max_price": 194999,
+      "original_price": null,
       "rams": [
         "12GB"
       ],
@@ -2101,13 +2139,15 @@
       "name": "Vivo V70 FE",
       "brand": "Vivo",
       "variants": [
-        "8GB + 256GB"
+        "8GB + 256GB",
+        "12GB + 256GB"
       ],
       "price": 62999,
-      "max_price": 62999,
+      "max_price": 72999,
       "original_price": null,
       "rams": [
-        "8GB"
+        "8GB",
+        "12GB"
       ],
       "storages": [
         "256GB"
@@ -2137,16 +2177,18 @@
       "name": "Vivo V80 Lite",
       "brand": "Vivo",
       "variants": [
-        "8GB + 128GB"
+        "8GB + 128GB",
+        "8GB + 256GB"
       ],
       "price": 63999,
-      "max_price": 63999,
+      "max_price": 73999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -2171,16 +2213,18 @@
       "name": "Vivo Y05",
       "brand": "Vivo",
       "variants": [
-        "4GB+64GB"
+        "4GB+64GB",
+        "4GB+128GB"
       ],
       "price": 21999,
-      "max_price": 21999,
+      "max_price": 24999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB"
+        "64GB",
+        "128GB"
       ]
     },
     {
@@ -2205,13 +2249,15 @@
       "name": "Vivo Y11d",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB"
+        "4GB + 128GB",
+        "6GB + 128GB"
       ],
       "price": 27999,
-      "max_price": 27999,
+      "max_price": 33999,
       "original_price": null,
       "rams": [
-        "4GB"
+        "4GB",
+        "6GB"
       ],
       "storages": [
         "128GB"
@@ -2239,16 +2285,22 @@
       "name": "Vivo Y31d",
       "brand": "Vivo",
       "variants": [
-        "6GB+128GB"
+        "6GB+128GB",
+        "8GB+128GB",
+        "8GB+256GB",
+        "4GB+128GB"
       ],
-      "price": 37999,
-      "max_price": 37999,
+      "price": 32999,
+      "max_price": 51999,
       "original_price": null,
       "rams": [
-        "6GB"
+        "4GB",
+        "6GB",
+        "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -2256,16 +2308,20 @@
       "name": "Vivo Y32",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB"
+        "4GB + 128GB",
+        "6GB + 128GB",
+        "6GB + 256GB"
       ],
       "price": 39999,
-      "max_price": 39999,
+      "max_price": 52999,
       "original_price": null,
       "rams": [
-        "4GB"
+        "4GB",
+        "6GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
@@ -2273,16 +2329,18 @@
       "name": "Vivo Y500",
       "brand": "Vivo",
       "variants": [
-        "8GB + 128GB"
+        "8GB + 128GB",
+        "8GB + 256GB"
       ],
       "price": 54999,
-      "max_price": 54999,
+      "max_price": 61999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB"
+        "128GB",
+        "256GB"
       ]
     },
     {
