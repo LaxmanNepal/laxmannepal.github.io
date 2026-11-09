@@ -1,0 +1,73 @@
+name: Refresh Iran war news feed
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: iran-war-feed
+  cancel-in-progress: true
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Collect and normalize public news headlines
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          python3 - <<'PY'
+          import json, re, urllib.request, xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+          from email.utils import parsedate_to_datetime
+          from pathlib import Path
+          from urllib.parse import quote
+          queries = [
+            'Iran war OR Iran conflict OR US Iran strikes',
+            'Strait of Hormuz OR Persian Gulf shipping',
+            'Iran Israel US diplomacy ceasefire',
+            'Kuwait Gulf security Iran'
+          ]
+          headers = {'User-Agent':'Mozilla/5.0 (compatible; IamFromHetaudaNewsBot/1.0)'}
+          items, seen = [], set()
+          for query in queries:
+              url = 'https://news.google.com/rss/search?q=' + quote(query) + '&hl=en-US&gl=US&ceid=US:en'
+              try:
+                  req = urllib.request.Request(url, headers=headers)
+                  with urllib.request.urlopen(req, timeout=25) as response:
+                      root = ET.fromstring(response.read())
+                  for node in root.findall('./channel/item'):
+                      title = (node.findtext('title') or '').strip()
+                      link = (node.findtext('link') or '').strip()
+                      source = (node.find('source').text or '').strip() if node.find('source') is not None else 'News source'
+                      pub = (node.findtext('pubDate') or '').strip()
+                      desc = re.sub('<[^>]+>', ' ', node.findtext('description') or '')
+                      desc = re.sub(r'\\s+', ' ', desc).strip()
+                      if not title or not link or link in seen: continue
+                      seen.add(link)
+                      try: published = parsedate_to_datetime(pub).astimezone(timezone.utc).isoformat()
+                      except Exception: published = ''
+                      items.append({'id':link,'title':title,'url':link,'source':source,'published':published,'description':desc[:350]})
+              except Exception as exc:
+                  print('Feed failed:', query, str(exc))
+          items.sort(key=lambda x:x.get('published',''), reverse=True)
+          payload = {'updated':datetime.now(timezone.utc).isoformat(),'items':items[:60],
+                     'note':'Aggregated Google News RSS headlines. Headlines are not independently verified.'}
+          path=Path('iamfromhetauda/iranwar/alerts.json')
+          path.parent.mkdir(parents=True,exist_ok=True)
+          path.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+          print('Saved',len(payload['items']),'headlines')
+          PY
+      - name: Publish updated feed
+        run: |
+          if git diff --quiet -- iamfromhetauda/iranwar/alerts.json; then
+            echo "No feed changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add iamfromhetauda/iranwar/alerts.json
+          git commit -m "chore: refresh Iran war news alerts"
+          git push
