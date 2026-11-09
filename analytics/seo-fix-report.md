@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-09T06:48:14.515793+00:00.
+Generated from the latest analytics snapshot: 2026-11-09T22:30:01.026241+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -75,16 +75,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/top 10 free online tools will save you.html
 - Top queries: No page-query rows
 
-### /p/link-shortner-generator.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/link shortner generator.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/link shortner generator.html
-- Top queries: No page-query rows
-
 ### /p/about.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -95,14 +85,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/about.html
 - Top queries: No page-query rows
 
-### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
+### /p/link-shortner-generator.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: 2025/01/25 trusted sites that pay in usd for.html | Laxman…
+- Recommended title: p/link shortner generator.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about 2025/01/25 trusted sites that pay in usd for.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/01/25 trusted sites that pay in usd for.html
+- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/link shortner generator.html
 - Top queries: No page-query rows
 
 ### /p/cookies-policy.html — SEO score 0/100
@@ -115,14 +105,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/cookies policy.html
 - Top queries: No page-query rows
 
-### /2025/07/image-prompt.html — SEO score 0/100
+### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: 2025/07/image prompt.html | Laxman Nepal
+- Recommended title: 2025/01/25 trusted sites that pay in usd for.html | Laxman…
 - Current description: Missing
-- Recommended description: Learn about 2025/07/image prompt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/07/image prompt.html
+- Recommended description: Learn about 2025/01/25 trusted sites that pay in usd for.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/01/25 trusted sites that pay in usd for.html
 - Top queries: No page-query rows
 
 ### /p/privacy-policy.html — SEO score 0/100
@@ -165,14 +155,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2020/11/use mobile data in aeroplane mode.html
 - Top queries: No page-query rows
 
-### /2024/09/convert-image-to-pdf-free-tools.html — SEO score 0/100
+### /2025/07/image-prompt.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: 2024/09/convert image to pdf free tools.html | Laxman Nepal
+- Recommended title: 2025/07/image prompt.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about 2024/09/convert image to pdf free tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/09/convert image to pdf free tools.html
+- Recommended description: Learn about 2025/07/image prompt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/07/image prompt.html
 - Top queries: No page-query rows
 
 ### /p/disclaimer.html — SEO score 0/100
@@ -195,6 +185,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/02/m3um3u8 player tool by laxman nepal.html
 - Top queries: No page-query rows
 
+### /2024/09/convert-image-to-pdf-free-tools.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/09/convert image to pdf free tools.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2024/09/convert image to pdf free tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/09/convert image to pdf free tools.html
+- Top queries: No page-query rows
+
 ### /p/contact-us.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -213,16 +213,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/09/free pdf to image converter tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/09/free pdf to image converter tools.html
-- Top queries: No page-query rows
-
-### /2024/10/top-20-websites-for-modded-apks-your.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/10/top 20 websites for modded apks your.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2024/10/top 20 websites for modded apks your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/10/top 20 websites for modded apks your.html
 - Top queries: No page-query rows
 
 ### /2023/07/currency-converter-by-laxman-nepal.html — SEO score 0/100
@@ -255,6 +245,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/07/qr code generator by laxman nepal.html
 - Top queries: No page-query rows
 
+### /2024/10/top-20-websites-for-modded-apks-your.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/10/top 20 websites for modded apks your.html | Laxman…
+- Current description: Missing
+- Recommended description: Learn about 2024/10/top 20 websites for modded apks your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/10/top 20 websites for modded apks your.html
+- Top queries: No page-query rows
+
 ### /2025/04/best-free-image-to-pdf-converter-online.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -273,16 +273,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/06/facebook video downloader save hd.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/06/facebook video downloader save hd.html
-- Top queries: No page-query rows
-
-### /p/pdf.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/pdf.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/pdf.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/pdf.html
 - Top queries: No page-query rows
 
 ### /p/youtube-tools.html — SEO score 0/100
@@ -395,16 +385,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/ebook finder.html
 - Top queries: No page-query rows
 
-### /2025/07/free-online-courses-by-laxman-nepal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/07/free online courses by laxman nepal.html | Laxman N…
-- Current description: Missing
-- Recommended description: Learn about 2025/07/free online courses by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/07/free online courses by laxman nepal.html
-- Top queries: No page-query rows
-
 ### /p/image.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -423,6 +403,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/laxman nepal.html
+- Top queries: No page-query rows
+
+### /p/pdf.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/pdf.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/pdf.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/pdf.html
 - Top queries: No page-query rows
 
 ### /2023/07/age-calculator-tool-by-laxman-nepal.html — SEO score 0/100
@@ -463,6 +453,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/09/netflix free website watch movies.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/09/netflix free website watch movies.html
+- Top queries: No page-query rows
+
+### /2025/07/free-online-courses-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/07/free online courses by laxman nepal.html | Laxman N…
+- Current description: Missing
+- Recommended description: Learn about 2025/07/free online courses by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/07/free online courses by laxman nepal.html
 - Top queries: No page-query rows
 
 ### /2025/07/qr-code-generator.html — SEO score 0/100
@@ -685,6 +685,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/01
 - Top queries: No page-query rows
 
+### /2024/09/convert-anything-to-anything-free.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/09/convert anything to anything free.html | Laxman Nep…
+- Current description: Missing
+- Recommended description: Learn about 2024/09/convert anything to anything free.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/09/convert anything to anything free.html
+- Top queries: No page-query rows
+
 ### /2024/09/svg-download-free.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -795,16 +805,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/05/12 best ai bots on whatsapp for chatgpt.html
 - Top queries: No page-query rows
 
-### /2025/06/free-online-video-to-audio-converter.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/06/free online video to audio converter.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2025/06/free online video to audio converter.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/06/free online video to audio converter.html
-- Top queries: No page-query rows
-
 ### /2025/07/free-icon-finder-tools.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -863,6 +863,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about free skills/percentage with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: free skills/percentage
+- Top queries: No page-query rows
+
+### /icons/icon-192.svg — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: icons/icon 192.svg | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about icons/icon 192.svg with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: icons/icon 192.svg
 - Top queries: No page-query rows
 
 ### /ios — SEO score 0/100
@@ -5535,16 +5545,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Content Suite
 - Top queries: No page-query rows
 
-### /blogs — SEO score 85/100
-- Issues: Thin content (34 words)
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Blogs & Tutorials | Laxman Nepal
-- Recommended title: Blogs & Tutorials | Laxman Nepal
-- Current description: Laxman Nepal practical tutorials about YouTube, AI, Windows, command-line tools and useful digital workflows.
-- Recommended description: Learn about Blogs & Tutorials with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Blogs & Tutorials
-- Top queries: No page-query rows
-
 ### /2025/11/youtube-thumbnail-downloader.html — SEO score 85/100
 - Issues: Noindex
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -5553,6 +5553,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Extract ultra high-quality thumbnails from any YouTube video with auto-fetch and multiple quality options
 - Recommended description: Learn about Advanced YouTube Thumbnail Generator with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Advanced YouTube Thumbnail Generator
+- Top queries: No page-query rows
+
+### /blogs — SEO score 85/100
+- Issues: Thin content (34 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Blogs & Tutorials | Laxman Nepal
+- Recommended title: Blogs & Tutorials | Laxman Nepal
+- Current description: Laxman Nepal practical tutorials about YouTube, AI, Windows, command-line tools and useful digital workflows.
+- Recommended description: Learn about Blogs & Tutorials with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Blogs & Tutorials
 - Top queries: No page-query rows
 
 ### /2026/02/laxman-nepal-youtube-thumbnail.html — SEO score 85/100
