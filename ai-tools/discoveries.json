@@ -1,115 +1,133 @@
 {
-  "updatedAt": "2026-11-08",
+  "updatedAt": "2026-11-09",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "magic",
-      "url": "https://github.com/polterguy/magic",
-      "description": "Instant SECURE Full Stack Apps and AI Agents",
-      "language": "C#",
-      "stars": 1243,
-      "updatedAt": "2026-11-08T08:56:58Z",
-      "fullName": "polterguy/magic"
-    },
-    {
-      "name": "Awesome-Agent-Ecosystem",
-      "url": "https://github.com/0xWelt/Awesome-Agent-Ecosystem",
-      "description": "A curated list of coding harnesses, vibe-coding communities, named personal agents, and the tools and services agents call.",
-      "language": "Open source",
-      "stars": 122,
-      "updatedAt": "2026-11-08T08:56:48Z",
-      "fullName": "0xWelt/Awesome-Agent-Ecosystem"
-    },
-    {
-      "name": "smithers",
-      "url": "https://github.com/smithersai/smithers",
-      "description": "Smithers is an agentic workflow framework for defining workflows in simple TypeScript configuration files and executing them quickly, durably, and reliably",
+      "name": "easyeda-mcp-pro",
+      "url": "https://github.com/oaslananka/easyeda-mcp-pro",
+      "description": "MCP server for EasyEDA Pro, connecting AI agents to schematic and PCB workflows, controlled design operations, DRC, BOM sourcing, board analysis, and manufacturing export—with profile-gated tools and safety controls.",
       "language": "TypeScript",
-      "stars": 446,
-      "updatedAt": "2026-11-08T08:56:42Z",
-      "fullName": "smithersai/smithers"
+      "stars": 67,
+      "updatedAt": "2026-11-09T09:45:18Z",
+      "fullName": "oaslananka/easyeda-mcp-pro"
     },
     {
-      "name": "jcode",
-      "url": "https://github.com/1jehuang/jcode",
-      "description": "High performance coding agent harness written in Rust, built for heavy multi-agent dev workflows",
-      "language": "Rust",
-      "stars": 21606,
-      "updatedAt": "2026-11-08T08:56:37Z",
-      "fullName": "1jehuang/jcode"
-    },
-    {
-      "name": "repomix",
-      "url": "https://github.com/yamadashy/repomix",
-      "description": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, ",
-      "language": "TypeScript",
-      "stars": 29183,
-      "updatedAt": "2026-11-08T08:56:26Z",
-      "fullName": "yamadashy/repomix"
-    },
-    {
-      "name": "Sakura",
-      "url": "https://github.com/Vist233/Sakura",
-      "description": "A TypeScript framework for building coding agents with resumable sessions and pluggable tools.",
-      "language": "TypeScript",
-      "stars": 22,
-      "updatedAt": "2026-11-08T08:56:24Z",
-      "fullName": "Vist233/Sakura"
-    },
-    {
-      "name": "awesome-rsi",
-      "url": "https://github.com/Prism-Shadow/awesome-rsi",
-      "description": "An Open Index of RSI Papers",
-      "language": "JavaScript",
-      "stars": 590,
-      "updatedAt": "2026-11-08T08:56:19Z",
-      "fullName": "Prism-Shadow/awesome-rsi"
-    },
-    {
-      "name": "Aharou",
-      "url": "https://github.com/520huxiangli/Aharou",
-      "description": "Aharou · 手机上的 AI 助手与 Coding Agent（内置 Linux 环境 · 影子屏）",
-      "language": "Kotlin",
-      "stars": 34,
-      "updatedAt": "2026-11-08T08:56:17Z",
-      "fullName": "520huxiangli/Aharou"
-    },
-    {
-      "name": "moli",
-      "url": "https://github.com/lexmount/moli",
-      "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
-      "language": "Rust",
-      "stars": 22979,
-      "updatedAt": "2026-11-08T08:56:10Z",
-      "fullName": "lexmount/moli"
-    },
-    {
-      "name": "Tracekit",
-      "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "description": "Tamper-evident tracing, policy gates and cross-checks for AI agents: see what the agent did, and why.",
+      "name": "dify",
+      "url": "https://github.com/langgenius/dify",
+      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
       "language": "Python",
-      "stars": 583,
-      "updatedAt": "2026-11-08T08:56:09Z",
-      "fullName": "Cygnux-Labs/Tracekit"
+      "stars": 160735,
+      "updatedAt": "2026-11-09T09:45:04Z",
+      "fullName": "langgenius/dify"
     },
     {
-      "name": "SkillBill",
-      "url": "https://github.com/Sermilion/SkillBill",
-      "description": "AI Driven Development Factory.",
-      "language": "Kotlin",
-      "stars": 46,
-      "updatedAt": "2026-11-08T08:56:05Z",
-      "fullName": "Sermilion/SkillBill"
+      "name": "Pithos",
+      "url": "https://github.com/benmaster82/Pithos",
+      "description": "A dependency-free C inference engine for Liquid AI's LFM2 / LFM2.5 models. Terminal chat, an OpenAI-compatible server, a web agent and a terminal agent, all in one executable.",
+      "language": "C",
+      "stars": 31,
+      "updatedAt": "2026-11-09T09:44:55Z",
+      "fullName": "benmaster82/Pithos"
     },
     {
-      "name": "ankole",
-      "url": "https://github.com/AgentBull/ankole",
-      "description": "The open source Agent Harness with a Company Brain. Self-hosted AI Agents for Slack, Teams, Lark, DingTalk, WeCom, and more. An open source alternative to Claude Tag.",
-      "language": "Elixir",
-      "stars": 179,
-      "updatedAt": "2026-11-08T08:56:03Z",
-      "fullName": "AgentBull/ankole"
+      "name": "ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "description": "Learn AI Engineering! Learn it. Build it. Ship it for others.",
+      "language": "Python",
+      "stars": 77929,
+      "updatedAt": "2026-11-09T09:44:53Z",
+      "fullName": "rohitg00/ai-engineering-from-scratch"
+    },
+    {
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "stars": 29123,
+      "updatedAt": "2026-11-09T09:44:50Z",
+      "fullName": "QwenLM/qwen-code"
+    },
+    {
+      "name": "cherry-studio",
+      "url": "https://github.com/CherryHQ/cherry-studio",
+      "description": "Your AI workspace for models, agents, and productivity.",
+      "language": "TypeScript",
+      "stars": 53361,
+      "updatedAt": "2026-11-09T09:44:47Z",
+      "fullName": "CherryHQ/cherry-studio"
+    },
+    {
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "stars": 9579,
+      "updatedAt": "2026-11-09T09:44:46Z",
+      "fullName": "makecindy/cindy"
+    },
+    {
+      "name": "docs",
+      "url": "https://github.com/redis/docs",
+      "description": "Documentation for Redis, Redis Cloud, Redis Enterprise, Redis Iris, Redis Insight, RDI, Redis Feature Form, and Redis Radar",
+      "language": "Java",
+      "stars": 86,
+      "updatedAt": "2026-11-09T09:44:44Z",
+      "fullName": "redis/docs"
+    },
+    {
+      "name": "modelplan",
+      "url": "https://github.com/modelplan/modelplan",
+      "description": "Which AI coding model, at which effort, on which plan? Recommended efforts, a leaderboard at those efforts and plan advice from modelplan.ai, in Claude Code, Codex and the terminal (plugins, Skill, CLI).",
+      "language": "Swift",
+      "stars": 41,
+      "updatedAt": "2026-11-09T09:44:41Z",
+      "fullName": "modelplan/modelplan"
+    },
+    {
+      "name": "paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "description": "The open-source app everyone uses to manage agents at work",
+      "language": "TypeScript",
+      "stars": 112450,
+      "updatedAt": "2026-11-09T09:44:38Z",
+      "fullName": "paperclipai/paperclip"
+    },
+    {
+      "name": "ai-shifu",
+      "url": "https://github.com/ai-shifu/ai-shifu",
+      "description": "Get AI to teach and answer questions for you - just by typing!",
+      "language": "Python",
+      "stars": 332,
+      "updatedAt": "2026-11-09T09:44:38Z",
+      "fullName": "ai-shifu/ai-shifu"
+    },
+    {
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode",
+      "language": "TypeScript",
+      "stars": 115117,
+      "updatedAt": "2026-11-09T09:44:33Z",
+      "fullName": "thedotmack/claude-mem"
+    },
+    {
+      "name": "spark-agent",
+      "url": "https://github.com/alexanderizh/spark-agent",
+      "description": "SparkWork is a local-first desktop Agent workbench for professional development and complex work. Orchestrate workflows, collaborate across Agent sessions, route tasks to the right models, and extend the workspace with custom tools and apps. Reviewable, steera",
+      "language": "TypeScript",
+      "stars": 121,
+      "updatedAt": "2026-11-09T09:44:27Z",
+      "fullName": "alexanderizh/spark-agent"
+    },
+    {
+      "name": "unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
+      "language": "Python",
+      "stars": 79228,
+      "updatedAt": "2026-11-09T09:44:18Z",
+      "fullName": "unslothai/unsloth"
     },
     {
       "name": "bpf-benchmark",
@@ -117,107 +135,89 @@
       "description": "AI Agent eBPF optimization benchmark and framework",
       "language": "C",
       "stars": 26,
-      "updatedAt": "2026-11-08T08:56:03Z",
+      "updatedAt": "2026-11-09T09:44:18Z",
       "fullName": "eunomia-bpf/bpf-benchmark"
     },
     {
-      "name": "my-pi",
-      "url": "https://github.com/spences10/my-pi",
-      "description": "My Pi coding agent setup: secret redaction, LSP, searchable context, recall, telemetry, observability, and team mode. Toggle with /extensions.",
+      "name": "gg-framework",
+      "url": "https://github.com/KenKaiii/gg-framework",
+      "description": "The coding agent that gets more out of your AI subscription. Fastest and leanest of 20 agents tested, with unlimited local search of real open-source code.",
       "language": "TypeScript",
-      "stars": 138,
-      "updatedAt": "2026-11-08T08:55:37Z",
-      "fullName": "spences10/my-pi"
+      "stars": 258,
+      "updatedAt": "2026-11-09T09:44:15Z",
+      "fullName": "KenKaiii/gg-framework"
     },
     {
-      "name": "IncarnaMind",
-      "url": "https://github.com/IncarnaMind/IncarnaMind",
-      "description": "From messy files to a checked report. A free, open-source desktop app for macOS, Windows and Linux: write and analyse with AI from your own files, check each sentence and figure against them, and export to Word. Meeting notes too. Works with ChatGPT, Claude, G",
-      "language": "TypeScript",
-      "stars": 856,
-      "updatedAt": "2026-11-08T08:55:35Z",
-      "fullName": "IncarnaMind/IncarnaMind"
-    },
-    {
-      "name": "cambio-uruguay",
-      "url": "https://github.com/eduair94/cambio-uruguay",
-      "description": "cambio-uruguay.com: Uruguay exchange rates, rentals, used cars and prices. Public API, remote MCP server (29 tools, no key) and a Claude skill.",
-      "language": "TypeScript",
-      "stars": 8,
-      "updatedAt": "2026-11-08T08:55:24Z",
-      "fullName": "eduair94/cambio-uruguay"
-    },
-    {
-      "name": "most-capable-agent-system-prompt",
-      "url": "https://github.com/fainir/most-capable-agent-system-prompt",
-      "description": "A copy-paste system prompt that has your coding agent (Claude Code, Codex, Cursor) build a self-improving agent system for any computer work.",
-      "language": "Open source",
-      "stars": 885,
-      "updatedAt": "2026-11-08T08:55:05Z",
-      "fullName": "fainir/most-capable-agent-system-prompt"
-    },
-    {
-      "name": "EchoBird",
-      "url": "https://github.com/edison7009/EchoBird",
-      "description": "All-in-one AI desktop app: one-click install for Claude Code, Codex CLI, DeepSeek and more, manage AI accounts and quotas, smart model routing with auto-failover, voice input, and run local LLMs. Bonus: a Token Pet that grows as you use AI.",
-      "language": "Rust",
-      "stars": 3526,
-      "updatedAt": "2026-11-08T08:54:39Z",
-      "fullName": "edison7009/EchoBird"
-    },
-    {
-      "name": "AgileRL",
-      "url": "https://github.com/AgileRL/AgileRL",
-      "description": "The complete post-training stack for LLMs, plus RL for any problem. SFT, DPO and multi-turn agentic RL, with evolutionary hyperparameter optimization built in.",
+      "name": "transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "language": "Python",
-      "stars": 966,
-      "updatedAt": "2026-11-08T08:54:37Z",
-      "fullName": "AgileRL/AgileRL"
+      "stars": 168685,
+      "updatedAt": "2026-11-09T09:44:07Z",
+      "fullName": "huggingface/transformers"
     },
     {
-      "name": "M31A",
-      "url": "https://github.com/eshanized/M31A",
-      "description": "M31 Autonomous — Rust-native autonomous software-engineering runtime with non-bypassable policy gates and verifiable execution",
-      "language": "Rust",
-      "stars": 11,
-      "updatedAt": "2026-11-08T08:54:29Z",
-      "fullName": "eshanized/M31A"
+      "name": "fastagent",
+      "url": "https://github.com/fastagent-sh/fastagent",
+      "description": "Vibe first. Then FastAgent — turn a local agent directory into a live service: in your app, on GitHub, in Telegram, or any channel.",
+      "language": "TypeScript",
+      "stars": 66,
+      "updatedAt": "2026-11-09T09:43:52Z",
+      "fullName": "fastagent-sh/fastagent"
     },
     {
-      "name": "manus-ai",
-      "url": "https://github.com/abhinay-h/manus-ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
-      "language": "Python",
-      "stars": 55,
-      "updatedAt": "2026-11-08T08:54:20Z",
-      "fullName": "abhinay-h/manus-ai"
-    },
-    {
-      "name": "camp",
-      "url": "https://github.com/Obedience-Corp/camp",
-      "description": "AI Workspace and context management",
+      "name": "memdoor",
+      "url": "https://github.com/guregodevo/memdoor",
+      "description": "Go CLI coding agent that makes a team of cheap models beat a frontier one",
       "language": "Go",
-      "stars": 8,
-      "updatedAt": "2026-11-08T08:54:20Z",
-      "fullName": "Obedience-Corp/camp"
+      "stars": 382,
+      "updatedAt": "2026-11-09T09:43:25Z",
+      "fullName": "guregodevo/memdoor"
     },
     {
-      "name": "ai_manus",
-      "url": "https://github.com/proteus1121/ai_manus",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 55,
-      "updatedAt": "2026-11-08T08:54:19Z",
-      "fullName": "proteus1121/ai_manus"
+      "name": "reaper-mcp",
+      "url": "https://github.com/mthines/reaper-mcp",
+      "description": "Type what you hear. It measures, decides and makes the change live in your REAPER session. You chat in plain English in Claude Code, by keyboard (or dictation, if you like). No menus to learn, no exporting, no code.",
+      "language": "TypeScript",
+      "stars": 26,
+      "updatedAt": "2026-11-09T09:43:03Z",
+      "fullName": "mthines/reaper-mcp"
     },
     {
-      "name": "manus-ai",
-      "url": "https://github.com/tireddwarf99/manus-ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
+      "name": "yardlet",
+      "url": "https://github.com/zzunkie/yardlet",
+      "description": "Claude Code and Codex, better together: run the real agent CLIs side by side in one native app, with the sign-ins you already have.",
+      "language": "Swift",
+      "stars": 36,
+      "updatedAt": "2026-11-09T09:42:57Z",
+      "fullName": "zzunkie/yardlet"
+    },
+    {
+      "name": "scribe",
+      "url": "https://github.com/oliver-kriska/scribe",
+      "description": "LLM-managed personal knowledge base. Auto-extracts from git repos, Claude Code sessions (via ccrider FTS5), and iMessage bookmarks. Cross-project, qmd-indexed, runs on cron",
+      "language": "Go",
+      "stars": 69,
+      "updatedAt": "2026-11-09T09:42:54Z",
+      "fullName": "oliver-kriska/scribe"
+    },
+    {
+      "name": "hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
       "language": "Python",
-      "stars": 55,
-      "updatedAt": "2026-11-08T08:54:19Z",
-      "fullName": "tireddwarf99/manus-ai"
+      "stars": 261895,
+      "updatedAt": "2026-11-09T09:42:53Z",
+      "fullName": "NousResearch/hermes-agent"
+    },
+    {
+      "name": "nextclaw",
+      "url": "https://github.com/Peiiii/nextclaw",
+      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
+      "language": "TypeScript",
+      "stars": 264,
+      "updatedAt": "2026-11-09T09:42:51Z",
+      "fullName": "Peiiii/nextclaw"
     }
   ]
 }
