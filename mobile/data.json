@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-10T07:25:30.075885+00:00",
-  "count": 151,
+  "updated_at": "2026-11-10T19:48:04.595162+00:00",
+  "count": 148,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -1361,15 +1361,13 @@
       "name": "Redmi 17 4G",
       "brand": "Xiaomi",
       "variants": [
-        "4GB + 128GB",
-        "6GB + 128GB"
+        "4GB + 128GB"
       ],
       "price": 27999,
-      "max_price": 33999,
+      "max_price": 27999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
         "128GB"
@@ -1380,20 +1378,16 @@
       "name": "Redmi 17 5G",
       "brand": "Xiaomi",
       "variants": [
-        "4GB + 128GB",
-        "4GB + 256GB",
-        "6GB + 256GB"
+        "4GB + 128GB"
       ],
       "price": 33999,
-      "max_price": 41999,
+      "max_price": 33999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1418,18 +1412,16 @@
       "name": "Redmi A7 Pro 4G",
       "brand": "Xiaomi",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 21499,
-      "max_price": 23999,
+      "max_price": 21499,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1437,19 +1429,16 @@
       "name": "Redmi Note 15 4G",
       "brand": "Xiaomi",
       "variants": [
-        "6GB+128GB",
-        "8GB+256GB"
+        "6GB+128GB"
       ],
       "price": 33999,
-      "max_price": 39999,
+      "max_price": 33999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1457,39 +1446,16 @@
       "name": "Redmi Note 15 5G",
       "brand": "Xiaomi",
       "variants": [
-        "8GB+256GB",
-        "12GB+512GB"
+        "8GB+256GB"
       ],
       "price": 43999,
-      "max_price": 49999,
+      "max_price": 43999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
-        "256GB",
-        "512GB"
-      ]
-    },
-    {
-      "id": "redmi-note-15-pro-5g",
-      "name": "Redmi Note 15 Pro 5G",
-      "brand": "Xiaomi",
-      "variants": [
-        "8GB+256GB",
-        "12GB+512GB"
-      ],
-      "price": 53999,
-      "max_price": 59999,
-      "original_price": null,
-      "rams": [
-        "8GB",
-        "12GB"
-      ],
-      "storages": [
-        "256GB",
-        "512GB"
+        "256GB"
       ]
     },
     {
@@ -1517,19 +1483,16 @@
       "name": "Redmi Note 17 4G",
       "brand": "Xiaomi",
       "variants": [
-        "6GB + 128GB",
-        "8GB + 256GB"
+        "6GB + 128GB"
       ],
       "price": 42999,
-      "max_price": 47999,
+      "max_price": 42999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1537,19 +1500,16 @@
       "name": "Redmi Note 17 5G",
       "brand": "Xiaomi",
       "variants": [
-        "6GB + 128GB",
-        "8GB - 256GB"
+        "6GB + 128GB"
       ],
       "price": 47999,
-      "max_price": 52999,
+      "max_price": 47999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1595,20 +1555,16 @@
       "name": "Samsung Galaxy A07",
       "brand": "Samsung",
       "variants": [
-        "4GB+64GB",
-        "4GB+128GB",
-        "6GB+128GB"
+        "4GB+64GB"
       ],
       "price": 25499,
-      "max_price": 33499,
+      "max_price": 25499,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1633,19 +1589,15 @@
       "name": "Samsung Galaxy A08",
       "brand": "Samsung",
       "variants": [
-        "Samsung Galaxy A08 - 4GB - 128GB",
-        "Samsung Galaxy A08 - 4GB - 64GB",
-        "Samsung Galaxy A08 - 6GB - 128GB"
+        "Samsung Galaxy A08 - 4GB - 128GB"
       ],
-      "price": 34499,
-      "max_price": 47499,
+      "price": 40999,
+      "max_price": 40999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
-        "64GB",
         "128GB"
       ]
     },
@@ -1654,20 +1606,16 @@
       "name": "Samsung Galaxy A17 5G",
       "brand": "Samsung",
       "variants": [
-        "6GB+128GB",
-        "8GB+128GB",
-        "8GB+256GB"
+        "6GB+128GB"
       ],
       "price": 44999,
-      "max_price": 56999,
+      "max_price": 44999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1675,19 +1623,16 @@
       "name": "Samsung Galaxy A27 5G",
       "brand": "Samsung",
       "variants": [
-        "6GB + 128GB",
-        "8GB + 256GB"
+        "6GB + 128GB"
       ],
       "price": 55999,
-      "max_price": 69999,
+      "max_price": 55999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1695,19 +1640,15 @@
       "name": "Samsung Galaxy A37 5G",
       "brand": "Samsung",
       "variants": [
-        "8GB+256GB",
-        "12GB+256GB",
-        "8GB+128GB"
+        "8GB+256GB"
       ],
-      "price": 74999,
-      "max_price": 96999,
+      "price": 86999,
+      "max_price": 86999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
-        "128GB",
         "256GB"
       ]
     },
@@ -1716,14 +1657,12 @@
       "name": "Samsung Galaxy A57 5G",
       "brand": "Samsung",
       "variants": [
-        "12GB+256GB",
-        "8GB+256GB"
+        "12GB+256GB"
       ],
-      "price": 96999,
+      "price": 107999,
       "max_price": 107999,
       "original_price": null,
       "rams": [
-        "8GB",
         "12GB"
       ],
       "storages": [
@@ -1813,23 +1752,6 @@
       "price": 123999,
       "max_price": 159999,
       "original_price": 182999,
-      "rams": [
-        "12GB"
-      ],
-      "storages": [
-        "256GB"
-      ]
-    },
-    {
-      "id": "samsung-galaxy-z-flip-8",
-      "name": "Samsung Galaxy Z Flip 8",
-      "brand": "Samsung",
-      "variants": [
-        "12GB+256GB"
-      ],
-      "price": 194999,
-      "max_price": 194999,
-      "original_price": null,
       "rams": [
         "12GB"
       ],
@@ -2139,15 +2061,13 @@
       "name": "Vivo V70 FE",
       "brand": "Vivo",
       "variants": [
-        "8GB + 256GB",
-        "12GB + 256GB"
+        "8GB + 256GB"
       ],
       "price": 62999,
-      "max_price": 72999,
+      "max_price": 62999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
         "256GB"
@@ -2177,18 +2097,16 @@
       "name": "Vivo V80 Lite",
       "brand": "Vivo",
       "variants": [
-        "8GB + 128GB",
-        "8GB + 256GB"
+        "8GB + 128GB"
       ],
       "price": 63999,
-      "max_price": 73999,
+      "max_price": 63999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2213,18 +2131,16 @@
       "name": "Vivo Y05",
       "brand": "Vivo",
       "variants": [
-        "4GB+64GB",
-        "4GB+128GB"
+        "4GB+64GB"
       ],
       "price": 21999,
-      "max_price": 24999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -2249,15 +2165,13 @@
       "name": "Vivo Y11d",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB",
-        "6GB + 128GB"
+        "4GB + 128GB"
       ],
       "price": 27999,
-      "max_price": 33999,
+      "max_price": 27999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
         "128GB"
@@ -2285,22 +2199,16 @@
       "name": "Vivo Y31d",
       "brand": "Vivo",
       "variants": [
-        "6GB+128GB",
-        "8GB+128GB",
-        "8GB+256GB",
-        "4GB+128GB"
+        "6GB+128GB"
       ],
-      "price": 32999,
-      "max_price": 51999,
+      "price": 37999,
+      "max_price": 37999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2308,20 +2216,16 @@
       "name": "Vivo Y32",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB",
-        "6GB + 128GB",
-        "6GB + 256GB"
+        "4GB + 128GB"
       ],
       "price": 39999,
-      "max_price": 52999,
+      "max_price": 39999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2329,18 +2233,16 @@
       "name": "Vivo Y500",
       "brand": "Vivo",
       "variants": [
-        "8GB + 128GB",
-        "8GB + 256GB"
+        "8GB + 128GB"
       ],
       "price": 54999,
-      "max_price": 61999,
+      "max_price": 54999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2573,17 +2475,15 @@
       "name": "iPhone 17",
       "brand": "Apple",
       "variants": [
-        "8GB+512GB",
-        "8GB+256GB"
+        "8GB+512GB"
       ],
-      "price": 173499,
+      "price": 215699,
       "max_price": 215699,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "256GB",
         "512GB"
       ]
     },
@@ -2592,43 +2492,16 @@
       "name": "iPhone 17 Pro",
       "brand": "Apple",
       "variants": [
-        "12GB+256GB",
-        "12GB+512GB",
-        "12GB+1TB"
+        "12GB+256GB"
       ],
       "price": 221299,
-      "max_price": 305699,
-      "original_price": 321299,
+      "max_price": 221299,
+      "original_price": 236899,
       "rams": [
         "12GB"
       ],
       "storages": [
-        "256GB",
-        "512GB",
-        "1TB"
-      ]
-    },
-    {
-      "id": "iphone-17-pro-max",
-      "name": "iPhone 17 Pro Max",
-      "brand": "Apple",
-      "variants": [
-        "12GB+256GB",
-        "12GB+512GB",
-        "12GB+1TB",
-        "12GB+2TB"
-      ],
-      "price": 242499,
-      "max_price": 411399,
-      "original_price": 426999,
-      "rams": [
-        "12GB"
-      ],
-      "storages": [
-        "256GB",
-        "512GB",
-        "1TB",
-        "2TB"
+        "256GB"
       ]
     },
     {
@@ -2636,17 +2509,15 @@
       "name": "iPhone 17e",
       "brand": "Apple",
       "variants": [
-        "8GB+512GB",
-        "8GB+256GB"
+        "8GB+512GB"
       ],
-      "price": 132499,
+      "price": 175099,
       "max_price": 175099,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "256GB",
         "512GB"
       ]
     },
@@ -2701,20 +2572,16 @@
       "name": "iPhone Air",
       "brand": "Apple",
       "variants": [
-        "12GB+256GB",
-        "12GB+512GB",
-        "12GB+1TB"
+        "12GB+256GB"
       ],
       "price": 190699,
-      "max_price": 275099,
+      "max_price": 190699,
       "original_price": null,
       "rams": [
         "12GB"
       ],
       "storages": [
-        "256GB",
-        "512GB",
-        "1TB"
+        "256GB"
       ]
     },
     {
