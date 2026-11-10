@@ -1,223 +1,223 @@
 {
-  "updatedAt": "2026-11-09",
+  "updatedAt": "2026-11-10",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "easyeda-mcp-pro",
-      "url": "https://github.com/oaslananka/easyeda-mcp-pro",
-      "description": "MCP server for EasyEDA Pro, connecting AI agents to schematic and PCB workflows, controlled design operations, DRC, BOM sourcing, board analysis, and manufacturing export—with profile-gated tools and safety controls.",
-      "language": "TypeScript",
-      "stars": 67,
-      "updatedAt": "2026-11-09T09:45:18Z",
-      "fullName": "oaslananka/easyeda-mcp-pro"
-    },
-    {
-      "name": "dify",
-      "url": "https://github.com/langgenius/dify",
-      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-      "language": "Python",
-      "stars": 160735,
-      "updatedAt": "2026-11-09T09:45:04Z",
-      "fullName": "langgenius/dify"
-    },
-    {
-      "name": "Pithos",
-      "url": "https://github.com/benmaster82/Pithos",
-      "description": "A dependency-free C inference engine for Liquid AI's LFM2 / LFM2.5 models. Terminal chat, an OpenAI-compatible server, a web agent and a terminal agent, all in one executable.",
-      "language": "C",
-      "stars": 31,
-      "updatedAt": "2026-11-09T09:44:55Z",
-      "fullName": "benmaster82/Pithos"
-    },
-    {
-      "name": "ai-engineering-from-scratch",
-      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-      "description": "Learn AI Engineering! Learn it. Build it. Ship it for others.",
-      "language": "Python",
-      "stars": 77929,
-      "updatedAt": "2026-11-09T09:44:53Z",
-      "fullName": "rohitg00/ai-engineering-from-scratch"
-    },
-    {
-      "name": "qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "description": "An open-source AI coding agent that lives in your terminal.",
-      "language": "TypeScript",
-      "stars": 29123,
-      "updatedAt": "2026-11-09T09:44:50Z",
-      "fullName": "QwenLM/qwen-code"
-    },
-    {
-      "name": "cherry-studio",
-      "url": "https://github.com/CherryHQ/cherry-studio",
-      "description": "Your AI workspace for models, agents, and productivity.",
-      "language": "TypeScript",
-      "stars": 53361,
-      "updatedAt": "2026-11-09T09:44:47Z",
-      "fullName": "CherryHQ/cherry-studio"
-    },
-    {
-      "name": "cindy",
-      "url": "https://github.com/makecindy/cindy",
-      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
-      "language": "TypeScript",
-      "stars": 9579,
-      "updatedAt": "2026-11-09T09:44:46Z",
-      "fullName": "makecindy/cindy"
-    },
-    {
-      "name": "docs",
-      "url": "https://github.com/redis/docs",
-      "description": "Documentation for Redis, Redis Cloud, Redis Enterprise, Redis Iris, Redis Insight, RDI, Redis Feature Form, and Redis Radar",
-      "language": "Java",
-      "stars": 86,
-      "updatedAt": "2026-11-09T09:44:44Z",
-      "fullName": "redis/docs"
-    },
-    {
-      "name": "modelplan",
-      "url": "https://github.com/modelplan/modelplan",
-      "description": "Which AI coding model, at which effort, on which plan? Recommended efforts, a leaderboard at those efforts and plan advice from modelplan.ai, in Claude Code, Codex and the terminal (plugins, Skill, CLI).",
-      "language": "Swift",
-      "stars": 41,
-      "updatedAt": "2026-11-09T09:44:41Z",
-      "fullName": "modelplan/modelplan"
+      "name": "hive",
+      "url": "https://github.com/hivecommons/hive",
+      "description": "AI agent orchestration for open and closed source — a fully customizable fleet of AI agents covering every level of project maintenance, from brainstorming to full autonomy",
+      "language": "Go",
+      "stars": 80,
+      "updatedAt": "2026-11-10T09:45:26Z",
+      "fullName": "hivecommons/hive"
     },
     {
       "name": "paperclip",
       "url": "https://github.com/paperclipai/paperclip",
       "description": "The open-source app everyone uses to manage agents at work",
       "language": "TypeScript",
-      "stars": 112450,
-      "updatedAt": "2026-11-09T09:44:38Z",
+      "stars": 112745,
+      "updatedAt": "2026-11-10T09:45:25Z",
       "fullName": "paperclipai/paperclip"
     },
     {
-      "name": "ai-shifu",
-      "url": "https://github.com/ai-shifu/ai-shifu",
-      "description": "Get AI to teach and answer questions for you - just by typing!",
+      "name": "KiroCrew",
+      "url": "https://github.com/kirodotdev/KiroCrew",
+      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
       "language": "Python",
-      "stars": 332,
-      "updatedAt": "2026-11-09T09:44:38Z",
-      "fullName": "ai-shifu/ai-shifu"
-    },
-    {
-      "name": "claude-mem",
-      "url": "https://github.com/thedotmack/claude-mem",
-      "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode",
-      "language": "TypeScript",
-      "stars": 115117,
-      "updatedAt": "2026-11-09T09:44:33Z",
-      "fullName": "thedotmack/claude-mem"
-    },
-    {
-      "name": "spark-agent",
-      "url": "https://github.com/alexanderizh/spark-agent",
-      "description": "SparkWork is a local-first desktop Agent workbench for professional development and complex work. Orchestrate workflows, collaborate across Agent sessions, route tasks to the right models, and extend the workspace with custom tools and apps. Reviewable, steera",
-      "language": "TypeScript",
-      "stars": 121,
-      "updatedAt": "2026-11-09T09:44:27Z",
-      "fullName": "alexanderizh/spark-agent"
-    },
-    {
-      "name": "unsloth",
-      "url": "https://github.com/unslothai/unsloth",
-      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
-      "language": "Python",
-      "stars": 79228,
-      "updatedAt": "2026-11-09T09:44:18Z",
-      "fullName": "unslothai/unsloth"
-    },
-    {
-      "name": "bpf-benchmark",
-      "url": "https://github.com/eunomia-bpf/bpf-benchmark",
-      "description": "AI Agent eBPF optimization benchmark and framework",
-      "language": "C",
-      "stars": 26,
-      "updatedAt": "2026-11-09T09:44:18Z",
-      "fullName": "eunomia-bpf/bpf-benchmark"
-    },
-    {
-      "name": "gg-framework",
-      "url": "https://github.com/KenKaiii/gg-framework",
-      "description": "The coding agent that gets more out of your AI subscription. Fastest and leanest of 20 agents tested, with unlimited local search of real open-source code.",
-      "language": "TypeScript",
-      "stars": 258,
-      "updatedAt": "2026-11-09T09:44:15Z",
-      "fullName": "KenKaiii/gg-framework"
-    },
-    {
-      "name": "transformers",
-      "url": "https://github.com/huggingface/transformers",
-      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
-      "language": "Python",
-      "stars": 168685,
-      "updatedAt": "2026-11-09T09:44:07Z",
-      "fullName": "huggingface/transformers"
-    },
-    {
-      "name": "fastagent",
-      "url": "https://github.com/fastagent-sh/fastagent",
-      "description": "Vibe first. Then FastAgent — turn a local agent directory into a live service: in your app, on GitHub, in Telegram, or any channel.",
-      "language": "TypeScript",
-      "stars": 66,
-      "updatedAt": "2026-11-09T09:43:52Z",
-      "fullName": "fastagent-sh/fastagent"
-    },
-    {
-      "name": "memdoor",
-      "url": "https://github.com/guregodevo/memdoor",
-      "description": "Go CLI coding agent that makes a team of cheap models beat a frontier one",
-      "language": "Go",
-      "stars": 382,
-      "updatedAt": "2026-11-09T09:43:25Z",
-      "fullName": "guregodevo/memdoor"
-    },
-    {
-      "name": "reaper-mcp",
-      "url": "https://github.com/mthines/reaper-mcp",
-      "description": "Type what you hear. It measures, decides and makes the change live in your REAPER session. You chat in plain English in Claude Code, by keyboard (or dictation, if you like). No menus to learn, no exporting, no code.",
-      "language": "TypeScript",
-      "stars": 26,
-      "updatedAt": "2026-11-09T09:43:03Z",
-      "fullName": "mthines/reaper-mcp"
-    },
-    {
-      "name": "yardlet",
-      "url": "https://github.com/zzunkie/yardlet",
-      "description": "Claude Code and Codex, better together: run the real agent CLIs side by side in one native app, with the sign-ins you already have.",
-      "language": "Swift",
-      "stars": 36,
-      "updatedAt": "2026-11-09T09:42:57Z",
-      "fullName": "zzunkie/yardlet"
-    },
-    {
-      "name": "scribe",
-      "url": "https://github.com/oliver-kriska/scribe",
-      "description": "LLM-managed personal knowledge base. Auto-extracts from git repos, Claude Code sessions (via ccrider FTS5), and iMessage bookmarks. Cross-project, qmd-indexed, runs on cron",
-      "language": "Go",
-      "stars": 69,
-      "updatedAt": "2026-11-09T09:42:54Z",
-      "fullName": "oliver-kriska/scribe"
+      "stars": 4872,
+      "updatedAt": "2026-11-10T09:45:25Z",
+      "fullName": "kirodotdev/KiroCrew"
     },
     {
       "name": "hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "language": "Python",
-      "stars": 261895,
-      "updatedAt": "2026-11-09T09:42:53Z",
+      "stars": 262207,
+      "updatedAt": "2026-11-10T09:45:24Z",
       "fullName": "NousResearch/hermes-agent"
     },
     {
-      "name": "nextclaw",
-      "url": "https://github.com/Peiiii/nextclaw",
-      "description": "A human-centered long-term AI partner—not a task-centered assistant.",
+      "name": "xagent",
+      "url": "https://github.com/xorbitsai/xagent",
+      "description": "Enterprise agent platform for building, deploying, and operating AI teammates.",
+      "language": "Python",
+      "stars": 309,
+      "updatedAt": "2026-11-10T09:45:20Z",
+      "fullName": "xorbitsai/xagent"
+    },
+    {
+      "name": "senpi",
+      "url": "https://github.com/code-yeongyu/senpi",
+      "description": "pi had nothing (nothing), so I made something (something) — sorry mariozechner-senpai, I went ahead and lovingly soiled your pure pi for you. opinionated fork of badlogic/pi-mono with extension-first additions. ganbare ganbare senpi 頑張れ頑張れ先輩",
       "language": "TypeScript",
-      "stars": 264,
-      "updatedAt": "2026-11-09T09:42:51Z",
-      "fullName": "Peiiii/nextclaw"
+      "stars": 517,
+      "updatedAt": "2026-11-10T09:45:16Z",
+      "fullName": "code-yeongyu/senpi"
+    },
+    {
+      "name": "token-monitor",
+      "url": "https://github.com/Javis603/token-monitor",
+      "description": "Local-first desktop widget for tracking token usage, costs, limits, and session activity across 53+ AI coding tools—including Claude Code, Codex, Cursor, OpenCode, OpenClaw, and more—with multi-device sync.",
+      "language": "JavaScript",
+      "stars": 3615,
+      "updatedAt": "2026-11-10T09:45:10Z",
+      "fullName": "Javis603/token-monitor"
+    },
+    {
+      "name": "llm-router",
+      "url": "https://github.com/ypollak2/llm-router",
+      "description": "Universal LLM router for AI coding tools. Works with Claude Code, Cursor, Codex, Gemini CLI, Copilot and more. Free-first fallback chain cuts costs 35-80%.",
+      "language": "Python",
+      "stars": 126,
+      "updatedAt": "2026-11-10T09:45:06Z",
+      "fullName": "ypollak2/llm-router"
+    },
+    {
+      "name": "magpie",
+      "url": "https://github.com/yetone/magpie",
+      "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
+      "language": "Go",
+      "stars": 33580,
+      "updatedAt": "2026-11-10T09:45:04Z",
+      "fullName": "yetone/magpie"
+    },
+    {
+      "name": "fastbrowse",
+      "url": "https://github.com/agent-labs-dev/fastbrowse",
+      "description": "A fast browser agent: Jev picks each action from what is on the page, an LLM reads and plans, and every claim in an answer cites a quote from the page.",
+      "language": "Rust",
+      "stars": 220,
+      "updatedAt": "2026-11-10T09:45:01Z",
+      "fullName": "agent-labs-dev/fastbrowse"
+    },
+    {
+      "name": "astravue-mcp-server",
+      "url": "https://github.com/AstravueOrg/astravue-mcp-server",
+      "description": "Official MCP server for Astravue — manage projects, tasks, time tracking, and teams through AI",
+      "language": "Open source",
+      "stars": 12,
+      "updatedAt": "2026-11-10T09:44:59Z",
+      "fullName": "AstravueOrg/astravue-mcp-server"
+    },
+    {
+      "name": "openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "description": "A lightweight, powerful framework for multi-agent workflows",
+      "language": "Python",
+      "stars": 30597,
+      "updatedAt": "2026-11-10T09:44:51Z",
+      "fullName": "openai/openai-agents-python"
+    },
+    {
+      "name": "stickman-video-director",
+      "url": "https://github.com/kaomei/stickman-video-director",
+      "description": "Turn any script into viral, multi-style animated stickman videos for Faceless YouTube Channels. Automate visuals, voiceover, captions & SFX. 100% Free & Open-Source.",
+      "language": "JavaScript",
+      "stars": 5337,
+      "updatedAt": "2026-11-10T09:44:50Z",
+      "fullName": "kaomei/stickman-video-director"
+    },
+    {
+      "name": "evener",
+      "url": "https://github.com/prime-radiant-inc/evener",
+      "description": "A coding agent: give it a prompt and it reads, writes, runs commands, and searches code in a loop until the work is done, using native tool-calling across OpenAI, Anthropic, and Google models.",
+      "language": "Go",
+      "stars": 192,
+      "updatedAt": "2026-11-10T09:44:47Z",
+      "fullName": "prime-radiant-inc/evener"
+    },
+    {
+      "name": "cindy-official-plugins",
+      "url": "https://github.com/makecindy/cindy-official-plugins",
+      "description": "Official plugins (Ghosts) for Cindy — source, review standards, and auto-publish to the plugin marketplace · Cindy 官方插件源码仓：欢迎提交你的插件，合入即自动上架插件市场",
+      "language": "JavaScript",
+      "stars": 31,
+      "updatedAt": "2026-11-10T09:44:44Z",
+      "fullName": "makecindy/cindy-official-plugins"
+    },
+    {
+      "name": "giskard-oss",
+      "url": "https://github.com/Giskard-AI/giskard-oss",
+      "description": "🐢 Open-Source Evaluation & Testing library for LLM Agents",
+      "language": "Python",
+      "stars": 5947,
+      "updatedAt": "2026-11-10T09:44:41Z",
+      "fullName": "Giskard-AI/giskard-oss"
+    },
+    {
+      "name": "scikit-decide",
+      "url": "https://github.com/airbus/scikit-decide",
+      "description": "AI framework for Reinforcement Learning, Automated Planning and Scheduling",
+      "language": "Python",
+      "stars": 227,
+      "updatedAt": "2026-11-10T09:44:38Z",
+      "fullName": "airbus/scikit-decide"
+    },
+    {
+      "name": "killi",
+      "url": "https://github.com/timwuhaotian/killi",
+      "description": "Open-source AI coding agent for your terminal, written in Rust. One 7 MB native binary for Apple Silicon Macs, ~18 MB RAM, 70–90% prompt-cache hits. Works with OpenAI, Anthropic and any compatible LLM; MCP, subagents, plan mode, skills, hooks, AGENTS.md. A lig",
+      "language": "Rust",
+      "stars": 50,
+      "updatedAt": "2026-11-10T09:44:27Z",
+      "fullName": "timwuhaotian/killi"
+    },
+    {
+      "name": "CoWork-OS",
+      "url": "https://github.com/CoWork-OS/CoWork-OS",
+      "description": "Rent the model. Own everything else. Free, open-source AI app for real work.",
+      "language": "TypeScript",
+      "stars": 542,
+      "updatedAt": "2026-11-10T09:44:25Z",
+      "fullName": "CoWork-OS/CoWork-OS"
+    },
+    {
+      "name": "medusa",
+      "url": "https://github.com/medusajs/medusa",
+      "description": "The world's most flexible commerce platform for agents and developers",
+      "language": "TypeScript",
+      "stars": 37153,
+      "updatedAt": "2026-11-10T09:44:24Z",
+      "fullName": "medusajs/medusa"
+    },
+    {
+      "name": "gymcoach",
+      "url": "https://github.com/gymcoach-app/gymcoach",
+      "description": "Self-hosted workout tracker with an AI coach that knows your training. Bring your own LLM (Claude or any OpenRouter model). Strength + cardio, offline PWA, one-command Docker install. A free, open-source alternative to Strong, Hevy and Fitbod.",
+      "language": "TypeScript",
+      "stars": 182,
+      "updatedAt": "2026-11-10T09:44:12Z",
+      "fullName": "gymcoach-app/gymcoach"
+    },
+    {
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "stars": 9696,
+      "updatedAt": "2026-11-10T09:44:08Z",
+      "fullName": "makecindy/cindy"
+    },
+    {
+      "name": "sparrow",
+      "url": "https://github.com/katanaml/sparrow",
+      "description": "Structured data extraction, instruction calling and agentic workflows with ML, LLM and Vision LLM",
+      "language": "Python",
+      "stars": 5231,
+      "updatedAt": "2026-11-10T09:44:00Z",
+      "fullName": "katanaml/sparrow"
+    },
+    {
+      "name": "vnx-orchestration",
+      "url": "https://github.com/Vinix24/vnx-orchestration",
+      "description": "Governance-first orchestration for Claude Code, Codex, and Gemini CLI — parallel workers, receipts, quality gates, and full provenance.",
+      "language": "Python",
+      "stars": 63,
+      "updatedAt": "2026-11-10T09:43:56Z",
+      "fullName": "Vinix24/vnx-orchestration"
     }
   ]
 }
