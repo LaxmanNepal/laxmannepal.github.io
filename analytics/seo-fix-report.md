@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-09T22:30:01.026241+00:00.
+Generated from the latest analytics snapshot: 2026-11-10T07:27:39.890172+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -95,16 +95,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/link shortner generator.html
 - Top queries: No page-query rows
 
-### /p/cookies-policy.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/cookies policy.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/cookies policy.html
-- Top queries: No page-query rows
-
 ### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -113,6 +103,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/01/25 trusted sites that pay in usd for.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/01/25 trusted sites that pay in usd for.html
+- Top queries: No page-query rows
+
+### /p/cookies-policy.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/cookies policy.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/cookies policy.html
 - Top queries: No page-query rows
 
 ### /p/privacy-policy.html — SEO score 0/100
@@ -515,6 +515,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/09/all in one image converter online.html
 - Top queries: No page-query rows
 
+### /2024/09/convert-anything-to-anything-free.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/09/convert anything to anything free.html | Laxman Nep…
+- Current description: Missing
+- Recommended description: Learn about 2024/09/convert anything to anything free.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/09/convert anything to anything free.html
+- Top queries: No page-query rows
+
 ### /2024/09/top-10-ways-to-make-money-online-in-2024.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -683,16 +693,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/01 with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/01
-- Top queries: No page-query rows
-
-### /2024/09/convert-anything-to-anything-free.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/09/convert anything to anything free.html | Laxman Nep…
-- Current description: Missing
-- Recommended description: Learn about 2024/09/convert anything to anything free.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/09/convert anything to anything free.html
 - Top queries: No page-query rows
 
 ### /2024/09/svg-download-free.html — SEO score 0/100
