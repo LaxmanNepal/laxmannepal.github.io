@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-10T07:27:39.890172+00:00.
+Generated from the latest analytics snapshot: 2026-11-10T19:51:24.008872+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -65,16 +65,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/05/how to make free website with euorg.html
 - Top queries: No page-query rows
 
-### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/06/top 10 free online tools will save you.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2025/06/top 10 free online tools will save you.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/06/top 10 free online tools will save you.html
-- Top queries: No page-query rows
-
 ### /p/about.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -93,6 +83,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/link shortner generator.html
+- Top queries: No page-query rows
+
+### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/06/top 10 free online tools will save you.html | Laxma…
+- Current description: Missing
+- Recommended description: Learn about 2025/06/top 10 free online tools will save you.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/06/top 10 free online tools will save you.html
 - Top queries: No page-query rows
 
 ### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
@@ -115,6 +115,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/cookies policy.html
 - Top queries: No page-query rows
 
+### /p/terms-and-conditions.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/terms and conditions.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/terms and conditions.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/terms and conditions.html
+- Top queries: No page-query rows
+
+### /p/disclaimer.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/disclaimer.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/disclaimer.html
+- Top queries: No page-query rows
+
 ### /p/privacy-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -133,16 +153,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/sitemap.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/sitemap.html
-- Top queries: No page-query rows
-
-### /p/terms-and-conditions.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/terms and conditions.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/terms and conditions.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/terms and conditions.html
 - Top queries: No page-query rows
 
 ### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
@@ -165,14 +175,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/image prompt.html
 - Top queries: No page-query rows
 
-### /p/disclaimer.html — SEO score 0/100
+### /p/contact-us.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: p/disclaimer.html | Laxman Nepal
+- Recommended title: p/contact us.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/disclaimer.html
+- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/contact us.html
 - Top queries: No page-query rows
 
 ### /2024/02/m3um3u8-player-tool-by-laxman-nepal.html — SEO score 0/100
@@ -193,16 +203,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/09/convert image to pdf free tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/09/convert image to pdf free tools.html
-- Top queries: No page-query rows
-
-### /p/contact-us.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/contact us.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/contact us.html
 - Top queries: No page-query rows
 
 ### /2024/09/free-pdf-to-image-converter-tools.html — SEO score 0/100
@@ -435,16 +435,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/07/free keyword generator by laxman nepal.html
 - Top queries: No page-query rows
 
-### /2023/07/whatsapp-direct-message-send-without.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/07/whatsapp direct message send without.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2023/07/whatsapp direct message send without.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/07/whatsapp direct message send without.html
-- Top queries: No page-query rows
-
 ### /2024/09/netflix-free-website-watch-movies.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -503,6 +493,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/image editor by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/image editor by laxman nepal.html
+- Top queries: No page-query rows
+
+### /2023/07/whatsapp-direct-message-send-without.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/07/whatsapp direct message send without.html | Laxman…
+- Current description: Missing
+- Recommended description: Learn about 2023/07/whatsapp direct message send without.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/07/whatsapp direct message send without.html
 - Top queries: No page-query rows
 
 ### /2023/09/all-in-one-image-converter-online.html — SEO score 0/100
@@ -5595,16 +5595,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Rapid Tags Generator
 - Top queries: No page-query rows
 
-### /2025/11/youtube-channel-info-extractor.html — SEO score 85/100
-- Issues: Noindex
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Enhanced YouTube Channel Analytics | laxmannepal.com.np
-- Recommended title: Enhanced YouTube Channel Analytics | Laxman Nepal
-- Current description: '); background-size: cover; background-position: center; } .channel-info { padding: 0 2rem 2rem; margin-top: -60px; position: relative; z-index: 1; } .channel-a
-- Recommended description: Learn about Enhanced YouTube Channel Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Enhanced YouTube Channel Analytics
-- Top queries: No page-query rows
-
 ### /tools/nepali-tools/type-nepali/index.html — SEO score 85/100
 - Issues: Title length 62
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -5613,6 +5603,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Type Nepali Unicode online with Romanized typing, live word suggestions, keyboard shortcuts, copy and download. Free and works offline.
 - Recommended description: Learn about Type Nepali Online with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Type Nepali Online
+- Top queries: No page-query rows
+
+### /2025/11/youtube-channel-info-extractor.html — SEO score 85/100
+- Issues: Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Enhanced YouTube Channel Analytics | laxmannepal.com.np
+- Recommended title: Enhanced YouTube Channel Analytics | Laxman Nepal
+- Current description: '); background-size: cover; background-position: center; } .channel-info { padding: 0 2rem 2rem; margin-top: -60px; position: relative; z-index: 1; } .channel-a
+- Recommended description: Learn about Enhanced YouTube Channel Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Enhanced YouTube Channel Analytics
 - Top queries: No page-query rows
 
 ### /youtube-tools/archive/youtube-video-title-description-tag.html — SEO score 85/100
