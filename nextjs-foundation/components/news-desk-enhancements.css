@@ -124,3 +124,9 @@
   .newsdesk-source-filter select{width:100%;max-width:none}
   .newsdesk-clear-filters{width:100%;min-height:44px}
 }
+
+/* Four-control toolbar layout after adding time and publisher filtering. */
+.newsdesk-controls{grid-template-columns:minmax(0,1fr) minmax(130px,155px) minmax(130px,155px) auto;align-items:stretch}
+.newsdesk-controls .newsdesk-sort{min-width:0;min-height:48px}
+@media(max-width:900px){.newsdesk-controls{grid-template-columns:minmax(0,1fr) minmax(140px,180px)}.newsdesk-controls .newsdesk-search{grid-column:1/-1}.newsdesk-controls .newsdesk-view-toggle{justify-self:start}}
+@media(max-width:640px){.newsdesk-controls{grid-template-columns:minmax(0,1fr)}.newsdesk-controls .newsdesk-search{grid-column:auto}}
