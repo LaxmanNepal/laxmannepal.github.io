@@ -4,6 +4,7 @@ from __future__ import annotations
 import calendar
 import json
 import re
+from html.parser import HTMLParser
 import time
 import urllib.error
 import urllib.parse
@@ -49,7 +50,14 @@ FEEDS = [
     ("Education", "Education and universities", "https://news.google.com/rss/search?q=" + urllib.parse.quote('education schools universities when:7d') + "&hl=en-US&gl=US&ceid=US:en"),
     ("Sports", "Nepal sports", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepal cricket football sports when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
     ("Entertainment", "Nepali entertainment", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepali movies music entertainment when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
-    ("Trending", "World news in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('विश्व समाचार अन्तर्राष्ट्रिय विदेश when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("World", "World news in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('विश्व समाचार अन्तर्राष्ट्रिय विदेश when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Politics", "World politics in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('विश्व राजनीति कूटनीति निर्वाचन when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Business", "World business in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('विश्व अर्थतन्त्र अन्तर्राष्ट्रिय बजार व्यवसाय when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Technology", "World technology in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('विश्व प्रविधि कृत्रिम बुद्धिमत्ता साइबर सुरक्षा when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Science", "World science in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('विश्व विज्ञान अन्तरिक्ष जलवायु अनुसन्धान when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Sports", "World sports in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('विश्व खेलकुद फुटबल क्रिकेट when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Health", "World health in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('विश्व स्वास्थ्य चिकित्सा अनुसन्धान when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
+    ("Entertainment", "World entertainment in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('विश्व मनोरञ्जन चलचित्र संगीत when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
     ("Health", "Nepal health in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('नेपाल स्वास्थ्य अस्पताल औषधि when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
     ("Education", "Nepal education in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('नेपाल शिक्षा विद्यालय विश्वविद्यालय when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
     ("Science", "Nepal science in Nepali", "https://news.google.com/rss/search?q=" + urllib.parse.quote('नेपाल विज्ञान अनुसन्धान वातावरण when:7d') + "&hl=ne-NP&gl=NP&ceid=NP:ne"),
@@ -81,6 +89,47 @@ def parse_date(value: str) -> datetime | None:
 def text_only(value: str) -> str:
     value = re.sub(r"<[^>]*>", " ", value or "")
     return re.sub(r"\s+", " ", unescape(value)).strip()
+class ArticleImageParser(HTMLParser):
+    """Collect publisher-declared article images, preferring social preview metadata."""
+    def __init__(self):
+        super().__init__()
+        self.images: list[tuple[int, str]] = []
+    def handle_starttag(self, tag, attrs):
+        a = {str(k).lower(): (v or "").strip() for k, v in attrs}
+        candidate = ""
+        score = 0
+        if tag.lower() == "meta":
+            key = (a.get("property") or a.get("name") or "").lower()
+            if key in {"og:image", "og:image:url", "twitter:image", "twitter:image:src"}:
+                candidate, score = a.get("content", ""), 100 if key.startswith("og:") else 90
+        elif tag.lower() == "link" and "image_src" in a.get("rel", "").lower():
+            candidate, score = a.get("href", ""), 70
+        elif tag.lower() == "img":
+            candidate = a.get("src") or a.get("data-src") or a.get("data-lazy-src") or ""
+            score = 30
+        if candidate:
+            self.images.append((score, candidate))
+
+def article_page_image(url: str) -> str:
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,application/xhtml+xml"})
+        with urllib.request.urlopen(req, timeout=8) as response:
+            final_url = response.geturl()
+            if "text/html" not in response.headers.get("Content-Type", "").lower():
+                return ""
+            html = response.read(900_000).decode(response.headers.get_content_charset() or "utf-8", errors="replace")
+        parser = ArticleImageParser()
+        parser.feed(html)
+        candidates = []
+        for score, raw in parser.images:
+            candidate = urllib.parse.urljoin(final_url, raw)
+            parsed = urllib.parse.urlparse(candidate)
+            if parsed.scheme in {"https", "http"} and parsed.netloc and not any(x in parsed.path.lower() for x in (".svg", "logo", "avatar", "icon")):
+                candidates.append((score, candidate))
+        return sorted(candidates, key=lambda x: x[0], reverse=True)[0][1] if candidates else ""
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError, UnicodeError):
+        return ""
+
 def parse_feed(url: str, category: str, label: str) -> list[dict]:
     global_region_labels = {"Technology", "Science and space", "Sports", "Entertainment", "Trending stories", "Health and medicine", "Education and universities"}
     region = "World" if label.startswith("World") or label in global_region_labels else "Nepal"
@@ -127,7 +176,8 @@ def parse_feed(url: str, category: str, label: str) -> list[dict]:
             candidate = (el.attrib.get("url", "") or el.attrib.get("href", "")).strip()
             mime = (el.attrib.get("type", "") or "").lower()
             medium = (el.attrib.get("medium", "") or "").lower()
-            if not candidate.startswith("https://"):
+            candidate = urllib.parse.urljoin(link, candidate)
+            if urllib.parse.urlparse(candidate).scheme not in {"https", "http"}:
                 continue
             score = 0
             if tag == "thumbnail":
@@ -175,6 +225,16 @@ def main() -> None:
             print(f"WARN: {label} feed failed: {exc}")
         time.sleep(0.15)
     items = sorted(stories.values(), key=lambda s: s["published_at"], reverse=True)
+    # RSS often omits featured images. Inspect a bounded number of publisher pages
+    # for og:image/twitter:image; never guess or substitute unrelated stock art.
+    enriched = 0
+    for story in items:
+        if story.get("image") or enriched >= 160:
+            continue
+        story["image"] = article_page_image(story["url"])
+        enriched += 1
+        if enriched % 20 == 0:
+            print(f"Checked publisher page images: {enriched}/160")
     # Do not replace a healthy existing feed with an empty result during a temporary upstream outage.
     if not items and OUTPUT.exists():
         previous = json.loads(OUTPUT.read_text(encoding="utf-8"))
