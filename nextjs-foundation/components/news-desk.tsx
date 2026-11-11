@@ -26,7 +26,7 @@ type NewsDeskProps = { initialStories?: Story[]; initialGeneratedAt?: string };
 export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" }: NewsDeskProps) {
   const [stories,setStories]=useState<Story[]>(initialStories.map(clean).filter((s): s is Story => Boolean(s)));
   const [region,setRegion]=useState("Nepal");
-  const [language,setLanguage]=useState("all");
+  const [language,setLanguage]=useState("ne");
   const [category,setCategory]=useState("All");
   const [query,setQuery]=useState("");
   const [sort,setSort]=useState("newest");
@@ -46,6 +46,8 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
     setSavedLoaded(true);
   },[]);
   useEffect(()=>{if(savedLoaded){try{window.localStorage.setItem("ln-news-saved-v1",JSON.stringify(savedStories));}catch{/* Continue without persistent saves if storage is unavailable. */}}},[savedStories,savedLoaded]);
+  // Prefer Nepali headlines by default, but avoid an empty page when the current feed has none.
+  useEffect(()=>{if(region==="Nepal"&&language==="ne"&&stories.length>0&&!stories.some(s=>s.region==="Nepal"&&s.language==="ne"))setLanguage("all");},[stories,region,language]);
   const savedUrls=useMemo(()=>savedStories.map(s=>s.url),[savedStories]);
   const toggleSaved=useCallback((story:Story)=>setSavedStories(current=>current.some(s=>s.url===story.url)?current.filter(s=>s.url!==story.url):[story,...current]),[]);
   const isSaved=useCallback((url:string)=>savedUrls.includes(url),[savedUrls]);
@@ -93,7 +95,7 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
       <label className="newsdesk-sort"><span>क्रम</span><select value={sort} onChange={e=>setSort(e.target.value)} aria-label="समाचार क्रम"><option value="newest">नयाँ पहिले</option><option value="oldest">पुराना पहिले</option></select></label><button className={compact?"newsdesk-view-toggle active":"newsdesk-view-toggle"} type="button" aria-pressed={compact} onClick={()=>setCompact(v=>!v)}>{compact?"▦ कार्ड दृश्य":"☰ Compact सूची"}</button>
     </section>
     <div className="newsdesk-tabs newsdesk-region-tabs" role="group" aria-label="समाचार क्षेत्र">
-      <button type="button" className={region==="Nepal"?"active":""} aria-pressed={region==="Nepal"} onClick={()=>{setRegion("Nepal");setLanguage("all");setCategory("All");setLimit(PAGE_SIZE);}}>🇳🇵 नेपाल</button>
+      <button type="button" className={region==="Nepal"?"active":""} aria-pressed={region==="Nepal"} onClick={()=>{setRegion("Nepal");setLanguage("ne");setCategory("All");setLimit(PAGE_SIZE);}}>🇳🇵 नेपाल</button>
       <button type="button" className={region==="World"?"active":""} aria-pressed={region==="World"} onClick={()=>{setRegion("World");setLanguage("all");setCategory("All");setLimit(PAGE_SIZE);}}>🌍 विश्व</button>
       <label className="newsdesk-sort"><span>भाषा</span><select value={language} onChange={e=>{setLanguage(e.target.value);setLimit(PAGE_SIZE);}} aria-label="समाचार भाषा"><option value="ne">नेपाली</option><option value="all">सबै भाषा</option></select></label>
     </div>
