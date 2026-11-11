@@ -136,3 +136,6 @@
 .newsdesk-card-meta{flex-wrap:wrap}
 .newsdesk-card-meta time{margin-left:auto}
 @media(max-width:640px){.newsdesk-card-meta{gap:6px}.newsdesk-card-meta time{margin-left:0}.newsdesk-coverage{white-space:normal}}
+
+.newsdesk-status-link{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:.55rem .8rem;border:1px solid var(--border,#e5e7eb);border-radius:999px;background:var(--surface,#fff);font-size:12px;font-weight:800}
+.newsdesk-status-link:hover{border-color:#98a2b3}
