@@ -2,6 +2,7 @@
 """Fetch RSS headlines, retain the last seven days, and write a static JSON feed."""
 from __future__ import annotations
 import calendar
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 import re
 from html.parser import HTMLParser
@@ -113,7 +114,7 @@ class ArticleImageParser(HTMLParser):
 def article_page_image(url: str) -> str:
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,application/xhtml+xml"})
-        with urllib.request.urlopen(req, timeout=8) as response:
+        with urllib.request.urlopen(req, timeout=5) as response:
             final_url = response.geturl()
             if "text/html" not in response.headers.get("Content-Type", "").lower():
                 return ""
@@ -227,14 +228,16 @@ def main() -> None:
     items = sorted(stories.values(), key=lambda s: s["published_at"], reverse=True)
     # RSS often omits featured images. Inspect a bounded number of publisher pages
     # for og:image/twitter:image; never guess or substitute unrelated stock art.
-    enriched = 0
-    for story in items:
-        if story.get("image") or enriched >= 160:
-            continue
-        story["image"] = article_page_image(story["url"])
-        enriched += 1
-        if enriched % 20 == 0:
-            print(f"Checked publisher page images: {enriched}/160")
+    missing_images = [story for story in items if not story.get("image")][:180]
+    if missing_images:
+        with ThreadPoolExecutor(max_workers=12) as pool:
+            jobs = {pool.submit(article_page_image, story["url"]): story for story in missing_images}
+            for future in as_completed(jobs):
+                try:
+                    jobs[future]["image"] = future.result()
+                except Exception:
+                    pass
+        print(f"Checked publisher page images: {len(missing_images)}")
     # Do not replace a healthy existing feed with an empty result during a temporary upstream outage.
     if not items and OUTPUT.exists():
         previous = json.loads(OUTPUT.read_text(encoding="utf-8"))
