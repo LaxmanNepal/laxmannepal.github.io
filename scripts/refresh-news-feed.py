@@ -134,8 +134,8 @@ def article_page_image(url: str) -> str:
 
 def story_cluster_id(title: str) -> str:
     """Stable exact-title grouping key; deliberately avoids speculative fuzzy matching."""
-    normalized = re.sub(r"[^\\w\\u0900-\\u097F]+", " ", title.casefold(), flags=re.UNICODE)
-    normalized = re.sub(r"\\s+", " ", normalized).strip()
+    normalized = re.sub(r"[^\w\u0900-\u097F]+", " ", title.casefold(), flags=re.UNICODE)
+    normalized = re.sub(r"\s+", " ", normalized).strip()
     return hashlib.sha1(normalized.encode("utf-8")).hexdigest()[:12] if normalized else ""
 
 def parse_feed(url: str, category: str, label: str) -> list[dict]:
