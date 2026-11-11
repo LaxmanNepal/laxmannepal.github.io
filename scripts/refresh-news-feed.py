@@ -138,6 +138,26 @@ def story_cluster_id(title: str) -> str:
     normalized = re.sub(r"\s+", " ", normalized).strip()
     return hashlib.sha1(normalized.encode("utf-8")).hexdigest()[:12] if normalized else ""
 
+def infer_category(title: str, description: str, fallback: str) -> str:
+    """Classify generic publisher RSS entries using transparent keyword rules."""
+    if fallback not in {"General", "Nepal", "Trending"}:
+        return fallback
+    text = f"{title} {description}".casefold()
+    rules = [
+        ("Politics", r"राजनीति|सरकार|संसद|निर्वाचन|चुनाव|मन्त्री|प्रधानमन्त्री|politic|government|parliament|election|minister"),
+        ("Business", r"अर्थतन्त्र|अर्थव्यवस्था|बैंक|शेयर|सेयर|बजार|व्यापार|व्यवसाय|आर्थिक|business|economy|market|bank|stock|finance"),
+        ("Technology", r"प्रविधि|कृत्रिम बुद्धिमत्ता|एआई|साइबर|मोबाइल|technology|artificial intelligence|cyber|software|smartphone|gadget"),
+        ("Sports", r"खेलकुद|क्रिकेट|फुटबल|विश्वकप|खेलाडी|sports|cricket|football|tennis|olympic|world cup"),
+        ("Health", r"स्वास्थ्य|अस्पताल|चिकित्सा|रोग|औषधि|health|hospital|medical|medicine|disease"),
+        ("Education", r"शिक्षा|विद्यालय|विश्वविद्यालय|विद्यार्थी|education|school|university|student"),
+        ("Science", r"विज्ञान|अनुसन्धान|अन्तरिक्ष|जलवायु|science|research|space|climate|nasa"),
+        ("Entertainment", r"मनोरञ्जन|चलचित्र|फिल्म|सिनेमा|संगीत|कलाकार|entertainment|movie|film|music|celebrity"),
+    ]
+    for category, pattern in rules:
+        if re.search(pattern, text, re.IGNORECASE):
+            return category
+    return "General" if fallback == "Nepal" else fallback
+
 def parse_feed(url: str, category: str, label: str) -> list[dict]:
     global_region_labels = {"Technology", "Science and space", "Sports", "Entertainment", "Trending stories", "Health and medicine", "Education and universities"}
     region = "World" if label.startswith("World") or label in global_region_labels else "Nepal"
@@ -205,6 +225,7 @@ def parse_feed(url: str, category: str, label: str) -> list[dict]:
             image_candidates.append((70, urllib.parse.urljoin(link, unescape(html_image.group(1)))))
         if image_candidates:
             image = sorted(image_candidates, key=lambda candidate: candidate[0], reverse=True)[0][1]
+        story_category = infer_category(title, description, category)
         results.append({
             "id": link,
             "cluster_id": story_cluster_id(title),
@@ -212,7 +233,7 @@ def parse_feed(url: str, category: str, label: str) -> list[dict]:
             "url": link,
             "published_at": published.isoformat().replace("+00:00", "Z"),
             "source": text_only(source)[:100] or label,
-            "category": category,
+            "category": story_category,
             "region": region,
             "language": "ne" if re.search(r"[\u0900-\u097F]", title) else "en",
             "description": description[:360],
