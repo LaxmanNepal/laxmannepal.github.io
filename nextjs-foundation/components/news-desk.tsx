@@ -46,8 +46,8 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
     setSavedLoaded(true);
   },[]);
   useEffect(()=>{if(savedLoaded){try{window.localStorage.setItem("ln-news-saved-v1",JSON.stringify(savedStories));}catch{/* Continue without persistent saves if storage is unavailable. */}}},[savedStories,savedLoaded]);
-  // Prefer Nepali headlines by default, but avoid an empty page when the current feed has none.
-  useEffect(()=>{if(region==="Nepal"&&language==="ne"&&stories.length>0&&!stories.some(s=>s.region==="Nepal"&&s.language==="ne"))setLanguage("all");},[stories,region,language]);
+  // Prefer Nepali headlines in both regions; fall back to all languages only when no Nepali stories exist.
+  useEffect(()=>{if(language==="ne"&&stories.length>0&&!stories.some(s=>s.region===region&&s.language==="ne"))setLanguage("all");},[stories,region,language]);
   const savedUrls=useMemo(()=>savedStories.map(s=>s.url),[savedStories]);
   const toggleSaved=useCallback((story:Story)=>setSavedStories(current=>current.some(s=>s.url===story.url)?current.filter(s=>s.url!==story.url):[story,...current]),[]);
   const isSaved=useCallback((url:string)=>savedUrls.includes(url),[savedUrls]);
@@ -96,7 +96,7 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
     </section>
     <div className="newsdesk-tabs newsdesk-region-tabs" role="group" aria-label="समाचार क्षेत्र">
       <button type="button" className={region==="Nepal"?"active":""} aria-pressed={region==="Nepal"} onClick={()=>{setRegion("Nepal");setLanguage("ne");setCategory("All");setLimit(PAGE_SIZE);}}>🇳🇵 नेपाल</button>
-      <button type="button" className={region==="World"?"active":""} aria-pressed={region==="World"} onClick={()=>{setRegion("World");setLanguage("all");setCategory("All");setLimit(PAGE_SIZE);}}>🌍 विश्व</button>
+      <button type="button" className={region==="World"?"active":""} aria-pressed={region==="World"} onClick={()=>{setRegion("World");setLanguage("ne");setCategory("All");setLimit(PAGE_SIZE);}}>🌍 विश्व</button>
       <label className="newsdesk-sort"><span>भाषा</span><select value={language} onChange={e=>{setLanguage(e.target.value);setLimit(PAGE_SIZE);}} aria-label="समाचार भाषा"><option value="ne">नेपाली</option><option value="all">सबै भाषा</option></select></label>
     </div>
     <div className="newsdesk-tabs" role="tablist" aria-label="समाचारका विधा">{CATEGORIES.map(c=><button type="button" role="tab" aria-selected={category===c} className={category===c?"active":""} key={c} onClick={()=>{setCategory(c);setLimit(PAGE_SIZE);}}>{CATEGORY_NE[c]}{c!=="All"&&<span>{counts[c]||0}</span>}</button>)}</div>
