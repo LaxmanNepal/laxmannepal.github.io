@@ -21,6 +21,14 @@ CUTOFF = NOW - timedelta(days=7)
 UA = "Mozilla/5.0 (compatible; LaxmanNepalNewsBot/1.0; +https://laxmannepal.com.np/news/)"
 FEEDS = [
     ("Nepal", "Nepal news", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepal news when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
+    # Direct publisher feeds: prioritize original Nepali-language reporting over broad Google News search results.
+    ("General", "OnlineKhabar", "https://www.onlinekhabar.com/feed"),
+    ("General", "Ratopati", "https://www.ratopati.com/feed"),
+    ("Business", "Artha Sarokar", "https://arthasarokar.com/feed"),
+    ("General", "Rajdhani Daily", "https://rajdhanidaily.com/feed"),
+    ("General", "News of Nepal", "https://newsofnepal.com/feed"),
+    ("General", "OnlineTV Nepal", "https://onlinetvnepal.com/feed"),
+    ("General", "OSNepal", "https://osnepal.com/feed"),
     ("Politics", "Nepal politics", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepal politics government when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
     ("Business", "Nepal business", "https://news.google.com/rss/search?q=" + urllib.parse.quote('Nepal economy business market when:7d') + "&hl=en-NP&gl=NP&ceid=NP:en"),
     ("World", "World news", "https://news.google.com/rss/search?q=" + urllib.parse.quote('world news when:7d') + "&hl=en-US&gl=US&ceid=US:en"),
