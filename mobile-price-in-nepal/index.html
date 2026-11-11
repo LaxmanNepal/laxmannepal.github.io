@@ -110,8 +110,8 @@ function render(){
  const q=$('search').value.toLowerCase().trim(),b=$('brand').value,s=$('sort').value,maxPrice=Number($('maxPrice').value)||0,network=$('network').value;
  filtered=phones.filter(p=>{
   const hay=[p.brand,p.model,p.ram,p.storage,p.chipset,p.display].join(' ').toLowerCase();
-  const price=currentPrice(p),has5g=/\b5g\b/i.test((p.model||p.title||'')+' '+JSON.stringify(p));
-  return(!q||hay.includes(q))&&(!b||brand(p)===b)&&(!maxPrice||(price>0&&price<=maxPrice))&&(!network||(network==='5g'?has5g:!has5g));
+  const text=(p.model||p.title||'')+' '+JSON.stringify(p),price=currentPrice(p),has5g=/\b5g\b/i.test(text),has4g=/\b4g\b|lte/i.test(text);
+  return(!q||hay.includes(q))&&(!b||brand(p)===b)&&(!maxPrice||(price>0&&price<=maxPrice))&&(!network||(network==='5g'?has5g:has4g));
  });
  filtered.sort((a,b)=>{const pa=currentPrice(a)||Infinity,pb=currentPrice(b)||Infinity;if(s==='cheap')return pa-pb;if(s==='high')return pb-pa;if(s==='name')return String(a.model).localeCompare(String(b.model));return brand(a).localeCompare(brand(b))||String(a.model).localeCompare(String(b.model))});
  const max=Math.max(1,Math.ceil(filtered.length/24));page=Math.min(page,max);
