@@ -30,6 +30,8 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
   const [category,setCategory]=useState("All");
   const [query,setQuery]=useState("");
   const [sort,setSort]=useState("newest");
+  const [timeRange,setTimeRange]=useState("7d");
+  const [sourceFilter,setSourceFilter]=useState("all");
   const [limit,setLimit]=useState(PAGE_SIZE);
   const [loading,setLoading]=useState(initialStories.length===0);
   const [hasFetched,setHasFetched]=useState(false);
@@ -72,11 +74,13 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
   },[]);
   useEffect(()=>{void refresh();const timer=window.setInterval(()=>void refresh(true),300000);return()=>window.clearInterval(timer);},[refresh]);
 
+  const sources=useMemo(()=>Array.from(new Set((showSaved?savedStories:stories).filter(s=>s.region===region).map(s=>s.source||"Original publisher"))).sort((a,b)=>a.localeCompare(b)),[stories,savedStories,showSaved,region]);
   const filtered=useMemo(()=>{
     const q=query.trim().toLocaleLowerCase();
-    return (showSaved?savedStories:stories).filter(s=>s.region===region&&(language==="all"||s.language===language)&&(category==="All"||s.category===category)&&(!q||[s.title,s.description,s.source,s.category].join(" ").toLocaleLowerCase().includes(q)))
+    const cutoff=timeRange==="24h"?Date.now()-86400000:timeRange==="3d"?Date.now()-3*86400000:Date.now()-WEEK;
+    return (showSaved?savedStories:stories).filter(s=>s.region===region&&(language==="all"||s.language===language)&&(category==="All"||s.category===category)&&(sourceFilter==="all"||s.source===sourceFilter)&&Date.parse(s.published_at)>=cutoff&&(!q||[s.title,s.description,s.source,s.category].join(" ").toLocaleLowerCase().includes(q)))
       .sort((a,b)=>sort==="oldest"?Date.parse(a.published_at)-Date.parse(b.published_at):Date.parse(b.published_at)-Date.parse(a.published_at));
-  },[stories,savedStories,region,language,category,query,sort,showSaved]);
+  },[stories,savedStories,region,language,category,query,sort,showSaved,timeRange,sourceFilter]);
   const featured=filtered[0], hasFeatured=category==="All"&&!query&&sort==="newest"&&Boolean(featured);
   const visible=filtered.slice(hasFeatured?1:0,limit+(hasFeatured?1:0));
   const hasMore=filtered.length>limit+(hasFeatured?1:0);
@@ -93,13 +97,14 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
     </section>
     <section className="newsdesk-controls" aria-label="समाचार खोज र फिल्टर">
       <label className="newsdesk-search"><span aria-hidden="true">⌕</span><input type="search" value={query} onChange={e=>{setQuery(e.target.value);setLimit(PAGE_SIZE);}} placeholder="समाचार, विषय वा प्रकाशक खोज्नुहोस्…" aria-label="समाचार खोज्नुहोस्"/></label>
-      <label className="newsdesk-sort"><span>क्रम</span><select value={sort} onChange={e=>setSort(e.target.value)} aria-label="समाचार क्रम"><option value="newest">नयाँ पहिले</option><option value="oldest">पुराना पहिले</option></select></label><button className={compact?"newsdesk-view-toggle active":"newsdesk-view-toggle"} type="button" aria-pressed={compact} onClick={()=>setCompact(v=>!v)}>{compact?"▦ कार्ड दृश्य":"☰ Compact सूची"}</button>
+      <label className="newsdesk-sort"><span>समय</span><select value={timeRange} onChange={e=>{setTimeRange(e.target.value);setLimit(PAGE_SIZE);}} aria-label="समाचारको समयावधि"><option value="24h">२४ घण्टा</option><option value="3d">३ दिन</option><option value="7d">७ दिन</option></select></label><label className="newsdesk-sort"><span>क्रम</span><select value={sort} onChange={e=>setSort(e.target.value)} aria-label="समाचार क्रम"><option value="newest">नयाँ पहिले</option><option value="oldest">पुराना पहिले</option></select></label><button className={compact?"newsdesk-view-toggle active":"newsdesk-view-toggle"} type="button" aria-pressed={compact} onClick={()=>setCompact(v=>!v)}>{compact?"▦ कार्ड दृश्य":"☰ Compact सूची"}</button>
     </section>
     <div className="newsdesk-tabs newsdesk-region-tabs" role="group" aria-label="समाचार क्षेत्र">
       <button type="button" className={region==="Nepal"?"active":""} aria-pressed={region==="Nepal"} onClick={()=>{setRegion("Nepal");setLanguage("ne");setCategory("All");setLimit(PAGE_SIZE);}}>🇳🇵 नेपाल</button>
       <button type="button" className={region==="World"?"active":""} aria-pressed={region==="World"} onClick={()=>{setRegion("World");setLanguage("ne");setCategory("All");setLimit(PAGE_SIZE);}}>🌍 विश्व</button>
       <label className="newsdesk-sort"><span>भाषा</span><select value={language} onChange={e=>{setLanguage(e.target.value);setLimit(PAGE_SIZE);}} aria-label="समाचार भाषा"><option value="ne">नेपाली</option><option value="all">सबै भाषा</option></select></label>
     </div>
+    <div className="newsdesk-source-filter"><label className="newsdesk-sort"><span>प्रकाशक</span><select value={sourceFilter} onChange={e=>{setSourceFilter(e.target.value);setLimit(PAGE_SIZE);}} aria-label="समाचार प्रकाशक छान्नुहोस्"><option value="all">सबै प्रकाशक</option>{sources.map(source=><option key={source} value={source}>{source}</option>)}</select></label><button type="button" className="newsdesk-clear-filters" onClick={()=>{setQuery("");setCategory("All");setSourceFilter("all");setTimeRange("7d");setSort("newest");setLanguage("ne");setLimit(PAGE_SIZE);setShowSaved(false);}}>फिल्टर हटाउनुहोस्</button></div>
     <div className="newsdesk-tabs" role="tablist" aria-label="समाचारका विधा">{CATEGORIES.map(c=><button type="button" role="tab" aria-selected={category===c} className={category===c?"active":""} key={c} onClick={()=>{setCategory(c);setLimit(PAGE_SIZE);}}>{CATEGORY_NE[c]}{c!=="All"&&<span>{counts[c]||0}</span>}</button>)}</div>
     {error&&<div className="newsdesk-notice" role="status"><strong>समाचार अपडेट हुन सकेन।</strong> {stories.length?"पहिले लोड भएका समाचार देखाइँदैछन्। ":""}{error} <button type="button" onClick={()=>void refresh()}>फेरि प्रयास गर्नुहोस्</button></div>}
     {!error&&!loading&&stories.length===0&&<div className="newsdesk-notice" role="status"><strong>हालसालैका समाचार भेटिएनन्।</strong> समाचार स्रोत अस्थायी रूपमा उपलब्ध नहुन सक्छन्। केहीबेरपछि फेरि प्रयास गर्नुहोस्।</div>}
@@ -114,6 +119,6 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
         <div className="newsdesk-card-body"><div className="newsdesk-card-meta"><span className="newsdesk-category">{CATEGORY_NE[s.category||"Trending"]||s.category}</span><time dateTime={s.published_at}>{ago(s.published_at)}</time></div><h3><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></h3>{s.description&&<p>{s.description}</p>}<div className="newsdesk-card-source"><span>{s.source} · {dateLabel(s.published_at)}</span><div className="newsdesk-card-actions"><button className={isSaved(s.url)?"newsdesk-bookmark saved":"newsdesk-bookmark"} type="button" aria-label={isSaved(s.url)?`Remove saved story: ${s.title}`:`Save story: ${s.title}`} aria-pressed={isSaved(s.url)} onClick={()=>toggleSaved(s)}>{isSaved(s.url)?"★":"☆"}</button><a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={`Read ${s.title} at original source`}>पढ्नुहोस् ↗</a></div></div></div>
       </article>)}{!visible.length&&<div className="newsdesk-empty"><strong>मिल्दो समाचार भेटिएन</strong><span>अर्को विधि वा शब्दबाट खोज्नुहोस्।</span><button type="button" onClick={()=>{setCategory("All");setQuery("");setShowSaved(false);setLanguage(region==="Nepal"?"ne":"all");}}>फिल्टर हटाउनुहोस्</button></div>}</div>}
     {hasMore&&<button className="newsdesk-more" type="button" onClick={()=>setLimit(n=>n+PAGE_SIZE)}>थप समाचार ({Math.min(PAGE_SIZE,filtered.length-limit-(hasFeatured?1:0))} थप)</button>}
-    <p className="newsdesk-disclaimer">समाचारका शीर्षक, सारांश र उपलब्ध तस्बिर RSS फिड वा प्रकाशकबाट आउँछन्। मिल्दो तस्बिर नभेटिएमा सामान्य तस्बिर राखिँदैन। Laxman Nepal ले मूल प्रकाशकमा लिंक गर्छ। सुरक्षित समाचार यही ब्राउजरमा मात्र रहन्छ।</p>
+    <p className="newsdesk-disclaimer">समाचारका शीर्षक, सारांश र उपलब्ध तस्बिर RSS फिड वा प्रकाशकबाट आउँछन्। समय, प्रकाशक र विधिअनुसार समाचार छान्न सकिन्छ। मिल्दो तस्बिर नभेटिएमा सामान्य तस्बिर राखिँदैन। Laxman Nepal ले मूल प्रकाशकमा लिंक गर्छ। सुरक्षित समाचार यही ब्राउजरमा मात्र रहन्छ।</p>
   </main>;
 }
