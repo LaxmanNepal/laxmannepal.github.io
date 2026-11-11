@@ -2,6 +2,7 @@
 """Fetch RSS headlines, retain the last seven days, and write a static JSON feed."""
 from __future__ import annotations
 import calendar
+import hashlib
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 import re
@@ -131,6 +132,12 @@ def article_page_image(url: str) -> str:
     except (urllib.error.URLError, TimeoutError, OSError, ValueError, UnicodeError):
         return ""
 
+def story_cluster_id(title: str) -> str:
+    """Stable exact-title grouping key; deliberately avoids speculative fuzzy matching."""
+    normalized = re.sub(r"[^\\w\\u0900-\\u097F]+", " ", title.casefold(), flags=re.UNICODE)
+    normalized = re.sub(r"\\s+", " ", normalized).strip()
+    return hashlib.sha1(normalized.encode("utf-8")).hexdigest()[:12] if normalized else ""
+
 def parse_feed(url: str, category: str, label: str) -> list[dict]:
     global_region_labels = {"Technology", "Science and space", "Sports", "Entertainment", "Trending stories", "Health and medicine", "Education and universities"}
     region = "World" if label.startswith("World") or label in global_region_labels else "Nepal"
@@ -200,6 +207,7 @@ def parse_feed(url: str, category: str, label: str) -> list[dict]:
             image = sorted(image_candidates, key=lambda candidate: candidate[0], reverse=True)[0][1]
         results.append({
             "id": link,
+            "cluster_id": story_cluster_id(title),
             "title": title[:300],
             "url": link,
             "published_at": published.isoformat().replace("+00:00", "Z"),
@@ -215,15 +223,19 @@ def parse_feed(url: str, category: str, label: str) -> list[dict]:
 def main() -> None:
     stories: dict[str, dict] = {}
     failures = []
+    feed_status = []
     for category, label, url in FEEDS:
         try:
-            for story in parse_feed(url, category, label):
+            feed_items = parse_feed(url, category, label)
+            feed_status.append({"name": label, "status": "ok", "stories": len(feed_items)})
+            for story in feed_items:
                 key = story["url"].split("#", 1)[0].rstrip("/").lower()
                 if key not in stories or story["published_at"] > stories[key]["published_at"]:
                     stories[key] = story
             print(f"OK: {label}")
         except (urllib.error.URLError, TimeoutError, ET.ParseError, ValueError, OSError) as exc:
             failures.append(f"{label}: {type(exc).__name__}")
+            feed_status.append({"name": label, "status": "error", "stories": 0, "error": type(exc).__name__})
             print(f"WARN: {label} feed failed: {exc}")
         time.sleep(0.15)
     items = sorted(stories.values(), key=lambda s: s["published_at"], reverse=True)
@@ -250,6 +262,8 @@ def main() -> None:
         "story_count": len(items),
         "feeds_checked": len(FEEDS),
         "feeds_failed": failures,
+        "feed_status": feed_status,
+        "image_count": sum(1 for story in items if story.get("image")),
         "stories": items,
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
