@@ -1,223 +1,223 @@
 {
-  "updatedAt": "2026-11-10",
+  "updatedAt": "2026-11-11",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
-    {
-      "name": "hive",
-      "url": "https://github.com/hivecommons/hive",
-      "description": "AI agent orchestration for open and closed source — a fully customizable fleet of AI agents covering every level of project maintenance, from brainstorming to full autonomy",
-      "language": "Go",
-      "stars": 80,
-      "updatedAt": "2026-11-10T09:45:26Z",
-      "fullName": "hivecommons/hive"
-    },
-    {
-      "name": "paperclip",
-      "url": "https://github.com/paperclipai/paperclip",
-      "description": "The open-source app everyone uses to manage agents at work",
-      "language": "TypeScript",
-      "stars": 112745,
-      "updatedAt": "2026-11-10T09:45:25Z",
-      "fullName": "paperclipai/paperclip"
-    },
-    {
-      "name": "KiroCrew",
-      "url": "https://github.com/kirodotdev/KiroCrew",
-      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
-      "language": "Python",
-      "stars": 4872,
-      "updatedAt": "2026-11-10T09:45:25Z",
-      "fullName": "kirodotdev/KiroCrew"
-    },
-    {
-      "name": "hermes-agent",
-      "url": "https://github.com/NousResearch/hermes-agent",
-      "description": "The agent that grows with you",
-      "language": "Python",
-      "stars": 262207,
-      "updatedAt": "2026-11-10T09:45:24Z",
-      "fullName": "NousResearch/hermes-agent"
-    },
-    {
-      "name": "xagent",
-      "url": "https://github.com/xorbitsai/xagent",
-      "description": "Enterprise agent platform for building, deploying, and operating AI teammates.",
-      "language": "Python",
-      "stars": 309,
-      "updatedAt": "2026-11-10T09:45:20Z",
-      "fullName": "xorbitsai/xagent"
-    },
-    {
-      "name": "senpi",
-      "url": "https://github.com/code-yeongyu/senpi",
-      "description": "pi had nothing (nothing), so I made something (something) — sorry mariozechner-senpai, I went ahead and lovingly soiled your pure pi for you. opinionated fork of badlogic/pi-mono with extension-first additions. ganbare ganbare senpi 頑張れ頑張れ先輩",
-      "language": "TypeScript",
-      "stars": 517,
-      "updatedAt": "2026-11-10T09:45:16Z",
-      "fullName": "code-yeongyu/senpi"
-    },
-    {
-      "name": "token-monitor",
-      "url": "https://github.com/Javis603/token-monitor",
-      "description": "Local-first desktop widget for tracking token usage, costs, limits, and session activity across 53+ AI coding tools—including Claude Code, Codex, Cursor, OpenCode, OpenClaw, and more—with multi-device sync.",
-      "language": "JavaScript",
-      "stars": 3615,
-      "updatedAt": "2026-11-10T09:45:10Z",
-      "fullName": "Javis603/token-monitor"
-    },
-    {
-      "name": "llm-router",
-      "url": "https://github.com/ypollak2/llm-router",
-      "description": "Universal LLM router for AI coding tools. Works with Claude Code, Cursor, Codex, Gemini CLI, Copilot and more. Free-first fallback chain cuts costs 35-80%.",
-      "language": "Python",
-      "stars": 126,
-      "updatedAt": "2026-11-10T09:45:06Z",
-      "fullName": "ypollak2/llm-router"
-    },
     {
       "name": "magpie",
       "url": "https://github.com/yetone/magpie",
       "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
       "language": "Go",
-      "stars": 33580,
-      "updatedAt": "2026-11-10T09:45:04Z",
+      "stars": 34317,
+      "updatedAt": "2026-11-11T09:21:04Z",
       "fullName": "yetone/magpie"
     },
     {
-      "name": "fastbrowse",
-      "url": "https://github.com/agent-labs-dev/fastbrowse",
-      "description": "A fast browser agent: Jev picks each action from what is on the page, an LLM reads and plans, and every claim in an answer cites a quote from the page.",
+      "name": "spiceai",
+      "url": "https://github.com/spiceai/spiceai",
+      "description": "Add a real-time analytics node to your operational database. Spice is a portable, accelerated SQL query, search, and LLM-inference engine in Rust for data-grounded AI apps and agents.",
       "language": "Rust",
-      "stars": 220,
-      "updatedAt": "2026-11-10T09:45:01Z",
-      "fullName": "agent-labs-dev/fastbrowse"
+      "stars": 3143,
+      "updatedAt": "2026-11-11T09:21:03Z",
+      "fullName": "spiceai/spiceai"
     },
     {
-      "name": "astravue-mcp-server",
-      "url": "https://github.com/AstravueOrg/astravue-mcp-server",
-      "description": "Official MCP server for Astravue — manage projects, tasks, time tracking, and teams through AI",
-      "language": "Open source",
-      "stars": 12,
-      "updatedAt": "2026-11-10T09:44:59Z",
-      "fullName": "AstravueOrg/astravue-mcp-server"
-    },
-    {
-      "name": "openai-agents-python",
-      "url": "https://github.com/openai/openai-agents-python",
-      "description": "A lightweight, powerful framework for multi-agent workflows",
+      "name": "unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
       "language": "Python",
-      "stars": 30597,
-      "updatedAt": "2026-11-10T09:44:51Z",
-      "fullName": "openai/openai-agents-python"
+      "stars": 79314,
+      "updatedAt": "2026-11-11T09:21:02Z",
+      "fullName": "unslothai/unsloth"
     },
     {
-      "name": "stickman-video-director",
-      "url": "https://github.com/kaomei/stickman-video-director",
-      "description": "Turn any script into viral, multi-style animated stickman videos for Faceless YouTube Channels. Automate visuals, voiceover, captions & SFX. 100% Free & Open-Source.",
-      "language": "JavaScript",
-      "stars": 5337,
-      "updatedAt": "2026-11-10T09:44:50Z",
-      "fullName": "kaomei/stickman-video-director"
+      "name": "Tavotto",
+      "url": "https://github.com/Tavotto/Tavotto",
+      "description": "AI drew your research figure. Tavotto makes it publication-ready: edit matplotlib and AI-generated figures on a canvas, lay out multi-panel pages in mm, check journal rules before export. Scripts stay untouched.",
+      "language": "Python",
+      "stars": 696,
+      "updatedAt": "2026-11-11T09:20:56Z",
+      "fullName": "Tavotto/Tavotto"
     },
     {
-      "name": "evener",
-      "url": "https://github.com/prime-radiant-inc/evener",
-      "description": "A coding agent: give it a prompt and it reads, writes, runs commands, and searches code in a loop until the work is done, using native tool-calling across OpenAI, Anthropic, and Google models.",
+      "name": "dify",
+      "url": "https://github.com/langgenius/dify",
+      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+      "language": "Python",
+      "stars": 160948,
+      "updatedAt": "2026-11-11T09:20:53Z",
+      "fullName": "langgenius/dify"
+    },
+    {
+      "name": "mastra",
+      "url": "https://github.com/mastra-ai/mastra",
+      "description": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
+      "language": "TypeScript",
+      "stars": 29470,
+      "updatedAt": "2026-11-11T09:20:50Z",
+      "fullName": "mastra-ai/mastra"
+    },
+    {
+      "name": "bpf-benchmark",
+      "url": "https://github.com/eunomia-bpf/bpf-benchmark",
+      "description": "AI Agent eBPF optimization benchmark and framework",
+      "language": "C",
+      "stars": 26,
+      "updatedAt": "2026-11-11T09:20:44Z",
+      "fullName": "eunomia-bpf/bpf-benchmark"
+    },
+    {
+      "name": "smithers",
+      "url": "https://github.com/smithersai/smithers",
+      "description": "Smithers is an agentic workflow framework for defining workflows in simple TypeScript configuration files and executing them quickly, durably, and reliably",
+      "language": "TypeScript",
+      "stars": 448,
+      "updatedAt": "2026-11-11T09:20:41Z",
+      "fullName": "smithersai/smithers"
+    },
+    {
+      "name": "licai",
+      "url": "https://github.com/SnowWarri0r/licai",
+      "description": "本地运行的个人资产看板与市场分析工具：A股、港美股、基金、理财、现金、数字资产统一管理，附市场问答 agent、盯盘员、全市场榜单、板块情绪与复盘归因。数据存于本机 SQLite，只提供客观信息，不提供买卖建议。",
+      "language": "Python",
+      "stars": 64,
+      "updatedAt": "2026-11-11T09:20:39Z",
+      "fullName": "SnowWarri0r/licai"
+    },
+    {
+      "name": "PiG",
+      "url": "https://github.com/MichaelKinsy/PiG",
+      "description": "PiG (Pi in Go) is a faithful Go port of upstream Pi, the TypeScript codebase behind the Pi coding agent. It is a parity-bound translation, not a rewrite: upstream behavior is the contract, and Go is the implementation language.",
       "language": "Go",
-      "stars": 192,
-      "updatedAt": "2026-11-10T09:44:47Z",
-      "fullName": "prime-radiant-inc/evener"
+      "stars": 843,
+      "updatedAt": "2026-11-11T09:20:38Z",
+      "fullName": "MichaelKinsy/PiG"
     },
     {
-      "name": "cindy-official-plugins",
-      "url": "https://github.com/makecindy/cindy-official-plugins",
-      "description": "Official plugins (Ghosts) for Cindy — source, review standards, and auto-publish to the plugin marketplace · Cindy 官方插件源码仓：欢迎提交你的插件，合入即自动上架插件市场",
-      "language": "JavaScript",
-      "stars": 31,
-      "updatedAt": "2026-11-10T09:44:44Z",
-      "fullName": "makecindy/cindy-official-plugins"
+      "name": "browser-debugger-cli",
+      "url": "https://github.com/szymdzum/browser-debugger-cli",
+      "description": "Let Claude Code and other coding agents drive and debug Chrome from the shell. DOM, network, console and raw CDP as short commands, no screenshots and no MCP needed.",
+      "language": "TypeScript",
+      "stars": 185,
+      "updatedAt": "2026-11-11T09:20:34Z",
+      "fullName": "szymdzum/browser-debugger-cli"
     },
     {
-      "name": "giskard-oss",
-      "url": "https://github.com/Giskard-AI/giskard-oss",
-      "description": "🐢 Open-Source Evaluation & Testing library for LLM Agents",
+      "name": "WasmEdge",
+      "url": "https://github.com/WasmEdge/WasmEdge",
+      "description": "WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud native, edge, and decentralized applications. It powers serverless apps, embedded functions, microservices, smart contracts, and IoT devices.",
+      "language": "C++",
+      "stars": 10855,
+      "updatedAt": "2026-11-11T09:20:33Z",
+      "fullName": "WasmEdge/WasmEdge"
+    },
+    {
+      "name": "context-guru",
+      "url": "https://github.com/rossoctl/context-guru",
+      "description": "Context optimization for AI coding agents — lower token cost and latency without sacrificing accuracy.",
+      "language": "Go",
+      "stars": 74,
+      "updatedAt": "2026-11-11T09:20:08Z",
+      "fullName": "rossoctl/context-guru"
+    },
+    {
+      "name": "Decepticon",
+      "url": "https://github.com/BitterSecurity/Decepticon",
+      "description": "Autonomous Hacking Agent for Red Team",
       "language": "Python",
-      "stars": 5947,
-      "updatedAt": "2026-11-10T09:44:41Z",
-      "fullName": "Giskard-AI/giskard-oss"
+      "stars": 6578,
+      "updatedAt": "2026-11-11T09:20:03Z",
+      "fullName": "BitterSecurity/Decepticon"
     },
     {
-      "name": "scikit-decide",
-      "url": "https://github.com/airbus/scikit-decide",
-      "description": "AI framework for Reinforcement Learning, Automated Planning and Scheduling",
+      "name": "oh-my-hermes",
+      "url": "https://github.com/rlaope/oh-my-hermes",
+      "description": "⚚ The ultrawork agent with AI coworkers wired into you",
       "language": "Python",
-      "stars": 227,
-      "updatedAt": "2026-11-10T09:44:38Z",
-      "fullName": "airbus/scikit-decide"
+      "stars": 5419,
+      "updatedAt": "2026-11-11T09:20:03Z",
+      "fullName": "rlaope/oh-my-hermes"
     },
     {
-      "name": "killi",
-      "url": "https://github.com/timwuhaotian/killi",
-      "description": "Open-source AI coding agent for your terminal, written in Rust. One 7 MB native binary for Apple Silicon Macs, ~18 MB RAM, 70–90% prompt-cache hits. Works with OpenAI, Anthropic and any compatible LLM; MCP, subagents, plan mode, skills, hooks, AGENTS.md. A lig",
-      "language": "Rust",
-      "stars": 50,
-      "updatedAt": "2026-11-10T09:44:27Z",
-      "fullName": "timwuhaotian/killi"
+      "name": "flutter_agent_harness",
+      "url": "https://github.com/IstiN/flutter_agent_harness",
+      "description": "Fa - Factory Agent. Cross-platform AI agent harness for Dart and Flutter — streaming providers, agent loop with tools, session persistence, compaction; backend agent mode: fa behind product Go backends",
+      "language": "Dart",
+      "stars": 87,
+      "updatedAt": "2026-11-11T09:19:48Z",
+      "fullName": "IstiN/flutter_agent_harness"
     },
     {
-      "name": "CoWork-OS",
-      "url": "https://github.com/CoWork-OS/CoWork-OS",
-      "description": "Rent the model. Own everything else. Free, open-source AI app for real work.",
-      "language": "TypeScript",
-      "stars": 542,
-      "updatedAt": "2026-11-10T09:44:25Z",
-      "fullName": "CoWork-OS/CoWork-OS"
+      "name": "NextTransformer",
+      "url": "https://github.com/Interactive-Active-AI/NextTransformer",
+      "description": ":sunrise: A comprehensive, cutting-edge open-source framework for next-generation Transformers/LLM, with compute-matched benchmarking and a platform for autonomous architecture research.",
+      "language": "Python",
+      "stars": 404,
+      "updatedAt": "2026-11-11T09:19:40Z",
+      "fullName": "Interactive-Active-AI/NextTransformer"
     },
     {
-      "name": "medusa",
-      "url": "https://github.com/medusajs/medusa",
-      "description": "The world's most flexible commerce platform for agents and developers",
-      "language": "TypeScript",
-      "stars": 37153,
-      "updatedAt": "2026-11-10T09:44:24Z",
-      "fullName": "medusajs/medusa"
-    },
-    {
-      "name": "gymcoach",
-      "url": "https://github.com/gymcoach-app/gymcoach",
-      "description": "Self-hosted workout tracker with an AI coach that knows your training. Bring your own LLM (Claude or any OpenRouter model). Strength + cardio, offline PWA, one-command Docker install. A free, open-source alternative to Strong, Hevy and Fitbod.",
-      "language": "TypeScript",
-      "stars": 182,
-      "updatedAt": "2026-11-10T09:44:12Z",
-      "fullName": "gymcoach-app/gymcoach"
+      "name": "Autotrader",
+      "url": "https://github.com/PkLavc/Autotrader",
+      "description": "Autonomous AI trading system powered by Kronos. Forecasts markets, builds portfolios and paper-trades automatically with GitHub Actions.",
+      "language": "Python",
+      "stars": 36,
+      "updatedAt": "2026-11-11T09:19:39Z",
+      "fullName": "PkLavc/Autotrader"
     },
     {
       "name": "cindy",
       "url": "https://github.com/makecindy/cindy",
       "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
       "language": "TypeScript",
-      "stars": 9696,
-      "updatedAt": "2026-11-10T09:44:08Z",
+      "stars": 9794,
+      "updatedAt": "2026-11-11T09:19:35Z",
       "fullName": "makecindy/cindy"
     },
     {
-      "name": "sparrow",
-      "url": "https://github.com/katanaml/sparrow",
-      "description": "Structured data extraction, instruction calling and agentic workflows with ML, LLM and Vision LLM",
-      "language": "Python",
-      "stars": 5231,
-      "updatedAt": "2026-11-10T09:44:00Z",
-      "fullName": "katanaml/sparrow"
+      "name": "ai-megalist",
+      "url": "https://github.com/IrtezaAsadRizvi/ai-megalist",
+      "description": "Curated index of 200+ AI tools, one writeup per tool with hands-on takes. Covers coding, design, research, video, voice, agents, music, local LLMs. Compare alternatives, see real pricing, find the right tool for the job.",
+      "language": "Open source",
+      "stars": 83,
+      "updatedAt": "2026-11-11T09:19:35Z",
+      "fullName": "IrtezaAsadRizvi/ai-megalist"
     },
     {
-      "name": "vnx-orchestration",
-      "url": "https://github.com/Vinix24/vnx-orchestration",
-      "description": "Governance-first orchestration for Claude Code, Codex, and Gemini CLI — parallel workers, receipts, quality gates, and full provenance.",
+      "name": "TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "language": "Zig",
+      "stars": 1752,
+      "updatedAt": "2026-11-11T09:19:25Z",
+      "fullName": "ashhart/TensorFold"
+    },
+    {
+      "name": "dsh-Go",
+      "url": "https://github.com/ccch1mneyyy/dsh-Go",
+      "description": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+      "language": "Dart",
+      "stars": 19207,
+      "updatedAt": "2026-11-11T09:19:18Z",
+      "fullName": "ccch1mneyyy/dsh-Go"
+    },
+    {
+      "name": "Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
+      "language": "Kotlin",
+      "stars": 8157,
+      "updatedAt": "2026-11-11T09:19:06Z",
+      "fullName": "wangzan101/Mika"
+    },
+    {
+      "name": "connectonion",
+      "url": "https://github.com/openonion/connectonion",
+      "description": "CLI is all you need. The agent CLI harness.",
       "language": "Python",
-      "stars": 63,
-      "updatedAt": "2026-11-10T09:43:56Z",
-      "fullName": "Vinix24/vnx-orchestration"
+      "stars": 1557,
+      "updatedAt": "2026-11-11T09:18:53Z",
+      "fullName": "openonion/connectonion"
     }
   ]
 }
