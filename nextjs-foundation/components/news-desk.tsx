@@ -32,6 +32,7 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
   const [sort,setSort]=useState("newest");
   const [limit,setLimit]=useState(PAGE_SIZE);
   const [loading,setLoading]=useState(initialStories.length===0);
+  const [hasFetched,setHasFetched]=useState(false);
   const [error,setError]=useState("");
   const [generatedAt,setGeneratedAt]=useState(initialGeneratedAt);
   const [savedStories,setSavedStories]=useState<Story[]>([]);
@@ -47,7 +48,7 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
   },[]);
   useEffect(()=>{if(savedLoaded){try{window.localStorage.setItem("ln-news-saved-v1",JSON.stringify(savedStories));}catch{/* Continue without persistent saves if storage is unavailable. */}}},[savedStories,savedLoaded]);
   // Prefer Nepali headlines in both regions; fall back to all languages only when no Nepali stories exist.
-  useEffect(()=>{if(language==="ne"&&stories.length>0&&!stories.some(s=>s.region===region&&s.language==="ne"))setLanguage("all");},[stories,region,language]);
+  useEffect(()=>{if(hasFetched&&language==="ne"&&stories.length>0&&!stories.some(s=>s.region===region&&s.language==="ne"))setLanguage("all");},[stories,region,language,hasFetched]);
   const savedUrls=useMemo(()=>savedStories.map(s=>s.url),[savedStories]);
   const toggleSaved=useCallback((story:Story)=>setSavedStories(current=>current.some(s=>s.url===story.url)?current.filter(s=>s.url!==story.url):[story,...current]),[]);
   const isSaved=useCallback((url:string)=>savedUrls.includes(url),[savedUrls]);
@@ -65,9 +66,9 @@ export default function NewsDesk({ initialStories = [], initialGeneratedAt = "" 
         if(!old||Date.parse(s.published_at)>Date.parse(old.published_at))unique.set(key,s);
       });
       setStories([...unique.values()].sort((a,b)=>Date.parse(b.published_at)-Date.parse(a.published_at)));
-      setGeneratedAt(data.generated_at||data.updated_at||"");setError("");
+      setGeneratedAt(data.generated_at||data.updated_at||"");setError("");setHasFetched(true);
     } catch(e) { setError(e instanceof Error?e.message:"The news feed could not be loaded."); }
-    finally { setLoading(false); }
+    finally { setLoading(false);setHasFetched(true); }
   },[]);
   useEffect(()=>{void refresh();const timer=window.setInterval(()=>void refresh(true),300000);return()=>window.clearInterval(timer);},[refresh]);
 
