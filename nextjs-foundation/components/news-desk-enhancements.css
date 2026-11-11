@@ -109,3 +109,18 @@
   .newsdesk-card,.newsdesk-card-image img,.newsdesk-save-toggle,.newsdesk-view-toggle,.newsdesk-bookmark{transition:none!important}
   .newsdesk-card:hover{transform:none}
 }
+
+
+/* Advanced filtering controls: publisher and publication-time filters. */
+.newsdesk-source-filter{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:10px 0 4px}
+.newsdesk-source-filter .newsdesk-sort{min-width:min(100%,260px)}
+.newsdesk-source-filter select{max-width:100%;min-width:180px}
+.newsdesk-clear-filters{font:inherit;font-size:.88rem;border:1px solid var(--news-border,#d9e2ec);border-radius:999px;background:var(--news-surface,#fff);color:inherit;padding:.55rem .9rem;min-height:40px;cursor:pointer}
+.newsdesk-clear-filters:hover{border-color:var(--news-accent,#2563eb)}
+.newsdesk-clear-filters:focus-visible{outline:3px solid rgba(37,99,235,.35);outline-offset:2px}
+@media(max-width:640px){
+  .newsdesk-source-filter{align-items:stretch;flex-direction:column}
+  .newsdesk-source-filter .newsdesk-sort{width:100%}
+  .newsdesk-source-filter select{width:100%;max-width:none}
+  .newsdesk-clear-filters{width:100%;min-height:44px}
+}
