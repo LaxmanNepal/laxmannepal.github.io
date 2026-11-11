@@ -23,11 +23,10 @@ export default function Page() {
   let initialGeneratedAt = "";
   try {
     const feed = JSON.parse(readFileSync(join(process.cwd(), "../news/news-feed.json"), "utf8")) as Feed;
+    // The default Nepal view includes Nepali and English reporting; language is an optional filter.
     initialStories = (feed.stories || []).filter(story => {
-      const nepaliTitle = /[\u0900-\u097F]/.test(story.title || "");
-      const isNepali = story.language === "ne" || nepaliTitle;
       const isNepal = story.region === "Nepal" || story.category === "Nepal" || /नेपाल|nepal|nepalese/i.test(`${story.title} ${story.source || ""}`);
-      return isNepal && isNepali;
+      return isNepal;
     }).slice(0, 60);
     initialGeneratedAt = feed.generated_at || "";
   } catch {
