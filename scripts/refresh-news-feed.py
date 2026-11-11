@@ -187,7 +187,7 @@ def parse_feed(url: str, category: str, label: str) -> list[dict]:
                 score = 90
             elif tag == "enclosure" and mime.startswith("image/"):
                 score = 85
-            elif tag in {"image", "logo"}:
+            elif tag == "image":
                 score = 50
             if score:
                 image_candidates.append((score, candidate))
