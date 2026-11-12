@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-11-11T07:48:18.501576+00:00",
-  "date": "2026-11-11",
+  "updated_at": "2026-11-12T08:25:47.655565+00:00",
+  "date": "2026-11-12",
   "schedule": "daily",
-  "model_variants": 275,
-  "fresh_offers": 276,
+  "model_variants": 276,
+  "fresh_offers": 277,
   "stale_offers": 0,
   "stores": {
     "Brother Mart": {
@@ -23,8 +23,8 @@
       "errors": []
     },
     "GBN Store": {
-      "candidates": 208,
-      "priced_offers_found": 102,
+      "candidates": 112,
+      "priced_offers_found": 103,
       "previous_offers": 102,
       "minimum_expected_offers": 36,
       "status": "complete",
