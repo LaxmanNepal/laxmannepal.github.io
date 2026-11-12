@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-12T07:21:07.177541+00:00.
+Generated from the latest analytics snapshot: 2026-11-12T20:03:45.542311+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,6 +13,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/xiaomi-redmi-note-14-pro-5g/ — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: mobile price in nepal/phones/xiaomi redmi note 14 pro 5g |…
+- Current description: Missing
+- Recommended description: Learn about mobile price in nepal/phones/xiaomi redmi note 14 pro 5g with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: mobile price in nepal/phones/xiaomi redmi note 14 pro 5g
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -75,16 +85,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/about.html
 - Top queries: No page-query rows
 
-### /p/link-shortner-generator.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/link shortner generator.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/link shortner generator.html
-- Top queries: No page-query rows
-
 ### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -93,6 +93,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/06/top 10 free online tools will save you.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/06/top 10 free online tools will save you.html
+- Top queries: No page-query rows
+
+### /p/link-shortner-generator.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/link shortner generator.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/link shortner generator.html
 - Top queries: No page-query rows
 
 ### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
@@ -395,6 +405,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/ebook finder.html
 - Top queries: No page-query rows
 
+### /2026/02/prompt-for-making-ai-story.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2026/02/prompt for making ai story.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2026/02/prompt for making ai story.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2026/02/prompt for making ai story.html
+- Top queries: No page-query rows
+
 ### /p/image.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -425,6 +445,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/pdf.html
 - Top queries: No page-query rows
 
+### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/01/how to convert number to text in excel.html | Laxma…
+- Current description: Missing
+- Recommended description: Learn about 2023/01/how to convert number to text in excel.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/01/how to convert number to text in excel.html
+- Top queries: No page-query rows
+
 ### /2023/07/age-calculator-tool-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -443,6 +473,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/free keyword generator by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/free keyword generator by laxman nepal.html
+- Top queries: No page-query rows
+
+### /2023/12/download-nepali-and-english-cursive-font.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/12/download nepali and english cursive font.html | Lax…
+- Current description: Missing
+- Recommended description: Learn about 2023/12/download nepali and english cursive font.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/12/download nepali and english cursive font.html
 - Top queries: No page-query rows
 
 ### /2024/09/netflix-free-website-watch-movies.html — SEO score 0/100
@@ -565,16 +605,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/free online courses by laxman nepal.html
 - Top queries: No page-query rows
 
-### /2026/02/prompt-for-making-ai-story.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2026/02/prompt for making ai story.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2026/02/prompt for making ai story.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2026/02/prompt for making ai story.html
-- Top queries: No page-query rows
-
 ### /ai.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -645,16 +675,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2022/09/kalimati format
 - Top queries: No page-query rows
 
-### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/01/how to convert number to text in excel.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2023/01/how to convert number to text in excel.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/01/how to convert number to text in excel.html
-- Top queries: No page-query rows
-
 ### /2023/07/all-in-one-unit-converter-by-laxman.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -673,16 +693,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/image resize and compress tools by.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/image resize and compress tools by.html
-- Top queries: No page-query rows
-
-### /2023/12/download-nepali-and-english-cursive-font.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/12/download nepali and english cursive font.html | Lax…
-- Current description: Missing
-- Recommended description: Learn about 2023/12/download nepali and english cursive font.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/12/download nepali and english cursive font.html
 - Top queries: No page-query rows
 
 ### /2024/01 — SEO score 0/100
@@ -783,16 +793,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/04/top 20 free ai chatbots to boost your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/04/top 20 free ai chatbots to boost your.html
-- Top queries: No page-query rows
-
-### /2025/05/10-free-google-ai-courses.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/05/10 free google ai courses.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2025/05/10 free google ai courses.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/05/10 free google ai courses.html
 - Top queries: No page-query rows
 
 ### /2025/05/12-best-ai-bots-on-whatsapp-for-chatgpt.html — SEO score 0/100
@@ -4955,16 +4955,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Xiaomi Redmi A7 3GB/64GB Price in Nepal
 - Top queries: No page-query rows
 
-### /mobile-price-in-nepal/phones/xiaomi-redmi-note-14-pro-5g/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Xiaomi Redmi Note 14 Pro+ 5G Price in Nepal, Specs & Store Offers
-- Recommended title: Xiaomi Redmi Note 14 Pro+ 5G Price in Nepal | Laxman Nepal
-- Current description: Compare Xiaomi Redmi Note 14 Pro+ 5G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product i
-- Recommended description: Learn about Xiaomi Redmi Note 14 Pro+ 5G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Xiaomi Redmi Note 14 Pro+ 5G Price in Nepal
-- Top queries: No page-query rows
-
 ### /mobile-price-in-nepal/phones/zte-nubia-a36/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -5575,16 +5565,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Content Suite
 - Top queries: No page-query rows
 
-### /2026/02/youtube-tag-generator.html — SEO score 85/100
-- Issues: Noindex
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Laxman Nepal - SEO Tag Generator
-- Recommended title: Rapid Tags Generator | Laxman Nepal
-- Current description: Boost your videos and blogs on LaxmanNepal.com.np. Generate optimized tags from YouTube & Google instantly.
-- Recommended description: Learn about Rapid Tags Generator with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Rapid Tags Generator
-- Top queries: No page-query rows
-
 ### /tools/nepali-tools/type-nepali/index.html — SEO score 85/100
 - Issues: Title length 62
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -5593,6 +5573,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Type Nepali Unicode online with Romanized typing, live word suggestions, keyboard shortcuts, copy and download. Free and works offline.
 - Recommended description: Learn about Type Nepali Online with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Type Nepali Online
+- Top queries: No page-query rows
+
+### /2026/02/youtube-tag-generator.html — SEO score 85/100
+- Issues: Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laxman Nepal - SEO Tag Generator
+- Recommended title: Rapid Tags Generator | Laxman Nepal
+- Current description: Boost your videos and blogs on LaxmanNepal.com.np. Generate optimized tags from YouTube & Google instantly.
+- Recommended description: Learn about Rapid Tags Generator with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Rapid Tags Generator
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-channel-info-extractor.html — SEO score 85/100
