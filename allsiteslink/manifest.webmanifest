@@ -1,0 +1,11 @@
+{
+  "name": "All Sites Link — Laxman Nepal",
+  "short_name": "All Sites Link",
+  "description": "Public research resource directory",
+  "start_url": "/allsiteslink/",
+  "scope": "/allsiteslink/",
+  "display": "standalone",
+  "background_color": "#f4f6fb",
+  "theme_color": "#0b1220",
+  "icons": []
+}
