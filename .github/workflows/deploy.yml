@@ -158,7 +158,7 @@ jobs:
           rm -rf .pages
           mkdir -p .pages
           find . -maxdepth 1 -type f -not -name '.blogger-migration.json' -not -name 'CNAME' -not -name '404.html' -print0 | xargs -0 -r -I{} cp --parents "{}" .pages/
-          for dir in assets image-prompt 2022 2023 2024 2025 2026 Open-Source about apps ai ai-tools blog blogs compare contact footprint guides laptops laptop-price-in-nepal recent-movies me mobile mobile-price-in-nepal mobile-prices-in-nepal news nepse privacy privacy-policy laptop gadgets brands tech-news phones products reviews search terms tools pdf-tools image-tools data-tools laxman-tools nepal-tools youtube youtube-tools nepal-jobs subdomain-finder gold-rates-nepal gold-price-in-nepal-today kalimati-format gold-price-history-nepal silver-price-in-nepal-today vacation jobs en hi Drumkit analytics data sharemarket qrcodetool remove-gemini-watermark allsiteslink osint; do
+          for dir in assets image-prompt 2022 2023 2024 2025 2026 Open-Source about apps ai ai-tools blog blogs compare contact footprint guides laptops laptop-price-in-nepal recent-movies me mobile mobile-price-in-nepal mobile-prices-in-nepal news nepse privacy privacy-policy laptop gadgets brands tech-news phones products reviews search terms tools pdf-tools image-tools data-tools laxman-tools nepal-tools youtube youtube-tools nepal-jobs subdomain-finder gold-rates-nepal gold-price-in-nepal-today kalimati-format gold-price-history-nepal silver-price-in-nepal-today nepalisites vacation jobs en hi Drumkit analytics data sharemarket qrcodetool remove-gemini-watermark allsiteslink osint; do
             if [ -d "$dir" ]; then cp -R "$dir" .pages/; fi
           done
           if [ -f nextjs-foundation/out/index.html ]; then
@@ -223,6 +223,22 @@ jobs:
           html = Path('.pages/allsiteslink/index.html').read_text(encoding='utf-8')
           assert '/allsiteslink/osint-links.json' in html, 'All Sites Link data path mismatch'
           print('Verified All Sites Link: 1,206 links across 55 categories.')
+          PY
+      - name: Verify Nepal Sites directory
+        run: |
+          test -s .pages/nepalisites/index.html
+          python3 - <<'PY'
+          import json, re
+          from pathlib import Path
+          html = Path('.pages/nepalisites/index.html').read_text(encoding='utf-8')
+          match = re.search(r'const resources=(\\[.*?\\]);\\s*const query=', html, re.S)
+          assert match, 'Nepal Sites resource data was not found'
+          resources = json.loads(match.group(1))
+          categories = {item.get('category') for item in resources}
+          assert len(resources) == 283, f'Expected 283 Nepal Sites links, found {len(resources)}'
+          assert len(categories) == 26, f'Expected 26 Nepal Sites categories, found {len(categories)}'
+          assert all(item.get('title') and item.get('url') for item in resources), 'A Nepal Sites entry is missing its title or URL'
+          print(f'Verified Nepal Sites: {len(resources)} links across {len(categories)} categories.')
           PY
       - name: Verify published homepage and Nepal Jobs
         continue-on-error: true
