@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-11T19:42:13.396376+00:00.
+Generated from the latest analytics snapshot: 2026-11-12T07:21:07.177541+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -5363,16 +5363,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Type Nepali Unicode online with Romanized typing, live word suggestions, keyboard shortcuts, copy and download. Free and works offline.
 - Recommended description: Learn about Type Nepali Online with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Type Nepali Online
-- Top queries: No page-query rows
-
-### /vacation/ — SEO score 85/100
-- Issues: Description length 49
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Vacation Command Center | Laxman Nepal
-- Recommended title: घर फर्किने काउन्टडाउन | Laxman Nepal
-- Current description: Laxman Nepal Vacation Countdown — मंसिर २४, २०८३।
-- Recommended description: Learn about घर फर्किने काउन्टडाउन with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: घर फर्किने काउन्टडाउन
 - Top queries: No page-query rows
 
 ### /youtube-analytics.html — SEO score 85/100
