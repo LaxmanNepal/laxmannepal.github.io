@@ -1,0 +1,39 @@
+name: Audit All Sites Link resources
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 2 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: allsiteslink-link-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Verify source directory
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path("allsiteslink/osint-links.json").read_text(encoding="utf-8"))
+          assert len(data["categories"]) == data["total_categories"]
+          assert sum(len(c["items"]) for c in data["categories"]) == data["total_links"]
+          print(f"Auditing {data['total_links']} links in {data['total_categories']} categories")
+          PY
+      - name: Check links
+        run: python3 tools/audit_allsiteslink.py
+      - name: Upload audit report
+        uses: actions/upload-artifact@v6
+        with:
+          name: allsiteslink-link-audit-${{ github.run_number }}
+          path: audit-output/
+          retention-days: 30
