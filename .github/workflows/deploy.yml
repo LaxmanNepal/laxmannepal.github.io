@@ -231,7 +231,7 @@ jobs:
           import json, re
           from pathlib import Path
           html = Path('.pages/nepalisites/index.html').read_text(encoding='utf-8')
-          match = re.search(r'const resources=(\\[.*?\\]);\\s*const query=', html, re.S)
+          match = re.search(r'const resources=(\[.*?\]);\s*const query=', html, re.S)
           assert match, 'Nepal Sites resource data was not found'
           resources = json.loads(match.group(1))
           categories = {item.get('category') for item in resources}
