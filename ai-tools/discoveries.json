@@ -1,223 +1,223 @@
 {
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-12",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "magpie",
-      "url": "https://github.com/yetone/magpie",
-      "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
-      "language": "Go",
-      "stars": 34317,
-      "updatedAt": "2026-11-11T09:21:04Z",
-      "fullName": "yetone/magpie"
-    },
-    {
-      "name": "spiceai",
-      "url": "https://github.com/spiceai/spiceai",
-      "description": "Add a real-time analytics node to your operational database. Spice is a portable, accelerated SQL query, search, and LLM-inference engine in Rust for data-grounded AI apps and agents.",
-      "language": "Rust",
-      "stars": 3143,
-      "updatedAt": "2026-11-11T09:21:03Z",
-      "fullName": "spiceai/spiceai"
-    },
-    {
-      "name": "unsloth",
-      "url": "https://github.com/unslothai/unsloth",
-      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
-      "language": "Python",
-      "stars": 79314,
-      "updatedAt": "2026-11-11T09:21:02Z",
-      "fullName": "unslothai/unsloth"
-    },
-    {
-      "name": "Tavotto",
-      "url": "https://github.com/Tavotto/Tavotto",
-      "description": "AI drew your research figure. Tavotto makes it publication-ready: edit matplotlib and AI-generated figures on a canvas, lay out multi-panel pages in mm, check journal rules before export. Scripts stay untouched.",
-      "language": "Python",
-      "stars": 696,
-      "updatedAt": "2026-11-11T09:20:56Z",
-      "fullName": "Tavotto/Tavotto"
-    },
-    {
-      "name": "dify",
-      "url": "https://github.com/langgenius/dify",
-      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-      "language": "Python",
-      "stars": 160948,
-      "updatedAt": "2026-11-11T09:20:53Z",
-      "fullName": "langgenius/dify"
-    },
-    {
-      "name": "mastra",
-      "url": "https://github.com/mastra-ai/mastra",
-      "description": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
       "language": "TypeScript",
-      "stars": 29470,
-      "updatedAt": "2026-11-11T09:20:50Z",
-      "fullName": "mastra-ai/mastra"
+      "stars": 9917,
+      "updatedAt": "2026-11-12T09:47:49Z",
+      "fullName": "makecindy/cindy"
     },
     {
-      "name": "bpf-benchmark",
-      "url": "https://github.com/eunomia-bpf/bpf-benchmark",
-      "description": "AI Agent eBPF optimization benchmark and framework",
-      "language": "C",
-      "stars": 26,
-      "updatedAt": "2026-11-11T09:20:44Z",
-      "fullName": "eunomia-bpf/bpf-benchmark"
+      "name": "hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": 262836,
+      "updatedAt": "2026-11-12T09:47:48Z",
+      "fullName": "NousResearch/hermes-agent"
     },
     {
-      "name": "smithers",
-      "url": "https://github.com/smithersai/smithers",
-      "description": "Smithers is an agentic workflow framework for defining workflows in simple TypeScript configuration files and executing them quickly, durably, and reliably",
+      "name": "Agents-Anywhere",
+      "url": "https://github.com/anywhere-labs/Agents-Anywhere",
+      "description": "跨设备的开源Agent工作台",
       "language": "TypeScript",
-      "stars": 448,
-      "updatedAt": "2026-11-11T09:20:41Z",
-      "fullName": "smithersai/smithers"
-    },
-    {
-      "name": "licai",
-      "url": "https://github.com/SnowWarri0r/licai",
-      "description": "本地运行的个人资产看板与市场分析工具：A股、港美股、基金、理财、现金、数字资产统一管理，附市场问答 agent、盯盘员、全市场榜单、板块情绪与复盘归因。数据存于本机 SQLite，只提供客观信息，不提供买卖建议。",
-      "language": "Python",
-      "stars": 64,
-      "updatedAt": "2026-11-11T09:20:39Z",
-      "fullName": "SnowWarri0r/licai"
-    },
-    {
-      "name": "PiG",
-      "url": "https://github.com/MichaelKinsy/PiG",
-      "description": "PiG (Pi in Go) is a faithful Go port of upstream Pi, the TypeScript codebase behind the Pi coding agent. It is a parity-bound translation, not a rewrite: upstream behavior is the contract, and Go is the implementation language.",
-      "language": "Go",
-      "stars": 843,
-      "updatedAt": "2026-11-11T09:20:38Z",
-      "fullName": "MichaelKinsy/PiG"
-    },
-    {
-      "name": "browser-debugger-cli",
-      "url": "https://github.com/szymdzum/browser-debugger-cli",
-      "description": "Let Claude Code and other coding agents drive and debug Chrome from the shell. DOM, network, console and raw CDP as short commands, no screenshots and no MCP needed.",
-      "language": "TypeScript",
-      "stars": 185,
-      "updatedAt": "2026-11-11T09:20:34Z",
-      "fullName": "szymdzum/browser-debugger-cli"
-    },
-    {
-      "name": "WasmEdge",
-      "url": "https://github.com/WasmEdge/WasmEdge",
-      "description": "WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud native, edge, and decentralized applications. It powers serverless apps, embedded functions, microservices, smart contracts, and IoT devices.",
-      "language": "C++",
-      "stars": 10855,
-      "updatedAt": "2026-11-11T09:20:33Z",
-      "fullName": "WasmEdge/WasmEdge"
-    },
-    {
-      "name": "context-guru",
-      "url": "https://github.com/rossoctl/context-guru",
-      "description": "Context optimization for AI coding agents — lower token cost and latency without sacrificing accuracy.",
-      "language": "Go",
-      "stars": 74,
-      "updatedAt": "2026-11-11T09:20:08Z",
-      "fullName": "rossoctl/context-guru"
-    },
-    {
-      "name": "Decepticon",
-      "url": "https://github.com/BitterSecurity/Decepticon",
-      "description": "Autonomous Hacking Agent for Red Team",
-      "language": "Python",
-      "stars": 6578,
-      "updatedAt": "2026-11-11T09:20:03Z",
-      "fullName": "BitterSecurity/Decepticon"
-    },
-    {
-      "name": "oh-my-hermes",
-      "url": "https://github.com/rlaope/oh-my-hermes",
-      "description": "⚚ The ultrawork agent with AI coworkers wired into you",
-      "language": "Python",
-      "stars": 5419,
-      "updatedAt": "2026-11-11T09:20:03Z",
-      "fullName": "rlaope/oh-my-hermes"
+      "stars": 3328,
+      "updatedAt": "2026-11-12T09:47:47Z",
+      "fullName": "anywhere-labs/Agents-Anywhere"
     },
     {
       "name": "flutter_agent_harness",
       "url": "https://github.com/IstiN/flutter_agent_harness",
       "description": "Fa - Factory Agent. Cross-platform AI agent harness for Dart and Flutter — streaming providers, agent loop with tools, session persistence, compaction; backend agent mode: fa behind product Go backends",
       "language": "Dart",
-      "stars": 87,
-      "updatedAt": "2026-11-11T09:19:48Z",
+      "stars": 88,
+      "updatedAt": "2026-11-12T09:47:46Z",
       "fullName": "IstiN/flutter_agent_harness"
     },
     {
-      "name": "NextTransformer",
-      "url": "https://github.com/Interactive-Active-AI/NextTransformer",
-      "description": ":sunrise: A comprehensive, cutting-edge open-source framework for next-generation Transformers/LLM, with compute-matched benchmarking and a platform for autonomous architecture research.",
-      "language": "Python",
-      "stars": 404,
-      "updatedAt": "2026-11-11T09:19:40Z",
-      "fullName": "Interactive-Active-AI/NextTransformer"
-    },
-    {
-      "name": "Autotrader",
-      "url": "https://github.com/PkLavc/Autotrader",
-      "description": "Autonomous AI trading system powered by Kronos. Forecasts markets, builds portfolios and paper-trades automatically with GitHub Actions.",
-      "language": "Python",
-      "stars": 36,
-      "updatedAt": "2026-11-11T09:19:39Z",
-      "fullName": "PkLavc/Autotrader"
-    },
-    {
-      "name": "cindy",
-      "url": "https://github.com/makecindy/cindy",
-      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "name": "open-walnut",
+      "url": "https://github.com/EvanZhang008/open-walnut",
+      "description": "Claude Code on your laptop and remote dev boxes, in one web page. Sessions keep running when SSH drops (no tmux), each session's changes get their own diff, plus tasks, notes, and memory. Self-hosted.",
       "language": "TypeScript",
-      "stars": 9794,
-      "updatedAt": "2026-11-11T09:19:35Z",
-      "fullName": "makecindy/cindy"
+      "stars": 140,
+      "updatedAt": "2026-11-12T09:47:45Z",
+      "fullName": "EvanZhang008/open-walnut"
     },
     {
-      "name": "ai-megalist",
-      "url": "https://github.com/IrtezaAsadRizvi/ai-megalist",
-      "description": "Curated index of 200+ AI tools, one writeup per tool with hands-on takes. Covers coding, design, research, video, voice, agents, music, local LLMs. Compare alternatives, see real pricing, find the right tool for the job.",
-      "language": "Open source",
-      "stars": 83,
-      "updatedAt": "2026-11-11T09:19:35Z",
-      "fullName": "IrtezaAsadRizvi/ai-megalist"
-    },
-    {
-      "name": "TensorFold",
-      "url": "https://github.com/ashhart/TensorFold",
-      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
-      "language": "Zig",
-      "stars": 1752,
-      "updatedAt": "2026-11-11T09:19:25Z",
-      "fullName": "ashhart/TensorFold"
-    },
-    {
-      "name": "dsh-Go",
-      "url": "https://github.com/ccch1mneyyy/dsh-Go",
-      "description": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
-      "language": "Dart",
-      "stars": 19207,
-      "updatedAt": "2026-11-11T09:19:18Z",
-      "fullName": "ccch1mneyyy/dsh-Go"
-    },
-    {
-      "name": "Mika",
-      "url": "https://github.com/wangzan101/Mika",
-      "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
-      "language": "Kotlin",
-      "stars": 8157,
-      "updatedAt": "2026-11-11T09:19:06Z",
-      "fullName": "wangzan101/Mika"
-    },
-    {
-      "name": "connectonion",
-      "url": "https://github.com/openonion/connectonion",
-      "description": "CLI is all you need. The agent CLI harness.",
+      "name": "local-operator",
+      "url": "https://github.com/damianvtran/local-operator",
+      "description": "An open-source AI agent hub for your own machine: build organizations of collaborating agents that message each other, run in the background around the clock, and share your existing AI subscriptions.",
       "language": "Python",
-      "stars": 1557,
-      "updatedAt": "2026-11-11T09:18:53Z",
-      "fullName": "openonion/connectonion"
+      "stars": 229,
+      "updatedAt": "2026-11-12T09:47:23Z",
+      "fullName": "damianvtran/local-operator"
+    },
+    {
+      "name": "context7",
+      "url": "https://github.com/upstash/context7",
+      "description": "Context7 Platform -- Up-to-date docs for AI agents",
+      "language": "TypeScript",
+      "stars": 64657,
+      "updatedAt": "2026-11-12T09:47:19Z",
+      "fullName": "upstash/context7"
+    },
+    {
+      "name": "nod",
+      "url": "https://github.com/n8n-io/nod",
+      "description": "Open source personal agent with its own computer. It chases invoices, preps your calls and cancels trials on real websites, and asks before it acts. Runs on your machine with the model you choose. By n8n.",
+      "language": "TypeScript",
+      "stars": 619,
+      "updatedAt": "2026-11-12T09:46:58Z",
+      "fullName": "n8n-io/nod"
+    },
+    {
+      "name": "mastra",
+      "url": "https://github.com/mastra-ai/mastra",
+      "description": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
+      "language": "TypeScript",
+      "stars": 29480,
+      "updatedAt": "2026-11-12T09:46:56Z",
+      "fullName": "mastra-ai/mastra"
+    },
+    {
+      "name": "AstrBot",
+      "url": "https://github.com/AstrBotDevs/AstrBot",
+      "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "language": "Python",
+      "stars": 46737,
+      "updatedAt": "2026-11-12T09:46:54Z",
+      "fullName": "AstrBotDevs/AstrBot"
+    },
+    {
+      "name": "opencodex",
+      "url": "https://github.com/lidge-jun/opencodex",
+      "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
+      "language": "TypeScript",
+      "stars": 18416,
+      "updatedAt": "2026-11-12T09:46:40Z",
+      "fullName": "lidge-jun/opencodex"
+    },
+    {
+      "name": "moli",
+      "url": "https://github.com/lexmount/moli",
+      "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
+      "language": "Rust",
+      "stars": 23459,
+      "updatedAt": "2026-11-12T09:46:36Z",
+      "fullName": "lexmount/moli"
+    },
+    {
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "stars": 29507,
+      "updatedAt": "2026-11-12T09:46:25Z",
+      "fullName": "QwenLM/qwen-code"
+    },
+    {
+      "name": "dify",
+      "url": "https://github.com/langgenius/dify",
+      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+      "language": "Python",
+      "stars": 161022,
+      "updatedAt": "2026-11-12T09:46:17Z",
+      "fullName": "langgenius/dify"
+    },
+    {
+      "name": "9router-go",
+      "url": "https://github.com/luqman-v1/9router-go",
+      "description": "High-performance Go proxy gateway for 9Router LLM routing — 32K RPS, 42MB RAM, CGO-free",
+      "language": "Go",
+      "stars": 285,
+      "updatedAt": "2026-11-12T09:46:14Z",
+      "fullName": "luqman-v1/9router-go"
+    },
+    {
+      "name": "zisla",
+      "url": "https://github.com/wzz6423/zisla",
+      "description": "Native macOS top workspace for media, files, system tools, and privacy-first local AI activity.",
+      "language": "Swift",
+      "stars": 12,
+      "updatedAt": "2026-11-12T09:46:09Z",
+      "fullName": "wzz6423/zisla"
+    },
+    {
+      "name": "oh-my-pi",
+      "url": "https://github.com/can1357/oh-my-pi",
+      "description": "⌥ Coding agent with the IDE wired in. Built by Stencil Labs.",
+      "language": "TypeScript",
+      "stars": 38773,
+      "updatedAt": "2026-11-12T09:46:03Z",
+      "fullName": "can1357/oh-my-pi"
+    },
+    {
+      "name": "Rullst",
+      "url": "https://github.com/Rullst/Rullst",
+      "description": "📜🦀🌐  Intelligent, Secure and Effortless Super Full-Stack Framework 🌐🦀📜\"Rust for those who want to build securely and easily, but not suffer\"🤖 The Next-Gen Paradigm: Designed for Humans & AI. Rullst is built from the ground up to be a developer-first framework,",
+      "language": "Rust",
+      "stars": 21,
+      "updatedAt": "2026-11-12T09:45:56Z",
+      "fullName": "Rullst/Rullst"
+    },
+    {
+      "name": "AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "language": "Python",
+      "stars": 187997,
+      "updatedAt": "2026-11-12T09:45:55Z",
+      "fullName": "Significant-Gravitas/AutoGPT"
+    },
+    {
+      "name": "commonly",
+      "url": "https://github.com/Team-Commonly/commonly",
+      "description": "One pod for your team and the agents each of you runs: your own Claude Code, or a hosted agent in one click. Open source (Apache-2.0), self-hostable.",
+      "language": "JavaScript",
+      "stars": 1405,
+      "updatedAt": "2026-11-12T09:45:33Z",
+      "fullName": "Team-Commonly/commonly"
+    },
+    {
+      "name": "grux",
+      "url": "https://github.com/dotcomjack/grux",
+      "description": "Grux AI: open source AI agent for macOS (MIT). One Command Panel for your mail, calendar, meetings, files and a shell it can undo. Runs on a local Ollama model with no key, or your own key. Change it with Claude Code. Download Grux.dmg at gruxai.com, or brew i",
+      "language": "Swift",
+      "stars": 31,
+      "updatedAt": "2026-11-12T09:45:31Z",
+      "fullName": "dotcomjack/grux"
+    },
+    {
+      "name": "aru-ai",
+      "url": "https://github.com/Anvar-Khaliulin/aru-ai",
+      "description": "Local-first, privacy-focused AI assistant written in Vanilla JS. Features SQLite storage, local/cloud LLM support, heuristic mood core, and modular artefacts.",
+      "language": "JavaScript",
+      "stars": 8,
+      "updatedAt": "2026-11-12T09:45:19Z",
+      "fullName": "Anvar-Khaliulin/aru-ai"
+    },
+    {
+      "name": "claude-code-plugins",
+      "url": "https://github.com/melodic-software/claude-code-plugins",
+      "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
+      "language": "Shell",
+      "stars": 30,
+      "updatedAt": "2026-11-12T09:44:31Z",
+      "fullName": "melodic-software/claude-code-plugins"
+    },
+    {
+      "name": "thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "ThinkRail is the agentic IDE that gets better every time you use it",
+      "language": "TypeScript",
+      "stars": 8185,
+      "updatedAt": "2026-11-12T09:44:26Z",
+      "fullName": "JetBrains/thinkrail"
     }
   ]
 }
