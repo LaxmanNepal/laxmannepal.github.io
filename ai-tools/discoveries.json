@@ -1,205 +1,79 @@
 {
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-13",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "cindy",
-      "url": "https://github.com/makecindy/cindy",
-      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "name": "bike4mind",
+      "url": "https://github.com/Bike4Mind/bike4mind",
+      "description": "The open-core AI workbench — notebooks, agents, RAG, voice, and images across any model: OpenAI, Anthropic, Google, xAI, or local via Ollama/vLLM. BSL 1.1,  auto-converting to Apache-2.0 on a two-year clock. Your AI keeps running when theirs doesn't.",
       "language": "TypeScript",
-      "stars": 9917,
-      "updatedAt": "2026-11-12T09:47:49Z",
-      "fullName": "makecindy/cindy"
+      "stars": 97,
+      "updatedAt": "2026-11-13T09:28:47Z",
+      "fullName": "Bike4Mind/bike4mind"
     },
     {
       "name": "hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
       "description": "The agent that grows with you",
       "language": "Python",
-      "stars": 262836,
-      "updatedAt": "2026-11-12T09:47:48Z",
+      "stars": 263071,
+      "updatedAt": "2026-11-13T09:28:42Z",
       "fullName": "NousResearch/hermes-agent"
     },
     {
-      "name": "Agents-Anywhere",
-      "url": "https://github.com/anywhere-labs/Agents-Anywhere",
-      "description": "跨设备的开源Agent工作台",
+      "name": "cc-switch",
+      "url": "https://github.com/farion1231/cc-switch",
+      "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more. Only official website: ccswitch.io",
+      "language": "Rust",
+      "stars": 154112,
+      "updatedAt": "2026-11-13T09:28:28Z",
+      "fullName": "farion1231/cc-switch"
+    },
+    {
+      "name": "medusa",
+      "url": "https://github.com/medusajs/medusa",
+      "description": "The world's most flexible commerce platform for agents and developers",
       "language": "TypeScript",
-      "stars": 3328,
-      "updatedAt": "2026-11-12T09:47:47Z",
-      "fullName": "anywhere-labs/Agents-Anywhere"
+      "stars": 37214,
+      "updatedAt": "2026-11-13T09:28:05Z",
+      "fullName": "medusajs/medusa"
+    },
+    {
+      "name": "sglang",
+      "url": "https://github.com/sgl-project/sglang",
+      "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+      "language": "Python",
+      "stars": 38810,
+      "updatedAt": "2026-11-13T09:27:51Z",
+      "fullName": "sgl-project/sglang"
+    },
+    {
+      "name": "excessibility",
+      "url": "https://github.com/lessthanseventy/excessibility",
+      "description": "Accessibility snapshot testing for Phoenix LiveView - capture HTML during tests, run Pa11y for WCAG   compliance, debug with AI-friendly timeline analysis",
+      "language": "Elixir",
+      "stars": 43,
+      "updatedAt": "2026-11-13T09:27:47Z",
+      "fullName": "lessthanseventy/excessibility"
     },
     {
       "name": "flutter_agent_harness",
       "url": "https://github.com/IstiN/flutter_agent_harness",
       "description": "Fa - Factory Agent. Cross-platform AI agent harness for Dart and Flutter — streaming providers, agent loop with tools, session persistence, compaction; backend agent mode: fa behind product Go backends",
       "language": "Dart",
-      "stars": 88,
-      "updatedAt": "2026-11-12T09:47:46Z",
+      "stars": 90,
+      "updatedAt": "2026-11-13T09:27:40Z",
       "fullName": "IstiN/flutter_agent_harness"
     },
     {
-      "name": "open-walnut",
-      "url": "https://github.com/EvanZhang008/open-walnut",
-      "description": "Claude Code on your laptop and remote dev boxes, in one web page. Sessions keep running when SSH drops (no tmux), each session's changes get their own diff, plus tasks, notes, and memory. Self-hosted.",
-      "language": "TypeScript",
-      "stars": 140,
-      "updatedAt": "2026-11-12T09:47:45Z",
-      "fullName": "EvanZhang008/open-walnut"
-    },
-    {
-      "name": "local-operator",
-      "url": "https://github.com/damianvtran/local-operator",
-      "description": "An open-source AI agent hub for your own machine: build organizations of collaborating agents that message each other, run in the background around the clock, and share your existing AI subscriptions.",
+      "name": "Tavotto",
+      "url": "https://github.com/Tavotto/Tavotto",
+      "description": "AI drew your research figure. Tavotto makes it publication-ready: edit matplotlib and AI-generated figures on a canvas, lay out multi-panel pages in mm, check journal rules before export. Scripts stay untouched.",
       "language": "Python",
-      "stars": 229,
-      "updatedAt": "2026-11-12T09:47:23Z",
-      "fullName": "damianvtran/local-operator"
-    },
-    {
-      "name": "context7",
-      "url": "https://github.com/upstash/context7",
-      "description": "Context7 Platform -- Up-to-date docs for AI agents",
-      "language": "TypeScript",
-      "stars": 64657,
-      "updatedAt": "2026-11-12T09:47:19Z",
-      "fullName": "upstash/context7"
-    },
-    {
-      "name": "nod",
-      "url": "https://github.com/n8n-io/nod",
-      "description": "Open source personal agent with its own computer. It chases invoices, preps your calls and cancels trials on real websites, and asks before it acts. Runs on your machine with the model you choose. By n8n.",
-      "language": "TypeScript",
-      "stars": 619,
-      "updatedAt": "2026-11-12T09:46:58Z",
-      "fullName": "n8n-io/nod"
-    },
-    {
-      "name": "mastra",
-      "url": "https://github.com/mastra-ai/mastra",
-      "description": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
-      "language": "TypeScript",
-      "stars": 29480,
-      "updatedAt": "2026-11-12T09:46:56Z",
-      "fullName": "mastra-ai/mastra"
-    },
-    {
-      "name": "AstrBot",
-      "url": "https://github.com/AstrBotDevs/AstrBot",
-      "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
-      "language": "Python",
-      "stars": 46737,
-      "updatedAt": "2026-11-12T09:46:54Z",
-      "fullName": "AstrBotDevs/AstrBot"
-    },
-    {
-      "name": "opencodex",
-      "url": "https://github.com/lidge-jun/opencodex",
-      "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
-      "language": "TypeScript",
-      "stars": 18416,
-      "updatedAt": "2026-11-12T09:46:40Z",
-      "fullName": "lidge-jun/opencodex"
-    },
-    {
-      "name": "moli",
-      "url": "https://github.com/lexmount/moli",
-      "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
-      "language": "Rust",
-      "stars": 23459,
-      "updatedAt": "2026-11-12T09:46:36Z",
-      "fullName": "lexmount/moli"
-    },
-    {
-      "name": "qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "description": "An open-source AI coding agent that lives in your terminal.",
-      "language": "TypeScript",
-      "stars": 29507,
-      "updatedAt": "2026-11-12T09:46:25Z",
-      "fullName": "QwenLM/qwen-code"
-    },
-    {
-      "name": "dify",
-      "url": "https://github.com/langgenius/dify",
-      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-      "language": "Python",
-      "stars": 161022,
-      "updatedAt": "2026-11-12T09:46:17Z",
-      "fullName": "langgenius/dify"
-    },
-    {
-      "name": "9router-go",
-      "url": "https://github.com/luqman-v1/9router-go",
-      "description": "High-performance Go proxy gateway for 9Router LLM routing — 32K RPS, 42MB RAM, CGO-free",
-      "language": "Go",
-      "stars": 285,
-      "updatedAt": "2026-11-12T09:46:14Z",
-      "fullName": "luqman-v1/9router-go"
-    },
-    {
-      "name": "zisla",
-      "url": "https://github.com/wzz6423/zisla",
-      "description": "Native macOS top workspace for media, files, system tools, and privacy-first local AI activity.",
-      "language": "Swift",
-      "stars": 12,
-      "updatedAt": "2026-11-12T09:46:09Z",
-      "fullName": "wzz6423/zisla"
-    },
-    {
-      "name": "oh-my-pi",
-      "url": "https://github.com/can1357/oh-my-pi",
-      "description": "⌥ Coding agent with the IDE wired in. Built by Stencil Labs.",
-      "language": "TypeScript",
-      "stars": 38773,
-      "updatedAt": "2026-11-12T09:46:03Z",
-      "fullName": "can1357/oh-my-pi"
-    },
-    {
-      "name": "Rullst",
-      "url": "https://github.com/Rullst/Rullst",
-      "description": "📜🦀🌐  Intelligent, Secure and Effortless Super Full-Stack Framework 🌐🦀📜\"Rust for those who want to build securely and easily, but not suffer\"🤖 The Next-Gen Paradigm: Designed for Humans & AI. Rullst is built from the ground up to be a developer-first framework,",
-      "language": "Rust",
-      "stars": 21,
-      "updatedAt": "2026-11-12T09:45:56Z",
-      "fullName": "Rullst/Rullst"
-    },
-    {
-      "name": "AutoGPT",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "language": "Python",
-      "stars": 187997,
-      "updatedAt": "2026-11-12T09:45:55Z",
-      "fullName": "Significant-Gravitas/AutoGPT"
-    },
-    {
-      "name": "commonly",
-      "url": "https://github.com/Team-Commonly/commonly",
-      "description": "One pod for your team and the agents each of you runs: your own Claude Code, or a hosted agent in one click. Open source (Apache-2.0), self-hostable.",
-      "language": "JavaScript",
-      "stars": 1405,
-      "updatedAt": "2026-11-12T09:45:33Z",
-      "fullName": "Team-Commonly/commonly"
-    },
-    {
-      "name": "grux",
-      "url": "https://github.com/dotcomjack/grux",
-      "description": "Grux AI: open source AI agent for macOS (MIT). One Command Panel for your mail, calendar, meetings, files and a shell it can undo. Runs on a local Ollama model with no key, or your own key. Change it with Claude Code. Download Grux.dmg at gruxai.com, or brew i",
-      "language": "Swift",
-      "stars": 31,
-      "updatedAt": "2026-11-12T09:45:31Z",
-      "fullName": "dotcomjack/grux"
-    },
-    {
-      "name": "aru-ai",
-      "url": "https://github.com/Anvar-Khaliulin/aru-ai",
-      "description": "Local-first, privacy-focused AI assistant written in Vanilla JS. Features SQLite storage, local/cloud LLM support, heuristic mood core, and modular artefacts.",
-      "language": "JavaScript",
-      "stars": 8,
-      "updatedAt": "2026-11-12T09:45:19Z",
-      "fullName": "Anvar-Khaliulin/aru-ai"
+      "stars": 703,
+      "updatedAt": "2026-11-13T09:27:36Z",
+      "fullName": "Tavotto/Tavotto"
     },
     {
       "name": "claude-code-plugins",
@@ -207,17 +81,143 @@
       "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
       "language": "Shell",
       "stars": 30,
-      "updatedAt": "2026-11-12T09:44:31Z",
+      "updatedAt": "2026-11-13T09:27:23Z",
       "fullName": "melodic-software/claude-code-plugins"
     },
     {
-      "name": "thinkrail",
-      "url": "https://github.com/JetBrains/thinkrail",
-      "description": "ThinkRail is the agentic IDE that gets better every time you use it",
+      "name": "paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "description": "The open-source app everyone uses to manage agents at work",
       "language": "TypeScript",
-      "stars": 8185,
-      "updatedAt": "2026-11-12T09:44:26Z",
-      "fullName": "JetBrains/thinkrail"
+      "stars": 113499,
+      "updatedAt": "2026-11-13T09:27:17Z",
+      "fullName": "paperclipai/paperclip"
+    },
+    {
+      "name": "langfuse",
+      "url": "https://github.com/langfuse/langfuse",
+      "description": "🪢 Open source AI engineering platform: AI Gateway, agent observability, evals, and prompt/skill management, built on OpenTelemetry. One open platform for every AI call and every agent. Self-host or use Langfuse Cloud.",
+      "language": "TypeScript",
+      "stars": 37380,
+      "updatedAt": "2026-11-13T09:27:13Z",
+      "fullName": "langfuse/langfuse"
+    },
+    {
+      "name": "rowboat",
+      "url": "https://github.com/rowboatlabs/rowboat",
+      "description": "Your agent team, in one group chat.",
+      "language": "TypeScript",
+      "stars": 18211,
+      "updatedAt": "2026-11-13T09:26:37Z",
+      "fullName": "rowboatlabs/rowboat"
+    },
+    {
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "stars": 30049,
+      "updatedAt": "2026-11-13T09:26:24Z",
+      "fullName": "QwenLM/qwen-code"
+    },
+    {
+      "name": "opencodex",
+      "url": "https://github.com/lidge-jun/opencodex",
+      "description": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code",
+      "language": "TypeScript",
+      "stars": 18465,
+      "updatedAt": "2026-11-13T09:26:22Z",
+      "fullName": "lidge-jun/opencodex"
+    },
+    {
+      "name": "trusty-tools",
+      "url": "https://github.com/bobmatnyc/trusty-tools",
+      "description": "Unified Rust workspace for the trusty-* AI developer-tooling ecosystem: hybrid code search, memory palace, code analysis, PR review, and the MPM multi-agent platform — MCP servers, daemons & CLIs.",
+      "language": "Rust",
+      "stars": 22,
+      "updatedAt": "2026-11-13T09:26:22Z",
+      "fullName": "bobmatnyc/trusty-tools"
+    },
+    {
+      "name": "open-webui",
+      "url": "https://github.com/open-webui/open-webui",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "language": "Svelte",
+      "stars": 158535,
+      "updatedAt": "2026-11-13T09:26:08Z",
+      "fullName": "open-webui/open-webui"
+    },
+    {
+      "name": "LangBot",
+      "url": "https://github.com/langbot-app/LangBot",
+      "description": "Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integrated with ChatGPT(GPT), DeepSeek, Dify, n8n, Langflow, Coze,",
+      "language": "Python",
+      "stars": 18958,
+      "updatedAt": "2026-11-13T09:25:56Z",
+      "fullName": "langbot-app/LangBot"
+    },
+    {
+      "name": "reaper-mcp",
+      "url": "https://github.com/mthines/reaper-mcp",
+      "description": "Type what you hear. It measures, decides and makes the change live in your REAPER session. You chat in plain English in Claude Code, by keyboard (or dictation, if you like). No menus to learn, no exporting, no code.",
+      "language": "TypeScript",
+      "stars": 36,
+      "updatedAt": "2026-11-13T09:25:45Z",
+      "fullName": "mthines/reaper-mcp"
+    },
+    {
+      "name": "tt-metal",
+      "url": "https://github.com/tenstorrent/tt-metal",
+      "description": ":metal: TT-NN operator library, and TT-Metalium low level kernel programming model.",
+      "language": "Python",
+      "stars": 124,
+      "updatedAt": "2026-11-13T09:25:29Z",
+      "fullName": "tenstorrent/tt-metal"
+    },
+    {
+      "name": "moli",
+      "url": "https://github.com/lexmount/moli",
+      "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
+      "language": "Rust",
+      "stars": 23619,
+      "updatedAt": "2026-11-13T09:25:23Z",
+      "fullName": "lexmount/moli"
+    },
+    {
+      "name": "opengeni",
+      "url": "https://github.com/Cloudgeni-ai/opengeni",
+      "description": "Open, self-hostable agentic service for organizations — durable, replayable agent sessions, human approvals, governed credentials and memory, running in managed sandboxes or on your own hardware. Apache-2.0.",
+      "language": "TypeScript",
+      "stars": 225,
+      "updatedAt": "2026-11-13T09:25:20Z",
+      "fullName": "Cloudgeni-ai/opengeni"
+    },
+    {
+      "name": "Kompl",
+      "url": "https://github.com/tuirk/Kompl",
+      "description": "An open source, self-maintaining LLM-wiki. It turns what you save into cited wiki pages, updates them as you save more, and answers your AI agent over MCP.",
+      "language": "TypeScript",
+      "stars": 85,
+      "updatedAt": "2026-11-13T09:25:20Z",
+      "fullName": "tuirk/Kompl"
+    },
+    {
+      "name": "context7",
+      "url": "https://github.com/upstash/context7",
+      "description": "Context7 Platform -- Up-to-date docs for AI agents",
+      "language": "TypeScript",
+      "stars": 64717,
+      "updatedAt": "2026-11-13T09:25:10Z",
+      "fullName": "upstash/context7"
+    },
+    {
+      "name": "skill-of-skills",
+      "url": "https://github.com/the911fund/skill-of-skills",
+      "description": "The quality-ranked discovery engine for AI coding skills, plugins and MCP servers across Claude Code, Codex, Cursor, Windsurf, Cline and more.",
+      "language": "Python",
+      "stars": 84,
+      "updatedAt": "2026-11-13T09:25:05Z",
+      "fullName": "the911fund/skill-of-skills"
     }
   ]
 }
