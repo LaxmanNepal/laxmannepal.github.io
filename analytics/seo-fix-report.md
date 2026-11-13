@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-12T20:03:45.542311+00:00.
+Generated from the latest analytics snapshot: 2026-11-13T06:54:56.643051+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,16 +13,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/xiaomi-redmi-note-14-pro-5g/ — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: mobile price in nepal/phones/xiaomi redmi note 14 pro 5g |…
-- Current description: Missing
-- Recommended description: Learn about mobile price in nepal/phones/xiaomi redmi note 14 pro 5g with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: mobile price in nepal/phones/xiaomi redmi note 14 pro 5g
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -2043,6 +2033,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Learn who builds Laxman Nepal, how this website
 - Recommended description: Learn about Useful digital tools, explained clearly. with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Useful digital tools, explained clearly.
+- Top queries: No page-query rows
+
+### /allsiteslink/ — SEO score 85/100
+- Issues: Title length 29
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: All Sites Link | Laxman Nepal
+- Recommended title: All Sites Link | Laxman Nepal
+- Current description: All Sites Link — explore 1,200+ public research resources with smart search, filters, favorites, workflows and a personal research workspace.
+- Recommended description: Learn about All Sites Link with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: All Sites Link
 - Top queries: No page-query rows
 
 ### /blogs/ — SEO score 85/100
@@ -4955,6 +4955,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Xiaomi Redmi A7 3GB/64GB Price in Nepal
 - Top queries: No page-query rows
 
+### /mobile-price-in-nepal/phones/xiaomi-redmi-note-14-pro-5g/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Xiaomi Redmi Note 14 Pro+ 5G Price in Nepal, Specs & Store Offers
+- Recommended title: Xiaomi Redmi Note 14 Pro+ 5G Price in Nepal | Laxman Nepal
+- Current description: Compare Xiaomi Redmi Note 14 Pro+ 5G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product i
+- Recommended description: Learn about Xiaomi Redmi Note 14 Pro+ 5G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Xiaomi Redmi Note 14 Pro+ 5G Price in Nepal
+- Top queries: No page-query rows
+
 ### /mobile-price-in-nepal/phones/zte-nubia-a36/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -5083,6 +5093,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Free Nepal tools by Laxman Nepal. Browse tools automatically discovered from this category folder.
 - Recommended description: Learn about Useful tools for Nepal-focused tasks with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Useful tools for Nepal-focused tasks
+- Top queries: No page-query rows
+
+### /nepalisites/ — SEO score 85/100
+- Issues: Thin content (133 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Nepal Sites Directory | Laxman Nepal
+- Recommended title: Nepal Sites | Laxman Nepal
+- Current description: A searchable directory of public Nepal-focused research, journalism, government data and open-source information resources.
+- Recommended description: Learn about Nepal Sites with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Nepal Sites
 - Top queries: No page-query rows
 
 ### /news/ — SEO score 85/100
