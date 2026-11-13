@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-12T08:25:47.655565+00:00",
-  "date": "2026-11-12",
+  "updated_at": "2026-11-13T08:07:12.949785+00:00",
+  "date": "2026-11-13",
   "schedule": "daily",
-  "model_variants": 276,
+  "model_variants": 278,
   "fresh_offers": 277,
   "stale_offers": 0,
   "stores": {
@@ -23,10 +23,10 @@
       "errors": []
     },
     "GBN Store": {
-      "candidates": 112,
+      "candidates": 212,
       "priced_offers_found": 103,
-      "previous_offers": 102,
-      "minimum_expected_offers": 36,
+      "previous_offers": 103,
+      "minimum_expected_offers": 37,
       "status": "complete",
       "errors": []
     },
