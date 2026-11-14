@@ -40,6 +40,14 @@ body{background:#f8fafc}
 .recent-tools h3{margin:0 0 9px;font-size:.82rem;color:#0f172a}
 .recent-tools-grid{display:flex;gap:7px;flex-wrap:wrap}
 .recent-tool{padding:7px 11px;background:#f1f5f9;border-radius:999px;color:#334155;text-decoration:none;font-size:.68rem;font-weight:800}
+
+.movie-showcase{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:22px;max-width:1000px;margin:0 auto 22px;padding:clamp(20px,4vw,34px);border:1px solid #312e81;border-radius:22px;background:radial-gradient(ellipse at 82% 12%,rgba(236,72,153,.38),transparent 38%),radial-gradient(ellipse at 10% 110%,rgba(99,102,241,.55),transparent 45%),linear-gradient(120deg,#111827 0%,#1e1b4b 56%,#4c1d95 100%);color:#fff;box-shadow:0 18px 42px rgba(49,46,129,.18)}
+.movie-showcase:after{content:"🎬";position:absolute;z-index:-1;right:180px;top:-24px;font-size:clamp(100px,16vw,180px);opacity:.09;transform:rotate(-14deg);pointer-events:none}
+.movie-showcase-copy{max-width:650px}.movie-showcase-kicker{display:inline-flex;align-items:center;gap:7px;margin-bottom:11px;padding:6px 10px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.1);font-size:.68rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#fbcfe8}
+.movie-showcase h2{margin:0;color:#fff;font-size:clamp(24px,4vw,36px);line-height:1.08;letter-spacing:-.035em}.movie-showcase p{margin:10px 0 0;color:#e0e7ff;font-size:.88rem;line-height:1.65;max-width:620px}
+.movie-showcase-actions{display:flex;flex-direction:column;align-items:flex-start;gap:9px;flex-shrink:0}.movie-showcase-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 19px;border:1px solid #fff;border-radius:13px;background:linear-gradient(100deg,#fdf2f8,#fff);color:#312e81;text-decoration:none;font-size:.86rem;font-weight:900;box-shadow:0 8px 22px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s}.movie-showcase-button:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.25)}.movie-showcase-note{font-size:.68rem;color:#c7d2fe}
+@media(max-width:620px){.movie-showcase{align-items:flex-start;flex-direction:column;gap:18px;margin-bottom:18px;border-radius:18px}.movie-showcase-actions{width:100%}.movie-showcase-button{width:100%}.movie-showcase:after{right:10px;top:5px;font-size:100px}.movie-showcase p{font-size:.8rem}}
+
 @media(max-width:520px){.tools-page{padding:8px}.tool-hero{padding:22px 7px 16px}.tool-hero h1{font-size:24px}.tool-hero>p:not(.eyebrow){font-size:.78rem}.tools-grid{grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:9px}.tool-card{min-height:108px;padding:9px}.tool-icon{width:40px;height:40px}.tool-card h2{font-size:.7rem}}
 </style>
 <link rel="stylesheet" href="/assets/css/shared-shell.css"><script src="/assets/js/shared-shell.js"></script></head>
@@ -49,6 +57,10 @@ body{background:#f8fafc}
 <section class="tool-hero">
 <h1>All-in-One Free Online Tools by Laxman Nepal</h1>
 <p>AI tools, PDF tools, image tools, YouTube tools, Nepali utilities and practical online resources — all in one place, with dedicated guides to help you use them.</p>
+<section class="movie-showcase" aria-labelledby="movie-showcase-title">
+<div class="movie-showcase-copy"><span class="movie-showcase-kicker"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Daily-updated movie radar</span><h2 id="movie-showcase-title">Your next movie night starts here.</h2><p>Discover Nepali hits, Bollywood, South Indian cinema and Hollywood in one cinematic showcase. Explore upcoming releases, movies in theatres, this year’s films, posters and ratings — refreshed automatically every day.</p></div>
+<div class="movie-showcase-actions"><a class="movie-showcase-button" href="/recent-movies/"><i class="fa-solid fa-ticket" aria-hidden="true"></i> Explore Recent Movies <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><span class="movie-showcase-note"><i class="fa-solid fa-rotate" aria-hidden="true"></i> Fresh catalogue every day</span></div>
+</section>
 <div class="tool-search"><i class="fa-solid fa-magnifying-glass"></i><input id="tool-search" type="search" placeholder="Search tools..." autocomplete="off" aria-label="Search tools"></div>
 <div class="tool-filters" id="tool-filters"></div>
 <div class="tools-grid" id="tools-grid"></div><div class="tool-empty" id="tool-empty">No tools match your search.</div>
