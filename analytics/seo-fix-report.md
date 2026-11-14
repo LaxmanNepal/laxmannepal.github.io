@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-14T06:38:12.543022+00:00.
+Generated from the latest analytics snapshot: 2026-11-14T18:15:17.743262+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -4015,16 +4015,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Redmi 17 5G Price in Nepal
 - Top queries: No page-query rows
 
-### /mobile-price-in-nepal/phones/redmi-a5-4g/ — SEO score 85/100
-- Issues: Title length 63
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Redmi A5 4G Price in Nepal, Specs & Store Offers | Laxman Nepal
-- Recommended title: Redmi A5 4G Price in Nepal | Laxman Nepal
-- Current description: Compare Redmi A5 4G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Redmi A5 4G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Redmi A5 4G Price in Nepal
-- Top queries: No page-query rows
-
 ### /mobile-price-in-nepal/phones/redmi-a7-4g/ — SEO score 85/100
 - Issues: Title length 63
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -4973,16 +4963,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Xiaomi Redmi Note 14 Pro+ 5G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product i
 - Recommended description: Learn about Xiaomi Redmi Note 14 Pro+ 5G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Xiaomi Redmi Note 14 Pro+ 5G Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/zte-blade-a55/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: ZTE Blade A55 Price in Nepal, Specs & Store Offers | Laxman Nepal
-- Recommended title: ZTE Blade A55 Price in Nepal | Laxman Nepal
-- Current description: Compare ZTE Blade A55 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about ZTE Blade A55 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: ZTE Blade A55 Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/zte-nubia-a36/ — SEO score 85/100
