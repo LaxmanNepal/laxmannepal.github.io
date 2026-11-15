@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-15T06:44:28.967494+00:00.
+Generated from the latest analytics snapshot: 2026-11-15T18:57:25.318354+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -95,6 +95,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/link shortner generator.html
 - Top queries: No page-query rows
 
+### /p/privacy-policy.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/privacy policy.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/privacy policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/privacy policy.html
+- Top queries: No page-query rows
+
 ### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -113,16 +123,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/cookies policy.html
-- Top queries: No page-query rows
-
-### /p/privacy-policy.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/privacy policy.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/privacy policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/privacy policy.html
 - Top queries: No page-query rows
 
 ### /p/sitemap.html — SEO score 0/100
@@ -735,16 +735,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/01/secure and instant file sharing by.html
 - Top queries: No page-query rows
 
-### /2025/02/blogger-post-fetcher-free-tool.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/02/blogger post fetcher free tool.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2025/02/blogger post fetcher free tool.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/02/blogger post fetcher free tool.html
-- Top queries: No page-query rows
-
 ### /2025/03/never-pay-for-online-ai-courses-7-best.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -783,16 +773,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/05/12 best ai bots on whatsapp for chatgpt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/05/12 best ai bots on whatsapp for chatgpt.html
-- Top queries: No page-query rows
-
-### /2025/06/html-live-editor-online-free-real-time.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/06/html live editor online free real time.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2025/06/html live editor online free real time.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/06/html live editor online free real time.html
 - Top queries: No page-query rows
 
 ### /2025/07/free-icon-finder-tools.html — SEO score 0/100
@@ -1813,6 +1793,56 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Discover upcoming movies, films currently in theatres, and this year
 - Recommended description: Learn about Find your next favourite movie. with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Find your next favourite movie.
+- Top queries: No page-query rows
+
+### /youtube-tools/archive/youtube-analytics.html — SEO score 70/100
+- Issues: Title length 64, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Analytics Pro Dashboard | Free YouTube Channel Analytics
+- Recommended title: YouTube Analytics Pro | Laxman Nepal
+- Current description: Analyze a public YouTube channel with subscriber, view and video statistics using the YouTube Data API. Free YouTube analytics tool by Laxman Nepal.
+- Recommended description: Learn about YouTube Analytics Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Analytics Pro
+- Top queries: No page-query rows
+
+### /youtube-tools/archive/youtube-tag-extractor.html — SEO score 70/100
+- Issues: Description length 22, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Advanced YouTube Tag Extractor
+- Recommended title: Advanced YouTube Tag Extractor | Laxman Nepal
+- Current description: Fetching video tags...
+- Recommended description: Learn about Advanced YouTube Tag Extractor with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Advanced YouTube Tag Extractor
+- Top queries: No page-query rows
+
+### /youtube-tools/archive/youtube-thumbnail-downloader.html — SEO score 70/100
+- Issues: Title length 64, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Thumbnail Downloader - Extract HD & 4K Thumbnails Free |
+- Recommended title: YouTube Thumbnail Downloader | Laxman Nepal
+- Current description: Free online YouTube Thumbnail Downloader tool by Laxman Nepal. Download high-resolution YouTube video thumbnails in 4K, 1080p HD, SD, and Medium quality instant
+- Recommended description: Learn about YouTube Thumbnail Downloader with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Thumbnail Downloader
+- Top queries: No page-query rows
+
+### /youtube-tools/archive/youtube-video-analytics.html — SEO score 70/100
+- Issues: Description length 59, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Video Analytics | Blog Analytics
+- Recommended title: YouTube Video Analytics | Laxman Nepal
+- Current description: Get detailed insights about any YouTube video for your blog
+- Recommended description: Learn about YouTube Video Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Video Analytics
+- Top queries: No page-query rows
+
+### /youtube-tools/archive/youtube-video-seo-analyzer.html — SEO score 70/100
+- Issues: Noindex, Thin content (122 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Advanced YouTube Video SEO Analyzer
+- Recommended title: Advanced YouTube Video SEO Analyzer | Laxman Nepal
+- Current description: Fetching data from YouTube API and generating comprehensive analysis...
+- Recommended description: Learn about Advanced YouTube Video SEO Analyzer with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Advanced YouTube Video SEO Analyzer
 - Top queries: No page-query rows
 
 ### /2022/09/kalimati-font-download-by-laxman-nepal.html — SEO score 85/100
@@ -5575,16 +5605,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Advanced YouTube Thumbnail Generator
 - Top queries: No page-query rows
 
-### /2026/02/laxman-nepal-youtube-thumbnail.html — SEO score 85/100
-- Issues: Noindex
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Laxman Nepal - YouTube Thumbnail Downloader
-- Recommended title: YouTube Thumbnail Downloader | Laxman Nepal
-- Current description: Extract high-quality thumbnails from any YouTube video instantly. Supports 4K, HD (1080p), and SD.
-- Recommended description: Learn about YouTube Thumbnail Downloader with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: YouTube Thumbnail Downloader
-- Top queries: No page-query rows
-
 ### /tools/nepali-tools/type-nepali/index.html — SEO score 85/100
 - Issues: Title length 62
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -5593,6 +5613,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Type Nepali Unicode online with Romanized typing, live word suggestions, keyboard shortcuts, copy and download. Free and works offline.
 - Recommended description: Learn about Type Nepali Online with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Type Nepali Online
+- Top queries: No page-query rows
+
+### /2026/02/laxman-nepal-youtube-thumbnail.html — SEO score 85/100
+- Issues: Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laxman Nepal - YouTube Thumbnail Downloader
+- Recommended title: YouTube Thumbnail Downloader | Laxman Nepal
+- Current description: Extract high-quality thumbnails from any YouTube video instantly. Supports 4K, HD (1080p), and SD.
+- Recommended description: Learn about YouTube Thumbnail Downloader with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Thumbnail Downloader
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-video-title-description-tag.html — SEO score 85/100
@@ -5623,6 +5653,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: '); background-size: cover; background-position: center; } .channel-info { padding: 0 2rem 2rem; margin-top: -60px; position: relative; z-index: 1; } .channel-a
 - Recommended description: Learn about Enhanced YouTube Channel Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Enhanced YouTube Channel Analytics
+- Top queries: No page-query rows
+
+### /youtube-tools/archive/laxman-nepal-youtube-thumbnail.html — SEO score 85/100
+- Issues: Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laxman Nepal - YouTube Thumbnail Downloader
+- Recommended title: YouTube Thumbnail Downloader | Laxman Nepal
+- Current description: Extract high-quality thumbnails from any YouTube video instantly. Supports 4K, HD (1080p), and SD.
+- Recommended description: Learn about YouTube Thumbnail Downloader with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Thumbnail Downloader
+- Top queries: No page-query rows
+
+### /youtube-tools/archive/youtube-tag-generator.html — SEO score 85/100
+- Issues: Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Tag Generator — Free YouTube SEO Tool | Laxman Nepal
+- Recommended title: Rapid Tags Generator | Laxman Nepal
+- Current description: Boost your videos and blogs on LaxmanNepal.com.np. Generate optimized tags from YouTube & Google instantly.
+- Recommended description: Learn about Rapid Tags Generator with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Rapid Tags Generator
 - Top queries: No page-query rows
 
 ### /youtube-tools/archive/youtube-thuwembnail-downloader.html — SEO score 85/100
