@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-14T22:33:55.241712+00:00.
+Generated from the latest analytics snapshot: 2026-11-15T06:44:28.967494+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -385,6 +385,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/ebook finder.html
 - Top queries: No page-query rows
 
+### /2026/02/prompt-for-making-ai-story.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2026/02/prompt for making ai story.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2026/02/prompt for making ai story.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2026/02/prompt for making ai story.html
+- Top queries: No page-query rows
+
 ### /p/image.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -425,6 +435,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/youtube tools.html
 - Top queries: No page-query rows
 
+### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/01/how to convert number to text in excel.html | Laxma…
+- Current description: Missing
+- Recommended description: Learn about 2023/01/how to convert number to text in excel.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/01/how to convert number to text in excel.html
+- Top queries: No page-query rows
+
 ### /2023/07/age-calculator-tool-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -443,6 +463,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/free keyword generator by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/free keyword generator by laxman nepal.html
+- Top queries: No page-query rows
+
+### /2023/12/download-nepali-and-english-cursive-font.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/12/download nepali and english cursive font.html | Lax…
+- Current description: Missing
+- Recommended description: Learn about 2023/12/download nepali and english cursive font.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/12/download nepali and english cursive font.html
 - Top queries: No page-query rows
 
 ### /2024/09/netflix-free-website-watch-movies.html — SEO score 0/100
@@ -555,16 +585,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/free online courses by laxman nepal.html
 - Top queries: No page-query rows
 
-### /2026/02/prompt-for-making-ai-story.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2026/02/prompt for making ai story.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2026/02/prompt for making ai story.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2026/02/prompt for making ai story.html
-- Top queries: No page-query rows
-
 ### /ai.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -625,16 +645,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2022/09/kalimati format
 - Top queries: No page-query rows
 
-### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/01/how to convert number to text in excel.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2023/01/how to convert number to text in excel.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/01/how to convert number to text in excel.html
-- Top queries: No page-query rows
-
 ### /2023/07/all-in-one-unit-converter-by-laxman.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -653,16 +663,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/image resize and compress tools by.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/image resize and compress tools by.html
-- Top queries: No page-query rows
-
-### /2023/12/download-nepali-and-english-cursive-font.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/12/download nepali and english cursive font.html | Lax…
-- Current description: Missing
-- Recommended description: Learn about 2023/12/download nepali and english cursive font.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/12/download nepali and english cursive font.html
 - Top queries: No page-query rows
 
 ### /2024/01 — SEO score 0/100
@@ -5585,6 +5585,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Thumbnail Downloader
 - Top queries: No page-query rows
 
+### /tools/nepali-tools/type-nepali/index.html — SEO score 85/100
+- Issues: Title length 62
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Type Nepali Online — Nepali Unicode Typing Tool | Laxman Nepal
+- Recommended title: Type Nepali Online | Laxman Nepal
+- Current description: Type Nepali Unicode online with Romanized typing, live word suggestions, keyboard shortcuts, copy and download. Free and works offline.
+- Recommended description: Learn about Type Nepali Online with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Type Nepali Online
+- Top queries: No page-query rows
+
 ### /2025/11/youtube-video-title-description-tag.html — SEO score 85/100
 - Issues: Noindex
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -5603,16 +5613,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Boost your videos and blogs on LaxmanNepal.com.np. Generate optimized tags from YouTube & Google instantly.
 - Recommended description: Learn about Rapid Tags Generator with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Rapid Tags Generator
-- Top queries: No page-query rows
-
-### /tools/nepali-tools/type-nepali/index.html — SEO score 85/100
-- Issues: Title length 62
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Type Nepali Online — Nepali Unicode Typing Tool | Laxman Nepal
-- Recommended title: Type Nepali Online | Laxman Nepal
-- Current description: Type Nepali Unicode online with Romanized typing, live word suggestions, keyboard shortcuts, copy and download. Free and works offline.
-- Recommended description: Learn about Type Nepali Online with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Type Nepali Online
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-channel-info-extractor.html — SEO score 85/100
