@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-15T18:57:25.318354+00:00.
+Generated from the latest analytics snapshot: 2026-11-16T06:43:38.343698+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,6 +13,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
+- Top queries: No page-query rows
+
+### /ai-tools/ — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: ai tools | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about ai tools with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: ai tools
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -1283,6 +1293,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Enter a YouTube video URL to extract all hashtags used in the video description.
 - Recommended description: Learn about YouTube Hashtag Extractor with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: YouTube Hashtag Extractor
+- Top queries: No page-query rows
+
+### /youtube-tools/archive/youtube-title-generator.html — SEO score 55/100
+- Issues: Description length 57, Noindex, Thin content (123 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Title Generator — Free YouTube Tool | Laxman Nepal
+- Recommended title: YouTube Title Generator | Laxman Nepal
+- Current description: Generate compelling YouTube titles based on your keywords
+- Recommended description: Learn about YouTube Title Generator with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Title Generator
 - Top queries: No page-query rows
 
 ### /2025/07/youtube-thumnail-downloader.html — SEO score 70/100
