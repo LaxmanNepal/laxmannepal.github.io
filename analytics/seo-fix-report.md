@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-16T06:43:38.343698+00:00.
+Generated from the latest analytics snapshot: 2026-11-16T22:19:37.259908+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,16 +13,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
-- Top queries: No page-query rows
-
-### /ai-tools/ — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: ai tools | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about ai tools with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: ai tools
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -85,16 +75,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/top 10 free online tools will save you.html
 - Top queries: No page-query rows
 
-### /p/about.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/about.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/about.html
-- Top queries: No page-query rows
-
 ### /p/link-shortner-generator.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -103,6 +83,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/link shortner generator.html
+- Top queries: No page-query rows
+
+### /p/about.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/about.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/about.html
 - Top queries: No page-query rows
 
 ### /p/privacy-policy.html — SEO score 0/100
@@ -155,16 +145,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/terms and conditions.html
 - Top queries: No page-query rows
 
-### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2020/11/use mobile data in aeroplane mode.html | Laxman Nep…
-- Current description: Missing
-- Recommended description: Learn about 2020/11/use mobile data in aeroplane mode.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2020/11/use mobile data in aeroplane mode.html
-- Top queries: No page-query rows
-
 ### /p/disclaimer.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -175,6 +155,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/disclaimer.html
 - Top queries: No page-query rows
 
+### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2020/11/use mobile data in aeroplane mode.html | Laxman Nep…
+- Current description: Missing
+- Recommended description: Learn about 2020/11/use mobile data in aeroplane mode.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2020/11/use mobile data in aeroplane mode.html
+- Top queries: No page-query rows
+
 ### /2024/02/m3um3u8-player-tool-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -183,26 +173,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/02/m3um3u8 player tool by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/02/m3um3u8 player tool by laxman nepal.html
-- Top queries: No page-query rows
-
-### /2024/09/convert-image-to-pdf-free-tools.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/09/convert image to pdf free tools.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2024/09/convert image to pdf free tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/09/convert image to pdf free tools.html
-- Top queries: No page-query rows
-
-### /2025/07/image-prompt.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/07/image prompt.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2025/07/image prompt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/07/image prompt.html
 - Top queries: No page-query rows
 
 ### /2024/09/convert-anything-to-anything-free.html — SEO score 0/100
@@ -223,6 +193,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/09/free pdf to image converter tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/09/free pdf to image converter tools.html
+- Top queries: No page-query rows
+
+### /2025/07/image-prompt.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/07/image prompt.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2025/07/image prompt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/07/image prompt.html
 - Top queries: No page-query rows
 
 ### /p/contact-us.html — SEO score 0/100
@@ -355,6 +335,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/10/notepad by laxman nepal.html
 - Top queries: No page-query rows
 
+### /2024/09/convert-image-to-pdf-free-tools.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/09/convert image to pdf free tools.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2024/09/convert image to pdf free tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/09/convert image to pdf free tools.html
+- Top queries: No page-query rows
+
 ### /2024/09/top-advanced-ai-websites-everyone.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -405,16 +395,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2026/02/prompt for making ai story.html
 - Top queries: No page-query rows
 
-### /p/image.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/image.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/image.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/image.html
-- Top queries: No page-query rows
-
 ### /p/laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -423,16 +403,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/laxman nepal.html
-- Top queries: No page-query rows
-
-### /p/pdf.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/pdf.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/pdf.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/pdf.html
 - Top queries: No page-query rows
 
 ### /p/youtube-tools.html — SEO score 0/100
@@ -513,6 +483,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/google drive download link generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/google drive download link generator.html
+- Top queries: No page-query rows
+
+### /p/image.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/image.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/image.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/image.html
+- Top queries: No page-query rows
+
+### /p/pdf.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/pdf.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/pdf.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/pdf.html
 - Top queries: No page-query rows
 
 ### /2020/11/Ekadashi.html — SEO score 0/100
@@ -956,7 +946,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /p/laxman-nepal-vacation.html — SEO score 0/100
-- Issues: HTTP status is not 200
+- Issues: Audit error: ConnectionError
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
 - Recommended title: p/laxman nepal vacation.html | Laxman Nepal
@@ -1006,7 +996,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /tools/nepali-tools/type-nepali/index.html**⁠￼ — SEO score 0/100
-- Issues: HTTP status is not 200
+- Issues: Audit error: ConnectionError
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
 - Recommended title: tools/nepali tools/type nepali/index.html**⁠￼ | Laxman Nepal
@@ -1815,6 +1805,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Find your next favourite movie.
 - Top queries: No page-query rows
 
+### /youtube-tools/archive/youtube-analytics-dec-2025.html — SEO score 70/100
+- Issues: Description length 49, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Analytics Pro Dashboard
+- Recommended title: YouTube Analytics Pro | Laxman Nepal
+- Current description: Advanced insights & viral content recommendations
+- Recommended description: Learn about YouTube Analytics Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Analytics Pro
+- Top queries: No page-query rows
+
 ### /youtube-tools/archive/youtube-analytics.html — SEO score 70/100
 - Issues: Title length 64, Noindex
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1825,6 +1825,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Analytics Pro
 - Top queries: No page-query rows
 
+### /youtube-tools/archive/youtube-channel-analytics-pro.html — SEO score 70/100
+- Issues: Title length 64, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Channel Analytics Tool – Free Channel & Video Insights |
+- Recommended title: YouTube Channel Analytics | Laxman Nepal
+- Current description: Analyze a public YouTube channel with recent video views, likes, comments, keywords and practical SEO insights. Free YouTube analytics tool by Laxman Nepal.
+- Recommended description: Learn about YouTube Channel Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Channel Analytics
+- Top queries: No page-query rows
+
 ### /youtube-tools/archive/youtube-tag-extractor.html — SEO score 70/100
 - Issues: Description length 22, Noindex
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1833,6 +1843,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Fetching video tags...
 - Recommended description: Learn about Advanced YouTube Tag Extractor with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Advanced YouTube Tag Extractor
+- Top queries: No page-query rows
+
+### /youtube-tools/archive/youtube-thumbnail-downloader-24.html — SEO score 70/100
+- Issues: Title length 62, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: How to Download YouTube Thumbnails in High Quality - Free Tool
+- Recommended title: How to Download High-Quality YouTube Thumbnails in 2023 (Fr…
+- Current description: Free YouTube tool from Laxman Nepal: How to Download YouTube Thumbnails in High Quality - Free Tool. Analyze, research, optimize and grow your YouTube channel o
+- Recommended description: Learn about How to Download High-Quality YouTube Thumbnails in 2023 (Free Tool) with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: How to Download High-Quality YouTube Thumbnails in 2023 (Free Tool)
 - Top queries: No page-query rows
 
 ### /youtube-tools/archive/youtube-thumbnail-downloader.html — SEO score 70/100
@@ -2438,11 +2458,11 @@ This report is review-only. It does not modify published pages. Recommendations 
 ### /mobile-price-in-nepal/phones/apple-iphone-15/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Apple Iphone 15 Price in Nepal, Specs & Store Offers | Laxman Nep
-- Recommended title: Apple Iphone 15 Price in Nepal | Laxman Nepal
-- Current description: Compare Apple Iphone 15 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Apple Iphone 15 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Apple Iphone 15 Price in Nepal
+- Current title: Apple iPhone 15 Price in Nepal, Specs & Store Offers | Laxman Nep
+- Recommended title: Apple iPhone 15 Price in Nepal | Laxman Nepal
+- Current description: Compare Apple iPhone 15 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Apple iPhone 15 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Apple iPhone 15 Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/apple-iphone-16-128gb/ — SEO score 85/100
@@ -2458,11 +2478,11 @@ This report is review-only. It does not modify published pages. Recommendations 
 ### /mobile-price-in-nepal/phones/apple-iphone-16/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Apple Iphone 16 Price in Nepal, Specs & Store Offers | Laxman Nep
-- Recommended title: Apple Iphone 16 Price in Nepal | Laxman Nepal
-- Current description: Compare Apple Iphone 16 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Apple Iphone 16 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Apple Iphone 16 Price in Nepal
+- Current title: Apple iPhone 16 Price in Nepal, Specs & Store Offers | Laxman Nep
+- Recommended title: Apple iPhone 16 Price in Nepal | Laxman Nepal
+- Current description: Compare Apple iPhone 16 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Apple iPhone 16 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Apple iPhone 16 Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/apple-iphone-16e-128gb/ — SEO score 85/100
@@ -3955,16 +3975,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Realme P3 Price in Nepal
 - Top queries: No page-query rows
 
-### /mobile-price-in-nepal/phones/realme-p4-4g-8gb-256gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Realme P4 4G 8GB/256GB Price in Nepal, Specs & Store Offers | Lax
-- Recommended title: Realme P4 4G 8GB/256GB Price in Nepal | Laxman Nepal
-- Current description: Compare Realme P4 4G 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Realme P4 4G 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Realme P4 4G 8GB/256GB Price in Nepal
-- Top queries: No page-query rows
-
 ### /mobile-price-in-nepal/phones/realme-p4-lite-4g-4gb-128gb/ — SEO score 85/100
 - Issues: Title length 64
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -4133,26 +4143,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Redmi A7 Pro 4G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Redmi A7 Pro 4G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Redmi A7 Pro 4G Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/redmi-note-15-pro-5g-12gb-512gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Redmi Note 15 Pro 5G 12GB/512GB Price in Nepal, Specs & Store Off
-- Recommended title: Redmi Note 15 Pro 5G 12GB/512GB Price in Nepal | Laxman Nep…
-- Current description: Compare Redmi Note 15 Pro 5G 12GB/512GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and produc
-- Recommended description: Learn about Redmi Note 15 Pro 5G 12GB/512GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Redmi Note 15 Pro 5G 12GB/512GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/redmi-note-15-pro-5g-8gb-256gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Redmi Note 15 Pro 5G 8GB/256GB Price in Nepal, Specs & Store Offe
-- Recommended title: Redmi Note 15 Pro 5G 8GB/256GB Price in Nepal | Laxman Nepal
-- Current description: Compare Redmi Note 15 Pro 5G 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product
-- Recommended description: Learn about Redmi Note 15 Pro 5G 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Redmi Note 15 Pro 5G 8GB/256GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/redmi-note-15-pro-plus-5g-12gb-512gb/ — SEO score 85/100
@@ -4733,16 +4723,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Samsung Galaxy Z Fold 7 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images
 - Recommended description: Learn about Samsung Galaxy Z Fold 7 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Samsung Galaxy Z Fold 7 Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/samsung-galaxy-z-fold-8-ultra/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Samsung Galaxy Z Fold 8 Ultra Price in Nepal, Specs & Store Offer
-- Recommended title: Samsung Galaxy Z Fold 8 Ultra Price in Nepal | Laxman Nepal
-- Current description: Compare Samsung Galaxy Z Fold 8 Ultra price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product
-- Recommended description: Learn about Samsung Galaxy Z Fold 8 Ultra Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Samsung Galaxy Z Fold 8 Ultra Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/samsung-galaxy-z-fold-8/ — SEO score 85/100
@@ -5605,14 +5585,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Content Suite
 - Top queries: No page-query rows
 
-### /blogs — SEO score 85/100
-- Issues: Thin content (34 words)
+### /tools/nepali-tools/type-nepali/index.html — SEO score 85/100
+- Issues: Title length 62
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Blogs & Tutorials | Laxman Nepal
-- Recommended title: Blogs & Tutorials | Laxman Nepal
-- Current description: Laxman Nepal practical tutorials about YouTube, AI, Windows, command-line tools and useful digital workflows.
-- Recommended description: Learn about Blogs & Tutorials with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Blogs & Tutorials
+- Current title: Type Nepali Online — Nepali Unicode Typing Tool | Laxman Nepal
+- Recommended title: Type Nepali Online | Laxman Nepal
+- Current description: Type Nepali Unicode online with Romanized typing, live word suggestions, keyboard shortcuts, copy and download. Free and works offline.
+- Recommended description: Learn about Type Nepali Online with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Type Nepali Online
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-thumbnail-downloader.html — SEO score 85/100
@@ -5625,16 +5605,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Advanced YouTube Thumbnail Generator
 - Top queries: No page-query rows
 
-### /tools/nepali-tools/type-nepali/index.html — SEO score 85/100
-- Issues: Title length 62
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Type Nepali Online — Nepali Unicode Typing Tool | Laxman Nepal
-- Recommended title: Type Nepali Online | Laxman Nepal
-- Current description: Type Nepali Unicode online with Romanized typing, live word suggestions, keyboard shortcuts, copy and download. Free and works offline.
-- Recommended description: Learn about Type Nepali Online with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Type Nepali Online
-- Top queries: No page-query rows
-
 ### /2026/02/laxman-nepal-youtube-thumbnail.html — SEO score 85/100
 - Issues: Noindex
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -5643,6 +5613,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Extract high-quality thumbnails from any YouTube video instantly. Supports 4K, HD (1080p), and SD.
 - Recommended description: Learn about YouTube Thumbnail Downloader with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: YouTube Thumbnail Downloader
+- Top queries: No page-query rows
+
+### /blogs — SEO score 85/100
+- Issues: Thin content (34 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Blogs & Tutorials | Laxman Nepal
+- Recommended title: Blogs & Tutorials | Laxman Nepal
+- Current description: Laxman Nepal practical tutorials about YouTube, AI, Windows, command-line tools and useful digital workflows.
+- Recommended description: Learn about Blogs & Tutorials with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Blogs & Tutorials
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-video-title-description-tag.html — SEO score 85/100
@@ -5683,6 +5663,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Extract high-quality thumbnails from any YouTube video instantly. Supports 4K, HD (1080p), and SD.
 - Recommended description: Learn about YouTube Thumbnail Downloader with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: YouTube Thumbnail Downloader
+- Top queries: No page-query rows
+
+### /youtube-tools/archive/youtube-channel-info-extractor.html — SEO score 85/100
+- Issues: Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Enhanced YouTube Channel Analytics | laxmannepal.com.np
+- Recommended title: Enhanced YouTube Channel Analytics | Laxman Nepal
+- Current description: '); background-size: cover; background-position: center; } .channel-info { padding: 0 2rem 2rem; margin-top: -60px; position: relative; z-index: 1; } .channel-a
+- Recommended description: Learn about Enhanced YouTube Channel Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Enhanced YouTube Channel Analytics
 - Top queries: No page-query rows
 
 ### /youtube-tools/archive/youtube-tag-generator.html — SEO score 85/100
