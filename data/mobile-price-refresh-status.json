@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-11-15T07:56:33.351094+00:00",
-  "date": "2026-11-15",
+  "updated_at": "2026-11-16T08:04:21.860485+00:00",
+  "date": "2026-11-16",
   "schedule": "daily",
-  "model_variants": 276,
-  "fresh_offers": 277,
-  "stale_offers": 0,
+  "model_variants": 272,
+  "fresh_offers": 169,
+  "stale_offers": 103,
   "stores": {
     "Brother Mart": {
-      "candidates": 388,
-      "priced_offers_found": 161,
+      "candidates": 381,
+      "priced_offers_found": 158,
       "previous_offers": 161,
       "minimum_expected_offers": 57,
       "status": "complete",
@@ -23,12 +23,21 @@
       "errors": []
     },
     "GBN Store": {
-      "candidates": 112,
-      "priced_offers_found": 103,
+      "candidates": 0,
+      "priced_offers_found": 0,
       "previous_offers": 103,
       "minimum_expected_offers": 37,
-      "status": "complete",
-      "errors": []
+      "status": "stale",
+      "errors": [
+        "https://gbnstore.com/category/smartphones: HTTPError: 410 Client Error: Gone for url: https://gbnstore.com/category/smartphones",
+        "https://gbnstore.com/category/smartphones?page=2: HTTPError: 410 Client Error: Gone for url: https://gbnstore.com/category/smartphones?page=2",
+        "https://gbnstore.com/category/smartphones?page=3: HTTPError: 410 Client Error: Gone for url: https://gbnstore.com/category/smartphones?page=3",
+        "https://gbnstore.com/category/smartphones?page=4: HTTPError: 410 Client Error: Gone for url: https://gbnstore.com/category/smartphones?page=4",
+        "https://gbnstore.com/category/smartphones?page=5: HTTPError: 410 Client Error: Gone for url: https://gbnstore.com/category/smartphones?page=5",
+        "https://gbnstore.com/category/smartphones?page=6: HTTPError: 410 Client Error: Gone for url: https://gbnstore.com/category/smartphones?page=6",
+        "https://gbnstore.com/category/smartphones?page=7: HTTPError: 410 Client Error: Gone for url: https://gbnstore.com/category/smartphones?page=7",
+        "https://gbnstore.com/category/smartphones?page=8: HTTPError: 410 Client Error: Gone for url: https://gbnstore.com/category/smartphones?page=8"
+      ]
     },
     "National Mobile": {
       "candidates": 0,
@@ -39,8 +48,8 @@
       "errors": []
     },
     "Neo Store": {
-      "candidates": 11,
-      "priced_offers_found": 5,
+      "candidates": 9,
+      "priced_offers_found": 3,
       "previous_offers": 5,
       "minimum_expected_offers": 3,
       "status": "complete",
