@@ -22,23 +22,26 @@ class SearchIndexTests(unittest.TestCase):
         self.assertNotIn("never index", item["content"].lower())
         self.assertNotIn("secretInjectedTerm", item["content"])
 
-    def test_skips_noindex_and_redirect_pages(self):
-        self.assertIsNone(parse_page('<title>Private</title><meta name="robots" content="noindex,follow">', "private.html"))
-        self.assertIsNone(parse_page('<title>Redirecting</title><meta http-equiv="refresh" content="0;url=/new/">', "redirect.html"))
+    def test_includes_noindex_redirect_and_titleless_html_pages(self):
+        private = parse_page('<title>Private</title><meta name="robots" content="noindex,follow">', "private.html")
+        redirect = parse_page('<title>Redirecting</title><meta http-equiv="refresh" content="0;url=/new/">', "redirect.html")
+        untitled = parse_page('<body><p>Visible content without a title</p></body>', "my-untitled-page.html")
+        self.assertEqual(private["url"], "/private.html")
+        self.assertEqual(redirect["url"], "/redirect.html")
+        self.assertEqual(untitled["title"], "My Untitled Page")
+        self.assertIn("Visible content", untitled["content"])
 
-    def test_rejects_external_canonical_and_keeps_local_path(self):
-        item = parse_page('<title>Local Guide</title><link rel="canonical" href="https://example.org/elsewhere/"><body><p>Text</p></body>', "guides/local.html")
-        self.assertEqual(item["url"], "/guides/local.html")
-
-    def test_deduplicates_canonical_urls(self):
+    def test_keeps_each_html_file_even_with_same_canonical_url(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp); (root / "a").mkdir(); (root / "b").mkdir()
-            (root / "a/index.html").write_text('<html><head><title>First page</title><link rel="canonical" href="https://laxmannepal.com.np/shared/"></head><body><p>Short</p></body></html>')
-            (root / "b/index.html").write_text('<html><head><title>More useful shared page</title><link rel="canonical" href="https://laxmannepal.com.np/shared/"></head><body><p>More text for search content</p></body></html>')
+            canonical = '<link rel="canonical" href="https://laxmannepal.com.np/shared/">'
+            (root / "a/page.html").write_text(f'<html><head><title>First page</title>{canonical}</head><body><p>Short</p></body></html>')
+            (root / "b/page.html").write_text(f'<html><head><title>Second page</title>{canonical}</head><body><p>More text for search content</p></body></html>')
+            (root / "c").mkdir()
+            (root / "c/page.htm").write_text('<title>Not an HTML suffix match</title>')
             items = build_index(root)
-            self.assertEqual(len(items), 1)
-            self.assertEqual(items[0]["url"], "/shared/")
-            self.assertEqual(items[0]["title"], "More useful shared page")
+            self.assertEqual(len(items), 2)
+            self.assertEqual({item["url"] for item in items}, {"/a/page.html", "/b/page.html"})
 
 if __name__ == "__main__":
     unittest.main()
