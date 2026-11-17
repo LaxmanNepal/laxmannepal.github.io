@@ -6,6 +6,7 @@ on:
     paths:
       - 'tools/**/*.html'
       - 'tools/**/*.htm'
+      - 'tools/tools-meta.json'
       - '.github/workflows/build-tools-manifest.yml'
   workflow_dispatch:
   schedule:
@@ -34,6 +35,8 @@ jobs:
                         "icon.svg", "icon.png", "icon.webp", "icon.jpg", "icon.jpeg",
                         "favicon.svg", "favicon.png", "favicon.webp", "favicon.ico",
                         "apple-touch-icon.png"}
+          metadata_path = root / "tools-meta.json"
+          metadata = json.loads(metadata_path.read_text(encoding="utf-8")) if metadata_path.exists() else {}
           entries = []
           for page in sorted(root.rglob("*")):
               if not page.is_file() or page.suffix.lower() not in extensions:
@@ -47,7 +50,15 @@ jobs:
                   if p.is_file() and p.name.lower() in logo_names
               )
               logo = "/" + logos[0].as_posix() if logos else ""
-              entries.append({"path": rel, "logo": logo})
+              details = metadata.get(rel, {})
+              entries.append({
+                  "path": rel,
+                  "logo": logo,
+                  "name": details.get("name", page.parent.name.replace("-", " ").title() if page.name.lower() == "index.html" else page.stem.replace("-", " ").replace("_", " ").title()),
+                  "description": details.get("description", ""),
+                  "category": details.get("category", "Other"),
+                  "icon": details.get("icon", "fa-solid fa-screwdriver-wrench")
+              })
 
           manifest = {
               "generatedAt": datetime.now(timezone.utc).isoformat(),
