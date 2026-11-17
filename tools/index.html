@@ -120,6 +120,9 @@
  ];
  function titleFromPath(path){return path.split('/').pop().replace(/\.html?$/i,'').replace(/[-_]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}
  function categoryFromPath(path){
+  const root=path.split('/')[0];
+  const rootLabels={'youtube-tools':'YouTube Tools','pdf-tools':'PDF Tools','ai-tools':'AI Tools','data-tools':'Data Tools','image-tools':'Image Tools','nepal-tools':'Nepali Tools','nepse':'Finance Tools','qrcodetool':'QR Tools','subdomain-finder':'Developer Tools','osint':'OSINT Tools','kalimati-format':'Market Tools','laxman-tools':'Laxman Tools','remove-gemini-watermark':'Image Tools'};
+  if(rootLabels[root])return rootLabels[root];
   const parts=path.split('/').slice(1,-1);
   if(parts.length) return parts[0].replace(/[-_]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
   const name=titleFromPath(path).toLowerCase();
@@ -197,13 +200,13 @@
     const data=await response.json();
     if(!Array.isArray(data.tree))throw new Error('GitHub did not return a file tree.');
     const allPaths=data.tree.filter(item=>item.type==='blob').map(item=>item.path);
-    entries=data.tree.filter(item=>item.type==='blob'&&/^tools\/.+\.html?$/i.test(item.path)&&!/^tools\/index\.html$/i.test(item.path))
+    const roots=['tools/','youtube-tools/','pdf-tools/','ai-tools/','data-tools/','image-tools/','nepal-tools/','nepse/','qrcodetool/','subdomain-finder/','osint/','kalimati-format/','laxman-tools/','remove-gemini-watermark/'];\n    const rootFiles=['svg-logo-finder.html','youtube-analytics.html','youtube-channel-analytics-pro.html','youtube-video-seo-analyzer.html'];\n    entries=data.tree.filter(item=>item.type==='blob'&&/\\.html?$/i.test(item.path)&&item.path!=='tools/index.html'&&(roots.some(root=>item.path.startsWith(root)&&!item.path.startsWith('youtube-tools/archive/'))||rootFiles.includes(item.path)))
       .map(item=>{const folder=item.path.slice(0,item.path.lastIndexOf('/'));const logo=allPaths.find(p=>p.startsWith(folder+'/')&&/(^|\/)(logo|icon|favicon|apple-touch-icon)\.(svg|png|webp|jpe?g)$/i.test(p));return {path:item.path,logo:logo?'/'+logo:''};});
    }
    entries.sort((a,b)=>a.path.localeCompare(b.path));
    for(const entry of entries){
     const path=typeof entry==='string'?entry:entry.path;
-    if(!path||!/^tools\/.+\.html?$/i.test(path)||/^tools\/index\.html$/i.test(path))continue;
+    if(!path||!/\.html?$/i.test(path)||path==='tools/index.html')continue;
     const folder=path.slice(0,path.lastIndexOf('/'));
     const isIndex=/\/index\.html$/i.test(path);
     const name=isIndex?folder.split('/').pop().replace(/[-_]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase()):titleFromPath(path);
