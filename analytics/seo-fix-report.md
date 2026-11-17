@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-16T22:19:37.259908+00:00.
+Generated from the latest analytics snapshot: 2026-11-17T08:03:50.371264+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -946,7 +946,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /p/laxman-nepal-vacation.html — SEO score 0/100
-- Issues: Audit error: ConnectionError
+- Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
 - Recommended title: p/laxman nepal vacation.html | Laxman Nepal
@@ -996,7 +996,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /tools/nepali-tools/type-nepali/index.html**⁠￼ — SEO score 0/100
-- Issues: Audit error: ConnectionError
+- Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
 - Recommended title: tools/nepali tools/type nepali/index.html**⁠￼ | Laxman Nepal
