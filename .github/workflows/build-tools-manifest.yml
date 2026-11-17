@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'tools/**/*.html'
+      - 'tools/**/*.htm'
       - '.github/workflows/build-tools-manifest.yml'
   workflow_dispatch:
   schedule:
