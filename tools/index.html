@@ -90,7 +90,7 @@
 <div class="tool-search"><i class="fa-solid fa-magnifying-glass"></i><input id="tool-search" type="search" placeholder="Search all tools..." autocomplete="off" aria-label="Search all tools"></div>
 </section>
 <div class="filter-heading">Browse categories</div><div class="tool-filters" id="tool-filters" aria-label="Filter tools by category"></div>
-<div class="tools-summary"><span id="tool-count">Loading tools…</span><span>Auto-discovered from /tools/</span></div>
+<div class="tools-summary"><span id="tool-count">Loading tools…</span><span>Auto-discovered across the repository</span></div>
 <div class="tool-status" id="tool-status" role="status">Scanning the tools directory…</div>
 <div class="tools-grid" id="tools-grid"></div><div class="tool-empty" id="tool-empty">No tools match your search or selected category.</div>
 <div class="tool-detail-backdrop" id="tool-detail-backdrop" role="presentation">
@@ -210,7 +210,7 @@
     tools.push({path,name:(entry&&entry.name)||name,description:(entry&&entry.description)||'',category:(entry&&entry.category)||categoryFromPath(path),url:toolUrl(path),icon:(entry&&entry.icon)||('fa-solid '+iconFor(path)),logo:(entry&&entry.logo)||''});
    }
    buildFilters();render();updateRecent();
-   status.textContent=tools.length?('Loaded '+tools.length+' HTML tool pages from '+source+'.'):'No HTML files were found under /tools/.';
+   status.textContent=tools.length?('Loaded '+tools.length+' tool pages from '+source+'.'):'No tool pages were found in the repository.';
    if(!tools.length)status.style.background='#fff7ed';
   }catch(error){
    status.textContent='Could not load the tools list. Check that the tools manifest has been generated, then refresh.';
