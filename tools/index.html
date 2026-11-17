@@ -3,9 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Discover every online tool in the Laxman Nepal tools directory. Browse by category, search, and open tools instantly.">
+<meta name="description" content="Explore free online tools by Laxman Nepal: Nepali typing and converters, generators, creator utilities, security tools and more. Search tools and open them instantly.">
 <link rel="canonical" href="https://laxmannepal.com.np/tools/">
-<title>All Online Tools — Laxman Nepal</title>
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Laxman Nepal">
+<meta property="og:title" content="Free Online Tools Directory — Laxman Nepal">
+<meta property="og:description" content="Discover free Nepali, creator, developer, security and productivity tools in one searchable directory.">
+<meta property="og:url" content="https://laxmannepal.com.np/tools/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Free Online Tools Directory — Laxman Nepal">
+<meta name="twitter:description" content="Browse and search free online tools from Laxman Nepal.">
+<title>Free Online Tools Directory — Laxman Nepal</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Free Online Tools Directory",
+  "description": "A searchable directory of free online tools by Laxman Nepal, including Nepali language, creator, developer, security and productivity utilities.",
+  "url": "https://laxmannepal.com.np/tools/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Laxman Nepal",
+    "url": "https://laxmannepal.com.np/"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Laxman Nepal",
+    "url": "https://laxmannepal.com.np/about/"
+  }
+}
+</script>
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/blog.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -103,11 +131,11 @@
  }
  function iconFor(path){const found=iconRules.find(([re])=>re.test(path));return found?found[1]:'fa-screwdriver-wrench'}
  function toolUrl(path){return path.toLowerCase().endsWith('/index.html')?'/'+path.slice(0,-10):'/'+path}
- function makeCard(tool){
+ function iconClass(value){return /^(fa-solid|fa-regular|fa-brands)\\s/.test(value||'')?value:'fa-solid '+(value||'fa-screwdriver-wrench')}\n function makeCard(tool){
   const a=document.createElement('article');a.className='tool-card';a.dataset.name=tool.name.toLowerCase();a.dataset.category=tool.category.toLowerCase();
   const icon=document.createElement('span');icon.className='tool-icon';
   if(tool.logo){const img=document.createElement('img');img.src=tool.logo;img.alt='';img.loading='lazy';img.onerror=()=>{img.remove();icon.innerHTML='<i class="'+tool.icon+'"></i>'};icon.appendChild(img)}
-  else icon.innerHTML='<i class="fa-solid '+tool.icon+'"></i>';
+  else icon.innerHTML='<i class="'+iconClass(tool.icon)+'"></i>';
   const h=document.createElement('h2');h.textContent=tool.name;
   const cat=document.createElement('span');cat.className='tool-category';cat.textContent=tool.category;
   const desc=document.createElement('p');desc.className='tool-description';desc.textContent=tool.description||'';
@@ -125,7 +153,7 @@
   const related=tools.filter(t=>t.path!==tool.path&&t.category===tool.category).slice(0,4);
   detailContent.replaceChildren();
   const head=document.createElement('div');head.className='tool-detail-head';
-  const badge=document.createElement('div');badge.className='tool-detail-icon';badge.innerHTML='<i class="'+tool.icon+'"></i>';
+  const badge=document.createElement('div');badge.className='tool-detail-icon';badge.innerHTML='<i class="'+iconClass(tool.icon)+'"></i>';
   const info=document.createElement('div');const title=document.createElement('h2');title.id='tool-detail-title';title.textContent=tool.name;
   const category=document.createElement('span');category.className='tool-detail-category';category.textContent=tool.category;info.append(title,category);head.append(badge,info);
   const description=document.createElement('p');description.textContent=tool.description||'Open this tool to explore its available features.';
