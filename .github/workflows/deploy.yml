@@ -164,6 +164,10 @@ jobs:
           if [ -f nextjs-foundation/out/index.html ]; then
             cp -R nextjs-foundation/out/. .pages/
           fi
+          # The Next.js export contains a placeholder /tools/ landing page.
+          # Publish the maintained, auto-discovered tools directory instead.
+          cp tools/index.html .pages/tools/index.html
+          if [ -f tools/tools.json ]; then cp tools/tools.json .pages/tools/tools.json; fi
           # Keep the NEPSE route bridge as the root site's custom 404 fallback.
           cp 404.html .pages/404.html
           if [ -d tools/nepali-tools/type-nepali ]; then
