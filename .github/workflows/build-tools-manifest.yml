@@ -122,7 +122,7 @@ jobs:
               "count": len(entries), "tools": entries
           }
           target = Path("tools/tools.json")
-          target.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+          target.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           print(f"Generated {target} with {len(entries)} tools across the repository")
           PY
       - name: Commit manifest when changed
