@@ -200,7 +200,9 @@
     const data=await response.json();
     if(!Array.isArray(data.tree))throw new Error('GitHub did not return a file tree.');
     const allPaths=data.tree.filter(item=>item.type==='blob').map(item=>item.path);
-    const roots=['tools/','youtube-tools/','pdf-tools/','ai-tools/','data-tools/','image-tools/','nepal-tools/','nepse/','qrcodetool/','subdomain-finder/','osint/','kalimati-format/','laxman-tools/','remove-gemini-watermark/'];\n    const rootFiles=['svg-logo-finder.html','youtube-analytics.html','youtube-channel-analytics-pro.html','youtube-video-seo-analyzer.html'];\n    entries=data.tree.filter(item=>item.type==='blob'&&/\\.html?$/i.test(item.path)&&item.path!=='tools/index.html'&&(roots.some(root=>item.path.startsWith(root)&&!item.path.startsWith('youtube-tools/archive/'))||rootFiles.includes(item.path)))
+    const roots=['tools/','youtube-tools/','pdf-tools/','ai-tools/','data-tools/','image-tools/','nepal-tools/','nepse/','qrcodetool/','subdomain-finder/','osint/','kalimati-format/','laxman-tools/','remove-gemini-watermark/'];
+    const rootFiles=['svg-logo-finder.html','youtube-analytics.html','youtube-channel-analytics-pro.html','youtube-video-seo-analyzer.html'];
+    entries=data.tree.filter(item=>item.type==='blob'&&/\.html?$/i.test(item.path)&&item.path!=='tools/index.html'&&(roots.some(root=>item.path.startsWith(root)&&!item.path.startsWith('youtube-tools/archive/'))||rootFiles.includes(item.path)))
       .map(item=>{const folder=item.path.slice(0,item.path.lastIndexOf('/'));const logo=allPaths.find(p=>p.startsWith(folder+'/')&&/(^|\/)(logo|icon|favicon|apple-touch-icon)\.(svg|png|webp|jpe?g)$/i.test(p));return {path:item.path,logo:logo?'/'+logo:''};});
    }
    entries.sort((a,b)=>a.path.localeCompare(b.path));
