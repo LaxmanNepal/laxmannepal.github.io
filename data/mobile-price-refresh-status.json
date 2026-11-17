@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-16T08:04:21.860485+00:00",
-  "date": "2026-11-16",
+  "updated_at": "2026-11-17T09:18:40.944265+00:00",
+  "date": "2026-11-17",
   "schedule": "daily",
-  "model_variants": 272,
-  "fresh_offers": 169,
+  "model_variants": 264,
+  "fresh_offers": 161,
   "stale_offers": 103,
   "stores": {
     "Brother Mart": {
-      "candidates": 381,
-      "priced_offers_found": 158,
-      "previous_offers": 161,
-      "minimum_expected_offers": 57,
+      "candidates": 361,
+      "priced_offers_found": 150,
+      "previous_offers": 158,
+      "minimum_expected_offers": 56,
       "status": "complete",
       "errors": []
     },
@@ -50,7 +50,7 @@
     "Neo Store": {
       "candidates": 9,
       "priced_offers_found": 3,
-      "previous_offers": 5,
+      "previous_offers": 3,
       "minimum_expected_offers": 3,
       "status": "complete",
       "errors": []
