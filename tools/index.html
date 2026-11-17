@@ -32,7 +32,18 @@
 .tool-icon img{width:100%;height:100%;object-fit:contain;padding:7px}
 .tool-card h2{font-size:13px;line-height:1.35;margin:0;color:#0f172a;font-weight:750}
 .tool-card .tool-category{font-size:10px;color:#2563eb;background:#eff6ff;border-radius:999px;padding:4px 8px;margin-top:7px;font-weight:800}.tool-card .tool-description{font-size:11px;line-height:1.5;color:#64748b;margin:8px 0 2px;max-width:250px}
-.tool-open{margin-top:auto;padding-top:10px;font-size:11px;font-weight:800;color:#2563eb}
+.tool-actions{display:flex;gap:7px;width:100%;margin-top:auto;padding-top:12px}
+.tool-actions a,.tool-actions button{flex:1;min-width:0;border:1px solid #dbeafe;border-radius:9px;padding:8px 5px;font:700 10px inherit;text-align:center;text-decoration:none;cursor:pointer}
+.tool-actions a{background:#2563eb;color:#fff;border-color:#2563eb}.tool-actions button{background:#eff6ff;color:#1d4ed8}
+.tool-detail-backdrop{position:fixed;inset:0;z-index:1000;background:#0f172a99;display:none;align-items:center;justify-content:center;padding:18px}
+.tool-detail-backdrop.open{display:flex}.tool-detail{width:min(100%,520px);max-height:min(85vh,700px);overflow:auto;background:#fff;border-radius:20px;padding:24px;box-shadow:0 24px 80px #0003}
+.tool-detail-head{display:flex;align-items:flex-start;gap:14px}.tool-detail-icon{width:58px;height:58px;flex:0 0 58px;display:grid;place-items:center;background:#eff6ff;color:#2563eb;border-radius:16px;font-size:25px}
+.tool-detail h2{margin:0;color:#0f172a;font-size:21px}.tool-detail p{color:#64748b;line-height:1.65;font-size:14px}
+.tool-detail-category{display:inline-block;margin-top:7px;padding:5px 9px;background:#eff6ff;color:#1d4ed8;border-radius:999px;font-size:11px;font-weight:800}
+.tool-detail-actions{display:flex;gap:9px;margin:20px 0}.tool-detail-actions a,.tool-detail-actions button{flex:1;padding:12px;border-radius:10px;text-align:center;text-decoration:none;font-weight:800;font-size:13px;cursor:pointer;border:1px solid #dbe2ea;background:#fff;color:#334155}
+.tool-detail-actions a{background:#2563eb;color:#fff;border-color:#2563eb}.related-tools{border-top:1px solid #e2e8f0;padding-top:15px}.related-tools h3{font-size:13px;color:#0f172a}.related-tools-list{display:flex;flex-wrap:wrap;gap:8px}.related-tools-list a{padding:7px 10px;border-radius:9px;background:#f1f5f9;color:#334155;text-decoration:none;font-size:11px;font-weight:700}
+.tool-detail-close{float:right;border:0;background:#f1f5f9;border-radius:50%;width:32px;height:32px;font-size:19px;cursor:pointer}
+@media(max-width:600px){.tool-detail{padding:19px}.tool-actions{gap:5px}}
 .tool-empty{display:none;max-width:1100px;margin:0 auto;padding:42px 15px;text-align:center;color:#64748b;background:#fff;border:1px dashed #cbd5e1;border-radius:16px}
 .tool-status{max-width:1100px;margin:0 auto 15px;padding:10px 13px;background:#eff6ff;border:1px solid #dbeafe;border-radius:10px;color:#1e40af;font-size:12px;text-align:left}
 .recent-tools{max-width:1100px;margin:22px auto 0;padding:15px 17px;border:1px solid #e2e8f0;border-radius:14px;background:#fff}.recent-tools[hidden]{display:none}
@@ -54,6 +65,11 @@
 <div class="tools-summary"><span id="tool-count">Loading tools…</span><span>Auto-discovered from /tools/</span></div>
 <div class="tool-status" id="tool-status" role="status">Scanning the tools directory…</div>
 <div class="tools-grid" id="tools-grid"></div><div class="tool-empty" id="tool-empty">No tools match your search or selected category.</div>
+<div class="tool-detail-backdrop" id="tool-detail-backdrop" role="presentation">
+<section class="tool-detail" role="dialog" aria-modal="true" aria-labelledby="tool-detail-title">
+<button class="tool-detail-close" id="tool-detail-close" type="button" aria-label="Close details">×</button>
+<div id="tool-detail-content"></div>
+</section></div>
 <section class="recent-tools" id="recent-tools" hidden><h3>Recently opened</h3><div class="recent-tools-grid" id="recent-tools-grid"></div></section>
 </main>
 <footer class="footer section-wrap"><div><strong>Laxman Nepal</strong><span>© 2026 All rights reserved.</span></div><div><span>Made with curiosity in Nepal.</span><a href="/">Back home ↑</a></div></footer>
@@ -65,7 +81,7 @@
  const grid=document.getElementById('tools-grid'), filters=document.getElementById('tool-filters');
  const search=document.getElementById('tool-search'), empty=document.getElementById('tool-empty');
  const count=document.getElementById('tool-count'), status=document.getElementById('tool-status');
- const tools=[]; let active='All';
+ const tools=[]; let active='All'; const detailBackdrop=document.getElementById('tool-detail-backdrop'); const detailContent=document.getElementById('tool-detail-content');
  const iconRules=[
   [/password|security|credential/i,'fa-key'],[/fake.?post|social/i,'fa-comments'],[/slow|reverb|music|audio/i,'fa-music'],
   [/generator|create|maker/i,'fa-wand-magic-sparkles'],[/image|photo|picture/i,'fa-image'],[/pdf/i,'fa-file-pdf'],
@@ -88,21 +104,41 @@
  function iconFor(path){const found=iconRules.find(([re])=>re.test(path));return found?found[1]:'fa-screwdriver-wrench'}
  function toolUrl(path){return path.toLowerCase().endsWith('/index.html')?'/'+path.slice(0,-10):'/'+path}
  function makeCard(tool){
-  const a=document.createElement('a');a.className='tool-card';a.href=tool.url;a.dataset.name=tool.name.toLowerCase();a.dataset.category=tool.category.toLowerCase();
+  const a=document.createElement('article');a.className='tool-card';a.dataset.name=tool.name.toLowerCase();a.dataset.category=tool.category.toLowerCase();
   const icon=document.createElement('span');icon.className='tool-icon';
   if(tool.logo){const img=document.createElement('img');img.src=tool.logo;img.alt='';img.loading='lazy';img.onerror=()=>{img.remove();icon.innerHTML='<i class="'+tool.icon+'"></i>'};icon.appendChild(img)}
   else icon.innerHTML='<i class="fa-solid '+tool.icon+'"></i>';
   const h=document.createElement('h2');h.textContent=tool.name;
   const cat=document.createElement('span');cat.className='tool-category';cat.textContent=tool.category;
   const desc=document.createElement('p');desc.className='tool-description';desc.textContent=tool.description||'';
-  const open=document.createElement('span');open.className='tool-open';open.textContent='Open tool →';
-  a.append(icon,h,cat,desc,open);a.addEventListener('click',()=>track(tool.path));return a;
+  const actions=document.createElement('div');actions.className='tool-actions';
+  const open=document.createElement('a');open.href=tool.url;open.textContent='Open tool →';open.addEventListener('click',()=>track(tool.path));
+  const details=document.createElement('button');details.type='button';details.textContent='Details';details.addEventListener('click',()=>showDetails(tool));
+  actions.append(open,details);a.append(icon,h,cat,desc,actions);return a;
  }
  function render(){
-  const q=search.value.trim().toLowerCase();const list=tools.filter(t=>(active==='All'||t.category===active)&&(!q||(t.name+' '+t.category+' '+t.path).toLowerCase().includes(q)));
+  const q=search.value.trim().toLowerCase();const list=tools.filter(t=>(active==='All'||t.category===active)&&(!q||(t.name+' '+t.description+' '+t.category+' '+t.path).toLowerCase().includes(q)));
   grid.replaceChildren(...list.map(makeCard));grid.style.display=list.length?'grid':'none';empty.style.display=list.length?'none':'block';
   count.textContent=list.length+' of '+tools.length+' tools';
  }
+ function showDetails(tool){
+  const related=tools.filter(t=>t.path!==tool.path&&t.category===tool.category).slice(0,4);
+  detailContent.replaceChildren();
+  const head=document.createElement('div');head.className='tool-detail-head';
+  const badge=document.createElement('div');badge.className='tool-detail-icon';badge.innerHTML='<i class="'+tool.icon+'"></i>';
+  const info=document.createElement('div');const title=document.createElement('h2');title.id='tool-detail-title';title.textContent=tool.name;
+  const category=document.createElement('span');category.className='tool-detail-category';category.textContent=tool.category;info.append(title,category);head.append(badge,info);
+  const description=document.createElement('p');description.textContent=tool.description||'Open this tool to explore its available features.';
+  const actions=document.createElement('div');actions.className='tool-detail-actions';const open=document.createElement('a');open.href=tool.url;open.textContent='Open tool';open.addEventListener('click',()=>track(tool.path));
+  const close=document.createElement('button');close.type='button';close.textContent='Back to tools';close.addEventListener('click',hideDetails);actions.append(open,close);
+  detailContent.append(head,description,actions);
+  if(related.length){const section=document.createElement('div');section.className='related-tools';const h3=document.createElement('h3');h3.textContent='Related tools';const list=document.createElement('div');list.className='related-tools-list';related.forEach(item=>{const link=document.createElement('a');link.href=item.url;link.textContent=item.name;link.addEventListener('click',()=>track(item.path));list.append(link)});section.append(h3,list);detailContent.append(section)}
+  detailBackdrop.classList.add('open');document.getElementById('tool-detail-close').focus();document.body.style.overflow='hidden';
+ }
+ function hideDetails(){detailBackdrop.classList.remove('open');document.body.style.overflow=''}
+ document.getElementById('tool-detail-close').addEventListener('click',hideDetails);
+ detailBackdrop.addEventListener('click',e=>{if(e.target===detailBackdrop)hideDetails()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&detailBackdrop.classList.contains('open'))hideDetails()});
  function buildFilters(){
   const cats=['All',...Array.from(new Set(tools.map(t=>t.category))).sort((a,b)=>a.localeCompare(b))];
   filters.replaceChildren(...cats.map(cat=>{const b=document.createElement('button');b.type='button';b.className='tool-filter'+(cat===active?' active':'');b.dataset.cat=cat;b.textContent=cat;const n=document.createElement('span');n.className='count';n.textContent=cat==='All'?tools.length:tools.filter(t=>t.category===cat).length;b.appendChild(n);return b}));
