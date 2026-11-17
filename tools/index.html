@@ -116,25 +116,38 @@
  search.addEventListener('input',render);
  async function discover(){
   try{
-   const response=await fetch('https://api.github.com/repos/'+REPO+'/git/trees/main?recursive=1',{headers:{Accept:'application/vnd.github+json'}});
-   if(!response.ok)throw new Error('GitHub directory request failed ('+response.status+').');
-   const data=await response.json();if(!Array.isArray(data.tree))throw new Error('GitHub did not return a file tree.');
-   const paths=data.tree.filter(item=>item.type==='blob'&&/^tools\/.+\.html?$/i.test(item.path)&&!/^tools\/index\.html$/i.test(item.path));
-   const allPaths=data.tree.filter(item=>item.type==='blob').map(item=>item.path);
-   paths.sort((a,b)=>a.path.localeCompare(b.path));
-   for(const item of paths){
-    const path=item.path;const folder=path.slice(0,path.lastIndexOf('/'));
-    const isIndex=/\/index\.html$/i.test(path);
-    const name=isIndex?folder.split('/').pop().replace(/[-_]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase()):titleFromPath(path);
-    const candidates=allPaths.filter(p=>p.startsWith(folder+'/')&&/(^|\/)(logo|icon|favicon|apple-touch-icon)\.(svg|png|webp|jpe?g)$/i.test(p));
-    const logo=candidates.length?RAW+candidates[0]:'';
-    tools.push({path,name,category:categoryFromPath(path),url:toolUrl(path),icon:iconFor(path),logo});
+   let entries=[];
+   let source='static manifest';
+   try{
+    const manifestResponse=await fetch('/tools/tools.json',{cache:'no-cache'});
+    if(!manifestResponse.ok)throw new Error('Manifest not ready');
+    const manifest=await manifestResponse.json();
+    if(!Array.isArray(manifest.tools))throw new Error('Invalid tools manifest');
+    entries=manifest.tools;
+   }catch(manifestError){
+    source='GitHub API fallback';
+    const response=await fetch('https://api.github.com/repos/'+REPO+'/git/trees/main?recursive=1',{headers:{Accept:'application/vnd.github+json'}});
+    if(!response.ok)throw new Error('Manifest unavailable and GitHub API returned '+response.status);
+    const data=await response.json();
+    if(!Array.isArray(data.tree))throw new Error('GitHub did not return a file tree.');
+    const allPaths=data.tree.filter(item=>item.type==='blob').map(item=>item.path);
+    entries=data.tree.filter(item=>item.type==='blob'&&/^tools\\/.+\\.html?$/i.test(item.path)&&!/^tools\\/index\\.html$/i.test(item.path))
+      .map(item=>{const folder=item.path.slice(0,item.path.lastIndexOf('/'));const logo=allPaths.find(p=>p.startsWith(folder+'/')&&/(^|\\/)(logo|icon|favicon|apple-touch-icon)\\.(svg|png|webp|jpe?g)$/i.test(p));return {path:item.path,logo:logo?'/'+logo:''};});
+   }
+   entries.sort((a,b)=>a.path.localeCompare(b.path));
+   for(const entry of entries){
+    const path=typeof entry==='string'?entry:entry.path;
+    if(!path||!/^tools\\/.+\\.html?$/i.test(path)||/^tools\\/index\\.html$/i.test(path))continue;
+    const folder=path.slice(0,path.lastIndexOf('/'));
+    const isIndex=/\\/index\\.html$/i.test(path);
+    const name=isIndex?folder.split('/').pop().replace(/[-_]+/g,' ').replace(/\\b\\w/g,c=>c.toUpperCase()):titleFromPath(path);
+    tools.push({path,name,category:categoryFromPath(path),url:toolUrl(path),icon:iconFor(path),logo:(entry&&entry.logo)||''});
    }
    buildFilters();render();updateRecent();
-   status.textContent=tools.length?('Found '+tools.length+' HTML tool pages. Categories and logos are generated automatically where available.'):'No HTML files were found under /tools/.';
+   status.textContent=tools.length?('Loaded '+tools.length+' HTML tool pages from '+source+'.'):'No HTML files were found under /tools/.';
    if(!tools.length)status.style.background='#fff7ed';
   }catch(error){
-   status.textContent='Could not load the live GitHub file list. Please refresh the page or check the repository API limit.';
+   status.textContent='Could not load the tools list. Check that the tools manifest has been generated, then refresh.';
    status.style.background='#fff7ed';status.style.color='#9a3412';count.textContent='Tools unavailable';
    console.error('Tools directory discovery failed:',error);
   }
