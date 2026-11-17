@@ -1,66 +1,126 @@
 {
-  "generatedAt": "2026-11-17T22:38:36.959542+00:00",
+  "generatedAt": "2026-11-17T22:39:41.507039+00:00",
   "count": 15,
   "tools": [
     {
       "path": "tools/generator/fake-post-generator/facebook/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Facebook Post Mockup",
+      "description": "Design a realistic Facebook-style post and export it as a high-resolution image.",
+      "category": "Social Media",
+      "icon": "fa-brands fa-facebook"
     },
     {
       "path": "tools/generator/fake-post-generator/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Social Post Designer",
+      "description": "Choose a platform and create social post mockups for Facebook, Instagram, X, LinkedIn, Threads and YouTube.",
+      "category": "Social Media",
+      "icon": "fa-solid fa-share-nodes"
     },
     {
       "path": "tools/generator/fake-post-generator/instagram/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Instagram Post Mockup",
+      "description": "Create and export a customizable Instagram-style post card.",
+      "category": "Social Media",
+      "icon": "fa-brands fa-instagram"
     },
     {
       "path": "tools/generator/fake-post-generator/linkedin/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "LinkedIn Post Mockup",
+      "description": "Build a polished LinkedIn-style post preview and export the design.",
+      "category": "Social Media",
+      "icon": "fa-brands fa-linkedin"
     },
     {
       "path": "tools/generator/fake-post-generator/threads/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Threads Post Mockup",
+      "description": "Create a Threads-style social post card with editable profile and content.",
+      "category": "Social Media",
+      "icon": "fa-solid fa-at"
     },
     {
       "path": "tools/generator/fake-post-generator/twitter/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "X (Twitter) Post Mockup",
+      "description": "Design an X/Twitter-style post and export a high-resolution mockup.",
+      "category": "Social Media",
+      "icon": "fa-brands fa-x-twitter"
     },
     {
       "path": "tools/generator/fake-post-generator/youtube/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "YouTube Community Mockup",
+      "description": "Create a YouTube Community-style post preview for content planning.",
+      "category": "Social Media",
+      "icon": "fa-brands fa-youtube"
     },
     {
       "path": "tools/generator/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Free Generators",
+      "description": "Explore browser-based generators for creating useful digital assets and audio effects.",
+      "category": "Generators",
+      "icon": "fa-solid fa-wand-magic-sparkles"
     },
     {
       "path": "tools/generator/slow-and-reverb-generator/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Slowed + Reverb Generator",
+      "description": "Create a slowed and reverb-style audio effect in your browser.",
+      "category": "Audio",
+      "icon": "fa-solid fa-waveform"
     },
     {
       "path": "tools/generator/strong-password-generator/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Strong Password Generator",
+      "description": "Generate secure passwords locally with adjustable length and character options.",
+      "category": "Security",
+      "icon": "fa-solid fa-shield-halved"
     },
     {
       "path": "tools/nepali-tools/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Nepali Tools",
+      "description": "A collection of free Nepali typing, language and text-conversion tools.",
+      "category": "Nepali Language",
+      "icon": "fa-solid fa-language"
     },
     {
       "path": "tools/nepali-tools/nepali-typing-practice/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Nepali Typing Practice",
+      "description": "Improve Nepali typing speed and accuracy with live WPM and error statistics.",
+      "category": "Nepali Language",
+      "icon": "fa-solid fa-keyboard"
     },
     {
       "path": "tools/nepali-tools/preeti-unicode-converter/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Preeti ↔ Unicode Converter",
+      "description": "Convert legacy Preeti font text to Nepali Unicode and convert Unicode back to Preeti.",
+      "category": "Nepali Language",
+      "icon": "fa-solid fa-arrow-right-arrow-left"
     },
     {
       "path": "tools/nepali-tools/type-nepali/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Type Nepali Online",
+      "description": "Type Nepali Unicode with Romanized input, suggestions, shortcuts and offline support.",
+      "category": "Nepali Language",
+      "icon": "fa-solid fa-pen-nib"
     },
     {
       "path": "tools/sites/subdomain-finder/index.html",
-      "logo": ""
+      "logo": "",
+      "name": "Subdomain Finder",
+      "description": "Find publicly indexed subdomains for a domain using Certificate Transparency data.",
+      "category": "Developer Tools",
+      "icon": "fa-solid fa-sitemap"
     }
   ]
 }
