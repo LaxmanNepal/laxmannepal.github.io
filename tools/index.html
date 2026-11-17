@@ -26,19 +26,19 @@
 .tool-filter .count{opacity:.7;margin-left:5px}
 .tools-summary{max-width:1100px;margin:0 auto 12px;display:flex;justify-content:space-between;gap:12px;color:#64748b;font-size:12px}
 .tools-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:13px}
-.tool-card{min-height:150px;padding:16px 12px 13px;border:1px solid #e2e8f0;border-radius:16px;background:#fff;text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .18s,box-shadow .18s,border-color .18s}
+.tool-card{min-height:190px;padding:16px 12px 13px;border:1px solid #e2e8f0;border-radius:16px;background:#fff;text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .18s,box-shadow .18s,border-color .18s}
 .tool-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0f172a12;border-color:#bfdbfe}
 .tool-icon{width:50px;height:50px;display:grid;place-items:center;border-radius:15px;background:#eff6ff;color:#2563eb;margin-bottom:11px;font-size:21px;overflow:hidden}
 .tool-icon img{width:100%;height:100%;object-fit:contain;padding:7px}
 .tool-card h2{font-size:13px;line-height:1.35;margin:0;color:#0f172a;font-weight:750}
-.tool-card .tool-category{font-size:10px;color:#94a3b8;margin-top:6px}
+.tool-card .tool-category{font-size:10px;color:#2563eb;background:#eff6ff;border-radius:999px;padding:4px 8px;margin-top:7px;font-weight:800}.tool-card .tool-description{font-size:11px;line-height:1.5;color:#64748b;margin:8px 0 2px;max-width:250px}
 .tool-open{margin-top:auto;padding-top:10px;font-size:11px;font-weight:800;color:#2563eb}
 .tool-empty{display:none;max-width:1100px;margin:0 auto;padding:42px 15px;text-align:center;color:#64748b;background:#fff;border:1px dashed #cbd5e1;border-radius:16px}
 .tool-status{max-width:1100px;margin:0 auto 15px;padding:10px 13px;background:#eff6ff;border:1px solid #dbeafe;border-radius:10px;color:#1e40af;font-size:12px;text-align:left}
 .recent-tools{max-width:1100px;margin:22px auto 0;padding:15px 17px;border:1px solid #e2e8f0;border-radius:14px;background:#fff}.recent-tools[hidden]{display:none}
 .recent-tools h3{margin:0 0 10px;font-size:13px;color:#0f172a}.recent-tools-grid{display:flex;gap:8px;flex-wrap:wrap}
 .recent-tool{padding:7px 11px;background:#f1f5f9;border-radius:999px;color:#334155;text-decoration:none;font-size:11px;font-weight:750}
-@media(max-width:600px){.tools-page{padding:8px 9px 28px}.tool-hero{padding:24px 5px 12px}.tool-hero>p{font-size:13px}.tools-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.tool-card{min-height:137px;padding:13px 8px}.tool-icon{width:45px;height:45px}.tool-card h2{font-size:12px}.tool-filters{gap:6px}.tool-filter{padding:7px 10px;font-size:11px}}
+@media(max-width:600px){.tools-page{padding:8px 9px 28px}.tool-hero{padding:24px 5px 12px}.tool-hero>p{font-size:13px}.tools-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.tool-card{min-height:180px;padding:13px 8px}.tool-icon{width:45px;height:45px}.tool-card h2{font-size:12px}.tool-filters{gap:6px}.tool-filter{padding:7px 10px;font-size:11px}}
 </style>
 </head>
 <body>
@@ -90,12 +90,13 @@
  function makeCard(tool){
   const a=document.createElement('a');a.className='tool-card';a.href=tool.url;a.dataset.name=tool.name.toLowerCase();a.dataset.category=tool.category.toLowerCase();
   const icon=document.createElement('span');icon.className='tool-icon';
-  if(tool.logo){const img=document.createElement('img');img.src=tool.logo;img.alt='';img.loading='lazy';img.onerror=()=>{img.remove();icon.innerHTML='<i class="fa-solid '+tool.icon+'"></i>'};icon.appendChild(img)}
+  if(tool.logo){const img=document.createElement('img');img.src=tool.logo;img.alt='';img.loading='lazy';img.onerror=()=>{img.remove();icon.innerHTML='<i class="'+tool.icon+'"></i>'};icon.appendChild(img)}
   else icon.innerHTML='<i class="fa-solid '+tool.icon+'"></i>';
   const h=document.createElement('h2');h.textContent=tool.name;
   const cat=document.createElement('span');cat.className='tool-category';cat.textContent=tool.category;
+  const desc=document.createElement('p');desc.className='tool-description';desc.textContent=tool.description||'';
   const open=document.createElement('span');open.className='tool-open';open.textContent='Open tool →';
-  a.append(icon,h,cat,open);a.addEventListener('click',()=>track(tool.path));return a;
+  a.append(icon,h,cat,desc,open);a.addEventListener('click',()=>track(tool.path));return a;
  }
  function render(){
   const q=search.value.trim().toLowerCase();const list=tools.filter(t=>(active==='All'||t.category===active)&&(!q||(t.name+' '+t.category+' '+t.path).toLowerCase().includes(q)));
@@ -141,7 +142,7 @@
     const folder=path.slice(0,path.lastIndexOf('/'));
     const isIndex=/\/index\.html$/i.test(path);
     const name=isIndex?folder.split('/').pop().replace(/[-_]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase()):titleFromPath(path);
-    tools.push({path,name,category:categoryFromPath(path),url:toolUrl(path),icon:iconFor(path),logo:(entry&&entry.logo)||''});
+    tools.push({path,name:(entry&&entry.name)||name,description:(entry&&entry.description)||'',category:(entry&&entry.category)||categoryFromPath(path),url:toolUrl(path),icon:(entry&&entry.icon)||('fa-solid '+iconFor(path)),logo:(entry&&entry.logo)||''});
    }
    buildFilters();render();updateRecent();
    status.textContent=tools.length?('Loaded '+tools.length+' HTML tool pages from '+source+'.'):'No HTML files were found under /tools/.';
