@@ -1,7 +1,183 @@
 {
-  "generatedAt": "2026-11-17T23:05:41.260862+00:00",
-  "count": 15,
+  "generatedAt": "2026-11-17T23:16:02.310804+00:00",
+  "count": 59,
   "tools": [
+    {
+      "path": "ai-tools/index.html",
+      "logo": "",
+      "name": "AI Tools Directory — Laxman Nepal",
+      "description": "Discover useful AI tools for writing, research, studying, coding, image creation and productivity. Browse trusted AI services, practical guides and creator tools curated by Laxman Nepal.",
+      "category": "AI Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "ai-tools/voxcpm-tts.html",
+      "logo": "",
+      "name": "VoxCPM AI Text to Speech — Laxman Nepal",
+      "description": "VoxCPM AI Text to Speech by Laxman Nepal. Generate expressive English and experimental Nepali or Nepaglish speech using the VoxCPM demo.",
+      "category": "AI Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "data-tools/index.html",
+      "logo": "",
+      "name": "Data Tools — Laxman Nepal",
+      "description": "Free Data tools by Laxman Nepal. Browse tools automatically discovered from this category folder.",
+      "category": "Data Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "image-tools/index.html",
+      "logo": "",
+      "name": "Image Tools — Laxman Nepal",
+      "description": "Free Image tools by Laxman Nepal. Browse tools automatically discovered from this category folder.",
+      "category": "Image Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "kalimati-format/index.html",
+      "logo": "",
+      "name": "Kalimati Format — Nepali Typing Keyboard & Shortcut Chart | Laxman Nepal",
+      "description": "Kalimati / Preeti-style Nepali typing format with searchable keys, matras, half letters, punctuation, symbols and Alt codes.",
+      "category": "Market Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "laxman-tools/index.html",
+      "logo": "",
+      "name": "Laxman Tools — Free Online Tools",
+      "description": "Free online tools by Laxman Nepal.",
+      "category": "Laxman Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "nepal-tools/index.html",
+      "logo": "",
+      "name": "Nepal Tools — Laxman Nepal",
+      "description": "Free Nepal tools by Laxman Nepal. Browse tools automatically discovered from this category folder.",
+      "category": "Nepali Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "nepse/index.html",
+      "logo": "",
+      "name": "NEPSE Terminal — Laxman Nepal",
+      "description": "",
+      "category": "Finance Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "osint/index.html",
+      "logo": "",
+      "name": "Moving to All Sites Link | Laxman Nepal",
+      "description": "",
+      "category": "OSINT Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "pdf-tools/images-to-pdf/index.html",
+      "logo": "/pdf-tools/images-to-pdf/logo.webp",
+      "name": "Images to PDF — Laxman Nepal",
+      "description": "Convert JPG, PNG and WebP images to a PDF locally in your browser.",
+      "category": "PDF Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "pdf-tools/index.html",
+      "logo": "/pdf-tools/images-to-pdf/logo.webp",
+      "name": "PDF Tools — Laxman Nepal",
+      "description": "Free PDF tools by Laxman Nepal. Browse tools automatically discovered from this category folder.",
+      "category": "PDF Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "pdf-tools/merge/index.html",
+      "logo": "/pdf-tools/merge/logo.webp",
+      "name": "Merge PDF Online Free — Laxman Nepal",
+      "description": "Merge multiple PDF files into one PDF in your browser. Reorder files, preview pages and download the merged PDF without uploading files.",
+      "category": "PDF Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "pdf-tools/optimize/index.html",
+      "logo": "/pdf-tools/optimize/logo.webp",
+      "name": "Optimize PDF — Laxman Nepal",
+      "description": "Optimize a PDF with browser-side structural processing.",
+      "category": "PDF Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "pdf-tools/pdf-to-image/index.html",
+      "logo": "/pdf-tools/pdf-to-image/logo.webp",
+      "name": "PDF to Image — Laxman Nepal",
+      "description": "Render PDF pages as PNG images directly in your browser.",
+      "category": "PDF Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "pdf-tools/rotate/index.html",
+      "logo": "/pdf-tools/rotate/logo.webp",
+      "name": "Rotate PDF — Laxman Nepal",
+      "description": "Rotate PDF pages and download the result in your browser.",
+      "category": "PDF Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "pdf-tools/split/index.html",
+      "logo": "/pdf-tools/split/logo.webp",
+      "name": "Split PDF — Laxman Nepal",
+      "description": "Extract selected PDF pages into a new document locally in your browser.",
+      "category": "PDF Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "pdf-tools/watermark/index.html",
+      "logo": "/pdf-tools/watermark/logo.webp",
+      "name": "Watermark PDF — Laxman Nepal",
+      "description": "Add a text watermark to every PDF page locally in your browser.",
+      "category": "PDF Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "qrcodetool/index.html",
+      "logo": "",
+      "name": "QR Studio — All-in-One QR Generator & Scanner | Laxman Nepal",
+      "description": "QR Studio: advanced QR generator, scanner, designer, secure QR, image QR, bulk QR, history, templates and QR analyzer.",
+      "category": "QR Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "remove-gemini-watermark/index.html",
+      "logo": "",
+      "name": "Gemini Watermark Remover V6 — Laxman Nepal",
+      "description": "Laxman Nepal local Gemini watermark remover with shape-aware detection, patch-guided restoration, and private browser-side editing.",
+      "category": "Image Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "subdomain-finder/index.html",
+      "logo": "",
+      "name": "Subdomain Finder — Laxman Nepal",
+      "description": "Free subdomain finder using Certificate Transparency data. Search indexed subdomains for any domain with first-seen dates.",
+      "category": "Developer Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "svg-logo-finder.html",
+      "logo": "/allsiteslink/icon.svg",
+      "name": "SVG & Logo Finder - Laxman Nepal",
+      "description": "Search, preview and copy Font Awesome icons and brand logos for your website.",
+      "category": "General Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "tools/cast-in-nepal/index.html",
+      "logo": "",
+      "name": "नेपालका जातजाति र थर निर्देशिका — Laxman Nepal",
+      "description": "नेपालका जातजाति, थर, गोत्र र समुदायसम्बन्धी जानकारी खोज्नुहोस्।",
+      "category": "Laxman Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
     {
       "path": "tools/generator/fake-post-generator/facebook/index.html",
       "logo": "",
@@ -121,6 +297,182 @@
       "description": "Find publicly indexed subdomains for a domain using Certificate Transparency data.",
       "category": "Developer Tools",
       "icon": "fa-solid fa-sitemap"
+    },
+    {
+      "path": "youtube-analytics.html",
+      "logo": "/allsiteslink/icon.svg",
+      "name": "YouTube Analytics Pro Dashboard | Free YouTube Channel Analytics",
+      "description": "Analyze a public YouTube channel with subscriber, view and video statistics using the YouTube Data API. Free YouTube analytics tool by Laxman Nepal.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-channel-analytics-pro.html",
+      "logo": "/allsiteslink/icon.svg",
+      "name": "YouTube Channel Analytics Tool – Free Channel & Video Insights | Laxman Nepal",
+      "description": "Analyze a public YouTube channel with recent video views, likes, comments, keywords and practical SEO insights. Free YouTube analytics tool by Laxman Nepal.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/ai-powered-youtube-seo-deep-analyzer/index.html",
+      "logo": "/youtube-tools/ai-powered-youtube-seo-deep-analyzer/logo.webp",
+      "name": "AI YouTube SEO Analyzer — Free YouTube SEO Tool | Laxman Nepal",
+      "description": "Analyze YouTube video SEO with an AI-focused dashboard covering content, engagement, technical signals and optimization opportunities.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/index.html",
+      "logo": "/youtube-tools/ai-powered-youtube-seo-deep-analyzer/logo.webp",
+      "name": "YouTube Tools — Laxman Nepal",
+      "description": "Free YouTube tools by Laxman Nepal. Browse tools automatically discovered from this category folder.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/laxman-nepal-youtube-thumbnail/index.html",
+      "logo": "/youtube-tools/laxman-nepal-youtube-thumbnail/logo.webp",
+      "name": "YouTube Thumbnail Downloader — Free HD Thumbnail Tool | Laxman Nepal",
+      "description": "Download available YouTube video thumbnails in multiple sizes with a fast browser-based thumbnail utility.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-analytics/index.html",
+      "logo": "/youtube-tools/youtube-analytics/logo.webp",
+      "name": "YouTube Analytics Pro Dashboard — Free Channel Analytics | Laxman Nepal",
+      "description": "Explore YouTube channel analytics and performance information with a practical browser-based creator dashboard.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-channel-analytics-pro/index.html",
+      "logo": "/youtube-tools/youtube-channel-analytics-pro/logo.webp",
+      "name": "YouTube Channel Analytics Tool — Free Channel & Video Insights | Laxman Nepal",
+      "description": "Analyze public YouTube channel and video performance signals with a focused creator analytics dashboard.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-channel-id-finder-analytics/index.html",
+      "logo": "/youtube-tools/youtube-channel-id-finder-analytics/logo.webp",
+      "name": "YouTube Channel ID Finder — Free Channel Analytics Tool | Laxman Nepal",
+      "description": "Find a YouTube channel ID and use it for creator research and analytics workflows.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-channel-info-extractor/index.html",
+      "logo": "/youtube-tools/youtube-channel-info-extractor/logo.webp",
+      "name": "YouTube Channel Info Extractor — Free Channel Research Tool | Laxman Nepal",
+      "description": "Extract useful public YouTube channel information for creator research and comparison.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-description-extractor/index.html",
+      "logo": "/youtube-tools/youtube-description-extractor/logo.webp",
+      "name": "YouTube Description Extractor — Free Tool | Laxman Nepal",
+      "description": "Extract a public YouTube video description into a clean, copyable view for research and creator workflows.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-hashtag-extractor/index.html",
+      "logo": "/youtube-tools/youtube-hashtag-extractor/logo.webp",
+      "name": "YouTube Hashtag Extractor — Free YouTube SEO Tool | Laxman Nepal",
+      "description": "Extract hashtags from YouTube content and organize them for research and metadata workflows.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-nepal-trend-explorer/index.html",
+      "logo": "/youtube-tools/youtube-nepal-trend-explorer/logo.webp",
+      "name": "YouTube Trend Explorer — Nepal Trends & Research Tool | Laxman Nepal",
+      "description": "Explore YouTube trend research with a Nepal-focused workflow for creators and publishers.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-tag-extractor/index.html",
+      "logo": "/youtube-tools/youtube-tag-extractor/logo.webp",
+      "name": "Advanced YouTube Tag Extractor — Free SEO Tool | Laxman Nepal",
+      "description": "Extract available YouTube video tags for research, SEO comparison and metadata analysis.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-tag-generator/index.html",
+      "logo": "/youtube-tools/youtube-tag-generator/logo.webp",
+      "name": "YouTube Tag Suggestion Generator | Laxman Nepal",
+      "description": "Find YouTube and Google autocomplete keyword ideas for your video topic, review suggestions, remove irrelevant tags, and copy your shortlist. Free browser tool.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-thumbnail-downloader/index.html",
+      "logo": "/youtube-tools/youtube-thumbnail-downloader/logo.webp",
+      "name": "YouTube Thumbnail Downloader — HD & 4K Thumbnail Tool | Laxman Nepal",
+      "description": "Retrieve available YouTube thumbnail images in common resolutions with a fast browser-based downloader.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-title-generator/index.html",
+      "logo": "/youtube-tools/youtube-title-generator/logo.webp",
+      "name": "YouTube Title Generator — Free YouTube Tool | Laxman Nepal",
+      "description": "Generate YouTube title ideas from your topic and improve your publishing workflow with a fast browser tool.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-trending-keywords/index.html",
+      "logo": "/youtube-tools/youtube-trending-keywords/logo.webp",
+      "name": "YouTube Keyword Explorer — Free Keyword Research Tool | Laxman Nepal",
+      "description": "Explore YouTube keyword ideas and discovery signals for content planning and creator research.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-video-analytics/index.html",
+      "logo": "/youtube-tools/youtube-video-analytics/logo.webp",
+      "name": "YouTube Video Analytics — Free Video Research Tool | Laxman Nepal",
+      "description": "Review public YouTube video analytics and performance signals in a practical creator research dashboard.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-video-download/index.html",
+      "logo": "/youtube-tools/youtube-video-download/logo.webp",
+      "name": "YouTube Video Downloader — Browser Tool | Laxman Nepal",
+      "description": "Use the existing YouTube video download utility from a simple browser interface. Use only for content you are permitted to download.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-video-seo-analyzer/index.html",
+      "logo": "/youtube-tools/youtube-video-seo-analyzer/logo.webp",
+      "name": "Advanced YouTube Video SEO Analyzer — Free Tool | Laxman Nepal",
+      "description": "Audit YouTube video metadata and discovery signals with a detailed SEO analysis workflow.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-tools/youtube-video-title-description-tag/index.html",
+      "logo": "/youtube-tools/youtube-video-title-description-tag/logo.webp",
+      "name": "YouTube Content Suite — Title, Description & Tags Tool | Laxman Nepal",
+      "description": "Create and refine YouTube titles, descriptions and tags in one practical creator metadata workspace.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
+    },
+    {
+      "path": "youtube-video-seo-analyzer.html",
+      "logo": "/allsiteslink/icon.svg",
+      "name": "YouTube Video SEO Analyzer — Free YouTube SEO Tool | Laxman Nepal",
+      "description": "Analyze any YouTube video with title, description, tags, engagement, metadata, performance and related-video SEO insights using Laxman Nepal's free YouTube Video SEO Analyzer.",
+      "category": "YouTube Tools",
+      "icon": "fa-solid fa-screwdriver-wrench"
     }
   ]
 }
