@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-17T22:38:15.042156+00:00",
-  "count": 14,
+  "generatedAt": "2026-11-17T22:38:36.959542+00:00",
+  "count": 15,
   "tools": [
     {
       "path": "tools/generator/fake-post-generator/facebook/index.html",
@@ -56,6 +56,10 @@
     },
     {
       "path": "tools/nepali-tools/type-nepali/index.html",
+      "logo": ""
+    },
+    {
+      "path": "tools/sites/subdomain-finder/index.html",
       "logo": ""
     }
   ]
