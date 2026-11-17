@@ -15,6 +15,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: main-automation-commits
+  cancel-in-progress: false
+
 jobs:
   build-manifest:
     runs-on: ubuntu-latest
@@ -79,5 +83,6 @@ jobs:
             echo "Manifest is already up to date."
           else
             git commit -m "chore: refresh tools directory manifest"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
