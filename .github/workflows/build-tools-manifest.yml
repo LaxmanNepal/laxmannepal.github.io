@@ -29,51 +29,102 @@ jobs:
       - name: Generate tools.json
         run: |
           python - <<'PY'
-          import json
+          import json, re
           from pathlib import Path
           from datetime import datetime, timezone
+          from html.parser import HTMLParser
 
-          root = Path("tools")
-          extensions = {".html", ".htm"}
-          logo_names = {"logo.svg", "logo.png", "logo.webp", "logo.jpg", "logo.jpeg",
-                        "icon.svg", "icon.png", "icon.webp", "icon.jpg", "icon.jpeg",
-                        "favicon.svg", "favicon.png", "favicon.webp", "favicon.ico",
-                        "apple-touch-icon.png"}
-          metadata_path = root / "tools-meta.json"
-          metadata = json.loads(metadata_path.read_text(encoding="utf-8")) if metadata_path.exists() else {}
+          ROOT = Path(".")
+          TOOL_ROOTS = {
+              "tools", "youtube-tools", "pdf-tools", "ai-tools", "data-tools",
+              "image-tools", "nepal-tools", "nepse", "qrcodetool",
+              "subdomain-finder", "osint", "kalimati-format", "laxman-tools",
+              "remove-gemini-watermark"
+          }
+          ROOT_TOOL_FILES = {
+              "svg-logo-finder.html", "youtube-analytics.html",
+              "youtube-channel-analytics-pro.html", "youtube-video-seo-analyzer.html"
+          }
+          EXCLUDED = {"youtube-tools/archive"}
+          LOGO_NAMES = {
+              "logo.svg", "logo.png", "logo.webp", "logo.jpg", "logo.jpeg",
+              "icon.svg", "icon.png", "icon.webp", "icon.jpg", "icon.jpeg",
+              "favicon.svg", "favicon.png", "favicon.webp", "favicon.ico",
+              "apple-touch-icon.png"
+          }
+          class Metadata(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.title = False; self.title_text = []; self.description = ""
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if tag.lower() == "title": self.title = True
+                  if tag.lower() == "meta" and attrs.get("name", "").lower() == "description":
+                      self.description = attrs.get("content", "").strip()
+              def handle_endtag(self, tag):
+                  if tag.lower() == "title": self.title = False
+              def handle_data(self, data):
+                  if self.title: self.title_text.append(data.strip())
+
+          def included(path):
+              parts = path.parts
+              if path.suffix.lower() not in {".html", ".htm"}: return False
+              rel = path.as_posix()
+              if rel in {"tools/index.html"}: return False
+              if rel in ROOT_TOOL_FILES: return True
+              if not parts or parts[0] not in TOOL_ROOTS: return False
+              return not any(rel.startswith(folder + "/") for folder in EXCLUDED)
+
+          def category_for(rel):
+              root = rel.split("/", 1)[0]
+              labels = {
+                  "tools": "Laxman Tools", "youtube-tools": "YouTube Tools",
+                  "pdf-tools": "PDF Tools", "ai-tools": "AI Tools",
+                  "data-tools": "Data Tools", "image-tools": "Image Tools",
+                  "nepal-tools": "Nepali Tools", "nepse": "Finance Tools",
+                  "qrcodetool": "QR Tools", "subdomain-finder": "Developer Tools",
+                  "osint": "OSINT Tools", "kalimati-format": "Market Tools",
+                  "laxman-tools": "Laxman Tools",
+                  "remove-gemini-watermark": "Image Tools"
+              }
+              if root in labels: return labels[root]
+              name = Path(rel).stem.replace("-", " ").replace("_", " ").title()
+              if re.search(r"youtube|video|thumbnail", name, re.I): return "YouTube Tools"
+              return "General Tools"
+
+          metadata_path = Path("tools/tools-meta.json")
+          curated = json.loads(metadata_path.read_text(encoding="utf-8")) if metadata_path.exists() else {}
           entries = []
-          for page in sorted(root.rglob("*")):
-              if not page.is_file() or page.suffix.lower() not in extensions:
-                  continue
+          for page in sorted(ROOT.rglob("*")):
+              if not page.is_file() or not included(page): continue
               rel = page.as_posix()
-              if rel.lower() == "tools/index.html":
-                  continue
               folder = page.parent
-              logos = sorted(
-                  p for p in folder.rglob("*")
-                  if p.is_file() and p.name.lower() in logo_names
-              )
+              logos = sorted(p for p in folder.rglob("*") if p.is_file() and p.name.lower() in LOGO_NAMES)
               logo = "/" + logos[0].as_posix() if logos else ""
-              details = metadata.get(rel, {})
+              details = curated.get(rel, {})
+              parser = Metadata()
+              try: parser.feed(page.read_text(encoding="utf-8", errors="ignore")[:200000])
+              except Exception: pass
+              fallback_name = " ".join(parser.title_text).strip() or (
+                  folder.name.replace("-", " ").replace("_", " ").title()
+                  if page.name.lower() == "index.html" else
+                  page.stem.replace("-", " ").replace("_", " ").title()
+              )
               entries.append({
-                  "path": rel,
-                  "logo": logo,
-                  "name": details.get("name", page.parent.name.replace("-", " ").title() if page.name.lower() == "index.html" else page.stem.replace("-", " ").replace("_", " ").title()),
-                  "description": details.get("description", ""),
-                  "category": details.get("category", "Other"),
+                  "path": rel, "logo": logo,
+                  "name": details.get("name") or fallback_name,
+                  "description": details.get("description") or parser.description,
+                  "category": details.get("category") or category_for(rel),
                   "icon": details.get("icon", "fa-solid fa-screwdriver-wrench")
               })
 
           manifest = {
               "generatedAt": datetime.now(timezone.utc).isoformat(),
-              "count": len(entries),
-              "tools": entries
+              "count": len(entries), "tools": entries
           }
-          target = root / "tools.json"
-          target.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-          print(f"Generated {target} with {len(entries)} tool pages")
+          target = Path("tools/tools.json")
+          target.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+          print(f"Generated {target} with {len(entries)} tools across the repository")
           PY
-
       - name: Commit manifest when changed
         run: |
           git config user.name "github-actions[bot]"
