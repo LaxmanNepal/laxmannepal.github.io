@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T22:39:41.507039+00:00",
+  "generatedAt": "2026-11-17T22:48:58.335938+00:00",
   "count": 15,
   "tools": [
     {
@@ -72,7 +72,7 @@
       "name": "Slowed + Reverb Generator",
       "description": "Create a slowed and reverb-style audio effect in your browser.",
       "category": "Audio",
-      "icon": "fa-solid fa-waveform"
+      "icon": "fa-solid fa-music"
     },
     {
       "path": "tools/generator/strong-password-generator/index.html",
