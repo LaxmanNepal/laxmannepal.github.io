@@ -9,20 +9,10 @@ import html, json, re
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "search-index.json"
 SKIP_FILES = {
-    "search/index.html", "search.html", "404.html",
-    "2025/07/image-to-url.html", "2025/07/qr-code-scanner.html", "2025/07/usefull-links.html",
-    "2025/08/20-free-ai-tools-to-skyrocket-your.html", "2025/11/youtube-trending-keywords.html",
-    "2025/11/youtube-tag-extractor.html", "2025/11/youtube-thumbnail-downloader.html",
-    "2025/11/youtube-video-seo-analyzer.html", "2025/11/ai-powered-youtube-seo-deep-analyzer.html",
-    "2025/11/youtube-channel-info-extractor.html", "2025/11/youtube-channel-id-finder-analytics.html",
-    "2025/11/youtube-video-title-description-tag.html", "2025/11/youtube-description-extractor.html",
-    "2025/11/youtube-hashtag-extractor.html", "2025/11/youtube-title-generator.html",
-    "2025/11/youtube-nepal-trend-explorer.html", "2025/11/youtube-video-analytics.html",
-    "2025/12/strong-password-generator.html", "2025/12/qr-code-generator.html",
-    "2026/02/youtube-tag-generator.html", "2026/02/laxman-nepal-youtube-thumbnail.html",
-    "2026/01/facebook-post-generator.html",
+    # The search page must not list itself; the 404 page is not useful content.
+    "search/index.html", "404.html",
 }
-SKIP_PREFIXES = ("old/", "youtube-tools/archive/", ".git/", "node_modules/", "vendor/")
+SKIP_PREFIXES = (".git/", "node_modules/", "vendor/")
 IGNORED_TAGS = {"script", "style", "noscript", "svg", "nav", "header", "footer", "form", "button", "input", "textarea", "select", "template"}
 WORD_RE = re.compile(r"[\w][\w+.#-]{1,}", re.UNICODE)
 
