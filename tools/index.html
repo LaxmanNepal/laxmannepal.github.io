@@ -3,112 +3,143 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Browse free browser-based tools from Laxman Nepal, including generators, PDF utilities and creator tools."><link rel="canonical" href="https://laxmannepal.com.np/tools/">
-<title>All Free Online Tools — Laxman Nepal</title>
+<meta name="description" content="Discover every online tool in the Laxman Nepal tools directory. Browse by category, search, and open tools instantly.">
+<link rel="canonical" href="https://laxmannepal.com.np/tools/">
+<title>All Online Tools — Laxman Nepal</title>
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/blog.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="/assets/css/shared-shell.css">
+<script src="/assets/js/shared-shell.js"></script>
 <style>
-*{box-sizing:border-box}
-body{background:#f8fafc}
-.tools-page{min-height:100vh;padding:15px}
-.tool-hero{max-width:1000px;margin:0 auto 18px;padding:28px 15px 20px;text-align:center}
-.tool-hero .eyebrow{display:none}
-.tool-hero h1{margin:0;color:#0f172a;font-size:28px;line-height:1.2;letter-spacing:-.02em}
-.tool-hero h1 em{font-style:normal;color:#2563eb;background:none}
-.tool-hero>p:not(.eyebrow){max-width:800px;margin:10px auto 18px;color:#64748b;line-height:1.55;font-size:.9rem}
-.tool-search{max-width:600px;margin:0 auto 12px;position:relative}
-.tool-search i{position:absolute;left:16px;top:15px;color:#94a3b8}
-.tool-search input{width:100%;height:46px;padding:0 18px 0 45px;border:1px solid #dbe2ea;border-radius:14px;outline:none;background:#fff;font-size:.9rem}
-.tool-search input:focus{border-color:#2563eb;box-shadow:0 0 0 4px rgba(37,99,235,.08)}
-.tool-filters{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:0 auto 14px}
-.tool-filter{border:1px solid #dbe2ea;background:#fff;color:#475569;border-radius:999px;padding:6px 10px;font-size:.68rem;font-weight:800;cursor:pointer}
-.tool-filter.active,.tool-filter:hover{background:#0f172a;color:#fff}
-.tools-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:14px;text-align:left}
-.tool-card{min-height:118px;padding:11px;border:1px solid #e2e8f0;border-radius:14px;background:#fff;text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;transition:transform .2s,box-shadow .2s,border-color .2s}
-.tool-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,23,42,.09);border-color:#cbd5e1}
-.tool-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#f1f5f9;color:#2563eb;margin-bottom:8px;border:1px solid #e5e7eb;font-size:18px}
-.tool-card:nth-child(3n+1) .tool-icon{color:#2563eb;background:#eff6ff}
-.tool-card:nth-child(3n+2) .tool-icon{color:#7c3aed;background:#f5f3ff}
-.tool-card:nth-child(3n) .tool-icon{color:#db2777;background:#fdf2f8}
-.tool-category{display:none}
-.tool-card h2{font-size:.75rem;line-height:1.15;margin:0;color:#0f172a;font-weight:600;text-align:center}
-.tool-card p,.tool-open{display:none}
-.tool-empty{max-width:1000px;margin:0 auto;display:none;padding:30px;text-align:center;color:#64748b}
-.recent-tools{max-width:1000px;margin:15px auto;padding:14px 16px;border:1px solid #e2e8f0;border-radius:14px;background:#fff}
-.recent-tools[hidden]{display:none}
-.recent-tools h3{margin:0 0 9px;font-size:.82rem;color:#0f172a}
-.recent-tools-grid{display:flex;gap:7px;flex-wrap:wrap}
-.recent-tool{padding:7px 11px;background:#f1f5f9;border-radius:999px;color:#334155;text-decoration:none;font-size:.68rem;font-weight:800}
-@media(max-width:520px){.tools-page{padding:8px}.tool-hero{padding:22px 7px 16px}.tool-hero h1{font-size:24px}.tool-hero>p:not(.eyebrow){font-size:.78rem}.tools-grid{grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:9px}.tool-card{min-height:108px;padding:9px}.tool-icon{width:40px;height:40px}.tool-card h2{font-size:.7rem}}
+*{box-sizing:border-box}body{background:#f8fafc}.tools-page{min-height:75vh;padding:18px 14px 40px}
+.tool-hero{max-width:1100px;margin:0 auto 22px;padding:32px 14px 18px;text-align:center}
+.tool-hero h1{margin:0;color:#0f172a;font-size:clamp(26px,4vw,38px);letter-spacing:-.035em}
+.tool-hero h1 span{color:#2563eb}.tool-hero>p{max-width:720px;margin:12px auto 22px;color:#64748b;line-height:1.65;font-size:14px}
+.tool-search{max-width:680px;margin:0 auto 18px;position:relative}.tool-search i{position:absolute;left:17px;top:16px;color:#94a3b8}
+.tool-search input{width:100%;height:50px;padding:0 18px 0 48px;border:1px solid #dbe2ea;border-radius:14px;background:white;outline:none;font-size:14px}
+.tool-search input:focus{border-color:#2563eb;box-shadow:0 0 0 4px #2563eb14}
+.filter-heading{max-width:1100px;margin:0 auto 9px;text-align:left;color:#64748b;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.tool-filters{max-width:1100px;margin:0 auto 22px;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-start}
+.tool-filter{border:1px solid #dbe2ea;background:white;color:#475569;border-radius:999px;padding:8px 13px;font-size:12px;font-weight:700;cursor:pointer;transition:.18s}
+.tool-filter:hover,.tool-filter.active{background:#0f172a;color:white;border-color:#0f172a}
+.tool-filter .count{opacity:.7;margin-left:5px}
+.tools-summary{max-width:1100px;margin:0 auto 12px;display:flex;justify-content:space-between;gap:12px;color:#64748b;font-size:12px}
+.tools-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:13px}
+.tool-card{min-height:150px;padding:16px 12px 13px;border:1px solid #e2e8f0;border-radius:16px;background:#fff;text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .18s,box-shadow .18s,border-color .18s}
+.tool-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0f172a12;border-color:#bfdbfe}
+.tool-icon{width:50px;height:50px;display:grid;place-items:center;border-radius:15px;background:#eff6ff;color:#2563eb;margin-bottom:11px;font-size:21px;overflow:hidden}
+.tool-icon img{width:100%;height:100%;object-fit:contain;padding:7px}
+.tool-card h2{font-size:13px;line-height:1.35;margin:0;color:#0f172a;font-weight:750}
+.tool-card .tool-category{font-size:10px;color:#94a3b8;margin-top:6px}
+.tool-open{margin-top:auto;padding-top:10px;font-size:11px;font-weight:800;color:#2563eb}
+.tool-empty{display:none;max-width:1100px;margin:0 auto;padding:42px 15px;text-align:center;color:#64748b;background:#fff;border:1px dashed #cbd5e1;border-radius:16px}
+.tool-status{max-width:1100px;margin:0 auto 15px;padding:10px 13px;background:#eff6ff;border:1px solid #dbeafe;border-radius:10px;color:#1e40af;font-size:12px;text-align:left}
+.recent-tools{max-width:1100px;margin:22px auto 0;padding:15px 17px;border:1px solid #e2e8f0;border-radius:14px;background:#fff}.recent-tools[hidden]{display:none}
+.recent-tools h3{margin:0 0 10px;font-size:13px;color:#0f172a}.recent-tools-grid{display:flex;gap:8px;flex-wrap:wrap}
+.recent-tool{padding:7px 11px;background:#f1f5f9;border-radius:999px;color:#334155;text-decoration:none;font-size:11px;font-weight:750}
+@media(max-width:600px){.tools-page{padding:8px 9px 28px}.tool-hero{padding:24px 5px 12px}.tool-hero>p{font-size:13px}.tools-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.tool-card{min-height:137px;padding:13px 8px}.tool-icon{width:45px;height:45px}.tool-card h2{font-size:12px}.tool-filters{gap:6px}.tool-filter{padding:7px 10px;font-size:11px}}
 </style>
-<link rel="stylesheet" href="/assets/css/shared-shell.css"><script src="/assets/js/shared-shell.js"></script></head>
-<body><header class="shared-header" data-shared-shell="header"><a class="shared-brand" href="/" aria-label="Laxman Nepal home"><span class="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Blog · Digital</small></span></a><nav class="shared-desktop-nav" aria-label="Main menu"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI</a><a href="/blog/">Blog</a><a href="/apps/">Apps</a><a href="/youtube/">YouTube</a><details class="nav-dropdown"><summary>Explore</summary><div class="nav-dropdown-menu"><a href="/news/">News &amp; Updates</a><a href="/guides/">Guides</a><a href="/mobile/">Mobile</a><a href="/laptop/">Laptops</a><a href="/gadgets/">Gadgets</a><a href="/brands/">Brands</a></div></details></nav><div class="shared-actions"><form class="shared-search-box" action="/search/" method="get"><span aria-hidden="true">⌕</span><input name="q" type="search" autocomplete="off" aria-label="Search Laxman Nepal" placeholder="Search tools &amp; guides…"></form><button class="shared-menu-btn" type="button" data-shared-menu aria-label="Open menu" aria-expanded="false">☰</button></div></header><nav class="shared-mobile-menu" data-shared-mobile aria-label="Mobile menu"><div class="shared-mobile-head"><strong>Laxman Nepal</strong><button type="button" data-shared-close aria-label="Close menu">×</button></div><a href="/">🏠 Home</a><a href="/tools/">🧰 Tools</a><a href="/ai-tools/">✨ AI Tools</a><a href="/blog/">📝 Blog</a><a href="/apps/">📦 Apps</a><a href="/youtube/">▶ YouTube</a><a href="/guides/">📖 Guides</a><a href="/news/">📰 News</a><a href="/contact/">✉ Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav><div class="shared-menu-backdrop" data-shared-backdrop></div>
-
+</head>
+<body>
+<header class="shared-header" data-shared-shell="header"><a class="shared-brand" href="/" aria-label="Laxman Nepal home"><span class="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Blog · Digital</small></span></a><nav class="shared-desktop-nav" aria-label="Main menu"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI</a><a href="/blog/">Blog</a><a href="/apps/">Apps</a><a href="/youtube/">YouTube</a><details class="nav-dropdown"><summary>Explore</summary><div class="nav-dropdown-menu"><a href="/news/">News &amp; Updates</a><a href="/guides/">Guides</a><a href="/mobile/">Mobile</a><a href="/laptop/">Laptops</a><a href="/gadgets/">Gadgets</a><a href="/brands/">Brands</a></div></details></nav><div class="shared-actions"><form class="shared-search-box" action="/search/" method="get"><span aria-hidden="true">⌕</span><input name="q" type="search" autocomplete="off" aria-label="Search Laxman Nepal" placeholder="Search tools &amp; guides…"></form><button class="shared-menu-btn" type="button" data-shared-menu aria-label="Open menu" aria-expanded="false">☰</button></div></header>
+<nav class="shared-mobile-menu" data-shared-mobile aria-label="Mobile menu"><div class="shared-mobile-head"><strong>Laxman Nepal</strong><button type="button" data-shared-close aria-label="Close menu">×</button></div><a href="/">🏠 Home</a><a href="/tools/">🧰 Tools</a><a href="/ai-tools/">✨ AI Tools</a><a href="/blog/">📝 Blog</a><a href="/apps/">📦 Apps</a><a href="/youtube/">▶ YouTube</a><a href="/guides/">📖 Guides</a><a href="/news/">📰 News</a><a href="/contact/">✉ Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav><div class="shared-menu-backdrop" data-shared-backdrop></div>
 <main class="article-wrap tools-page">
 <section class="tool-hero">
-<h1>All-in-One Free Online Tools by Laxman Nepal</h1>
-<p>AI tools, PDF tools, image tools, YouTube tools, Nepali utilities and practical online resources — all in one place, with dedicated guides to help you use them.</p>
-<div class="tool-search"><i class="fa-solid fa-magnifying-glass"></i><input id="tool-search" type="search" placeholder="Search tools..." autocomplete="off" aria-label="Search tools"></div>
-<div class="tool-filters" id="tool-filters"></div>
-<div class="tools-grid" id="tools-grid"></div><div class="tool-empty" id="tool-empty">No tools match your search.</div>
+<h1>Explore <span>All Tools</span></h1>
+<p>One place for every tool published inside the Laxman Nepal tools directory. Search by name, browse category filters, and open any tool directly.</p>
+<div class="tool-search"><i class="fa-solid fa-magnifying-glass"></i><input id="tool-search" type="search" placeholder="Search all tools..." autocomplete="off" aria-label="Search all tools"></div>
 </section>
-<section class="recent-tools" id="recent-tools" hidden><h3>Recently Used</h3><div class="recent-tools-grid" id="recent-tools-grid"></div></section>
+<div class="filter-heading">Browse categories</div><div class="tool-filters" id="tool-filters" aria-label="Filter tools by category"></div>
+<div class="tools-summary"><span id="tool-count">Loading tools…</span><span>Auto-discovered from /tools/</span></div>
+<div class="tool-status" id="tool-status" role="status">Scanning the tools directory…</div>
+<div class="tools-grid" id="tools-grid"></div><div class="tool-empty" id="tool-empty">No tools match your search or selected category.</div>
+<section class="recent-tools" id="recent-tools" hidden><h3>Recently opened</h3><div class="recent-tools-grid" id="recent-tools-grid"></div></section>
 </main>
 <footer class="footer section-wrap"><div><strong>Laxman Nepal</strong><span>© 2026 All rights reserved.</span></div><div><span>Made with curiosity in Nepal.</span><a href="/">Back home ↑</a></div></footer>
-
 <script>
-const tools=[];
-const descriptions={AI:'Practical AI resources and experiments.','YouTube Tools':'Utilities for YouTube creators.','AI Tools':'AI tools for everyday work.','PDF Tools':'Useful PDF utilities.','Image Tools':'Common image editing utilities.','NEPSE Pulse':'Nepal stock-market intelligence.','Nepali Patro':'Nepali calendar and festivals.','Nisulka Tools':'Free browser productivity tools.','Text to Handwriting':'Turn typed text into handwriting style.','Progress Bar of the Year':'Track the year in real time.','Hindu Calendar':'Hindu calendar and cultural dates.'};
-const grid=document.getElementById('tools-grid'),filters=document.getElementById('tool-filters'),search=document.getElementById('tool-search'),empty=document.getElementById('tool-empty');let active='All';
-const cats=['All',...new Set(tools.map(t=>t[2]))];filters.innerHTML=cats.map(c=>`<button type="button" class="tool-filter${c==='All'?' active':''}" data-cat="${c}">${c}</button>`).join('');
-function render(){const q=search.value.trim().toLowerCase();const list=tools.filter(t=>(active==='All'||t[2]===active)&&(!q||(t[0]+' '+t[2]).toLowerCase().includes(q)));grid.innerHTML=list.map(t=>`<a class="tool-card" href="${t[3]}" data-tool="${t[0]}"><span class="tool-icon">${t[4]?`<img src="${t[4]}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:contain;border-radius:10px" onerror="this.remove()">`:`<i class="${(t[1].includes("youtube")||t[1].includes("facebook")||t[1].includes("blogger")||t[1].includes("instagram")||t[1].includes("linkedin"))?"fa-brands":"fa-solid"} ${t[1]}"></i>`}</span><span class="tool-category">${t[2]}</span><h2>${t[0]}</h2><p>${descriptions[t[0]]||'Useful digital resource from Laxman Nepal.'}</p><span class="tool-open">Open tool →</span></a>`).join('');empty.style.display=list.length?'none':'block';grid.style.display=list.length?'grid':'none';grid.querySelectorAll('.tool-card').forEach(a=>a.addEventListener('click',()=>track(a.dataset.tool)));}
-function track(name){try{let r=JSON.parse(localStorage.getItem('laxmanRecentTools')||'[]').filter(x=>x!==name);r.unshift(name);localStorage.setItem('laxmanRecentTools',JSON.stringify(r.slice(0,6)));updateRecent()}catch(e){}}
-function updateRecent(){try{const r=JSON.parse(localStorage.getItem('laxmanRecentTools')||'[]');const box=document.getElementById('recent-tools');const wrap=document.getElementById('recent-tools-grid');if(!r.length){box.hidden=true;return}box.hidden=false;wrap.innerHTML=r.map(n=>{const t=tools.find(x=>x[0]===n);return t?`<a class="recent-tool" href="${t[3]}">${t[0]}</a>`:''}).join('')}catch(e){}}
-filters.addEventListener('click',e=>{const b=e.target.closest('.tool-filter');if(!b)return;active=b.dataset.cat;filters.querySelectorAll('.tool-filter').forEach(x=>x.classList.toggle('active',x===b));render()});search.addEventListener('input',render);render();updateRecent();
-
-// Discover every tool page located anywhere inside /tools/.
-// Nested tools are included (for example generator/platform sub-tools).
-(async function discoverToolsDirectory(){
- try {
-  const response = await fetch('https://api.github.com/repos/LaxmanNepal/laxmannepal.github.io/git/trees/main?recursive=1');
-  if(!response.ok) return;
-  const data = await response.json();
-  if(!Array.isArray(data.tree)) return;
-  const paths = data.tree.filter(item=>item.type==='blob').map(item=>item.path);
-  const indexPaths = paths.filter(path=>/^tools\/.+\/index\.html$/i.test(path));
-  const known = new Set(tools.map(item=>item[3].replace(/^\//,'').replace(/\/$/,'').toLowerCase()));
-  const iconRules = [
-   ['password','fa-key'],['fake-post','fa-comments'],['slow-and-reverb','fa-music'],
-   ['generator','fa-wand-magic-sparkles'],['image','fa-image'],['pdf','fa-file-pdf'],
-   ['text','fa-font'],['converter','fa-right-left'],['qr','fa-qrcode'],
-   ['youtube','fa-youtube'],['audio','fa-file-audio'],['video','fa-film'],
-   ['calculator','fa-calculator'],['instagram','fa-instagram'],['facebook','fa-facebook'],
-   ['linkedin','fa-linkedin'],['threads','fa-at'],['twitter','fa-x-twitter']
-  ];
-  indexPaths.forEach(indexPath=>{
-   const folder=indexPath.slice(0,-11);
-   const relative=folder.slice('tools/'.length);
-   const url='/'+folder+'/';
-   if(known.has(folder.toLowerCase()) || known.has(url.replace(/^\//,'').replace(/\/$/,'').toLowerCase())) return;
-   const leaf=relative.split('/').pop();
-   const title=leaf.replace(/[-_]+/g,' ').replace(/\b\w/g,ch=>ch.toUpperCase());
-   const lower=relative.toLowerCase();
-   const iconRule=iconRules.find(rule=>lower.includes(rule[0]));
-   const parent=relative.includes('/')?relative.split('/').slice(0,-1).join(' / ').replace(/[-_]+/g,' '):'';
-   const category=parent?parent.replace(/\b\w/g,ch=>ch.toUpperCase()):'Tools';
-   const base='https://laxmannepal.com.np/'+folder+'/';
-   const logoFile=paths.find(path=>path.startsWith(folder+'/') && /(^|\/)(logo|icon|favicon|apple-touch-icon)\.(webp|png|svg|jpe?g)$/i.test(path.slice(folder.length+1)));
-   const logo=logoFile?'https://laxmannepal.com.np/'+logoFile:'';
-   tools.push([title,iconRule?iconRule[1]:'fa-screwdriver-wrench',category,url,logo]);
-   known.add(folder.toLowerCase());
-  });
-  tools.sort((a,b)=>a[3].localeCompare(b[3],undefined,{sensitivity:'base'}));
-  filters.innerHTML=['All',...new Set(tools.map(t=>t[2]))].map(category=>'<button type="button" class="tool-filter'+(category==='All'?' active':'')+'" data-cat="'+category+'">'+category+'</button>').join('');
-  render();
-  updateRecent();
- } catch(error) { console.info('Tools directory discovery unavailable; showing existing tools.',error); }
-})(); 
-
+(() => {
+ 'use strict';
+ const REPO='LaxmanNepal/laxmannepal.github.io';
+ const RAW='https://laxmannepal.com.np/';
+ const grid=document.getElementById('tools-grid'), filters=document.getElementById('tool-filters');
+ const search=document.getElementById('tool-search'), empty=document.getElementById('tool-empty');
+ const count=document.getElementById('tool-count'), status=document.getElementById('tool-status');
+ const tools=[]; let active='All';
+ const iconRules=[
+  [/password|security|credential/i,'fa-key'],[/fake.?post|social/i,'fa-comments'],[/slow|reverb|music|audio/i,'fa-music'],
+  [/generator|create|maker/i,'fa-wand-magic-sparkles'],[/image|photo|picture/i,'fa-image'],[/pdf/i,'fa-file-pdf'],
+  [/text|typing|unicode|preeti/i,'fa-font'],[/convert|converter/i,'fa-right-left'],[/qr/i,'fa-qrcode'],
+  [/youtube|video/i,'fa-video'],[/calculator|calc/i,'fa-calculator'],[/calendar|patro/i,'fa-calendar-days'],
+  [/nepali|nepal/i,'fa-language'],[/code|html|json|developer/i,'fa-code'],[/finance|money|share|nepse/i,'fa-chart-line'],
+  [/file|document/i,'fa-file-lines'],[/time|date|clock/i,'fa-clock'],[/color|palette/i,'fa-palette']
+ ];
+ function titleFromPath(path){return path.split('/').pop().replace(/\.html?$/i,'').replace(/[-_]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}
+ function categoryFromPath(path){
+  const parts=path.split('/').slice(1,-1);
+  if(parts.length) return parts[0].replace(/[-_]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+  const name=titleFromPath(path).toLowerCase();
+  if(/nepali|preeti|unicode|patro/.test(name))return 'Nepali Tools';
+  if(/youtube|thumbnail|video/.test(name))return 'Creator Tools';
+  if(/image|photo|pdf|file/.test(name))return 'File & Media';
+  if(/password|generator|converter/.test(name))return 'Utilities';
+  return 'General Tools';
+ }
+ function iconFor(path){const found=iconRules.find(([re])=>re.test(path));return found?found[1]:'fa-screwdriver-wrench'}
+ function toolUrl(path){return path.toLowerCase().endsWith('/index.html')?'/'+path.slice(0,-10):'/'+path}
+ function makeCard(tool){
+  const a=document.createElement('a');a.className='tool-card';a.href=tool.url;a.dataset.name=tool.name.toLowerCase();a.dataset.category=tool.category.toLowerCase();
+  const icon=document.createElement('span');icon.className='tool-icon';
+  if(tool.logo){const img=document.createElement('img');img.src=tool.logo;img.alt='';img.loading='lazy';img.onerror=()=>{img.remove();icon.innerHTML='<i class="fa-solid '+tool.icon+'"></i>'};icon.appendChild(img)}
+  else icon.innerHTML='<i class="fa-solid '+tool.icon+'"></i>';
+  const h=document.createElement('h2');h.textContent=tool.name;
+  const cat=document.createElement('span');cat.className='tool-category';cat.textContent=tool.category;
+  const open=document.createElement('span');open.className='tool-open';open.textContent='Open tool →';
+  a.append(icon,h,cat,open);a.addEventListener('click',()=>track(tool.path));return a;
+ }
+ function render(){
+  const q=search.value.trim().toLowerCase();const list=tools.filter(t=>(active==='All'||t.category===active)&&(!q||(t.name+' '+t.category+' '+t.path).toLowerCase().includes(q)));
+  grid.replaceChildren(...list.map(makeCard));grid.style.display=list.length?'grid':'none';empty.style.display=list.length?'none':'block';
+  count.textContent=list.length+' of '+tools.length+' tools';
+ }
+ function buildFilters(){
+  const cats=['All',...Array.from(new Set(tools.map(t=>t.category))).sort((a,b)=>a.localeCompare(b))];
+  filters.replaceChildren(...cats.map(cat=>{const b=document.createElement('button');b.type='button';b.className='tool-filter'+(cat===active?' active':'');b.dataset.cat=cat;b.textContent=cat;const n=document.createElement('span');n.className='count';n.textContent=cat==='All'?tools.length:tools.filter(t=>t.category===cat).length;b.appendChild(n);return b}));
+ }
+ function track(path){
+  try{let r=JSON.parse(localStorage.getItem('laxmanRecentTools')||'[]').filter(x=>x!==path);r.unshift(path);localStorage.setItem('laxmanRecentTools',JSON.stringify(r.slice(0,8)));updateRecent()}catch(e){}
+ }
+ function updateRecent(){
+  try{const recent=JSON.parse(localStorage.getItem('laxmanRecentTools')||'[]');const section=document.getElementById('recent-tools');const wrap=document.getElementById('recent-tools-grid');const valid=recent.map(p=>tools.find(t=>t.path===p)).filter(Boolean);section.hidden=!valid.length;wrap.replaceChildren(...valid.map(t=>{const a=document.createElement('a');a.className='recent-tool';a.href=t.url;a.textContent=t.name;return a}))}catch(e){}
+ }
+ filters.addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(!b)return;active=b.dataset.cat;filters.querySelectorAll('.tool-filter').forEach(x=>x.classList.toggle('active',x===b));render()});
+ search.addEventListener('input',render);
+ async function discover(){
+  try{
+   const response=await fetch('https://api.github.com/repos/'+REPO+'/git/trees/main?recursive=1',{headers:{Accept:'application/vnd.github+json'}});
+   if(!response.ok)throw new Error('GitHub directory request failed ('+response.status+').');
+   const data=await response.json();if(!Array.isArray(data.tree))throw new Error('GitHub did not return a file tree.');
+   const paths=data.tree.filter(item=>item.type==='blob'&&/^tools\/.+\.html?$/i.test(item.path)&&!/^tools\/index\.html$/i.test(item.path));
+   const allPaths=data.tree.filter(item=>item.type==='blob').map(item=>item.path);
+   paths.sort((a,b)=>a.path.localeCompare(b.path));
+   for(const item of paths){
+    const path=item.path;const folder=path.slice(0,path.lastIndexOf('/'));
+    const isIndex=/\/index\.html$/i.test(path);
+    const name=isIndex?folder.split('/').pop().replace(/[-_]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase()):titleFromPath(path);
+    const candidates=allPaths.filter(p=>p.startsWith(folder+'/')&&/(^|\/)(logo|icon|favicon|apple-touch-icon)\.(svg|png|webp|jpe?g)$/i.test(p));
+    const logo=candidates.length?RAW+candidates[0]:'';
+    tools.push({path,name,category:categoryFromPath(path),url:toolUrl(path),icon:iconFor(path),logo});
+   }
+   buildFilters();render();updateRecent();
+   status.textContent=tools.length?('Found '+tools.length+' HTML tool pages. Categories and logos are generated automatically where available.'):'No HTML files were found under /tools/.';
+   if(!tools.length)status.style.background='#fff7ed';
+  }catch(error){
+   status.textContent='Could not load the live GitHub file list. Please refresh the page or check the repository API limit.';
+   status.style.background='#fff7ed';status.style.color='#9a3412';count.textContent='Tools unavailable';
+   console.error('Tools directory discovery failed:',error);
+  }
+ }
+ discover();
+})();
 </script>
 </body></html>
