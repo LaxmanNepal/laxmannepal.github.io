@@ -16,7 +16,7 @@ class SearchIndexTests(unittest.TestCase):
         <p>Use formulas to organize spreadsheets.</p><script>secretInjectedTerm</script></main>
         <footer>Footer boilerplate</footer></body></html>"""
         item = parse_page(source, "guides/excel/index.html")
-        self.assertEqual(item["url"], "/guides/excel/")
+        self.assertEqual(item["url"], "/guides/excel/index.html")
         self.assertIn("vlookup", item["headings"].lower())
         self.assertIn("spreadsheets", item["content"].lower())
         self.assertNotIn("never index", item["content"].lower())
