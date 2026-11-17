@@ -8,11 +8,7 @@ import html, json, re
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "search-index.json"
-SKIP_FILES = {
-    # The search page must not list itself; the 404 page is not useful content.
-    "search/index.html", "404.html",
-}
-SKIP_PREFIXES = (".git/", "node_modules/", "vendor/")
+SKIP_PREFIXES = (".git/",)
 IGNORED_TAGS = {"script", "style", "noscript", "svg", "nav", "header", "footer", "form", "button", "input", "textarea", "select", "template"}
 WORD_RE = re.compile(r"[\w][\w+.#-]{1,}", re.UNICODE)
 
@@ -89,7 +85,7 @@ def category(path, title):
 
 def parse_page(content, rel_path):
     rel = rel_path.replace("\\", "/").lstrip("./")
-    if rel in SKIP_FILES or rel.startswith(SKIP_PREFIXES) or not rel.lower().endswith((".html", ".htm")): return None
+    if rel.startswith(SKIP_PREFIXES) or not rel.lower().endswith(".html"): return None
     parser = PageParser()
     try:
         parser.feed(content); parser.close()
@@ -118,19 +114,14 @@ def parse_page(content, rel_path):
 def build_index(root):
     items = []
     for file in root.rglob("*"):
-        if not file.is_file() or file.suffix.lower() not in {".html", ".htm"}: continue
+        if not file.is_file() or file.suffix.lower() != ".html": continue
         rel = file.relative_to(root).as_posix()
-        if rel.startswith(SKIP_PREFIXES) or rel in SKIP_FILES: continue
+        if rel.startswith(SKIP_PREFIXES): continue
         try: item = parse_page(file.read_text(encoding="utf-8", errors="ignore"), rel)
         except OSError: continue
         if item: items.append(item)
-    unique = {}
-    for item in items:
-        key = item["url"].rstrip("/") or "/"
-        current = unique.get(key)
-        if current is None or len(item["content"]) + len(item["description"]) > len(current["content"]) + len(current["description"]):
-            unique[key] = item
-    return sorted(unique.values(), key=lambda item: (item["title"].casefold(), item["url"]))
+    # Keep one search result per HTML file, even when canonical metadata overlaps.
+    return sorted(items, key=lambda item: (item["title"].casefold(), item["url"]))
 
 def main():
     items = build_index(ROOT)
