@@ -91,11 +91,10 @@ def parse_page(content, rel_path):
         parser.feed(content); parser.close()
     except Exception:
         return None
-    title_text = clean(" ".join(parser.title_parts)) or clean(" ".join(parser.h1_parts))
-    if not title_text or re.search(r"\b(redirecting|article moved|page not found)\b", title_text, re.I): return None
-    if "noindex" in parser.robots or parser.has_refresh: return None
-    fallback = "/" if rel == "index.html" else "/" + rel[:-10] if rel.endswith("/index.html") else "/" + rel
-    page_url = canonical_path(parser.canonical, fallback)
+    title_text = clean(" ".join(parser.title_parts)) or clean(" ".join(parser.h1_parts)) or Path(rel).stem.replace("-", " ").replace("_", " ").strip().title() or rel
+    # Every HTML file gets its own result and direct file URL. Do not let canonical,
+    # noindex, refresh, or missing-title metadata hide repository pages.
+    page_url = "/" + rel
     description = clean(parser.meta.get("description") or parser.meta.get("og:description") or " ".join(parser.h1_parts) or title_text)
     headings = clean(" ".join(parser.heading_parts))
     body = clean(" ".join(parser.body_parts))[:1800]
