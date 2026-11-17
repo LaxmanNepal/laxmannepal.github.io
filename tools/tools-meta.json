@@ -51,7 +51,7 @@
     "name": "Slowed + Reverb Generator",
     "description": "Create a slowed and reverb-style audio effect in your browser.",
     "category": "Audio",
-    "icon": "fa-solid fa-waveform"
+    "icon": "fa-solid fa-music"
   },
   "tools/generator/strong-password-generator/index.html": {
     "name": "Strong Password Generator",
