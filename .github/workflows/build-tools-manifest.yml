@@ -6,6 +6,25 @@ on:
     paths:
       - 'tools/**/*.html'
       - 'tools/**/*.htm'
+      - 'youtube-tools/**/*.html'
+      - 'youtube-tools/**/*.htm'
+      - 'pdf-tools/**/*.html'
+      - 'pdf-tools/**/*.htm'
+      - 'ai-tools/**/*.html'
+      - 'data-tools/**/*.html'
+      - 'image-tools/**/*.html'
+      - 'nepal-tools/**/*.html'
+      - 'nepse/**/*.html'
+      - 'qrcodetool/**/*.html'
+      - 'subdomain-finder/**/*.html'
+      - 'osint/**/*.html'
+      - 'kalimati-format/**/*.html'
+      - 'laxman-tools/**/*.html'
+      - 'remove-gemini-watermark/**/*.html'
+      - 'svg-logo-finder.html'
+      - 'youtube-analytics.html'
+      - 'youtube-channel-analytics-pro.html'
+      - 'youtube-video-seo-analyzer.html'
       - 'tools/tools-meta.json'
       - '.github/workflows/build-tools-manifest.yml'
   workflow_dispatch:
@@ -16,7 +35,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: main-automation-commits
+  group: build-tools-manifest-main
   cancel-in-progress: false
 
 jobs:
