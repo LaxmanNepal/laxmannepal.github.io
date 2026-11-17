@@ -131,16 +131,16 @@
     const data=await response.json();
     if(!Array.isArray(data.tree))throw new Error('GitHub did not return a file tree.');
     const allPaths=data.tree.filter(item=>item.type==='blob').map(item=>item.path);
-    entries=data.tree.filter(item=>item.type==='blob'&&/^tools\\/.+\\.html?$/i.test(item.path)&&!/^tools\\/index\\.html$/i.test(item.path))
-      .map(item=>{const folder=item.path.slice(0,item.path.lastIndexOf('/'));const logo=allPaths.find(p=>p.startsWith(folder+'/')&&/(^|\\/)(logo|icon|favicon|apple-touch-icon)\\.(svg|png|webp|jpe?g)$/i.test(p));return {path:item.path,logo:logo?'/'+logo:''};});
+    entries=data.tree.filter(item=>item.type==='blob'&&/^tools\/.+\.html?$/i.test(item.path)&&!/^tools\/index\.html$/i.test(item.path))
+      .map(item=>{const folder=item.path.slice(0,item.path.lastIndexOf('/'));const logo=allPaths.find(p=>p.startsWith(folder+'/')&&/(^|\/)(logo|icon|favicon|apple-touch-icon)\.(svg|png|webp|jpe?g)$/i.test(p));return {path:item.path,logo:logo?'/'+logo:''};});
    }
    entries.sort((a,b)=>a.path.localeCompare(b.path));
    for(const entry of entries){
     const path=typeof entry==='string'?entry:entry.path;
-    if(!path||!/^tools\\/.+\\.html?$/i.test(path)||/^tools\\/index\\.html$/i.test(path))continue;
+    if(!path||!/^tools\/.+\.html?$/i.test(path)||/^tools\/index\.html$/i.test(path))continue;
     const folder=path.slice(0,path.lastIndexOf('/'));
-    const isIndex=/\\/index\\.html$/i.test(path);
-    const name=isIndex?folder.split('/').pop().replace(/[-_]+/g,' ').replace(/\\b\\w/g,c=>c.toUpperCase()):titleFromPath(path);
+    const isIndex=/\/index\.html$/i.test(path);
+    const name=isIndex?folder.split('/').pop().replace(/[-_]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase()):titleFromPath(path);
     tools.push({path,name,category:categoryFromPath(path),url:toolUrl(path),icon:iconFor(path),logo:(entry&&entry.logo)||''});
    }
    buildFilters();render();updateRecent();
