@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: main-automation-commits
+  group: refresh-app-snapshots-main
   cancel-in-progress: false
 
 jobs:
