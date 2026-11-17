@@ -131,7 +131,8 @@
  }
  function iconFor(path){const found=iconRules.find(([re])=>re.test(path));return found?found[1]:'fa-screwdriver-wrench'}
  function toolUrl(path){return path.toLowerCase().endsWith('/index.html')?'/'+path.slice(0,-10):'/'+path}
- function iconClass(value){return /^(fa-solid|fa-regular|fa-brands)\\s/.test(value||'')?value:'fa-solid '+(value||'fa-screwdriver-wrench')}\n function makeCard(tool){
+ function iconClass(value){return /^(fa-solid|fa-regular|fa-brands)\s/.test(value||'')?value:'fa-solid '+(value||'fa-screwdriver-wrench' )}
+ function makeCard(tool){
   const a=document.createElement('article');a.className='tool-card';a.dataset.name=tool.name.toLowerCase();a.dataset.category=tool.category.toLowerCase();
   const icon=document.createElement('span');icon.className='tool-icon';
   if(tool.logo){const img=document.createElement('img');img.src=tool.logo;img.alt='';img.loading='lazy';img.onerror=()=>{img.remove();icon.innerHTML='<i class="'+tool.icon+'"></i>'};icon.appendChild(img)}
