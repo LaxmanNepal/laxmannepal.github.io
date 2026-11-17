@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="नेपालका जातजाति, थर, गोत्र र समुदायसम्बन्धी जानकारी खोज्नुहोस्।">
+<link rel="canonical" href="https://laxmannepal.com.np/tools/cast-in-nepal/">
+<title>नेपालका जातजाति र थर निर्देशिका — Laxman Nepal</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/blog.css">
+<link rel="stylesheet" href="/assets/css/shared-shell.css">
+<script src="/assets/js/shared-shell.js"></script>
+<style>
+:root{color-scheme:dark;--cast-bg:#071426;--cast-panel:#10243d;--cast-panel2:#132b47;--cast-line:#263f5e;--cast-text:#e8f0fb;--cast-muted:#91a8c2;--cast-blue:#2694ff;--cast-red:#ff4d5d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cast-bg)!important;color:var(--cast-text)!important;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif}
+.shared-header{background:#0d1e33!important;border:1px solid #263f5e!important;color:#edf5ff!important;box-shadow:0 8px 26px #0005!important}
+.shared-header a,.shared-header strong{color:#edf5ff!important}
+.cast-page{width:min(100% - 24px,900px);margin:0 auto;padding:24px 0 56px;min-height:80vh}
+.cast-hero{text-align:center;padding:22px 8px 16px}
+.cast-kicker{display:inline-flex;align-items:center;gap:7px;padding:5px 10px;border:1px solid #284665;background:#102743;border-radius:99px;color:#9bcaff;font-size:11px;font-weight:800}
+.cast-hero h1{margin:14px 0 9px;font-size:clamp(25px,5vw,38px);line-height:1.35;letter-spacing:-.035em;color:#f4f8ff}
+.cast-hero p{max-width:690px;margin:0 auto;color:#a8bad0;font-size:13px;line-height:1.8}
+.cast-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;max-width:610px;margin:18px auto 0}
+.cast-stat{padding:12px 8px;background:linear-gradient(145deg,#142c49,#0e2037);border:1px solid #294462;border-radius:13px}
+.cast-stat strong{display:block;font-size:20px;color:#fff}
+.cast-stat span{display:block;margin-top:3px;color:#9db1ca;font-size:10px}
+.cast-search{position:relative;margin:16px auto 10px;max-width:720px}
+.cast-search input{width:100%;height:46px;border:1px solid #34516f;border-radius:12px;background:#10243d;color:#f2f7ff;padding:0 14px 0 42px;font-size:13px;outline:0}
+.cast-search input::placeholder{color:#8198b3}
+.cast-search input:focus{border-color:#319aff;box-shadow:0 0 0 3px #1688ff20}
+.cast-search:before{content:"⌕";position:absolute;left:15px;top:5px;font-size:25px;color:#91a9c5}
+.cast-hint{font-size:10px;color:#8299b5;text-align:center;margin:7px 0 15px}
+.cast-tabs{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:0 auto 13px}
+.cast-tab{border:1px solid #2b4563;background:#10243d;color:#b8c8db;border-radius:8px;padding:7px 11px;font-size:11px;font-weight:750;cursor:pointer}
+.cast-tab.active,.cast-tab:hover{background:#e84155;border-color:#e84155;color:white}
+.cast-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:11px;background:#0d2036;border:1px solid #233c59;border-radius:13px;margin-bottom:17px}
+.cast-filters label{display:block;color:#9cb0c8;font-size:10px;margin:0 0 5px}
+.cast-filters select{width:100%;height:36px;border:1px solid #2d4968;border-radius:8px;background:#132b47;color:#e4edf8;padding:0 8px;font-size:11px}
+.cast-results-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 2px 9px;color:#91a8c2;font-size:11px}
+.cast-results-head strong{color:#eaf3ff}
+.cast-list{display:grid;gap:9px}
+.cast-card{padding:13px 14px 12px;border:1px solid #294361;border-radius:12px;background:linear-gradient(145deg,#142b46,#10243c);box-shadow:0 7px 18px #0002}
+.cast-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.cast-card h2{font-size:17px;line-height:1.35;margin:0;color:#f4f8ff}
+.cast-alias{color:#9db3ce;font-size:10px;margin-top:3px}
+.cast-badge{white-space:nowrap;border:1px solid #34516e;border-radius:99px;padding:4px 7px;color:#9fcaff;font-size:9px;font-weight:750}
+.cast-meta{display:grid;grid-template-columns:82px minmax(0,1fr);gap:5px 9px;margin-top:10px;font-size:11px;line-height:1.55}
+.cast-meta dt{color:#7f9ab8}
+.cast-meta dd{margin:0;color:#d4e0ef;overflow-wrap:anywhere}
+.cast-meta dd em{font-style:normal;color:#ff6673;font-weight:700}
+.cast-card-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;padding-top:8px;border-top:1px solid #263f5d}
+.cast-card-foot small{color:#8198b3;font-size:9px}
+.cast-more{border:0;background:none;color:#ff6673;font-size:10px;font-weight:800;cursor:pointer;padding:4px 0}
+.cast-empty{display:none;text-align:center;padding:28px 14px;border:1px dashed #36516f;border-radius:12px;color:#9db1c9;font-size:12px}
+.cast-note{margin-top:18px;padding:12px 14px;border:1px solid #294462;border-radius:11px;background:#0d2036;color:#9eb2ca;font-size:10px;line-height:1.7}
+.cast-note strong{color:#dce9f8}
+.cast-modal{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:16px;background:#020914cc}
+.cast-modal.open{display:flex}
+.cast-modal-box{width:min(100%,520px);max-height:82vh;overflow:auto;background:#10243d;border:1px solid #3a5878;border-radius:15px;padding:18px;box-shadow:0 20px 70px #0009}
+.cast-modal-head{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.cast-modal-head h2{margin:0;color:#fff;font-size:20px}
+.cast-modal-close{border:1px solid #36516f;background:#1b3552;color:white;border-radius:8px;width:32px;height:32px;cursor:pointer}
+.cast-modal-box p{font-size:12px;line-height:1.8;color:#b7c8dc}
+@media(max-width:560px){.cast-page{width:calc(100% - 18px);padding-top:12px}.cast-hero{padding-top:18px}.cast-stats{gap:6px}.cast-stat{padding:10px 4px}.cast-stat strong{font-size:18px}.cast-filters{grid-template-columns:1fr 1fr}.cast-filters label:last-child{grid-column:1/-1}.cast-card{padding:12px}.cast-meta{grid-template-columns:70px minmax(0,1fr);font-size:10px}.cast-card h2{font-size:16px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="shared-header" data-shared-shell="header">
+<a class="shared-brand" href="/" aria-label="Laxman Nepal home"><span class="shared-logo">LN</span><span><strong>Laxman Nepal</strong><small>Tools · AI · Blog · Digital</small></span></a>
+<nav class="shared-desktop-nav" aria-label="Main menu"><a href="/">Home</a><a href="/tools/">Tools</a><a href="/ai-tools/">AI</a><a href="/blog/">Blog</a><a href="/apps/">Apps</a><a href="/youtube/">YouTube</a></nav>
+<div class="shared-actions"><button class="shared-menu-btn" type="button" data-shared-menu aria-label="Open menu" aria-expanded="false">☰</button></div>
+</header>
+<nav class="shared-mobile-menu" data-shared-mobile aria-label="Mobile menu"><div class="shared-mobile-head"><strong>Laxman Nepal</strong><button type="button" data-shared-close aria-label="Close menu">×</button></div><a href="/">🏠 Home</a><a href="/tools/">🧰 Tools</a><a href="/ai-tools/">✨ AI Tools</a><a href="/blog/">📝 Blog</a><a href="/apps/">📦 Apps</a><a href="/youtube/">▶ YouTube</a></nav><div class="shared-menu-backdrop" data-shared-backdrop></div>
+<main class="cast-page">
+<section class="cast-hero">
+<span class="cast-kicker">🇳🇵 नेपाली समुदाय निर्देशिका</span>
+<h1>नेपालका जातजाति, थर र गोत्र</h1>
+<p>नेपालका विभिन्न जाति, समुदाय, थर तथा गोत्रसम्बन्धी उपलब्ध जानकारी खोज्नुहोस्। नाम, समुदाय वा थरबाट खोजी गरी सूचीलाई आफ्नो आवश्यकताअनुसार फिल्टर गर्नुहोस्।</p>
+<div class="cast-stats"><div class="cast-stat"><strong id="total-count">०</strong><span>सूचीमा रहेका समूह</span></div><div class="cast-stat"><strong>७</strong><span>प्रदेश</span></div><div class="cast-stat"><strong>१००%</strong><span>निःशुल्क खोज</span></div></div>
+</section>
+<div class="cast-search"><input id="cast-search" type="search" placeholder="जाति, थर, गोत्र वा समुदाय खोज्नुहोस्..." autocomplete="off" aria-label="जाति, थर वा गोत्र खोज्नुहोस्"></div>
+<p class="cast-hint">उदाहरण: थारु, नेवार, क्षेत्री, राई, गुरुङ, विश्वकर्मा...</p>
+<div class="cast-tabs" id="cast-tabs" aria-label="समुदायअनुसार फिल्टर"><button class="cast-tab active" data-group="सबै" type="button">सबै</button><button class="cast-tab" data-group="आदिवासी जनजाति" type="button">आदिवासी जनजाति</button><button class="cast-tab" data-group="पहाडी समुदाय" type="button">पहाडी समुदाय</button><button class="cast-tab" data-group="मधेसी समुदाय" type="button">मधेसी समुदाय</button><button class="cast-tab" data-group="दलित समुदाय" type="button">दलित समुदाय</button></div>
+<section class="cast-filters" aria-label="थप फिल्टर">
+<div><label for="region-filter">भौगोलिक क्षेत्र</label><select id="region-filter"><option value="">सबै क्षेत्र</option><option>हिमाल</option><option>पहाड</option><option>तराई</option><option>देशभर</option></select></div>
+<div><label for="letter-filter">नामको अक्षर</label><select id="letter-filter"><option value="">सबै अक्षर</option><option>अ</option><option>आ</option><option>इ</option><option>उ</option><option>क</option><option>ख</option><option>ग</option><option>घ</option><option>च</option><option>ज</option><option>त</option><option>थ</option><option>द</option><option>न</option><option>प</option><option>ब</option><option>म</option><option>र</option><option>ल</option><option>व</option><option>श</option><option>स</option><option>ह</option></select></div>
+<div><label for="sort-filter">क्रमबद्ध गर्नुहोस्</label><select id="sort-filter"><option value="az">नाम (अ–ज्ञ)</option><option value="za">नाम (ज्ञ–अ)</option></select></div>
+</section>
+<div class="cast-results-head"><span id="result-count">सूची लोड हुँदैछ...</span><strong>समुदाय विवरण</strong></div>
+<section class="cast-list" id="cast-list" aria-live="polite"></section>
+<div class="cast-empty" id="cast-empty">मिल्दो नतिजा भेटिएन। अर्को शब्द वा फिल्टर प्रयोग गर्नुहोस्।</div>
+<aside class="cast-note"><strong>जानकारीसम्बन्धी नोट:</strong> जाति, थर, गोत्र, उपसमूह र क्षेत्रीय पहिचान परिवार, स्थान, भाषा तथा परम्पराअनुसार फरक हुन सक्छन्। यहाँका विवरणलाई अन्तिम वा सबै समुदायमा लागू हुने आधिकारिक वर्गीकरण नमान्नुहोस्। महत्वपूर्ण वंशावली वा संस्कारसम्बन्धी निर्णयअघि सम्बन्धित परिवार/समुदायका जानकारसँग पुष्टि गर्नुहोस्।</aside>
+</main>
+<footer class="footer section-wrap"><div><strong>Laxman Nepal</strong><span>© 2026 All rights reserved.</span></div><div><span>Made with curiosity in Nepal.</span><a href="/tools/">All tools ↑</a></div></footer>
+<div class="cast-modal" id="cast-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="cast-modal-box"><div class="cast-modal-head"><h2 id="modal-title"></h2><button class="cast-modal-close" id="modal-close" type="button" aria-label="बन्द गर्नुहोस्">×</button></div><div id="modal-body"></div></div></div>
+<script>
+(()=>{
+'use strict';
+const data=[
+{name:'अधिकारी',aliases:'Adhikari',group:'पहाडी समुदाय',region:'पहाड',category:'ब्राह्मण / क्षेत्री परम्परामा पाइने थर',gotra:'परिवारअनुसार फरक',details:'अधिकारी थर नेपालका विभिन्न पहाडी समुदायमा पाइन्छ। एउटै थर भएका सबै परिवारको वंश, गोत्र वा सामाजिक पृष्ठभूमि एउटै हुन्छ भन्ने छैन।'},
+{name:'अर्याल',aliases:'Aryal',group:'पहाडी समुदाय',region:'पहाड',category:'ब्राह्मण समुदायमा प्रचलित थर',gotra:'परिवारको वंशावलीअनुसार पुष्टि गर्नुपर्ने',details:'अर्याल नेपालमा पाइने प्रचलित थरमध्ये एक हो। गोत्र तथा कुलपरम्पराको विवरण परिवारअनुसार पुष्टि गर्नुपर्छ।'},
+{name:'आचार्य',aliases:'Acharya',group:'पहाडी समुदाय',region:'देशभर',category:'ब्राह्मण समुदायमा प्रचलित थर',gotra:'परिवारअनुसार फरक',details:'आचार्य थर विभिन्न स्थानमा पाइन्छ। थर मात्रका आधारमा निश्चित गोत्र वा वंश निर्धारण गर्न मिल्दैन।'},
+{name:'उप्रेती',aliases:'Upreti',group:'पहाडी समुदाय',region:'पहाड',category:'पहाडी हिन्दू समुदायमा पाइने थर',gotra:'परिवारअनुसार फरक',details:'उप्रेती थरको गोत्र तथा कुलपरम्परा सम्बन्धित परिवारको वंशावलीबाट पुष्टि गर्नुपर्छ।'},
+{name:'कँडेल',aliases:'Kandel',group:'पहाडी समुदाय',region:'पहाड',category:'पहाडी समुदायमा प्रचलित थर',gotra:'परिवारअनुसार फरक',details:'कँडेल थर विभिन्न जिल्लामा पाइन्छ। एउटै थरभित्र पनि वंशपरम्परा फरक हुन सक्छ।'},
+{name:'कँुवर',aliases:'Kunwar',group:'पहाडी समुदाय',region:'पहाड',category:'क्षेत्री समुदायमा पाइने थर',gotra:'परिवारअनुसार फरक',details:'कुँवर थरको ऐतिहासिक र पारिवारिक पृष्ठभूमि स्थानअनुसार फरक हुन सक्छ।'},
+{name:'कार्की',aliases:'Karki',group:'पहाडी समुदाय',region:'पहाड',category:'क्षेत्री समुदायमा प्रचलित थर',gotra:'परिवारअनुसार फरक',details:'कार्की थर नेपालका विभिन्न क्षेत्रमा पाइन्छ। निश्चित गोत्रका लागि परिवारको वंशावली आवश्यक हुन्छ।'},
+{name:'गुरुङ',aliases:'Gurung / तमु',group:'आदिवासी जनजाति',region:'पहाड',category:'तमु समुदाय',gotra:'कुल/पच्यु परम्परा समुदायअनुसार',details:'गुरुङ समुदायलाई तमु पनि भनिन्छ। भाषा, संस्कार र कुलपरम्परामा स्थानीय तथा पारिवारिक विविधता पाइन्छ।'},
+{name:'घर्ती',aliases:'Gharti',group:'पहाडी समुदाय',region:'पहाड',category:'विभिन्न समुदायमा पाइने थर',gotra:'परिवारअनुसार फरक',details:'घर्ती थर विभिन्न सामाजिक तथा क्षेत्रीय समुदायमा पाइने भएकाले थरबाट मात्र समुदाय वा गोत्र निश्चित हुँदैन।'},
+{name:'चौधरी',aliases:'Chaudhary',group:'मधेसी समुदाय',region:'तराई',category:'थारु तथा अन्य तराई समुदायमा पाइने थर/उपाधि',gotra:'समुदाय र परिवारअनुसार फरक',details:'चौधरी थर/उपाधि तराईका विभिन्न समुदायमा प्रयोग हुन्छ। यसलाई एउटै जातीय समूहको सूचक मान्न मिल्दैन।'},
+{name:'थारु',aliases:'Tharu',group:'आदिवासी जनजाति',region:'तराई',category:'आदिवासी जनजाति',gotra:'उपसमुदाय र कुलपरम्पराअनुसार',details:'थारु समुदाय तराईका विभिन्न जिल्लामा बसोबास गर्छ। भाषा, रीतिरिवाज र पहिचानमा क्षेत्रीय विविधता छ।'},
+{name:'थकुरी',aliases:'Thakuri',group:'पहाडी समुदाय',region:'पहाड',category:'पहाडी समुदाय',gotra:'परिवारअनुसार फरक',details:'थकुरी पहाडी समुदायको पहिचान हो। वंश, गोत्र र स्थानीय परम्पराको विवरण परिवारअनुसार फरक हुन सक्छ।'},
+{name:'दनुवार',aliases:'Danuwar',group:'आदिवासी जनजाति',region:'पहाड',category:'आदिवासी जनजाति',gotra:'समुदायगत परम्पराअनुसार',details:'दनुवार समुदायको बसोबास विशेषगरी मध्य तथा पूर्वी नेपालका विभिन्न क्षेत्रमा पाइन्छ।'},
+{name:'नेवार',aliases:'Newar / नेवा:',group:'आदिवासी जनजाति',region:'पहाड',category:'नेवा: समुदाय',gotra:'परिवार, जातीय समूह र परम्पराअनुसार',details:'नेवार समुदायभित्र अनेक जातीय समूह, पेशागत परम्परा, भाषा र संस्कार छन्। एउटै गोत्र वा थर प्रणाली सबैमा लागू हुँदैन।'},
+{name:'परियार',aliases:'Pariyar',group:'दलित समुदाय',region:'देशभर',category:'पहाडी दलित समुदाय',gotra:'परिवार/समुदायको परम्पराअनुसार',details:'परियार नेपालका पहाडी दलित समुदायमध्ये एक हो। समुदायभित्र थर र पारिवारिक परम्परामा विविधता पाइन्छ।'},
+{name:'पौडेल',aliases:'Paudel / Poudel',group:'पहाडी समुदाय',region:'पहाड',category:'ब्राह्मण समुदायमा प्रचलित थर',gotra:'परिवारअनुसार पुष्टि गर्नुपर्ने',details:'पौडेल थर नेपालका विभिन्न क्षेत्रमा पाइन्छ। गोत्रको पुष्टि पारिवारिक वंशावलीबाट गर्नुपर्छ।'},
+{name:'बस्नेत',aliases:'Basnet',group:'पहाडी समुदाय',region:'पहाड',category:'क्षेत्री समुदायमा प्रचलित थर',gotra:'परिवारअनुसार फरक',details:'बस्नेत थर विभिन्न जिल्लामा पाइन्छ। थर एउटै भए पनि पारिवारिक वंशावली फरक हुन सक्छ।'},
+{name:'बिष्ट',aliases:'Bista / Bisht',group:'पहाडी समुदाय',region:'पहाड',category:'पहाडी समुदायमा पाइने थर',gotra:'परिवारअनुसार फरक',details:'बिष्ट थरको प्रयोग क्षेत्रअनुसार फरक छ। गोत्र र वंशसम्बन्धी विवरण परिवारबाट पुष्टि गर्नुपर्छ।'},
+{name:'बुढाथोकी',aliases:'Budhathoki',group:'पहाडी समुदाय',region:'पहाड',category:'पहाडी समुदायमा प्रचलित थर',gotra:'परिवारअनुसार फरक',details:'बुढाथोकी थर नेपालका विभिन्न पहाडी क्षेत्रमा पाइन्छ।'},
+{name:'मगर',aliases:'Magar',group:'आदिवासी जनजाति',region:'पहाड',category:'आदिवासी जनजाति',gotra:'थर/कुल र परम्पराअनुसार',details:'मगर समुदायका भाषा, संस्कार र उपसमूहमा क्षेत्रीय विविधता पाइन्छ।'},
+{name:'राई',aliases:'Rai',group:'आदिवासी जनजाति',region:'पहाड',category:'किरात समुदाय',gotra:'पाछा/कुल परम्पराअनुसार',details:'राई पहिचानअन्तर्गत विभिन्न किराती भाषिक तथा सांस्कृतिक समूह छन्। पाछा र संस्कार समुदायअनुसार फरक हुन्छ।'},
+{name:'लामा',aliases:'Lama',group:'आदिवासी जनजाति',region:'हिमाल',category:'विभिन्न हिमाली/बौद्ध समुदायमा पाइने उपाधि वा थर',gotra:'समुदायअनुसार',details:'लामा शब्द विभिन्न हिमाली तथा बौद्ध परम्परामा उपाधि वा थरका रूपमा प्रयोग हुन्छ। एउटै जातीय समूहको मात्र परिचायक होइन।'},
+{name:'लिम्बू',aliases:'Limbu / याक्थुङ',group:'आदिवासी जनजाति',region:'पहाड',category:'किरात समुदाय',gotra:'थर/वंश र मुन्धुम परम्पराअनुसार',details:'लिम्बू समुदायले आफूलाई याक्थुङ पनि भन्छ। भाषा, संस्कार र वंशपरम्परा समुदायभित्र विविध छन्।'},
+{name:'विश्वकर्मा',aliases:'Bishwakarma / Kami',group:'दलित समुदाय',region:'देशभर',category:'पहाडी दलित समुदाय',gotra:'परिवार/समुदायको परम्पराअनुसार',details:'विश्वकर्मा समुदाय परम्परागत धातुकला तथा अन्य पेशासँग ऐतिहासिक रूपमा जोडिएको छ। आज समुदायका पेशा र जीवनशैली विविध छन्।'},
+{name:'शर्मा',aliases:'Sharma',group:'पहाडी समुदाय',region:'देशभर',category:'ब्राह्मण समुदायमा प्रयोग हुने थर/उपाधि',gotra:'परिवारअनुसार फरक',details:'शर्मा थर वा उपाधि विभिन्न क्षेत्रमा प्रयोग हुन्छ। यसबाट मात्र गोत्र निश्चित गर्न मिल्दैन।'},
+{name:'सुनार',aliases:'Sunar',group:'दलित समुदाय',region:'देशभर',category:'पहाडी दलित समुदाय',gotra:'परिवार/समुदायको परम्पराअनुसार',details:'सुनार समुदायका पारिवारिक थर र स्थानीय पहिचानमा विविधता पाइन्छ।'},
+{name:'साह',aliases:'Sah / Saha',group:'मधेसी समुदाय',region:'तराई',category:'तराईका विभिन्न समुदायमा पाइने थर',gotra:'समुदाय र परिवारअनुसार फरक',details:'साह थर मधेस/तराईका विभिन्न भाषिक तथा सामाजिक समुदायमा पाइन्छ।'}
+];
+const list=document.getElementById('cast-list'),search=document.getElementById('cast-search'),empty=document.getElementById('cast-empty'),count=document.getElementById('result-count');
+const region=document.getElementById('region-filter'),letter=document.getElementById('letter-filter'),sort=document.getElementById('sort-filter');
+let active='सबै';
+const devanagariDigits=n=>String(n).replace(/\d/g,d=>'०१२३४५६७८९'[Number(d)]);
+document.getElementById('total-count').textContent=devanagariDigits(data.length);
+function render(){
+const q=search.value.trim().toLocaleLowerCase('ne');
+let rows=data.filter(x=>(active==='सबै'||x.group===active)&&(!region.value||x.region===region.value)&&(!letter.value||x.name.startsWith(letter.value))&&(!q||(x.name+' '+x.aliases+' '+x.group+' '+x.category+' '+x.gotra+' '+x.details).toLocaleLowerCase('ne').includes(q)));
+rows.sort((a,b)=>sort.value==='za'?b.name.localeCompare(a.name,'ne'):a.name.localeCompare(b.name,'ne'));
+list.replaceChildren();
+rows.forEach(x=>{
+const card=document.createElement('article');card.className='cast-card';
+const top=document.createElement('div');top.className='cast-card-top';
+const heading=document.createElement('div');const h=document.createElement('h2');h.textContent=x.name;const alias=document.createElement('div');alias.className='cast-alias';alias.textContent=x.aliases;heading.append(h,alias);
+const badge=document.createElement('span');badge.className='cast-badge';badge.textContent=x.group;top.append(heading,badge);
+const dl=document.createElement('dl');dl.className='cast-meta';
+[['समुदाय',x.category],['क्षेत्र',x.region],['गोत्र / कुल',x.gotra],['थप जानकारी',x.details]].forEach(([k,v])=>{const dt=document.createElement('dt');dt.textContent=k;const dd=document.createElement('dd');dd.textContent=v;dl.append(dt,dd)});
+const foot=document.createElement('div');foot.className='cast-card-foot';const note=document.createElement('small');note.textContent='परम्परा परिवारअनुसार फरक हुन सक्छ';const more=document.createElement('button');more.className='cast-more';more.type='button';more.textContent='थप विवरण ↗';more.addEventListener('click',()=>openModal(x));foot.append(note,more);card.append(top,dl,foot);list.append(card);
+});
+count.textContent=devanagariDigits(rows.length)+' / '+devanagariDigits(data.length)+' नतिजा';
+empty.style.display=rows.length?'none':'block';list.style.display=rows.length?'grid':'none';
+}
+function openModal(x){document.getElementById('modal-title').textContent=x.name;const body=document.getElementById('modal-body');body.replaceChildren();[x.aliases,x.category,'समूह: '+x.group,'क्षेत्र: '+x.region,'गोत्र / कुल: '+x.gotra,x.details,'नोट: एउटै थर वा समुदायभित्र पनि पारिवारिक परम्परा फरक हुन सक्छ।'].forEach(t=>{const p=document.createElement('p');p.textContent=t;body.append(p)});document.getElementById('cast-modal').classList.add('open')}
+document.querySelectorAll('.cast-tab').forEach(b=>b.addEventListener('click',()=>{active=b.dataset.group;document.querySelectorAll('.cast-tab').forEach(x=>x.classList.toggle('active',x===b));render()}));
+[search,region,letter,sort].forEach(el=>el.addEventListener(el===search?'input':'change',render));
+document.getElementById('modal-close').addEventListener('click',()=>document.getElementById('cast-modal').classList.remove('open'));
+document.getElementById('cast-modal').addEventListener('click',e=>{if(e.target.id==='cast-modal')e.currentTarget.classList.remove('open')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('cast-modal').classList.remove('open')});
+render();
+})();
+</script>
+</body>
+</html>
