@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-17T08:03:50.371264+00:00.
+Generated from the latest analytics snapshot: 2026-11-17T21:04:22.809607+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -75,16 +75,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/06/top 10 free online tools will save you.html
 - Top queries: No page-query rows
 
-### /p/link-shortner-generator.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/link shortner generator.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/link shortner generator.html
-- Top queries: No page-query rows
-
 ### /p/about.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -93,6 +83,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/about.html
+- Top queries: No page-query rows
+
+### /p/link-shortner-generator.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/link shortner generator.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/link shortner generator.html
 - Top queries: No page-query rows
 
 ### /p/privacy-policy.html — SEO score 0/100
@@ -125,6 +125,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/cookies policy.html
 - Top queries: No page-query rows
 
+### /p/disclaimer.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/disclaimer.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/disclaimer.html
+- Top queries: No page-query rows
+
 ### /p/sitemap.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -145,14 +155,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/terms and conditions.html
 - Top queries: No page-query rows
 
-### /p/disclaimer.html — SEO score 0/100
+### /2024/09/convert-anything-to-anything-free.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: p/disclaimer.html | Laxman Nepal
+- Recommended title: 2024/09/convert anything to anything free.html | Laxman Nep…
 - Current description: Missing
-- Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/disclaimer.html
+- Recommended description: Learn about 2024/09/convert anything to anything free.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/09/convert anything to anything free.html
 - Top queries: No page-query rows
 
 ### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
@@ -175,14 +185,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/02/m3um3u8 player tool by laxman nepal.html
 - Top queries: No page-query rows
 
-### /2024/09/convert-anything-to-anything-free.html — SEO score 0/100
+### /p/contact-us.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: 2024/09/convert anything to anything free.html | Laxman Nep…
+- Recommended title: p/contact us.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about 2024/09/convert anything to anything free.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/09/convert anything to anything free.html
+- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/contact us.html
 - Top queries: No page-query rows
 
 ### /2024/09/free-pdf-to-image-converter-tools.html — SEO score 0/100
@@ -203,16 +213,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/07/image prompt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/07/image prompt.html
-- Top queries: No page-query rows
-
-### /p/contact-us.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/contact us.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/contact us.html
 - Top queries: No page-query rows
 
 ### /2023/07/currency-converter-by-laxman-nepal.html — SEO score 0/100
@@ -273,6 +273,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/06/facebook video downloader save hd.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/06/facebook video downloader save hd.html
+- Top queries: No page-query rows
+
+### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/01/how to convert number to text in excel.html | Laxma…
+- Current description: Missing
+- Recommended description: Learn about 2023/01/how to convert number to text in excel.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/01/how to convert number to text in excel.html
 - Top queries: No page-query rows
 
 ### /2023/07/increase-website-view-by-laxman-nepal.html — SEO score 0/100
@@ -415,16 +425,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/youtube tools.html
 - Top queries: No page-query rows
 
-### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/01/how to convert number to text in excel.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2023/01/how to convert number to text in excel.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/01/how to convert number to text in excel.html
-- Top queries: No page-query rows
-
 ### /2023/07/age-calculator-tool-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -483,16 +483,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/google drive download link generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/google drive download link generator.html
-- Top queries: No page-query rows
-
-### /p/image.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/image.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/image.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/image.html
 - Top queries: No page-query rows
 
 ### /p/pdf.html — SEO score 0/100
@@ -573,16 +563,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/11/how to upload your music to spotify.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/11/how to upload your music to spotify.html
-- Top queries: No page-query rows
-
-### /2025/07/free-online-courses-by-laxman-nepal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/07/free online courses by laxman nepal.html | Laxman N…
-- Current description: Missing
-- Recommended description: Learn about 2025/07/free online courses by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/07/free online courses by laxman nepal.html
 - Top queries: No page-query rows
 
 ### /ai.html — SEO score 0/100
@@ -785,6 +765,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/free icon finder tools.html
 - Top queries: No page-query rows
 
+### /2025/07/free-online-courses-by-laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/07/free online courses by laxman nepal.html | Laxman N…
+- Current description: Missing
+- Recommended description: Learn about 2025/07/free online courses by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/07/free online courses by laxman nepal.html
+- Top queries: No page-query rows
+
 ### /apps/hindu — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -925,6 +915,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: laptop prices in nepal
 - Top queries: No page-query rows
 
+### /mobile-price-in-nepal/phones/vivo-v60-lite-5g-8gb-256gb/ — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: mobile price in nepal/phones/vivo v60 lite 5g 8gb 256gb | L…
+- Current description: Missing
+- Recommended description: Learn about mobile price in nepal/phones/vivo v60 lite 5g 8gb 256gb with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: mobile price in nepal/phones/vivo v60 lite 5g 8gb 256gb
+- Top queries: No page-query rows
+
 ### /news/khabardhara-premium.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -933,6 +933,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about news/khabardhara premium.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: news/khabardhara premium.html
+- Top queries: No page-query rows
+
+### /p/image.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/image.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/image.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/image.html
 - Top queries: No page-query rows
 
 ### /p/laxman-nepal-search.html — SEO score 0/100
@@ -1023,6 +1033,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about topics/idea 06.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: topics/idea 06.html
+- Top queries: No page-query rows
+
+### /youtube-tools/youtube-thumbnail-downloader.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: youtube tools/youtube thumbnail downloader.html | Laxman Ne…
+- Current description: Missing
+- Recommended description: Learn about youtube tools/youtube thumbnail downloader.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: youtube tools/youtube thumbnail downloader.html
 - Top queries: No page-query rows
 
 ### /2026/01/blogger-post-extractor.html — SEO score 40/100
@@ -3485,26 +3505,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: OnePlus 15 16GB/512GB Price in Nepal
 - Top queries: No page-query rows
 
-### /mobile-price-in-nepal/phones/oneplus-15r-5g-mobile-phone-12gb-256gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: OnePlus 15R 5G Mobile Phone 12GB/256GB Price in Nepal, Specs & St
-- Recommended title: OnePlus 15R 5G Mobile Phone 12GB/256GB Price in Nepal | Lax…
-- Current description: Compare OnePlus 15R 5G Mobile Phone 12GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and
-- Recommended description: Learn about OnePlus 15R 5G Mobile Phone 12GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: OnePlus 15R 5G Mobile Phone 12GB/256GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/oneplus-15r-5g-mobile-phone-12gb-512gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: OnePlus 15R 5G Mobile Phone 12GB/512GB Price in Nepal, Specs & St
-- Recommended title: OnePlus 15R 5G Mobile Phone 12GB/512GB Price in Nepal | Lax…
-- Current description: Compare OnePlus 15R 5G Mobile Phone 12GB/512GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and
-- Recommended description: Learn about OnePlus 15R 5G Mobile Phone 12GB/512GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: OnePlus 15R 5G Mobile Phone 12GB/512GB Price in Nepal
-- Top queries: No page-query rows
-
 ### /mobile-price-in-nepal/phones/oneplus-15r/ — SEO score 85/100
 - Issues: Title length 63
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -3823,16 +3823,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Realme 15 Pro price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Realme 15 Pro Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Realme 15 Pro Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/realme-16-5g-8gb-256gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Realme 16 5G 8GB/256GB Price in Nepal, Specs & Store Offers | Lax
-- Recommended title: Realme 16 5G 8GB/256GB Price in Nepal | Laxman Nepal
-- Current description: Compare Realme 16 5G 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Realme 16 5G 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Realme 16 5G 8GB/256GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/realme-c100i-4g-4gb-128gb/ — SEO score 85/100
@@ -4415,26 +4405,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Samsung Galaxy A25 5G Yellow / 256GB / 8GB 256GB Price in Nepal
 - Top queries: No page-query rows
 
-### /mobile-price-in-nepal/phones/samsung-galaxy-a27-5g-6gb-128gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Samsung Galaxy A27 5G 6GB/128GB Price in Nepal, Specs & Store Off
-- Recommended title: Samsung Galaxy A27 5G 6GB/128GB Price in Nepal | Laxman Nep…
-- Current description: Compare Samsung Galaxy A27 5G 6GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and produc
-- Recommended description: Learn about Samsung Galaxy A27 5G 6GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Samsung Galaxy A27 5G 6GB/128GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/samsung-galaxy-a27-5g-8gb-256gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Samsung Galaxy A27 5G 8GB/256GB Price in Nepal, Specs & Store Off
-- Recommended title: Samsung Galaxy A27 5G 8GB/256GB Price in Nepal | Laxman Nep…
-- Current description: Compare Samsung Galaxy A27 5G 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and produc
-- Recommended description: Learn about Samsung Galaxy A27 5G 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Samsung Galaxy A27 5G 8GB/256GB Price in Nepal
-- Top queries: No page-query rows
-
 ### /mobile-price-in-nepal/phones/samsung-galaxy-a27-5g/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -4753,36 +4723,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Samsung Galaxy Z Fold8 Ultra 5G 12GB/512GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications
 - Recommended description: Learn about Samsung Galaxy Z Fold8 Ultra 5G 12GB/512GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Samsung Galaxy Z Fold8 Ultra 5G 12GB/512GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/vivo-v50-5g/ — SEO score 85/100
-- Issues: Title length 63
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Vivo V50 5G Price in Nepal, Specs & Store Offers | Laxman Nepal
-- Recommended title: Vivo V50 5G Price in Nepal | Laxman Nepal
-- Current description: Compare Vivo V50 5G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Vivo V50 5G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Vivo V50 5G Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/vivo-v60-lite-5g-12gb-256gb/ — SEO score 85/100
-- Issues: Title length 64
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Vivo V60 Lite 5G 12GB/256GB Price in Nepal, Specs & Store Offers
-- Recommended title: Vivo V60 Lite 5G 12GB/256GB Price in Nepal | Laxman Nepal
-- Current description: Compare Vivo V60 Lite 5G 12GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product im
-- Recommended description: Learn about Vivo V60 Lite 5G 12GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Vivo V60 Lite 5G 12GB/256GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/vivo-v60-lite-5g-8gb-256gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Vivo V60 Lite 5G 8GB/256GB Price in Nepal, Specs & Store Offers |
-- Recommended title: Vivo V60 Lite 5G 8GB/256GB Price in Nepal | Laxman Nepal
-- Current description: Compare Vivo V60 Lite 5G 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product ima
-- Recommended description: Learn about Vivo V60 Lite 5G 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Vivo V60 Lite 5G 8GB/256GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/vivo-v70-fe-5g-features-8gb-256gb/ — SEO score 85/100

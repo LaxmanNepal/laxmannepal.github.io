@@ -10,8 +10,21 @@
     "seo_audit": "ok",
     "snapshot": "ok"
   },
-  "updatedAt": "2026-11-17T08:03:50.443645+00:00",
+  "updatedAt": "2026-11-17T21:04:22.883768+00:00",
   "history": [
+    {
+      "status": "success",
+      "stage": "complete",
+      "message": "GA4 + Search Console sync completed successfully.",
+      "checks": {
+        "credentials": "ok",
+        "ga4": "ok",
+        "search_console": "ok",
+        "seo_audit": "ok",
+        "snapshot": "ok"
+      },
+      "updatedAt": "2026-11-17T21:04:22.883768+00:00"
+    },
     {
       "status": "success",
       "stage": "complete",
@@ -154,19 +167,6 @@
         "snapshot": "ok"
       },
       "updatedAt": "2026-11-12T20:03:45.618366+00:00"
-    },
-    {
-      "status": "success",
-      "stage": "complete",
-      "message": "GA4 + Search Console sync completed successfully.",
-      "checks": {
-        "credentials": "ok",
-        "ga4": "ok",
-        "search_console": "ok",
-        "seo_audit": "ok",
-        "snapshot": "ok"
-      },
-      "updatedAt": "2026-11-12T07:21:07.257048+00:00"
     }
   ]
 }
