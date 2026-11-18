@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-17T21:04:22.809607+00:00.
+Generated from the latest analytics snapshot: 2026-11-18T07:40:05.870486+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -1035,6 +1035,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: topics/idea 06.html
 - Top queries: No page-query rows
 
+### /youtube-tools/youtube-analytics.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: youtube tools/youtube analytics.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about youtube tools/youtube analytics.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: youtube tools/youtube analytics.html
+- Top queries: No page-query rows
+
 ### /youtube-tools/youtube-thumbnail-downloader.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1693,6 +1703,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Terms of use for the Laxman Nepal website, browser-based tools, tutorials and digital resources.
 - Recommended description: Learn about Terms of use. with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Terms of use.
+- Top queries: No page-query rows
+
+### /tools/cast-in-nepal/ — SEO score 70/100
+- Issues: Description length 63, Thin content (136 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: नेपालका जातजाति र थर निर्देशिका — Laxman Nepal
+- Recommended title: नेपालका जातजाति, थर र गोत्र | Laxman Nepal
+- Current description: नेपालका जातजाति, थर, गोत्र र समुदायसम्बन्धी जानकारी खोज्नुहोस्।
+- Recommended description: Learn about नेपालका जातजाति, थर र गोत्र with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: नेपालका जातजाति, थर र गोत्र
 - Top queries: No page-query rows
 
 ### /tools/generator/slow-and-reverb-generator/ — SEO score 70/100
@@ -5325,6 +5345,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Xiaomi 18 Pro and 18 Pro Max: 8,500mAh Battery, 200MP Camera and What…
 - Top queries: No page-query rows
 
+### /tools/ — SEO score 85/100
+- Issues: Thin content (103 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Free Online Tools Directory — Laxman Nepal
+- Recommended title: Explore All Tools | Laxman Nepal
+- Current description: Explore free online tools by Laxman Nepal: Nepali typing and converters, generators, creator utilities, security tools and more. Search tools and open them inst
+- Recommended description: Learn about Explore All Tools with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Explore All Tools
+- Top queries: No page-query rows
+
 ### /tools/generator/ — SEO score 85/100
 - Issues: Thin content (117 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -5593,6 +5623,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: '); background-size: cover; background-position: center; } .channel-info { padding: 0 2rem 2rem; margin-top: -60px; position: relative; z-index: 1; } .channel-a
 - Recommended description: Learn about Enhanced YouTube Channel Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Enhanced YouTube Channel Analytics
+- Top queries: No page-query rows
+
+### /tools/index.html — SEO score 85/100
+- Issues: Thin content (103 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Free Online Tools Directory — Laxman Nepal
+- Recommended title: Explore All Tools | Laxman Nepal
+- Current description: Explore free online tools by Laxman Nepal: Nepali typing and converters, generators, creator utilities, security tools and more. Search tools and open them inst
+- Recommended description: Learn about Explore All Tools with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Explore All Tools
 - Top queries: No page-query rows
 
 ### /youtube-tools/archive/laxman-nepal-youtube-thumbnail.html — SEO score 85/100
