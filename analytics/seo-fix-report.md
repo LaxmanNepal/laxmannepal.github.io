@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-18T07:40:05.870486+00:00.
+Generated from the latest analytics snapshot: 2026-11-18T20:41:28.846932+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -105,6 +105,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/privacy policy.html
 - Top queries: No page-query rows
 
+### /p/terms-and-conditions.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/terms and conditions.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/terms and conditions.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/terms and conditions.html
+- Top queries: No page-query rows
+
 ### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -143,16 +153,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/sitemap.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/sitemap.html
-- Top queries: No page-query rows
-
-### /p/terms-and-conditions.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/terms and conditions.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/terms and conditions.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/terms and conditions.html
 - Top queries: No page-query rows
 
 ### /2024/09/convert-anything-to-anything-free.html — SEO score 0/100
@@ -243,6 +243,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/qr code generator by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/qr code generator by laxman nepal.html
+- Top queries: No page-query rows
+
+### /2023/12/download-nepali-and-english-cursive-font.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/12/download nepali and english cursive font.html | Lax…
+- Current description: Missing
+- Recommended description: Learn about 2023/12/download nepali and english cursive font.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/12/download nepali and english cursive font.html
 - Top queries: No page-query rows
 
 ### /2024/10/top-20-websites-for-modded-apks-your.html — SEO score 0/100
@@ -443,16 +453,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/free keyword generator by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/free keyword generator by laxman nepal.html
-- Top queries: No page-query rows
-
-### /2023/12/download-nepali-and-english-cursive-font.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/12/download nepali and english cursive font.html | Lax…
-- Current description: Missing
-- Recommended description: Learn about 2023/12/download nepali and english cursive font.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/12/download nepali and english cursive font.html
 - Top queries: No page-query rows
 
 ### /2024/09/netflix-free-website-watch-movies.html — SEO score 0/100
@@ -663,16 +663,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/09/svg download free.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/09/svg download free.html
-- Top queries: No page-query rows
-
-### /2024/09/top-10-free-ai-image-creation-tools.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/09/top 10 free ai image creation tools.html | Laxman N…
-- Current description: Missing
-- Recommended description: Learn about 2024/09/top 10 free ai image creation tools.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/09/top 10 free ai image creation tools.html
 - Top queries: No page-query rows
 
 ### /2024/10/all-in-one-video-downloader.html — SEO score 0/100
@@ -1745,6 +1735,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Advanced YouTube Video SEO Analyzer
 - Top queries: No page-query rows
 
+### /github/githubnepal/ — SEO score 70/100
+- Issues: H1 count 0, Thin content (4 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Nepal Projects — GitHub Explorer
+- Recommended title: Nepal Projects — GitHub Explorer | Laxman Nepal
+- Current description: Discover Nepal-related open-source projects and projects from verified Nepali creators.
+- Recommended description: Learn about Nepal Projects — GitHub Explorer with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Nepal Projects — GitHub Explorer
+- Top queries: No page-query rows
+
 ### /2025/11/youtube-video-seo-analyzer.html — SEO score 70/100
 - Issues: Noindex, Thin content (122 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1753,6 +1753,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Fetching data from YouTube API and generating comprehensive analysis...
 - Recommended description: Learn about Advanced YouTube Video SEO Analyzer with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Advanced YouTube Video SEO Analyzer
+- Top queries: No page-query rows
+
+### /github/ — SEO score 70/100
+- Issues: H1 count 0, Thin content (6 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: GitHub Explorer — Discover Open-Source Projects
+- Recommended title: GitHub Explorer — Discover Open-Source Projects | Laxman Ne…
+- Current description: Discover useful GitHub repositories across AI, developer tools, apps, libraries, games and more.
+- Recommended description: Learn about GitHub Explorer — Discover Open-Source Projects with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: GitHub Explorer — Discover Open-Source Projects
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-video-analytics.html — SEO score 70/100
@@ -1773,6 +1783,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Discover the 20 best free AI tools websites for content creation, productivity, and design in 2025. Boost your workflow with these AI-powered platforms.
 - Recommended description: Learn about 20 Best Free AI Tools Websites for Content & Productivity in 2025 with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 20 Best Free AI Tools Websites for Content & Productivity in 2025
+- Top queries: No page-query rows
+
+### /github/android/ — SEO score 70/100
+- Issues: H1 count 0, Thin content (6 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Android Apps and Games — GitHub Explorer
+- Recommended title: Android Apps and Games — GitHub Explorer | Laxman Nepal
+- Current description: Explore Android applications and Android/mobile games from public GitHub repositories.
+- Recommended description: Learn about Android Apps and Games — GitHub Explorer with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Android Apps and Games — GitHub Explorer
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-channel-id-finder-analytics.html — SEO score 70/100
@@ -1815,6 +1835,36 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Advanced YouTube Keyword Explorer
 - Top queries: No page-query rows
 
+### /github/games/ — SEO score 70/100
+- Issues: H1 count 0, Thin content (4 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Mobile Games — GitHub Explorer
+- Recommended title: Mobile Games — GitHub Explorer | Laxman Nepal
+- Current description: Discover open-source mobile games and Android game projects from GitHub.
+- Recommended description: Learn about Mobile Games — GitHub Explorer with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Mobile Games — GitHub Explorer
+- Top queries: No page-query rows
+
+### /github/hiddenapps/ — SEO score 70/100
+- Issues: H1 count 0, Thin content (7 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Hidden Open-Source Android Apps — GitHub Explorer
+- Recommended title: Hidden Open-Source Android Apps — GitHub Explorer | Laxman…
+- Current description: Discover lesser-known, openly licensed Android apps, privacy tools and FOSS projects from GitHub.
+- Recommended description: Learn about Hidden Open-Source Android Apps — GitHub Explorer with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Hidden Open-Source Android Apps — GitHub Explorer
+- Top queries: No page-query rows
+
+### /youtube-tools/archive/youtube-channel-analytics-pro.html — SEO score 70/100
+- Issues: Title length 64, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Channel Analytics Tool – Free Channel & Video Insights |
+- Recommended title: YouTube Channel Analytics | Laxman Nepal
+- Current description: Analyze a public YouTube channel with recent video views, likes, comments, keywords and practical SEO insights. Free YouTube analytics tool by Laxman Nepal.
+- Recommended description: Learn about YouTube Channel Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Channel Analytics
+- Top queries: No page-query rows
+
 ### /2025/12/qr-code-generator.html — SEO score 70/100
 - Issues: Description length 21, Noindex
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1823,6 +1873,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Digital Presence Tool
 - Recommended description: Learn about QR Generator Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: QR Generator Pro
+- Top queries: No page-query rows
+
+### /github/alternatives/ — SEO score 70/100
+- Issues: H1 count 0, Thin content (5 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Open-source alternatives — GitHub Explorer
+- Recommended title: Open-source alternatives — GitHub Explorer | Laxman Nepal
+- Current description: Find alternatives to open-source software using repository topics, categories, license and maintenance metadata.
+- Recommended description: Learn about Open-source alternatives — GitHub Explorer with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Open-source alternatives — GitHub Explorer
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal — SEO score 70/100
@@ -1863,16 +1923,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Analyze a public YouTube channel with subscriber, view and video statistics using the YouTube Data API. Free YouTube analytics tool by Laxman Nepal.
 - Recommended description: Learn about YouTube Analytics Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: YouTube Analytics Pro
-- Top queries: No page-query rows
-
-### /youtube-tools/archive/youtube-channel-analytics-pro.html — SEO score 70/100
-- Issues: Title length 64, Noindex
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: YouTube Channel Analytics Tool – Free Channel & Video Insights |
-- Recommended title: YouTube Channel Analytics | Laxman Nepal
-- Current description: Analyze a public YouTube channel with recent video views, likes, comments, keywords and practical SEO insights. Free YouTube analytics tool by Laxman Nepal.
-- Recommended description: Learn about YouTube Channel Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: YouTube Channel Analytics
 - Top queries: No page-query rows
 
 ### /youtube-tools/archive/youtube-tag-extractor.html — SEO score 70/100
