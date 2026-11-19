@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-18T20:41:28.846932+00:00.
+Generated from the latest analytics snapshot: 2026-11-19T07:36:36.439213+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,6 +13,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
+- Top queries: No page-query rows
+
+### /ai-tools/voxcpm-tts.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: ai tools/voxcpm tts.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about ai tools/voxcpm tts.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: ai tools/voxcpm tts.html
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -1855,6 +1865,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Hidden Open-Source Android Apps — GitHub Explorer
 - Top queries: No page-query rows
 
+### /youtube-tools/archive/youtube-analytics-dec-2025.html — SEO score 70/100
+- Issues: Description length 49, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Analytics Pro Dashboard
+- Recommended title: YouTube Analytics Pro | Laxman Nepal
+- Current description: Advanced insights & viral content recommendations
+- Recommended description: Learn about YouTube Analytics Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Analytics Pro
+- Top queries: No page-query rows
+
 ### /youtube-tools/archive/youtube-channel-analytics-pro.html — SEO score 70/100
 - Issues: Title length 64, Noindex
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1903,16 +1923,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Discover upcoming movies, films currently in theatres, and this year
 - Recommended description: Learn about Find your next favourite movie. with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Find your next favourite movie.
-- Top queries: No page-query rows
-
-### /youtube-tools/archive/youtube-analytics-dec-2025.html — SEO score 70/100
-- Issues: Description length 49, Noindex
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: YouTube Analytics Pro Dashboard
-- Recommended title: YouTube Analytics Pro | Laxman Nepal
-- Current description: Advanced insights & viral content recommendations
-- Recommended description: Learn about YouTube Analytics Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: YouTube Analytics Pro
 - Top queries: No page-query rows
 
 ### /youtube-tools/archive/youtube-analytics.html — SEO score 70/100
@@ -5673,6 +5683,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: '); background-size: cover; background-position: center; } .channel-info { padding: 0 2rem 2rem; margin-top: -60px; position: relative; z-index: 1; } .channel-a
 - Recommended description: Learn about Enhanced YouTube Channel Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Enhanced YouTube Channel Analytics
+- Top queries: No page-query rows
+
+### /blogs/index.html — SEO score 85/100
+- Issues: Thin content (34 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Blogs & Tutorials | Laxman Nepal
+- Recommended title: Blogs & Tutorials | Laxman Nepal
+- Current description: Laxman Nepal practical tutorials about YouTube, AI, Windows, command-line tools and useful digital workflows.
+- Recommended description: Learn about Blogs & Tutorials with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Blogs & Tutorials
 - Top queries: No page-query rows
 
 ### /tools/index.html — SEO score 85/100
