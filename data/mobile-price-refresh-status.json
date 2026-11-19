@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-11-18T08:37:54.323883+00:00",
-  "date": "2026-11-18",
+  "updated_at": "2026-11-19T08:54:32.386144+00:00",
+  "date": "2026-11-19",
   "schedule": "daily",
-  "model_variants": 264,
-  "fresh_offers": 161,
+  "model_variants": 269,
+  "fresh_offers": 172,
   "stale_offers": 103,
   "stores": {
     "Brother Mart": {
@@ -56,11 +56,11 @@
       "errors": []
     },
     "Oliz Store": {
-      "candidates": 0,
-      "priced_offers_found": 0,
+      "candidates": 11,
+      "priced_offers_found": 11,
       "previous_offers": 0,
       "minimum_expected_offers": 1,
-      "status": "stale",
+      "status": "complete",
       "errors": []
     },
     "Quality Computer": {
