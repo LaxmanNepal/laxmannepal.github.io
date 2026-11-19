@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-19T07:36:36.439213+00:00.
+Generated from the latest analytics snapshot: 2026-11-19T20:47:07.559607+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,16 +13,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
-- Top queries: No page-query rows
-
-### /ai-tools/voxcpm-tts.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: ai tools/voxcpm tts.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about ai tools/voxcpm tts.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: ai tools/voxcpm tts.html
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -125,16 +115,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/terms and conditions.html
 - Top queries: No page-query rows
 
-### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/01/25 trusted sites that pay in usd for.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2025/01/25 trusted sites that pay in usd for.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/01/25 trusted sites that pay in usd for.html
-- Top queries: No page-query rows
-
 ### /p/cookies-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -175,6 +155,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/09/convert anything to anything free.html
 - Top queries: No page-query rows
 
+### /2025/01/25-trusted-sites-that-pay-in-usd-for.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/01/25 trusted sites that pay in usd for.html | Laxman…
+- Current description: Missing
+- Recommended description: Learn about 2025/01/25 trusted sites that pay in usd for.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/01/25 trusted sites that pay in usd for.html
+- Top queries: No page-query rows
+
 ### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -183,6 +173,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2020/11/use mobile data in aeroplane mode.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2020/11/use mobile data in aeroplane mode.html
+- Top queries: No page-query rows
+
+### /2023/12/download-nepali-and-english-cursive-font.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/12/download nepali and english cursive font.html | Lax…
+- Current description: Missing
+- Recommended description: Learn about 2023/12/download nepali and english cursive font.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/12/download nepali and english cursive font.html
 - Top queries: No page-query rows
 
 ### /2024/02/m3um3u8-player-tool-by-laxman-nepal.html — SEO score 0/100
@@ -255,16 +255,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/07/qr code generator by laxman nepal.html
 - Top queries: No page-query rows
 
-### /2023/12/download-nepali-and-english-cursive-font.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/12/download nepali and english cursive font.html | Lax…
-- Current description: Missing
-- Recommended description: Learn about 2023/12/download nepali and english cursive font.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/12/download nepali and english cursive font.html
-- Top queries: No page-query rows
-
 ### /2024/10/top-20-websites-for-modded-apks-your.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -293,6 +283,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/06/facebook video downloader save hd.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/06/facebook video downloader save hd.html
+- Top queries: No page-query rows
+
+### /p/google-drive-download-link-generator.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/google drive download link generator.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/google drive download link generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/google drive download link generator.html
 - Top queries: No page-query rows
 
 ### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
@@ -483,16 +483,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/07/qr code generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/07/qr code generator.html
-- Top queries: No page-query rows
-
-### /p/google-drive-download-link-generator.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/google drive download link generator.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/google drive download link generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/google drive download link generator.html
 - Top queries: No page-query rows
 
 ### /p/pdf.html — SEO score 0/100
@@ -3435,6 +3425,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Motorola Moto G96 5G Price in Nepal
 - Top queries: No page-query rows
 
+### /mobile-price-in-nepal/phones/nothing-phone-2/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Nothing Phone 2 Price in Nepal, Specs & Store Offers | Laxman Nep
+- Recommended title: Nothing Phone 2 Price in Nepal | Laxman Nepal
+- Current description: Compare Nothing Phone 2 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Nothing Phone 2 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Nothing Phone 2 Price in Nepal
+- Top queries: No page-query rows
+
 ### /mobile-price-in-nepal/phones/nothing-phone-3/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -3593,6 +3593,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare OnePlus 15R price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about OnePlus 15R Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: OnePlus 15R Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/oneplus-nord-2t-5g/ — SEO score 85/100
+- Issues: Title length 64
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: OnePlus Nord 2T 5G Price in Nepal, Specs & Store Offers | Laxman
+- Recommended title: OnePlus Nord 2T 5G Price in Nepal | Laxman Nepal
+- Current description: Compare OnePlus Nord 2T 5G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about OnePlus Nord 2T 5G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: OnePlus Nord 2T 5G Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/oneplus-nord-5-12gb-512gb/ — SEO score 85/100
@@ -4485,6 +4495,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Samsung Galaxy A25 5G Yellow / 256GB / 8GB 256GB Price in Nepal
 - Top queries: No page-query rows
 
+### /mobile-price-in-nepal/phones/samsung-galaxy-a25-5g/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Samsung Galaxy A25 5G Price in Nepal, Specs & Store Offers | Laxm
+- Recommended title: Samsung Galaxy A25 5G Price in Nepal | Laxman Nepal
+- Current description: Compare Samsung Galaxy A25 5G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Samsung Galaxy A25 5G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Samsung Galaxy A25 5G Price in Nepal
+- Top queries: No page-query rows
+
 ### /mobile-price-in-nepal/phones/samsung-galaxy-a27-5g/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -4603,6 +4623,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Samsung Galaxy M17 5G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Samsung Galaxy M17 5G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Samsung Galaxy M17 5G Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/samsung-galaxy-s23-fe/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Samsung Galaxy S23 FE Price in Nepal, Specs & Store Offers | Laxm
+- Recommended title: Samsung Galaxy S23 FE Price in Nepal | Laxman Nepal
+- Current description: Compare Samsung Galaxy S23 FE price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Samsung Galaxy S23 FE Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Samsung Galaxy S23 FE Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/samsung-galaxy-s25-fe-5g-8gb-256gb/ — SEO score 85/100
@@ -4943,6 +4973,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Vivo Y500 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Vivo Y500 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Vivo Y500 Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/xiaomi-15-ultra/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Xiaomi 15 Ultra Price in Nepal, Specs & Store Offers | Laxman Nep
+- Recommended title: Xiaomi 15 Ultra Price in Nepal | Laxman Nepal
+- Current description: Compare Xiaomi 15 Ultra price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
+- Recommended description: Learn about Xiaomi 15 Ultra Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Xiaomi 15 Ultra Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/xiaomi-17-ultra-2026-16gb-512gb/ — SEO score 85/100
