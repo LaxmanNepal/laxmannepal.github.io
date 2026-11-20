@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-20T07:27:07.249906+00:00.
+Generated from the latest analytics snapshot: 2026-11-20T20:30:21.593826+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -55,16 +55,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/01/how to extract youtube video title.html
 - Top queries: No page-query rows
 
-### /2025/05/how-to-make-free-website-with-euorg.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/05/how to make free website with euorg.html | Laxman N…
-- Current description: Missing
-- Recommended description: Learn about 2025/05/how to make free website with euorg.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/05/how to make free website with euorg.html
-- Top queries: No page-query rows
-
 ### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -73,6 +63,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/06/top 10 free online tools will save you.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/06/top 10 free online tools will save you.html
+- Top queries: No page-query rows
+
+### /2025/05/how-to-make-free-website-with-euorg.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/05/how to make free website with euorg.html | Laxman N…
+- Current description: Missing
+- Recommended description: Learn about 2025/05/how to make free website with euorg.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/05/how to make free website with euorg.html
 - Top queries: No page-query rows
 
 ### /p/about.html — SEO score 0/100
@@ -165,16 +165,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/01/25 trusted sites that pay in usd for.html
 - Top queries: No page-query rows
 
-### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2020/11/use mobile data in aeroplane mode.html | Laxman Nep…
-- Current description: Missing
-- Recommended description: Learn about 2020/11/use mobile data in aeroplane mode.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2020/11/use mobile data in aeroplane mode.html
-- Top queries: No page-query rows
-
 ### /2023/12/download-nepali-and-english-cursive-font.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -203,6 +193,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/contact us.html
+- Top queries: No page-query rows
+
+### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2020/11/use mobile data in aeroplane mode.html | Laxman Nep…
+- Current description: Missing
+- Recommended description: Learn about 2020/11/use mobile data in aeroplane mode.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2020/11/use mobile data in aeroplane mode.html
+- Top queries: No page-query rows
+
+### /2023/09/bs-to-ad-nepali-date-converter-ad-to-bs.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/09/bs to ad nepali date converter ad to bs.html | Laxm…
+- Current description: Missing
+- Recommended description: Learn about 2023/09/bs to ad nepali date converter ad to bs.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/09/bs to ad nepali date converter ad to bs.html
 - Top queries: No page-query rows
 
 ### /2024/09/free-pdf-to-image-converter-tools.html — SEO score 0/100
@@ -343,16 +353,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/08/free unlimited ai websites lists laxman.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/08/free unlimited ai websites lists laxman.html
-- Top queries: No page-query rows
-
-### /2023/09/bs-to-ad-nepali-date-converter-ad-to-bs.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/09/bs to ad nepali date converter ad to bs.html | Laxm…
-- Current description: Missing
-- Recommended description: Learn about 2023/09/bs to ad nepali date converter ad to bs.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/09/bs to ad nepali date converter ad to bs.html
 - Top queries: No page-query rows
 
 ### /2023/10/notepad-by-laxman-nepal.html — SEO score 0/100
@@ -693,16 +693,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/10/voter list nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/10/voter list nepal.html
-- Top queries: No page-query rows
-
-### /2025/01/secure-and-instant-file-sharing-by.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/01/secure and instant file sharing by.html | Laxman Ne…
-- Current description: Missing
-- Recommended description: Learn about 2025/01/secure and instant file sharing by.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/01/secure and instant file sharing by.html
 - Top queries: No page-query rows
 
 ### /2025/03/never-pay-for-online-ai-courses-7-best.html — SEO score 0/100
@@ -1883,6 +1873,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Digital Presence Tool
 - Recommended description: Learn about QR Generator Pro with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: QR Generator Pro
+- Top queries: No page-query rows
+
+### /blog/index.html — SEO score 70/100
+- Issues: Title length 19, Thin content (56 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Blog — Laxman Nepal
+- Recommended title: Useful ideas. Explained simply. | Laxman Nepal
+- Current description: Practical technology, AI, apps and productivity articles by Laxman Nepal.
+- Recommended description: Learn about Useful ideas. Explained simply. with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Useful ideas. Explained simply.
 - Top queries: No page-query rows
 
 ### /github/alternatives/ — SEO score 70/100
