@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-19T08:54:32.386144+00:00",
-  "date": "2026-11-19",
+  "updated_at": "2026-11-20T08:40:36.929128+00:00",
+  "date": "2026-11-20",
   "schedule": "daily",
   "model_variants": 269,
   "fresh_offers": 172,
@@ -58,8 +58,8 @@
     "Oliz Store": {
       "candidates": 11,
       "priced_offers_found": 11,
-      "previous_offers": 0,
-      "minimum_expected_offers": 1,
+      "previous_offers": 11,
+      "minimum_expected_offers": 4,
       "status": "complete",
       "errors": []
     },
