@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-19T20:47:07.559607+00:00.
+Generated from the latest analytics snapshot: 2026-11-20T07:27:07.249906+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -1696,7 +1696,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /tools/cast-in-nepal/ — SEO score 70/100
-- Issues: Description length 63, Thin content (136 words)
+- Issues: Description length 63, Thin content (116 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: नेपालका जातजाति र थर निर्देशिका — Laxman Nepal
 - Recommended title: नेपालका जातजाति, थर र गोत्र | Laxman Nepal
