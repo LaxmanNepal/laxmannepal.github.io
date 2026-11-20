@@ -1,223 +1,223 @@
 {
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-20",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
+    {
+      "name": "ai-code-assistant",
+      "url": "https://github.com/AyinkxLab/ai-code-assistant",
+      "description": "Open-source AI coding assistant with read-only Stellar/Soroban developer tooling: Soroban XDR & transaction decoding, RPC/Horizon inspection, an offline mock network, contract scaffolds, project detection, and a capability-based plugin system.",
+      "language": "Python",
+      "stars": 23,
+      "updatedAt": "2026-11-20T09:58:53Z",
+      "fullName": "AyinkxLab/ai-code-assistant"
+    },
+    {
+      "name": "flutter_agent_harness",
+      "url": "https://github.com/IstiN/flutter_agent_harness",
+      "description": "Fa - Factory Agent. Cross-platform AI agent harness for Dart and Flutter — streaming providers, agent loop with tools, session persistence, compaction; backend agent mode: fa behind product Go backends",
+      "language": "Dart",
+      "stars": 90,
+      "updatedAt": "2026-11-20T09:58:49Z",
+      "fullName": "IstiN/flutter_agent_harness"
+    },
     {
       "name": "claude-code-plugins",
       "url": "https://github.com/melodic-software/claude-code-plugins",
       "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
       "language": "Shell",
       "stars": 32,
-      "updatedAt": "2026-11-19T10:17:35Z",
+      "updatedAt": "2026-11-20T09:58:47Z",
       "fullName": "melodic-software/claude-code-plugins"
     },
     {
-      "name": "Tavotto",
-      "url": "https://github.com/Tavotto/Tavotto",
-      "description": "AI drew your research figure. Tavotto makes it publication-ready: edit matplotlib and AI-generated figures on a canvas, lay out multi-panel pages in mm, check journal rules before export. Scripts stay untouched.",
+      "name": "ai",
+      "url": "https://github.com/praxis-proxy/ai",
+      "description": "AI Gateway",
+      "language": "Rust",
+      "stars": 45,
+      "updatedAt": "2026-11-20T09:58:41Z",
+      "fullName": "praxis-proxy/ai"
+    },
+    {
+      "name": "knowledge-space",
+      "url": "https://github.com/AnastasiyaW/knowledge-space",
+      "description": "Curated technical knowledge base: 1287+ dense reference articles across 28 domains. Agent-first format with wiki-links, gotchas, runnable code. Not tutorials — verified references for AI agents and engineers.",
       "language": "Python",
-      "stars": 725,
-      "updatedAt": "2026-11-19T10:17:27Z",
-      "fullName": "Tavotto/Tavotto"
+      "stars": 31,
+      "updatedAt": "2026-11-20T09:58:39Z",
+      "fullName": "AnastasiyaW/knowledge-space"
     },
     {
-      "name": "manus--ai",
-      "url": "https://github.com/kazim768/manus--ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
-      "language": "Open source",
-      "stars": 201,
-      "updatedAt": "2026-11-19T10:17:24Z",
-      "fullName": "kazim768/manus--ai"
+      "name": "medusa",
+      "url": "https://github.com/medusajs/medusa",
+      "description": "The world's most flexible commerce platform for agents and developers",
+      "language": "TypeScript",
+      "stars": 37342,
+      "updatedAt": "2026-11-20T09:58:37Z",
+      "fullName": "medusajs/medusa"
     },
     {
-      "name": "manus--ai",
-      "url": "https://github.com/stancaedy10-glitch/manus--ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
-      "language": "Open source",
-      "stars": 201,
-      "updatedAt": "2026-11-19T10:17:22Z",
-      "fullName": "stancaedy10-glitch/manus--ai"
+      "name": "sail",
+      "url": "https://github.com/lakehq/sail",
+      "description": "Drop-in Apache Spark replacement written in Rust, unifying batch processing, stream processing, and compute-intensive AI workloads.",
+      "language": "Rust",
+      "stars": 3504,
+      "updatedAt": "2026-11-20T09:58:33Z",
+      "fullName": "lakehq/sail"
     },
     {
-      "name": "manus--ai",
-      "url": "https://github.com/python001-dev/manus--ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
-      "language": "Open source",
-      "stars": 201,
-      "updatedAt": "2026-11-19T10:17:21Z",
-      "fullName": "python001-dev/manus--ai"
+      "name": "OpenSwarm",
+      "url": "https://github.com/Intrect-io/OpenSwarm",
+      "description": "OpenSwarm — Autonomous AI dev team orchestrator powered by Claude Code CLI. Discord control, Linear integration, cognitive memory.",
+      "language": "TypeScript",
+      "stars": 871,
+      "updatedAt": "2026-11-20T09:58:22Z",
+      "fullName": "Intrect-io/OpenSwarm"
     },
     {
-      "name": "ai--manus",
-      "url": "https://github.com/kazim768/ai--manus",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 201,
-      "updatedAt": "2026-11-19T10:17:21Z",
-      "fullName": "kazim768/ai--manus"
+      "name": "dsh-Go",
+      "url": "https://github.com/ccch1mneyyy/dsh-Go",
+      "description": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+      "language": "Dart",
+      "stars": 28630,
+      "updatedAt": "2026-11-20T09:58:20Z",
+      "fullName": "ccch1mneyyy/dsh-Go"
     },
     {
-      "name": "ai--manus",
-      "url": "https://github.com/SandyPandyMandy/ai--manus",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 201,
-      "updatedAt": "2026-11-19T10:17:21Z",
-      "fullName": "SandyPandyMandy/ai--manus"
+      "name": "tract",
+      "url": "https://github.com/sonos/tract",
+      "description": "Tiny, no-nonsense, self-contained, Tensorflow and ONNX inference",
+      "language": "Rust",
+      "stars": 3131,
+      "updatedAt": "2026-11-20T09:58:18Z",
+      "fullName": "sonos/tract"
     },
     {
-      "name": "manus--ai",
-      "url": "https://github.com/mohamedhamdytaha/manus--ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
-      "language": "Open source",
-      "stars": 179,
-      "updatedAt": "2026-11-19T10:17:21Z",
-      "fullName": "mohamedhamdytaha/manus--ai"
+      "name": "awesome-free-ai-coding",
+      "url": "https://github.com/mvalentsev/awesome-free-ai-coding",
+      "description": "📡 Legal free LLM APIs & coding agents — self-updating, probe-verified twice a week. Free tiers, no-card trials, free models.",
+      "language": "Python",
+      "stars": 250,
+      "updatedAt": "2026-11-20T09:58:07Z",
+      "fullName": "mvalentsev/awesome-free-ai-coding"
     },
     {
-      "name": "manus--ai",
-      "url": "https://github.com/ITprogamatikDedSec/manus--ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
-      "language": "Open source",
-      "stars": 200,
-      "updatedAt": "2026-11-19T10:17:20Z",
-      "fullName": "ITprogamatikDedSec/manus--ai"
+      "name": "EverOS",
+      "url": "https://github.com/EverMind-AI/EverOS",
+      "description": "One portable memory layer for every AI agent: local-first, Markdown-native, user-owned, and self-evolving across apps, tools, and workflows.",
+      "language": "Python",
+      "stars": 13946,
+      "updatedAt": "2026-11-20T09:58:04Z",
+      "fullName": "EverMind-AI/EverOS"
     },
     {
-      "name": "ai--manus",
-      "url": "https://github.com/meirz911/ai--manus",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 181,
-      "updatedAt": "2026-11-19T10:17:20Z",
-      "fullName": "meirz911/ai--manus"
+      "name": "Gym",
+      "url": "https://github.com/NVIDIA-NeMo/Gym",
+      "description": "Evaluate and improve models and agents using environments",
+      "language": "Python",
+      "stars": 1346,
+      "updatedAt": "2026-11-20T09:58:04Z",
+      "fullName": "NVIDIA-NeMo/Gym"
     },
     {
-      "name": "ai--manus2.0",
-      "url": "https://github.com/AntikvarX/ai--manus2.0",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 61,
-      "updatedAt": "2026-11-19T10:17:20Z",
-      "fullName": "AntikvarX/ai--manus2.0"
+      "name": "ai-native-toolkit",
+      "url": "https://github.com/bjcoombs/ai-native-toolkit",
+      "description": "Claude Code plugin & Agent Skills for AI-native development: codebase readiness scoring (/assess), Six Thinking Hats deliberation (/huddle), AI-slop removal (/deslop), skill hardening (/skill-forge), and more.",
+      "language": "Python",
+      "stars": 33,
+      "updatedAt": "2026-11-20T09:58:04Z",
+      "fullName": "bjcoombs/ai-native-toolkit"
     },
     {
-      "name": "ai--manus",
-      "url": "https://github.com/WLfear/ai--manus",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 201,
-      "updatedAt": "2026-11-19T10:17:19Z",
-      "fullName": "WLfear/ai--manus"
+      "name": "carla",
+      "url": "https://github.com/carla-simulator/carla",
+      "description": "Open-source simulator for autonomous driving research.",
+      "language": "C++",
+      "stars": 14663,
+      "updatedAt": "2026-11-20T09:57:47Z",
+      "fullName": "carla-simulator/carla"
     },
     {
-      "name": "ai--manus",
-      "url": "https://github.com/stancaedy10-glitch/ai--manus",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 201,
-      "updatedAt": "2026-11-19T10:17:19Z",
-      "fullName": "stancaedy10-glitch/ai--manus"
+      "name": "SiliconScope",
+      "url": "https://github.com/kennss/SiliconScope",
+      "description": "Sudoless Apple Silicon system monitor (native SwiftUI GUI) with ANE / Media Engine / memory-bandwidth tracking",
+      "language": "Swift",
+      "stars": 1026,
+      "updatedAt": "2026-11-20T09:57:45Z",
+      "fullName": "kennss/SiliconScope"
     },
     {
-      "name": "manus--ai",
-      "url": "https://github.com/kamesha12/manus--ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
-      "language": "Open source",
-      "stars": 178,
-      "updatedAt": "2026-11-19T10:17:19Z",
-      "fullName": "kamesha12/manus--ai"
+      "name": "mastra",
+      "url": "https://github.com/mastra-ai/mastra",
+      "description": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
+      "language": "TypeScript",
+      "stars": 29686,
+      "updatedAt": "2026-11-20T09:57:33Z",
+      "fullName": "mastra-ai/mastra"
     },
     {
-      "name": "manus--ai",
-      "url": "https://github.com/YanBatistaa/manus--ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
-      "language": "Open source",
-      "stars": 178,
-      "updatedAt": "2026-11-19T10:17:19Z",
-      "fullName": "YanBatistaa/manus--ai"
-    },
-    {
-      "name": "manus--ai",
-      "url": "https://github.com/SandyPandyMandy/manus--ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
-      "language": "Open source",
-      "stars": 201,
-      "updatedAt": "2026-11-19T10:17:18Z",
-      "fullName": "SandyPandyMandy/manus--ai"
-    },
-    {
-      "name": "ai--manus",
-      "url": "https://github.com/ITprogamatikDedSec/ai--manus",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 201,
-      "updatedAt": "2026-11-19T10:17:18Z",
-      "fullName": "ITprogamatikDedSec/ai--manus"
-    },
-    {
-      "name": "ai--manus",
-      "url": "https://github.com/python001-dev/ai--manus",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 201,
-      "updatedAt": "2026-11-19T10:17:18Z",
-      "fullName": "python001-dev/ai--manus"
-    },
-    {
-      "name": "manus--ai",
-      "url": "https://github.com/meirz911/manus--ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
-      "language": "Open source",
-      "stars": 180,
-      "updatedAt": "2026-11-19T10:17:18Z",
-      "fullName": "meirz911/manus--ai"
-    },
-    {
-      "name": "ai--manus",
-      "url": "https://github.com/mohamedhamdytaha/ai--manus",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 179,
-      "updatedAt": "2026-11-19T10:17:18Z",
-      "fullName": "mohamedhamdytaha/ai--manus"
-    },
-    {
-      "name": "Gemini-Config-Checker-",
-      "url": "https://github.com/Mariajsjsj/Gemini-Config-Checker-",
-      "description": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+      "name": "gitmoot",
+      "url": "https://github.com/gitmoot/gitmoot",
+      "description": "Run a fleet of AI coding agents like a team: seats, messages and exact-commit reviews. Local-first, one static binary.",
       "language": "Go",
-      "stars": 61,
-      "updatedAt": "2026-11-19T10:17:18Z",
-      "fullName": "Mariajsjsj/Gemini-Config-Checker-"
+      "stars": 24,
+      "updatedAt": "2026-11-20T09:57:25Z",
+      "fullName": "gitmoot/gitmoot"
     },
     {
-      "name": "ai--manus2.0",
-      "url": "https://github.com/kazim768/ai--manus2.0",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 61,
-      "updatedAt": "2026-11-19T10:17:18Z",
-      "fullName": "kazim768/ai--manus2.0"
+      "name": "sdkmate",
+      "url": "https://github.com/borenchan/sdkmate",
+      "description": "🚀An Lightweight  SDK version manager for full-stack engineers, Supports both CLI and native Desktop.    一个为全栈工程师准备的轻量级SDK版本管理器，同时支持 CLI 和原生桌面端.",
+      "language": "Rust",
+      "stars": 171,
+      "updatedAt": "2026-11-20T09:57:15Z",
+      "fullName": "borenchan/sdkmate"
     },
     {
-      "name": "manus--ai",
-      "url": "https://github.com/WLfear/manus--ai",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. ",
-      "language": "Open source",
-      "stars": 201,
-      "updatedAt": "2026-11-19T10:17:17Z",
-      "fullName": "WLfear/manus--ai"
+      "name": "dify",
+      "url": "https://github.com/langgenius/dify",
+      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+      "language": "Python",
+      "stars": 161553,
+      "updatedAt": "2026-11-20T09:57:01Z",
+      "fullName": "langgenius/dify"
     },
     {
-      "name": "ai--manus",
-      "url": "https://github.com/YanBatistaa/ai--manus",
-      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
-      "language": "Open source",
-      "stars": 179,
-      "updatedAt": "2026-11-19T10:17:17Z",
-      "fullName": "YanBatistaa/ai--manus"
+      "name": "CompanyOS",
+      "url": "https://github.com/kortix-ai/CompanyOS",
+      "description": "Kortix CompanyOS – the open-source operating system for your company. Multiplayer AI agents, your company as code, sovereign on your infrastructure or ours.",
+      "language": "TypeScript",
+      "stars": 20775,
+      "updatedAt": "2026-11-20T09:56:44Z",
+      "fullName": "kortix-ai/CompanyOS"
+    },
+    {
+      "name": "cherry-studio",
+      "url": "https://github.com/CherryHQ/cherry-studio",
+      "description": "Your AI workspace for models, agents, and productivity.",
+      "language": "TypeScript",
+      "stars": 53680,
+      "updatedAt": "2026-11-20T09:56:26Z",
+      "fullName": "CherryHQ/cherry-studio"
+    },
+    {
+      "name": "SoduWork",
+      "url": "https://github.com/mdiri-ai/SoduWork",
+      "description": "The AI-native engine for teams and their agents. Multi-harness, multi-agent, self-hosted.",
+      "language": "JavaScript",
+      "stars": 5096,
+      "updatedAt": "2026-11-20T09:56:04Z",
+      "fullName": "mdiri-ai/SoduWork"
+    },
+    {
+      "name": "transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+      "language": "Python",
+      "stars": 169310,
+      "updatedAt": "2026-11-20T09:56:01Z",
+      "fullName": "huggingface/transformers"
     }
   ]
 }
