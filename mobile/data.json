@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-20T20:27:39.866122+00:00",
-  "count": 156,
+  "updated_at": "2026-11-21T07:16:54.156259+00:00",
+  "count": 151,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -128,22 +128,6 @@
       "storages": [
         "128GB"
       ]
-    },
-    {
-      "id": "blackview-wave-2c",
-      "name": "Blackview Wave 2C",
-      "brand": "Blackview",
-      "variants": [
-        "3GB + 32GB"
-      ],
-      "price": 9999,
-      "max_price": 9999,
-      "original_price": null,
-      "rams": [
-        "3GB",
-        "32GB"
-      ],
-      "storages": []
     },
     {
       "id": "blackview-wave-7c",
@@ -529,15 +513,13 @@
       "name": "Infinix Hot 70",
       "brand": "Infinix",
       "variants": [
-        "6GB + 128GB",
-        "8GB + 128GB"
+        "6GB + 128GB"
       ],
       "price": 33999,
-      "max_price": 36999,
+      "max_price": 33999,
       "original_price": null,
       "rams": [
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
         "128GB"
@@ -601,43 +583,20 @@
       ]
     },
     {
-      "id": "infinix-note-edge",
-      "name": "Infinix Note Edge",
-      "brand": "Infinix",
-      "variants": [
-        "8GB+128GB",
-        "Infinix Note Edge - 6GB - 128GB",
-        "8GB+256GB"
-      ],
-      "price": 41999,
-      "max_price": 47999,
-      "original_price": null,
-      "rams": [
-        "6GB",
-        "8GB"
-      ],
-      "storages": [
-        "128GB",
-        "256GB"
-      ]
-    },
-    {
       "id": "infinix-smart-20",
       "name": "Infinix Smart 20",
       "brand": "Infinix",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 21999,
-      "max_price": 23999,
+      "max_price": 21999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -745,25 +704,6 @@
       ]
     },
     {
-      "id": "oppo-a6",
-      "name": "OPPO A6",
-      "brand": "OPPO",
-      "variants": [
-        "8GB+256GB",
-        "8GB+128GB"
-      ],
-      "price": 40999,
-      "max_price": 46999,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "128GB",
-        "256GB"
-      ]
-    },
-    {
       "id": "oppo-a6-pro-4g",
       "name": "OPPO A6 Pro 4G",
       "brand": "OPPO",
@@ -785,18 +725,16 @@
       "name": "OPPO A6c",
       "brand": "OPPO",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 24999,
-      "max_price": 30999,
+      "max_price": 24999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -804,17 +742,15 @@
       "name": "OPPO A6k 4G",
       "brand": "OPPO",
       "variants": [
-        "6GB + 256GB",
-        "6GB + 128GB"
+        "6GB + 256GB"
       ],
-      "price": 38999,
+      "price": 43999,
       "max_price": 43999,
       "original_price": null,
       "rams": [
         "6GB"
       ],
       "storages": [
-        "128GB",
         "256GB"
       ]
     },
@@ -840,20 +776,16 @@
       "name": "OPPO A6x",
       "brand": "OPPO",
       "variants": [
-        "6GB + 128GB",
-        "6GB + 256GB",
-        "4GB + 128GB"
+        "6GB + 128GB"
       ],
-      "price": 27999,
-      "max_price": 34999,
+      "price": 32499,
+      "max_price": 32499,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1257,18 +1189,16 @@
       "name": "Realme C85 5G",
       "brand": "Realme",
       "variants": [
-        "Realme C85 5G - 8GB - 128GB",
-        "Realme C85 5G - 8GB - 256GB"
+        "Realme C85 5G - 8GB - 128GB"
       ],
       "price": 39999,
-      "max_price": 44999,
+      "max_price": 39999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -1310,20 +1240,16 @@
       "name": "Realme Note 60x",
       "brand": "Realme",
       "variants": [
-        "3GB+64GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "3GB+64GB"
       ],
       "price": 15999,
-      "max_price": 21999,
+      "max_price": 15999,
       "original_price": null,
       "rams": [
-        "3GB",
-        "4GB"
+        "3GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -1331,19 +1257,15 @@
       "name": "Realme Note 70",
       "brand": "Realme",
       "variants": [
-        "6GB+128GB",
-        "4GB+128GB",
-        "4GB+64GB"
+        "6GB+128GB"
       ],
-      "price": 16999,
+      "price": 23999,
       "max_price": 23999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
-        "64GB",
         "128GB"
       ]
     },
@@ -1362,23 +1284,6 @@
       ],
       "storages": [
         "64GB"
-      ]
-    },
-    {
-      "id": "realme-p3",
-      "name": "Realme P3",
-      "brand": "Realme",
-      "variants": [
-        "8GB + 256GB"
-      ],
-      "price": 44999,
-      "max_price": 44999,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "256GB"
       ]
     },
     {
@@ -2124,14 +2029,12 @@
       "name": "Tecno Spark 50 4G",
       "brand": "Tecno",
       "variants": [
-        "6GB + 128GB",
-        "4GB + 128GB"
+        "6GB + 128GB"
       ],
-      "price": 29999,
+      "price": 32999,
       "max_price": 32999,
       "original_price": null,
       "rams": [
-        "4GB",
         "6GB"
       ],
       "storages": [
@@ -2160,17 +2063,15 @@
       "name": "Tecno Spark Go 3",
       "brand": "Tecno",
       "variants": [
-        "4GB+128GB",
-        "4GB+64GB"
+        "4GB+128GB"
       ],
-      "price": 21999,
+      "price": 25999,
       "max_price": 25999,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
         "128GB"
       ]
     },
@@ -2549,35 +2450,16 @@
       "name": "ZTE Nubia A57",
       "brand": "ZTE",
       "variants": [
-        "4GB + 64GB",
-        "4GB + 128GB"
+        "4GB + 64GB"
       ],
       "price": 18999,
-      "max_price": 24499,
+      "max_price": 18999,
       "original_price": 19999,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
-      ]
-    },
-    {
-      "id": "zte-nubia-a77",
-      "name": "ZTE Nubia A77",
-      "brand": "ZTE",
-      "variants": [
-        "4GB + 128GB"
-      ],
-      "price": 25499,
-      "max_price": 25499,
-      "original_price": null,
-      "rams": [
-        "4GB"
-      ],
-      "storages": [
-        "128GB"
+        "64GB"
       ]
     },
     {
