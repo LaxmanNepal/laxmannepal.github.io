@@ -1,9 +1,9 @@
 {
   "status": "verified",
-  "last_attempted_at": "2026-11-20T14:13:44.693151+00:00",
+  "last_attempted_at": "2026-11-21T13:37:44.171049+00:00",
   "latest": {
     "date": "2026-11-20",
-    "updated_at": "2026-11-20T14:13:44.693151+00:00",
+    "updated_at": "2026-11-21T13:37:44.171049+00:00",
     "fine_gold_tola": 245400,
     "tejabi_gold_tola": 242900,
     "silver_tola": 3110,
@@ -334,7 +334,7 @@
     },
     {
       "date": "2026-11-20",
-      "updated_at": "2026-11-20T14:13:44.693151+00:00",
+      "updated_at": "2026-11-21T13:37:44.171049+00:00",
       "fine_gold_tola": 245400,
       "tejabi_gold_tola": 242900,
       "silver_tola": 3110,
