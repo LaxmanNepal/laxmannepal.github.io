@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-21T07:21:56.647441+00:00.
+Generated from the latest analytics snapshot: 2026-11-21T19:25:26.859076+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -55,16 +55,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/01/how to extract youtube video title.html
 - Top queries: No page-query rows
 
-### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/06/top 10 free online tools will save you.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2025/06/top 10 free online tools will save you.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/06/top 10 free online tools will save you.html
-- Top queries: No page-query rows
-
 ### /2025/05/how-to-make-free-website-with-euorg.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -85,14 +75,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/about.html
 - Top queries: No page-query rows
 
-### /p/link-shortner-generator.html — SEO score 0/100
+### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: p/link shortner generator.html | Laxman Nepal
+- Recommended title: 2025/06/top 10 free online tools will save you.html | Laxma…
 - Current description: Missing
-- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/link shortner generator.html
+- Recommended description: Learn about 2025/06/top 10 free online tools will save you.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/06/top 10 free online tools will save you.html
 - Top queries: No page-query rows
 
 ### /p/privacy-policy.html — SEO score 0/100
@@ -133,6 +123,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/disclaimer.html
+- Top queries: No page-query rows
+
+### /p/link-shortner-generator.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/link shortner generator.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/link shortner generator.html
 - Top queries: No page-query rows
 
 ### /p/sitemap.html — SEO score 0/100
@@ -203,6 +203,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2020/11/use mobile data in aeroplane mode.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2020/11/use mobile data in aeroplane mode.html
+- Top queries: No page-query rows
+
+### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/01/how to convert number to text in excel.html | Laxma…
+- Current description: Missing
+- Recommended description: Learn about 2023/01/how to convert number to text in excel.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/01/how to convert number to text in excel.html
 - Top queries: No page-query rows
 
 ### /2023/09/bs-to-ad-nepali-date-converter-ad-to-bs.html — SEO score 0/100
@@ -305,16 +315,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/google drive download link generator.html
 - Top queries: No page-query rows
 
-### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/01/how to convert number to text in excel.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2023/01/how to convert number to text in excel.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/01/how to convert number to text in excel.html
-- Top queries: No page-query rows
-
 ### /2023/07/increase-website-view-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -385,16 +385,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/09/top advanced ai websites everyone.html
 - Top queries: No page-query rows
 
-### /2024/09/top-ai-image-generators-without-sign-up.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/09/top ai image generators without sign up.html | Laxm…
-- Current description: Missing
-- Recommended description: Learn about 2024/09/top ai image generators without sign up.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/09/top ai image generators without sign up.html
-- Top queries: No page-query rows
-
 ### /2025/03/top-8-free-alternatives-to-paid-software.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -423,16 +413,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2026/02/prompt for making ai story.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2026/02/prompt for making ai story.html
-- Top queries: No page-query rows
-
-### /p/laxman-nepal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/laxman nepal.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/laxman nepal.html
 - Top queries: No page-query rows
 
 ### /p/youtube-tools.html — SEO score 0/100
@@ -475,6 +455,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/09/netflix free website watch movies.html
 - Top queries: No page-query rows
 
+### /2024/09/top-ai-image-generators-without-sign-up.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2024/09/top ai image generators without sign up.html | Laxm…
+- Current description: Missing
+- Recommended description: Learn about 2024/09/top ai image generators without sign up.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2024/09/top ai image generators without sign up.html
+- Top queries: No page-query rows
+
 ### /2025/07/qr-code-generator.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -483,6 +473,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/07/qr code generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/07/qr code generator.html
+- Top queries: No page-query rows
+
+### /p/laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/laxman nepal.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/laxman nepal.html
 - Top queries: No page-query rows
 
 ### /p/pdf.html — SEO score 0/100
@@ -653,16 +653,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2024/01 with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2024/01
-- Top queries: No page-query rows
-
-### /2024/09/svg-download-free.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2024/09/svg download free.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2024/09/svg download free.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2024/09/svg download free.html
 - Top queries: No page-query rows
 
 ### /2024/10/all-in-one-video-downloader.html — SEO score 0/100
