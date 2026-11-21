@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T08:40:36.929128+00:00",
+  "updated_at": "2026-11-21T08:21:53.258713+00:00",
   "status": "Daily retailer refresh; last-known offers are marked stale when a source refresh is incomplete",
   "source_status": {
     "Brother Mart": {
@@ -340,7 +340,7 @@
           "store": "Brother Mart",
           "price": 19999,
           "url": "https://brother-mart.com/products/ai-pulse-2-mobile-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -360,7 +360,7 @@
         "chipset": "Helio G81 (12nm) RAM Options 4GB / 6GB LPDDR4X 4GB",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 19999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/ai-pulse-2-mobile-price-in-nepal",
@@ -440,6 +440,10 @@
         {
           "date": "2026-11-20",
           "price": 19999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 19999
         }
       ]
     },
@@ -454,7 +458,7 @@
           "store": "Brother Mart",
           "price": 25999,
           "url": "https://brother-mart.com/products/ai-pulse-2-mobile-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -474,7 +478,7 @@
         "chipset": "Helio G81 (12nm) RAM Options 4GB / 6GB LPDDR4X 4GB",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 25999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/ai-pulse-2-mobile-price-in-nepal",
@@ -554,6 +558,10 @@
         {
           "date": "2026-11-20",
           "price": 25999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 25999
         }
       ]
     },
@@ -568,7 +576,7 @@
           "store": "Quality Computer",
           "price": 157500,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-15-48358?category=833&order=create_date+desc",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -611,7 +619,7 @@
         "chipset": "A16 Bionic chip with 5-core GPU and all-day battery lif",
         "camera": "48MP, 26 mm, ƒ/1.6, sensor-shift OIS; 2x telephoto option"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "b": "T",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
@@ -753,6 +761,10 @@
         {
           "date": "2026-11-20",
           "price": 157500
+        },
+        {
+          "date": "2026-11-21",
+          "price": 157500
         }
       ]
     },
@@ -767,7 +779,7 @@
           "store": "Brother Mart",
           "price": 119499,
           "url": "https://brother-mart.com/products/apple-iphone-15-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -785,7 +797,7 @@
         "chipset": "A16 Bionic 48MP Dual Rear Camera Black / 128GB Apple iP",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 119499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-15-price-in-nepal",
@@ -865,6 +877,10 @@
         {
           "date": "2026-11-20",
           "price": 119499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 119499
         }
       ]
     },
@@ -879,7 +895,7 @@
           "store": "Quality Computer",
           "price": 152500,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-16-51326?category=833&order=create_date+desc",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -923,7 +939,7 @@
         "ram": "128GB or 256GB or 512GB",
         "camera": "48MP Fusion, 26 mm, ƒ/1.6, sensor-shift OIS; 2x telephoto option"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "b": "T",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
@@ -1067,6 +1083,10 @@
         {
           "date": "2026-11-20",
           "price": 152500
+        },
+        {
+          "date": "2026-11-21",
+          "price": 152500
         }
       ]
     },
@@ -1081,7 +1101,7 @@
           "store": "Brother Mart",
           "price": 146599,
           "url": "https://brother-mart.com/products/iphone-16-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -1098,7 +1118,7 @@
         "chipset": "A18 Bionic Chip iOS 18 Apple Intelligence Black / 128GB",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 146599,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/iphone-16-price-in-nepal",
@@ -1178,6 +1198,10 @@
         {
           "date": "2026-11-20",
           "price": 146599
+        },
+        {
+          "date": "2026-11-21",
+          "price": 146599
         }
       ]
     },
@@ -1192,7 +1216,7 @@
           "store": "Brother Mart",
           "price": 105999,
           "url": "https://brother-mart.com/products/apple-iphone-16e-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -1208,7 +1232,7 @@
         "display": "6.1 inch",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 105999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-16e-price-in-nepal",
@@ -1288,6 +1312,10 @@
         {
           "date": "2026-11-20",
           "price": 105999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 105999
         }
       ]
     },
@@ -1302,7 +1330,7 @@
           "store": "Quality Computer",
           "price": 173499,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-1-year-warranty-52079?category=833&order=create_date+desc",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -1342,7 +1370,7 @@
         "ram": "256GB or 512GB",
         "camera": "48MP Fusion, 26 mm, ƒ/1.6, sensor-shift OIS; 2x optical-quality zoom"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "b": "T",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
@@ -1482,6 +1510,10 @@
         {
           "date": "2026-11-20",
           "price": 173499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 173499
         }
       ]
     },
@@ -1496,7 +1528,7 @@
           "store": "Brother Mart",
           "price": 164999,
           "url": "https://brother-mart.com/products/apple-iphone-17-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -1515,7 +1547,7 @@
         "chipset": "A19 Bionic Chip (3nm)",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 164999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17-price-in-nepal",
@@ -1595,6 +1627,10 @@
         {
           "date": "2026-11-20",
           "price": 164999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 164999
         }
       ]
     },
@@ -1609,7 +1645,7 @@
           "store": "Quality Computer",
           "price": 221299,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-pro-52081?category=833&order=create_date+desc",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -1650,7 +1686,7 @@
         "ram": "256GB or 512GB or 1TB",
         "camera": "48MP Fusion Main, 48MP Fusion Ultra Wide, 48MP Telephoto 4x (100 mm)"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "b": "T",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
@@ -1791,6 +1827,10 @@
         {
           "date": "2026-11-20",
           "price": 221299
+        },
+        {
+          "date": "2026-11-21",
+          "price": 221299
         }
       ]
     },
@@ -1805,7 +1845,7 @@
           "store": "Brother Mart",
           "price": 305699,
           "url": "https://brother-mart.com/products/apple-iphone-17-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -1823,7 +1863,7 @@
         "battery": "3988mAh",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 305699,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17-pro-price-in-nepal",
@@ -1903,6 +1943,10 @@
         {
           "date": "2026-11-20",
           "price": 305699
+        },
+        {
+          "date": "2026-11-21",
+          "price": 305699
         }
       ]
     },
@@ -1917,7 +1961,7 @@
           "store": "Brother Mart",
           "price": 221299,
           "url": "https://brother-mart.com/products/apple-iphone-17-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -1935,7 +1979,7 @@
         "battery": "3988mAh",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 221299,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17-pro-price-in-nepal",
@@ -2014,6 +2058,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 221299
+        },
+        {
+          "date": "2026-11-21",
           "price": 221299
         }
       ]
@@ -2029,7 +2077,7 @@
           "store": "Brother Mart",
           "price": 221299,
           "url": "https://brother-mart.com/products/apple-iphone-17-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -2047,7 +2095,7 @@
         "battery": "3988mAh",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 221299,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17-pro-price-in-nepal",
@@ -2127,6 +2175,10 @@
         {
           "date": "2026-11-20",
           "price": 221299
+        },
+        {
+          "date": "2026-11-21",
+          "price": 221299
         }
       ]
     },
@@ -2141,7 +2193,7 @@
           "store": "Quality Computer",
           "price": 242499,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-17-pro-max-52082?category=833&order=create_date+desc",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -2184,7 +2236,7 @@
         "ram": "256GB or 512GB or 1TB or 2TB",
         "camera": "48MP Fusion, 24 mm, ƒ/1.78"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "b": "T",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
@@ -2327,6 +2379,10 @@
         {
           "date": "2026-11-20",
           "price": 242499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 242499
         }
       ]
     },
@@ -2341,7 +2397,7 @@
           "store": "Brother Mart",
           "price": 327099,
           "url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -2359,7 +2415,7 @@
         "battery": "4832mAh",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 327099,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
@@ -2439,6 +2495,10 @@
         {
           "date": "2026-11-20",
           "price": 327099
+        },
+        {
+          "date": "2026-11-21",
+          "price": 327099
         }
       ]
     },
@@ -2453,7 +2513,7 @@
           "store": "Brother Mart",
           "price": 284599,
           "url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -2471,7 +2531,7 @@
         "battery": "4832mAh",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 284599,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
@@ -2551,6 +2611,10 @@
         {
           "date": "2026-11-20",
           "price": 284599
+        },
+        {
+          "date": "2026-11-21",
+          "price": 284599
         }
       ]
     },
@@ -2565,7 +2629,7 @@
           "store": "Brother Mart",
           "price": 411399,
           "url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -2583,7 +2647,7 @@
         "battery": "4832mAh",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 411399,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
@@ -2663,6 +2727,10 @@
         {
           "date": "2026-11-20",
           "price": 411399
+        },
+        {
+          "date": "2026-11-21",
+          "price": 411399
         }
       ]
     },
@@ -2677,7 +2745,7 @@
           "store": "Brother Mart",
           "price": 284599,
           "url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -2695,7 +2763,7 @@
         "battery": "4832mAh",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 284599,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
@@ -2775,6 +2843,10 @@
         {
           "date": "2026-11-20",
           "price": 284599
+        },
+        {
+          "date": "2026-11-21",
+          "price": 284599
         }
       ]
     },
@@ -2789,7 +2861,7 @@
           "store": "Brother Mart",
           "price": 242499,
           "url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -2807,7 +2879,7 @@
         "battery": "4832mAh",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 242499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
@@ -2887,6 +2959,10 @@
         {
           "date": "2026-11-20",
           "price": 242499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 242499
         }
       ]
     },
@@ -2901,7 +2977,7 @@
           "store": "Brother Mart",
           "price": 284599,
           "url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -2919,7 +2995,7 @@
         "battery": "4832mAh",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 284599,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17-pro-max-5g-price-in-nepal",
@@ -2999,6 +3075,10 @@
         {
           "date": "2026-11-20",
           "price": 284599
+        },
+        {
+          "date": "2026-11-21",
+          "price": 284599
         }
       ]
     },
@@ -3013,7 +3093,7 @@
           "store": "Brother Mart",
           "price": 132499,
           "url": "https://brother-mart.com/products/apple-iphone-17e-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -3030,7 +3110,7 @@
         "chipset": "A18 Bionic Chip – Faster",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 132499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17e-price-in-nepal",
@@ -3110,6 +3190,10 @@
         {
           "date": "2026-11-20",
           "price": 132499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 132499
         }
       ]
     },
@@ -3124,7 +3208,7 @@
           "store": "Brother Mart",
           "price": 175099,
           "url": "https://brother-mart.com/products/apple-iphone-17e-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -3141,7 +3225,7 @@
         "chipset": "A18 Bionic Chip – Faster",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 175099,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-17e-price-in-nepal",
@@ -3221,6 +3305,10 @@
         {
           "date": "2026-11-20",
           "price": 175099
+        },
+        {
+          "date": "2026-11-21",
+          "price": 175099
         }
       ]
     },
@@ -3235,7 +3323,7 @@
           "store": "Quality Computer",
           "price": 259900,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-18-pro-53385?category=833&order=create_date+desc",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -3281,7 +3369,7 @@
         "ram": "256GB or 512GB or 1TB or 2TB",
         "camera": "48MP Fusion, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "b": "T",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
@@ -3395,6 +3483,10 @@
         {
           "date": "2026-11-20",
           "price": 259900
+        },
+        {
+          "date": "2026-11-21",
+          "price": 259900
         }
       ]
     },
@@ -3409,7 +3501,7 @@
           "store": "Quality Computer",
           "price": 279900,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-18-pro-max-53386?category=833&order=create_date+desc",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -3455,7 +3547,7 @@
         "ram": "256GB or 512GB or 1TB or 2TB",
         "camera": "48MP Fusion, 24 mm, variable aperture (ƒ/1.48, ƒ/1.8, ƒ/2.8, ƒ/4.0)"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "b": "T",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
@@ -3601,6 +3693,10 @@
         {
           "date": "2026-11-20",
           "price": 279900
+        },
+        {
+          "date": "2026-11-21",
+          "price": 279900
         }
       ]
     },
@@ -3615,7 +3711,7 @@
           "store": "Quality Computer",
           "price": 190699,
           "url": "https://qualitycomputer.com.np/shop/apple-iphone-air-52080?category=833&order=create_date+desc",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -3655,7 +3751,7 @@
         "ram": "256GB or 512GB or 1TB",
         "camera": "18MP Center Stage, f/1.9"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "b": "T",
       "bank": "Choose a Bank Machhchhapuchhre Bank Nabil Bank",
       "term (in month)": "Choose a term",
@@ -3796,6 +3892,10 @@
         {
           "date": "2026-11-20",
           "price": 190699
+        },
+        {
+          "date": "2026-11-21",
+          "price": 190699
         }
       ]
     },
@@ -3810,7 +3910,7 @@
           "store": "Brother Mart",
           "price": 190699,
           "url": "https://brother-mart.com/products/apple-iphone-air-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -3828,7 +3928,7 @@
         "battery": "3149mAh",
         "camera": "48MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 190699,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/apple-iphone-air-price-in-nepal",
@@ -3908,6 +4008,10 @@
         {
           "date": "2026-11-20",
           "price": 190699
+        },
+        {
+          "date": "2026-11-21",
+          "price": 190699
         }
       ]
     },
@@ -3922,7 +4026,7 @@
           "store": "Oliz Store",
           "price": 127499,
           "url": "https://cdn.olizstore.com/product/iphone-15",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         },
         {
@@ -3968,7 +4072,7 @@
         "chipset": "Apple A16 Bionic chip with 6-core CPU, 5-core GPU, 16-core Neural Engine",
         "camera": "12 MP TrueDepth, Night mode, 4K Dolby Vision HDR recording"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "feature": "Details",
       "product type": "Smartphone",
       "processor": "Apple A16 Bionic chip with 6-core CPU, 5-core GPU, 16-core Neural Engine",
@@ -4091,6 +4195,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 127499
+        },
+        {
+          "date": "2026-11-21",
           "price": 127499
         }
       ]
@@ -4235,7 +4343,7 @@
           "store": "Oliz Store",
           "price": 173499,
           "url": "https://cdn.olizstore.com/product/iphone-17-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         },
         {
@@ -4273,7 +4381,7 @@
         "battery": "All-day battery; USB-C wired; MagSafe/Qi2 wireless charging",
         "camera": "48MP Main + Ultra Wide; Night mode; Smart HDR; 2× optical-quality crop"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "feature": "Details",
       "chip": "A19 for fast performance and efficiency",
       "rear cameras": "48MP Main + Ultra Wide; Night mode; Smart HDR; 2× optical-quality crop",
@@ -4391,6 +4499,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 173499
+        },
+        {
+          "date": "2026-11-21",
           "price": 173499
         }
       ]
@@ -4535,7 +4647,7 @@
           "store": "Oliz Store",
           "price": 242499,
           "url": "https://cdn.olizstore.com/product/iphone-17-pro-max-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         },
         {
@@ -4574,7 +4686,7 @@
         "battery": "All-day battery; USB-C wired & MagSafe/Qi2 wireless charging",
         "camera": "48 MP Main + 48 MP Ultra-Wide + 48 MP Telephoto"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "feature": "Details",
       "chip": "A19 Pro",
       "rear cameras": "48 MP Main + 48 MP Ultra-Wide + 48 MP Telephoto",
@@ -4693,6 +4805,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 242499
+        },
+        {
+          "date": "2026-11-21",
           "price": 242499
         }
       ]
@@ -4837,7 +4953,7 @@
           "store": "Oliz Store",
           "price": 259900,
           "url": "https://cdn.olizstore.com/product/iphone-18-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         },
         {
@@ -4905,7 +5021,7 @@
         "chipset": "6-core CPU",
         "camera": "48MP Fusion Main with variable aperture"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "specification": "Details",
       "product": "Apple iPhone 18 Pro",
       "chip": "Apple A20 Pro",
@@ -5053,6 +5169,10 @@
         {
           "date": "2026-11-20",
           "price": 259900
+        },
+        {
+          "date": "2026-11-21",
+          "price": 259900
         }
       ]
     },
@@ -5067,7 +5187,7 @@
           "store": "Oliz Store",
           "price": 279900,
           "url": "https://cdn.olizstore.com/product/phone-18-pro-max-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         },
         {
@@ -5135,7 +5255,7 @@
         "chipset": "6-core CPU",
         "camera": "48MP Fusion Main with variable aperture"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "specification": "Details",
       "product": "Apple iPhone 18 Pro Max",
       "chip": "Apple A20 Pro",
@@ -5282,6 +5402,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 279900
+        },
+        {
+          "date": "2026-11-21",
           "price": 279900
         }
       ]
@@ -5942,7 +6066,7 @@
           "store": "Brother Mart",
           "price": 89999,
           "url": "https://brother-mart.com/products/honor-600-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -5961,7 +6085,7 @@
         "chipset": "Snapdragon 7 Gen 4: Highly efficient 4nm chip optimized",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 89999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-600-price-in-nepal",
@@ -6041,6 +6165,10 @@
         {
           "date": "2026-11-20",
           "price": 89999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 89999
         }
       ]
     },
@@ -6055,7 +6183,7 @@
           "store": "Brother Mart",
           "price": 84999,
           "url": "https://brother-mart.com/products/honor-600-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -6074,7 +6202,7 @@
         "chipset": "Snapdragon 7 Gen 4: Highly efficient 4nm chip optimized",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 84999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-600-price-in-nepal",
@@ -6154,6 +6282,10 @@
         {
           "date": "2026-11-20",
           "price": 84999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 84999
         }
       ]
     },
@@ -6168,7 +6300,7 @@
           "store": "Brother Mart",
           "price": 129999,
           "url": "https://brother-mart.com/products/honor-600-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -6188,7 +6320,7 @@
         "chipset": "Snapdragon® 8 Elite (3nm) Orange / 12GB+256GB Flagship",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 129999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-600-pro-price-in-nepal",
@@ -6268,6 +6400,10 @@
         {
           "date": "2026-11-20",
           "price": 129999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 129999
         }
       ]
     },
@@ -6282,7 +6418,7 @@
           "store": "Brother Mart",
           "price": 149999,
           "url": "https://brother-mart.com/products/honor-600-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -6302,7 +6438,7 @@
         "chipset": "Snapdragon® 8 Elite (3nm) Orange / 12GB+512GB Flagship",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 149999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-600-pro-price-in-nepal",
@@ -6382,6 +6518,10 @@
         {
           "date": "2026-11-20",
           "price": 149999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 149999
         }
       ]
     },
@@ -6396,7 +6536,7 @@
           "store": "Brother Mart",
           "price": 28999,
           "url": "https://brother-mart.com/products/honor-x5d-plus-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -6416,7 +6556,7 @@
         "chipset": "Helio G81 Octa-Core Processor | 50MP AI Ultra-Clea",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 28999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-x5d-plus-smartphone-price-in-nepal",
@@ -6496,6 +6636,10 @@
         {
           "date": "2026-11-20",
           "price": 28999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 28999
         }
       ]
     },
@@ -6510,7 +6654,7 @@
           "store": "Brother Mart",
           "price": 39999,
           "url": "https://brother-mart.com/products/honor-x7e-4g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -6529,7 +6673,7 @@
         "chipset": "Helio G81 Ultra | 50MP AI Camera (PDAF) | Dedicate",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 39999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-x7e-4g-smartphone-price-in-nepal",
@@ -6608,6 +6752,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 39999
+        },
+        {
+          "date": "2026-11-21",
           "price": 39999
         }
       ]
@@ -6881,7 +7029,7 @@
           "store": "Brother Mart",
           "price": 59999,
           "url": "https://brother-mart.com/products/honor-600-lite-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -6898,7 +7046,7 @@
         "battery": "6520mAh",
         "camera": "108MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 59999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-600-lite-5g-price-in-nepal",
@@ -6977,6 +7125,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 59999
+        },
+        {
+          "date": "2026-11-21",
           "price": 59999
         }
       ]
@@ -7121,7 +7273,7 @@
           "store": "Brother Mart",
           "price": 58990,
           "url": "https://brother-mart.com/products/honor-90-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -7141,7 +7293,7 @@
         "chipset": "Snapdragon 7",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 58990,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-90-price-in-nepal",
@@ -7220,6 +7372,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 58990
+        },
+        {
+          "date": "2026-11-21",
           "price": 58990
         }
       ]
@@ -7493,7 +7649,7 @@
           "store": "Brother Mart",
           "price": 267000,
           "url": "https://brother-mart.com/products/honor-magic-v-fold-elite-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -7512,7 +7668,7 @@
         "chipset": "Snapdragon 8 Elite White / 16GB + 256GB Honor Magic V F",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 267000,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-magic-v-fold-elite-5g-price-in-nepal",
@@ -7591,6 +7747,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 267000
+        },
+        {
+          "date": "2026-11-21",
           "price": 267000
         }
       ]
@@ -7993,7 +8153,7 @@
           "store": "Brother Mart",
           "price": 29999,
           "url": "https://brother-mart.com/products/honor-x6d-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -8013,7 +8173,7 @@
         "chipset": "Dimensity 6300 (6nm) 5G chipset",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 29999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-x6d-5g-smartphone-price-in-nepal",
@@ -8093,6 +8253,10 @@
         {
           "date": "2026-11-20",
           "price": 29999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 29999
         }
       ]
     },
@@ -8107,7 +8271,7 @@
           "store": "Brother Mart",
           "price": 33999,
           "url": "https://brother-mart.com/products/honor-x7d-4g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -8126,7 +8290,7 @@
         "chipset": "Snapdragon 685 (6nm) Processor and running on Android 1",
         "camera": "108MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 33999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-x7d-4g-price-in-nepal",
@@ -8206,6 +8370,10 @@
         {
           "date": "2026-11-20",
           "price": 33999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 33999
         }
       ]
     },
@@ -8220,7 +8388,7 @@
           "store": "Brother Mart",
           "price": 39999,
           "url": "https://brother-mart.com/products/honor-x8d-4g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -8236,7 +8404,7 @@
         "battery": "7000mAh",
         "camera": "108MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 39999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-x8d-4g-price-in-nepal",
@@ -8316,6 +8484,10 @@
         {
           "date": "2026-11-20",
           "price": 39999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 39999
         }
       ]
     },
@@ -8330,7 +8502,7 @@
           "store": "Brother Mart",
           "price": 43999,
           "url": "https://brother-mart.com/products/honor-x8d-4g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -8346,7 +8518,7 @@
         "battery": "7000mAh",
         "camera": "108MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 43999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-x8d-4g-price-in-nepal",
@@ -8426,6 +8598,10 @@
         {
           "date": "2026-11-20",
           "price": 43999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 43999
         }
       ]
     },
@@ -8440,7 +8616,7 @@
           "store": "Brother Mart",
           "price": 59999,
           "url": "https://brother-mart.com/products/honor-x9d-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -8460,7 +8636,7 @@
         "chipset": "Snapdragon 6 Gen 4 chipset",
         "camera": "108MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 59999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-x9d-smartphone-price-in-nepal",
@@ -8540,6 +8716,10 @@
         {
           "date": "2026-11-20",
           "price": 59999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 59999
         }
       ]
     },
@@ -8554,7 +8734,7 @@
           "store": "Brother Mart",
           "price": 54999,
           "url": "https://brother-mart.com/products/honor-x9d-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -8574,7 +8754,7 @@
         "chipset": "Snapdragon 6 Gen 4 chipset",
         "camera": "108MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 54999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/honor-x9d-smartphone-price-in-nepal",
@@ -8653,6 +8833,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 54999
+        },
+        {
+          "date": "2026-11-21",
           "price": 54999
         }
       ]
@@ -8797,7 +8981,7 @@
           "store": "Brother Mart",
           "price": 69999,
           "url": "https://brother-mart.com/products/infinix-gt-30-pro-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -8815,7 +8999,7 @@
         "chipset": "Dimensity 8350 Ultimate (4nm) chipset and stunning 144",
         "camera": "108MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 69999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/infinix-gt-30-pro-smartphone-price-in-nepal",
@@ -8895,6 +9079,10 @@
         {
           "date": "2026-11-20",
           "price": 69999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 69999
         }
       ]
     },
@@ -8909,7 +9097,7 @@
           "store": "Brother Mart",
           "price": 65999,
           "url": "https://brother-mart.com/products/infinix-gt-30-pro-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -8927,7 +9115,7 @@
         "chipset": "Dimensity 8350 Ultimate (4nm) chipset and stunning 144",
         "camera": "108MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 65999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/infinix-gt-30-pro-smartphone-price-in-nepal",
@@ -9006,6 +9194,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 65999
+        },
+        {
+          "date": "2026-11-21",
           "price": 65999
         }
       ]
@@ -9150,7 +9342,7 @@
           "store": "Brother Mart",
           "price": 84999,
           "url": "https://brother-mart.com/products/infinix-gt-50-pro-5g-gaming-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -9170,7 +9362,7 @@
         "chipset": "Dimensity 8400-Ultra (4nm",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 84999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/infinix-gt-50-pro-5g-gaming-smartphone-price-in-nepal",
@@ -9249,6 +9441,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 84999
+        },
+        {
+          "date": "2026-11-21",
           "price": 84999
         }
       ]
@@ -9393,7 +9589,7 @@
           "store": "Brother Mart",
           "price": 31999,
           "url": "https://brother-mart.com/products/infinix-hot-70-4g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -9408,7 +9604,7 @@
       "specifications": {
         "battery": "6000mAh"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 31999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/infinix-hot-70-4g-price-in-nepal",
@@ -9488,6 +9684,10 @@
         {
           "date": "2026-11-20",
           "price": 31999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 31999
         }
       ]
     },
@@ -9502,7 +9702,7 @@
           "store": "Brother Mart",
           "price": 32999,
           "url": "https://brother-mart.com/products/infinix-hot-70-4g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -9517,7 +9717,7 @@
       "specifications": {
         "battery": "6000mAh"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 32999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/infinix-hot-70-4g-price-in-nepal",
@@ -9596,6 +9796,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 32999
+        },
+        {
+          "date": "2026-11-21",
           "price": 32999
         }
       ]
@@ -9740,7 +9944,7 @@
           "store": "Brother Mart",
           "price": 52999,
           "url": "https://brother-mart.com/products/infinix-hot-70-pro-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -9758,7 +9962,7 @@
         "chipset": "Dimensity 7100 5G (6nm Octa-Core) | 50MP Sony IMX882 M",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 52999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/infinix-hot-70-pro-5g-smartphone-price-in-nepal",
@@ -9838,6 +10042,10 @@
         {
           "date": "2026-11-20",
           "price": 52999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 52999
         }
       ]
     },
@@ -9852,7 +10060,7 @@
           "store": "Brother Mart",
           "price": 56999,
           "url": "https://brother-mart.com/products/infinix-hot-70-pro-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -9870,7 +10078,7 @@
         "chipset": "Dimensity 7100 5G (6nm Octa-Core) | 50MP Sony IMX882 M",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 56999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/infinix-hot-70-pro-5g-smartphone-price-in-nepal",
@@ -9949,6 +10157,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 56999
+        },
+        {
+          "date": "2026-11-21",
           "price": 56999
         }
       ]
@@ -10093,7 +10305,7 @@
           "store": "Brother Mart",
           "price": 54999,
           "url": "https://brother-mart.com/products/infinix-note-60-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -10112,7 +10324,7 @@
         "battery": "5700mAh",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 54999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/infinix-note-60-price-in-nepal",
@@ -10192,6 +10404,10 @@
         {
           "date": "2026-11-20",
           "price": 54999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 54999
         }
       ]
     },
@@ -10206,7 +10422,7 @@
           "store": "Brother Mart",
           "price": 59999,
           "url": "https://brother-mart.com/products/infinix-note-60-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -10225,7 +10441,7 @@
         "battery": "5700mAh",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 59999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/infinix-note-60-price-in-nepal",
@@ -10304,6 +10520,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 59999
+        },
+        {
+          "date": "2026-11-21",
           "price": 59999
         }
       ]
@@ -10577,7 +10797,7 @@
           "store": "Brother Mart",
           "price": 43999,
           "url": "https://brother-mart.com/products/infinix-note-edge-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -10596,7 +10816,7 @@
         "chipset": "Dimensity 7100",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 43999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/infinix-note-edge-price-in-nepal",
@@ -10676,6 +10896,10 @@
         {
           "date": "2026-11-20",
           "price": 43999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 43999
         }
       ]
     },
@@ -10690,7 +10914,7 @@
           "store": "Brother Mart",
           "price": 47999,
           "url": "https://brother-mart.com/products/infinix-note-edge-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -10709,7 +10933,7 @@
         "chipset": "Dimensity 7100",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 47999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/infinix-note-edge-price-in-nepal",
@@ -10788,6 +11012,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 47999
+        },
+        {
+          "date": "2026-11-21",
           "price": 47999
         }
       ]
@@ -11059,13 +11287,13 @@
       "prices": [
         {
           "store": "Brother Mart",
-          "price": 69999,
+          "price": 79999,
           "url": "https://brother-mart.com/products/motorola-edge-70-fusion-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
-      "image": "https://cdn.shopify.com/s/files/1/0258/7862/6349/files/Motorola_Edge_70_Fusion_5G_Smartphone_Price_in_Nepal.png?v=1790873478",
+      "image": "https://cdn.shopify.com/s/files/1/0258/7862/6349/files/motorola-edge-70-fusion-5g-1-5k-amoled-display_jpg.png?v=1788071237",
       "description": "Elevate Your Mobile Experience with a 6.8-Inch 144Hz 1.5K AMOLED Display, Snapdragon 7s Gen 4 Performance, Sony LYT-710 OIS Imaging, and IP69 Durability Motorola Edge 70 Fusion 5G is designed with exceptional quad-curved aesthetics combined with durable construction. Built on Qualcomm Snapdragon 7s Gen 4 (4nm) chip, it offers a large 6.8-inch 1.5K 144Hz Extreme AMOLED display (5,200 nits peak brightness), a professional-grade 50MP Sony LYT-710 OIS camera, high-grade IP68 & IP69, MIL-STD-810H durability, and a massive 7,000mAh Silicon-Carbon battery with Turbocharging 68W, all in a slim 7.99mm thick body. PRODUCT DETAILS 6 .8-inch 1.5K 144Hz Quad-Curved AMOLED Display & 5200-nits Peak Brightness The Motorola Edge 70 Fusion comes with a 6.8-inch 1.5K quad-curved AMOLED display. It delivers a smooth visual experience with its 144Hz refresh rate at 10-bit color depth (with over a billion colors), Pantone-verified skin tones, and a maximum brightness level of 5200 nits. Thanks to the Corning® Gorilla® Glass 7i protective layer, as well as rigorous testing and certifications, the device shows a delightful design. Snapdragon 7s Gen 4 (4nm) Performance and Clean Hello UI The Edge 70 Fusion is powered by the Qualcomm Snapdragon 7s Gen 4 octa-core 5G processor (up to 2.7 GHz, 4nm, architecture) coupled with the maximum of 12GB LPDDR5X RAM and UFS storage achieving responsive multitasking and excellent gaming frames combined with energy efficiency. Running on Hello UI featuring Android 16 (with 3 OS updates guaranteed and security updates for the next 5 years), the device features a clean, ad-free UI, along with Moto Gestures and the Smart Connect integration. 50MP Sony LYT-710 OIS camera and 7,000mAh battery. Equipped with a 50MP Sony LYT-710 (f/1.8, 1/1.56\", OIS, All-Pixel Focus) primary sensor, the device is capable of taking detailed pictures and capturing stabilized 4K videos. There is also a 13MP ultra-wide/macro camera as well as a 32MP front camera with 4K video recording capability. Thanks to its 7,000mAh Silicon-Carbon battery, the device guarantees an endurance of 2+ days of active usage with the possibility of recharging it rapidly using the 68W TurboPower charging technology KEY FEATURES 6.8\" 1.5K 144Hz Quad-Curved AMOLED: 5200 nits peak brightness, Pantone Validated colors, and Gorilla Glass 7i. Snapdragon 7s Gen 4 (4nm) 5G: Power-efficient octa-core performance with low thermal output. 50MP Sony LYT-710 OIS Primary Camera : Clear low-light photography, 4K video, and a 32MP front selfie camera. 7,000mAh Silicon-Carbon Battery: Multi-day battery endurance with 68W TurboPower wired charging. Dual IP68 / IP69 & MIL-STD-810H Ratings: Built to withstand high-pressure water jets, dust, and drops. Stereo Speakers with Dolby Atmos: Loud, balanced audio output paired with an in-display fingerprint scanner. TECHNICAL SPECIFICATIONS Feature Details Brand / Manufacturer Motorola (Lenovo) Model Name Motorola Edge 70 Fusion 5G Display Panel 6.8-inch 1.5K ( 1272 \\times 2772\\text{ px} ), Extreme AMOLED Quad-Curved Screen, 20:9 Refresh Rate & Brightness 144Hz Refresh Rate | 5,200 Nits Peak Brightness | 10-Bit Color Depth Screen Protection Corning® Gorilla® Glass 7i | Pantone Validated Colors & SkinTones Processor (CPU) Qualcomm® Snapdragon® 7s Gen 4 (4nm, Octa-Core up to 2.7 GHz) GPU Qualcomm Adreno GPU RAM & Storage 8GB / 12GB LPDDR5X RAM | 128GB / 256GB / 512GB UFS 3.1 Storage Rear Camera System 50 MP (Sony LYT-710, f/1.8, 1/1.56\", OIS, PDAF) + 13 MP Ultra-Wide/Macro (f/2.2, 120° ) Front Selfie Camera 32 MP (f/2.2, 4K Video Recording @ 30fps) Operating System Hello UI based on Android 16 (3 Years OS + 5 Years Security Updates) Battery Capacity 7,000 mAh (typ) Silicon-Carbon Battery Charging Speeds 68W TurboPower™ Fast Charging (50% in ~15 mins) | Reverse Wired Charging Durability Ratings IP68 & IP69 Dust/Water Resistance + MIL-STD-810H Military Standard Audio & Biometrics Dual Stereo Speakers (Dolby Atmos®) | In-Display Optical Fingerprint Sensor Connectivity 5G Dual SIM (Nano-SIM + eSIM), Wi-Fi 6E/7, Bluetooth 6.0, NFC, USB Type-C 2.0 Dimensions / Weight 162.76 \\times 75.60 \\times 7.99\\text{ mm} | 193 grams Color Finishes Pantone Silhouette, Pantone Country Air, Pantone Blue Surf, Orient Blue Motorola Edge 50 Fusion Vs Motorola Edge Fusion Feature Motorola Edge 50 Fusion Motorola Edge 70 Fusion Release Date April 2024 March 2026 Display Size 6.67 inches 6.8 inches Display Type P-OLED AMOLED (Extreme) Resolution 1080 × 2400 pixels 1272 × 2772 pixels Pixel Density 393 ppi 450 ppi Refresh Rate 144Hz 144Hz Processor Qualcomm Snapdragon 7s Gen 2 Qualcomm Snapdragon 7s Gen 3 / Gen 4 variant Rear Camera 50 MP Primary 50 MP Primary (Sony LYTIA 710) Front Camera 32 MP 32 MP Battery Capacity 5,000 mAh 7,000 mAh Protection IP68 IP69 WHAT’S IN THE BOX? 1 x Motorola Edge 70 Fusion 5G Smartphone 1 x 68W TurboPower™ AC Wall Charger Adapter 1 x USB Type-C to Type-C Cable 1 x Premium Matte Protective Back Case 1 x SIM Tray Ejection Tool Quick Start Setup Guide & Official Warranty Card FREQUENTLY ASKED QUESTIONS Q: How much will the Motorola Edge 70 Fusion cost in Nepal? A: The price of the Motorola Edge 70 Fusion 5G in Nepal is NPR 69,999 for its base model having 12GB RAM and 256GB internal storage, and around NPR 79,999 for the model having 12GB RAM and 512GB storage in authorized retail shops like Brother-Mart. Q: What does the IP69 rating signify for this device? A: The conventional IP68 rating covers protection against immersion in stationary water, but the IP69 rating refers to protection from high-pressure and high-temperature spray. Q: Is there a 68W charger included in the box? A: Yes! Motorola includes a complete 68W TurboPower™ fast charge adapter and a cable in the box. Q: How long does it take to charge the 7,000mAh battery? A: With the help of a supplied 68W TurboPower charger, the 7,000mAh battery charges to around 50% in 15 minutes and completely in about 45 minutes.",
       "ram": "12GB",
       "storage": "256GB",
@@ -11081,8 +11309,8 @@
         "chipset": "Snapdragon 7s Gen 4 Performance",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
-      "price": 69999,
+      "updated_at": "2026-11-21",
+      "price": 79999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/motorola-edge-70-fusion-5g-smartphone-price-in-nepal",
       "price_count": 1,
@@ -11161,6 +11389,10 @@
         {
           "date": "2026-11-20",
           "price": 69999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 79999
         }
       ]
     },
@@ -11173,13 +11405,13 @@
       "prices": [
         {
           "store": "Brother Mart",
-          "price": 79999,
+          "price": 89999,
           "url": "https://brother-mart.com/products/motorola-edge-70-fusion-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
-      "image": "https://cdn.shopify.com/s/files/1/0258/7862/6349/files/Motorola_Edge_70_Fusion_5G_Smartphone_Price_in_Nepal.png?v=1790873478",
+      "image": "https://cdn.shopify.com/s/files/1/0258/7862/6349/files/motorola-edge-70-fusion-5g-1-5k-amoled-display_jpg.png?v=1788071237",
       "description": "Elevate Your Mobile Experience with a 6.8-Inch 144Hz 1.5K AMOLED Display, Snapdragon 7s Gen 4 Performance, Sony LYT-710 OIS Imaging, and IP69 Durability Motorola Edge 70 Fusion 5G is designed with exceptional quad-curved aesthetics combined with durable construction. Built on Qualcomm Snapdragon 7s Gen 4 (4nm) chip, it offers a large 6.8-inch 1.5K 144Hz Extreme AMOLED display (5,200 nits peak brightness), a professional-grade 50MP Sony LYT-710 OIS camera, high-grade IP68 & IP69, MIL-STD-810H durability, and a massive 7,000mAh Silicon-Carbon battery with Turbocharging 68W, all in a slim 7.99mm thick body. PRODUCT DETAILS 6 .8-inch 1.5K 144Hz Quad-Curved AMOLED Display & 5200-nits Peak Brightness The Motorola Edge 70 Fusion comes with a 6.8-inch 1.5K quad-curved AMOLED display. It delivers a smooth visual experience with its 144Hz refresh rate at 10-bit color depth (with over a billion colors), Pantone-verified skin tones, and a maximum brightness level of 5200 nits. Thanks to the Corning® Gorilla® Glass 7i protective layer, as well as rigorous testing and certifications, the device shows a delightful design. Snapdragon 7s Gen 4 (4nm) Performance and Clean Hello UI The Edge 70 Fusion is powered by the Qualcomm Snapdragon 7s Gen 4 octa-core 5G processor (up to 2.7 GHz, 4nm, architecture) coupled with the maximum of 12GB LPDDR5X RAM and UFS storage achieving responsive multitasking and excellent gaming frames combined with energy efficiency. Running on Hello UI featuring Android 16 (with 3 OS updates guaranteed and security updates for the next 5 years), the device features a clean, ad-free UI, along with Moto Gestures and the Smart Connect integration. 50MP Sony LYT-710 OIS camera and 7,000mAh battery. Equipped with a 50MP Sony LYT-710 (f/1.8, 1/1.56\", OIS, All-Pixel Focus) primary sensor, the device is capable of taking detailed pictures and capturing stabilized 4K videos. There is also a 13MP ultra-wide/macro camera as well as a 32MP front camera with 4K video recording capability. Thanks to its 7,000mAh Silicon-Carbon battery, the device guarantees an endurance of 2+ days of active usage with the possibility of recharging it rapidly using the 68W TurboPower charging technology KEY FEATURES 6.8\" 1.5K 144Hz Quad-Curved AMOLED: 5200 nits peak brightness, Pantone Validated colors, and Gorilla Glass 7i. Snapdragon 7s Gen 4 (4nm) 5G: Power-efficient octa-core performance with low thermal output. 50MP Sony LYT-710 OIS Primary Camera : Clear low-light photography, 4K video, and a 32MP front selfie camera. 7,000mAh Silicon-Carbon Battery: Multi-day battery endurance with 68W TurboPower wired charging. Dual IP68 / IP69 & MIL-STD-810H Ratings: Built to withstand high-pressure water jets, dust, and drops. Stereo Speakers with Dolby Atmos: Loud, balanced audio output paired with an in-display fingerprint scanner. TECHNICAL SPECIFICATIONS Feature Details Brand / Manufacturer Motorola (Lenovo) Model Name Motorola Edge 70 Fusion 5G Display Panel 6.8-inch 1.5K ( 1272 \\times 2772\\text{ px} ), Extreme AMOLED Quad-Curved Screen, 20:9 Refresh Rate & Brightness 144Hz Refresh Rate | 5,200 Nits Peak Brightness | 10-Bit Color Depth Screen Protection Corning® Gorilla® Glass 7i | Pantone Validated Colors & SkinTones Processor (CPU) Qualcomm® Snapdragon® 7s Gen 4 (4nm, Octa-Core up to 2.7 GHz) GPU Qualcomm Adreno GPU RAM & Storage 8GB / 12GB LPDDR5X RAM | 128GB / 256GB / 512GB UFS 3.1 Storage Rear Camera System 50 MP (Sony LYT-710, f/1.8, 1/1.56\", OIS, PDAF) + 13 MP Ultra-Wide/Macro (f/2.2, 120° ) Front Selfie Camera 32 MP (f/2.2, 4K Video Recording @ 30fps) Operating System Hello UI based on Android 16 (3 Years OS + 5 Years Security Updates) Battery Capacity 7,000 mAh (typ) Silicon-Carbon Battery Charging Speeds 68W TurboPower™ Fast Charging (50% in ~15 mins) | Reverse Wired Charging Durability Ratings IP68 & IP69 Dust/Water Resistance + MIL-STD-810H Military Standard Audio & Biometrics Dual Stereo Speakers (Dolby Atmos®) | In-Display Optical Fingerprint Sensor Connectivity 5G Dual SIM (Nano-SIM + eSIM), Wi-Fi 6E/7, Bluetooth 6.0, NFC, USB Type-C 2.0 Dimensions / Weight 162.76 \\times 75.60 \\times 7.99\\text{ mm} | 193 grams Color Finishes Pantone Silhouette, Pantone Country Air, Pantone Blue Surf, Orient Blue Motorola Edge 50 Fusion Vs Motorola Edge Fusion Feature Motorola Edge 50 Fusion Motorola Edge 70 Fusion Release Date April 2024 March 2026 Display Size 6.67 inches 6.8 inches Display Type P-OLED AMOLED (Extreme) Resolution 1080 × 2400 pixels 1272 × 2772 pixels Pixel Density 393 ppi 450 ppi Refresh Rate 144Hz 144Hz Processor Qualcomm Snapdragon 7s Gen 2 Qualcomm Snapdragon 7s Gen 3 / Gen 4 variant Rear Camera 50 MP Primary 50 MP Primary (Sony LYTIA 710) Front Camera 32 MP 32 MP Battery Capacity 5,000 mAh 7,000 mAh Protection IP68 IP69 WHAT’S IN THE BOX? 1 x Motorola Edge 70 Fusion 5G Smartphone 1 x 68W TurboPower™ AC Wall Charger Adapter 1 x USB Type-C to Type-C Cable 1 x Premium Matte Protective Back Case 1 x SIM Tray Ejection Tool Quick Start Setup Guide & Official Warranty Card FREQUENTLY ASKED QUESTIONS Q: How much will the Motorola Edge 70 Fusion cost in Nepal? A: The price of the Motorola Edge 70 Fusion 5G in Nepal is NPR 69,999 for its base model having 12GB RAM and 256GB internal storage, and around NPR 79,999 for the model having 12GB RAM and 512GB storage in authorized retail shops like Brother-Mart. Q: What does the IP69 rating signify for this device? A: The conventional IP68 rating covers protection against immersion in stationary water, but the IP69 rating refers to protection from high-pressure and high-temperature spray. Q: Is there a 68W charger included in the box? A: Yes! Motorola includes a complete 68W TurboPower™ fast charge adapter and a cable in the box. Q: How long does it take to charge the 7,000mAh battery? A: With the help of a supplied 68W TurboPower charger, the 7,000mAh battery charges to around 50% in 15 minutes and completely in about 45 minutes.",
       "ram": "12GB",
       "storage": "256GB",
@@ -11195,8 +11427,8 @@
         "chipset": "Snapdragon 7s Gen 4 Performance",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
-      "price": 79999,
+      "updated_at": "2026-11-21",
+      "price": 89999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/motorola-edge-70-fusion-5g-smartphone-price-in-nepal",
       "price_count": 1,
@@ -11275,6 +11507,10 @@
         {
           "date": "2026-11-20",
           "price": 79999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 89999
         }
       ]
     },
@@ -11416,9 +11652,9 @@
       "prices": [
         {
           "store": "Brother Mart",
-          "price": 24999,
+          "price": 31999,
           "url": "https://brother-mart.com/products/motorola-moto-g06-power-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -11438,8 +11674,8 @@
         "chipset": "Helio G81 Ultra (12nm) Octa-Core (2x2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
-      "price": 24999,
+      "updated_at": "2026-11-21",
+      "price": 31999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/motorola-moto-g06-power-price-in-nepal",
       "price_count": 1,
@@ -11518,6 +11754,10 @@
         {
           "date": "2026-11-20",
           "price": 24999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 31999
         }
       ]
     },
@@ -11530,9 +11770,9 @@
       "prices": [
         {
           "store": "Brother Mart",
-          "price": 26499,
+          "price": 31999,
           "url": "https://brother-mart.com/products/motorola-moto-g06-power-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -11552,8 +11792,8 @@
         "chipset": "Helio G81 Ultra (12nm) Octa-Core (2x2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
-      "price": 26499,
+      "updated_at": "2026-11-21",
+      "price": 31999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/motorola-moto-g06-power-price-in-nepal",
       "price_count": 1,
@@ -11632,6 +11872,10 @@
         {
           "date": "2026-11-20",
           "price": 26499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 31999
         }
       ]
     },
@@ -11644,9 +11888,9 @@
       "prices": [
         {
           "store": "Brother Mart",
-          "price": 26499,
+          "price": 31999,
           "url": "https://brother-mart.com/products/motorola-moto-g06-power-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -11666,8 +11910,8 @@
         "chipset": "Helio G81 Ultra (12nm) Octa-Core (2x2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
-      "price": 26499,
+      "updated_at": "2026-11-21",
+      "price": 31999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/motorola-moto-g06-power-price-in-nepal",
       "price_count": 1,
@@ -11746,6 +11990,10 @@
         {
           "date": "2026-11-20",
           "price": 26499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 31999
         }
       ]
     },
@@ -11758,9 +12006,9 @@
       "prices": [
         {
           "store": "Brother Mart",
-          "price": 26499,
+          "price": 31999,
           "url": "https://brother-mart.com/products/motorola-moto-g06-power-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -11780,8 +12028,8 @@
         "chipset": "Helio G81 Ultra (12nm) Octa-Core (2x2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
-      "price": 26499,
+      "updated_at": "2026-11-21",
+      "price": 31999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/motorola-moto-g06-power-price-in-nepal",
       "price_count": 1,
@@ -11860,6 +12108,10 @@
         {
           "date": "2026-11-20",
           "price": 26499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 31999
         }
       ]
     },
@@ -12322,7 +12574,7 @@
           "store": "Brother Mart",
           "price": 83999,
           "url": "https://brother-mart.com/products/nothing-phone-4a-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -12342,7 +12594,7 @@
         "chipset": "Snapdragon 7s Gen 4 (4nm) | Transparent Design with 63",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 83999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/nothing-phone-4a-price-in-nepal",
@@ -12422,6 +12674,10 @@
         {
           "date": "2026-11-20",
           "price": 83999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 83999
         }
       ]
     },
@@ -12436,7 +12692,7 @@
           "store": "Brother Mart",
           "price": 64999,
           "url": "https://brother-mart.com/products/nothing-phone-4b-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -12455,7 +12711,7 @@
         "chipset": "Snapdragon 6 Gen 4 (4nm) | Transparent Industrial Desig",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 64999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/nothing-phone-4b-5g-price-in-nepal",
@@ -12535,6 +12791,10 @@
         {
           "date": "2026-11-20",
           "price": 64999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 64999
         }
       ]
     },
@@ -12549,7 +12809,7 @@
           "store": "Oliz Store",
           "price": 75699,
           "url": "https://cdn.olizstore.com/product/nothing-phone-2",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -12588,7 +12848,7 @@
         "chipset": "Qualcomm Snapdragon 8+ Gen 1",
         "camera": "50 MP main (f/1.8, OIS), 50 MP ultra-wide (f/2.0, 114° FoV)"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "feature": "Details",
       "processor": "Qualcomm Snapdragon 8+ Gen 1",
       "gpu": "Adreno 730",
@@ -12621,6 +12881,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 75699
+        },
+        {
+          "date": "2026-11-21",
           "price": 75699
         }
       ]
@@ -12969,13 +13233,13 @@
       "prices": [
         {
           "store": "Brother Mart",
-          "price": 99999,
+          "price": 109999,
           "url": "https://brother-mart.com/products/nothing-phone-4a-pro-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
-      "image": "https://cdn.shopify.com/s/files/1/0258/7862/6349/files/Nothing_phone_4a_pro_5g_in_emi.png?v=1791097822",
+      "image": "https://cdn.shopify.com/s/files/1/0258/7862/6349/files/latest-nothing-phone-4a-pro-nepal-glyph-interface.png?v=1777281544",
       "description": "Nothing Phone (4a) Pro 5G Smartphone | 6.83\" 1.5K (1260x2800) 144Hz AMOLED Display (5000 Nits Peak, 2160Hz PWM, Gorilla Glass 7i) | Qualcomm Snapdragon 7 Gen 4 (4nm) | Interactive Glyph Matrix (137 Individually Addressable Mini-LEDs) | Triple Studio Camera: 50MP OIS Main + 50MP 3.5x Periscope Telephoto (OIS) + 8MP Ultra-Wide | 32MP Selfie | 5400mAh Battery with 50W Fast Charging (7.5W Reverse) | Aircraft-Grade Aluminum Unibody & IP65 Ingress | Nothing OS 4.1 (Android 16) 137 Mini-LED Glyph Matrix, 3.5x Periscope Studio Zoom: Elevate Mobile Aesthetics with 4nm Snapdragon 7 Gen 4 Performance, 5,000-nit 144Hz AMOLED Visuals, Dual 50MP OIS Optics, 5,400mAh Stamina, and Aircraft-Grade Aluminum Craftsmanship. The Nothing Phone (4a) Pro is the definitive mid-range flagship of 2026, designed for those who want a “Phone (4)” experience without the premium price tag. For the first time, Nothing has moved to an all-metal unibody design for the Pro Series, while retaining the iconic Glyph Matrix Lighting system. With a pro-grade periscope telephoto lens and a stunning 144Hz display, it is the most ambitious mid-range device in the Nepalese market. Experience everything in high definition. The massive 6.83-inch 1.5K AMOLED display is a visual marvel, boasting a 144Hz refresh rate and a record-breaking 5,000 nits peak brightness. Powered by the latest Snapdragon 7 Gen 4 (4nm) processor and 12GB of RAM, it handles everything from professional video editing to high-end 3D gaming with ease. It is the perfect visual companion for your Samsung earbuds setup in Nepal. Nothing has revolutionized mobile photography like a triple 50MP Camera setup. The star of the show is the 50MP Periscope Telephoto lens, offering 3.5x optical zoom and a staggering 140x digital zoom–a rarity in this price segment. Combined with the Nothing OS 4.1 (Android 16), you get a clean, bloatware-free experience that feels as fast as it looks. Upgrade today and experience the most unique smartphone of 2026. 0% Interest EMI Plan Product Price Down Payment (40%) EMI Amount Tenure Interest Rs. 99,999 Rs. 40,000 Rs. 6,667/month 9 Months 0% Nothing Phone 4a Pro Key Features Glyph Matrix Interface: A larger, more dynamic LED matrix that acts as a visual notification hub, timer, and AI indicator. 50MP Periscope Telephoto: Capture distant subjects with unbelievable clarity using 3.5x optical and up to 140x ultra-digital zoom 144Hz 1.5K AMOLED Screen: A pro-grade display with 5,000 nits peak brightness for perfect visibility under direct sunlight. Snapdragon 7 Gen 4 (4nm): Next-gen flagship-tier efficiency and power for seamless multitasking and gaming. 5,400mAh Battery: A true all-day performer with 50W Fast Charging and reverse wired charging for your accessories. Meta Unibody Design: A durable, Sleek aluminum frame with an IP65 rating for dust and water resistance. Nothing Phone 4a Pro Technical Specifications Feature Details Processor Qualcomm Snapdragon 7 Gen 4 (4nm) Display 6.83” 1.5K AMOLED, 144Hz, 5000 nits Peak, GG 7i RAM / Storage 8GB / 12GB LPDDR5X Rear Camera 50MP Main (OIS) + 50MP Periscope (3.5x Opt) + 8MP UW Front Camera 32MP Clear Selfie (f/2.2) Battery 5,400mAh with 50W Fast Charging Build Aluminum Unibody, Glyph Matrix LEDs, IP65 OS Nothing OS 4.1 (Based on Android 16) Security Optical Under-display Fingerprint Nothing Phone (4a) Pro vs Nothing Phone (4a) Feature Nothing Phone (4a) Pro Nothing Phone (4a) Standard Lighting Glyph Matrix (Advanced) Glyph Bar (Classic) Build Metal Unibody Glass/Plastic Hybrid Refresh Rate 144Hz 120Hz Telephoto 50MP Periscope(140x Zoom) 50MP Standard Zoom Peak Brightness 5,000 nits 4,500 nits Price NPR 86,999 NPR 58,499 What’s in the Box? Nothing Phone (4a) pro Glyph-designed USB-C to USB-C Cable SIM Tray Ejector (Transparent Design) Screen Protector (Pre-applied) Safety Information & Warranty Card (Note: Power Adapter sold separately) FAQ Sections Q: Is the Nothing Phone (4a) Pro officially available in Nepal? A: Yes, it was launched on March 27, 2026, and is now available at Brother-mart with official VAT bills and MDMS registration. Q: Does it have a periscope lens? A: Yes! The Pro model features a 50MP Periscope Telephoto lens, which is one of its biggest upgrades over the standard 4a and previous models. Q: How is the battery life compared to the phone (3)? A: With a 5,400mAh battery and the more efficient Snapdragon 7 Gen 4 chip, you can expect nearly 20% better endurance than the previous generation. Q: Is it waterproof? A: It has an IP65 rating, making it highly resistant to dust and low-pressure water splashes (rain and sweat), but it should not be submerged in water. Q: What is the price of Nothing Phone (4a) Pro in Nepal? A: The official starting price for the 8GB+256GB Variant is NPR 99,999 Experience Nothing Extraordinary. The Phone (4a) Pro is our #1 trending premium device for 2026. 100% Original & Box-Sealed Full VAT Bill & MDMS registrations Free Delivery inside Kathmandu Valley 1-Year Official Brand Warranty [ Buy Nothing Phone (4A) Pro - Shop Now ] [ ADD TO CAR T ]",
       "ram": "12GB",
       "storage": "256GB",
@@ -12989,8 +13253,8 @@
         "chipset": "Snapdragon 7 Gen 4 (4nm) | Interactive Glyph Matrix (13",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
-      "price": 99999,
+      "updated_at": "2026-11-21",
+      "price": 109999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/nothing-phone-4a-pro-5g-price-in-nepal",
       "price_count": 1,
@@ -13065,6 +13329,10 @@
         {
           "date": "2026-11-20",
           "price": 99999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 109999
         }
       ]
     },
@@ -13077,13 +13345,13 @@
       "prices": [
         {
           "store": "Brother Mart",
-          "price": 99999,
+          "price": 109999,
           "url": "https://brother-mart.com/products/nothing-phone-4a-pro-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
-      "image": "https://cdn.shopify.com/s/files/1/0258/7862/6349/files/Nothing_phone_4a_pro_5g_in_emi.png?v=1791097822",
+      "image": "https://cdn.shopify.com/s/files/1/0258/7862/6349/files/latest-nothing-phone-4a-pro-nepal-glyph-interface.png?v=1777281544",
       "description": "Nothing Phone (4a) Pro 5G Smartphone | 6.83\" 1.5K (1260x2800) 144Hz AMOLED Display (5000 Nits Peak, 2160Hz PWM, Gorilla Glass 7i) | Qualcomm Snapdragon 7 Gen 4 (4nm) | Interactive Glyph Matrix (137 Individually Addressable Mini-LEDs) | Triple Studio Camera: 50MP OIS Main + 50MP 3.5x Periscope Telephoto (OIS) + 8MP Ultra-Wide | 32MP Selfie | 5400mAh Battery with 50W Fast Charging (7.5W Reverse) | Aircraft-Grade Aluminum Unibody & IP65 Ingress | Nothing OS 4.1 (Android 16) 137 Mini-LED Glyph Matrix, 3.5x Periscope Studio Zoom: Elevate Mobile Aesthetics with 4nm Snapdragon 7 Gen 4 Performance, 5,000-nit 144Hz AMOLED Visuals, Dual 50MP OIS Optics, 5,400mAh Stamina, and Aircraft-Grade Aluminum Craftsmanship. The Nothing Phone (4a) Pro is the definitive mid-range flagship of 2026, designed for those who want a “Phone (4)” experience without the premium price tag. For the first time, Nothing has moved to an all-metal unibody design for the Pro Series, while retaining the iconic Glyph Matrix Lighting system. With a pro-grade periscope telephoto lens and a stunning 144Hz display, it is the most ambitious mid-range device in the Nepalese market. Experience everything in high definition. The massive 6.83-inch 1.5K AMOLED display is a visual marvel, boasting a 144Hz refresh rate and a record-breaking 5,000 nits peak brightness. Powered by the latest Snapdragon 7 Gen 4 (4nm) processor and 12GB of RAM, it handles everything from professional video editing to high-end 3D gaming with ease. It is the perfect visual companion for your Samsung earbuds setup in Nepal. Nothing has revolutionized mobile photography like a triple 50MP Camera setup. The star of the show is the 50MP Periscope Telephoto lens, offering 3.5x optical zoom and a staggering 140x digital zoom–a rarity in this price segment. Combined with the Nothing OS 4.1 (Android 16), you get a clean, bloatware-free experience that feels as fast as it looks. Upgrade today and experience the most unique smartphone of 2026. 0% Interest EMI Plan Product Price Down Payment (40%) EMI Amount Tenure Interest Rs. 99,999 Rs. 40,000 Rs. 6,667/month 9 Months 0% Nothing Phone 4a Pro Key Features Glyph Matrix Interface: A larger, more dynamic LED matrix that acts as a visual notification hub, timer, and AI indicator. 50MP Periscope Telephoto: Capture distant subjects with unbelievable clarity using 3.5x optical and up to 140x ultra-digital zoom 144Hz 1.5K AMOLED Screen: A pro-grade display with 5,000 nits peak brightness for perfect visibility under direct sunlight. Snapdragon 7 Gen 4 (4nm): Next-gen flagship-tier efficiency and power for seamless multitasking and gaming. 5,400mAh Battery: A true all-day performer with 50W Fast Charging and reverse wired charging for your accessories. Meta Unibody Design: A durable, Sleek aluminum frame with an IP65 rating for dust and water resistance. Nothing Phone 4a Pro Technical Specifications Feature Details Processor Qualcomm Snapdragon 7 Gen 4 (4nm) Display 6.83” 1.5K AMOLED, 144Hz, 5000 nits Peak, GG 7i RAM / Storage 8GB / 12GB LPDDR5X Rear Camera 50MP Main (OIS) + 50MP Periscope (3.5x Opt) + 8MP UW Front Camera 32MP Clear Selfie (f/2.2) Battery 5,400mAh with 50W Fast Charging Build Aluminum Unibody, Glyph Matrix LEDs, IP65 OS Nothing OS 4.1 (Based on Android 16) Security Optical Under-display Fingerprint Nothing Phone (4a) Pro vs Nothing Phone (4a) Feature Nothing Phone (4a) Pro Nothing Phone (4a) Standard Lighting Glyph Matrix (Advanced) Glyph Bar (Classic) Build Metal Unibody Glass/Plastic Hybrid Refresh Rate 144Hz 120Hz Telephoto 50MP Periscope(140x Zoom) 50MP Standard Zoom Peak Brightness 5,000 nits 4,500 nits Price NPR 86,999 NPR 58,499 What’s in the Box? Nothing Phone (4a) pro Glyph-designed USB-C to USB-C Cable SIM Tray Ejector (Transparent Design) Screen Protector (Pre-applied) Safety Information & Warranty Card (Note: Power Adapter sold separately) FAQ Sections Q: Is the Nothing Phone (4a) Pro officially available in Nepal? A: Yes, it was launched on March 27, 2026, and is now available at Brother-mart with official VAT bills and MDMS registration. Q: Does it have a periscope lens? A: Yes! The Pro model features a 50MP Periscope Telephoto lens, which is one of its biggest upgrades over the standard 4a and previous models. Q: How is the battery life compared to the phone (3)? A: With a 5,400mAh battery and the more efficient Snapdragon 7 Gen 4 chip, you can expect nearly 20% better endurance than the previous generation. Q: Is it waterproof? A: It has an IP65 rating, making it highly resistant to dust and low-pressure water splashes (rain and sweat), but it should not be submerged in water. Q: What is the price of Nothing Phone (4a) Pro in Nepal? A: The official starting price for the 8GB+256GB Variant is NPR 99,999 Experience Nothing Extraordinary. The Phone (4a) Pro is our #1 trending premium device for 2026. 100% Original & Box-Sealed Full VAT Bill & MDMS registrations Free Delivery inside Kathmandu Valley 1-Year Official Brand Warranty [ Buy Nothing Phone (4A) Pro - Shop Now ] [ ADD TO CAR T ]",
       "ram": "12GB",
       "storage": "256GB",
@@ -13097,8 +13365,8 @@
         "chipset": "Snapdragon 7 Gen 4 (4nm) | Interactive Glyph Matrix (13",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
-      "price": 99999,
+      "updated_at": "2026-11-21",
+      "price": 109999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/nothing-phone-4a-pro-5g-price-in-nepal",
       "price_count": 1,
@@ -13177,6 +13445,10 @@
         {
           "date": "2026-11-20",
           "price": 99999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 109999
         }
       ]
     },
@@ -13189,13 +13461,13 @@
       "prices": [
         {
           "store": "Brother Mart",
-          "price": 99999,
+          "price": 109999,
           "url": "https://brother-mart.com/products/nothing-phone-4a-pro-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
-      "image": "https://cdn.shopify.com/s/files/1/0258/7862/6349/files/Nothing_phone_4a_pro_5g_in_emi.png?v=1791097822",
+      "image": "https://cdn.shopify.com/s/files/1/0258/7862/6349/files/latest-nothing-phone-4a-pro-nepal-glyph-interface.png?v=1777281544",
       "description": "Nothing Phone (4a) Pro 5G Smartphone | 6.83\" 1.5K (1260x2800) 144Hz AMOLED Display (5000 Nits Peak, 2160Hz PWM, Gorilla Glass 7i) | Qualcomm Snapdragon 7 Gen 4 (4nm) | Interactive Glyph Matrix (137 Individually Addressable Mini-LEDs) | Triple Studio Camera: 50MP OIS Main + 50MP 3.5x Periscope Telephoto (OIS) + 8MP Ultra-Wide | 32MP Selfie | 5400mAh Battery with 50W Fast Charging (7.5W Reverse) | Aircraft-Grade Aluminum Unibody & IP65 Ingress | Nothing OS 4.1 (Android 16) 137 Mini-LED Glyph Matrix, 3.5x Periscope Studio Zoom: Elevate Mobile Aesthetics with 4nm Snapdragon 7 Gen 4 Performance, 5,000-nit 144Hz AMOLED Visuals, Dual 50MP OIS Optics, 5,400mAh Stamina, and Aircraft-Grade Aluminum Craftsmanship. The Nothing Phone (4a) Pro is the definitive mid-range flagship of 2026, designed for those who want a “Phone (4)” experience without the premium price tag. For the first time, Nothing has moved to an all-metal unibody design for the Pro Series, while retaining the iconic Glyph Matrix Lighting system. With a pro-grade periscope telephoto lens and a stunning 144Hz display, it is the most ambitious mid-range device in the Nepalese market. Experience everything in high definition. The massive 6.83-inch 1.5K AMOLED display is a visual marvel, boasting a 144Hz refresh rate and a record-breaking 5,000 nits peak brightness. Powered by the latest Snapdragon 7 Gen 4 (4nm) processor and 12GB of RAM, it handles everything from professional video editing to high-end 3D gaming with ease. It is the perfect visual companion for your Samsung earbuds setup in Nepal. Nothing has revolutionized mobile photography like a triple 50MP Camera setup. The star of the show is the 50MP Periscope Telephoto lens, offering 3.5x optical zoom and a staggering 140x digital zoom–a rarity in this price segment. Combined with the Nothing OS 4.1 (Android 16), you get a clean, bloatware-free experience that feels as fast as it looks. Upgrade today and experience the most unique smartphone of 2026. 0% Interest EMI Plan Product Price Down Payment (40%) EMI Amount Tenure Interest Rs. 99,999 Rs. 40,000 Rs. 6,667/month 9 Months 0% Nothing Phone 4a Pro Key Features Glyph Matrix Interface: A larger, more dynamic LED matrix that acts as a visual notification hub, timer, and AI indicator. 50MP Periscope Telephoto: Capture distant subjects with unbelievable clarity using 3.5x optical and up to 140x ultra-digital zoom 144Hz 1.5K AMOLED Screen: A pro-grade display with 5,000 nits peak brightness for perfect visibility under direct sunlight. Snapdragon 7 Gen 4 (4nm): Next-gen flagship-tier efficiency and power for seamless multitasking and gaming. 5,400mAh Battery: A true all-day performer with 50W Fast Charging and reverse wired charging for your accessories. Meta Unibody Design: A durable, Sleek aluminum frame with an IP65 rating for dust and water resistance. Nothing Phone 4a Pro Technical Specifications Feature Details Processor Qualcomm Snapdragon 7 Gen 4 (4nm) Display 6.83” 1.5K AMOLED, 144Hz, 5000 nits Peak, GG 7i RAM / Storage 8GB / 12GB LPDDR5X Rear Camera 50MP Main (OIS) + 50MP Periscope (3.5x Opt) + 8MP UW Front Camera 32MP Clear Selfie (f/2.2) Battery 5,400mAh with 50W Fast Charging Build Aluminum Unibody, Glyph Matrix LEDs, IP65 OS Nothing OS 4.1 (Based on Android 16) Security Optical Under-display Fingerprint Nothing Phone (4a) Pro vs Nothing Phone (4a) Feature Nothing Phone (4a) Pro Nothing Phone (4a) Standard Lighting Glyph Matrix (Advanced) Glyph Bar (Classic) Build Metal Unibody Glass/Plastic Hybrid Refresh Rate 144Hz 120Hz Telephoto 50MP Periscope(140x Zoom) 50MP Standard Zoom Peak Brightness 5,000 nits 4,500 nits Price NPR 86,999 NPR 58,499 What’s in the Box? Nothing Phone (4a) pro Glyph-designed USB-C to USB-C Cable SIM Tray Ejector (Transparent Design) Screen Protector (Pre-applied) Safety Information & Warranty Card (Note: Power Adapter sold separately) FAQ Sections Q: Is the Nothing Phone (4a) Pro officially available in Nepal? A: Yes, it was launched on March 27, 2026, and is now available at Brother-mart with official VAT bills and MDMS registration. Q: Does it have a periscope lens? A: Yes! The Pro model features a 50MP Periscope Telephoto lens, which is one of its biggest upgrades over the standard 4a and previous models. Q: How is the battery life compared to the phone (3)? A: With a 5,400mAh battery and the more efficient Snapdragon 7 Gen 4 chip, you can expect nearly 20% better endurance than the previous generation. Q: Is it waterproof? A: It has an IP65 rating, making it highly resistant to dust and low-pressure water splashes (rain and sweat), but it should not be submerged in water. Q: What is the price of Nothing Phone (4a) Pro in Nepal? A: The official starting price for the 8GB+256GB Variant is NPR 99,999 Experience Nothing Extraordinary. The Phone (4a) Pro is our #1 trending premium device for 2026. 100% Original & Box-Sealed Full VAT Bill & MDMS registrations Free Delivery inside Kathmandu Valley 1-Year Official Brand Warranty [ Buy Nothing Phone (4A) Pro - Shop Now ] [ ADD TO CAR T ]",
       "ram": "12GB",
       "storage": "256GB",
@@ -13209,8 +13481,8 @@
         "chipset": "Snapdragon 7 Gen 4 (4nm) | Interactive Glyph Matrix (13",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
-      "price": 99999,
+      "updated_at": "2026-11-21",
+      "price": 109999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/nothing-phone-4a-pro-5g-price-in-nepal",
       "price_count": 1,
@@ -13289,6 +13561,10 @@
         {
           "date": "2026-11-20",
           "price": 99999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 109999
         }
       ]
     },
@@ -14335,7 +14611,7 @@
           "store": "Brother Mart",
           "price": 23499,
           "url": "https://brother-mart.com/products/oppo-a57-mobile-phone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -14354,7 +14630,7 @@
         "chipset": "Helio G35 processor",
         "camera": "13MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 23499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oppo-a57-mobile-phone-price-in-nepal",
@@ -14433,6 +14709,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 23499
+        },
+        {
+          "date": "2026-11-21",
           "price": 23499
         }
       ]
@@ -14448,7 +14728,7 @@
           "store": "Brother Mart",
           "price": 23499,
           "url": "https://brother-mart.com/products/oppo-a57-mobile-phone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -14467,7 +14747,7 @@
         "chipset": "Helio G35 processor",
         "camera": "13MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 23499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oppo-a57-mobile-phone-price-in-nepal",
@@ -14547,6 +14827,10 @@
         {
           "date": "2026-11-20",
           "price": 23499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 23499
         }
       ]
     },
@@ -14561,7 +14845,7 @@
           "store": "Brother Mart",
           "price": 139999,
           "url": "https://brother-mart.com/products/oneplus-12-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -14581,7 +14865,7 @@
         "chipset": "Snapdragon 8+ Gen 3 CPU: Octa-core Processor GPU: Adren",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 139999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oneplus-12-5g-price-in-nepal",
@@ -14661,6 +14945,10 @@
         {
           "date": "2026-11-20",
           "price": 139999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 139999
         }
       ]
     },
@@ -14675,7 +14963,7 @@
           "store": "Brother Mart",
           "price": 141999,
           "url": "https://brother-mart.com/products/oneplus-13-mobile-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -14695,7 +14983,7 @@
         "chipset": "Snapdragon 8 Elite Smartphone Black Eclipse / 16/512GB",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 141999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oneplus-13-mobile-price-in-nepal",
@@ -14775,6 +15063,10 @@
         {
           "date": "2026-11-20",
           "price": 141999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 141999
         }
       ]
     },
@@ -14789,7 +15081,7 @@
           "store": "Brother Mart",
           "price": 83999,
           "url": "https://brother-mart.com/products/oneplus-13r-discount-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -14808,7 +15100,7 @@
         "chipset": "Snapdragon 8 Gen 3 flagship Processor",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 83999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oneplus-13r-discount-price-in-nepal",
@@ -14888,6 +15180,10 @@
         {
           "date": "2026-11-20",
           "price": 83999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 83999
         }
       ]
     },
@@ -14902,7 +15198,7 @@
           "store": "Brother Mart",
           "price": 119999,
           "url": "https://brother-mart.com/products/oneplus-13s-5g-flagship-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -14922,7 +15218,7 @@
         "chipset": "Snapdragon 8 Elite (3nm",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 119999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oneplus-13s-5g-flagship-smartphone-price-in-nepal",
@@ -15002,6 +15298,10 @@
         {
           "date": "2026-11-20",
           "price": 119999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 119999
         }
       ]
     },
@@ -15016,7 +15316,7 @@
           "store": "Brother Mart",
           "price": 189999,
           "url": "https://brother-mart.com/products/oneplus-15-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -15034,7 +15334,7 @@
         "chipset": "Snapdragon®8 Elite Gen 5 7300mAh 50MP Mist Purple / 16G",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 189999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oneplus-15-smartphone-price-in-nepal",
@@ -15113,6 +15413,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 189999
+        },
+        {
+          "date": "2026-11-21",
           "price": 189999
         }
       ]
@@ -15257,7 +15561,7 @@
           "store": "Oliz Store",
           "price": 64999,
           "url": "https://cdn.olizstore.com/product/oneplus-nord-2t-5g",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -15296,7 +15600,7 @@
         "chipset": "MediaTek Dimensity 1300 (6 nm)",
         "camera": "Triple: 50 MP main (f/1.9, OIS) + 8 MP ultra-wide (f/2.2) + 2 MP mono (f/2.4)"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "feature": "Details",
       "processor": "MediaTek Dimensity 1300 (6 nm)",
       "gpu": "Mali-G77 MC9",
@@ -15329,6 +15633,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 64999
+        },
+        {
+          "date": "2026-11-21",
           "price": 64999
         }
       ]
@@ -15433,7 +15741,7 @@
           "store": "Brother Mart",
           "price": 79999,
           "url": "https://brother-mart.com/products/oneplus-nord-5-phone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -15451,7 +15759,7 @@
         "chipset": "Snapdragon® 8s Gen 3",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 79999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oneplus-nord-5-phone-price-in-nepal",
@@ -15531,6 +15839,10 @@
         {
           "date": "2026-11-20",
           "price": 79999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 79999
         }
       ]
     },
@@ -15545,7 +15857,7 @@
           "store": "Brother Mart",
           "price": 73999,
           "url": "https://brother-mart.com/products/oneplus-nord-5-phone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -15563,7 +15875,7 @@
         "chipset": "Snapdragon® 8s Gen 3",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 73999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oneplus-nord-5-phone-price-in-nepal",
@@ -15642,6 +15954,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 73999
+        },
+        {
+          "date": "2026-11-21",
           "price": 73999
         }
       ]
@@ -15786,7 +16102,7 @@
           "store": "Brother Mart",
           "price": 100999,
           "url": "https://brother-mart.com/products/oneplus-nord-6-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -15802,7 +16118,7 @@
         "battery": "000mAh",
         "chipset": "Snapdragon 8s Gen 4 Processor with an enormous 9"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 100999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oneplus-nord-6-5g-price-in-nepal",
@@ -15882,6 +16198,10 @@
         {
           "date": "2026-11-20",
           "price": 100999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 100999
         }
       ]
     },
@@ -15896,7 +16216,7 @@
           "store": "Brother Mart",
           "price": 89999,
           "url": "https://brother-mart.com/products/oneplus-nord-6-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -15912,7 +16232,7 @@
         "battery": "000mAh",
         "chipset": "Snapdragon 8s Gen 4 Processor with an enormous 9"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 89999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oneplus-nord-6-5g-price-in-nepal",
@@ -15992,6 +16312,10 @@
         {
           "date": "2026-11-20",
           "price": 89999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 89999
         }
       ]
     },
@@ -16006,7 +16330,7 @@
           "store": "Brother Mart",
           "price": 74999,
           "url": "https://brother-mart.com/products/oneplus-nord-ce-6-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -16026,7 +16350,7 @@
         "chipset": "Snapdragon 7s Gen 4 (4nm Octa-Core) with Vapor Chamber",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 74999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oneplus-nord-ce-6-5g-smartphone-price-in-nepal",
@@ -16106,6 +16430,10 @@
         {
           "date": "2026-11-20",
           "price": 74999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 74999
         }
       ]
     },
@@ -16120,7 +16448,7 @@
           "store": "Brother Mart",
           "price": 59999,
           "url": "https://brother-mart.com/products/oneplus-nord-ce5-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -16137,7 +16465,7 @@
         "chipset": "Dimensity 8350 Apex Chipset – Flagship performance wit",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 59999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/oneplus-nord-ce5-5g-price-in-nepal",
@@ -16217,6 +16545,10 @@
         {
           "date": "2026-11-20",
           "price": 59999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 59999
         }
       ]
     },
@@ -16231,7 +16563,7 @@
           "store": "Brother Mart",
           "price": 104999,
           "url": "https://brother-mart.com/products/poco-f8-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         },
         {
@@ -16258,7 +16590,7 @@
         "chipset": "Snapdragon 8 Elite Black The Flagship Killer is Back: E",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 104999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/poco-f8-pro-price-in-nepal",
@@ -16377,6 +16709,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 104999
+        },
+        {
+          "date": "2026-11-21",
           "price": 104999
         }
       ]
@@ -16521,7 +16857,7 @@
           "store": "Brother Mart",
           "price": 58999,
           "url": "https://brother-mart.com/products/poco-m8-pro-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -16539,7 +16875,7 @@
         "chipset": "Snapdragon Processor Black / 8GB+256GB An Experience an",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 58999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/poco-m8-pro-5g-price-in-nepal",
@@ -16619,6 +16955,10 @@
         {
           "date": "2026-11-20",
           "price": 58999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 58999
         }
       ]
     },
@@ -16633,7 +16973,7 @@
           "store": "Brother Mart",
           "price": 39999,
           "url": "https://brother-mart.com/products/poco-m8s-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -16652,7 +16992,7 @@
         "chipset": "Snapdragon® 6s Gen 3 (6nm) octa-core processor",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 39999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/poco-m8s-5g-price-in-nepal",
@@ -16732,6 +17072,10 @@
         {
           "date": "2026-11-20",
           "price": 39999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 39999
         }
       ]
     },
@@ -16746,7 +17090,7 @@
           "store": "Brother Mart",
           "price": 46999,
           "url": "https://brother-mart.com/products/poco-m8s-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -16765,7 +17109,7 @@
         "chipset": "Snapdragon® 6s Gen 3 (6nm) octa-core processor",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 46999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/poco-m8s-5g-price-in-nepal",
@@ -16845,6 +17189,10 @@
         {
           "date": "2026-11-20",
           "price": 46999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 46999
         }
       ]
     },
@@ -16859,7 +17207,7 @@
           "store": "Brother Mart",
           "price": 59999,
           "url": "https://brother-mart.com/products/poco-x7-pro-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -16877,7 +17225,7 @@
         "chipset": "Dimensity 8400-Ultra: Best Gaming Phone 12GB+512GB / B",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 59999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/poco-x7-pro-5g-price-in-nepal",
@@ -16957,6 +17305,10 @@
         {
           "date": "2026-11-20",
           "price": 59999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 59999
         }
       ]
     },
@@ -16971,7 +17323,7 @@
           "store": "Brother Mart",
           "price": 76999,
           "url": "https://brother-mart.com/products/poco-x8-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -16989,7 +17341,7 @@
         "chipset": "Dimensity 8500Ultra & 6500mAh White / 12GB+512GB Exper",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 76999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/poco-x8-pro-price-in-nepal",
@@ -17069,6 +17421,10 @@
         {
           "date": "2026-11-20",
           "price": 76999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 76999
         }
       ]
     },
@@ -17083,7 +17439,7 @@
           "store": "Brother Mart",
           "price": 66999,
           "url": "https://brother-mart.com/products/poco-x8-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -17101,7 +17457,7 @@
         "chipset": "Dimensity 8500Ultra & 6500mAh White / 8GB+256GB Experi",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 66999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/poco-x8-pro-price-in-nepal",
@@ -17181,6 +17537,10 @@
         {
           "date": "2026-11-20",
           "price": 66999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 66999
         }
       ]
     },
@@ -17195,7 +17555,7 @@
           "store": "Brother Mart",
           "price": 94999,
           "url": "https://brother-mart.com/products/poco-x8-max-price-in-nepa",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -17213,7 +17573,7 @@
         "chipset": "Dimensity 9500s chipset",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 94999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/poco-x8-max-price-in-nepa",
@@ -17293,6 +17653,10 @@
         {
           "date": "2026-11-20",
           "price": 94999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 94999
         }
       ]
     },
@@ -17307,7 +17671,7 @@
           "store": "Brother Mart",
           "price": 104999,
           "url": "https://brother-mart.com/products/poco-x8-max-price-in-nepa",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -17325,7 +17689,7 @@
         "chipset": "Dimensity 9500s chipset",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 104999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/poco-x8-max-price-in-nepa",
@@ -17404,6 +17768,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 104999
+        },
+        {
+          "date": "2026-11-21",
           "price": 104999
         }
       ]
@@ -17806,7 +18174,7 @@
           "store": "Brother Mart",
           "price": 66999,
           "url": "https://brother-mart.com/products/realme-15-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -17824,7 +18192,7 @@
         "chipset": "Snapdragon 7 Gen 4 Purple / 12GB + 256GB Realme 15 Pro",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 66999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/realme-15-pro-price-in-nepal",
@@ -17904,6 +18272,10 @@
         {
           "date": "2026-11-20",
           "price": 66999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 66999
         }
       ]
     },
@@ -17918,7 +18290,7 @@
           "store": "Brother Mart",
           "price": 71999,
           "url": "https://brother-mart.com/products/realme-15-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -17936,7 +18308,7 @@
         "chipset": "Snapdragon 7 Gen 4 Purple / 12GB + 512GB Realme 15 Pro",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 71999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/realme-15-pro-price-in-nepal",
@@ -18016,6 +18388,10 @@
         {
           "date": "2026-11-20",
           "price": 71999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 71999
         }
       ]
     },
@@ -18030,7 +18406,7 @@
           "store": "Brother Mart",
           "price": 28999,
           "url": "https://brother-mart.com/products/realme-c100i-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -18050,7 +18426,7 @@
         "chipset": "Helio G91-Ultra (12nm) RAM Options 4GB LPDDR4X 4GB",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 28999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/realme-c100i-smartphone-price-in-nepal",
@@ -18129,6 +18505,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 28999
+        },
+        {
+          "date": "2026-11-21",
           "price": 28999
         }
       ]
@@ -18402,7 +18782,7 @@
           "store": "Brother Mart",
           "price": 39999,
           "url": "https://brother-mart.com/products/realme-c85-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -18421,7 +18801,7 @@
         "chipset": "Dimensity 6300 (6nm",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 39999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/realme-c85-5g-smartphone-price-in-nepal",
@@ -18501,6 +18881,10 @@
         {
           "date": "2026-11-20",
           "price": 39999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 39999
         }
       ]
     },
@@ -18515,7 +18899,7 @@
           "store": "Brother Mart",
           "price": 44999,
           "url": "https://brother-mart.com/products/realme-c85-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -18534,7 +18918,7 @@
         "chipset": "Dimensity 6300 (6nm",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 44999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/realme-c85-5g-smartphone-price-in-nepal",
@@ -18613,6 +18997,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 44999
+        },
+        {
+          "date": "2026-11-21",
           "price": 44999
         }
       ]
@@ -18886,7 +19274,7 @@
           "store": "Brother Mart",
           "price": 149999,
           "url": "https://brother-mart.com/products/realme-gt-8-pro-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -18904,7 +19292,7 @@
         "chipset": "Snapdragon 8 Elite Gen 5 Phone Aston Martin Green / 16G",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 149999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/realme-gt-8-pro-5g-price-in-nepal",
@@ -18983,6 +19371,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 149999
+        },
+        {
+          "date": "2026-11-21",
           "price": 149999
         }
       ]
@@ -19385,7 +19777,7 @@
           "store": "Brother Mart",
           "price": 23999,
           "url": "https://brother-mart.com/products/realme-note-80-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -19403,7 +19795,7 @@
         "chipset": "Helio G81 (12nm) RAM / Storage 4GB / 64GB 4GB / 64",
         "camera": "13MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 23999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/realme-note-80-smartphone-price-in-nepal",
@@ -19482,6 +19874,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 23999
+        },
+        {
+          "date": "2026-11-21",
           "price": 23999
         }
       ]
@@ -19755,7 +20151,7 @@
           "store": "Brother Mart",
           "price": 33999,
           "url": "https://brother-mart.com/products/realme-p4-lite-4g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -19773,7 +20169,7 @@
         "battery": "600mAh",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 33999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/realme-p4-lite-4g-smartphone-price-in-nepal",
@@ -19848,6 +20244,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 33999
+        },
+        {
+          "date": "2026-11-21",
           "price": 33999
         }
       ]
@@ -19992,7 +20392,7 @@
           "store": "Brother Mart",
           "price": 76999,
           "url": "https://brother-mart.com/products/realme-p4-power-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -20012,7 +20412,7 @@
         "chipset": "Dimensity 7400 Ultra (4nm) + HyperVision+ AI Chip | Ma",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 76999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/realme-p4-power-5g-smartphone-price-in-nepal",
@@ -20092,6 +20492,10 @@
         {
           "date": "2026-11-20",
           "price": 76999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 76999
         }
       ]
     },
@@ -20106,7 +20510,7 @@
           "store": "Brother Mart",
           "price": 31999,
           "url": "https://brother-mart.com/products/realme-p4x-4g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -20123,7 +20527,7 @@
         "battery": "000mAh",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 31999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/realme-p4x-4g-smartphone-price-in-nepal",
@@ -20199,6 +20603,10 @@
         {
           "date": "2026-11-20",
           "price": 31999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 31999
         }
       ]
     },
@@ -20213,7 +20621,7 @@
           "store": "Brother Mart",
           "price": 27999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-17-4g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -20232,7 +20640,7 @@
         "chipset": "Helio G91-Ultra Power The Xiaomi REDMI 17 4G sets",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 27999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-17-4g-smartphone-price-in-nepal",
@@ -20312,6 +20720,10 @@
         {
           "date": "2026-11-20",
           "price": 27999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 27999
         }
       ]
     },
@@ -20326,7 +20738,7 @@
           "store": "Brother Mart",
           "price": 33999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-17-4g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -20345,7 +20757,7 @@
         "chipset": "Helio G91-Ultra Power The Xiaomi REDMI 17 4G sets",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 33999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-17-4g-smartphone-price-in-nepal",
@@ -20425,6 +20837,10 @@
         {
           "date": "2026-11-20",
           "price": 33999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 33999
         }
       ]
     },
@@ -20439,7 +20855,7 @@
           "store": "Brother Mart",
           "price": 33999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-17-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -20457,7 +20873,7 @@
         "chipset": "Snapdragon 4 Gen 5 Silicon The Xiaomi REDMI 17 5G has s",
         "camera": "50 MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 33999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-17-5g-smartphone-price-in-nepal",
@@ -20537,6 +20953,10 @@
         {
           "date": "2026-11-20",
           "price": 33999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 33999
         }
       ]
     },
@@ -20551,7 +20971,7 @@
           "store": "Brother Mart",
           "price": 37999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-17-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -20569,7 +20989,7 @@
         "chipset": "Snapdragon 4 Gen 5 Silicon The Xiaomi REDMI 17 5G has s",
         "camera": "50 MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 37999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-17-5g-smartphone-price-in-nepal",
@@ -20649,6 +21069,10 @@
         {
           "date": "2026-11-20",
           "price": 37999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 37999
         }
       ]
     },
@@ -20663,7 +21087,7 @@
           "store": "Brother Mart",
           "price": 41999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-17-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -20681,7 +21105,7 @@
         "chipset": "Snapdragon 4 Gen 5 Silicon The Xiaomi REDMI 17 5G has s",
         "camera": "50 MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 41999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-17-5g-smartphone-price-in-nepal",
@@ -20760,6 +21184,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 41999
+        },
+        {
+          "date": "2026-11-21",
           "price": 41999
         }
       ]
@@ -21291,7 +21719,7 @@
           "store": "Brother Mart",
           "price": 23999,
           "url": "https://brother-mart.com/products/redmi-a7-pro-4g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -21308,7 +21736,7 @@
         "battery": "6300mAh",
         "camera": "13MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 23999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/redmi-a7-pro-4g-price-in-nepal",
@@ -21387,6 +21815,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 23999
+        },
+        {
+          "date": "2026-11-21",
           "price": 23999
         }
       ]
@@ -21402,7 +21834,7 @@
           "store": "Brother Mart",
           "price": 21499,
           "url": "https://brother-mart.com/products/redmi-a7-pro-4g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -21419,7 +21851,7 @@
         "battery": "6300mAh",
         "camera": "13MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 21499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/redmi-a7-pro-4g-price-in-nepal",
@@ -21499,6 +21931,10 @@
         {
           "date": "2026-11-20",
           "price": 21499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 21499
         }
       ]
     },
@@ -21513,7 +21949,7 @@
           "store": "Brother Mart",
           "price": 23999,
           "url": "https://brother-mart.com/products/redmi-a7-pro-4g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -21530,7 +21966,7 @@
         "battery": "6300mAh",
         "camera": "13MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 23999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/redmi-a7-pro-4g-price-in-nepal",
@@ -21610,6 +22046,10 @@
         {
           "date": "2026-11-20",
           "price": 23999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 23999
         }
       ]
     },
@@ -21624,7 +22064,7 @@
           "store": "Brother Mart",
           "price": 21499,
           "url": "https://brother-mart.com/products/redmi-a7-pro-4g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -21641,7 +22081,7 @@
         "battery": "6300mAh",
         "camera": "13MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 21499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/redmi-a7-pro-4g-price-in-nepal",
@@ -21721,6 +22161,10 @@
         {
           "date": "2026-11-20",
           "price": 21499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 21499
         }
       ]
     },
@@ -21735,7 +22179,7 @@
           "store": "Brother Mart",
           "price": 69999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-note-15-pro-plus-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -21754,7 +22198,7 @@
         "chipset": "Snapdragon 7s Gen 4 & 200MP OIS Camera The Xiaomi Redmi",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 69999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-note-15-pro-plus-5g-price-in-nepal",
@@ -21833,6 +22277,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 69999
+        },
+        {
+          "date": "2026-11-21",
           "price": 69999
         }
       ]
@@ -21977,7 +22425,7 @@
           "store": "Brother Mart",
           "price": 42999,
           "url": "https://brother-mart.com/products/redmi-note-17-4g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -21995,7 +22443,7 @@
         "chipset": "Snapdragon 6s 4G Gen 2 (6nm Octa-Core up to 2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 42999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/redmi-note-17-4g-smartphone-price-in-nepal",
@@ -22075,6 +22523,10 @@
         {
           "date": "2026-11-20",
           "price": 42999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 42999
         }
       ]
     },
@@ -22089,7 +22541,7 @@
           "store": "Brother Mart",
           "price": 47999,
           "url": "https://brother-mart.com/products/redmi-note-17-4g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -22107,7 +22559,7 @@
         "chipset": "Snapdragon 6s 4G Gen 2 (6nm Octa-Core up to 2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 47999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/redmi-note-17-4g-smartphone-price-in-nepal",
@@ -22186,6 +22638,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 47999
+        },
+        {
+          "date": "2026-11-21",
           "price": 47999
         }
       ]
@@ -22330,7 +22786,7 @@
           "store": "Brother Mart",
           "price": 47999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-note-17-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -22350,7 +22806,7 @@
         "chipset": "Snapdragon 4 Gen 4 (4nm",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 47999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-note-17-5g-smartphone-price-in-nepal",
@@ -22430,6 +22886,10 @@
         {
           "date": "2026-11-20",
           "price": 47999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 47999
         }
       ]
     },
@@ -22444,7 +22904,7 @@
           "store": "Brother Mart",
           "price": 52999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-note-17-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -22464,7 +22924,7 @@
         "chipset": "Snapdragon 4 Gen 4 (4nm",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 52999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-note-17-5g-smartphone-price-in-nepal",
@@ -22543,6 +23003,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 52999
+        },
+        {
+          "date": "2026-11-21",
           "price": 52999
         }
       ]
@@ -22687,7 +23151,7 @@
           "store": "Brother Mart",
           "price": 64999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-note-17-pro-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -22705,7 +23169,7 @@
         "chipset": "Snapdragon 6s Gen 4 (4nm",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 64999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-note-17-pro-5g-smartphone-price-in-nepal",
@@ -22785,6 +23249,10 @@
         {
           "date": "2026-11-20",
           "price": 64999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 64999
         }
       ]
     },
@@ -22799,7 +23267,7 @@
           "store": "Brother Mart",
           "price": 57999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-note-17-pro-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -22817,7 +23285,7 @@
         "chipset": "Snapdragon 6s Gen 4 (4nm",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 57999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-note-17-pro-5g-smartphone-price-in-nepal",
@@ -22896,6 +23364,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 57999
+        },
+        {
+          "date": "2026-11-21",
           "price": 57999
         }
       ]
@@ -23040,7 +23512,7 @@
           "store": "Brother Mart",
           "price": 79999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-note-17-pro-max-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -23058,7 +23530,7 @@
         "chipset": "Snapdragon 6 Gen 5 (4nm",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 79999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-note-17-pro-max-5g-smartphone-price-in-nepal",
@@ -23138,6 +23610,10 @@
         {
           "date": "2026-11-20",
           "price": 79999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 79999
         }
       ]
     },
@@ -23152,7 +23628,7 @@
           "store": "Brother Mart",
           "price": 69999,
           "url": "https://brother-mart.com/products/xiaomi-redmi-note-17-pro-max-5g-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -23170,7 +23646,7 @@
         "chipset": "Snapdragon 6 Gen 5 (4nm",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 69999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-redmi-note-17-pro-max-5g-smartphone-price-in-nepal",
@@ -23249,6 +23725,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 69999
+        },
+        {
+          "date": "2026-11-21",
           "price": 69999
         }
       ]
@@ -23452,7 +23932,7 @@
           "store": "Brother Mart",
           "price": 29499,
           "url": "https://brother-mart.com/products/samsung-galaxy-a07-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -23472,7 +23952,7 @@
         "chipset": "Helio G99 processor (6nm)",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 29499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a07-smartphone-price-in-nepal",
@@ -23552,6 +24032,10 @@
         {
           "date": "2026-11-20",
           "price": 29499
+        },
+        {
+          "date": "2026-11-21",
+          "price": 29499
         }
       ]
     },
@@ -23566,7 +24050,7 @@
           "store": "Brother Mart",
           "price": 33499,
           "url": "https://brother-mart.com/products/samsung-galaxy-a07-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -23586,7 +24070,7 @@
         "chipset": "Helio G99 processor (6nm)",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 33499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a07-smartphone-price-in-nepal",
@@ -23665,6 +24149,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 33499
+        },
+        {
+          "date": "2026-11-21",
           "price": 33499
         }
       ]
@@ -23769,7 +24257,7 @@
           "store": "Oliz Store",
           "price": 44999,
           "url": "https://cdn.olizstore.com/product/samsung-galaxy-a17-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         },
         {
@@ -23806,7 +24294,7 @@
         "chipset": "Octa-core platform (Exynos class)",
         "camera": "50MP main (OIS) + 5MP ultra-wide + 2MP macro"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "feature": "Details",
       "processor": "Octa-core platform (Exynos class)",
       "memory / storage": "6GB / 8GB RAM; 128GB / 256GB storage; microSD support",
@@ -23922,6 +24410,10 @@
         {
           "date": "2026-11-20",
           "price": 44999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 44999
         }
       ]
     },
@@ -23936,7 +24428,7 @@
           "store": "Brother Mart",
           "price": 44999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a17-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -23955,7 +24447,7 @@
         "battery": "5000mAh",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 44999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a17-5g-price-in-nepal",
@@ -24035,6 +24527,10 @@
         {
           "date": "2026-11-20",
           "price": 44999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 44999
         }
       ]
     },
@@ -24049,7 +24545,7 @@
           "store": "Brother Mart",
           "price": 48999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a17-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -24068,7 +24564,7 @@
         "battery": "5000mAh",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 48999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a17-5g-price-in-nepal",
@@ -24148,6 +24644,10 @@
         {
           "date": "2026-11-20",
           "price": 48999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 48999
         }
       ]
     },
@@ -24162,7 +24662,7 @@
           "store": "Brother Mart",
           "price": 56999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a17-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -24181,7 +24681,7 @@
         "battery": "5000mAh",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 56999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a17-5g-price-in-nepal",
@@ -24261,6 +24761,10 @@
         {
           "date": "2026-11-20",
           "price": 56999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 56999
         }
       ]
     },
@@ -24275,7 +24779,7 @@
           "store": "Oliz Store",
           "price": 42999,
           "url": "https://cdn.olizstore.com/product/samsung-galaxy-a25-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -24307,7 +24811,7 @@
         "chipset": "MediaTek Dimensity 6080 (Octa-core)",
         "camera": "Triple: 50 MP (wide) + 2 MP (macro) + 2 MP (depth)"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "feature": "Details",
       "type": "Smartphone",
       "processor": "MediaTek Dimensity 6080 (Octa-core)",
@@ -24334,6 +24838,10 @@
         {
           "date": "2026-11-20",
           "price": 42999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 42999
         }
       ]
     },
@@ -24348,7 +24856,7 @@
           "store": "Brother Mart",
           "price": 39999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -24368,7 +24876,7 @@
         "chipset": "Exynos 1280 (5nm) CPU: Octa-core (2x2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 39999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
@@ -24447,6 +24955,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 39999
+        },
+        {
+          "date": "2026-11-21",
           "price": 39999
         }
       ]
@@ -24462,7 +24974,7 @@
           "store": "Brother Mart",
           "price": 42999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -24482,7 +24994,7 @@
         "chipset": "Exynos 1280 (5nm) CPU: Octa-core (2x2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 42999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
@@ -24561,6 +25073,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 42999
+        },
+        {
+          "date": "2026-11-21",
           "price": 42999
         }
       ]
@@ -24576,7 +25092,7 @@
           "store": "Brother Mart",
           "price": 39999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -24596,7 +25112,7 @@
         "chipset": "Exynos 1280 (5nm) CPU: Octa-core (2x2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 39999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
@@ -24676,6 +25192,10 @@
         {
           "date": "2026-11-20",
           "price": 39999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 39999
         }
       ]
     },
@@ -24690,7 +25210,7 @@
           "store": "Brother Mart",
           "price": 42999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -24710,7 +25230,7 @@
         "chipset": "Exynos 1280 (5nm) CPU: Octa-core (2x2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 42999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
@@ -24790,6 +25310,10 @@
         {
           "date": "2026-11-20",
           "price": 42999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 42999
         }
       ]
     },
@@ -24804,7 +25328,7 @@
           "store": "Brother Mart",
           "price": 39999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -24824,7 +25348,7 @@
         "chipset": "Exynos 1280 (5nm) CPU: Octa-core (2x2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 39999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
@@ -24904,6 +25428,10 @@
         {
           "date": "2026-11-20",
           "price": 39999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 39999
         }
       ]
     },
@@ -24918,7 +25446,7 @@
           "store": "Brother Mart",
           "price": 41999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -24938,7 +25466,7 @@
         "chipset": "Exynos 1280 (5nm) CPU: Octa-core (2x2",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 41999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a25-5g-price-in-nepal",
@@ -25017,6 +25545,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 41999
+        },
+        {
+          "date": "2026-11-21",
           "price": 41999
         }
       ]
@@ -25357,7 +25889,7 @@
           "store": "Brother Mart",
           "price": 96999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a37-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -25375,7 +25907,7 @@
         "chipset": "Exynos 1480 chipset and Galaxy AI",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 96999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a37-5g-price-in-nepal",
@@ -25455,6 +25987,10 @@
         {
           "date": "2026-11-20",
           "price": 96999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 96999
         }
       ]
     },
@@ -25469,7 +26005,7 @@
           "store": "Brother Mart",
           "price": 74999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a37-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -25487,7 +26023,7 @@
         "chipset": "Exynos 1480 chipset and Galaxy AI",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 74999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a37-5g-price-in-nepal",
@@ -25567,6 +26103,10 @@
         {
           "date": "2026-11-20",
           "price": 74999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 74999
         }
       ]
     },
@@ -25581,7 +26121,7 @@
           "store": "Brother Mart",
           "price": 86999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a37-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -25599,7 +26139,7 @@
         "chipset": "Exynos 1480 chipset and Galaxy AI",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 86999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a37-5g-price-in-nepal",
@@ -25679,6 +26219,10 @@
         {
           "date": "2026-11-20",
           "price": 86999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 86999
         }
       ]
     },
@@ -25693,7 +26237,7 @@
           "store": "Brother Mart",
           "price": 57499,
           "url": "https://brother-mart.com/products/samsung-galaxy-a53-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -25713,7 +26257,7 @@
         "chipset": "Exynos 1280 (5 nm) CPU: Octa-core (2x2",
         "camera": "64 MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 57499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a53-5g-price-in-nepal",
@@ -25792,6 +26336,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 57499
+        },
+        {
+          "date": "2026-11-21",
           "price": 57499
         }
       ]
@@ -25807,7 +26355,7 @@
           "store": "Brother Mart",
           "price": 57499,
           "url": "https://brother-mart.com/products/samsung-galaxy-a53-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -25827,7 +26375,7 @@
         "chipset": "Exynos 1280 (5 nm) CPU: Octa-core (2x2",
         "camera": "64 MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 57499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a53-5g-price-in-nepal",
@@ -25906,6 +26454,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 57499
+        },
+        {
+          "date": "2026-11-21",
           "price": 57499
         }
       ]
@@ -25921,7 +26473,7 @@
           "store": "Brother Mart",
           "price": 57499,
           "url": "https://brother-mart.com/products/samsung-galaxy-a53-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -25941,7 +26493,7 @@
         "chipset": "Exynos 1280 (5 nm) CPU: Octa-core (2x2",
         "camera": "64 MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 57499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a53-5g-price-in-nepal",
@@ -26020,6 +26572,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 57499
+        },
+        {
+          "date": "2026-11-21",
           "price": 57499
         }
       ]
@@ -26164,7 +26720,7 @@
           "store": "Brother Mart",
           "price": 107999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a57-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -26181,7 +26737,7 @@
         "chipset": "Exynos 1680 chipset",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 107999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a57-5g-price-in-nepal",
@@ -26261,6 +26817,10 @@
         {
           "date": "2026-11-20",
           "price": 107999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 107999
         }
       ]
     },
@@ -26275,7 +26835,7 @@
           "store": "Brother Mart",
           "price": 96999,
           "url": "https://brother-mart.com/products/samsung-galaxy-a57-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -26292,7 +26852,7 @@
         "chipset": "Exynos 1680 chipset",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 96999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-a57-5g-price-in-nepal",
@@ -26371,6 +26931,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 96999
+        },
+        {
+          "date": "2026-11-21",
           "price": 96999
         }
       ]
@@ -26515,7 +27079,7 @@
           "store": "Oliz Store",
           "price": 85999,
           "url": "https://cdn.olizstore.com/product/samsung-galaxy-s23-fe-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -26547,7 +27111,7 @@
         "chipset": "Qualcomm Snapdragon 8 Gen 1 / Exynos 2200 (region-dependent)",
         "camera": "10 MP (f/2.4)"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "feature": "Details",
       "processor": "Qualcomm Snapdragon 8 Gen 1 / Exynos 2200 (region-dependent)",
       "rear cameras": "Triple: 50 MP (OIS, f/1.8) + 12 MP Ultra Wide (f/2.2) + 8 MP Telephoto (3x Optical Zoom, f/2.4)",
@@ -26574,6 +27138,10 @@
         {
           "date": "2026-11-20",
           "price": 85999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 85999
         }
       ]
     },
@@ -26588,7 +27156,7 @@
           "store": "Brother Mart",
           "price": 107999,
           "url": "https://brother-mart.com/products/samsung-galaxy-s25-fe-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -26608,7 +27176,7 @@
         "chipset": "Exynos 2400 chipset with ray-tracing GPU 12MP AI-po",
         "camera": "12MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 107999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-s25-fe-5g-price-in-nepal",
@@ -26688,6 +27256,10 @@
         {
           "date": "2026-11-20",
           "price": 107999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 107999
         }
       ]
     },
@@ -26702,7 +27274,7 @@
           "store": "Neo Store",
           "price": 139999,
           "url": "https://www.neostore.com.np/product/samsung-galaxy-s26-",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         },
         {
@@ -26757,7 +27329,7 @@
         "storage": "256GB 12GB RAM,",
         "camera": "50 MP, f/1.8, 24mm (wide), 1/1.56\", 1.0µm, dual pixel PDAF, OIS"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
       "body": "149.6 x 71.7 x 7.2 mm (5.89 x 2.82 x 0.28 in)",
       "weight": "167 g (5.89 oz)",
@@ -26903,6 +27475,10 @@
         {
           "date": "2026-11-20",
           "price": 139999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 139999
         }
       ]
     },
@@ -26917,7 +27493,7 @@
           "store": "Brother Mart",
           "price": 139999,
           "url": "https://brother-mart.com/products/samsung-galaxy-s26-smartphone-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -26937,7 +27513,7 @@
         "chipset": "Snapdragon / Exynos flagship chipset CPU Speed Up to 3",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 139999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-s26-smartphone-price-in-nepal",
@@ -27016,6 +27592,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 139999
+        },
+        {
+          "date": "2026-11-21",
           "price": 139999
         }
       ]
@@ -27160,7 +27740,7 @@
           "store": "Brother Mart",
           "price": 119989,
           "url": "https://brother-mart.com/products/samsung-galaxy-s26-fe-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -27178,7 +27758,7 @@
         "chipset": "Exynos 2500 (3nm",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 119989,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-s26-fe-price-in-nepal",
@@ -27258,6 +27838,10 @@
         {
           "date": "2026-11-20",
           "price": 119989
+        },
+        {
+          "date": "2026-11-21",
+          "price": 119989
         }
       ]
     },
@@ -27272,7 +27856,7 @@
           "store": "Neo Store",
           "price": 182999,
           "url": "https://www.neostore.com.np/product/samsung-galaxy-s26-plus",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -27319,7 +27903,7 @@
         "storage": "256GB 12GB RAM,",
         "camera": "50 MP, f/1.8, 24mm (wide), 1/1.56\", 1.0µm, dual pixel PDAF, OIS"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
       "launch": "2026, February 25",
       "body": "158.4 x 75.8 x 7.3 mm (6.24 x 2.98 x 0.29 in)",
@@ -27466,6 +28050,10 @@
         {
           "date": "2026-11-20",
           "price": 182999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 182999
         }
       ]
     },
@@ -27480,7 +28068,7 @@
           "store": "Brother Mart",
           "price": 159999,
           "url": "https://brother-mart.com/products/samsung-galaxy-s26-plus-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -27493,7 +28081,7 @@
       "chipset": null,
       "camera": null,
       "specifications": {},
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 159999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-s26-plus-price-in-nepal",
@@ -27573,6 +28161,10 @@
         {
           "date": "2026-11-20",
           "price": 159999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 159999
         }
       ]
     },
@@ -27587,7 +28179,7 @@
           "store": "Brother Mart",
           "price": 182999,
           "url": "https://brother-mart.com/products/samsung-galaxy-s26-plus-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -27606,7 +28198,7 @@
         "chipset": "Snapdragon 8 Elite Gen 5 Black / 12GB + 256GB Next Gen",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 182999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-s26-plus-5g-price-in-nepal",
@@ -27685,6 +28277,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 182999
+        },
+        {
+          "date": "2026-11-21",
           "price": 182999
         }
       ]
@@ -27892,7 +28488,7 @@
           "store": "Brother Mart",
           "price": 293999,
           "url": "https://brother-mart.com/products/samsung-galaxy-s26-ultra-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -27910,7 +28506,7 @@
         "chipset": "Snapdragon 8 Elite Gen 5 | Galaxy AI Experience Experie",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 293999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-s26-ultra-5g-price-in-nepal",
@@ -27990,6 +28586,10 @@
         {
           "date": "2026-11-20",
           "price": 293999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 293999
         }
       ]
     },
@@ -28004,7 +28604,7 @@
           "store": "Brother Mart",
           "price": 224999,
           "url": "https://brother-mart.com/products/samsung-galaxy-s26-ultra-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -28022,7 +28622,7 @@
         "chipset": "Snapdragon 8 Elite Gen 5 | Galaxy AI Experience Experie",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 224999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-s26-ultra-5g-price-in-nepal",
@@ -28102,6 +28702,10 @@
         {
           "date": "2026-11-20",
           "price": 224999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 224999
         }
       ]
     },
@@ -28116,7 +28720,7 @@
           "store": "Brother Mart",
           "price": 259999,
           "url": "https://brother-mart.com/products/samsung-galaxy-s26-ultra-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -28134,7 +28738,7 @@
         "chipset": "Snapdragon 8 Elite Gen 5 | Galaxy AI Experience Experie",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 259999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-s26-ultra-5g-price-in-nepal",
@@ -28213,6 +28817,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 259999
+        },
+        {
+          "date": "2026-11-21",
           "price": 259999
         }
       ]
@@ -28357,7 +28965,7 @@
           "store": "Brother Mart",
           "price": 194999,
           "url": "https://brother-mart.com/products/samsung-galaxy-z-flip8-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -28375,7 +28983,7 @@
         "chipset": "Exynos 2600 (2nm) / Snapdragon 8 Elite Gen 5 (3nm)",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 194999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-z-flip8-price-in-nepal",
@@ -28454,6 +29062,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 194999
+        },
+        {
+          "date": "2026-11-21",
           "price": 194999
         }
       ]
@@ -28469,7 +29081,7 @@
           "store": "Brother Mart",
           "price": 194999,
           "url": "https://brother-mart.com/products/samsung-galaxy-z-flip8-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -28487,7 +29099,7 @@
         "chipset": "Exynos 2600 (2nm) / Snapdragon 8 Elite Gen 5 (3nm)",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 194999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-z-flip8-price-in-nepal",
@@ -28566,6 +29178,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 194999
+        },
+        {
+          "date": "2026-11-21",
           "price": 194999
         }
       ]
@@ -28581,7 +29197,7 @@
           "store": "Brother Mart",
           "price": 194999,
           "url": "https://brother-mart.com/products/samsung-galaxy-z-flip8-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -28599,7 +29215,7 @@
         "chipset": "Exynos 2600 (2nm) / Snapdragon 8 Elite Gen 5 (3nm)",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 194999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-z-flip8-price-in-nepal",
@@ -28678,6 +29294,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 194999
+        },
+        {
+          "date": "2026-11-21",
           "price": 194999
         }
       ]
@@ -28951,7 +29571,7 @@
           "store": "Brother Mart",
           "price": 299999,
           "url": "https://brother-mart.com/products/samsung-galaxy-z-fold8-ultra-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -28969,7 +29589,7 @@
         "chipset": "Snapdragon 8 Elite Gen 5 Power",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 299999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-z-fold8-ultra-5g-price-in-nepal",
@@ -29049,6 +29669,10 @@
         {
           "date": "2026-11-20",
           "price": 299999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 299999
         }
       ]
     },
@@ -29063,7 +29687,7 @@
           "store": "Brother Mart",
           "price": 339999,
           "url": "https://brother-mart.com/products/samsung-galaxy-z-fold8-ultra-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -29081,7 +29705,7 @@
         "chipset": "Snapdragon 8 Elite Gen 5 Power",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 339999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/samsung-galaxy-z-fold8-ultra-5g-price-in-nepal",
@@ -29160,6 +29784,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 339999
+        },
+        {
+          "date": "2026-11-21",
           "price": 339999
         }
       ]
@@ -29433,7 +30061,7 @@
           "store": "Brother Mart",
           "price": 62999,
           "url": "https://brother-mart.com/products/vivo-v70-fe-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -29449,7 +30077,7 @@
         "battery": "7000mAh",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 62999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/vivo-v70-fe-price-in-nepal",
@@ -29529,6 +30157,10 @@
         {
           "date": "2026-11-20",
           "price": 62999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 62999
         }
       ]
     },
@@ -29543,7 +30175,7 @@
           "store": "Brother Mart",
           "price": 72999,
           "url": "https://brother-mart.com/products/vivo-v70-fe-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -29559,7 +30191,7 @@
         "battery": "7000mAh",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 72999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/vivo-v70-fe-price-in-nepal",
@@ -29638,6 +30270,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 72999
+        },
+        {
+          "date": "2026-11-21",
           "price": 72999
         }
       ]
@@ -29835,7 +30471,7 @@
           "store": "Brother Mart",
           "price": 184999,
           "url": "https://brother-mart.com/products/vivo-x200-pro-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -29852,7 +30488,7 @@
         "chipset": "Dimensity 9400 Power Experience innovation redefined w",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 184999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/vivo-x200-pro-price-in-nepal",
@@ -29931,6 +30567,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 184999
+        },
+        {
+          "date": "2026-11-21",
           "price": 184999
         }
       ]
@@ -30075,7 +30715,7 @@
           "store": "Brother Mart",
           "price": 179999,
           "url": "https://brother-mart.com/products/vivo-x300-pro-5g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -30094,7 +30734,7 @@
         "chipset": "Dimensity 9500 performance",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 179999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/vivo-x300-pro-5g-price-in-nepal",
@@ -30173,6 +30813,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 179999
+        },
+        {
+          "date": "2026-11-21",
           "price": 179999
         }
       ]
@@ -30446,7 +31090,7 @@
           "store": "Brother Mart",
           "price": 37999,
           "url": "https://brother-mart.com/products/vivo-y31d-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -30466,7 +31110,7 @@
         "chipset": "Snapdragon 6s 4G Gen 2 (6nm) Display 6",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 37999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/vivo-y31d-price-in-nepal",
@@ -30546,6 +31190,10 @@
         {
           "date": "2026-11-20",
           "price": 37999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 37999
         }
       ]
     },
@@ -30560,7 +31208,7 @@
           "store": "Brother Mart",
           "price": 43999,
           "url": "https://brother-mart.com/products/vivo-y31d-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -30580,7 +31228,7 @@
         "chipset": "Snapdragon 6s 4G Gen 2 (6nm) Display 6",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 43999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/vivo-y31d-price-in-nepal",
@@ -30660,6 +31308,10 @@
         {
           "date": "2026-11-20",
           "price": 43999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 43999
         }
       ]
     },
@@ -30674,7 +31326,7 @@
           "store": "Brother Mart",
           "price": 51999,
           "url": "https://brother-mart.com/products/vivo-y31d-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -30694,7 +31346,7 @@
         "chipset": "Snapdragon 6s 4G Gen 2 (6nm) Display 6",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 51999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/vivo-y31d-price-in-nepal",
@@ -30773,6 +31425,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 51999
+        },
+        {
+          "date": "2026-11-21",
           "price": 51999
         }
       ]
@@ -30917,7 +31573,7 @@
           "store": "Brother Mart",
           "price": 54999,
           "url": "https://brother-mart.com/products/vivo-y500-4g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -30935,7 +31591,7 @@
         "battery": "100mAh",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 54999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/vivo-y500-4g-price-in-nepal",
@@ -31015,6 +31671,10 @@
         {
           "date": "2026-11-20",
           "price": 54999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 54999
         }
       ]
     },
@@ -31029,7 +31689,7 @@
           "store": "Brother Mart",
           "price": 61999,
           "url": "https://brother-mart.com/products/vivo-y500-4g-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -31047,7 +31707,7 @@
         "battery": "100mAh",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 61999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/vivo-y500-4g-price-in-nepal",
@@ -31127,6 +31787,10 @@
         {
           "date": "2026-11-20",
           "price": 61999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 61999
         }
       ]
     },
@@ -31141,7 +31805,7 @@
           "store": "Oliz Store",
           "price": 149999,
           "url": "https://cdn.olizstore.com/product/xiaomi-15-ultra-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -31175,7 +31839,7 @@
         "chipset": "Snapdragon 8 Elite processor",
         "camera": "50MP Sony LYT-900 sensor, Leica Summilux 23mm f/1.63 lens"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "feature": "Details",
       "type": "Flagship smartphone",
       "processor": "Qualcomm Snapdragon 8 Elite Mobile Platform (3nm), Prime core up to 4.32GHz, Adreno GPU",
@@ -31204,6 +31868,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 149999
+        },
+        {
+          "date": "2026-11-21",
           "price": 149999
         }
       ]
@@ -31348,7 +32016,7 @@
           "store": "Brother Mart",
           "price": 199999,
           "url": "https://brother-mart.com/products/xiaomi-17-ultra-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -31366,7 +32034,7 @@
         "chipset": "Snapdragon Power",
         "camera": "200MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 199999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-17-ultra-price-in-nepal",
@@ -31445,6 +32113,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 199999
+        },
+        {
+          "date": "2026-11-21",
           "price": 199999
         }
       ]
@@ -31589,7 +32261,7 @@
           "store": "Brother Mart",
           "price": 92999,
           "url": "https://brother-mart.com/products/xiaomi-17t-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -31609,7 +32281,7 @@
         "chipset": "Dimensity 8500-Ultra (4nm) chipset",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 92999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-17t-price-in-nepal",
@@ -31689,6 +32361,10 @@
         {
           "date": "2026-11-20",
           "price": 92999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 92999
         }
       ]
     },
@@ -31703,7 +32379,7 @@
           "store": "Brother Mart",
           "price": 99999,
           "url": "https://brother-mart.com/products/xiaomi-17t-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -31723,7 +32399,7 @@
         "chipset": "Dimensity 8500-Ultra (4nm) chipset",
         "camera": "50MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 99999,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/xiaomi-17t-price-in-nepal",
@@ -31803,6 +32479,10 @@
         {
           "date": "2026-11-20",
           "price": 99999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 99999
         }
       ]
     },
@@ -31817,7 +32497,7 @@
           "store": "Neo Store",
           "price": 34999,
           "url": "https://www.neostore.com.np/product/xiaomi-mi-11-lite-6gb-128gb-",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -31852,7 +32532,7 @@
         "battery": "4250mAh battery",
         "camera": "64MP primary camera f/1.79, 6P lens"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "product": "Mi 11 Lite",
       "category": "Mobile",
       "color": "Blue, Pink, Black",
@@ -31986,6 +32666,10 @@
         {
           "date": "2026-11-20",
           "price": 34999
+        },
+        {
+          "date": "2026-11-21",
+          "price": 34999
         }
       ]
     },
@@ -32000,7 +32684,7 @@
           "store": "Brother Mart",
           "price": 20499,
           "url": "https://brother-mart.com/products/redmi-a7-price-in-nepal",
-          "checked_at": "2026-11-20",
+          "checked_at": "2026-11-21",
           "warranty": null
         }
       ],
@@ -32018,7 +32702,7 @@
         "battery": "5200mAh",
         "camera": "13MP"
       },
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "price": 20499,
       "best_store": "Brother Mart",
       "best_url": "https://brother-mart.com/products/redmi-a7-price-in-nepal",
@@ -32097,6 +32781,10 @@
         },
         {
           "date": "2026-11-20",
+          "price": 20499
+        },
+        {
+          "date": "2026-11-21",
           "price": 20499
         }
       ]
