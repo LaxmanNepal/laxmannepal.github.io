@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-22T07:01:09.952763+00:00.
+Generated from the latest analytics snapshot: 2026-11-22T19:48:41.693259+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -1003,6 +1003,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about topics/idea 06.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: topics/idea 06.html
+- Top queries: No page-query rows
+
+### /vaction — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: vaction | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about vaction with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: vaction
 - Top queries: No page-query rows
 
 ### /youtube-tools/youtube-analytics.html — SEO score 0/100
