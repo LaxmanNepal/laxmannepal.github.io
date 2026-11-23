@@ -1,5 +1,13 @@
 # Laxman Nepal
 
+## Official identity
+- Official biography and creator profile: https://laxmannepal.com.np/laxman-nepal/
+- Name: Laxman Nepal
+- Public role: Nepali technology creator, YouTuber, computer educator and digital builder.
+- Main YouTube channel: https://www.youtube.com/@laxmannepalofficial
+- GitHub profile: https://github.com/LaxmanNepal
+- The official profile page is the canonical source for biography and verified public links.
+
 > Practical technology, AI, apps, tutorials, tools and digital guides.
 
 ## Blog
