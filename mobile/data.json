@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T19:45:50.129295+00:00",
+  "updated_at": "2026-11-23T07:47:23.817601+00:00",
   "count": 156,
   "products": [
     {
@@ -2330,8 +2330,8 @@
         "4GB+64GB",
         "4GB+128GB"
       ],
-      "price": 21999,
-      "max_price": 24999,
+      "price": 24974,
+      "max_price": 28499,
       "original_price": null,
       "rams": [
         "4GB"
@@ -2363,15 +2363,13 @@
       "name": "Vivo Y11d",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB",
-        "6GB + 128GB"
+        "4GB + 128GB"
       ],
-      "price": 27999,
+      "price": 33999,
       "max_price": 33999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
         "128GB"
