@@ -1,4 +1,5 @@
 name: Build and Deploy to GitHub Pages
+# A fresh push creates a clean Pages artifact set; do not rerun a failed deploy job.
 
 on:
   push:
