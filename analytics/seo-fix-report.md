@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-22T19:48:41.693259+00:00.
+Generated from the latest analytics snapshot: 2026-11-23T07:51:42.094398+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -295,6 +295,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/04/best free image to pdf converter online.html
 - Top queries: No page-query rows
 
+### /2025/06/ebook-finder.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/06/ebook finder.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about 2025/06/ebook finder.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/06/ebook finder.html
+- Top queries: No page-query rows
+
 ### /2025/06/facebook-video-downloader-save-hd.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -393,16 +403,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/03/top 8 free alternatives to paid software.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/03/top 8 free alternatives to paid software.html
-- Top queries: No page-query rows
-
-### /2025/06/ebook-finder.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/06/ebook finder.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about 2025/06/ebook finder.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/06/ebook finder.html
 - Top queries: No page-query rows
 
 ### /2026/02/prompt-for-making-ai-story.html — SEO score 0/100
