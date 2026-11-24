@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-23T07:51:42.094398+00:00.
+Generated from the latest analytics snapshot: 2026-11-24T00:01:02.073009+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -55,16 +55,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2023/01/how to extract youtube video title.html
 - Top queries: No page-query rows
 
-### /2025/05/how-to-make-free-website-with-euorg.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/05/how to make free website with euorg.html | Laxman N…
-- Current description: Missing
-- Recommended description: Learn about 2025/05/how to make free website with euorg.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/05/how to make free website with euorg.html
-- Top queries: No page-query rows
-
 ### /p/about.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -75,6 +65,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/about.html
 - Top queries: No page-query rows
 
+### /2025/05/how-to-make-free-website-with-euorg.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/05/how to make free website with euorg.html | Laxman N…
+- Current description: Missing
+- Recommended description: Learn about 2025/05/how to make free website with euorg.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/05/how to make free website with euorg.html
+- Top queries: No page-query rows
+
 ### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -83,6 +83,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/06/top 10 free online tools will save you.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/06/top 10 free online tools will save you.html
+- Top queries: No page-query rows
+
+### /p/cookies-policy.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/cookies policy.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/cookies policy.html
+- Top queries: No page-query rows
+
+### /p/link-shortner-generator.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/link shortner generator.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/link shortner generator.html
 - Top queries: No page-query rows
 
 ### /p/privacy-policy.html — SEO score 0/100
@@ -105,16 +125,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/terms and conditions.html
 - Top queries: No page-query rows
 
-### /p/cookies-policy.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/cookies policy.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/cookies policy.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/cookies policy.html
-- Top queries: No page-query rows
-
 ### /p/disclaimer.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -123,16 +133,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/disclaimer.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/disclaimer.html
-- Top queries: No page-query rows
-
-### /p/link-shortner-generator.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/link shortner generator.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/link shortner generator.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/link shortner generator.html
 - Top queries: No page-query rows
 
 ### /p/sitemap.html — SEO score 0/100
@@ -185,36 +185,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/02/m3um3u8 player tool by laxman nepal.html
 - Top queries: No page-query rows
 
-### /p/contact-us.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/contact us.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/contact us.html
-- Top queries: No page-query rows
-
-### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2020/11/use mobile data in aeroplane mode.html | Laxman Nep…
-- Current description: Missing
-- Recommended description: Learn about 2020/11/use mobile data in aeroplane mode.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2020/11/use mobile data in aeroplane mode.html
-- Top queries: No page-query rows
-
-### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/01/how to convert number to text in excel.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2023/01/how to convert number to text in excel.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/01/how to convert number to text in excel.html
-- Top queries: No page-query rows
-
 ### /2023/09/bs-to-ad-nepali-date-converter-ad-to-bs.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -243,6 +213,36 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/07/image prompt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/07/image prompt.html
+- Top queries: No page-query rows
+
+### /p/contact-us.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/contact us.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/contact us.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/contact us.html
+- Top queries: No page-query rows
+
+### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2020/11/use mobile data in aeroplane mode.html | Laxman Nep…
+- Current description: Missing
+- Recommended description: Learn about 2020/11/use mobile data in aeroplane mode.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2020/11/use mobile data in aeroplane mode.html
+- Top queries: No page-query rows
+
+### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2023/01/how to convert number to text in excel.html | Laxma…
+- Current description: Missing
+- Recommended description: Learn about 2023/01/how to convert number to text in excel.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2023/01/how to convert number to text in excel.html
 - Top queries: No page-query rows
 
 ### /2023/07/currency-converter-by-laxman-nepal.html — SEO score 0/100
@@ -605,16 +605,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: tools/nepali tools/type nepai
 - Top queries: No page-query rows
 
-### /2021/07/youtube-video-downloader-online-tool.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2021/07/youtube video downloader online tool.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2021/07/youtube video downloader online tool.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2021/07/youtube video downloader online tool.html
-- Top queries: No page-query rows
-
 ### /2022/09/kalimati-format — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -633,16 +623,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/07/all in one unit converter by laxman.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/07/all in one unit converter by laxman.html
-- Top queries: No page-query rows
-
-### /2023/07/image-resize-and-compress-tools-by.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/07/image resize and compress tools by.html | Laxman Ne…
-- Current description: Missing
-- Recommended description: Learn about 2023/07/image resize and compress tools by.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/07/image resize and compress tools by.html
 - Top queries: No page-query rows
 
 ### /2024/01 — SEO score 0/100
@@ -883,6 +863,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about laptop prices in nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: laptop prices in nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/apple-iphone-16e-128gb/ — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: mobile price in nepal/phones/apple iphone 16e 128gb | Laxma…
+- Current description: Missing
+- Recommended description: Learn about mobile price in nepal/phones/apple iphone 16e 128gb with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: mobile price in nepal/phones/apple iphone 16e 128gb
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/vivo-v60-lite-5g-8gb-256gb/ — SEO score 0/100
@@ -2485,6 +2475,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Laptop Stores in Nepal | Laxman Nepal
 - Top queries: No page-query rows
 
+### /laxman-nepal/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Laxman Nepal — Official Biography | Nepali Tech Creator & YouTube
+- Recommended title: Hi, I'm Laxman Nepal. | Laxman Nepal
+- Current description: Official website and biography of Laxman Nepal — Nepali technology creator, YouTuber, computer educator and digital builder. Explore his work, YouTube channels,
+- Recommended description: Learn about Hi, I'm Laxman Nepal. with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Hi, I'm Laxman Nepal.
+- Top queries: No page-query rows
+
 ### /mobile-price-in-nepal/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -2573,16 +2573,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Apple iPhone 16 price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Apple iPhone 16 Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Apple iPhone 16 Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/apple-iphone-16e-128gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Apple iPhone 16e 128GB Price in Nepal, Specs & Store Offers | Lax
-- Recommended title: Apple iPhone 16e 128GB Price in Nepal | Laxman Nepal
-- Current description: Compare Apple iPhone 16e 128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Apple iPhone 16e 128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Apple iPhone 16e 128GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/apple-iphone-17-5g-xdr-oled-256gb/ — SEO score 85/100
@@ -5685,16 +5675,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Thumbnail Downloader
 - Top queries: No page-query rows
 
-### /blogs — SEO score 85/100
-- Issues: Thin content (34 words)
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Blogs & Tutorials | Laxman Nepal
-- Recommended title: Blogs & Tutorials | Laxman Nepal
-- Current description: Laxman Nepal practical tutorials about YouTube, AI, Windows, command-line tools and useful digital workflows.
-- Recommended description: Learn about Blogs & Tutorials with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Blogs & Tutorials
-- Top queries: No page-query rows
-
 ### /2025/11/youtube-video-title-description-tag.html — SEO score 85/100
 - Issues: Noindex
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -5703,6 +5683,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Your all-in-one toolkit for creating optimized YouTube content - generate titles, descriptions, tags, thumbnail prompts, and SEO recommendations.
 - Recommended description: Learn about YouTube Content Suite with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: YouTube Content Suite
+- Top queries: No page-query rows
+
+### /blogs — SEO score 85/100
+- Issues: Thin content (34 words)
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Blogs & Tutorials | Laxman Nepal
+- Recommended title: Blogs & Tutorials | Laxman Nepal
+- Current description: Laxman Nepal practical tutorials about YouTube, AI, Windows, command-line tools and useful digital workflows.
+- Recommended description: Learn about Blogs & Tutorials with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Blogs & Tutorials
 - Top queries: No page-query rows
 
 ### /2026/02/youtube-tag-generator.html — SEO score 85/100
