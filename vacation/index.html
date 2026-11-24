@@ -150,7 +150,7 @@ body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opac
 <section class="code-search-wrap" aria-label="Special vacation access">
 <form id="specialSearch" class="code-search"><label for="specialSearchInput">🔎 Search vacation code</label><div class="code-search-row"><input id="specialSearchInput" type="search" inputmode="numeric" autocomplete="off" aria-label="Search code"><button class="btn" type="submit">Search</button></div><p id="specialSearchHint" class="muted"></p></form>
 <div id="specialPasswordBox" class="code-search" hidden><label for="specialPasswordInput">🔐 Password required</label><form id="specialPasswordForm" class="code-search-row"><input id="specialPasswordInput" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Enter password" aria-label="Password" required><button class="btn" type="submit">Unlock</button></form><p id="specialPasswordError" class="muted" role="alert"></p></div>
-<div id="specialModeBar" class="code-search" hidden><strong>🔓 Special vacation mode active · 26 Nov 2026</strong><button type="button" class="btn" id="exitSpecialMode">Return to public countdown</button></div></section>
+<div id="specialModeBar" class="code-search" hidden><strong>🔓 Special vacation mode active · 27 Nov 2026</strong><button type="button" class="btn" id="exitSpecialMode">Return to public countdown</button></div></section>
 
 <footer class="shared-footer"><div class="shared-footer-grid"><div><div class="shared-footer-brand"><span class="shared-logo">LN</span><strong>Laxman Nepal</strong></div><p>Tools, AI, practical guides and useful digital resources.</p></div><div><strong>Explore</strong><a href="/tools/">Tools</a><a href="/ai-tools/">AI Tools</a><a href="/blog/">Blog</a></div><div><strong>Discover</strong><a href="/news/">News</a><a href="/guides/">Guides</a><a href="/contact/">Contact</a></div></div><div class="shared-footer-bottom"><span>© <span id="year"></span> Laxman Nepal.</span></div></footer>
 
@@ -159,7 +159,7 @@ body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opac
 const specialMode=sessionStorage.getItem("vacationMode")==="special";
 const nativeGet=localStorage.getItem.bind(localStorage),nativeSet=localStorage.setItem.bind(localStorage),nativeRemove=localStorage.removeItem.bind(localStorage);
 if(specialMode){Object.defineProperties(localStorage,{getItem:{configurable:true,value:key=>nativeGet("specialVacation:"+key)},setItem:{configurable:true,value:(key,value)=>nativeSet("specialVacation:"+key,value)},removeItem:{configurable:true,value:key=>nativeRemove("specialVacation:"+key)}});}
-const target=new Date(specialMode?"2026-11-26T00:00:00+05:45":"2026-12-05T00:00:00+05:45").getTime();
+const target=new Date(specialMode?"2026-11-27T00:45:00+05:45":"2026-12-05T00:00:00+05:45").getTime();
 const start=new Date("2026-11-12T00:00:00+05:45").getTime();
 const nep=["०","१","२","३","४","५","६","७","८","९"];
 
@@ -167,10 +167,10 @@ const $=s=>document.querySelector(s);
 const specialSearch=$("#specialSearch"),specialPasswordBox=$("#specialPasswordBox");
 if(specialMode){
  specialSearch.hidden=true;specialPasswordBox.hidden=true;$("#specialModeBar").hidden=false;
- $("#vacationDateLabel").textContent="📅 मंसिर १०, २०८३ · २६ नोभेम्बर २०२६";
- $("#vacationHeroSub").textContent="२६ नोभेम्बर २०२६ मा 🇳🇵 नेपाल फर्किने दिनसम्मको लाइभ काउन्टडाउन।";
- $("#vacationProgressDate").textContent="२६ नोभेम्बर २०२६";
- $("#vacationProgressDesc").textContent="१२ नोभेम्बरदेखि २६ नोभेम्बरसम्मको विशेष काउन्टडाउन यात्रा।";
+ $("#vacationDateLabel").textContent="📅 मंसिर ११, २०८३ · २७ नोभेम्बर २०२६ · बिहान १२:४५";
+ $("#vacationHeroSub").textContent="२७ नोभेम्बर २०२६ बिहान १२:४५ बजे 🇳🇵 नेपाल फर्किने दिनसम्मको लाइभ काउन्टडाउन।";
+ $("#vacationProgressDate").textContent="२७ नोभेम्बर २०२६ · १२:४५ AM";
+ $("#vacationProgressDesc").textContent="१२ नोभेम्बरदेखि २७ नोभेम्बर १२:४५ AM सम्मको विशेष काउन्टडाउन यात्रा।";
  $("#remainingLine").textContent="नेपाल फर्किने दिनसम्मको बाँकी समय गणना हुँदैछ…";
 }else{
  $("#specialSearch").addEventListener("submit",e=>{e.preventDefault();if($("#specialSearchInput").value.trim()!=="2312"){$("#specialSearchHint").textContent="यो code भेटिएन। सामान्य countdown यथावत् छ।";return;}specialPasswordBox.hidden=false;$("#specialSearchHint").textContent="Code भेटियो। अब password राख्नुहोस्।";$("#specialPasswordInput").focus();});
@@ -184,7 +184,7 @@ const milestones=specialMode?[
  ["कार्तिक २५","नोभेम्बर १० · तयारी","2026-11-10"],
  ["मंसिर १","नोभेम्बर १६ · Final Preparation","2026-11-16"],
  ["मंसिर ५","नोभेम्बर २० · Packing + Documents","2026-11-20"],
- ["मंसिर १०","नोभेम्बर २६ · 🇳🇵 Vacation Day","2026-11-26"]
+ ["मंसिर ११","नोभेम्बर २७ · १२:४५ AM · 🇳🇵 Vacation Day","2026-11-27"]
 ]:[
  ["भदौ २५","सेप्टेम्बर १० · तयारी","2026-09-10"],
  ["असोज ९","सेप्टेम्बर २५ · Salary + Flight Plan","2026-09-25"],
@@ -285,7 +285,7 @@ function schedule(){
  if(!last){localStorage.setItem("vacationHourlyLastSlot",slot);return;}
  if(last!==slot){
   localStorage.setItem("vacationHourlyLastSlot",slot);
-  const targetLabel=specialMode?"26 November 2026":"5 December 2026";
+  const targetLabel=specialMode?"27 November 2026, 12:45 AM":"5 December 2026";
   notifyNow("⏱️ Hourly countdown reminder\\n"+remaining()+"\\nTarget: "+targetLabel+" 🇳🇵");
  }
 }
