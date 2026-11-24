@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-24T09:59:41.199455+00:00",
-  "count": 156,
+  "updated_at": "2026-11-24T22:31:19.074586+00:00",
+  "count": 146,
   "products": [
     {
       "id": "ai-nova-2-5g",
@@ -141,6 +141,22 @@
       "original_price": null,
       "rams": [
         "3GB",
+        "32GB"
+      ],
+      "storages": []
+    },
+    {
+      "id": "blackview-wave-3",
+      "name": "Blackview Wave 3",
+      "brand": "Blackview",
+      "variants": [
+        "Blackview Wave 3 - 4GB - 32GB"
+      ],
+      "price": 15499,
+      "max_price": 15499,
+      "original_price": null,
+      "rams": [
+        "4GB",
         "32GB"
       ],
       "storages": []
@@ -641,23 +657,6 @@
       ]
     },
     {
-      "id": "motorola-edge-50-fusion",
-      "name": "Motorola Edge 50 Fusion",
-      "brand": "Motorola",
-      "variants": [
-        "12GB+256GB"
-      ],
-      "price": 46499,
-      "max_price": 46499,
-      "original_price": null,
-      "rams": [
-        "12GB"
-      ],
-      "storages": [
-        "256GB"
-      ]
-    },
-    {
       "id": "motorola-edge-70-fusion",
       "name": "Motorola Edge 70 Fusion",
       "brand": "Motorola",
@@ -708,40 +707,6 @@
       ],
       "storages": [
         "128GB"
-      ]
-    },
-    {
-      "id": "motorola-moto-g57-power",
-      "name": "Motorola Moto G57 Power",
-      "brand": "Motorola",
-      "variants": [
-        "8GB + 128GB"
-      ],
-      "price": 37499,
-      "max_price": 37499,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "128GB"
-      ]
-    },
-    {
-      "id": "motorola-moto-g96-5g",
-      "name": "Motorola Moto G96 5G",
-      "brand": "Motorola",
-      "variants": [
-        "8GB / 256GB"
-      ],
-      "price": 44999,
-      "max_price": 44999,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "256GB"
       ]
     },
     {
@@ -854,43 +819,6 @@
       "storages": [
         "128GB",
         "256GB"
-      ]
-    },
-    {
-      "id": "oppo-reno-15",
-      "name": "OPPO Reno 15",
-      "brand": "OPPO",
-      "variants": [
-        "12GB+512GB"
-      ],
-      "price": 89999,
-      "max_price": 89999,
-      "original_price": null,
-      "rams": [
-        "12GB"
-      ],
-      "storages": [
-        "512GB"
-      ]
-    },
-    {
-      "id": "oppo-reno-15f",
-      "name": "OPPO Reno 15F",
-      "brand": "OPPO",
-      "variants": [
-        "8GB + 256GB",
-        "12GB + 512GB"
-      ],
-      "price": 63999,
-      "max_price": 69999,
-      "original_price": null,
-      "rams": [
-        "8GB",
-        "12GB"
-      ],
-      "storages": [
-        "256GB",
-        "512GB"
       ]
     },
     {
@@ -1543,66 +1471,6 @@
       ]
     },
     {
-      "id": "redmi-note-15-4g",
-      "name": "Redmi Note 15 4G",
-      "brand": "Xiaomi",
-      "variants": [
-        "6GB+128GB",
-        "8GB+256GB"
-      ],
-      "price": 33999,
-      "max_price": 39999,
-      "original_price": null,
-      "rams": [
-        "6GB",
-        "8GB"
-      ],
-      "storages": [
-        "128GB",
-        "256GB"
-      ]
-    },
-    {
-      "id": "redmi-note-15-5g",
-      "name": "Redmi Note 15 5G",
-      "brand": "Xiaomi",
-      "variants": [
-        "8GB+256GB",
-        "12GB+512GB"
-      ],
-      "price": 43999,
-      "max_price": 49999,
-      "original_price": null,
-      "rams": [
-        "8GB",
-        "12GB"
-      ],
-      "storages": [
-        "256GB",
-        "512GB"
-      ]
-    },
-    {
-      "id": "redmi-note-15-pro-5g",
-      "name": "Redmi Note 15 Pro 5G",
-      "brand": "Xiaomi",
-      "variants": [
-        "8GB+256GB",
-        "12GB+512GB"
-      ],
-      "price": 53999,
-      "max_price": 59999,
-      "original_price": null,
-      "rams": [
-        "8GB",
-        "12GB"
-      ],
-      "storages": [
-        "256GB",
-        "512GB"
-      ]
-    },
-    {
       "id": "redmi-note-15-pro-plus-5g",
       "name": "Redmi Note 15 Pro Plus 5G",
       "brand": "Xiaomi",
@@ -2172,59 +2040,6 @@
       "storages": [
         "64GB",
         "128GB"
-      ]
-    },
-    {
-      "id": "vivo-v60",
-      "name": "Vivo V60",
-      "brand": "Vivo",
-      "variants": [
-        "12GB+256GB",
-        "12GB+512GB"
-      ],
-      "price": 74999,
-      "max_price": 79999,
-      "original_price": null,
-      "rams": [
-        "12GB"
-      ],
-      "storages": [
-        "256GB",
-        "512GB"
-      ]
-    },
-    {
-      "id": "vivo-v60-lite-4g",
-      "name": "Vivo V60 Lite 4G",
-      "brand": "Vivo",
-      "variants": [
-        "8GB+256GB"
-      ],
-      "price": 43499,
-      "max_price": 43499,
-      "original_price": null,
-      "rams": [
-        "8GB"
-      ],
-      "storages": [
-        "256GB"
-      ]
-    },
-    {
-      "id": "vivo-v60-lite-5g",
-      "name": "Vivo V60 Lite 5G",
-      "brand": "Vivo",
-      "variants": [
-        "12GB+256GB"
-      ],
-      "price": 51999,
-      "max_price": 51999,
-      "original_price": null,
-      "rams": [
-        "12GB"
-      ],
-      "storages": [
-        "256GB"
       ]
     },
     {
