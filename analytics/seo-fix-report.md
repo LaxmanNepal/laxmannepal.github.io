@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-24T00:01:02.073009+00:00.
+Generated from the latest analytics snapshot: 2026-11-24T10:04:11.784953+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -13,6 +13,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about Drumkit with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Drumkit
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/redmi-17-4g/ — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: mobile price in nepal/phones/redmi 17 4g | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about mobile price in nepal/phones/redmi 17 4g with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: mobile price in nepal/phones/redmi 17 4g
 - Top queries: No page-query rows
 
 ### /story.html — SEO score 0/100
@@ -1026,7 +1036,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2026/01/blogger-post-extractor.html — SEO score 40/100
-- Issues: Title length 22, Description length 62, H1 count 0, Thin content (101 words)
+- Issues: Title length 22, Description length 62, H1 count 0, Thin content (105 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Blogger Post Extractor
 - Recommended title: Blogger Post Extractor | Laxman Nepal
@@ -1036,7 +1046,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /jobs/ — SEO score 40/100
-- Issues: Title length 10, Description length 21, Noindex, Thin content (89 words)
+- Issues: Title length 10, Description length 21, Noindex, Thin content (93 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Nepal Jobs
 - Recommended title: Nepal Jobs | Laxman Nepal
@@ -1046,7 +1056,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-nepal-trend-explorer.html — SEO score 40/100
-- Issues: Title length 22, Description length 51, Noindex, Thin content (136 words)
+- Issues: Title length 22, Description length 51, Noindex, Thin content (140 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: YouTube Trend Explorer
 - Recommended title: YouTube Trend Explorer | Laxman Nepal
@@ -1056,7 +1066,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-title-generator.html — SEO score 40/100
-- Issues: Title length 23, Description length 57, Noindex, Thin content (125 words)
+- Issues: Title length 23, Description length 57, Noindex, Thin content (129 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: YouTube Title Generator
 - Recommended title: YouTube Title Generator | Laxman Nepal
@@ -1066,7 +1076,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-description-extractor.html — SEO score 40/100
-- Issues: Title length 29, Description length 25, Noindex, Thin content (118 words)
+- Issues: Title length 29, Description length 25, Noindex, Thin content (122 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: YouTube Description Extractor
 - Recommended title: YouTube Description Extractor | Laxman Nepal
@@ -1076,7 +1086,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /blogs/download-entire-youtube-channel-using-cmd — SEO score 40/100
-- Issues: Title length 13, Description length 39, Noindex, Thin content (86 words)
+- Issues: Title length 13, Description length 39, Noindex, Thin content (90 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Article moved
 - Recommended title: Article moved | Laxman Nepal
@@ -1096,7 +1106,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2025/12/iban-checker-free.html — SEO score 55/100
-- Issues: Title length 17, Description length 43, Thin content (125 words)
+- Issues: Title length 17, Description length 43, Thin content (129 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Iban Checker Free
 - Recommended title: IBAN MASTER | Laxman Nepal
@@ -1126,7 +1136,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/laptops/ — SEO score 55/100
-- Issues: Title length 22, Description length 45, Thin content (82 words)
+- Issues: Title length 22, Description length 45, Thin content (86 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptops | Laxman Nepal
 - Recommended title: Laptops | Laxman Nepal | Laxman Nepal
@@ -1196,7 +1206,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2026/07/youtube-channel-analytics-pro.html — SEO score 55/100
-- Issues: Description length 51, Noindex, Thin content (93 words)
+- Issues: Description length 51, Noindex, Thin content (97 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: YouTube Channel Analytics | Laxman Nepal
 - Recommended title: YouTube Channel Analytics | Laxman Nepal | Laxman Nepal
@@ -1206,7 +1216,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop/ — SEO score 55/100
-- Issues: Description length 37, Noindex, Thin content (89 words)
+- Issues: Description length 37, Noindex, Thin content (93 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop resources — Laxman Nepal
 - Recommended title: Laptop resources — Laxman Nepal | Laxman Nepal
@@ -1216,7 +1226,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-analytics.html — SEO score 55/100
-- Issues: Description length 67, Noindex, Thin content (91 words)
+- Issues: Description length 67, Noindex, Thin content (95 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: YouTube Analytics — Redirecting
 - Recommended title: YouTube Analytics — Redirecting | Laxman Nepal
@@ -1226,7 +1236,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2025/12/youtube-analytics.html — SEO score 55/100
-- Issues: Description length 43, Noindex, Thin content (90 words)
+- Issues: Description length 43, Noindex, Thin content (94 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: YouTube Analytics | Laxman Nepal
 - Recommended title: YouTube Analytics | Laxman Nepal | Laxman Nepal
@@ -1235,18 +1245,8 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Analytics | Laxman Nepal
 - Top queries: No page-query rows
 
-### /2025/11/youtube-hashtag-extractor.html — SEO score 55/100
-- Issues: Title length 25, Noindex, Thin content (146 words)
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: YouTube Hashtag Extractor
-- Recommended title: YouTube Hashtag Extractor | Laxman Nepal
-- Current description: Enter a YouTube video URL to extract all hashtags used in the video description.
-- Recommended description: Learn about YouTube Hashtag Extractor with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: YouTube Hashtag Extractor
-- Top queries: No page-query rows
-
 ### /2026/01/facebook-post-generator.html — SEO score 55/100
-- Issues: Description length 46, Noindex, Thin content (141 words)
+- Issues: Description length 46, Noindex, Thin content (145 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: SocialPoster - Custom Gradients & Text Range
 - Recommended title: SocialPoster Pro | Laxman Nepal
@@ -1266,7 +1266,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2025/11/ai-powered-youtube-seo-deep-analyzer.html — SEO score 55/100
-- Issues: Description length 47, Noindex, Thin content (125 words)
+- Issues: Description length 47, Noindex, Thin content (129 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: AI-Powered YouTube SEO Deep Analyzer
 - Recommended title: AI-Powered YouTube SEO Deep Analyzer | Laxman Nepal
@@ -1276,7 +1276,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /youtube-tools/archive/youtube-hashtag-extractor.html — SEO score 55/100
-- Issues: Title length 25, Noindex, Thin content (139 words)
+- Issues: Title length 25, Noindex, Thin content (143 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: YouTube Hashtag Extractor
 - Recommended title: YouTube Hashtag Extractor | Laxman Nepal
@@ -1286,7 +1286,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /youtube-tools/archive/youtube-title-generator.html — SEO score 55/100
-- Issues: Description length 57, Noindex, Thin content (123 words)
+- Issues: Description length 57, Noindex, Thin content (127 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: YouTube Title Generator — Free YouTube Tool | Laxman Nepal
 - Recommended title: YouTube Title Generator | Laxman Nepal
@@ -1296,7 +1296,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2025/07/youtube-thumnail-downloader.html — SEO score 70/100
-- Issues: Title length 27, Thin content (88 words)
+- Issues: Title length 27, Thin content (92 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Youtube Thumnail Downloader
 - Recommended title: Youtube Thumnail Downloader | Laxman Nepal
@@ -1306,7 +1306,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2025/08/free-image-download.html — SEO score 70/100
-- Issues: Title length 19, Thin content (116 words)
+- Issues: Title length 19, Thin content (120 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Free Image Download
 - Recommended title: Free Image Download | Laxman Nepal
@@ -1486,7 +1486,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/ — SEO score 70/100
-- Issues: Title length 61, Thin content (96 words)
+- Issues: Title length 61, Thin content (100 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop Price in Nepal | Compare Specs & Stores | Laxman Nepal
 - Recommended title: Laptop Price in Nepal | Compare Specs & Stores | Laxman Nep…
@@ -1506,7 +1506,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laxman-tools/ — SEO score 70/100
-- Issues: Description length 34, Thin content (85 words)
+- Issues: Description length 34, Thin content (89 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laxman Tools — Free Online Tools
 - Recommended title: Laxman Tools — Free Online Tools | Laxman Nepal
@@ -1706,7 +1706,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /youtube-video-seo-analyzer.html — SEO score 70/100
-- Issues: Title length 65, Thin content (120 words)
+- Issues: Title length 65, Thin content (124 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: YouTube Video SEO Analyzer — Free YouTube SEO Tool | Laxman Nepal
 - Recommended title: Advanced YouTube Video SEO Analyzer | Laxman Nepal
@@ -1726,7 +1726,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-video-seo-analyzer.html — SEO score 70/100
-- Issues: Noindex, Thin content (122 words)
+- Issues: Noindex, Thin content (126 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Advanced YouTube Video SEO Analyzer
 - Recommended title: Advanced YouTube Video SEO Analyzer | Laxman Nepal
@@ -1783,6 +1783,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Get detailed insights about any YouTube channel's performance and content strategy
 - Recommended description: Learn about YouTube Channel Analytics with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: YouTube Channel Analytics
+- Top queries: No page-query rows
+
+### /2025/11/youtube-hashtag-extractor.html — SEO score 70/100
+- Issues: Title length 25, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: YouTube Hashtag Extractor
+- Recommended title: YouTube Hashtag Extractor | Laxman Nepal
+- Current description: Enter a YouTube video URL to extract all hashtags used in the video description.
+- Recommended description: Learn about YouTube Hashtag Extractor with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: YouTube Hashtag Extractor
 - Top queries: No page-query rows
 
 ### /2025/11/youtube-tag-extractor.html — SEO score 70/100
@@ -1886,7 +1896,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal — SEO score 70/100
-- Issues: Title length 61, Thin content (96 words)
+- Issues: Title length 61, Thin content (100 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop Price in Nepal | Compare Specs & Stores | Laxman Nepal
 - Recommended title: Laptop Price in Nepal | Compare Specs & Stores | Laxman Nep…
@@ -1956,7 +1966,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /youtube-tools/archive/youtube-video-seo-analyzer.html — SEO score 70/100
-- Issues: Noindex, Thin content (122 words)
+- Issues: Noindex, Thin content (126 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Advanced YouTube Video SEO Analyzer
 - Recommended title: Advanced YouTube Video SEO Analyzer | Laxman Nepal
@@ -2376,7 +2386,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/brands/ — SEO score 85/100
-- Issues: Thin content (88 words)
+- Issues: Thin content (92 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop Brands in Nepal | Laxman Nepal
 - Recommended title: Laptop Brands in Nepal | Laxman Nepal | Laxman Nepal
@@ -2386,7 +2396,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/compare/ — SEO score 85/100
-- Issues: Thin content (84 words)
+- Issues: Thin content (88 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Compare Laptops | Laxman Nepal
 - Recommended title: Compare Laptops | Laxman Nepal | Laxman Nepal
@@ -2396,7 +2406,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/laptops/acer-aspire-5-i5-1235u-rtx2050/ — SEO score 85/100
-- Issues: Thin content (89 words)
+- Issues: Thin content (93 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop Price in Nepal | Laxman Nepal
 - Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
@@ -2406,7 +2416,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/laptops/acer-nitro-v15-rtx4050/ — SEO score 85/100
-- Issues: Thin content (89 words)
+- Issues: Thin content (93 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop Price in Nepal | Laxman Nepal
 - Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
@@ -2416,7 +2426,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/laptops/asus-vivobook-14-i5-1335u-8-512/ — SEO score 85/100
-- Issues: Thin content (89 words)
+- Issues: Thin content (93 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop Price in Nepal | Laxman Nepal
 - Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
@@ -2426,7 +2436,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/laptops/dell-dc15250-i5-13th-8-512/ — SEO score 85/100
-- Issues: Thin content (89 words)
+- Issues: Thin content (93 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop Price in Nepal | Laxman Nepal
 - Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
@@ -2436,7 +2446,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/laptops/dell-inspiron-3535-ryzen7-16-512/ — SEO score 85/100
-- Issues: Thin content (89 words)
+- Issues: Thin content (93 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop Price in Nepal | Laxman Nepal
 - Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
@@ -2446,7 +2456,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/laptops/hp-pavilion-15-i5-1335u-16-512/ — SEO score 85/100
-- Issues: Thin content (89 words)
+- Issues: Thin content (93 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop Price in Nepal | Laxman Nepal
 - Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
@@ -2456,7 +2466,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/laptops/lenovo-ideapad-slim-3-i5-12450h-16-512/ — SEO score 85/100
-- Issues: Thin content (89 words)
+- Issues: Thin content (93 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop Price in Nepal | Laxman Nepal
 - Recommended title: Laptop Price in Nepal | Laxman Nepal | Laxman Nepal
@@ -2466,7 +2476,7 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Top queries: No page-query rows
 
 ### /laptop-price-in-nepal/stores/ — SEO score 85/100
-- Issues: Thin content (88 words)
+- Issues: Thin content (92 words)
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laptop Stores in Nepal | Laxman Nepal
 - Recommended title: Laptop Stores in Nepal | Laxman Nepal | Laxman Nepal
@@ -2479,10 +2489,10 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Laxman Nepal — Official Biography | Nepali Tech Creator & YouTube
-- Recommended title: Hi, I'm Laxman Nepal. | Laxman Nepal
-- Current description: Official website and biography of Laxman Nepal — Nepali technology creator, YouTuber, computer educator and digital builder. Explore his work, YouTube channels,
-- Recommended description: Learn about Hi, I'm Laxman Nepal. with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Hi, I'm Laxman Nepal.
+- Recommended title: Laxman Nepal. | Laxman Nepal
+- Current description: Laxman Nepal is a Nepali technology creator, YouTuber, computer educator and digital builder. Explore his biography, work, projects, latest videos and public Yo
+- Recommended description: Learn about Laxman Nepal. with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Laxman Nepal.
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/ — SEO score 85/100
@@ -4103,16 +4113,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare REDMI 17 4G 6GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about REDMI 17 4G 6GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: REDMI 17 4G 6GB/128GB Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/redmi-17-4g/ — SEO score 85/100
-- Issues: Title length 63
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Redmi 17 4G Price in Nepal, Specs & Store Offers | Laxman Nepal
-- Recommended title: Redmi 17 4G Price in Nepal | Laxman Nepal
-- Current description: Compare Redmi 17 4G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
-- Recommended description: Learn about Redmi 17 4G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Redmi 17 4G Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/redmi-17-5g-4gb-128gb/ — SEO score 85/100
