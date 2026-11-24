@@ -1,12 +1,12 @@
 {
   "status": "verified",
-  "last_attempted_at": "2026-11-23T16:18:27.073246+00:00",
+  "last_attempted_at": "2026-11-24T16:05:45.191661+00:00",
   "latest": {
-    "date": "2026-11-23",
-    "updated_at": "2026-11-23T16:18:27.073246+00:00",
-    "fine_gold_tola": 247400,
-    "tejabi_gold_tola": 244900,
-    "silver_tola": 3110,
+    "date": "2026-11-24",
+    "updated_at": "2026-11-24T16:05:45.191661+00:00",
+    "fine_gold_tola": 247900,
+    "tejabi_gold_tola": 245400,
+    "silver_tola": 3145,
     "source": "Ashesh.com.np · FENEGOSIDA feed",
     "source_url": "https://www.ashesh.com.np/gold/widget.php?api=872076p237&header_color=0077e5",
     "unit": "NPR per tola"
@@ -358,6 +358,16 @@
       "fine_gold_tola": 247400,
       "tejabi_gold_tola": 244900,
       "silver_tola": 3110,
+      "source": "Ashesh.com.np · FENEGOSIDA feed",
+      "source_url": "https://www.ashesh.com.np/gold/widget.php?api=872076p237&header_color=0077e5",
+      "unit": "NPR per tola"
+    },
+    {
+      "date": "2026-11-24",
+      "updated_at": "2026-11-24T16:05:45.191661+00:00",
+      "fine_gold_tola": 247900,
+      "tejabi_gold_tola": 245400,
+      "silver_tola": 3145,
       "source": "Ashesh.com.np · FENEGOSIDA feed",
       "source_url": "https://www.ashesh.com.np/gold/widget.php?api=872076p237&header_color=0077e5",
       "unit": "NPR per tola"
