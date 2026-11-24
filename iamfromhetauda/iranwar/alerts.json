@@ -1,21 +1,317 @@
 {
-  "updated": "2026-11-24T04:23:56.872821+00:00",
+  "updated": "2026-11-24T15:06:08.085525+00:00",
   "items": [
     {
-      "id": "https://news.google.com/rss/articles/CBMijgJBVV95cUxNYWFrYTJac1RJdHBWWFhXdndMcC01WFRCVXZaX1BzbFF6NmxIRHBPbHJ2RjBsaTNtZmZoVEJqYnZnQm4xMEFJMW5sOW9BbHFMWGJ4SFcyWjBSVk9vWFVzTTItR0hfaTBReXBIa0ZiaW55ZWZVOE1JVXhFT25XTlF6eEJnY3UzZjNBcFFaU1pYRW1yTDFoQkZSc2RZRWZ4OHhwdjlhcThuQlZnUm9NU0Vmd094SGItQ1hGYmwyWlRwdmVLdkI5VmtmZ2lVVDVGcWFLM3VaTGtxMGltNkhXMFN6UGVIZDlwS3JHUG82TGVNcjJGZlJZTWZ3MDdXREhIVF84OFY1OHdyX3ZQTE1uTnfSAZMCQVVfeXFMTW9sTXVlZlBvQ21RLUFhOHRjU0NJejZHWVFPYVBkMVRyS0gybUdBc1JxMmpRb1pKcWNWdUJHUGNOUUVJZkJQWW9KTXNjQXFRREJYdFc0ckptOXFVOEptTmJnT1cybFotQkp1NDBRQWRsaHdMSkJrbEN1clZIcVIzR1FUOTE2ekYxaTNLYl8tbDgxbHRyT01UM1ZRSFR4bmdlZ3ZSeHNGUlpIbUt2SjFDV3pMSnVKaG1iSzllZFRlN1pWUWx3UEg5djlEci04SkdwU3JMVmw2dVktTnBPeUlrbmNJQUJjaUZsT2s3Z3FBNDFmWDg5VDhsUmlrY3NxazZGanVjbkg5MTFTc1U0aFRaSDVkUjQ?oc=5",
-      "title": "US Iran War Live Updates: Vance meets Qatar PM at White House amid efforts to revive stalled peace talks - The Times of India",
-      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxNYWFrYTJac1RJdHBWWFhXdndMcC01WFRCVXZaX1BzbFF6NmxIRHBPbHJ2RjBsaTNtZmZoVEJqYnZnQm4xMEFJMW5sOW9BbHFMWGJ4SFcyWjBSVk9vWFVzTTItR0hfaTBReXBIa0ZiaW55ZWZVOE1JVXhFT25XTlF6eEJnY3UzZjNBcFFaU1pYRW1yTDFoQkZSc2RZRWZ4OHhwdjlhcThuQlZnUm9NU0Vmd094SGItQ1hGYmwyWlRwdmVLdkI5VmtmZ2lVVDVGcWFLM3VaTGtxMGltNkhXMFN6UGVIZDlwS3JHUG82TGVNcjJGZlJZTWZ3MDdXREhIVF84OFY1OHdyX3ZQTE1uTnfSAZMCQVVfeXFMTW9sTXVlZlBvQ21RLUFhOHRjU0NJejZHWVFPYVBkMVRyS0gybUdBc1JxMmpRb1pKcWNWdUJHUGNOUUVJZkJQWW9KTXNjQXFRREJYdFc0ckptOXFVOEptTmJnT1cybFotQkp1NDBRQWRsaHdMSkJrbEN1clZIcVIzR1FUOTE2ekYxaTNLYl8tbDgxbHRyT01UM1ZRSFR4bmdlZ3ZSeHNGUlpIbUt2SjFDV3pMSnVKaG1iSzllZFRlN1pWUWx3UEg5djlEci04SkdwU3JMVmw2dVktTnBPeUlrbmNJQUJjaUZsT2s3Z3FBNDFmWDg5VDhsUmlrY3NxazZGanVjbkg5MTFTc1U0aFRaSDVkUjQ?oc=5",
-      "source": "The Times of India",
-      "published": "2026-11-24T03:59:42+00:00",
-      "description": "US Iran War Live Updates: Vance meets Qatar PM at White House amid efforts to revive stalled peace talks &nbsp;&nbsp; The Times of India"
+      "id": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQnV0LVNFbXRtX0hEZWdlSUtwSlRxVy1MOE5SMzJYVVRVYkRzQkZidklrcDRFQWt4TXlPeTgwWS1Ub0F3Mkl0R2VVQW9zbkY4blgxb2xiaWZXaWxRWGJna3lMR3QyOUQydWhQUVlub0dyOHpLUDIxUmpfT2F0MWphMzFhZXFDdDRhS0xzcXdsS1htbThlNnREV0hyaFVwM191cGpJR0NrcTFLZXR3T1ZpRmFSWGpsSEZEZVBnVW5ycw?oc=5",
+      "title": "Latest news on the war in the Middle East. Iran: Strait of Hormuz virtually paralysed, 400 ships waiting. Houthis strike skyscraper in Riyadh - Il Sole 24 ORE",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQnV0LVNFbXRtX0hEZWdlSUtwSlRxVy1MOE5SMzJYVVRVYkRzQkZidklrcDRFQWt4TXlPeTgwWS1Ub0F3Mkl0R2VVQW9zbkY4blgxb2xiaWZXaWxRWGJna3lMR3QyOUQydWhQUVlub0dyOHpLUDIxUmpfT2F0MWphMzFhZXFDdDRhS0xzcXdsS1htbThlNnREV0hyaFVwM191cGpJR0NrcTFLZXR3T1ZpRmFSWGpsSEZEZVBnVW5ycw?oc=5",
+      "source": "Il Sole 24 ORE",
+      "published": "2026-11-24T14:59:03+00:00",
+      "description": "Latest news on the war in the Middle East. Iran: Strait of Hormuz virtually paralysed, 400 ships waiting. Houthis strike skyscraper in Riyadh &nbsp;&nbsp; Il Sole 24 ORE"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43NjZHZXlqNXRLX0MxdlZlUzBvSEVjZ2FVZ2VGVjRGNnNJRmEyY2w3VmdSazViTEo0M0l2Um5Pc2xmZHNWR3g1TENQNnlGUmtEWWtiOVdR?oc=5",
+      "title": "Trump ready to strike Iran again if diplomacy fails, US ambassador to Israel warns - Ynetnews",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43NjZHZXlqNXRLX0MxdlZlUzBvSEVjZ2FVZ2VGVjRGNnNJRmEyY2w3VmdSazViTEo0M0l2Um5Pc2xmZHNWR3g1TENQNnlGUmtEWWtiOVdR?oc=5",
+      "source": "Ynetnews",
+      "published": "2026-11-24T14:46:30+00:00",
+      "description": "Trump ready to strike Iran again if diplomacy fails, US ambassador to Israel warns &nbsp;&nbsp; Ynetnews"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPU1BGOERUU2w0SW1pM2JId3A4aGZCcEhnMHg2TU5mOXpPa3MycFl3VU1SSlkxSmRnbUJxaF9HaElhaFdoUmVzNjJnc3lxc083OEF4WHUya3JNTlB2ek5CellXdUp4VUlOVjRqY0xzMGVWOERrOThXTko0WEtHdVR4OXNIWHN0VC1pT0RYeHhNNHJzRjI0cE1tMDhzcGpqTS00UkpoQjM1SlJKUzFFRGpTWFVB0gG3AUFVX3lxTE12V1BWVTBIMUpHMEFDV0g2N25CVkd3dWtoOWtiOUQ0b0UtM0ZRTWtrYmZPMDVLamR1c25RYng0ZHhlaDZ4T00yc0pqbEhIdFlpMmxKb2JtYlBxSXR0UDdXd0FhSlpOOFRvTXd2TWZSYlhSNEZ4VlNKb28teHp2Zk1OeG1BQ2lWaDEtN3FMVDNoS1ExN2drTUg1SEdrMWo0YUJCRW5Bc01Ld3RPbXZIU3dJLUlJOTYwWQ?oc=5",
+      "title": "Iran live updates: 3 tankers attacked in Strait of Hormuz, UKMTO says - ABC News - Breaking News, Latest News and Videos",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPU1BGOERUU2w0SW1pM2JId3A4aGZCcEhnMHg2TU5mOXpPa3MycFl3VU1SSlkxSmRnbUJxaF9HaElhaFdoUmVzNjJnc3lxc083OEF4WHUya3JNTlB2ek5CellXdUp4VUlOVjRqY0xzMGVWOERrOThXTko0WEtHdVR4OXNIWHN0VC1pT0RYeHhNNHJzRjI0cE1tMDhzcGpqTS00UkpoQjM1SlJKUzFFRGpTWFVB0gG3AUFVX3lxTE12V1BWVTBIMUpHMEFDV0g2N25CVkd3dWtoOWtiOUQ0b0UtM0ZRTWtrYmZPMDVLamR1c25RYng0ZHhlaDZ4T00yc0pqbEhIdFlpMmxKb2JtYlBxSXR0UDdXd0FhSlpOOFRvTXd2TWZSYlhSNEZ4VlNKb28teHp2Zk1OeG1BQ2lWaDEtN3FMVDNoS1ExN2drTUg1SEdrMWo0YUJCRW5Bc01Ld3RPbXZIU3dJLUlJOTYwWQ?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "published": "2026-11-24T14:11:00+00:00",
+      "description": "Iran live updates: 3 tankers attacked in Strait of Hormuz, UKMTO says &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQeWtaYWl0aXk3bE1SVS1CWDdMUy1NSmNQTUxHbTFRbFlFemVOS0FkZDE4TjVZWDNUODUycDJHTXpfaGp6SWwya2gxWVhJUlk1bWUxTmpjSk5UZm5wME5ZYWc5SkJsM1I2Vmx2c2paS3owWTdPX0pDN0ZXUUtQck11OHFfSVhwd18yakNEM3NBaTBPbmtTRjVNSnNISklHTUE3ZkJLclh4LXQzbUNZOGx3dC1n0gG3AUFVX3lxTE9yaW03aWdDZFBjTUh0YXhVMk5hdy0ybmpGQXZ5UVkwN3N3M0NrQkRTTVVwQkpEY3BBQ3ZxS0c2cmdyMUlNSlZrbmNWUzQzc05SN29ZS2h4dXJuVzdyWVFOcGVmbEFfaWxPNlpTT1JVdDJqdHRkaTE4QTZMZkFqNFl5RURUOHB6SWR5WmFTSldZcWhSa25SSVBjYkJhT09Od2Jvb2gzQzktYjZJWUxObGFoaW1kbjN1cw?oc=5",
+      "title": "Hormuz oil traffic is down 40 percent: Are Iran’s tanker attacks working? - Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQeWtaYWl0aXk3bE1SVS1CWDdMUy1NSmNQTUxHbTFRbFlFemVOS0FkZDE4TjVZWDNUODUycDJHTXpfaGp6SWwya2gxWVhJUlk1bWUxTmpjSk5UZm5wME5ZYWc5SkJsM1I2Vmx2c2paS3owWTdPX0pDN0ZXUUtQck11OHFfSVhwd18yakNEM3NBaTBPbmtTRjVNSnNISklHTUE3ZkJLclh4LXQzbUNZOGx3dC1n0gG3AUFVX3lxTE9yaW03aWdDZFBjTUh0YXhVMk5hdy0ybmpGQXZ5UVkwN3N3M0NrQkRTTVVwQkpEY3BBQ3ZxS0c2cmdyMUlNSlZrbmNWUzQzc05SN29ZS2h4dXJuVzdyWVFOcGVmbEFfaWxPNlpTT1JVdDJqdHRkaTE4QTZMZkFqNFl5RURUOHB6SWR5WmFTSldZcWhSa25SSVBjYkJhT09Od2Jvb2gzQzktYjZJWUxObGFoaW1kbjN1cw?oc=5",
+      "source": "Al Jazeera",
+      "published": "2026-11-24T13:46:20+00:00",
+      "description": "Hormuz oil traffic is down 40 percent: Are Iran’s tanker attacks working? &nbsp;&nbsp; Al Jazeera"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNT0Y3aGtodjltMFdkdUlhdG95ZE1Tc1hnVVd4WTc1M3JMM1dlY1dZRzRITHhEcXZybmtpcXcxTTlOYm11S2czd05xcHBibEUtQ3BJZjFKZUFrR21sSjNSZG5PUHFaZTVLQzJ0VHJTRi13NGhpRTd0OFVJbjdVQzBBU1d2aHhNVVRsUS1Dd0RRVzR2Z1BReE9uOEZmeTEtbGs?oc=5",
+      "title": "Iran rules out talks with US until its 7 conditions are met, and other Mideast news - Newsday",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNT0Y3aGtodjltMFdkdUlhdG95ZE1Tc1hnVVd4WTc1M3JMM1dlY1dZRzRITHhEcXZybmtpcXcxTTlOYm11S2czd05xcHBibEUtQ3BJZjFKZUFrR21sSjNSZG5PUHFaZTVLQzJ0VHJTRi13NGhpRTd0OFVJbjdVQzBBU1d2aHhNVVRsUS1Dd0RRVzR2Z1BReE9uOEZmeTEtbGs?oc=5",
+      "source": "Newsday",
+      "published": "2026-11-24T13:30:30+00:00",
+      "description": "Iran rules out talks with US until its 7 conditions are met, and other Mideast news &nbsp;&nbsp; Newsday"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSDU2NHlFTGd5U3ZTUHVINjRYdGJFUGtheFJZNUlnLWFIQl94VXVfamZSYnpoUEx5RUxTbU8xWFF1R0dlVHp3Znc1UWpzdV9rQVBvbTRtdUxfQ3hCREVoQWo0M0tmakNsbFBlc1hORzRQWEZRcFNGbjJDZHJra0RCWHJIMERXVHdhZnR3?oc=5",
+      "title": "Iran and Bahrain: Between Escalations and Resilience - ORF Middle East",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSDU2NHlFTGd5U3ZTUHVINjRYdGJFUGtheFJZNUlnLWFIQl94VXVfamZSYnpoUEx5RUxTbU8xWFF1R0dlVHp3Znc1UWpzdV9rQVBvbTRtdUxfQ3hCREVoQWo0M0tmakNsbFBlc1hORzRQWEZRcFNGbjJDZHJra0RCWHJIMERXVHdhZnR3?oc=5",
+      "source": "ORF Middle East",
+      "published": "2026-11-24T13:22:49+00:00",
+      "description": "Iran and Bahrain: Between Escalations and Resilience &nbsp;&nbsp; ORF Middle East"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZVVCYzZGZ0dSYTY3c2NCclRXLVIxOExhMEFqN1ZMbDU5Rl9rSU5TX2owRmJGb0pwR2dhRkNUTW52TVJvWGVwT1g3SWpoa1lLWWJXeVZjWWx2NXpiSkdIOHYwVGw0dUpzX0F3Y0RfQkVHeWhQaWRWZGliQmgwY1ZibEpyMUM2dVlKRmU0QTlTd0VLRzhyS254ZWFyU1VpbjJ3ZWJKMjR3SkxqZkZ2M21WZ1NrTHVKd03SAbwBQVVfeXFMTXpPc2VpWkZaZUJHeVB0MHMtamxqOG44QktsQ2tNSGhKaTMtMl9CbHM4TUlWSElSRDFzTlNpY04wRFlsM3h6elFXRVJvdGZVMHlxY29YV3pPajMtQlVsYndDZlZHdUVkRk1Sbks2dmFkN1d2bnBiSDdIQThYbkpmdE5JN0ZzMUlUYTRKNHVYV2REYmNkQzN4VjE1YUw4b1lDTU5IU1pDcUlRSmNMNmJtY3RmRFNUVks3NzBQSXo?oc=5",
+      "title": "Iran files lawsuits in US, EU courts: Will it get justice for ‘war crimes’? - Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZVVCYzZGZ0dSYTY3c2NCclRXLVIxOExhMEFqN1ZMbDU5Rl9rSU5TX2owRmJGb0pwR2dhRkNUTW52TVJvWGVwT1g3SWpoa1lLWWJXeVZjWWx2NXpiSkdIOHYwVGw0dUpzX0F3Y0RfQkVHeWhQaWRWZGliQmgwY1ZibEpyMUM2dVlKRmU0QTlTd0VLRzhyS254ZWFyU1VpbjJ3ZWJKMjR3SkxqZkZ2M21WZ1NrTHVKd03SAbwBQVVfeXFMTXpPc2VpWkZaZUJHeVB0MHMtamxqOG44QktsQ2tNSGhKaTMtMl9CbHM4TUlWSElSRDFzTlNpY04wRFlsM3h6elFXRVJvdGZVMHlxY29YV3pPajMtQlVsYndDZlZHdUVkRk1Sbks2dmFkN1d2bnBiSDdIQThYbkpmdE5JN0ZzMUlUYTRKNHVYV2REYmNkQzN4VjE1YUw4b1lDTU5IU1pDcUlRSmNMNmJtY3RmRFNUVks3NzBQSXo?oc=5",
+      "source": "Al Jazeera",
+      "published": "2026-11-24T13:06:25+00:00",
+      "description": "Iran files lawsuits in US, EU courts: Will it get justice for ‘war crimes’? &nbsp;&nbsp; Al Jazeera"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5aLW5WTEJsUFVNclNuWWhfcmFLMGFDWTMtaHg0TWhDZnFZYXZDVm9DTWhuNjE3azd2akpWeHdQNmtjck11R0dlSy1oYWRtMTA5d0E?oc=5",
+      "title": "Iran’s disillusionment with Russia and China grows across political camps - Iran International",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5aLW5WTEJsUFVNclNuWWhfcmFLMGFDWTMtaHg0TWhDZnFZYXZDVm9DTWhuNjE3azd2akpWeHdQNmtjck11R0dlSy1oYWRtMTA5d0E?oc=5",
+      "source": "Iran International",
+      "published": "2026-11-24T12:47:33+00:00",
+      "description": "Iran’s disillusionment with Russia and China grows across political camps &nbsp;&nbsp; Iran International"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVzZpMHFTclFHbWV5MGFQbmJCOHhtaS02NUQyVmFmU09tZHVJRXZCeHRNWTFNQ0hVenFvQ1JnS2p0aHd0LVFjRE5KTi0tQkVZdElhcko2YXRmWnpkbGtkc0lJX0JjVGtXSE1TbWwyVklTcHVrSWNaTExxT1hYV3JEdG92Ny03TEFNWEJ0Q1hIY2lReVVlZHhkRS0zUUlkZkFiTHhiV0UwVF9RMVdxS2RlS1pseXBJQ3ZwaDBqak5zd29Hd3NGYW5nNUVfZERkR0pI?oc=5",
+      "title": "COMMENTARY: Middle East crude oil exports trend lower amid fake Iran stalemate - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVzZpMHFTclFHbWV5MGFQbmJCOHhtaS02NUQyVmFmU09tZHVJRXZCeHRNWTFNQ0hVenFvQ1JnS2p0aHd0LVFjRE5KTi0tQkVZdElhcko2YXRmWnpkbGtkc0lJX0JjVGtXSE1TbWwyVklTcHVrSWNaTExxT1hYV3JEdG92Ny03TEFNWEJ0Q1hIY2lReVVlZHhkRS0zUUlkZkFiTHhiV0UwVF9RMVdxS2RlS1pseXBJQ3ZwaDBqak5zd29Hd3NGYW5nNUVfZERkR0pI?oc=5",
+      "source": "Reuters",
+      "published": "2026-11-24T12:32:08+00:00",
+      "description": "COMMENTARY: Middle East crude oil exports trend lower amid fake Iran stalemate &nbsp;&nbsp; Reuters"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPYU5YbjBHN25zRm1BWTVQNFMtbVVnM1RPWEIxaVBJLWdRTF85T1dsdG52SmVaZ0hTOWl3YzM4TWdqVE9hcTM5SWZkdlQ1YTJZb1VTWXhxOUtlbEVieFN0TkZlSm1idWZkeTNneFJzT0JMX0FLRjNUQkdpSzR6SlF0WU9qeklvZlFEdVZ1ckgwb1BGY3JONTA1WEd2MTdmQ25rUXRNelZ3?oc=5",
+      "title": "The $48.3 Billion Iran War Faces a New Battle on Capitol Hill - Clearance Jobs",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPYU5YbjBHN25zRm1BWTVQNFMtbVVnM1RPWEIxaVBJLWdRTF85T1dsdG52SmVaZ0hTOWl3YzM4TWdqVE9hcTM5SWZkdlQ1YTJZb1VTWXhxOUtlbEVieFN0TkZlSm1idWZkeTNneFJzT0JMX0FLRjNUQkdpSzR6SlF0WU9qeklvZlFEdVZ1ckgwb1BGY3JONTA1WEd2MTdmQ25rUXRNelZ3?oc=5",
+      "source": "Clearance Jobs",
+      "published": "2026-11-24T12:30:55+00:00",
+      "description": "The $48.3 Billion Iran War Faces a New Battle on Capitol Hill &nbsp;&nbsp; Clearance Jobs"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWVZtRjNiVFpTT0hRT3ZJNXVXdEJFemlyX05jLXd6MHVKeHZFWVd5RUh2cXJ6SVBNMmVPVjYwSGxMRlZPVlVNSXc0MG1qMF9ZQlNNYlpUSmZGQmVDWURoMlEzSU00bzVmSVJsd1VDQ25mX0kwNkVacWYxM2pkYms4SUVZODI0WXh1ekZZbm9RZmYySjQwdVRJZFJfME5fU1BGQVhadktUakNhaGo3WEFWNm5ZczYzWTA4Y3RFSk1JS01nWGdWa3JQWXE5akdmRWdF?oc=5",
+      "title": "Iran attacks 60 ships in eight weeks as new strike on bulker reported - TradeWinds News",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWVZtRjNiVFpTT0hRT3ZJNXVXdEJFemlyX05jLXd6MHVKeHZFWVd5RUh2cXJ6SVBNMmVPVjYwSGxMRlZPVlVNSXc0MG1qMF9ZQlNNYlpUSmZGQmVDWURoMlEzSU00bzVmSVJsd1VDQ25mX0kwNkVacWYxM2pkYms4SUVZODI0WXh1ekZZbm9RZmYySjQwdVRJZFJfME5fU1BGQVhadktUakNhaGo3WEFWNm5ZczYzWTA4Y3RFSk1JS01nWGdWa3JQWXE5akdmRWdF?oc=5",
+      "source": "TradeWinds News",
+      "published": "2026-11-24T12:30:48+00:00",
+      "description": "Iran attacks 60 ships in eight weeks as new strike on bulker reported &nbsp;&nbsp; TradeWinds News"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp5UjZPOG9MaFE0SmZ5UndIejdacWRYT3hGVHZiNVQ1a1lOa0tUZVdjRm1rVDZkMWRPTWd2R0JLamZfYm1lcEREbE12ajRCNTZSdERlMFpObDVFSkowV2h3THRkdlFoMUxR?oc=5",
+      "title": "Live Updates: Iran says it will use all means to end U.S. blockade as Trump plays down escalating attacks - CBS News",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp5UjZPOG9MaFE0SmZ5UndIejdacWRYT3hGVHZiNVQ1a1lOa0tUZVdjRm1rVDZkMWRPTWd2R0JLamZfYm1lcEREbE12ajRCNTZSdERlMFpObDVFSkowV2h3THRkdlFoMUxR?oc=5",
+      "source": "CBS News",
+      "published": "2026-11-24T12:00:00+00:00",
+      "description": "Live Updates: Iran says it will use all means to end U.S. blockade as Trump plays down escalating attacks &nbsp;&nbsp; CBS News"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNbnNWdUYyMTVMaVkyRDdPcmhiRE1IWktTM0pkRFgxbXl3NjNwbHNGZUJEQ01LM1QxWlo1Y19zWmJfZUpKYS11U2lmcS1qdEhSVzFJS3NQMVVqV21zSUNESzBhTjJtQ0gtSmVfcHFxalNsWlhLNFk3VEItYlg0MWNKalE2d3A?oc=5",
+      "title": "Iran flogs singer who performed without hijab - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNbnNWdUYyMTVMaVkyRDdPcmhiRE1IWktTM0pkRFgxbXl3NjNwbHNGZUJEQ01LM1QxWlo1Y19zWmJfZUpKYS11U2lmcS1qdEhSVzFJS3NQMVVqV21zSUNESzBhTjJtQ0gtSmVfcHFxalNsWlhLNFk3VEItYlg0MWNKalE2d3A?oc=5",
+      "source": "Financial Times",
+      "published": "2026-11-24T11:59:09+00:00",
+      "description": "Iran flogs singer who performed without hijab &nbsp;&nbsp; Financial Times"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOc2FnZ3lCcDB4QTExbnBOVGtUak16dHhYUHRQakcyQm5KWk9yS2RaNEFqRnJrN2t0dXhzeEJ1WTJRb0M2eUF1bWU0V1V2XzdVa25tSE1Tazl2clp1STY2bTlSd2drVVVoV1pueldRaFFqQ0c0Ti1QWHZFQXh2RUdxbl9sOElGakpnTHVMNzltVUtidG5peFBxSTF5RUg4LWozbzdiQlc2MDAwTkQzeS1IZDhJSndKRDIyNV96Qm1QV1pBanNqeTVsd2xIVVdFUndLXzJPdVdnNXlEeU1tbDdGUmNiSFJrTzJmVUE?oc=5",
+      "title": "Iran insists no talks with the US until its 7 conditions are met, and other Mideast news - The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOc2FnZ3lCcDB4QTExbnBOVGtUak16dHhYUHRQakcyQm5KWk9yS2RaNEFqRnJrN2t0dXhzeEJ1WTJRb0M2eUF1bWU0V1V2XzdVa25tSE1Tazl2clp1STY2bTlSd2drVVVoV1pueldRaFFqQ0c0Ti1QWHZFQXh2RUdxbl9sOElGakpnTHVMNzltVUtidG5peFBxSTF5RUg4LWozbzdiQlc2MDAwTkQzeS1IZDhJSndKRDIyNV96Qm1QV1pBanNqeTVsd2xIVVdFUndLXzJPdVdnNXlEeU1tbDdGUmNiSFJrTzJmVUE?oc=5",
+      "source": "The Washington Post",
+      "published": "2026-11-24T11:55:24+00:00",
+      "description": "Iran insists no talks with the US until its 7 conditions are met, and other Mideast news &nbsp;&nbsp; The Washington Post"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVmJRMzhuSEp3TTUyamZxRXlZZ0xfWHpBQXJYVWdTTVVrQnk3WUVldlQyeUI1X2huU3owRGxDZnFiUUxGb3RZQmdGVUp1MHZ5Yjd5VXVGV29VYldHUzNydFBmVi04cm00aWFJWklTa3NpXzZrVjVLRm5TaVJXTDV3VVFiUjB6VThoLVZ2R3JNcnBhZTFlX29J?oc=5",
+      "title": "News Gulftainer-CULines link-up will bring China-Gulf capacity injection - The Loadstar",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVmJRMzhuSEp3TTUyamZxRXlZZ0xfWHpBQXJYVWdTTVVrQnk3WUVldlQyeUI1X2huU3owRGxDZnFiUUxGb3RZQmdGVUp1MHZ5Yjd5VXVGV29VYldHUzNydFBmVi04cm00aWFJWklTa3NpXzZrVjVLRm5TaVJXTDV3VVFiUjB6VThoLVZ2R3JNcnBhZTFlX29J?oc=5",
+      "source": "The Loadstar",
+      "published": "2026-11-24T11:43:42+00:00",
+      "description": "News Gulftainer-CULines link-up will bring China-Gulf capacity injection &nbsp;&nbsp; The Loadstar"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVEhVQnRkbmtLRFFmMGVLdTFxbjRRQ08zcXdnRnpSUzVNVTR3cVJUYXpVNF91c3B6ZXJpZnEyT0s1WndYbWlhMENQMEVJcXhnQWdQQ2pnUkczYmRRRE5VQVRpeF80eTh6TjJud1FrVTloRzVzTXBIdFRXMDZjcTJpZkh2QzF2amRkT0hQejlOdDI2UWZzYXlkQ3NKSDVHWU5RVkJPM0JGaE7SAa4BQVVfeXFMTzVPN3JNRm5fSVlDaEp5WkxWZWIyQXgtb01LeTZtV001OFFwWkx0dGJDV0tsby1zVUpucWxNc3c0YkhmdVBPVGNZMFhrcDVoUWdFdVI3Y0FHcEFtSHdiUHdFbkpnT0FXLVc2Z2dRNWo3UUJBdVJVMENScVlWYWRJdER4TXQ4X0dLT1RzX3d4TUctNk80VGdIdTZZeXV5dTE4YlEwdGt1TDh0MDRQUVdR?oc=5",
+      "title": "The ‘eighth front’: Why Israel’s influence war in the US is failing - Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVEhVQnRkbmtLRFFmMGVLdTFxbjRRQ08zcXdnRnpSUzVNVTR3cVJUYXpVNF91c3B6ZXJpZnEyT0s1WndYbWlhMENQMEVJcXhnQWdQQ2pnUkczYmRRRE5VQVRpeF80eTh6TjJud1FrVTloRzVzTXBIdFRXMDZjcTJpZkh2QzF2amRkT0hQejlOdDI2UWZzYXlkQ3NKSDVHWU5RVkJPM0JGaE7SAa4BQVVfeXFMTzVPN3JNRm5fSVlDaEp5WkxWZWIyQXgtb01LeTZtV001OFFwWkx0dGJDV0tsby1zVUpucWxNc3c0YkhmdVBPVGNZMFhrcDVoUWdFdVI3Y0FHcEFtSHdiUHdFbkpnT0FXLVc2Z2dRNWo3UUJBdVJVMENScVlWYWRJdER4TXQ4X0dLT1RzX3d4TUctNk80VGdIdTZZeXV5dTE4YlEwdGt1TDh0MDRQUVdR?oc=5",
+      "source": "Al Jazeera",
+      "published": "2026-11-24T11:37:12+00:00",
+      "description": "The ‘eighth front’: Why Israel’s influence war in the US is failing &nbsp;&nbsp; Al Jazeera"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMingFBVV95cUxNdTVqRHVCelVPeW5pSEVHY2NRTVVFNUVLemNoM3M5a0N1MERHM2t6OEdOUGlSRVA5VW5wYzhuNVUzTlFYYzBXMmlIbmZ4bkNVT09ON280dld0WFBPbnJpaG1NODN0XzJZV1ZTRFcyR3hUZGZ3NW5Pc04zZ1JIaG5mR2hicHdTcGxuYTNhNE1LemwtclRGTllHQ04wcng4Zw?oc=5",
+      "title": "Oil Holds Decline on Signs of Continuing US-Iran Diplomacy - Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNdTVqRHVCelVPeW5pSEVHY2NRTVVFNUVLemNoM3M5a0N1MERHM2t6OEdOUGlSRVA5VW5wYzhuNVUzTlFYYzBXMmlIbmZ4bkNVT09ON280dld0WFBPbnJpaG1NODN0XzJZV1ZTRFcyR3hUZGZ3NW5Pc04zZ1JIaG5mR2hicHdTcGxuYTNhNE1LemwtclRGTllHQ04wcng4Zw?oc=5",
+      "source": "Bloomberg",
+      "published": "2026-11-24T11:15:04+00:00",
+      "description": "Oil Holds Decline on Signs of Continuing US-Iran Diplomacy &nbsp;&nbsp; Bloomberg"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNW14YjRmMTY1a0preF9JQmJVaDFGVmZWUlNJbmRNelFCQjFqYVpfbzJMSFJPN2hwQ1diRDZYdkh3Z09LalBnb3hBZ0k1LUtZNWVpZnprZDlzMzAtVnZZZzAxNTlQYXZYcHNHdjJEZkE5Y3Nfall1Vnk0YkQ5NUpTZDctU3BLbXhz?oc=5",
+      "title": "Middle East latest: Iran navy says two tankers ablaze in Strait of Hormuz - The National",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNW14YjRmMTY1a0preF9JQmJVaDFGVmZWUlNJbmRNelFCQjFqYVpfbzJMSFJPN2hwQ1diRDZYdkh3Z09LalBnb3hBZ0k1LUtZNWVpZnprZDlzMzAtVnZZZzAxNTlQYXZYcHNHdjJEZkE5Y3Nfall1Vnk0YkQ5NUpTZDctU3BLbXhz?oc=5",
+      "source": "The National",
+      "published": "2026-11-24T10:52:44+00:00",
+      "description": "Middle East latest: Iran navy says two tankers ablaze in Strait of Hormuz &nbsp;&nbsp; The National"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5RY0ZLeDhpLXFkS19QODZHSWtfSE1Qa2RZcWgxQ08taF9KR010SkZ6dTdBSEhwblc3X2hha193OEdkQXhrcG44RGtIbHV5RlN2SjVQakhsVlpOVFJTb3BPd2t3TXFnUQ?oc=5",
+      "title": "Iran Intensifies Strikes on Gulf Targets and Oil Tankers - Demokratis.co.id",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5RY0ZLeDhpLXFkS19QODZHSWtfSE1Qa2RZcWgxQ08taF9KR010SkZ6dTdBSEhwblc3X2hha193OEdkQXhrcG44RGtIbHV5RlN2SjVQakhsVlpOVFJTb3BPd2t3TXFnUQ?oc=5",
+      "source": "Demokratis.co.id",
+      "published": "2026-11-24T10:42:47+00:00",
+      "description": "Iran Intensifies Strikes on Gulf Targets and Oil Tankers &nbsp;&nbsp; Demokratis.co.id"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNeXZlLW1Xd2J3dV96aVV1ZXpnaUhsNS1vcTBuV0VEcWtROEJCZVZZTXNZdlphRDB6Vl9TeU45dFV0ZnhRbVNqUWdvT2J5T2g3X20tVDRlWndFMWlGdEg5czM2SEdqSHBKZVdwTGJwbjZfbEVIQW94TlVMTDNmcHBFWGR6dFVSaWJFcHdDNFVzR25Kc2hZWjVjaHFhZHlkaE9FbzlSckl1OTNPTmRvdnJzWQ?oc=5",
+      "title": "Huckabee says Trump ready to strike Iran again if diplomacy fails - The Times of Israel",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNeXZlLW1Xd2J3dV96aVV1ZXpnaUhsNS1vcTBuV0VEcWtROEJCZVZZTXNZdlphRDB6Vl9TeU45dFV0ZnhRbVNqUWdvT2J5T2g3X20tVDRlWndFMWlGdEg5czM2SEdqSHBKZVdwTGJwbjZfbEVIQW94TlVMTDNmcHBFWGR6dFVSaWJFcHdDNFVzR25Kc2hZWjVjaHFhZHlkaE9FbzlSckl1OTNPTmRvdnJzWQ?oc=5",
+      "source": "The Times of Israel",
+      "published": "2026-11-24T10:39:41+00:00",
+      "description": "Huckabee says Trump ready to strike Iran again if diplomacy fails &nbsp;&nbsp; The Times of Israel"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOLVEzelRwd2pzaWFoRmhiVTIwb2JRem9VRFgyTkFlUVRNOHh1bVJLRnNoTm90SnhscmpVcW56STVUaTBZS3ZsSUJZZUpDSTBidHp1Wl9DbEt4WlhuZjV1RFZGUnRkTFAwMVpEcGdJZDZXYkNncGFwZUp6SEpGRjZ1bXN2aHJmNTZaazJRdDhPdHFZUHltbXVySjIxMTlocDVSc1FVNmEyNXZNbnhGLTN5Zlhwc0RRUQ?oc=5",
+      "title": "Iran insists no talks with the US until its 7 conditions are met, and other Mideast news - AP News",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOLVEzelRwd2pzaWFoRmhiVTIwb2JRem9VRFgyTkFlUVRNOHh1bVJLRnNoTm90SnhscmpVcW56STVUaTBZS3ZsSUJZZUpDSTBidHp1Wl9DbEt4WlhuZjV1RFZGUnRkTFAwMVpEcGdJZDZXYkNncGFwZUp6SEpGRjZ1bXN2aHJmNTZaazJRdDhPdHFZUHltbXVySjIxMTlocDVSc1FVNmEyNXZNbnhGLTN5Zlhwc0RRUQ?oc=5",
+      "source": "AP News",
+      "published": "2026-11-24T10:34:00+00:00",
+      "description": "Iran insists no talks with the US until its 7 conditions are met, and other Mideast news &nbsp;&nbsp; AP News"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOSXhnd0U5NHV1U0V6RmlPTGhnMlM3WFFQWWdJQjlTRFBkVUJreHQ3VVZKZnFtNmNpTGZucTZrbHRzZHVmd0JlN3ljLWlIWU8wWUJuZ0V1ZHBVT2FuYVVpUTJnQ1MzSkg3V3VQcFd3VkItQUNLTDJtM0ZORHBKbWJZUllENjdhZzZuSzR2T3ItTlBvRnhSQ09HTQ?oc=5",
+      "title": "Middle East latest: Riyadh tower targeted in terrorist attack, Saudi-led coalition says - The National",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOSXhnd0U5NHV1U0V6RmlPTGhnMlM3WFFQWWdJQjlTRFBkVUJreHQ3VVZKZnFtNmNpTGZucTZrbHRzZHVmd0JlN3ljLWlIWU8wWUJuZ0V1ZHBVT2FuYVVpUTJnQ1MzSkg3V3VQcFd3VkItQUNLTDJtM0ZORHBKbWJZUllENjdhZzZuSzR2T3ItTlBvRnhSQ09HTQ?oc=5",
+      "source": "The National",
+      "published": "2026-11-24T10:20:17+00:00",
+      "description": "Middle East latest: Riyadh tower targeted in terrorist attack, Saudi-led coalition says &nbsp;&nbsp; The National"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQjV0My1DaG4yR3M1Q3BXM3QxWEtBQU9mdlNZQXp4S2dLOFNrSV9pcmM1bkZocW9aSmFOT0lMZndzN3E1eV8tcDNPRE90VVhsaGR0Qm5kazRpOVRUSHRYMTJRVE1nb2JGYWZrU09qZzBfdEJrUlRqNjlDM1JmM0RsQ3RRVzZXQS1MNkN1My1TbVRpSnlLNmJOOXhsaVc3V2Iwc3ZNU2R6ZWQzSXJsT3JPdk9aaGxXTkE?oc=5",
+      "title": "U.S. Sanctions Target Financial Networks Supporting Iran’s Oil and Shipping Operations - Global Trade Magazine",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQjV0My1DaG4yR3M1Q3BXM3QxWEtBQU9mdlNZQXp4S2dLOFNrSV9pcmM1bkZocW9aSmFOT0lMZndzN3E1eV8tcDNPRE90VVhsaGR0Qm5kazRpOVRUSHRYMTJRVE1nb2JGYWZrU09qZzBfdEJrUlRqNjlDM1JmM0RsQ3RRVzZXQS1MNkN1My1TbVRpSnlLNmJOOXhsaVc3V2Iwc3ZNU2R6ZWQzSXJsT3JPdk9aaGxXTkE?oc=5",
+      "source": "Global Trade Magazine",
+      "published": "2026-11-24T10:04:12+00:00",
+      "description": "U.S. Sanctions Target Financial Networks Supporting Iran’s Oil and Shipping Operations &nbsp;&nbsp; Global Trade Magazine"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNcVJvSXJhbDVYSGs2aDVWSlkyS3VNRnc3OE0zaWRBUFlxejhCRUpWcTVKUDVBeGI2ZFRMNzUyb0FfZWZfWUJEbndKTFRvUTVNWDRjWTg0LV8tUGxQQnJHSVhHcGRCZEtqa29TcEMyWlNlTGJBZFF2ZzczTXVqcGZqN1ppQWFnMEFQWDRreQ?oc=5",
+      "title": "OPINION - Where is the US/Israel-Iran war heading? - Anadolu Ajansı",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNcVJvSXJhbDVYSGs2aDVWSlkyS3VNRnc3OE0zaWRBUFlxejhCRUpWcTVKUDVBeGI2ZFRMNzUyb0FfZWZfWUJEbndKTFRvUTVNWDRjWTg0LV8tUGxQQnJHSVhHcGRCZEtqa29TcEMyWlNlTGJBZFF2ZzczTXVqcGZqN1ppQWFnMEFQWDRreQ?oc=5",
+      "source": "Anadolu Ajansı",
+      "published": "2026-11-24T10:03:23+00:00",
+      "description": "OPINION - Where is the US/Israel-Iran war heading? &nbsp;&nbsp; Anadolu Ajansı"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZlh5WmtfUXNFLV9NT0JzYVJOQTNLRjRmUFloVUU4Uzc4TGdVN003MXYxY3lJRVdicTNzZWh4cVNaSzRzQ1hFUVVwTVNSR1FSU1kySGhsWGRaRGVfUW4tN2p0MHFYcjJtbDRJNHhNaE12STZWWVV6WldqMm1qVV9RQWlPVWVtNXFtTlBjZWpNUEY?oc=5",
+      "title": "US puts sanctions on Iran-linked firms - The Arkansas Democrat-Gazette",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZlh5WmtfUXNFLV9NT0JzYVJOQTNLRjRmUFloVUU4Uzc4TGdVN003MXYxY3lJRVdicTNzZWh4cVNaSzRzQ1hFUVVwTVNSR1FSU1kySGhsWGRaRGVfUW4tN2p0MHFYcjJtbDRJNHhNaE12STZWWVV6WldqMm1qVV9RQWlPVWVtNXFtTlBjZWpNUEY?oc=5",
+      "source": "The Arkansas Democrat-Gazette",
+      "published": "2026-11-24T10:00:00+00:00",
+      "description": "US puts sanctions on Iran-linked firms &nbsp;&nbsp; The Arkansas Democrat-Gazette"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORElyOG5IMWw1Q3U2WlAyTFRZX0ZyaEtDaVhwclc5azJlR1Jqb1VZcE4yQVVwdGZPcXRid1NHMjFZUDZUbUl1TmczZGVFQk5NUV9panVYS2hTRHpTQzFidlo4a1RfT0VZRjNBVWZKRDBaLW5YNVoyXzJYenVEb3pNU256b240Sy1qb2JxXw?oc=5",
+      "title": "US probes Iran’s role in cyberattacks targeting energy tankers - The Arab Weekly",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORElyOG5IMWw1Q3U2WlAyTFRZX0ZyaEtDaVhwclc5azJlR1Jqb1VZcE4yQVVwdGZPcXRid1NHMjFZUDZUbUl1TmczZGVFQk5NUV9panVYS2hTRHpTQzFidlo4a1RfT0VZRjNBVWZKRDBaLW5YNVoyXzJYenVEb3pNU256b240Sy1qb2JxXw?oc=5",
+      "source": "The Arab Weekly",
+      "published": "2026-11-24T09:48:18+00:00",
+      "description": "US probes Iran’s role in cyberattacks targeting energy tankers &nbsp;&nbsp; The Arab Weekly"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5LR0d1R2poV0hQWGktWUQ0WXFxLU91MkRzSEVkUGNqV1M1Rk1HQU54XzE0YlgwU1NzaTQwUWtRREpnMjkwMG9Ra3JIay16ZDUxMmc?oc=5",
+      "title": "Iranian media walk back tanker convoy claims after days of blockade-breaking hype - Iran International",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5LR0d1R2poV0hQWGktWUQ0WXFxLU91MkRzSEVkUGNqV1M1Rk1HQU54XzE0YlgwU1NzaTQwUWtRREpnMjkwMG9Ra3JIay16ZDUxMmc?oc=5",
+      "source": "Iran International",
+      "published": "2026-11-24T09:43:09+00:00",
+      "description": "Iranian media walk back tanker convoy claims after days of blockade-breaking hype &nbsp;&nbsp; Iran International"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWExVaGx4Y0F0bGRlOE5nQlh4eGwwemExZEhIeUZCd1hzYnZhSnRUZkNRRmtaZFlsYV9abFhrUkt3OFM2VjMtaHZkV04zRjRpLWJTNHF3clh2ckhILTVBZjQzUU84eTI0LThfdjBFWHVjUHhFaHhEY0FVYm45b1VfS1Vpd0ozRmFDTWJURWNPaGtxbjN1NFgwZnZSaXNfWDYyQ1ZmNjEwMDBOUVhNN3YwZWl3?oc=5",
+      "title": "US Investigates Iran’s Possible Role in Cyberattacks on 50 Commercial Tankers - The Media Line",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWExVaGx4Y0F0bGRlOE5nQlh4eGwwemExZEhIeUZCd1hzYnZhSnRUZkNRRmtaZFlsYV9abFhrUkt3OFM2VjMtaHZkV04zRjRpLWJTNHF3clh2ckhILTVBZjQzUU84eTI0LThfdjBFWHVjUHhFaHhEY0FVYm45b1VfS1Vpd0ozRmFDTWJURWNPaGtxbjN1NFgwZnZSaXNfWDYyQ1ZmNjEwMDBOUVhNN3YwZWl3?oc=5",
+      "source": "The Media Line",
+      "published": "2026-11-24T09:40:52+00:00",
+      "description": "US Investigates Iran’s Possible Role in Cyberattacks on 50 Commercial Tankers &nbsp;&nbsp; The Media Line"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5fU2tYQkVpa3RpYlJfNHQ5bXpUVms5NDZwYXhSa2lMQjJvWmJKVFh2bnIzSkpDWG1RSTEtbXNSaV9jcGlOWmpxb3YzUDRfNjdHcmFNMk9wYjFxbzYwSUhOVnN6WldvNnNIR3c?oc=5",
+      "title": "Iran warns Bahrain, Kuwait over support for US military operations - The Jerusalem Post",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5fU2tYQkVpa3RpYlJfNHQ5bXpUVms5NDZwYXhSa2lMQjJvWmJKVFh2bnIzSkpDWG1RSTEtbXNSaV9jcGlOWmpxb3YzUDRfNjdHcmFNMk9wYjFxbzYwSUhOVnN6WldvNnNIR3c?oc=5",
+      "source": "The Jerusalem Post",
+      "published": "2026-11-24T09:33:01+00:00",
+      "description": "Iran warns Bahrain, Kuwait over support for US military operations &nbsp;&nbsp; The Jerusalem Post"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMEU1a2p6eUVTTjBnc2tJT2gyNUZaLVZlSC1fZVFUVG1KeXQwRjdtY3NPdUZKczFNVFlKMWFIakN0U3YyMnBGdDVJN0h3VXhLWVR1dENIZGpWUXBFRWtmVkhfUXRKNElhclJnNzZ1Y3JCSnk0NEhhUlZodUhsdUY3NEVFSzFvbWlN0gGLAUFVX3lxTFBmQTNsSFVrblo3OUpNMUFLMEpRUDJPbU1vU1NCb1FNc2NkUXhqaWtxUExaSTkzekdlY2M3UEhpSWxRaU5tRlNFOTlTSmtQeE9JSEZudU1XZjZQcmg3UE5ZbU9KVHBiZWp2V2FvUG5uakFSaUtiT3hpVTBSbk5jUmRpVXprSkEzT05meFE?oc=5",
+      "title": "'Society Is Being Crushed': An Iranian Artist Reflects On Life In Tehran - Radio Free Europe/Radio Liberty",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMEU1a2p6eUVTTjBnc2tJT2gyNUZaLVZlSC1fZVFUVG1KeXQwRjdtY3NPdUZKczFNVFlKMWFIakN0U3YyMnBGdDVJN0h3VXhLWVR1dENIZGpWUXBFRWtmVkhfUXRKNElhclJnNzZ1Y3JCSnk0NEhhUlZodUhsdUY3NEVFSzFvbWlN0gGLAUFVX3lxTFBmQTNsSFVrblo3OUpNMUFLMEpRUDJPbU1vU1NCb1FNc2NkUXhqaWtxUExaSTkzekdlY2M3UEhpSWxRaU5tRlNFOTlTSmtQeE9JSEZudU1XZjZQcmg3UE5ZbU9KVHBiZWp2V2FvUG5uakFSaUtiT3hpVTBSbk5jUmRpVXprSkEzT05meFE?oc=5",
+      "source": "Radio Free Europe/Radio Liberty",
+      "published": "2026-11-24T08:55:48+00:00",
+      "description": "'Society Is Being Crushed': An Iranian Artist Reflects On Life In Tehran &nbsp;&nbsp; Radio Free Europe/Radio Liberty"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4zMDBYUEJ0amdDX3BYOVMtRWpwVHl6QnphOXpnTjVHR2pqUWZFZjZMS3QyM1drNWtLZGhEcmhjR21ISWJoREVWMi1OQ3h6QzRxWkE?oc=5",
+      "title": "Iran’s rial falls past 2.85 million to the dollar - Iran International",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4zMDBYUEJ0amdDX3BYOVMtRWpwVHl6QnphOXpnTjVHR2pqUWZFZjZMS3QyM1drNWtLZGhEcmhjR21ISWJoREVWMi1OQ3h6QzRxWkE?oc=5",
+      "source": "Iran International",
+      "published": "2026-11-24T08:37:45+00:00",
+      "description": "Iran’s rial falls past 2.85 million to the dollar &nbsp;&nbsp; Iran International"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPN2E5VGQyLWhPM0hmRlJxY2M1dDVpelg0M0NxWHF6ZDd6RVVmemFpejhPeFQtVld4NjJrdmtCV1ZHRHViYTlZeUhHNnkyeDRvc3o3ZzRSem1DelJxenlRaDg5STJ5UExRWXdJNTE1RVNabE1Sb0VoNzU4ZVJfU3NfSjU0a1BRVEJudHE1VGptTEdwNnI3R1pvbUhVQlJiYXczSW9FZl9Ud2lBMkd6WmE4ckN6c2NlSFZYY2VFcDNSZDdZZ9IB1AFBVV95cUxPSGFSYm42TDNWaXNZNzBNR1pYbDNzRzhPMlpTOURZeG1RQURZd2RiVmVMUU9DOUlKM2lITm1LY0ZEZlpNZU5NelFnWGI1WVEzcklXQXE4cnJCU1JIb3kxLXdGd2h1VmJiakJhSVEwZFhNenJkbUlPbmJfbEFSVkQzVlhZVHU1aXMyRkc0aUkyMHE5dGRmOHh2M1k2Mmd3SFpWUVlVaVNfU2VsUmRrcHdMUjNyTERyRlV1Z2ltejBkZDh1SmM5cGhuYTZXMjBuUjlJR1FkUQ?oc=5",
+      "title": "Brent drops to $88, WTI at $79: Why oil is sliding despite Iran’s tanker attacks - Gulf News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPN2E5VGQyLWhPM0hmRlJxY2M1dDVpelg0M0NxWHF6ZDd6RVVmemFpejhPeFQtVld4NjJrdmtCV1ZHRHViYTlZeUhHNnkyeDRvc3o3ZzRSem1DelJxenlRaDg5STJ5UExRWXdJNTE1RVNabE1Sb0VoNzU4ZVJfU3NfSjU0a1BRVEJudHE1VGptTEdwNnI3R1pvbUhVQlJiYXczSW9FZl9Ud2lBMkd6WmE4ckN6c2NlSFZYY2VFcDNSZDdZZ9IB1AFBVV95cUxPSGFSYm42TDNWaXNZNzBNR1pYbDNzRzhPMlpTOURZeG1RQURZd2RiVmVMUU9DOUlKM2lITm1LY0ZEZlpNZU5NelFnWGI1WVEzcklXQXE4cnJCU1JIb3kxLXdGd2h1VmJiakJhSVEwZFhNenJkbUlPbmJfbEFSVkQzVlhZVHU1aXMyRkc0aUkyMHE5dGRmOHh2M1k2Mmd3SFpWUVlVaVNfU2VsUmRrcHdMUjNyTERyRlV1Z2ltejBkZDh1SmM5cGhuYTZXMjBuUjlJR1FkUQ?oc=5",
+      "source": "Gulf News",
+      "published": "2026-11-24T06:22:44+00:00",
+      "description": "Brent drops to $88, WTI at $79: Why oil is sliding despite Iran’s tanker attacks &nbsp;&nbsp; Gulf News"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPc3Z2LW9tZzBudVhzNFdSM3pvSjBYNzVxV2E4alVwNjhjV01Kcm8taVU5Y2NLSndLU29IcE5hR0p1TVB3am1wdG96QlM1T2hLNjNhaVVWbFNONVVEQzJwcFBNQUxndDRCb1pUcllxOU41UExIM3dUUm5GTmJoX3NWTEZleC1fMUhrcjM1bWo0eFZ4b3V3NHlNeC1FdGhzYS0zZXJ3Tkp6TGdBQm9NQmJXVVZCMGJ3UVhwY1NMRXl5LXlVelIyVU12V3RRbkNMT1NnMnZRMHBQYUE1d1BkeWp6WGZndjNXemZqTHkwV2EzRFMtR2tpclZXU0xhQQ?oc=5",
+      "title": "Trump suggests Iran strikes will resume next year if talks fail - Decatur Daily",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPc3Z2LW9tZzBudVhzNFdSM3pvSjBYNzVxV2E4alVwNjhjV01Kcm8taVU5Y2NLSndLU29IcE5hR0p1TVB3am1wdG96QlM1T2hLNjNhaVVWbFNONVVEQzJwcFBNQUxndDRCb1pUcllxOU41UExIM3dUUm5GTmJoX3NWTEZleC1fMUhrcjM1bWo0eFZ4b3V3NHlNeC1FdGhzYS0zZXJ3Tkp6TGdBQm9NQmJXVVZCMGJ3UVhwY1NMRXl5LXlVelIyVU12V3RRbkNMT1NnMnZRMHBQYUE1d1BkeWp6WGZndjNXemZqTHkwV2EzRFMtR2tpclZXU0xhQQ?oc=5",
+      "source": "Decatur Daily",
+      "published": "2026-11-24T06:00:00+00:00",
+      "description": "Trump suggests Iran strikes will resume next year if talks fail &nbsp;&nbsp; Decatur Daily"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNOF9CTnc3ZlRyQVdRamwyQVRHQlo2XzdoTzVud1pFNjJnTWxkSjZsRHRVcGNuMlVqN1NVbVB1MW1IV0JydFRBdmEzLTlaNW1vSXRSdGlDVC1QSW1JTFVDUzNlQ2s0eGtZNmNjNjlRYVFCSFRuQ0dueWFlUDkycWVqRjJGQlpfVkx2RWNudEFtUHBlakQ0LXhNYURkV24zUVNlRHZSM2ZaZlhLUVd0QmZ4Q20zWWpTQQ?oc=5",
+      "title": "Oil Extends Decline on Signs of Continuing US-Iran Diplomacy - Energy Connects",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNOF9CTnc3ZlRyQVdRamwyQVRHQlo2XzdoTzVud1pFNjJnTWxkSjZsRHRVcGNuMlVqN1NVbVB1MW1IV0JydFRBdmEzLTlaNW1vSXRSdGlDVC1QSW1JTFVDUzNlQ2s0eGtZNmNjNjlRYVFCSFRuQ0dueWFlUDkycWVqRjJGQlpfVkx2RWNudEFtUHBlakQ0LXhNYURkV24zUVNlRHZSM2ZaZlhLUVd0QmZ4Q20zWWpTQQ?oc=5",
+      "source": "Energy Connects",
+      "published": "2026-11-24T05:46:03+00:00",
+      "description": "Oil Extends Decline on Signs of Continuing US-Iran Diplomacy &nbsp;&nbsp; Energy Connects"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9aSnVNOTQ5Ml81YUdQSkxzbkI0bVF5OUV4RndqcjVrWkM1SGw4V0tZOVJEbGRmTGgybGxfTUwzRVNISTRFUmxkX0cydWlPcVRCN2dIWFFfaklmbk40ZnptNVMxUURLdWFoRUtUNkNR?oc=5",
+      "title": "Iran says three tankers hit mines in Hormuz despite U.S. escort, as Treasury widens sanctions - CNBC",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9aSnVNOTQ5Ml81YUdQSkxzbkI0bVF5OUV4RndqcjVrWkM1SGw4V0tZOVJEbGRmTGgybGxfTUwzRVNISTRFUmxkX0cydWlPcVRCN2dIWFFfaklmbk40ZnptNVMxUURLdWFoRUtUNkNR?oc=5",
+      "source": "CNBC",
+      "published": "2026-11-24T05:05:08+00:00",
+      "description": "Iran says three tankers hit mines in Hormuz despite U.S. escort, as Treasury widens sanctions &nbsp;&nbsp; CNBC"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTDlDRW0teFE3cHprZUY1clo0bjRCck5QZUJNY3hERFpsS1ZBWEJhRnV5ZWUxb1NYQzhVcWtDalBuV0ZzVDRvM193MG80bkRWUG1SWmVnRGVaQ1pCeGtUT2JkMWtram03WGhoWlQwRlBjbXNIa2JMTTE5YVdNUTRTWnRRbG0tZ0RqTDRWOFpyWnYtTmVZUTQ5Z1pkOGg?oc=5",
+      "title": "The World Is Underpricing the Risk of More War in Iran - Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTDlDRW0teFE3cHprZUY1clo0bjRCck5QZUJNY3hERFpsS1ZBWEJhRnV5ZWUxb1NYQzhVcWtDalBuV0ZzVDRvM193MG80bkRWUG1SWmVnRGVaQ1pCeGtUT2JkMWtram03WGhoWlQwRlBjbXNIa2JMTTE5YVdNUTRTWnRRbG0tZ0RqTDRWOFpyWnYtTmVZUTQ5Z1pkOGg?oc=5",
+      "source": "Bloomberg",
+      "published": "2026-11-24T05:00:00+00:00",
+      "description": "The World Is Underpricing the Risk of More War in Iran &nbsp;&nbsp; Bloomberg"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1XWExsME9tRlJLdnpnRmdYX2gwVmVoa2p6eEVYWEtTaHVPaDNJTGw3SVp5WS1vQlNaX2xHb2tWeE5LTW9IVjRyVDlzWFFNRzZOUWc3MWtjSFczM3JpTkk3TGdTYzc4YzFmN0E?oc=5",
+      "title": "IRGC: Three oil tankers hit mines, caught fire while transiting Hormuz with US support - report - The Jerusalem Post",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1XWExsME9tRlJLdnpnRmdYX2gwVmVoa2p6eEVYWEtTaHVPaDNJTGw3SVp5WS1vQlNaX2xHb2tWeE5LTW9IVjRyVDlzWFFNRzZOUWc3MWtjSFczM3JpTkk3TGdTYzc4YzFmN0E?oc=5",
+      "source": "The Jerusalem Post",
+      "published": "2026-11-24T04:10:16+00:00",
+      "description": "IRGC: Three oil tankers hit mines, caught fire while transiting Hormuz with US support - report &nbsp;&nbsp; The Jerusalem Post"
     },
     {
       "id": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNR0tmZk8zbjBPeHY2UFFLREhFU1hZeFR1NUFWbUZEN3lDMFhteGJHRjlSX1hXUWdzX3pZYXlmamVkdTlOSlR3VFc0QjVwUW5lQU9Qc1Zjelp0M3JWUGFfRHE1Zl9JNWRfTkFLOUh4XzlWWFpZZ1dsWXVCMS11aEhiS0JZMXZuUmRrR3Y1SVphMjdLRVgydk1jR19tZU96eEd1RkxQRA?oc=5",
       "title": "Trump Leans Toward New Year Iran Strikes, Dares Tehran to Test U.S. Naval Blockade - The SOFX Report",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNR0tmZk8zbjBPeHY2UFFLREhFU1hZeFR1NUFWbUZEN3lDMFhteGJHRjlSX1hXUWdzX3pZYXlmamVkdTlOSlR3VFc0QjVwUW5lQU9Qc1Zjelp0M3JWUGFfRHE1Zl9JNWRfTkFLOUh4XzlWWFpZZ1dsWXVCMS11aEhiS0JZMXZuUmRrR3Y1SVphMjdLRVgydk1jR19tZU96eEd1RkxQRA?oc=5",
       "source": "The SOFX Report",
-      "published": "2026-11-24T03:55:44+00:00",
+      "published": "2026-11-24T04:05:21+00:00",
       "description": "Trump Leans Toward New Year Iran Strikes, Dares Tehran to Test U.S. Naval Blockade &nbsp;&nbsp; The SOFX Report"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQd0VKNG41X05zSV9uTTEwNWJKVkJOMHU1WXpCa2kyN3lNcnBMVjVOREdKM1ZRMFZlYjExWlZwQzBDX1AxREZSTTVmaVhJYVBIeFFrMTFMRV9kUENna3dLcGR4S3FDOGlHNkdubVl0S0poSl9GYl8ySVJpejBKNWdsX1hPNUJUZw?oc=5",
+      "title": "Iran Update, November 23, 2026 - Institute for the Study of War",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQd0VKNG41X05zSV9uTTEwNWJKVkJOMHU1WXpCa2kyN3lNcnBMVjVOREdKM1ZRMFZlYjExWlZwQzBDX1AxREZSTTVmaVhJYVBIeFFrMTFMRV9kUENna3dLcGR4S3FDOGlHNkdubVl0S0poSl9GYl8ySVJpejBKNWdsX1hPNUJUZw?oc=5",
+      "source": "Institute for the Study of War",
+      "published": "2026-11-24T03:48:25+00:00",
+      "description": "Iran Update, November 23, 2026 &nbsp;&nbsp; Institute for the Study of War"
     },
     {
       "id": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5OcnBrS2wxY2NSVHpUMV9KT3lKV2ZFTkgtaFloT0xNRGxncmpnZXp1eTJPdUVhdm8zWXBoRmsxSEhzeERPRkFFb3BUMS1pYnR3Z3c?oc=5",
@@ -24,14 +320,6 @@
       "source": "Iran International",
       "published": "2026-11-24T03:00:43+00:00",
       "description": "Iraqi forces enter Iran-backed militia stronghold, but who holds power? &nbsp;&nbsp; Iran International"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNZ19GUkRqTmEycmVranF1Ni1GLURWUnpfcEZsTE5LdlFBbHd0eU1nSXhpU1k2M1ZKRF9qdmZSUnYxVFJpOG1zRmR2djVOUjJRSVpqSW83amMtNHdkUzBHQWJPQTRCbEVfbXZRYTMwdUpQYnZ1bHBmSWs1ampRNEdVNU5ZUnJEc0RyWXh0MzBObGFydXRSNmM5STc0SEs0R090YmdJT0xLUzd5Rk1KOGRiTGU5Tno3dnpCZUE?oc=5",
-      "title": "Netanyahu urges Trump to launch fresh strikes on Iran as political pressure mounts - The Business Standard",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNZ19GUkRqTmEycmVranF1Ni1GLURWUnpfcEZsTE5LdlFBbHd0eU1nSXhpU1k2M1ZKRF9qdmZSUnYxVFJpOG1zRmR2djVOUjJRSVpqSW83amMtNHdkUzBHQWJPQTRCbEVfbXZRYTMwdUpQYnZ1bHBmSWs1ampRNEdVNU5ZUnJEc0RyWXh0MzBObGFydXRSNmM5STc0SEs0R090YmdJT0xLUzd5Rk1KOGRiTGU5Tno3dnpCZUE?oc=5",
-      "source": "The Business Standard",
-      "published": "2026-11-24T02:15:12+00:00",
-      "description": "Netanyahu urges Trump to launch fresh strikes on Iran as political pressure mounts &nbsp;&nbsp; The Business Standard"
     },
     {
       "id": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0wNDdrZ0VfcGRVd2ZScTNhZ0VBWjVZeG9HWWNGWXhtN1pCQ0YyYVd2dkZlQlVFYkRYTzhHRld6UzlzOTFDUEhuUzlrbGJjZ2dvZzVQZjBZSXE?oc=5",
@@ -50,19 +338,19 @@
       "description": "US said investigating Iran as prime suspect in fresh cyberattacks on ships &nbsp;&nbsp; The Times of Israel"
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMingFBVV95cUxNdTVqRHVCelVPeW5pSEVHY2NRTVVFNUVLemNoM3M5a0N1MERHM2t6OEdOUGlSRVA5VW5wYzhuNVUzTlFYYzBXMmlIbmZ4bkNVT09ON280dld0WFBPbnJpaG1NODN0XzJZV1ZTRFcyR3hUZGZ3NW5Pc04zZ1JIaG5mR2hicHdTcGxuYTNhNE1LemwtclRGTllHQ04wcng4Zw?oc=5",
-      "title": "Oil Holds Decline on Signs of Continuing US-Iran Diplomacy - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNdTVqRHVCelVPeW5pSEVHY2NRTVVFNUVLemNoM3M5a0N1MERHM2t6OEdOUGlSRVA5VW5wYzhuNVUzTlFYYzBXMmlIbmZ4bkNVT09ON280dld0WFBPbnJpaG1NODN0XzJZV1ZTRFcyR3hUZGZ3NW5Pc04zZ1JIaG5mR2hicHdTcGxuYTNhNE1LemwtclRGTllHQ04wcng4Zw?oc=5",
-      "source": "Bloomberg.com",
-      "published": "2026-11-24T01:16:00+00:00",
-      "description": "Oil Holds Decline on Signs of Continuing US-Iran Diplomacy &nbsp;&nbsp; Bloomberg.com"
+      "id": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNS0o4MlpPZ3pWQloxX202ZWpva21rWVE5aVY3aURWZkJBZVg3Vko0aHdIWmp1eUZ2a3ZuckxnRlNzZGoxWm9BZG5Hd19GNTRLVHhyRmVlblh2OWhzeUZjNkJ1Smk4R2M4ZW9JXzFxanowelk5UkF3Tkg3azdnRDktZzcxbll4XzI2Y09kZmJJdXprd0hHRkM3a2lhamVRVWYyZ2I4Nm1ocWZkd3NrT25oX0djbkZGS2l5c0luX1BWbFZtd1JsY1QzeGxWbTRoaFEwZWFTUzBUU3VXYk9aZFc0X3FzZi1rVFJkOVl0NlB1SzVNeW5hWkNBSWpsR2EtaHJ2WGF6dTh3a05Qdw?oc=5",
+      "title": "Vance, Rubio meet with Qatari PM as uncertainty mounts over Trump’s intentions with Iran - The Tribune-Democrat",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNS0o4MlpPZ3pWQloxX202ZWpva21rWVE5aVY3aURWZkJBZVg3Vko0aHdIWmp1eUZ2a3ZuckxnRlNzZGoxWm9BZG5Hd19GNTRLVHhyRmVlblh2OWhzeUZjNkJ1Smk4R2M4ZW9JXzFxanowelk5UkF3Tkg3azdnRDktZzcxbll4XzI2Y09kZmJJdXprd0hHRkM3a2lhamVRVWYyZ2I4Nm1ocWZkd3NrT25oX0djbkZGS2l5c0luX1BWbFZtd1JsY1QzeGxWbTRoaFEwZWFTUzBUU3VXYk9aZFc0X3FzZi1rVFJkOVl0NlB1SzVNeW5hWkNBSWpsR2EtaHJ2WGF6dTh3a05Qdw?oc=5",
+      "source": "The Tribune-Democrat",
+      "published": "2026-11-24T01:27:00+00:00",
+      "description": "Vance, Rubio meet with Qatari PM as uncertainty mounts over Trump’s intentions with Iran &nbsp;&nbsp; The Tribune-Democrat"
     },
     {
       "id": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOaDNLV040WjYxakp4SFpkLW1ZSWo1M3dJOE8xV3pZTmRDZ0EwclVFclVWQlZpazJiRTJwNWtCdmZGeTZkcmJqQUlWbVo5ME92cFZXSUFFOUkyUmp3SldOYmR5S2xXZUVHR1lSZXgzSEFWdHhkTm5HeEM4NVEyc0djNFNrTW9GTFh5WW1j?oc=5",
       "title": "Exclusive | U.S. Eyes Iran as Possible Culprit in Dozens of New Cyberattacks Against Ships - WSJ",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOaDNLV040WjYxakp4SFpkLW1ZSWo1M3dJOE8xV3pZTmRDZ0EwclVFclVWQlZpazJiRTJwNWtCdmZGeTZkcmJqQUlWbVo5ME92cFZXSUFFOUkyUmp3SldOYmR5S2xXZUVHR1lSZXgzSEFWdHhkTm5HeEM4NVEyc0djNFNrTW9GTFh5WW1j?oc=5",
       "source": "WSJ",
-      "published": "2026-11-24T00:06:01+00:00",
+      "published": "2026-11-24T00:00:00+00:00",
       "description": "Exclusive | U.S. Eyes Iran as Possible Culprit in Dozens of New Cyberattacks Against Ships &nbsp;&nbsp; WSJ"
     },
     {
@@ -82,28 +370,20 @@
       "description": "Iran says US land blockade would be nearly impossible, denies supply shortages &nbsp;&nbsp; Iran International"
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNT19tejRadTZLTEVieTRxamNJdC1DTUlVVU1GcmMtZ3RTNERVRnVBTEMxZTVjTXN2ZWJKajVqdjV2UGVxNWozNFRKaUxXc0JFX1NKVWdwMW95UV9Jc2hsbkZwSFZGNlFDU2NBajlYcXJ6MHRuTGhHZHlxbzN1YW91OTM4QVNnVm4wNWxZaEFLQ3Ftd1A0eEZSMlczd1YwRUlYcWVpanVrQUg2bXYwWEtJZ3owZTZYY0h1UHNEWFcwM28yNW5xNTlMMmdDWmV2LXJZdVBLQkt2TEw?oc=5",
+      "title": "US targets Iran's alleged 'shadow banking' network with new sanctions - Le Monde.fr",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNT19tejRadTZLTEVieTRxamNJdC1DTUlVVU1GcmMtZ3RTNERVRnVBTEMxZTVjTXN2ZWJKajVqdjV2UGVxNWozNFRKaUxXc0JFX1NKVWdwMW95UV9Jc2hsbkZwSFZGNlFDU2NBajlYcXJ6MHRuTGhHZHlxbzN1YW91OTM4QVNnVm4wNWxZaEFLQ3Ftd1A0eEZSMlczd1YwRUlYcWVpanVrQUg2bXYwWEtJZ3owZTZYY0h1UHNEWFcwM28yNW5xNTlMMmdDWmV2LXJZdVBLQkt2TEw?oc=5",
+      "source": "Le Monde.fr",
+      "published": "2026-11-23T23:31:03+00:00",
+      "description": "US targets Iran's alleged 'shadow banking' network with new sanctions &nbsp;&nbsp; Le Monde.fr"
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA4X2c1bEczMDZZdloxbk44ZDlFdGQtaUlLejV1c05RQkRBb3ZNeDI4X3RlOTdyQW4xbkE0MDd4MnJ6ck00bS13Q2lYQlBqN3RhazdXMkFR?oc=5",
       "title": "Netanyahu pushes Iran strike as IDF sees no urgency and US officials suspect a political motive - Ynetnews",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA4X2c1bEczMDZZdloxbk44ZDlFdGQtaUlLejV1c05RQkRBb3ZNeDI4X3RlOTdyQW4xbkE0MDd4MnJ6ck00bS13Q2lYQlBqN3RhazdXMkFR?oc=5",
       "source": "Ynetnews",
       "published": "2026-11-23T23:15:21+00:00",
       "description": "Netanyahu pushes Iran strike as IDF sees no urgency and US officials suspect a political motive &nbsp;&nbsp; Ynetnews"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1XWExsME9tRlJLdnpnRmdYX2gwVmVoa2p6eEVYWEtTaHVPaDNJTGw3SVp5WS1vQlNaX2xHb2tWeE5LTW9IVjRyVDlzWFFNRzZOUWc3MWtjSFczM3JpTkk3TGdTYzc4YzFmN0E?oc=5",
-      "title": "IRGC: Three oil tankers hit mines, caught fire while transiting Hormuz with US support - report - The Jerusalem Post",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1XWExsME9tRlJLdnpnRmdYX2gwVmVoa2p6eEVYWEtTaHVPaDNJTGw3SVp5WS1vQlNaX2xHb2tWeE5LTW9IVjRyVDlzWFFNRzZOUWc3MWtjSFczM3JpTkk3TGdTYzc4YzFmN0E?oc=5",
-      "source": "The Jerusalem Post",
-      "published": "2026-11-23T22:23:40+00:00",
-      "description": "IRGC: Three oil tankers hit mines, caught fire while transiting Hormuz with US support - report &nbsp;&nbsp; The Jerusalem Post"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp5UjZPOG9MaFE0SmZ5UndIejdacWRYT3hGVHZiNVQ1a1lOa0tUZVdjRm1rVDZkMWRPTWd2R0JLamZfYm1lcEREbE12ajRCNTZSdERlMFpObDVFSkowV2h3THRkdlFoMUxR?oc=5",
-      "title": "Live Updates: Iran says it will use all means to end U.S. blockade as Trump plays down escalating attacks - CBS News",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp5UjZPOG9MaFE0SmZ5UndIejdacWRYT3hGVHZiNVQ1a1lOa0tUZVdjRm1rVDZkMWRPTWd2R0JLamZfYm1lcEREbE12ajRCNTZSdERlMFpObDVFSkowV2h3THRkdlFoMUxR?oc=5",
-      "source": "CBS News",
-      "published": "2026-11-23T22:19:00+00:00",
-      "description": "Live Updates: Iran says it will use all means to end U.S. blockade as Trump plays down escalating attacks &nbsp;&nbsp; CBS News"
     },
     {
       "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNMmtmQXp4TVJzT1VHd3ktNUNVRVBCV0JweUhtSlhuaHZ4RVJNSExNT2k1YVV4VmkyaTRISFhYb29aMnpMMUdCS3NJei04dndMSmVyU1Q0ZmtIWEszaDVGakJpeXh4N0RxeWJDVEVKdmxLOFV2blpuU3lILUQ3V2VnMjJObmpUSFk?oc=5",
@@ -138,20 +418,20 @@
       "description": "Oil Falls as Trump Signals Iran Talks &nbsp;&nbsp; Rigzone"
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE42RDA5aFdocmRzV29vY2laRTYxVF85c2lyd19BVl9QYnZ4d1RqWUo0QzNEYWROT19JakF6Y1E1MTNFTW1tOU03VzZZcVFUaTNhZDBwQU9n?oc=5",
+      "title": "Iran responds to Trump’s warning, vows to ‘use all means’ to counter US aggression - Fox News",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE42RDA5aFdocmRzV29vY2laRTYxVF85c2lyd19BVl9QYnZ4d1RqWUo0QzNEYWROT19JakF6Y1E1MTNFTW1tOU03VzZZcVFUaTNhZDBwQU9n?oc=5",
+      "source": "Fox News",
+      "published": "2026-11-23T21:09:46+00:00",
+      "description": "Iran responds to Trump’s warning, vows to ‘use all means’ to counter US aggression &nbsp;&nbsp; Fox News"
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMiogJBVV95cUxOMTRYYlhtaWZRN2lVbVctNWwwemxFd2dkWkptWGswSEwybTVmbG5ubmpWRG9sZHR3aEdfa2prVGhKdkxOSzZUNGpPVm1QQ0tDSXF0WlNubFNwQVM0WE5Tc1hlaktuSV9HVjlXNVgxOHBKR1NSNjNlX1FHTVpSQjFIal92N0ZUUVZxS3dfaDkybUxaLXByajFQakVoeTliSVpBanhNZEdjeGU2S053UzE5Szd5elBhQU8tMUVFYk5CR09sdF9qZC16ZVYycVpPQlVHbTBJaVRJUHM4c2JBa05KUWlFSWRKUzFoRmo2QnZiRm1yb3RvSTFJZVd3aVY5NGNEc0tDS1dGcXdYdTJPdEVUeXhXMTd5aFVQTmZQQzR3OTNaQQ?oc=5",
-      "title": "Analysis • Netanyahu points to Iran's chemical weapons to push for war and stay in power - Haaretz",
+      "title": "Analysis • Netanyahu's new pretext for war: Iran's chemical weapons program - Haaretz",
       "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxOMTRYYlhtaWZRN2lVbVctNWwwemxFd2dkWkptWGswSEwybTVmbG5ubmpWRG9sZHR3aEdfa2prVGhKdkxOSzZUNGpPVm1QQ0tDSXF0WlNubFNwQVM0WE5Tc1hlaktuSV9HVjlXNVgxOHBKR1NSNjNlX1FHTVpSQjFIal92N0ZUUVZxS3dfaDkybUxaLXByajFQakVoeTliSVpBanhNZEdjeGU2S053UzE5Szd5elBhQU8tMUVFYk5CR09sdF9qZC16ZVYycVpPQlVHbTBJaVRJUHM4c2JBa05KUWlFSWRKUzFoRmo2QnZiRm1yb3RvSTFJZVd3aVY5NGNEc0tDS1dGcXdYdTJPdEVUeXhXMTd5aFVQTmZQQzR3OTNaQQ?oc=5",
       "source": "Haaretz",
       "published": "2026-11-23T20:28:00+00:00",
-      "description": "Analysis • Netanyahu points to Iran's chemical weapons to push for war and stay in power &nbsp;&nbsp; Haaretz"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaGRhMGVxN1o4aUE3YjlUUF9ET193bklfeURUVlNFU3M1clFKOURVdTc3M1ZxOVN5V1pMQlNnZjBEaVQwQVUtdkdsR29OYVVBRC15NGhJNWs5d3JwSU9ROTNYTmk2REtyTWNlaVQ2N2VjWi1zS0FGekw2bGlmNGxJcEs0V3pzVFdLQnQzaEQzV2pkSVFNSXFPbXduQ0NwSDRSQkM1MEF3NHlLaU1xY2VEQmdOQUNzMk1jM1FMOE5EbWs?oc=5",
-      "title": "Iran claims missile and drone attack on U.S. bases - 11Alive.com",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaGRhMGVxN1o4aUE3YjlUUF9ET193bklfeURUVlNFU3M1clFKOURVdTc3M1ZxOVN5V1pMQlNnZjBEaVQwQVUtdkdsR29OYVVBRC15NGhJNWs5d3JwSU9ROTNYTmk2REtyTWNlaVQ2N2VjWi1zS0FGekw2bGlmNGxJcEs0V3pzVFdLQnQzaEQzV2pkSVFNSXFPbXduQ0NwSDRSQkM1MEF3NHlLaU1xY2VEQmdOQUNzMk1jM1FMOE5EbWs?oc=5",
-      "source": "11Alive.com",
-      "published": "2026-11-23T20:23:00+00:00",
-      "description": "Iran claims missile and drone attack on U.S. bases &nbsp;&nbsp; 11Alive.com"
+      "description": "Analysis • Netanyahu's new pretext for war: Iran's chemical weapons program &nbsp;&nbsp; Haaretz"
     },
     {
       "id": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOcXpMZld1MXhrS0RxTGYxLXlDUF94RXBTS2Y5WllRWi1nYXlWc2NudVp6cG9EQUUxblZ1dkdCNG9lN1JHUl9BSnR2cTc3QU9zU0VhUFU3Z1JRV2ZsTUo0NzFtYzFDZjlVTzFGZEJhWHpnUnFUMEszb3RnTVNUa3VUcllhQUdvTW9kTTlrMVk1WkNXSlZKNU1zZDkxNWotR2N2MlVtZWpuWGhsMzkzRGROdE0wemJDWDZtaTc2cmNfZkRMRHZXOVZTajRJNzFPVTVoWUdhVTJGS0dOZFI3STBuVEFnRVZoWXgy?oc=5",
@@ -186,30 +466,6 @@
       "description": "Ukrainian naval drones strike a new Russian warship in Libya, and other Mideast news &nbsp;&nbsp; Boston Herald"
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObmtRUDdfTnJma1dTMV9ZNVlTemswSC1JeHZqei1LUnBTVS1FdTlTaU53eTVLN1RUeXFTZHRJUkdsZlFidmF2RVhLaWtLalVGODBJTUllc2R3bFdPYTZ5c21wekt3OTViZEFhSElIUW9QQlp5VVhQbEd1dTVkYWtxVlN6ZVM0VVBCRWVKdzVJLXZYdWQ2OTQzRkliS0dscUlNVVhBWHU0T19Td1NsZ0prZEl6Q3BBQQ?oc=5",
-      "title": "Senate GOP leaders signal openness to cutting off Iran war funding as shutdown inches closer - The Washington Post",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObmtRUDdfTnJma1dTMV9ZNVlTemswSC1JeHZqei1LUnBTVS1FdTlTaU53eTVLN1RUeXFTZHRJUkdsZlFidmF2RVhLaWtLalVGODBJTUllc2R3bFdPYTZ5c21wekt3OTViZEFhSElIUW9QQlp5VVhQbEd1dTVkYWtxVlN6ZVM0VVBCRWVKdzVJLXZYdWQ2OTQzRkliS0dscUlNVVhBWHU0T19Td1NsZ0prZEl6Q3BBQQ?oc=5",
-      "source": "The Washington Post",
-      "published": "2026-11-23T19:00:01+00:00",
-      "description": "Senate GOP leaders signal openness to cutting off Iran war funding as shutdown inches closer &nbsp;&nbsp; The Washington Post"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPbHNMbC01RWlyYW5WemUwb3VjNVVTZnQzRS1LdDh5ckVXMXVZUk1EM2Y0Y2NCLXJWa0p3SWMybmN4ellvSVlDOUdWUEF0U0p2S2paTG14dG00czdpWEgwLU1qTnlzdUFMUURfNkQ3Rk5RaGtCR3Jha1ZNQjIwSDhNeUQ3cjNUdU5VOV9MV3JkV1VqUFUzUThEeTBYVFJPVVYteS1yVHFBMHU2allqdmk5emZFQkhlOFhieWhsRDlQX3RsZGxQMzFWTHJTYmVNWVVtV2syN3BpdmVFZGdaUUtLVEZyN1NKRldDUm54dQ?oc=5",
-      "title": "Trump suggests Iran strikes will resume next year if talks fail - Times West Virginian",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPbHNMbC01RWlyYW5WemUwb3VjNVVTZnQzRS1LdDh5ckVXMXVZUk1EM2Y0Y2NCLXJWa0p3SWMybmN4ellvSVlDOUdWUEF0U0p2S2paTG14dG00czdpWEgwLU1qTnlzdUFMUURfNkQ3Rk5RaGtCR3Jha1ZNQjIwSDhNeUQ3cjNUdU5VOV9MV3JkV1VqUFUzUThEeTBYVFJPVVYteS1yVHFBMHU2allqdmk5emZFQkhlOFhieWhsRDlQX3RsZGxQMzFWTHJTYmVNWVVtV2syN3BpdmVFZGdaUUtLVEZyN1NKRldDUm54dQ?oc=5",
-      "source": "Times West Virginian",
-      "published": "2026-11-23T19:00:00+00:00",
-      "description": "Trump suggests Iran strikes will resume next year if talks fail &nbsp;&nbsp; Times West Virginian"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOTmZFWmc5YXF6STNWM3VCUWlPOF8xbC1BOWZPTTM1Q20wY3BvRmdQdE5kNW1Idy03OUpDV1JCNGRLS2Ywblc0MGI1QWZWaGx5RW5LTzdkUFBtRjdvVUUzdjRyeVZvUnh3d0RzdTVnU0VBdDF2RlhmWmdFNDVoWjFFRS1NWWE?oc=5",
-      "title": "Netanyahu Wants to Attack Iran. Does That Serve Israel or Him? - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOTmZFWmc5YXF6STNWM3VCUWlPOF8xbC1BOWZPTTM1Q20wY3BvRmdQdE5kNW1Idy03OUpDV1JCNGRLS2Ywblc0MGI1QWZWaGx5RW5LTzdkUFBtRjdvVUUzdjRyeVZvUnh3d0RzdTVnU0VBdDF2RlhmWmdFNDVoWjFFRS1NWWE?oc=5",
-      "source": "The New York Times",
-      "published": "2026-11-23T18:54:42+00:00",
-      "description": "Netanyahu Wants to Attack Iran. Does That Serve Israel or Him? &nbsp;&nbsp; The New York Times"
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQldMRm82QldpSzdqVFZhU1lzZmJsdVFTQlc4OEhXSFEtcEtXa3UyUXFhcVFKZ0c1TzNvMFpsa0s1YmFtTWIwNUZGRFRub0NpMzdJQ2NMMFlCcFc3NGdtbFZ2ZDJWMll1Yy1DZi1ITVdvb194MzItNzB3OFFhMExiS3J6cjdvMXFoTlRUai16S2IzNXZjbXUxSzVDdDVTMjh6bTNJMHkyNmd4d9IBrwFBVV95cUxPNzVPY2VfaXRDZkt0Q2M2NUktdzNXcGdZV054VkR5T09rS0x3aUlucGtjelVxbHpsYjd0RGNtbGFMOENEZk1remV2MUwyOGFIX2FqMGFKY20xSklVYU8zZmxDRzlJLWwxNkpRWk02TzdDalNlY1hCcnc2NEV4V3lBU2JNNkM2SHBJc082bm5lNWowcnBUR01LYTF5ZzhyN2lsTS1NOUllLXc2X0NJSGlF?oc=5",
       "title": "Israel’s leading contender for prime minister clashes with Netanyahu over Iran strikes - Fox News",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQldMRm82QldpSzdqVFZhU1lzZmJsdVFTQlc4OEhXSFEtcEtXa3UyUXFhcVFKZ0c1TzNvMFpsa0s1YmFtTWIwNUZGRFRub0NpMzdJQ2NMMFlCcFc3NGdtbFZ2ZDJWMll1Yy1DZi1ITVdvb194MzItNzB3OFFhMExiS3J6cjdvMXFoTlRUai16S2IzNXZjbXUxSzVDdDVTMjh6bTNJMHkyNmd4d9IBrwFBVV95cUxPNzVPY2VfaXRDZkt0Q2M2NUktdzNXcGdZV054VkR5T09rS0x3aUlucGtjelVxbHpsYjd0RGNtbGFMOENEZk1remV2MUwyOGFIX2FqMGFKY20xSklVYU8zZmxDRzlJLWwxNkpRWk02TzdDalNlY1hCcnc2NEV4V3lBU2JNNkM2SHBJc082bm5lNWowcnBUR01LYTF5ZzhyN2lsTS1NOUllLXc2X0NJSGlF?oc=5",
@@ -222,264 +478,8 @@
       "title": "Eisenkot clashes with Netanyahu over Iran strikes, sees no 'immediate threat' - Al-Monitor",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMHVhNVp2eVhpSk0xcmk3QTEtbW0wX0g2T0xTemFpcF9ESzFRQkRZZEd2Mzhvc0thaDI5enozQVkzTVZHUXBvZlktTmRqZDl5aTBCeGRJQ19GaDJ0T0tJN1VPT3Z5Ul80LThwSjdpVXBkSFkzSmlKSFRTZGZBX3F3emhBcEF3N2xHQnFOTlpUMUsxTkVWYjhvS3BiN0V3SXdvQm9ybFFUUEdzXzV1aUs3dHB3VUs?oc=5",
       "source": "Al-Monitor",
-      "published": "2026-11-23T18:46:10+00:00",
+      "published": "2026-11-23T18:47:17+00:00",
       "description": "Eisenkot clashes with Netanyahu over Iran strikes, sees no 'immediate threat' &nbsp;&nbsp; Al-Monitor"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBubGJVLS1nMGxHd1k3dUtmdVVZVUZVX2JKVmgxNzc4b3N1OTI2c2ZDOXJieVhHOUJtTW12MDM1UHdab3Fycm44dzIya29qTm1lNXc?oc=5",
-      "title": "US identifies nearly $15 billion in potential Iranian shadow banking activity - Iran International",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBubGJVLS1nMGxHd1k3dUtmdVVZVUZVX2JKVmgxNzc4b3N1OTI2c2ZDOXJieVhHOUJtTW12MDM1UHdab3Fycm44dzIya29qTm1lNXc?oc=5",
-      "source": "Iran International",
-      "published": "2026-11-23T18:38:36+00:00",
-      "description": "US identifies nearly $15 billion in potential Iranian shadow banking activity &nbsp;&nbsp; Iran International"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNOE13VEV3UnhWVXdMQTRwbzRoNlhIRjdsOVZLaVRJOGxaQW5DRDlNNmktVU5KaG0tU0taU1Mzdl9RbXY3eGVzT3hyTWU0QnlRek1TbjVobjdNbjVEUEVHRFkzZnY4bV9LZlNzTzl5ajlSYXFnaXpLNEl0Z0VkQ1psZUJOV3AwanM?oc=5",
-      "title": "Iran vows to counter US 'aggression' as Trump hints at new strikes - Yahoo",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNOE13VEV3UnhWVXdMQTRwbzRoNlhIRjdsOVZLaVRJOGxaQW5DRDlNNmktVU5KaG0tU0taU1Mzdl9RbXY3eGVzT3hyTWU0QnlRek1TbjVobjdNbjVEUEVHRFkzZnY4bV9LZlNzTzl5ajlSYXFnaXpLNEl0Z0VkQ1psZUJOV3AwanM?oc=5",
-      "source": "Yahoo",
-      "published": "2026-11-23T18:07:59+00:00",
-      "description": "Iran vows to counter US 'aggression' as Trump hints at new strikes &nbsp;&nbsp; Yahoo"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPM3FoUWYzMXZUdVRCOTBGc1QzWGVWQ2FrQVlhZGg0cXNJa3NKTVFwMmwySEhHNkMzVXBJU250LWx2aXc5NG1Kb2JxNXdnQ1M1TDNnc1FKRTA0aWRwVFA2SVVTTGJBZ29rSGZhZ2ZjRmNMejd5ZVhYSkpaMExYUGdYa205dWlnX1BxU2FrQkNCZWx0eVNWdWRWVDFBOTFKLXFQczZoajNTZVQ5VHM4cFZaYg?oc=5",
-      "title": "UK agency logs over 30 Iranian attacks in Hormuz in October, a wartime high - Al-Monitor",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPM3FoUWYzMXZUdVRCOTBGc1QzWGVWQ2FrQVlhZGg0cXNJa3NKTVFwMmwySEhHNkMzVXBJU250LWx2aXc5NG1Kb2JxNXdnQ1M1TDNnc1FKRTA0aWRwVFA2SVVTTGJBZ29rSGZhZ2ZjRmNMejd5ZVhYSkpaMExYUGdYa205dWlnX1BxU2FrQkNCZWx0eVNWdWRWVDFBOTFKLXFQczZoajNTZVQ5VHM4cFZaYg?oc=5",
-      "source": "Al-Monitor",
-      "published": "2026-11-23T17:26:44+00:00",
-      "description": "UK agency logs over 30 Iranian attacks in Hormuz in October, a wartime high &nbsp;&nbsp; Al-Monitor"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMipwJBVV95cUxOcl92Y29hNERhYVpFcUpMTzVwQllhZ3lIZHFWdVlpY2ZxWkhuWHl3QlhNMUtpRkdPRDk4cVMyaDlMcG5WaFp0STNyalpHeEFPSmVQbmpNYVNSM1JFYzBUWTVGX1RSWnplMzduWHdTclZSeG12MldZTGJGVlYyUElZbmdoRlpncVhkU2RSWTBXX0t6SnUzUlk5dTZSTUt4SkVVTXhuMTFQU0lzZkZNM09DcXdhazJWMW1zZG1yeGw2b1E2YVhMaExqcU9LeWxtRzBVY1FjQnhoclI4T2k4YXVXdTNQSldndUpsRmJIZy1WQUx1VWRVSU1HTUpiMVFBWW91M2xMMVRteXBjNkxjdjdYUzdzWDhyYTcxNS02Ulk0SG0wYUN2RzdB?oc=5",
-      "title": "Mossad Analysts Object to Immediate Strike on Iran as Chief Pushes for Netanyahu-Backed Attack - Haaretz",
-      "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxOcl92Y29hNERhYVpFcUpMTzVwQllhZ3lIZHFWdVlpY2ZxWkhuWHl3QlhNMUtpRkdPRDk4cVMyaDlMcG5WaFp0STNyalpHeEFPSmVQbmpNYVNSM1JFYzBUWTVGX1RSWnplMzduWHdTclZSeG12MldZTGJGVlYyUElZbmdoRlpncVhkU2RSWTBXX0t6SnUzUlk5dTZSTUt4SkVVTXhuMTFQU0lzZkZNM09DcXdhazJWMW1zZG1yeGw2b1E2YVhMaExqcU9LeWxtRzBVY1FjQnhoclI4T2k4YXVXdTNQSldndUpsRmJIZy1WQUx1VWRVSU1HTUpiMVFBWW91M2xMMVRteXBjNkxjdjdYUzdzWDhyYTcxNS02Ulk0SG0wYUN2RzdB?oc=5",
-      "source": "Haaretz",
-      "published": "2026-11-23T17:13:00+00:00",
-      "description": "Mossad Analysts Object to Immediate Strike on Iran as Chief Pushes for Netanyahu-Backed Attack &nbsp;&nbsp; Haaretz"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBmZk9NdUVZa2ZtdDd4T1pGNDF2OVYta3BkRnoxbElNWTcyNWRWQjJTSWVQVlhETHZNeUdUYmNHMkZJNzdBVEtMVlBVNm1jUFBfUkxjeDF3?oc=5",
-      "title": "Trump suggests new Iran strikes will resume in 2027 - Fox News",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBmZk9NdUVZa2ZtdDd4T1pGNDF2OVYta3BkRnoxbElNWTcyNWRWQjJTSWVQVlhETHZNeUdUYmNHMkZJNzdBVEtMVlBVNm1jUFBfUkxjeDF3?oc=5",
-      "source": "Fox News",
-      "published": "2026-11-23T16:39:09+00:00",
-      "description": "Trump suggests new Iran strikes will resume in 2027 &nbsp;&nbsp; Fox News"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOS2tsQ2xfR2hIalE2V0xXNUJtS3ZMWUFCNkpnbjlWdGZRWC1tb3ZCNm9lbTZBQ1VpSTV3UDV6eGQ5ZnBWQWVJS2RIelZRZkRPd1pLU0xVQm1za0NubUFGdmpfbWd4YS01bjhZbklrQUo4SkRjQ2pLVHlVV1FvVV9EdmpaUXcyVHh1WlFGbkxNODdFdmdGUWdHUVY3ZWzSAaIBQVVfeXFMTWdNLXdxcGYxZG53Znd6MXBXcktQTVhrX3RtMFJ3WVYxajNwTUw4aWpoNm1CbGllU1JDRGNwLWJSQ2FQLTZUemV3emZwQzk5NEYwZHZDNmtDdWg1aDhDVFlnSWtmbnlQZ3o3X0FrR3hpWlNHcjQtUURockw3Y1Q5bW1lLVNHNnZBOXAwNFBPZnpnY2lrYk5MRm9HbkpXMGdyajVn?oc=5",
-      "title": "What Is Trump Up To Bombing Iran's Qeshm Island - Crude Oil Prices Today | OilPrice.com",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOS2tsQ2xfR2hIalE2V0xXNUJtS3ZMWUFCNkpnbjlWdGZRWC1tb3ZCNm9lbTZBQ1VpSTV3UDV6eGQ5ZnBWQWVJS2RIelZRZkRPd1pLU0xVQm1za0NubUFGdmpfbWd4YS01bjhZbklrQUo4SkRjQ2pLVHlVV1FvVV9EdmpaUXcyVHh1WlFGbkxNODdFdmdGUWdHUVY3ZWzSAaIBQVVfeXFMTWdNLXdxcGYxZG53Znd6MXBXcktQTVhrX3RtMFJ3WVYxajNwTUw4aWpoNm1CbGllU1JDRGNwLWJSQ2FQLTZUemV3emZwQzk5NEYwZHZDNmtDdWg1aDhDVFlnSWtmbnlQZ3o3X0FrR3hpWlNHcjQtUURockw3Y1Q5bW1lLVNHNnZBOXAwNFBPZnpnY2lrYk5MRm9HbkpXMGdyajVn?oc=5",
-      "source": "Crude Oil Prices Today | OilPrice.com",
-      "published": "2026-11-23T16:00:00+00:00",
-      "description": "What Is Trump Up To Bombing Iran's Qeshm Island &nbsp;&nbsp; Crude Oil Prices Today | OilPrice.com"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZDlXbXpiU2cwRGZTckR6TUc1RXMyUlBoS1hGd0NBdmEzYTZOQ3hLdElPbkVlU1lfX2g3RGJ4UnZVOFRCY3drMURtdGRBU1FCcDdRVm1RVkNZRS1GRlVUOHhqYmxPRXlvM1FIUzk2ejU4N0xrRW5VOWVZVUVmVFUwTEp3?oc=5",
-      "title": "Middle East latest: Eisenkot says no immediate Iran threat requiring Israeli military action - The National",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZDlXbXpiU2cwRGZTckR6TUc1RXMyUlBoS1hGd0NBdmEzYTZOQ3hLdElPbkVlU1lfX2g3RGJ4UnZVOFRCY3drMURtdGRBU1FCcDdRVm1RVkNZRS1GRlVUOHhqYmxPRXlvM1FIUzk2ejU4N0xrRW5VOWVZVUVmVFUwTEp3?oc=5",
-      "source": "The National",
-      "published": "2026-11-23T15:55:19+00:00",
-      "description": "Middle East latest: Eisenkot says no immediate Iran threat requiring Israeli military action &nbsp;&nbsp; The National"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1hSlJ6bVlFVWFIYlAxRWpFLU1DU2piQnRPTzJsanRuaFpDQTNLamFjYndZYU56UVFiZFNTenEtbnZNQTk5WVAtUEZkMmRDOWF2eGE1aFdhSXEzVEpST1lFZ3FkWWdyZG8?oc=5",
-      "title": "Iran Debates How to Achieve its Remaining War Goals - The Soufan Center",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1hSlJ6bVlFVWFIYlAxRWpFLU1DU2piQnRPTzJsanRuaFpDQTNLamFjYndZYU56UVFiZFNTenEtbnZNQTk5WVAtUEZkMmRDOWF2eGE1aFdhSXEzVEpST1lFZ3FkWWdyZG8?oc=5",
-      "source": "The Soufan Center",
-      "published": "2026-11-23T15:53:07+00:00",
-      "description": "Iran Debates How to Achieve its Remaining War Goals &nbsp;&nbsp; The Soufan Center"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZlktNGNvcUh3bHF1OTV0RVN2ODJKU1Y1OHl1a28zelJ6NTdPZHliQmlCNlNpQTFzblpya2ROdS1IR0xHV3dub3JZWU1sb0hhWERHdmxFNFU4WHNOXzBDMERoeWY5aW9kaHl1a0VVWVVRWk5HSk5qd29Jek9BTjJ6QU9xc0FOYlE?oc=5",
-      "title": "Iran's courts order US to pay $290 billion in damages - France 24",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZlktNGNvcUh3bHF1OTV0RVN2ODJKU1Y1OHl1a28zelJ6NTdPZHliQmlCNlNpQTFzblpya2ROdS1IR0xHV3dub3JZWU1sb0hhWERHdmxFNFU4WHNOXzBDMERoeWY5aW9kaHl1a0VVWVVRWk5HSk5qd29Jek9BTjJ6QU9xc0FOYlE?oc=5",
-      "source": "France 24",
-      "published": "2026-11-23T15:50:11+00:00",
-      "description": "Iran's courts order US to pay $290 billion in damages &nbsp;&nbsp; France 24"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQR0t6T29SU3MtZFJteVdmZHhrNkpLbEZNek5MYVE4RElrRnZ0ODZLYVZVc21TUUd4R3h4S0MxNHBMdDBzLXBwUnZCWkpiaUdPcnJwTFo4dlYyZ2tpWkhVUzcwYm1kZVVBRC1ycUg4RGdBTHp0R3E5NUNQR2JyOFhKd1dKejRxUUxhYUoyU1p2ZWNTOTNSLXdFZUxRczdES1laUVJ6VTVWb3c?oc=5",
-      "title": "Netanyahu ramping up pressure on Trump to strike Iran as soon as possible: report - The Independent",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQR0t6T29SU3MtZFJteVdmZHhrNkpLbEZNek5MYVE4RElrRnZ0ODZLYVZVc21TUUd4R3h4S0MxNHBMdDBzLXBwUnZCWkpiaUdPcnJwTFo4dlYyZ2tpWkhVUzcwYm1kZVVBRC1ycUg4RGdBTHp0R3E5NUNQR2JyOFhKd1dKejRxUUxhYUoyU1p2ZWNTOTNSLXdFZUxRczdES1laUVJ6VTVWb3c?oc=5",
-      "source": "The Independent",
-      "published": "2026-11-23T15:49:00+00:00",
-      "description": "Netanyahu ramping up pressure on Trump to strike Iran as soon as possible: report &nbsp;&nbsp; The Independent"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xQXpITlhhZVEyMVNlUWJtSVVicFJxQzhlcmtONnROUzBkSEVuaVZMTkhuWFRlWDdTMnVHNmg2OXlyZE9NVGtqemZCeVBpbmNyanc?oc=5",
-      "title": "Don’t try to bypass us: Trump corridor in Armenia draws Tehran warning - Iran International",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xQXpITlhhZVEyMVNlUWJtSVVicFJxQzhlcmtONnROUzBkSEVuaVZMTkhuWFRlWDdTMnVHNmg2OXlyZE9NVGtqemZCeVBpbmNyanc?oc=5",
-      "source": "Iran International",
-      "published": "2026-11-23T15:37:38+00:00",
-      "description": "Don’t try to bypass us: Trump corridor in Armenia draws Tehran warning &nbsp;&nbsp; Iran International"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWmIxVmhaRERGRjJPdDdxY1c3TG5QYVItWldYYWhmNHVUaHRQbF85TlJWQkYxU0I5dXBNN21uSVNMZUljYjZSVUY5WXBWdDdNbWtoeVJqdkpwLVZLMzQwSnNDX0wxZy03TFYzWU1JYU40dVF6YmVIQ3RDV0M0aUVCdk9uTlpFRzdXUTRmMnA0T0ZobGw1N1lKUW40R3RoVnlIZGc?oc=5",
-      "title": "Trump maintains pressure on Iran as Democrats eye war funding - Al-Monitor",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWmIxVmhaRERGRjJPdDdxY1c3TG5QYVItWldYYWhmNHVUaHRQbF85TlJWQkYxU0I5dXBNN21uSVNMZUljYjZSVUY5WXBWdDdNbWtoeVJqdkpwLVZLMzQwSnNDX0wxZy03TFYzWU1JYU40dVF6YmVIQ3RDV0M0aUVCdk9uTlpFRzdXUTRmMnA0T0ZobGw1N1lKUW40R3RoVnlIZGc?oc=5",
-      "source": "Al-Monitor",
-      "published": "2026-11-23T15:23:09+00:00",
-      "description": "Trump maintains pressure on Iran as Democrats eye war funding &nbsp;&nbsp; Al-Monitor"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPWWVyamQ3c3pxZFd2bVptUWJzVV90am1LM2ppYlBlYmlYMkVTQThKTVdKZXBJd1k1X3AweFcyRUtfOE4yaFNuY0luSFdjNkh5NVpCamhHa0kySHBIVzNQTGttSE9sQ3RrU0V5QVh1T2hpQnFQdWVMM3NXS2pwYUthLUIwZkxOSUJ2dTljZnFDcDljblphdTRNZ3hySHpyWnZrYnN2ZU8xNXd5cXhYLXQ3dVYzVFpvNlp0emVCelVPc19Ba0pJMkhxWjM5WFU3dw?oc=5",
-      "title": "Iran: Former Mossad Chief Calls For Overthrowing The Regime, “even At The Cost Of War” - i24NEWS",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPWWVyamQ3c3pxZFd2bVptUWJzVV90am1LM2ppYlBlYmlYMkVTQThKTVdKZXBJd1k1X3AweFcyRUtfOE4yaFNuY0luSFdjNkh5NVpCamhHa0kySHBIVzNQTGttSE9sQ3RrU0V5QVh1T2hpQnFQdWVMM3NXS2pwYUthLUIwZkxOSUJ2dTljZnFDcDljblphdTRNZ3hySHpyWnZrYnN2ZU8xNXd5cXhYLXQ3dVYzVFpvNlp0emVCelVPc19Ba0pJMkhxWjM5WFU3dw?oc=5",
-      "source": "i24NEWS",
-      "published": "2026-11-23T14:50:00+00:00",
-      "description": "Iran: Former Mossad Chief Calls For Overthrowing The Regime, “even At The Cost Of War” &nbsp;&nbsp; i24NEWS"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQLXB4VkVUaWNEYmtQNW9uN3d5Z3ktRXlwRE9EVDBrYVh5aXNaNHhDOGhUUjF0NWM1XzNaT3R1WERsWTZLTXU3ZWxjVFBOc1ZteUdmRzBuWm9DVE13bjJuSTUzYkZZN3pEOTQ3SFpXZGYwSXh5SGpHM3dhNmZsVFVqWEVmTDB2UQ?oc=5",
-      "title": "President Warns Of New Iran Strikes - iHeart",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQLXB4VkVUaWNEYmtQNW9uN3d5Z3ktRXlwRE9EVDBrYVh5aXNaNHhDOGhUUjF0NWM1XzNaT3R1WERsWTZLTXU3ZWxjVFBOc1ZteUdmRzBuWm9DVE13bjJuSTUzYkZZN3pEOTQ3SFpXZGYwSXh5SGpHM3dhNmZsVFVqWEVmTDB2UQ?oc=5",
-      "source": "iHeart",
-      "published": "2026-11-23T14:25:00+00:00",
-      "description": "President Warns Of New Iran Strikes &nbsp;&nbsp; iHeart"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOa1JQN041Q3dseml3WHlNYjZpaVY0V3VSek1JOEdxN3pfN1hnWWRFbE85QVZPSnhZTzRCMElXNDFRN1hXcTlDRzg1S3hwTWZYdjNPYndwZU8yajJ0MlhVTHRGYUVvcWExbjBVM0VMMlZYYlJwMkNCb0tLU0oya3JYbjh1OHJKUFVJcFc2TkZ2ZWhXNVdD?oc=5",
-      "title": "Gulf tensions threaten global energy and shipping - News of Bahrain",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOa1JQN041Q3dseml3WHlNYjZpaVY0V3VSek1JOEdxN3pfN1hnWWRFbE85QVZPSnhZTzRCMElXNDFRN1hXcTlDRzg1S3hwTWZYdjNPYndwZU8yajJ0MlhVTHRGYUVvcWExbjBVM0VMMlZYYlJwMkNCb0tLU0oya3JYbjh1OHJKUFVJcFc2TkZ2ZWhXNVdD?oc=5",
-      "source": "News of Bahrain",
-      "published": "2026-11-23T14:08:34+00:00",
-      "description": "Gulf tensions threaten global energy and shipping &nbsp;&nbsp; News of Bahrain"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOTlUwMkU0YjhOQ0NHUkxqT0RoUzlFRkVneWlVdkozNWc3eUZlY0R2alJ5VV9EREtQVjR6blNKZDFUVldwa21oenp3MndZUDlHYk5oTjdBcDRrNC1vcEZmekVoMEdjNzBvaDBPZUFDU3U4Wm82THZ1VXVTcjdnMGZ0WFp6QVY3UzJzVU0tU3pqbjVpVzZsanBZNHZWQlpPUjd4TmkyR0U1VE5rbU9TRjBZMUFBVlpSUkxEcFVjZUJRLVFaSlFBczlGNHlvRmxZUTJYcFl0dzBLZTRBclFSTGfSAeMBQVVfeXFMTmVCeEtiMENBMjE3REtYUkp0bHNxVnBFOTlIVkFHTXpyUGRsY296OG5lSndmZTMxRWpGZ0ZSLV9EV2lMNGNWdjc5aWhPNEZPb0xLY0V4WV9Xc3d1dzUwQUdHVTFJbGszb05sblFvUXVNaEdDQUMtZWRiRUFDYUZ0ci1HaWg0SVJMQkRzaGljLVRuUFJEdUV3SUhoVHhvdlJ3VjZKVHpRZjBDdzlnTmZDZm1yUk82dExucUhNQnllRzRyVjV1SlVQVFVLZ3FCWVBSSEVoMkF3OXh3ZkVzd0NSa1duOG8?oc=5",
-      "title": "Israel fears UN resolution protecting mediators could restrict its ability to assassinate negotiators - Middle East Monitor",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOTlUwMkU0YjhOQ0NHUkxqT0RoUzlFRkVneWlVdkozNWc3eUZlY0R2alJ5VV9EREtQVjR6blNKZDFUVldwa21oenp3MndZUDlHYk5oTjdBcDRrNC1vcEZmekVoMEdjNzBvaDBPZUFDU3U4Wm82THZ1VXVTcjdnMGZ0WFp6QVY3UzJzVU0tU3pqbjVpVzZsanBZNHZWQlpPUjd4TmkyR0U1VE5rbU9TRjBZMUFBVlpSUkxEcFVjZUJRLVFaSlFBczlGNHlvRmxZUTJYcFl0dzBLZTRBclFSTGfSAeMBQVVfeXFMTmVCeEtiMENBMjE3REtYUkp0bHNxVnBFOTlIVkFHTXpyUGRsY296OG5lSndmZTMxRWpGZ0ZSLV9EV2lMNGNWdjc5aWhPNEZPb0xLY0V4WV9Xc3d1dzUwQUdHVTFJbGszb05sblFvUXVNaEdDQUMtZWRiRUFDYUZ0ci1HaWg0SVJMQkRzaGljLVRuUFJEdUV3SUhoVHhvdlJ3VjZKVHpRZjBDdzlnTmZDZm1yUk82dExucUhNQnllRzRyVjV1SlVQVFVLZ3FCWVBSSEVoMkF3OXh3ZkVzd0NSa1duOG8?oc=5",
-      "source": "Middle East Monitor",
-      "published": "2026-11-23T13:54:00+00:00",
-      "description": "Israel fears UN resolution protecting mediators could restrict its ability to assassinate negotiators &nbsp;&nbsp; Middle East Monitor"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWHBXZERFZE52Zy0yWnRReTQ3WnczdEZCSUR4bHFlVVF5Sk0yaUVGTlhxdnBxUWxTYzUtWUdPZm1zdHdvR2tPZnlvZ2R5ZEJwRWFpeDhlTXlqdzRFek4wcVJNY1FOLWJWc0g0YlRIQUFXS3NySl9OeUlfU3puRUhDRkNqSDdEUU5ZcTNuONIBkgFBVV95cUxOOVBERHFvNXdSeEVQYkw0bXdtUVNWRlFqMjZFSUtoQXhWUGdZUHg0MHZoYjU1M0piRXhyVFoyZUEzTDlwWnF0ZS15aW5WX1NqNWNqN2RIRHk4OFJPUjFJWWNlMDZmMU5aVFhMMmNmT2hiNDZJUEI4TTdLMHVSVktwd3pJTmxwT28zZVAzRTBTTjJTdw?oc=5",
-      "title": "Trump says he’s inclined to strike Iran after new year if no deal reached - The Hill",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWHBXZERFZE52Zy0yWnRReTQ3WnczdEZCSUR4bHFlVVF5Sk0yaUVGTlhxdnBxUWxTYzUtWUdPZm1zdHdvR2tPZnlvZ2R5ZEJwRWFpeDhlTXlqdzRFek4wcVJNY1FOLWJWc0g0YlRIQUFXS3NySl9OeUlfU3puRUhDRkNqSDdEUU5ZcTNuONIBkgFBVV95cUxOOVBERHFvNXdSeEVQYkw0bXdtUVNWRlFqMjZFSUtoQXhWUGdZUHg0MHZoYjU1M0piRXhyVFoyZUEzTDlwWnF0ZS15aW5WX1NqNWNqN2RIRHk4OFJPUjFJWWNlMDZmMU5aVFhMMmNmT2hiNDZJUEI4TTdLMHVSVktwd3pJTmxwT28zZVAzRTBTTjJTdw?oc=5",
-      "source": "The Hill",
-      "published": "2026-11-23T13:33:00+00:00",
-      "description": "Trump says he’s inclined to strike Iran after new year if no deal reached &nbsp;&nbsp; The Hill"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTktLdU1YVmxRUnlCdUNRZmlIdWloVW12TFNEZGVMdXhoWHdpWGdIMmpkMTJnNWdFdXh2WlhFYWNzckVtcFotcW9ya2JHd1VmLVY2b2hsTFdObno2Q0IxM3oyYWsySUszUEtiTHlEV3JOaW1ZbmJ3YUc4X3BndTRMbmJteXpGTG1VZDU3clloNWNtd3RXdEx5dVdQSlZ6TS14T0tpbUg2eXlZZ9IBrwFBVV95cUxObFRhRTR4SXZfbVZ4c0VMbnJvVVNZbFBjaGw5S29VUG1kcXRieXJjUEROZUoyQTRvSGFOeDdKNUpYbmN4UmZxcTAzNmZjOWR2SmJhVHVHTkxBbUJtc2hjT1NGOTZOUzhpbHZsQ0FKNWhQYkl1S0ZRcTdaTWMzU2N4QnBGV1cwOGpJNERSbmJwYzVNRERpb0JwTGlrUmp4LWczVXVxTXkzLXNRS05JNzBV?oc=5",
-      "title": "Iran says it will use ‘all available means’ to counter US blockade - Al Jazeera",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTktLdU1YVmxRUnlCdUNRZmlIdWloVW12TFNEZGVMdXhoWHdpWGdIMmpkMTJnNWdFdXh2WlhFYWNzckVtcFotcW9ya2JHd1VmLVY2b2hsTFdObno2Q0IxM3oyYWsySUszUEtiTHlEV3JOaW1ZbmJ3YUc4X3BndTRMbmJteXpGTG1VZDU3clloNWNtd3RXdEx5dVdQSlZ6TS14T0tpbUg2eXlZZ9IBrwFBVV95cUxObFRhRTR4SXZfbVZ4c0VMbnJvVVNZbFBjaGw5S29VUG1kcXRieXJjUEROZUoyQTRvSGFOeDdKNUpYbmN4UmZxcTAzNmZjOWR2SmJhVHVHTkxBbUJtc2hjT1NGOTZOUzhpbHZsQ0FKNWhQYkl1S0ZRcTdaTWMzU2N4QnBGV1cwOGpJNERSbmJwYzVNRERpb0JwTGlrUmp4LWczVXVxTXkzLXNRS05JNzBV?oc=5",
-      "source": "Al Jazeera",
-      "published": "2026-11-23T13:25:38+00:00",
-      "description": "Iran says it will use ‘all available means’ to counter US blockade &nbsp;&nbsp; Al Jazeera"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQUk1aVHBISVdoMUJZRUFsanZ5bUI1NFp3clJCaFBDVjRHelRkNVpDbUl3S0xwQ0FTaWdNSHBPLXdxMkFlVGk5WVRtUWdDZDAyanJlQmFyaU5ha19fV04welVqYTJKanczUkFTVk9WQmMwQThsbjNDRjI0dG55cDdHU0k4RjVpY2hvcE9wZ0VBMWdvUm9vLU5PZmJEVUdVNlVSSEJnSWZrYWc2cVV0UThIcG5veW93ZFRGVnd1SUVkelNJMHZUQ1ktNnRGNS1DZw?oc=5",
-      "title": "Pakistan’s Forgotten Seafarers: Can the Strait of Hormuz Crisis Open a New Employment Opportunity? - Biz Today",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQUk1aVHBISVdoMUJZRUFsanZ5bUI1NFp3clJCaFBDVjRHelRkNVpDbUl3S0xwQ0FTaWdNSHBPLXdxMkFlVGk5WVRtUWdDZDAyanJlQmFyaU5ha19fV04welVqYTJKanczUkFTVk9WQmMwQThsbjNDRjI0dG55cDdHU0k4RjVpY2hvcE9wZ0VBMWdvUm9vLU5PZmJEVUdVNlVSSEJnSWZrYWc2cVV0UThIcG5veW93ZFRGVnd1SUVkelNJMHZUQ1ktNnRGNS1DZw?oc=5",
-      "source": "Biz Today",
-      "published": "2026-11-23T13:23:13+00:00",
-      "description": "Pakistan’s Forgotten Seafarers: Can the Strait of Hormuz Crisis Open a New Employment Opportunity? &nbsp;&nbsp; Biz Today"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOODBhS0VqY1Nod3dJdWdPcm44eVpyRXJGZXduTU1QLWpGZ1NjdExMbUx2ZkJKNDdlNzVoZmxaMVE4Rm5FX1FPVy0zSnUwUWhwUlU0U3NpZUFKeHdzcjZrZl80UEhJdGNSMllKUVdBeXZhck5QNEJKcUdzYTJST2xlcnQwZkR6em9BbG1od3JYQ251aHBFLTh2V1dEa0FKcmFaVWJKcWlUVHBha0pRMnlR?oc=5",
-      "title": "UAE steps up efforts to shuttle oil through Strait of Hormuz - Washington Times",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOODBhS0VqY1Nod3dJdWdPcm44eVpyRXJGZXduTU1QLWpGZ1NjdExMbUx2ZkJKNDdlNzVoZmxaMVE4Rm5FX1FPVy0zSnUwUWhwUlU0U3NpZUFKeHdzcjZrZl80UEhJdGNSMllKUVdBeXZhck5QNEJKcUdzYTJST2xlcnQwZkR6em9BbG1od3JYQ251aHBFLTh2V1dEa0FKcmFaVWJKcWlUVHBha0pRMnlR?oc=5",
-      "source": "Washington Times",
-      "published": "2026-11-23T12:33:14+00:00",
-      "description": "UAE steps up efforts to shuttle oil through Strait of Hormuz &nbsp;&nbsp; Washington Times"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUUYtRnI0NjgwbmR5dm5idkxFNldpc3FaZVQtWGNzamZPUFlBU2JPbGdMVjNmSkRrTURDbDNRd2t6TEU5OFRHNGktUnFKcXNUcmlRYzlNRGtDWVRFRTBpYnNiZE84czFIZjRSWkQtalQzLW5UM3RfRlF3ZlBJaEpBTzkyU3owSDQwSjJidmlrMWFFVktOUjV1R2k0M1JVMlhZOUR3NURheW91alQyYlZV0gG0AUFVX3lxTE02SEpkZkd2R0JheWRVVDdJa0VxWHBlSk9OTDNzMTNmMktxUVA1RXlRM0xfWXNQM1hQZnhNcnpsSWJFVC1tSmM3b0hmNTNBSTVfZUl4bERUNlRkMUJzY01IdEM0UUw0YWwxSEJnYk9zb1dMWGdJLWluanFyTzlMUlBkOTlPRWlyLUdhai1hcTNaV3V2WDNaS21oRmxqZFR4TGFVUzBNQ1NVRk5lMDBkNmtEYW84bQ?oc=5",
-      "title": "Trump Says Strikes on Iran Could Resume After New Year - Crude Oil Prices Today | OilPrice.com",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUUYtRnI0NjgwbmR5dm5idkxFNldpc3FaZVQtWGNzamZPUFlBU2JPbGdMVjNmSkRrTURDbDNRd2t6TEU5OFRHNGktUnFKcXNUcmlRYzlNRGtDWVRFRTBpYnNiZE84czFIZjRSWkQtalQzLW5UM3RfRlF3ZlBJaEpBTzkyU3owSDQwSjJidmlrMWFFVktOUjV1R2k0M1JVMlhZOUR3NURheW91alQyYlZV0gG0AUFVX3lxTE02SEpkZkd2R0JheWRVVDdJa0VxWHBlSk9OTDNzMTNmMktxUVA1RXlRM0xfWXNQM1hQZnhNcnpsSWJFVC1tSmM3b0hmNTNBSTVfZUl4bERUNlRkMUJzY01IdEM0UUw0YWwxSEJnYk9zb1dMWGdJLWluanFyTzlMUlBkOTlPRWlyLUdhai1hcTNaV3V2WDNaS21oRmxqZFR4TGFVUzBNQ1NVRk5lMDBkNmtEYW84bQ?oc=5",
-      "source": "Crude Oil Prices Today | OilPrice.com",
-      "published": "2026-11-23T12:30:00+00:00",
-      "description": "Trump Says Strikes on Iran Could Resume After New Year &nbsp;&nbsp; Crude Oil Prices Today | OilPrice.com"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQZXc1WmdteUMzTUFjV2VpS2dxbVpIYS1vc05EbUE2bDE4d0N2TkZVbkdXSGY5bFRSVG9ZcXNqTlFpWVEtdU56bWVucmJaNnQtNTgxTmlMUnZlaEhZU056dThiMzloZmcwdDQ4cmUteTVjWXFRZGQ0WXNsWlQyT0JjUHRGaEtpUXZsMlN6MU00TDVVeWJaLWFOWHRFOUtSOTY5?oc=5",
-      "title": "Three tankers struck in Strait of Hormuz amid further Gulf of Oman incident - safety4sea",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQZXc1WmdteUMzTUFjV2VpS2dxbVpIYS1vc05EbUE2bDE4d0N2TkZVbkdXSGY5bFRSVG9ZcXNqTlFpWVEtdU56bWVucmJaNnQtNTgxTmlMUnZlaEhZU056dThiMzloZmcwdDQ4cmUteTVjWXFRZGQ0WXNsWlQyT0JjUHRGaEtpUXZsMlN6MU00TDVVeWJaLWFOWHRFOUtSOTY5?oc=5",
-      "source": "safety4sea",
-      "published": "2026-11-23T11:59:49+00:00",
-      "description": "Three tankers struck in Strait of Hormuz amid further Gulf of Oman incident &nbsp;&nbsp; safety4sea"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPU1BGOERUU2w0SW1pM2JId3A4aGZCcEhnMHg2TU5mOXpPa3MycFl3VU1SSlkxSmRnbUJxaF9HaElhaFdoUmVzNjJnc3lxc083OEF4WHUya3JNTlB2ek5CellXdUp4VUlOVjRqY0xzMGVWOERrOThXTko0WEtHdVR4OXNIWHN0VC1pT0RYeHhNNHJzRjI0cE1tMDhzcGpqTS00UkpoQjM1SlJKUzFFRGpTWFVB0gG3AUFVX3lxTE12V1BWVTBIMUpHMEFDV0g2N25CVkd3dWtoOWtiOUQ0b0UtM0ZRTWtrYmZPMDVLamR1c25RYng0ZHhlaDZ4T00yc0pqbEhIdFlpMmxKb2JtYlBxSXR0UDdXd0FhSlpOOFRvTXd2TWZSYlhSNEZ4VlNKb28teHp2Zk1OeG1BQ2lWaDEtN3FMVDNoS1ExN2drTUg1SEdrMWo0YUJCRW5Bc01Ld3RPbXZIU3dJLUlJOTYwWQ?oc=5",
-      "title": "Iran live updates: Iranian attacks spike over past week, Trump says - ABC News - Breaking News, Latest News and Videos",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPU1BGOERUU2w0SW1pM2JId3A4aGZCcEhnMHg2TU5mOXpPa3MycFl3VU1SSlkxSmRnbUJxaF9HaElhaFdoUmVzNjJnc3lxc083OEF4WHUya3JNTlB2ek5CellXdUp4VUlOVjRqY0xzMGVWOERrOThXTko0WEtHdVR4OXNIWHN0VC1pT0RYeHhNNHJzRjI0cE1tMDhzcGpqTS00UkpoQjM1SlJKUzFFRGpTWFVB0gG3AUFVX3lxTE12V1BWVTBIMUpHMEFDV0g2N25CVkd3dWtoOWtiOUQ0b0UtM0ZRTWtrYmZPMDVLamR1c25RYng0ZHhlaDZ4T00yc0pqbEhIdFlpMmxKb2JtYlBxSXR0UDdXd0FhSlpOOFRvTXd2TWZSYlhSNEZ4VlNKb28teHp2Zk1OeG1BQ2lWaDEtN3FMVDNoS1ExN2drTUg1SEdrMWo0YUJCRW5Bc01Ld3RPbXZIU3dJLUlJOTYwWQ?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "published": "2026-11-23T11:53:00+00:00",
-      "description": "Iran live updates: Iranian attacks spike over past week, Trump says &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVjVNV0ZFb3V6eXBrSFg1NXZ2cDJZajN4RThLemh4OGpSZkh6a2VKTXNQTEhucmp0c05kdGlsY2lFaUt4NnAzRlJtUzh3emg4TVpPWmp0MS1GTE5QTDhxbFZVWHY2SWVGMnNZUTFzM2Z0MWxmRzFKa0YzN2V4WDNianJ6QkJYZHhER2FuMlpaRUtOczFqcFNheDY2VmlsbjBF0gGaAUFVX3lxTE45aUtiZDh6bk9STHJNdnNkM096Tl9uRkQxQ183c1IyV05DRGxjSGxKZnlCaF9ZbWQzSDJjS29qc2RnMVRob2lhZm56OVlTdVpVeDZvM1UwVTlmVmhqYUdGQXdwZHg2SWgzUVVlYWdmRkdGRG5IZkFjT1Z4SDZiVldFYV8xZXQ5M19XdkRNcjBFbDNPZ0NZLU4wNnc?oc=5",
-      "title": "Oil prices steady near $93 as Middle East attacks offset fears of supply disruptions - The New Voice of Ukraine",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVjVNV0ZFb3V6eXBrSFg1NXZ2cDJZajN4RThLemh4OGpSZkh6a2VKTXNQTEhucmp0c05kdGlsY2lFaUt4NnAzRlJtUzh3emg4TVpPWmp0MS1GTE5QTDhxbFZVWHY2SWVGMnNZUTFzM2Z0MWxmRzFKa0YzN2V4WDNianJ6QkJYZHhER2FuMlpaRUtOczFqcFNheDY2VmlsbjBF0gGaAUFVX3lxTE45aUtiZDh6bk9STHJNdnNkM096Tl9uRkQxQ183c1IyV05DRGxjSGxKZnlCaF9ZbWQzSDJjS29qc2RnMVRob2lhZm56OVlTdVpVeDZvM1UwVTlmVmhqYUdGQXdwZHg2SWgzUVVlYWdmRkdGRG5IZkFjT1Z4SDZiVldFYV8xZXQ5M19XdkRNcjBFbDNPZ0NZLU4wNnc?oc=5",
-      "source": "The New Voice of Ukraine",
-      "published": "2026-11-23T11:50:00+00:00",
-      "description": "Oil prices steady near $93 as Middle East attacks offset fears of supply disruptions &nbsp;&nbsp; The New Voice of Ukraine"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBCTFJzc0VSX0NQYmxHZE5POGI1bHlUcjFDQ0pvTGQ4XzhfcnJybmdQbXhvM21TRWoxRjM5OHVjQVdLdVFVajk2OVNFNFU4LW1YUW96cE1wZ21JSklIQk1HU1llamhXR2VGVjlQVA?oc=5",
-      "title": "IRGC Claims 2 Supertankers Hit Mines in Hormuz, Iran Toll Reaches 6 in 4 Days - https://houseofsaud.com/",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBCTFJzc0VSX0NQYmxHZE5POGI1bHlUcjFDQ0pvTGQ4XzhfcnJybmdQbXhvM21TRWoxRjM5OHVjQVdLdVFVajk2OVNFNFU4LW1YUW96cE1wZ21JSklIQk1HU1llamhXR2VGVjlQVA?oc=5",
-      "source": "https://houseofsaud.com/",
-      "published": "2026-11-23T11:47:07+00:00",
-      "description": "IRGC Claims 2 Supertankers Hit Mines in Hormuz, Iran Toll Reaches 6 in 4 Days &nbsp;&nbsp; https://houseofsaud.com/"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTE12X1FtTFZ0aFZQY21vY2ZvaEpKemFQNnZ4cEU3ZXNWVWlpWlhYSGZBU3VLM2E0MGt5b2dBSXNsNkdEdFlDNU1uUFU0WmU0T01hZjl2UFVUVlZCaDFoU3VUeXZtQ3RHVjZfQ0E?oc=5",
-      "title": "Trump faces critical Iran decision as expert warns deal could threaten Israel for generations - The Jerusalem Post",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE12X1FtTFZ0aFZQY21vY2ZvaEpKemFQNnZ4cEU3ZXNWVWlpWlhYSGZBU3VLM2E0MGt5b2dBSXNsNkdEdFlDNU1uUFU0WmU0T01hZjl2UFVUVlZCaDFoU3VUeXZtQ3RHVjZfQ0E?oc=5",
-      "source": "The Jerusalem Post",
-      "published": "2026-11-23T11:35:49+00:00",
-      "description": "Trump faces critical Iran decision as expert warns deal could threaten Israel for generations &nbsp;&nbsp; The Jerusalem Post"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQW1lNE85X2RXWFl6LXlhcnFfYWV3R1pWZnZ5UFVPaWVrTy04MFIyRndvS1RKYUZxTlVNekRfcUlqeE83T2h5Y2I2RWJSUkkybnliUDNwQ0RkYU54VnE4cHNhZHB6TGE2M3hkN05panQtVEF2MERHNjg1Sjk1allic05razJYNGNzYW1vdkl4SzFSZ29pTzRkM0ZYRkhzZzDSAaQBQVVfeXFMTWo5MEtXSHpmV0VaWUVjUTdUd0tRNGl6eG9KUDJLVTJuMmZtQUxqcVVmaGUzLWRna3BETllzajUxbkhTVGdqNEJvUnZGUWpKbEFwWDY1NThNX2E1bUhGdVQzQXQxdFZvLTc2d0lPM0YyX2NOWlNKRzRCeW1nS1A1dTBZWEhDY0xzNWJ2dlpYQW9MMElxbEpWNzd2WmhrZ19MTXY3c18?oc=5",
-      "title": "Ex-Mossad chief: Israel must go to war against Iran ‘as soon as all conditions allow’ - The Times of Israel",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQW1lNE85X2RXWFl6LXlhcnFfYWV3R1pWZnZ5UFVPaWVrTy04MFIyRndvS1RKYUZxTlVNekRfcUlqeE83T2h5Y2I2RWJSUkkybnliUDNwQ0RkYU54VnE4cHNhZHB6TGE2M3hkN05panQtVEF2MERHNjg1Sjk1allic05razJYNGNzYW1vdkl4SzFSZ29pTzRkM0ZYRkhzZzDSAaQBQVVfeXFMTWo5MEtXSHpmV0VaWUVjUTdUd0tRNGl6eG9KUDJLVTJuMmZtQUxqcVVmaGUzLWRna3BETllzajUxbkhTVGdqNEJvUnZGUWpKbEFwWDY1NThNX2E1bUhGdVQzQXQxdFZvLTc2d0lPM0YyX2NOWlNKRzRCeW1nS1A1dTBZWEhDY0xzNWJ2dlpYQW9MMElxbEpWNzd2WmhrZ19MTXY3c18?oc=5",
-      "source": "The Times of Israel",
-      "published": "2026-11-23T11:27:00+00:00",
-      "description": "Ex-Mossad chief: Israel must go to war against Iran ‘as soon as all conditions allow’ &nbsp;&nbsp; The Times of Israel"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE45anZ6WUhlZm03dnBPTjdSb3JQbVVVYm5zWW13a2xUa0hiOUI1NElXZTBUZjNheWNTZDhKblhrYnhudVVHODJUaFNiQldVYi1uWnpXVzlXSnEtNkxZMmRLdnVLR2pfNi1DZkQtZjFFcWRWaVlQR2JlLWdfMlhHQ3PSAYQBQVVfeXFMT3pMTF9aU3g4MkxGeFZZZ2tIUER5QVBjS3NaWjBVNlcyZ0RSY0NwWkI3eE52c0w0X3BIS3JMSTRCVVJ6LVBQZmJXMHNmSm04dU0zZ1JXMWEzdzc3RWdRTW9ZYXZUM0NKME5JeG9UT3lKTVBQcFFnWlhYZ1A2ZU5udFdlUlly?oc=5",
-      "title": "Iran and US trade threats as tankers burn in Hormuz - The New Arab",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE45anZ6WUhlZm03dnBPTjdSb3JQbVVVYm5zWW13a2xUa0hiOUI1NElXZTBUZjNheWNTZDhKblhrYnhudVVHODJUaFNiQldVYi1uWnpXVzlXSnEtNkxZMmRLdnVLR2pfNi1DZkQtZjFFcWRWaVlQR2JlLWdfMlhHQ3PSAYQBQVVfeXFMT3pMTF9aU3g4MkxGeFZZZ2tIUER5QVBjS3NaWjBVNlcyZ0RSY0NwWkI3eE52c0w0X3BIS3JMSTRCVVJ6LVBQZmJXMHNmSm04dU0zZ1JXMWEzdzc3RWdRTW9ZYXZUM0NKME5JeG9UT3lKTVBQcFFnWlhYZ1A2ZU5udFdlUlly?oc=5",
-      "source": "The New Arab",
-      "published": "2026-11-23T11:06:22+00:00",
-      "description": "Iran and US trade threats as tankers burn in Hormuz &nbsp;&nbsp; The New Arab"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMic0FVX3lxTE13UFAzOU9VZEE0Qk5rdFNLNWJvU2FqLTd5a0Z0N0RGU1JaclhBamtSR29tdUpuTU5adXlBU3JieDBPbnNkWndfSnRqck4xTGFMdHhQdmdQQXhCeW00cTBSdFBPY2dnUExkU292cjJ0Zk9TWnM?oc=5",
-      "title": "Republicans mulling deal that would fund military, but limit operations in Iran - CNN",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE13UFAzOU9VZEE0Qk5rdFNLNWJvU2FqLTd5a0Z0N0RGU1JaclhBamtSR29tdUpuTU5adXlBU3JieDBPbnNkWndfSnRqck4xTGFMdHhQdmdQQXhCeW00cTBSdFBPY2dnUExkU292cjJ0Zk9TWnM?oc=5",
-      "source": "CNN",
-      "published": "2026-11-23T11:00:15+00:00",
-      "description": "Republicans mulling deal that would fund military, but limit operations in Iran &nbsp;&nbsp; CNN"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBSWDJ3dGtDQ1RaWjFnbXZ5VEdJZVR3T1IwSW5RaUpqSDdJOW5KN3h3QXFKY3Q3UW1IVUhEOXBienRvRlZLUDREaXlGSC1PM2N0aWc2eXEzMGdVS2xGeUFoX1ZSY09yUzhENmc?oc=5",
-      "title": "Iranian attacks on ships near Strait of Hormuz hit highest level since war began, data shows - The Jerusalem Post",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBSWDJ3dGtDQ1RaWjFnbXZ5VEdJZVR3T1IwSW5RaUpqSDdJOW5KN3h3QXFKY3Q3UW1IVUhEOXBienRvRlZLUDREaXlGSC1PM2N0aWc2eXEzMGdVS2xGeUFoX1ZSY09yUzhENmc?oc=5",
-      "source": "The Jerusalem Post",
-      "published": "2026-11-23T10:49:41+00:00",
-      "description": "Iranian attacks on ships near Strait of Hormuz hit highest level since war began, data shows &nbsp;&nbsp; The Jerusalem Post"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNa0lUNkoyOXRBQWxPcGY3SGpqcnNlYW1BamtqZHdqRzBvTEYyTU5veFpCdEJzSWhpRnF3a1ItOHFzcEttUkktVmU1SzFEd1d5Zmprdm5ZZUl5STh1RUtNVDlQUzdrM21FUXp4OUtpaktZd1Z3Tks4VVpwTzZhUE1EdlVSRktUbDczNjRka1l1VnhPSTVaYnpQNHYyNmtrTjJpeV9vbWREMXpiek9oczJ3?oc=5",
-      "title": "As IRGC Threats Against US Intensify and Strikes Hit Bahrain, Iran's Underground Church Shines - CBN.com",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNa0lUNkoyOXRBQWxPcGY3SGpqcnNlYW1BamtqZHdqRzBvTEYyTU5veFpCdEJzSWhpRnF3a1ItOHFzcEttUkktVmU1SzFEd1d5Zmprdm5ZZUl5STh1RUtNVDlQUzdrM21FUXp4OUtpaktZd1Z3Tks4VVpwTzZhUE1EdlVSRktUbDczNjRka1l1VnhPSTVaYnpQNHYyNmtrTjJpeV9vbWREMXpiek9oczJ3?oc=5",
-      "source": "CBN.com",
-      "published": "2026-11-23T10:45:13+00:00",
-      "description": "As IRGC Threats Against US Intensify and Strikes Hit Bahrain, Iran's Underground Church Shines &nbsp;&nbsp; CBN.com"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBwRnl1R1J4cnNPalJXUDB5U0VKNFYwWUxEbzVWWnZ0amRrUlJDQXNTY2stVXItdVhmTjFCaUs5VlZOUTBNRVR1V0RSTXY2SU9ON2c?oc=5",
-      "title": "Iran threatens European bases with missiles it says can reach 4,500 km - Iran International",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBwRnl1R1J4cnNPalJXUDB5U0VKNFYwWUxEbzVWWnZ0amRrUlJDQXNTY2stVXItdVhmTjFCaUs5VlZOUTBNRVR1V0RSTXY2SU9ON2c?oc=5",
-      "source": "Iran International",
-      "published": "2026-11-23T10:38:33+00:00",
-      "description": "Iran threatens European bases with missiles it says can reach 4,500 km &nbsp;&nbsp; Iran International"
     }
   ],
   "note": "Aggregated Google News RSS headlines. Headlines are not independently verified."
