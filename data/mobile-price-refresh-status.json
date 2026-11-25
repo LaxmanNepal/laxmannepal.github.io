@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-11-24T11:06:43.202001+00:00",
-  "date": "2026-11-24",
+  "updated_at": "2026-11-25T09:55:55.578624+00:00",
+  "date": "2026-11-25",
   "schedule": "daily",
-  "model_variants": 268,
-  "fresh_offers": 160,
-  "stale_offers": 114,
+  "model_variants": 266,
+  "fresh_offers": 169,
+  "stale_offers": 103,
   "stores": {
     "Brother Mart": {
-      "candidates": 360,
-      "priced_offers_found": 149,
+      "candidates": 356,
+      "priced_offers_found": 147,
       "previous_offers": 149,
       "minimum_expected_offers": 53,
       "status": "complete",
@@ -56,14 +56,12 @@
       "errors": []
     },
     "Oliz Store": {
-      "candidates": 0,
-      "priced_offers_found": 0,
+      "candidates": 11,
+      "priced_offers_found": 11,
       "previous_offers": 11,
       "minimum_expected_offers": 4,
-      "status": "stale",
-      "errors": [
-        "https://cdn.olizstore.com/collections/phone: ReadTimeout: HTTPSConnectionPool(host='cdn.olizstore.com', port=443): Read timed out. (read timeout=10)"
-      ]
+      "status": "complete",
+      "errors": []
     },
     "Quality Computer": {
       "candidates": 8,
