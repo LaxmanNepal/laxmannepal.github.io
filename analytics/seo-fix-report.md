@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-25T08:46:38.313114+00:00.
+Generated from the latest analytics snapshot: 2026-11-25T21:48:35.844150+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -75,16 +75,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/05/how to make free website with euorg.html
 - Top queries: No page-query rows
 
-### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/06/top 10 free online tools will save you.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2025/06/top 10 free online tools will save you.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/06/top 10 free online tools will save you.html
-- Top queries: No page-query rows
-
 ### /p/cookies-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -113,6 +103,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/12/download nepali and english cursive font.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/12/download nepali and english cursive font.html
+- Top queries: No page-query rows
+
+### /2025/06/top-10-free-online-tools-will-save-you.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/06/top 10 free online tools will save you.html | Laxma…
+- Current description: Missing
+- Recommended description: Learn about 2025/06/top 10 free online tools will save you.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/06/top 10 free online tools will save you.html
 - Top queries: No page-query rows
 
 ### /p/about.html — SEO score 0/100
@@ -215,16 +215,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/contact us.html
 - Top queries: No page-query rows
 
-### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2020/11/use mobile data in aeroplane mode.html | Laxman Nep…
-- Current description: Missing
-- Recommended description: Learn about 2020/11/use mobile data in aeroplane mode.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2020/11/use mobile data in aeroplane mode.html
-- Top queries: No page-query rows
-
 ### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -313,6 +303,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about p/laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: p/laxman nepal.html
+- Top queries: No page-query rows
+
+### /2020/11/use-mobile-data-in-aeroplane-mode.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2020/11/use mobile data in aeroplane mode.html | Laxman Nep…
+- Current description: Missing
+- Recommended description: Learn about 2020/11/use mobile data in aeroplane mode.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2020/11/use mobile data in aeroplane mode.html
 - Top queries: No page-query rows
 
 ### /2023/07/increase-website-view-by-laxman-nepal.html — SEO score 0/100
@@ -685,16 +685,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2024/10/voter list nepal.html
 - Top queries: No page-query rows
 
-### /2025/03/never-pay-for-online-ai-courses-7-best.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/03/never pay for online ai courses 7 best.html | Laxma…
-- Current description: Missing
-- Recommended description: Learn about 2025/03/never pay for online ai courses 7 best.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/03/never pay for online ai courses 7 best.html
-- Top queries: No page-query rows
-
 ### /2025/04/top-10-proven-online-earning-methods-in.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -883,6 +873,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about mobile price in nepal/phones/apple iphone 16e 128gb with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: mobile price in nepal/phones/apple iphone 16e 128gb
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/realme-p4x-4g-4gb-128gb/ — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: mobile price in nepal/phones/realme p4x 4g 4gb 128gb | Laxm…
+- Current description: Missing
+- Recommended description: Learn about mobile price in nepal/phones/realme p4x 4g 4gb 128gb with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: mobile price in nepal/phones/realme p4x 4g 4gb 128gb
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/vivo-v60-lite-5g-8gb-256gb/ — SEO score 0/100
@@ -4055,16 +4055,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: Realme P3 Price in Nepal
 - Top queries: No page-query rows
 
-### /mobile-price-in-nepal/phones/realme-p4-lite-4g-4gb-128gb/ — SEO score 85/100
-- Issues: Title length 64
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Realme P4 Lite 4G 4GB/128GB Price in Nepal, Specs & Store Offers
-- Recommended title: Realme P4 Lite 4G 4GB/128GB Price in Nepal | Laxman Nepal
-- Current description: Compare Realme P4 Lite 4G 4GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product im
-- Recommended description: Learn about Realme P4 Lite 4G 4GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Realme P4 Lite 4G 4GB/128GB Price in Nepal
-- Top queries: No page-query rows
-
 ### /mobile-price-in-nepal/phones/realme-p4-power-5g-12gb-256gb/ — SEO score 85/100
 - Issues: Title length 65
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -4083,16 +4073,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Realme P4 Power price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Realme P4 Power Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Realme P4 Power Price in Nepal
-- Top queries: No page-query rows
-
-### /mobile-price-in-nepal/phones/realme-p4x-4g-4gb-128gb/ — SEO score 85/100
-- Issues: Title length 65
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Realme P4x 4G 4GB/128GB Price in Nepal, Specs & Store Offers | La
-- Recommended title: Realme P4x 4G 4GB/128GB Price in Nepal | Laxman Nepal
-- Current description: Compare Realme P4x 4G 4GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images
-- Recommended description: Learn about Realme P4x 4G 4GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: Realme P4x 4G 4GB/128GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/redmi-17-4g-4gb-128gb/ — SEO score 85/100
