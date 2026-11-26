@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-25T09:55:55.578624+00:00",
-  "date": "2026-11-25",
+  "updated_at": "2026-11-26T09:40:16.801935+00:00",
+  "date": "2026-11-26",
   "schedule": "daily",
-  "model_variants": 266,
-  "fresh_offers": 169,
+  "model_variants": 267,
+  "fresh_offers": 170,
   "stale_offers": 103,
   "stores": {
     "Brother Mart": {
       "candidates": 356,
       "priced_offers_found": 147,
-      "previous_offers": 149,
-      "minimum_expected_offers": 53,
+      "previous_offers": 147,
+      "minimum_expected_offers": 52,
       "status": "complete",
       "errors": []
     },
@@ -64,8 +64,8 @@
       "errors": []
     },
     "Quality Computer": {
-      "candidates": 8,
-      "priced_offers_found": 8,
+      "candidates": 9,
+      "priced_offers_found": 9,
       "previous_offers": 8,
       "minimum_expected_offers": 3,
       "status": "complete",
