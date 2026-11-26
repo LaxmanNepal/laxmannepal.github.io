@@ -1,223 +1,223 @@
 {
-  "updatedAt": "2026-11-23",
+  "updatedAt": "2026-11-26",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "ai-native-toolkit",
-      "url": "https://github.com/bjcoombs/ai-native-toolkit",
-      "description": "Claude Code plugin & Agent Skills for AI-native development: codebase readiness scoring (/assess), Six Thinking Hats deliberation (/huddle), AI-slop removal (/deslop), skill hardening (/skill-forge), and more.",
-      "language": "Python",
-      "stars": 34,
-      "updatedAt": "2026-11-23T10:42:39Z",
-      "fullName": "bjcoombs/ai-native-toolkit"
-    },
-    {
-      "name": "rakazo",
-      "url": "https://github.com/elie222/rakazo",
-      "description": "Open-source Grok Bot alternative. Choose your own model and sandbox.",
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
       "language": "TypeScript",
-      "stars": 9550,
-      "updatedAt": "2026-11-23T10:42:27Z",
-      "fullName": "elie222/rakazo"
+      "stars": 10675,
+      "updatedAt": "2026-11-26T10:50:42Z",
+      "fullName": "makecindy/cindy"
     },
     {
-      "name": "Cortex",
-      "url": "https://github.com/dovvnloading/Cortex",
-      "description": "Local first mini-harness fully capable of simple every-day coding or admin tasks using Ollama/gguf",
+      "name": "affectui",
+      "url": "https://github.com/flohoeller/affectui",
+      "description": "UI for AI agents. React components for what agents do – agent trees, tool calls, traces, handoffs and approvals – and for the rest of your app. One file each, install with shadcn or via MCP. Free and open source.",
+      "language": "TypeScript",
+      "stars": 974,
+      "updatedAt": "2026-11-26T10:50:27Z",
+      "fullName": "flohoeller/affectui"
+    },
+    {
+      "name": "alphasift",
+      "url": "https://github.com/ZhuLinsen/alphasift",
+      "description": "AI 量化选股系统：A股/美股/港股等7市场每日自动选股、公告排雷与公开胜率验证，零成本运行 | AI stock screener (7 markets): red-flag filter, live T+N track record & free daily runs",
       "language": "Python",
-      "stars": 37,
-      "updatedAt": "2026-11-23T10:42:00Z",
-      "fullName": "dovvnloading/Cortex"
+      "stars": 585,
+      "updatedAt": "2026-11-26T10:50:18Z",
+      "fullName": "ZhuLinsen/alphasift"
     },
     {
-      "name": "LightRAG",
-      "url": "https://github.com/HKUDS/LightRAG",
-      "description": "[EMNLP2025] LightRAG: Simple and Fast Retrieval-Augmented Generation",
+      "name": "rulesync",
+      "url": "https://github.com/dyoshikawa/rulesync",
+      "description": "A Utility CLI for AI Coding Agents",
+      "language": "TypeScript",
+      "stars": 1650,
+      "updatedAt": "2026-11-26T10:50:17Z",
+      "fullName": "dyoshikawa/rulesync"
+    },
+    {
+      "name": "vpn-tizi-fanqiang",
+      "url": "https://github.com/zhaoyang51/vpn-tizi-fanqiang",
+      "description": "2026 VPN梯子翻墙 科研翻墙 科学上网翻墙 高性价比机场翻墙 代理魔法 推荐 | 纯净防风控节点（Gemini/Claude Code/Antigravity/Codex GPT） & 全网最便宜",
+      "language": "Open source",
+      "stars": 139,
+      "updatedAt": "2026-11-26T10:50:02Z",
+      "fullName": "zhaoyang51/vpn-tizi-fanqiang"
+    },
+    {
+      "name": "preloop",
+      "url": "https://github.com/preloop/preloop",
+      "description": "The open-source AI agent control plane and software factory: govern every tool and model call.",
       "language": "Python",
-      "stars": 40829,
-      "updatedAt": "2026-11-23T10:41:47Z",
-      "fullName": "HKUDS/LightRAG"
+      "stars": 97,
+      "updatedAt": "2026-11-26T10:49:45Z",
+      "fullName": "preloop/preloop"
     },
     {
-      "name": "go-stock",
-      "url": "https://github.com/ArvinLovegood/go-stock",
-      "description": "🦄🦄🦄AI赋能股票分析：AI加持的股票分析/选股工具。股票行情获取，AI热点资讯分析，AI资金/财务分析，涨跌报警推送。支持A股，港股，美股。支持市场整体/个股情绪分析，AI辅助选股等。数据全部保留在本地。支持DeepSeek，OpenAI， Ollama，LMStudio，AnythingLLM，硅基流动，火山方舟，阿里云百炼等平台或模型。",
+      "name": "KiroCrew",
+      "url": "https://github.com/kirodotdev/KiroCrew",
+      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
+      "language": "Python",
+      "stars": 5092,
+      "updatedAt": "2026-11-26T10:49:41Z",
+      "fullName": "kirodotdev/KiroCrew"
+    },
+    {
+      "name": "jev-curate",
+      "url": "https://github.com/AkashPriyadarshii/jev-curate",
+      "description": "High-throughput synthetic and pretraining dataset sifter for TypeSafe Jev. Rust streaming core, Parquet and JSONL I/O, typed Choice/Score/Noul judgments, speculative fan-out, 24.0 rows/sec measured.  ",
+      "language": "Rust",
+      "stars": 116,
+      "updatedAt": "2026-11-26T10:49:32Z",
+      "fullName": "AkashPriyadarshii/jev-curate"
+    },
+    {
+      "name": "cmdop-sdk",
+      "url": "https://github.com/commandoperator/cmdop-sdk",
+      "description": "Connect ChatGPT, Claude Code and Codex to your Mac or Linux computers. Read files, run commands and start tasks with permissions you choose.",
+      "language": "Python",
+      "stars": 43,
+      "updatedAt": "2026-11-26T10:49:29Z",
+      "fullName": "commandoperator/cmdop-sdk"
+    },
+    {
+      "name": "spring-ai",
+      "url": "https://github.com/spring-projects/spring-ai",
+      "description": "An Application Framework for AI Engineering",
+      "language": "Java",
+      "stars": 9687,
+      "updatedAt": "2026-11-26T10:49:21Z",
+      "fullName": "spring-projects/spring-ai"
+    },
+    {
+      "name": "Hephaestus",
+      "url": "https://github.com/hephaestus-build/Hephaestus",
+      "description": "AI mentor that helps software developers grow in the engineering practices their team values. It reads pull requests, issues and reviews and can suggest what to improve, with the evidence. Open source, self-hosted with Helm.",
+      "language": "Java",
+      "stars": 23,
+      "updatedAt": "2026-11-26T10:49:21Z",
+      "fullName": "hephaestus-build/Hephaestus"
+    },
+    {
+      "name": "ebi-agent-chat-relay",
+      "url": "https://github.com/ebibibi/ebi-agent-chat-relay",
+      "description": "One cockpit for all your coding agents: a web console (plus Discord & Teams) to run Claude Code, Codex, local models, pi and AG-UI agents in parallel, with manager/worker delegation.",
+      "language": "Python",
+      "stars": 68,
+      "updatedAt": "2026-11-26T10:49:08Z",
+      "fullName": "ebibibi/ebi-agent-chat-relay"
+    },
+    {
+      "name": "lilyco",
+      "url": "https://github.com/lilyco-42/lilyco",
+      "description": "让人类远离计算机，AI 可做任何事 —— 加速 Token 2 Anything 到来，促进智能在现实世界的流动性，解放人类，加快躺平未来。一个 struct 派生 CLI/TUI/Web/MCP 四端，天生 AI-callable：MCP 服务器 + 进度通知 + 采样桥（工具可反向调用 Agent 的 LLM）。一套代码，Windows/Linux/Android 全平台。",
+      "language": "Rust",
+      "stars": 6,
+      "updatedAt": "2026-11-26T10:49:02Z",
+      "fullName": "lilyco-42/lilyco"
+    },
+    {
+      "name": "awesome-jev-live",
+      "url": "https://github.com/wh000wh000/awesome-jev-live",
+      "description": "Awesome Jev — evidence-graded index of TypeSafe System One: SDKs, MCP tools, agents, apps and open models. 20 languages, rebuilt every 2 hours.",
+      "language": "Python",
+      "stars": 380,
+      "updatedAt": "2026-11-26T10:48:52Z",
+      "fullName": "wh000wh000/awesome-jev-live"
+    },
+    {
+      "name": "Sisyphus",
+      "url": "https://github.com/salmiyounes/Sisyphus",
+      "description": "Sisyphus: a Python Chess Engine/Library based on C backend",
+      "language": "C",
+      "stars": 23,
+      "updatedAt": "2026-11-26T10:48:47Z",
+      "fullName": "salmiyounes/Sisyphus"
+    },
+    {
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode",
+      "language": "TypeScript",
+      "stars": 119866,
+      "updatedAt": "2026-11-26T10:48:34Z",
+      "fullName": "thedotmack/claude-mem"
+    },
+    {
+      "name": "hive",
+      "url": "https://github.com/hivecommons/hive",
+      "description": "AI agent orchestration for open and closed source — a fully customizable fleet of AI agents covering every level of project maintenance, from brainstorming to full autonomy",
       "language": "Go",
-      "stars": 8240,
-      "updatedAt": "2026-11-23T10:41:38Z",
-      "fullName": "ArvinLovegood/go-stock"
+      "stars": 91,
+      "updatedAt": "2026-11-26T10:48:20Z",
+      "fullName": "hivecommons/hive"
     },
     {
-      "name": "oh-my-hermes",
-      "url": "https://github.com/rlaope/oh-my-hermes",
-      "description": "⚚ The ultrawork agent with AI coworkers wired into you",
-      "language": "Python",
-      "stars": 5970,
-      "updatedAt": "2026-11-23T10:41:36Z",
-      "fullName": "rlaope/oh-my-hermes"
+      "name": "agent-of-empires",
+      "url": "https://github.com/agent-of-empires/agent-of-empires",
+      "description": "Manage multiple Claude Code, OpenCode agents from either TUI or Web for easy access on mobile. Also supports Mistral Vibe, Codex CLI, Gemini CLI, Pi.dev, Copilot CLI, Factory Droid Coding.",
+      "language": "Rust",
+      "stars": 4915,
+      "updatedAt": "2026-11-26T10:47:52Z",
+      "fullName": "agent-of-empires/agent-of-empires"
     },
     {
       "name": "Tavotto",
       "url": "https://github.com/Tavotto/Tavotto",
       "description": "AI drew your research figure. Tavotto makes it publication-ready: edit matplotlib and AI-generated figures on a canvas, lay out multi-panel pages in mm, check journal rules before export. Scripts stay untouched.",
       "language": "Python",
-      "stars": 729,
-      "updatedAt": "2026-11-23T10:41:19Z",
+      "stars": 742,
+      "updatedAt": "2026-11-26T10:47:50Z",
       "fullName": "Tavotto/Tavotto"
     },
     {
-      "name": "llamadart",
-      "url": "https://github.com/leehack/llamadart",
-      "description": "Cross-platform on-device LLM inference for Dart & Flutter: GGUF via llama.cpp and LiteRT-LM on Android, iOS, macOS, Windows, Linux and web.",
-      "language": "Dart",
-      "stars": 92,
-      "updatedAt": "2026-11-23T10:41:06Z",
-      "fullName": "leehack/llamadart"
-    },
-    {
-      "name": "awesome-AI4MolConformation-MD",
-      "url": "https://github.com/AspirinCode/awesome-AI4MolConformation-MD",
-      "description": "List of molecules (small molecules, RNA, peptide, protein, enzymes, antibody,  and PPIs)  conformations and molecular dynamics (force fields) using generative artificial intelligence and deep learning",
-      "language": "Open source",
-      "stars": 310,
-      "updatedAt": "2026-11-23T10:40:57Z",
-      "fullName": "AspirinCode/awesome-AI4MolConformation-MD"
-    },
-    {
-      "name": "casbin-gateway",
-      "url": "https://github.com/apache/casbin-gateway",
-      "description": "See what every AI coding agent on your machine is doing, and whether the API behind it is the one you paid for. Claude Code, Codex, Cursor, Gemini CLI and more: one endpoint for 44 model vendors, A–F API authenticity grading, per-agent permissions, usage and p",
-      "language": "Go",
-      "stars": 651,
-      "updatedAt": "2026-11-23T10:40:43Z",
-      "fullName": "apache/casbin-gateway"
-    },
-    {
-      "name": "token-monitor",
-      "url": "https://github.com/Javis603/token-monitor",
-      "description": "Local-first desktop widget for tracking token usage, costs, limits, and session activity across 56+ AI coding tools—including Claude Code, Codex, Cursor, OpenCode, OpenClaw, and more—with multi-device sync.",
-      "language": "JavaScript",
-      "stars": 3826,
-      "updatedAt": "2026-11-23T10:40:34Z",
-      "fullName": "Javis603/token-monitor"
-    },
-    {
-      "name": "openless",
-      "url": "https://github.com/Open-Less/openless",
-      "description": "Hold a key, speak, release — AI-polished text appears at your cursor in any app. Open-source voice input for macOS & Windows. (按住快捷键说话，松开即得润色后的文字)",
+      "name": "sail",
+      "url": "https://github.com/lakehq/sail",
+      "description": "Drop-in Apache Spark replacement written in Rust, unifying batch processing, stream processing, and compute-intensive AI workloads.",
       "language": "Rust",
-      "stars": 4156,
-      "updatedAt": "2026-11-23T10:40:18Z",
-      "fullName": "Open-Less/openless"
+      "stars": 3507,
+      "updatedAt": "2026-11-26T10:47:37Z",
+      "fullName": "lakehq/sail"
     },
     {
-      "name": "agenticos",
-      "url": "https://github.com/vstorm-co/agenticos",
-      "description": "Open-source, self-hosted AI agent platform for your company's AI teammates. Build, run and govern agents on your own servers and models: shared chat, RAG, skills, a real browser, 4,700+ MCP servers, budgets, approvals and an audit trail. An alternative to Chat",
-      "language": "Python",
-      "stars": 754,
-      "updatedAt": "2026-11-23T10:40:12Z",
-      "fullName": "vstorm-co/agenticos"
-    },
-    {
-      "name": "CodeNomad",
-      "url": "https://github.com/NeuralNomadsAI/CodeNomad",
-      "description": "CodeNomad: The command center that puts AI coding on steroids.",
-      "language": "TypeScript",
-      "stars": 2680,
-      "updatedAt": "2026-11-23T10:40:06Z",
-      "fullName": "NeuralNomadsAI/CodeNomad"
-    },
-    {
-      "name": "flower",
-      "url": "https://github.com/flwrlabs/flower",
-      "description": "Flower: A Friendly Federated AI Framework",
-      "language": "Python",
-      "stars": 7217,
-      "updatedAt": "2026-11-23T10:40:00Z",
-      "fullName": "flwrlabs/flower"
-    },
-    {
-      "name": "vpn-tizi-fanqiang",
-      "url": "https://github.com/zhaoyang51/vpn-tizi-fanqiang",
-      "description": "2026 VPN梯子 科研翻墙 科学上网 高性价比机场推荐 | 纯净防风控IP(Antigravity/Gemini/Claude/ChatGPT/TikTok) & 全网最便宜",
+      "name": "awesome-rsi",
+      "url": "https://github.com/lobehub/awesome-rsi",
+      "description": "A curated research map of Recursive Self-Improvement (RSI): models, agents, harnesses, embodied systems, automated AI R&D, benchmarks, and safety.",
       "language": "Open source",
-      "stars": 64,
-      "updatedAt": "2026-11-23T10:40:00Z",
-      "fullName": "zhaoyang51/vpn-tizi-fanqiang"
+      "stars": 1110,
+      "updatedAt": "2026-11-26T10:47:29Z",
+      "fullName": "lobehub/awesome-rsi"
     },
     {
-      "name": "ScalaSemantic",
-      "url": "https://github.com/MercurieVV/ScalaSemantic",
-      "description": "MCP server for deep semantic analysis of Scala via SemanticDB — exact find-usages, class hierarchies, implicit resolution & call paths for AI coding agents like Claude Code. Beyond grep and standard LSP.",
-      "language": "Scala",
-      "stars": 23,
-      "updatedAt": "2026-11-23T10:39:47Z",
-      "fullName": "MercurieVV/ScalaSemantic"
-    },
-    {
-      "name": "neokapi",
-      "url": "https://github.com/neokapi/neokapi",
-      "description": "Content and language intelligence framework in Go — parse documents, data, and markup into one content model, edit and check the content, and write it back byte-for-byte.",
-      "language": "Go",
-      "stars": 6,
-      "updatedAt": "2026-11-23T10:39:43Z",
-      "fullName": "neokapi/neokapi"
-    },
-    {
-      "name": "rj-nexus",
-      "url": "https://github.com/rj-nexus/rj-nexus",
-      "description": "A modern, self-hosted CMS with a visual drag-and-drop page builder, built-in AI tools, multilingual support and an isolated plugin and theme system. Built with Laravel.",
-      "language": "Blade",
-      "stars": 14,
-      "updatedAt": "2026-11-23T10:39:40Z",
-      "fullName": "rj-nexus/rj-nexus"
-    },
-    {
-      "name": "agentty",
-      "url": "https://github.com/agentty-xyz/agentty",
-      "description": "Agentic Development Environment (ADE) in your terminal",
-      "language": "Rust",
-      "stars": 42,
-      "updatedAt": "2026-11-23T10:39:28Z",
-      "fullName": "agentty-xyz/agentty"
-    },
-    {
-      "name": "skyvern",
-      "url": "https://github.com/Skyvern-AI/skyvern",
-      "description": "Automate browser based workflows with AI",
+      "name": "oh-my-hermes",
+      "url": "https://github.com/rlaope/oh-my-hermes",
+      "description": "⚚ The ultrawork agent with AI coworkers wired into you",
       "language": "Python",
-      "stars": 23496,
-      "updatedAt": "2026-11-23T10:39:21Z",
-      "fullName": "Skyvern-AI/skyvern"
+      "stars": 6051,
+      "updatedAt": "2026-11-26T10:47:00Z",
+      "fullName": "rlaope/oh-my-hermes"
     },
     {
-      "name": "SoduWork",
-      "url": "https://github.com/mdiri-ai/SoduWork",
-      "description": "The AI-native engine for teams and their agents. Multi-harness, multi-agent, self-hosted.",
-      "language": "JavaScript",
-      "stars": 6948,
-      "updatedAt": "2026-11-23T10:39:07Z",
-      "fullName": "mdiri-ai/SoduWork"
-    },
-    {
-      "name": "platypus",
-      "url": "https://github.com/willdady/platypus",
-      "description": "Self-hosted AI Agents for your whole team — on your infrastructure, your models, around the clock.",
+      "name": "oh-my-pi",
+      "url": "https://github.com/can1357/oh-my-pi",
+      "description": "⌥ Coding agent with the IDE wired in. Built by Stencil Labs.",
       "language": "TypeScript",
-      "stars": 132,
-      "updatedAt": "2026-11-23T10:39:05Z",
-      "fullName": "willdady/platypus"
+      "stars": 39928,
+      "updatedAt": "2026-11-26T10:46:56Z",
+      "fullName": "can1357/oh-my-pi"
     },
     {
-      "name": "dexto",
-      "url": "https://github.com/truffle-ai/dexto",
-      "description": "Agent harness and tookit for building AI agents and agentic applications. CLI and SDKs included",
-      "language": "TypeScript",
-      "stars": 661,
-      "updatedAt": "2026-11-23T10:39:04Z",
-      "fullName": "truffle-ai/dexto"
+      "name": "BlaGPT",
+      "url": "https://github.com/erogol/BlaGPT",
+      "description": "Experimental playground for benchmarking language model (LM) architectures, layers, and tricks on smaller datasets. Designed for flexible experimentation and exploration.",
+      "language": "Python",
+      "stars": 119,
+      "updatedAt": "2026-11-26T10:46:32Z",
+      "fullName": "erogol/BlaGPT"
     }
   ]
 }
