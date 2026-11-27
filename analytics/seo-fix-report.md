@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-27T08:45:50.621411+00:00.
+Generated from the latest analytics snapshot: 2026-11-27T21:27:24.876285+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -75,6 +75,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/05/how to make free website with euorg.html
 - Top queries: No page-query rows
 
+### /p/about.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/about.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/about.html
+- Top queries: No page-query rows
+
 ### /p/cookies-policy.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -113,16 +123,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2023/12/download nepali and english cursive font.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2023/12/download nepali and english cursive font.html
-- Top queries: No page-query rows
-
-### /p/about.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/about.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/about.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/about.html
 - Top queries: No page-query rows
 
 ### /p/terms-and-conditions.html — SEO score 0/100
@@ -215,6 +215,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/07/image prompt.html
 - Top queries: No page-query rows
 
+### /p/laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/laxman nepal.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/laxman nepal.html
+- Top queries: No page-query rows
+
 ### /2023/01/how-to-convert-number-to-text-in-excel.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -285,6 +295,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/04/best free image to pdf converter online.html
 - Top queries: No page-query rows
 
+### /2025/05/12-best-ai-bots-on-whatsapp-for-chatgpt.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2025/05/12 best ai bots on whatsapp for chatgpt.html | Laxm…
+- Current description: Missing
+- Recommended description: Learn about 2025/05/12 best ai bots on whatsapp for chatgpt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2025/05/12 best ai bots on whatsapp for chatgpt.html
+- Top queries: No page-query rows
+
 ### /2025/06/ebook-finder.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -305,14 +325,14 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/google drive download link generator.html
 - Top queries: No page-query rows
 
-### /p/laxman-nepal.html — SEO score 0/100
+### /2020/11/Ekadashi.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: p/laxman nepal.html | Laxman Nepal
+- Recommended title: 2020/11/Ekadashi.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about p/laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/laxman nepal.html
+- Recommended description: Learn about 2020/11/Ekadashi.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2020/11/Ekadashi.html
 - Top queries: No page-query rows
 
 ### /2023/07/increase-website-view-by-laxman-nepal.html — SEO score 0/100
@@ -475,16 +495,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/03/top 8 free alternatives to paid software.html
 - Top queries: No page-query rows
 
-### /2025/05/12-best-ai-bots-on-whatsapp-for-chatgpt.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/05/12 best ai bots on whatsapp for chatgpt.html | Laxm…
-- Current description: Missing
-- Recommended description: Learn about 2025/05/12 best ai bots on whatsapp for chatgpt.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/05/12 best ai bots on whatsapp for chatgpt.html
-- Top queries: No page-query rows
-
 ### /2025/07/qr-code-generator.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -505,14 +515,24 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/pdf.html
 - Top queries: No page-query rows
 
-### /2020/11/Ekadashi.html — SEO score 0/100
+### /2020/11/Ananta-prasad-nepal-poem.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
 - Current title: Missing
-- Recommended title: 2020/11/Ekadashi.html | Laxman Nepal
+- Recommended title: 2020/11/Ananta prasad nepal poem.html | Laxman Nepal
 - Current description: Missing
-- Recommended description: Learn about 2020/11/Ekadashi.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2020/11/Ekadashi.html
+- Recommended description: Learn about 2020/11/Ananta prasad nepal poem.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2020/11/Ananta prasad nepal poem.html
+- Top queries: No page-query rows
+
+### /2021/07/youtube-video-downloader-online-tool.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: 2021/07/youtube video downloader online tool.html | Laxman…
+- Current description: Missing
+- Recommended description: Learn about 2021/07/youtube video downloader online tool.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: 2021/07/youtube video downloader online tool.html
 - Top queries: No page-query rows
 
 ### /2023/07/google-drive-direct-download-link.html — SEO score 0/100
@@ -655,16 +675,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2022/09/kalimati format
 - Top queries: No page-query rows
 
-### /2023/07/all-in-one-unit-converter-by-laxman.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2023/07/all in one unit converter by laxman.html | Laxman N…
-- Current description: Missing
-- Recommended description: Learn about 2023/07/all in one unit converter by laxman.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2023/07/all in one unit converter by laxman.html
-- Top queries: No page-query rows
-
 ### /2024/01 — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -715,16 +725,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: 2025/04/top 10 proven online earning methods in.html
 - Top queries: No page-query rows
 
-### /2025/04/top-20-free-ai-chatbots-to-boost-your.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: 2025/04/top 20 free ai chatbots to boost your.html | Laxman…
-- Current description: Missing
-- Recommended description: Learn about 2025/04/top 20 free ai chatbots to boost your.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: 2025/04/top 20 free ai chatbots to boost your.html
-- Top queries: No page-query rows
-
 ### /2025/07/free-icon-finder-tools.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -743,6 +743,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2025/07/free online courses by laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2025/07/free online courses by laxman nepal.html
+- Top queries: No page-query rows
+
+### /advertise — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: advertise | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about advertise with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: advertise
 - Top queries: No page-query rows
 
 ### /apps/hindu — SEO score 0/100
@@ -995,6 +1005,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/typing test.html
 - Top queries: No page-query rows
 
+### /submit-tool — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: submit tool | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about submit tool with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: submit tool
+- Top queries: No page-query rows
+
 ### /tools/nepali-tools/type-nepali/index.html**⁠￼ — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1033,6 +1053,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about vaction with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: vaction
+- Top queries: No page-query rows
+
+### /write-for-us — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: write for us | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about write for us with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: write for us
 - Top queries: No page-query rows
 
 ### /youtube-tools/youtube-analytics.html — SEO score 0/100
@@ -1805,6 +1835,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: YouTube Channel Analytics
 - Top queries: No page-query rows
 
+### /2025/12/strong-password-generator.html — SEO score 70/100
+- Issues: Description length 63, Noindex
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: FortressKey - Strong Password Generator
+- Recommended title: FortressKey | Laxman Nepal
+- Current description: Action Successful       FortressKey   Secure Password Generator
+- Recommended description: Learn about FortressKey with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: FortressKey
+- Top queries: No page-query rows
+
 ### /2025/11/youtube-hashtag-extractor.html — SEO score 70/100
 - Issues: Title length 25, Noindex
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -1833,16 +1873,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Comprehensive keyword analysis with advanced metrics and insights
 - Recommended description: Learn about Advanced YouTube Keyword Explorer with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Advanced YouTube Keyword Explorer
-- Top queries: No page-query rows
-
-### /2025/12/strong-password-generator.html — SEO score 70/100
-- Issues: Description length 63, Noindex
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: FortressKey - Strong Password Generator
-- Recommended title: FortressKey | Laxman Nepal
-- Current description: Action Successful       FortressKey   Secure Password Generator
-- Recommended description: Learn about FortressKey with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: FortressKey
 - Top queries: No page-query rows
 
 ### /blog/index.html — SEO score 70/100
@@ -4513,6 +4543,26 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Compare Samsung Galaxy A25 5G price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and product images.
 - Recommended description: Learn about Samsung Galaxy A25 5G Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: Samsung Galaxy A25 5G Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/samsung-galaxy-a27-5g-6gb-128gb/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Samsung Galaxy A27 5G 6GB/128GB Price in Nepal, Specs & Store Off
+- Recommended title: Samsung Galaxy A27 5G 6GB/128GB Price in Nepal | Laxman Nep…
+- Current description: Compare Samsung Galaxy A27 5G 6GB/128GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and produc
+- Recommended description: Learn about Samsung Galaxy A27 5G 6GB/128GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Samsung Galaxy A27 5G 6GB/128GB Price in Nepal
+- Top queries: No page-query rows
+
+### /mobile-price-in-nepal/phones/samsung-galaxy-a27-5g-8gb-256gb/ — SEO score 85/100
+- Issues: Title length 65
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Samsung Galaxy A27 5G 8GB/256GB Price in Nepal, Specs & Store Off
+- Recommended title: Samsung Galaxy A27 5G 8GB/256GB Price in Nepal | Laxman Nep…
+- Current description: Compare Samsung Galaxy A27 5G 8GB/256GB price in Nepal across stores. See the lowest recorded offer, store-wise prices, full available specifications and produc
+- Recommended description: Learn about Samsung Galaxy A27 5G 8GB/256GB Price in Nepal with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: Samsung Galaxy A27 5G 8GB/256GB Price in Nepal
 - Top queries: No page-query rows
 
 ### /mobile-price-in-nepal/phones/samsung-galaxy-a27-5g/ — SEO score 85/100
