@@ -1,6 +1,6 @@
 # SEO Fix Report
 
-Generated from the latest analytics snapshot: 2026-11-26T21:41:27.610182+00:00.
+Generated from the latest analytics snapshot: 2026-11-27T08:45:50.621411+00:00.
 
 This report is review-only. It does not modify published pages. Recommendations use page metadata and Search Console query signals.
 
@@ -305,6 +305,16 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Recommended H1: p/google drive download link generator.html
 - Top queries: No page-query rows
 
+### /p/laxman-nepal.html — SEO score 0/100
+- Issues: HTTP status is not 200
+- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
+- Current title: Missing
+- Recommended title: p/laxman nepal.html | Laxman Nepal
+- Current description: Missing
+- Recommended description: Learn about p/laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
+- Recommended H1: p/laxman nepal.html
+- Top queries: No page-query rows
+
 ### /2023/07/increase-website-view-by-laxman-nepal.html — SEO score 0/100
 - Issues: HTTP status is not 200
 - Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
@@ -393,16 +403,6 @@ This report is review-only. It does not modify published pages. Recommendations 
 - Current description: Missing
 - Recommended description: Learn about 2026/02/prompt for making ai story.html with practical steps, useful tips and clear guidance from Laxman Nepal.
 - Recommended H1: 2026/02/prompt for making ai story.html
-- Top queries: No page-query rows
-
-### /p/laxman-nepal.html — SEO score 0/100
-- Issues: HTTP status is not 200
-- Search: 0 clicks · 0 impressions · 0.0% CTR · position 0.0
-- Current title: Missing
-- Recommended title: p/laxman nepal.html | Laxman Nepal
-- Current description: Missing
-- Recommended description: Learn about p/laxman nepal.html with practical steps, useful tips and clear guidance from Laxman Nepal.
-- Recommended H1: p/laxman nepal.html
 - Top queries: No page-query rows
 
 ### /p/youtube-tools.html — SEO score 0/100
