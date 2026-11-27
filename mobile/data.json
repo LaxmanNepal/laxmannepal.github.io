@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T21:39:17.330711+00:00",
+  "updated_at": "2026-11-27T08:43:12.455284+00:00",
   "count": 136,
   "products": [
     {
@@ -1952,15 +1952,13 @@
       "name": "Vivo V70 FE",
       "brand": "Vivo",
       "variants": [
-        "8GB + 256GB",
-        "12GB + 256GB"
+        "8GB + 256GB"
       ],
       "price": 62999,
-      "max_price": 72999,
+      "max_price": 62999,
       "original_price": null,
       "rams": [
-        "8GB",
-        "12GB"
+        "8GB"
       ],
       "storages": [
         "256GB"
@@ -2026,18 +2024,16 @@
       "name": "Vivo Y05",
       "brand": "Vivo",
       "variants": [
-        "4GB+64GB",
-        "4GB+128GB"
+        "4GB+64GB"
       ],
       "price": 24974,
-      "max_price": 28499,
+      "max_price": 24974,
       "original_price": null,
       "rams": [
         "4GB"
       ],
       "storages": [
-        "64GB",
-        "128GB"
+        "64GB"
       ]
     },
     {
@@ -2096,22 +2092,16 @@
       "name": "Vivo Y31d",
       "brand": "Vivo",
       "variants": [
-        "6GB+128GB",
-        "8GB+128GB",
-        "8GB+256GB",
-        "4GB+128GB"
+        "6GB+128GB"
       ],
-      "price": 32999,
-      "max_price": 51999,
+      "price": 37999,
+      "max_price": 37999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB",
-        "8GB"
+        "6GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2119,20 +2109,16 @@
       "name": "Vivo Y32",
       "brand": "Vivo",
       "variants": [
-        "4GB + 128GB",
-        "6GB + 128GB",
-        "6GB + 256GB"
+        "4GB + 128GB"
       ],
       "price": 39999,
-      "max_price": 52999,
+      "max_price": 39999,
       "original_price": null,
       "rams": [
-        "4GB",
-        "6GB"
+        "4GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
@@ -2140,18 +2126,16 @@
       "name": "Vivo Y500",
       "brand": "Vivo",
       "variants": [
-        "8GB + 128GB",
-        "8GB + 256GB"
+        "8GB + 128GB"
       ],
       "price": 54999,
-      "max_price": 61999,
+      "max_price": 54999,
       "original_price": null,
       "rams": [
         "8GB"
       ],
       "storages": [
-        "128GB",
-        "256GB"
+        "128GB"
       ]
     },
     {
