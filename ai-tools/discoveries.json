@@ -1,97 +1,178 @@
 {
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "cindy",
-      "url": "https://github.com/makecindy/cindy",
-      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
-      "language": "TypeScript",
-      "stars": 10675,
-      "updatedAt": "2026-11-26T10:50:42Z",
-      "fullName": "makecindy/cindy"
-    },
-    {
-      "name": "affectui",
-      "url": "https://github.com/flohoeller/affectui",
-      "description": "UI for AI agents. React components for what agents do – agent trees, tool calls, traces, handoffs and approvals – and for the rest of your app. One file each, install with shadcn or via MCP. Free and open source.",
-      "language": "TypeScript",
-      "stars": 974,
-      "updatedAt": "2026-11-26T10:50:27Z",
-      "fullName": "flohoeller/affectui"
-    },
-    {
-      "name": "alphasift",
-      "url": "https://github.com/ZhuLinsen/alphasift",
-      "description": "AI 量化选股系统：A股/美股/港股等7市场每日自动选股、公告排雷与公开胜率验证，零成本运行 | AI stock screener (7 markets): red-flag filter, live T+N track record & free daily runs",
+      "name": "switch",
+      "url": "https://github.com/sandbox-quantum/switch",
+      "description": "Open-source AI teammates in Slack, Teams, Discord, Telegram and Mattermost. Bring Claude Code, Codex, Gemini (Antigravity), Cursor, GitHub Copilot or your own agent on any model, and connect them to GitHub, Jira, Notion, Linear, Google Workspace and more. Self",
       "language": "Python",
-      "stars": 585,
-      "updatedAt": "2026-11-26T10:50:18Z",
-      "fullName": "ZhuLinsen/alphasift"
+      "stars": 4825,
+      "updatedAt": "2026-11-27T10:49:20Z",
+      "fullName": "sandbox-quantum/switch"
     },
     {
-      "name": "rulesync",
-      "url": "https://github.com/dyoshikawa/rulesync",
-      "description": "A Utility CLI for AI Coding Agents",
-      "language": "TypeScript",
-      "stars": 1650,
-      "updatedAt": "2026-11-26T10:50:17Z",
-      "fullName": "dyoshikawa/rulesync"
+      "name": "trusty-tools",
+      "url": "https://github.com/bobmatnyc/trusty-tools",
+      "description": "Unified Rust workspace for the trusty-* AI developer-tooling ecosystem: hybrid code search, memory palace, code analysis, PR review, and the MPM multi-agent platform — MCP servers, daemons & CLIs.",
+      "language": "Rust",
+      "stars": 22,
+      "updatedAt": "2026-11-27T10:49:18Z",
+      "fullName": "bobmatnyc/trusty-tools"
+    },
+    {
+      "name": "spiceai",
+      "url": "https://github.com/spiceai/spiceai",
+      "description": "Add a real-time analytics node to your operational database. Spice is a portable, accelerated SQL query, search, and LLM-inference engine in Rust for data-grounded AI apps and agents.",
+      "language": "Rust",
+      "stars": 3130,
+      "updatedAt": "2026-11-27T10:49:16Z",
+      "fullName": "spiceai/spiceai"
     },
     {
       "name": "vpn-tizi-fanqiang",
       "url": "https://github.com/zhaoyang51/vpn-tizi-fanqiang",
       "description": "2026 VPN梯子翻墙 科研翻墙 科学上网翻墙 高性价比机场翻墙 代理魔法 推荐 | 纯净防风控节点（Gemini/Claude Code/Antigravity/Codex GPT） & 全网最便宜",
       "language": "Open source",
-      "stars": 139,
-      "updatedAt": "2026-11-26T10:50:02Z",
+      "stars": 162,
+      "updatedAt": "2026-11-27T10:49:15Z",
       "fullName": "zhaoyang51/vpn-tizi-fanqiang"
     },
     {
-      "name": "preloop",
-      "url": "https://github.com/preloop/preloop",
-      "description": "The open-source AI agent control plane and software factory: govern every tool and model call.",
+      "name": "transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "language": "Python",
-      "stars": 97,
-      "updatedAt": "2026-11-26T10:49:45Z",
-      "fullName": "preloop/preloop"
+      "stars": 169398,
+      "updatedAt": "2026-11-27T10:48:40Z",
+      "fullName": "huggingface/transformers"
     },
     {
-      "name": "KiroCrew",
-      "url": "https://github.com/kirodotdev/KiroCrew",
-      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
-      "language": "Python",
-      "stars": 5092,
-      "updatedAt": "2026-11-26T10:49:41Z",
-      "fullName": "kirodotdev/KiroCrew"
-    },
-    {
-      "name": "jev-curate",
-      "url": "https://github.com/AkashPriyadarshii/jev-curate",
-      "description": "High-throughput synthetic and pretraining dataset sifter for TypeSafe Jev. Rust streaming core, Parquet and JSONL I/O, typed Choice/Score/Noul judgments, speculative fan-out, 24.0 rows/sec measured.  ",
+      "name": "arc-chain",
+      "url": "https://github.com/FerrumVir/arc-chain",
+      "description": "Rust L1 testnet. A 7-billion-parameter model gave the same answer, bit for bit, on the Linux, Windows, Intel Mac and Apple Silicon CPUs we tested.",
       "language": "Rust",
-      "stars": 116,
-      "updatedAt": "2026-11-26T10:49:32Z",
-      "fullName": "AkashPriyadarshii/jev-curate"
+      "stars": 26,
+      "updatedAt": "2026-11-27T10:48:14Z",
+      "fullName": "FerrumVir/arc-chain"
     },
     {
-      "name": "cmdop-sdk",
-      "url": "https://github.com/commandoperator/cmdop-sdk",
-      "description": "Connect ChatGPT, Claude Code and Codex to your Mac or Linux computers. Read files, run commands and start tasks with permissions you choose.",
+      "name": "AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
       "language": "Python",
-      "stars": 43,
-      "updatedAt": "2026-11-26T10:49:29Z",
-      "fullName": "commandoperator/cmdop-sdk"
+      "stars": 188204,
+      "updatedAt": "2026-11-27T10:47:58Z",
+      "fullName": "Significant-Gravitas/AutoGPT"
     },
     {
-      "name": "spring-ai",
-      "url": "https://github.com/spring-projects/spring-ai",
-      "description": "An Application Framework for AI Engineering",
-      "language": "Java",
-      "stars": 9687,
-      "updatedAt": "2026-11-26T10:49:21Z",
-      "fullName": "spring-projects/spring-ai"
+      "name": "astra-quant-agent",
+      "url": "https://github.com/0xethanq/astra-quant-agent",
+      "description": "AstraQuant | Autonomous crypto trading system with multi-LLM council, deterministic Python risk gates & OKX execution · 多大模型与确定性代码风控量化交易系统",
+      "language": "Python",
+      "stars": 426,
+      "updatedAt": "2026-11-27T10:47:54Z",
+      "fullName": "0xethanq/astra-quant-agent"
+    },
+    {
+      "name": "zisla",
+      "url": "https://github.com/wzz6423/zisla",
+      "description": "Native macOS top workspace for media, files, system tools, and privacy-first local AI activity.",
+      "language": "Swift",
+      "stars": 12,
+      "updatedAt": "2026-11-27T10:47:51Z",
+      "fullName": "wzz6423/zisla"
+    },
+    {
+      "name": "flutter_agent_harness",
+      "url": "https://github.com/IstiN/flutter_agent_harness",
+      "description": "Fa - Factory Agent. Cross-platform AI agent harness for Dart and Flutter — streaming providers, agent loop with tools, session persistence, compaction; backend agent mode: fa behind product Go backends",
+      "language": "Dart",
+      "stars": 91,
+      "updatedAt": "2026-11-27T10:47:32Z",
+      "fullName": "IstiN/flutter_agent_harness"
+    },
+    {
+      "name": "unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
+      "language": "Python",
+      "stars": 80338,
+      "updatedAt": "2026-11-27T10:47:10Z",
+      "fullName": "unslothai/unsloth"
+    },
+    {
+      "name": "ocp",
+      "url": "https://github.com/dtzp555-max/ocp",
+      "description": "Turn your Claude Pro/Max subscription into an OpenAI-compatible API for your IDEs and devices — LAN auth, per-key quotas, response cache, disciplined cli.js alignment. $0 extra cost.",
+      "language": "JavaScript",
+      "stars": 145,
+      "updatedAt": "2026-11-27T10:46:51Z",
+      "fullName": "dtzp555-max/ocp"
+    },
+    {
+      "name": "latchkey",
+      "url": "https://github.com/imbue-ai/latchkey",
+      "description": "A command-line tool that injects credentials to curl requests to known public APIs.",
+      "language": "TypeScript",
+      "stars": 134,
+      "updatedAt": "2026-11-27T10:46:31Z",
+      "fullName": "imbue-ai/latchkey"
+    },
+    {
+      "name": "agent-of-empires",
+      "url": "https://github.com/agent-of-empires/agent-of-empires",
+      "description": "Manage multiple Claude Code, OpenCode agents from either TUI or Web for easy access on mobile. Also supports Mistral Vibe, Codex CLI, Gemini CLI, Pi.dev, Copilot CLI, Factory Droid Coding.",
+      "language": "Rust",
+      "stars": 4980,
+      "updatedAt": "2026-11-27T10:46:21Z",
+      "fullName": "agent-of-empires/agent-of-empires"
+    },
+    {
+      "name": "moli",
+      "url": "https://github.com/lexmount/moli",
+      "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
+      "language": "Rust",
+      "stars": 24556,
+      "updatedAt": "2026-11-27T10:46:10Z",
+      "fullName": "lexmount/moli"
+    },
+    {
+      "name": "xyne-spaces",
+      "url": "https://github.com/juspay/xyne-spaces",
+      "description": "The AI Org-OS — a collaborative platform for humans and agents. Explore: https://spaces.xyne.ai",
+      "language": "TypeScript",
+      "stars": 836,
+      "updatedAt": "2026-11-27T10:45:41Z",
+      "fullName": "juspay/xyne-spaces"
+    },
+    {
+      "name": "pilot",
+      "url": "https://github.com/qf-studio/pilot",
+      "description": "AI that ships your tickets.",
+      "language": "Go",
+      "stars": 745,
+      "updatedAt": "2026-11-27T10:45:37Z",
+      "fullName": "qf-studio/pilot"
+    },
+    {
+      "name": "flightdeck",
+      "url": "https://github.com/flightdeckhq/flightdeck",
+      "description": "Observability and control plane for AI agents.",
+      "language": "Python",
+      "stars": 33,
+      "updatedAt": "2026-11-27T10:45:29Z",
+      "fullName": "flightdeckhq/flightdeck"
+    },
+    {
+      "name": "booley",
+      "url": "https://github.com/boldaxolotl/booley",
+      "description": "Open-source Agentic Development Environment (ADE) for RTL design and verification",
+      "language": "Python",
+      "stars": 28,
+      "updatedAt": "2026-11-27T10:45:11Z",
+      "fullName": "boldaxolotl/booley"
     },
     {
       "name": "Hephaestus",
@@ -99,125 +180,44 @@
       "description": "AI mentor that helps software developers grow in the engineering practices their team values. It reads pull requests, issues and reviews and can suggest what to improve, with the evidence. Open source, self-hosted with Helm.",
       "language": "Java",
       "stars": 23,
-      "updatedAt": "2026-11-26T10:49:21Z",
+      "updatedAt": "2026-11-27T10:45:07Z",
       "fullName": "hephaestus-build/Hephaestus"
     },
     {
-      "name": "ebi-agent-chat-relay",
-      "url": "https://github.com/ebibibi/ebi-agent-chat-relay",
-      "description": "One cockpit for all your coding agents: a web console (plus Discord & Teams) to run Claude Code, Codex, local models, pi and AG-UI agents in parallel, with manager/worker delegation.",
-      "language": "Python",
-      "stars": 68,
-      "updatedAt": "2026-11-26T10:49:08Z",
-      "fullName": "ebibibi/ebi-agent-chat-relay"
-    },
-    {
-      "name": "lilyco",
-      "url": "https://github.com/lilyco-42/lilyco",
-      "description": "让人类远离计算机，AI 可做任何事 —— 加速 Token 2 Anything 到来，促进智能在现实世界的流动性，解放人类，加快躺平未来。一个 struct 派生 CLI/TUI/Web/MCP 四端，天生 AI-callable：MCP 服务器 + 进度通知 + 采样桥（工具可反向调用 Agent 的 LLM）。一套代码，Windows/Linux/Android 全平台。",
-      "language": "Rust",
-      "stars": 6,
-      "updatedAt": "2026-11-26T10:49:02Z",
-      "fullName": "lilyco-42/lilyco"
-    },
-    {
-      "name": "awesome-jev-live",
-      "url": "https://github.com/wh000wh000/awesome-jev-live",
-      "description": "Awesome Jev — evidence-graded index of TypeSafe System One: SDKs, MCP tools, agents, apps and open models. 20 languages, rebuilt every 2 hours.",
-      "language": "Python",
-      "stars": 380,
-      "updatedAt": "2026-11-26T10:48:52Z",
-      "fullName": "wh000wh000/awesome-jev-live"
-    },
-    {
-      "name": "Sisyphus",
-      "url": "https://github.com/salmiyounes/Sisyphus",
-      "description": "Sisyphus: a Python Chess Engine/Library based on C backend",
-      "language": "C",
-      "stars": 23,
-      "updatedAt": "2026-11-26T10:48:47Z",
-      "fullName": "salmiyounes/Sisyphus"
-    },
-    {
-      "name": "claude-mem",
-      "url": "https://github.com/thedotmack/claude-mem",
-      "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode",
-      "language": "TypeScript",
-      "stars": 119866,
-      "updatedAt": "2026-11-26T10:48:34Z",
-      "fullName": "thedotmack/claude-mem"
-    },
-    {
-      "name": "hive",
-      "url": "https://github.com/hivecommons/hive",
-      "description": "AI agent orchestration for open and closed source — a fully customizable fleet of AI agents covering every level of project maintenance, from brainstorming to full autonomy",
+      "name": "antigravity-studio",
+      "url": "https://github.com/yuzhiqiang1993/antigravity-studio",
+      "description": "Antigravity 跨平台桌面客户端：多账号管理与一键切号，让 IDE/App/CLI 接入 Claude、DeepSeek、GPT、Ollama 等模型 (BYOK) 并优化上下文压缩。 | Multi-account management & switching desktop client for Google Antigravity. Bring your own keys to connect Claude, DeepSeek, OpenAI & Ollama with context tuning.",
       "language": "Go",
-      "stars": 91,
-      "updatedAt": "2026-11-26T10:48:20Z",
-      "fullName": "hivecommons/hive"
+      "stars": 56,
+      "updatedAt": "2026-11-27T10:44:50Z",
+      "fullName": "yuzhiqiang1993/antigravity-studio"
     },
     {
-      "name": "agent-of-empires",
-      "url": "https://github.com/agent-of-empires/agent-of-empires",
-      "description": "Manage multiple Claude Code, OpenCode agents from either TUI or Web for easy access on mobile. Also supports Mistral Vibe, Codex CLI, Gemini CLI, Pi.dev, Copilot CLI, Factory Droid Coding.",
-      "language": "Rust",
-      "stars": 4915,
-      "updatedAt": "2026-11-26T10:47:52Z",
-      "fullName": "agent-of-empires/agent-of-empires"
-    },
-    {
-      "name": "Tavotto",
-      "url": "https://github.com/Tavotto/Tavotto",
-      "description": "AI drew your research figure. Tavotto makes it publication-ready: edit matplotlib and AI-generated figures on a canvas, lay out multi-panel pages in mm, check journal rules before export. Scripts stay untouched.",
-      "language": "Python",
-      "stars": 742,
-      "updatedAt": "2026-11-26T10:47:50Z",
-      "fullName": "Tavotto/Tavotto"
-    },
-    {
-      "name": "sail",
-      "url": "https://github.com/lakehq/sail",
-      "description": "Drop-in Apache Spark replacement written in Rust, unifying batch processing, stream processing, and compute-intensive AI workloads.",
-      "language": "Rust",
-      "stars": 3507,
-      "updatedAt": "2026-11-26T10:47:37Z",
-      "fullName": "lakehq/sail"
-    },
-    {
-      "name": "awesome-rsi",
-      "url": "https://github.com/lobehub/awesome-rsi",
-      "description": "A curated research map of Recursive Self-Improvement (RSI): models, agents, harnesses, embodied systems, automated AI R&D, benchmarks, and safety.",
-      "language": "Open source",
-      "stars": 1110,
-      "updatedAt": "2026-11-26T10:47:29Z",
-      "fullName": "lobehub/awesome-rsi"
-    },
-    {
-      "name": "oh-my-hermes",
-      "url": "https://github.com/rlaope/oh-my-hermes",
-      "description": "⚚ The ultrawork agent with AI coworkers wired into you",
-      "language": "Python",
-      "stars": 6051,
-      "updatedAt": "2026-11-26T10:47:00Z",
-      "fullName": "rlaope/oh-my-hermes"
-    },
-    {
-      "name": "oh-my-pi",
-      "url": "https://github.com/can1357/oh-my-pi",
-      "description": "⌥ Coding agent with the IDE wired in. Built by Stencil Labs.",
+      "name": "generative-ai-use-cases",
+      "url": "https://github.com/aws-samples/generative-ai-use-cases",
+      "description": "Application implementation with business use cases for safely utilizing generative AI in business operations",
       "language": "TypeScript",
-      "stars": 39928,
-      "updatedAt": "2026-11-26T10:46:56Z",
-      "fullName": "can1357/oh-my-pi"
+      "stars": 1404,
+      "updatedAt": "2026-11-27T10:44:22Z",
+      "fullName": "aws-samples/generative-ai-use-cases"
     },
     {
-      "name": "BlaGPT",
-      "url": "https://github.com/erogol/BlaGPT",
-      "description": "Experimental playground for benchmarking language model (LM) architectures, layers, and tricks on smaller datasets. Designed for flexible experimentation and exploration.",
+      "name": "TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "language": "Zig",
+      "stars": 2495,
+      "updatedAt": "2026-11-27T10:44:00Z",
+      "fullName": "ashhart/TensorFold"
+    },
+    {
+      "name": "javis-os",
+      "url": "https://github.com/blogminhquy/javis-os",
+      "description": "Open-source AI project on GitHub.",
       "language": "Python",
-      "stars": 119,
-      "updatedAt": "2026-11-26T10:46:32Z",
-      "fullName": "erogol/BlaGPT"
+      "stars": 928,
+      "updatedAt": "2026-11-27T10:43:47Z",
+      "fullName": "blogminhquy/javis-os"
     }
   ]
 }
