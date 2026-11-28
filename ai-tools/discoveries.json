@@ -1,178 +1,16 @@
 {
-  "updatedAt": "2026-11-27",
+  "updatedAt": "2026-11-28",
   "source": "GitHub public repository search",
   "count": 24,
   "tools": [
     {
-      "name": "switch",
-      "url": "https://github.com/sandbox-quantum/switch",
-      "description": "Open-source AI teammates in Slack, Teams, Discord, Telegram and Mattermost. Bring Claude Code, Codex, Gemini (Antigravity), Cursor, GitHub Copilot or your own agent on any model, and connect them to GitHub, Jira, Notion, Linear, Google Workspace and more. Self",
-      "language": "Python",
-      "stars": 4825,
-      "updatedAt": "2026-11-27T10:49:20Z",
-      "fullName": "sandbox-quantum/switch"
-    },
-    {
-      "name": "trusty-tools",
-      "url": "https://github.com/bobmatnyc/trusty-tools",
-      "description": "Unified Rust workspace for the trusty-* AI developer-tooling ecosystem: hybrid code search, memory palace, code analysis, PR review, and the MPM multi-agent platform — MCP servers, daemons & CLIs.",
-      "language": "Rust",
-      "stars": 22,
-      "updatedAt": "2026-11-27T10:49:18Z",
-      "fullName": "bobmatnyc/trusty-tools"
-    },
-    {
-      "name": "spiceai",
-      "url": "https://github.com/spiceai/spiceai",
-      "description": "Add a real-time analytics node to your operational database. Spice is a portable, accelerated SQL query, search, and LLM-inference engine in Rust for data-grounded AI apps and agents.",
-      "language": "Rust",
-      "stars": 3130,
-      "updatedAt": "2026-11-27T10:49:16Z",
-      "fullName": "spiceai/spiceai"
-    },
-    {
-      "name": "vpn-tizi-fanqiang",
-      "url": "https://github.com/zhaoyang51/vpn-tizi-fanqiang",
-      "description": "2026 VPN梯子翻墙 科研翻墙 科学上网翻墙 高性价比机场翻墙 代理魔法 推荐 | 纯净防风控节点（Gemini/Claude Code/Antigravity/Codex GPT） & 全网最便宜",
-      "language": "Open source",
-      "stars": 162,
-      "updatedAt": "2026-11-27T10:49:15Z",
-      "fullName": "zhaoyang51/vpn-tizi-fanqiang"
-    },
-    {
-      "name": "transformers",
-      "url": "https://github.com/huggingface/transformers",
-      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
-      "language": "Python",
-      "stars": 169398,
-      "updatedAt": "2026-11-27T10:48:40Z",
-      "fullName": "huggingface/transformers"
-    },
-    {
-      "name": "arc-chain",
-      "url": "https://github.com/FerrumVir/arc-chain",
-      "description": "Rust L1 testnet. A 7-billion-parameter model gave the same answer, bit for bit, on the Linux, Windows, Intel Mac and Apple Silicon CPUs we tested.",
-      "language": "Rust",
-      "stars": 26,
-      "updatedAt": "2026-11-27T10:48:14Z",
-      "fullName": "FerrumVir/arc-chain"
-    },
-    {
-      "name": "AutoGPT",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
-      "language": "Python",
-      "stars": 188204,
-      "updatedAt": "2026-11-27T10:47:58Z",
-      "fullName": "Significant-Gravitas/AutoGPT"
-    },
-    {
-      "name": "astra-quant-agent",
-      "url": "https://github.com/0xethanq/astra-quant-agent",
-      "description": "AstraQuant | Autonomous crypto trading system with multi-LLM council, deterministic Python risk gates & OKX execution · 多大模型与确定性代码风控量化交易系统",
-      "language": "Python",
-      "stars": 426,
-      "updatedAt": "2026-11-27T10:47:54Z",
-      "fullName": "0xethanq/astra-quant-agent"
-    },
-    {
-      "name": "zisla",
-      "url": "https://github.com/wzz6423/zisla",
-      "description": "Native macOS top workspace for media, files, system tools, and privacy-first local AI activity.",
-      "language": "Swift",
-      "stars": 12,
-      "updatedAt": "2026-11-27T10:47:51Z",
-      "fullName": "wzz6423/zisla"
-    },
-    {
-      "name": "flutter_agent_harness",
-      "url": "https://github.com/IstiN/flutter_agent_harness",
-      "description": "Fa - Factory Agent. Cross-platform AI agent harness for Dart and Flutter — streaming providers, agent loop with tools, session persistence, compaction; backend agent mode: fa behind product Go backends",
-      "language": "Dart",
-      "stars": 91,
-      "updatedAt": "2026-11-27T10:47:32Z",
-      "fullName": "IstiN/flutter_agent_harness"
-    },
-    {
-      "name": "unsloth",
-      "url": "https://github.com/unslothai/unsloth",
-      "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
-      "language": "Python",
-      "stars": 80338,
-      "updatedAt": "2026-11-27T10:47:10Z",
-      "fullName": "unslothai/unsloth"
-    },
-    {
-      "name": "ocp",
-      "url": "https://github.com/dtzp555-max/ocp",
-      "description": "Turn your Claude Pro/Max subscription into an OpenAI-compatible API for your IDEs and devices — LAN auth, per-key quotas, response cache, disciplined cli.js alignment. $0 extra cost.",
-      "language": "JavaScript",
-      "stars": 145,
-      "updatedAt": "2026-11-27T10:46:51Z",
-      "fullName": "dtzp555-max/ocp"
-    },
-    {
-      "name": "latchkey",
-      "url": "https://github.com/imbue-ai/latchkey",
-      "description": "A command-line tool that injects credentials to curl requests to known public APIs.",
-      "language": "TypeScript",
-      "stars": 134,
-      "updatedAt": "2026-11-27T10:46:31Z",
-      "fullName": "imbue-ai/latchkey"
-    },
-    {
-      "name": "agent-of-empires",
-      "url": "https://github.com/agent-of-empires/agent-of-empires",
-      "description": "Manage multiple Claude Code, OpenCode agents from either TUI or Web for easy access on mobile. Also supports Mistral Vibe, Codex CLI, Gemini CLI, Pi.dev, Copilot CLI, Factory Droid Coding.",
-      "language": "Rust",
-      "stars": 4980,
-      "updatedAt": "2026-11-27T10:46:21Z",
-      "fullName": "agent-of-empires/agent-of-empires"
-    },
-    {
-      "name": "moli",
-      "url": "https://github.com/lexmount/moli",
-      "description": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
-      "language": "Rust",
-      "stars": 24556,
-      "updatedAt": "2026-11-27T10:46:10Z",
-      "fullName": "lexmount/moli"
-    },
-    {
-      "name": "xyne-spaces",
-      "url": "https://github.com/juspay/xyne-spaces",
-      "description": "The AI Org-OS — a collaborative platform for humans and agents. Explore: https://spaces.xyne.ai",
-      "language": "TypeScript",
-      "stars": 836,
-      "updatedAt": "2026-11-27T10:45:41Z",
-      "fullName": "juspay/xyne-spaces"
-    },
-    {
-      "name": "pilot",
-      "url": "https://github.com/qf-studio/pilot",
-      "description": "AI that ships your tickets.",
-      "language": "Go",
-      "stars": 745,
-      "updatedAt": "2026-11-27T10:45:37Z",
-      "fullName": "qf-studio/pilot"
-    },
-    {
-      "name": "flightdeck",
-      "url": "https://github.com/flightdeckhq/flightdeck",
-      "description": "Observability and control plane for AI agents.",
-      "language": "Python",
-      "stars": 33,
-      "updatedAt": "2026-11-27T10:45:29Z",
-      "fullName": "flightdeckhq/flightdeck"
-    },
-    {
-      "name": "booley",
-      "url": "https://github.com/boldaxolotl/booley",
-      "description": "Open-source Agentic Development Environment (ADE) for RTL design and verification",
-      "language": "Python",
-      "stars": 28,
-      "updatedAt": "2026-11-27T10:45:11Z",
-      "fullName": "boldaxolotl/booley"
+      "name": "agent-vscreen",
+      "url": "https://github.com/kilolonion/agent-vscreen",
+      "description": "A background virtual screen on your Android phone for any AI agent, on the phone, a computer or the cloud: it operates apps on a separate display while you keep using the phone. CLI / MCP / HTTP, via Shizuku or root. 安卓手机上的后台副屏：手机、电脑或云端的 AI agent 都能用它操作应用。",
+      "language": "Kotlin",
+      "stars": 195,
+      "updatedAt": "2026-11-28T10:21:39Z",
+      "fullName": "kilolonion/agent-vscreen"
     },
     {
       "name": "Hephaestus",
@@ -180,44 +18,206 @@
       "description": "AI mentor that helps software developers grow in the engineering practices their team values. It reads pull requests, issues and reviews and can suggest what to improve, with the evidence. Open source, self-hosted with Helm.",
       "language": "Java",
       "stars": 23,
-      "updatedAt": "2026-11-27T10:45:07Z",
+      "updatedAt": "2026-11-28T10:21:34Z",
       "fullName": "hephaestus-build/Hephaestus"
     },
     {
-      "name": "antigravity-studio",
-      "url": "https://github.com/yuzhiqiang1993/antigravity-studio",
-      "description": "Antigravity 跨平台桌面客户端：多账号管理与一键切号，让 IDE/App/CLI 接入 Claude、DeepSeek、GPT、Ollama 等模型 (BYOK) 并优化上下文压缩。 | Multi-account management & switching desktop client for Google Antigravity. Bring your own keys to connect Claude, DeepSeek, OpenAI & Ollama with context tuning.",
-      "language": "Go",
-      "stars": 56,
-      "updatedAt": "2026-11-27T10:44:50Z",
-      "fullName": "yuzhiqiang1993/antigravity-studio"
-    },
-    {
-      "name": "generative-ai-use-cases",
-      "url": "https://github.com/aws-samples/generative-ai-use-cases",
-      "description": "Application implementation with business use cases for safely utilizing generative AI in business operations",
-      "language": "TypeScript",
-      "stars": 1404,
-      "updatedAt": "2026-11-27T10:44:22Z",
-      "fullName": "aws-samples/generative-ai-use-cases"
-    },
-    {
-      "name": "TensorFold",
-      "url": "https://github.com/ashhart/TensorFold",
-      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
-      "language": "Zig",
-      "stars": 2495,
-      "updatedAt": "2026-11-27T10:44:00Z",
-      "fullName": "ashhart/TensorFold"
-    },
-    {
-      "name": "javis-os",
-      "url": "https://github.com/blogminhquy/javis-os",
-      "description": "Open-source AI project on GitHub.",
+      "name": "KiroCrew",
+      "url": "https://github.com/kirodotdev/KiroCrew",
+      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
       "language": "Python",
-      "stars": 928,
-      "updatedAt": "2026-11-27T10:43:47Z",
-      "fullName": "blogminhquy/javis-os"
+      "stars": 5119,
+      "updatedAt": "2026-11-28T10:21:31Z",
+      "fullName": "kirodotdev/KiroCrew"
+    },
+    {
+      "name": "Dayflow",
+      "url": "https://github.com/SeiShonagon520/Dayflow",
+      "description": "⏱️ AI 驱动的智能时间追踪工具 (Windows) - 后台静默录屏，自动分析你的时间都花在哪了",
+      "language": "Python",
+      "stars": 63,
+      "updatedAt": "2026-11-28T10:21:29Z",
+      "fullName": "SeiShonagon520/Dayflow"
+    },
+    {
+      "name": "magpie",
+      "url": "https://github.com/yetone/magpie",
+      "description": "Pool every plan you pay for — Claude, ChatGPT, Copilot, GLM Coding Plan, Kimi Code and more — and use them in any agent: Claude Code, Codex, Claude Desktop… When one runs out, the next takes over.",
+      "language": "Go",
+      "stars": 42696,
+      "updatedAt": "2026-11-28T10:21:23Z",
+      "fullName": "yetone/magpie"
+    },
+    {
+      "name": "awesome-ai-coding-tools",
+      "url": "https://github.com/ai-for-developers/awesome-ai-coding-tools",
+      "description": "A curated list of AI-powered coding tools",
+      "language": "Open source",
+      "stars": 2311,
+      "updatedAt": "2026-11-28T10:21:09Z",
+      "fullName": "ai-for-developers/awesome-ai-coding-tools"
+    },
+    {
+      "name": "vpn-tizi-fanqiang",
+      "url": "https://github.com/zhaoyang51/vpn-tizi-fanqiang",
+      "description": "2026 VPN梯子翻墙 科研翻墙 科学上网翻墙 高性价比机场翻墙 代理魔法 推荐 | 纯净防风控节点（Gemini/Claude Code/Antigravity/Codex GPT） & 全网最便宜",
+      "language": "Open source",
+      "stars": 180,
+      "updatedAt": "2026-11-28T10:21:08Z",
+      "fullName": "zhaoyang51/vpn-tizi-fanqiang"
+    },
+    {
+      "name": "claude-code-plugins",
+      "url": "https://github.com/melodic-software/claude-code-plugins",
+      "description": "Claude Code plugin marketplace: repo-agnostic skills, hooks, agents, and MCP servers.",
+      "language": "Shell",
+      "stars": 32,
+      "updatedAt": "2026-11-28T10:20:30Z",
+      "fullName": "melodic-software/claude-code-plugins"
+    },
+    {
+      "name": "best-of-ai",
+      "url": "https://github.com/archestack/best-of-ai",
+      "description": "Open-source AI, ranked: apps, agents, models and the tools around them, each with strengths, weaknesses and a score from real GitHub signals. Re-checked twice a day.",
+      "language": "Open source",
+      "stars": 13,
+      "updatedAt": "2026-11-28T10:20:25Z",
+      "fullName": "archestack/best-of-ai"
+    },
+    {
+      "name": "dsh-compaction-weave",
+      "url": "https://github.com/NightFrost42/dsh-compaction-weave",
+      "description": "Cache-friendly context compaction for DeepSeek Harness, with requirement retention, task continuity, history retrieval, and retries.",
+      "language": "JavaScript",
+      "stars": 76,
+      "updatedAt": "2026-11-28T10:20:17Z",
+      "fullName": "NightFrost42/dsh-compaction-weave"
+    },
+    {
+      "name": "Tavotto",
+      "url": "https://github.com/Tavotto/Tavotto",
+      "description": "AI drew your research figure. Tavotto makes it publication-ready: edit matplotlib and AI-generated figures on a canvas, lay out multi-panel pages in mm, check journal rules before export. Scripts stay untouched.",
+      "language": "Python",
+      "stars": 747,
+      "updatedAt": "2026-11-28T10:20:15Z",
+      "fullName": "Tavotto/Tavotto"
+    },
+    {
+      "name": "hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": 266661,
+      "updatedAt": "2026-11-28T10:20:09Z",
+      "fullName": "NousResearch/hermes-agent"
+    },
+    {
+      "name": "neokapi",
+      "url": "https://github.com/neokapi/neokapi",
+      "description": "Content and language intelligence framework in Go — parse documents, data, and markup into one content model, edit and check the content, and write it back byte-for-byte.",
+      "language": "Go",
+      "stars": 6,
+      "updatedAt": "2026-11-28T10:19:33Z",
+      "fullName": "neokapi/neokapi"
+    },
+    {
+      "name": "sentient",
+      "url": "https://github.com/conahmorgan2304/sentient",
+      "description": "An evolving AI brain for Home Assistant: one shared memory and set of house rules for every voice assistant, habits it learns, and how much it does by itself up to you — using the AI you already have.",
+      "language": "Python",
+      "stars": 47,
+      "updatedAt": "2026-11-28T10:19:14Z",
+      "fullName": "conahmorgan2304/sentient"
+    },
+    {
+      "name": "SKaiNET",
+      "url": "https://github.com/SKaiNET-developers/SKaiNET",
+      "description": "SKaiNET makes local AI practical for developers: simple to build with, multiplatform by design, and optimized for native performance without compromises.",
+      "language": "Kotlin",
+      "stars": 59,
+      "updatedAt": "2026-11-28T10:19:08Z",
+      "fullName": "SKaiNET-developers/SKaiNET"
+    },
+    {
+      "name": "AllInOneIME",
+      "url": "https://github.com/MicroZ-LLC/AllInOneIME",
+      "description": "Talk to AI wherever you type. A macOS input method: @improve polishes, @translate translates, @question answers, @agent hands off to Claude Code, in any text field. Also a full pinyin input method.",
+      "language": "Swift",
+      "stars": 47,
+      "updatedAt": "2026-11-28T10:18:43Z",
+      "fullName": "MicroZ-LLC/AllInOneIME"
+    },
+    {
+      "name": "Soup",
+      "url": "https://github.com/MakazhanAlpamys/Soup",
+      "description": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
+      "language": "Python",
+      "stars": 10849,
+      "updatedAt": "2026-11-28T10:18:42Z",
+      "fullName": "MakazhanAlpamys/Soup"
+    },
+    {
+      "name": "NeverD",
+      "url": "https://github.com/NeverSight/NeverD",
+      "description": "The AI-friendly binary analysis & decompilation engine — 1:1 lift, built on LLVM [WIP]",
+      "language": "C++",
+      "stars": 117,
+      "updatedAt": "2026-11-28T10:18:33Z",
+      "fullName": "NeverSight/NeverD"
+    },
+    {
+      "name": "hermes-official-plugins",
+      "url": "https://github.com/NousResearch/hermes-official-plugins",
+      "description": "☤ The official plugins for Hermes Agent, built and maintained by Nous Research: Home Assistant, Spotify, Claude Subscription DirectSDK and more, one install away from the Hermes plugin catalog.",
+      "language": "Python",
+      "stars": 827,
+      "updatedAt": "2026-11-28T10:17:54Z",
+      "fullName": "NousResearch/hermes-official-plugins"
+    },
+    {
+      "name": "nautilus_trader",
+      "url": "https://github.com/nautechsystems/nautilus_trader",
+      "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
+      "language": "Rust",
+      "stars": 31874,
+      "updatedAt": "2026-11-28T10:17:03Z",
+      "fullName": "nautechsystems/nautilus_trader"
+    },
+    {
+      "name": "tingly-box",
+      "url": "https://github.com/tingly-dev/tingly-box",
+      "description": "Your Intelligence, Orchestrated. Any Model, Any Agent, Any One.",
+      "language": "Go",
+      "stars": 383,
+      "updatedAt": "2026-11-28T10:17:02Z",
+      "fullName": "tingly-dev/tingly-box"
+    },
+    {
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "stars": 31001,
+      "updatedAt": "2026-11-28T10:16:51Z",
+      "fullName": "QwenLM/qwen-code"
+    },
+    {
+      "name": "pdf-decompiler-mcp",
+      "url": "https://github.com/noobieisgod/pdf-decompiler-mcp",
+      "description": "A MCP that turns PDFs into structured text, tables, figures, metadata, annotations, and page-level evidence for selective retrieval by MCP-compatible AI agents. Improves the information quality AI agents receive while also reducing token costs in some scenario",
+      "language": "JavaScript",
+      "stars": 17,
+      "updatedAt": "2026-11-28T10:16:51Z",
+      "fullName": "noobieisgod/pdf-decompiler-mcp"
+    },
+    {
+      "name": "awesome-autonomus-ai-agents",
+      "url": "https://github.com/HA2345567/awesome-autonomus-ai-agents",
+      "description": "Awesome list of AI agents (2026 Edition) — Curating 400+ frontier frameworks, coding agents, MCP protocols, computer use, and commerce rails — featuring LangChain, CrewAI, AutoGPT, Claude Code, Cursor, Devin, and more.",
+      "language": "Open source",
+      "stars": 15,
+      "updatedAt": "2026-11-28T10:16:30Z",
+      "fullName": "HA2345567/awesome-autonomus-ai-agents"
     }
   ]
 }
